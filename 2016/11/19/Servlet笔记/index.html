@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="liuhang" />
+
+
+
+<meta name="description" content="servlet笔记">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Servlet笔记">
+<meta property="og:url" content="http://liuhang.net.cn/blog/2016/11/19/Servlet笔记/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="servlet笔记">
+<meta property="og:updated_time" content="2016-11-25T11:58:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Servlet笔记">
+<meta name="twitter:description" content="servlet笔记">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Servlet笔记 | Hexo</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: undefined
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/images/avatar.jpeg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">liuhang</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>Menu</li>
+                        <li>Tags</li>
+                        
+                        <li>Friends</li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">我的标签</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:liuhang93@foxmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/husthang" title="GitHub"></a>
+                            
+                                <a class="fa Coding" href="http://liuhang.net.cn/site/" title="Coding"></a>
+                            
+                                <a class="fa 简书" href="http://www.jianshu.com/users/2ae4390617d1/timeline/" title="简书"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/2016华为软件精英挑战赛/">2016华为软件精英挑战赛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FTP/">FTP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Intellij-IDEA/">Intellij IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JSP/">JSP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb基础/">JavaWeb基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java基础/">Java基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java异常/">Java异常</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JaveWeb基础/">JaveWeb基础</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/XML/">XML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/atom/">atom</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bug记录/">bug记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/chrome/">chrome</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/junit/">junit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mac/">mac</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mysql/">mysql</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/servlet/">servlet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring/">spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-in-action/">spring in action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/二分查找/">二分查找</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/刷题记录/">刷题记录</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/实习总结/">实习总结</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据结构与算法/">数据结构与算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/测试框架/">测试框架</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机网络基础/">计算机网络基础</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">liuhang</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/images/avatar.jpeg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">liuhang</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">我的标签</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:liuhang93@foxmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/husthang" title="GitHub"></a>
+                            
+                                <a class="fa Coding" target="_blank" href="http://liuhang.net.cn/site/" title="Coding"></a>
+                            
+                                <a class="fa 简书" target="_blank" href="http://www.jianshu.com/users/2ae4390617d1/timeline/" title="简书"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
+</nav>
+      <div class="body-wrap"><article id="post-Servlet笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/19/Servlet笔记/" class="article-date">
+      <time datetime="2016-11-19T12:54:52.000Z" itemprop="datePublished">2016-11-19</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Servlet笔记
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/JavaWeb基础/">JavaWeb基础</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JaveWeb基础/">JaveWeb基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/servlet/">servlet</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Servlet简介"><a href="#Servlet简介" class="headerlink" title="Servlet简介"></a>Servlet简介</h2><ol>
+<li>Servlet是sun公司提供的一门用于开发<strong>动态web资源</strong>的技术。</li>
+<li>Sun公司在其API中提供了一个servlet接口，用户若想用发一个动态web资源(即开发一个Java程序向浏览器输出数据)，需要完成以下2个步骤：<ul>
+<li>编写一个Java类，实现servlet接口;</li>
+<li>把开发好的Java类部署到web服务器中;</li>
+</ul>
+</li>
+<li>按照一种约定俗成的称呼习惯，通常我们也把<strong>实现了servlet接口的java程序，称之为Servlet</strong></li>
+<li>Servlet是一个供其他Java程序（Servlet引擎）调用的Java类，它不能独立运行，它的运行完全由Servlet引擎来控制和调度。<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Servlet</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig var1)</span> <span class="keyword">throws</span> ServletException</span>;</div><div class="line">    <span class="function">ServletConfig <span class="title">getServletConfig</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(ServletRequest var1, ServletResponse var2)</span> <span class="keyword">throws</span> ServletException, IOException</span>;</div><div class="line">    <span class="function">String <span class="title">getServletInfo</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Servlet运行过程"><a href="#Servlet运行过程" class="headerlink" title="Servlet运行过程"></a>Servlet运行过程</h2><ul>
+<li>Servlet程序是由WEB服务器调用，web服务器收到客户端的Servlet访问请求后：<ol>
+<li>Web服务器首先检查是否已经装载并创建了该Servlet的实例对象。如果是，则直接执行第④步，否则，执行第②步。</li>
+<li>装载并创建该Servlet的一个实例对象。</li>
+<li>调用Servlet实例对象的init()方法。</li>
+<li>创建一个用于封装HTTP请求消息的HttpServletRequest对象和一个代表HTTP响应消息的HttpServletResponse对象，然后调用Servlet的service()方法并将请求和响应对象作为参数传递进去。</li>
+<li>WEB应用程序被停止或重新启动之前，Servlet引擎将卸载Servlet，并在卸载之前调用Servlet的</li>
+</ol>
+</li>
+</ul>
+<h2 id="Servlet线程安全"><a href="#Servlet线程安全" class="headerlink" title="Servlet线程安全"></a>Servlet线程安全</h2><ul>
+<li>对于实现了SingleThreadModel接口的Servlet，Servlet引擎仍然支持对该Servlet的多线程并发访问，其采用的方式是产生多个Servlet实例对象，并发的每个线程分别调用一个独立的Servlet实例对象</li>
+</ul>
+<h2 id="ServletConfig对象"><a href="#ServletConfig对象" class="headerlink" title="ServletConfig对象"></a>ServletConfig对象</h2><ol>
+<li>在Servlet的配置文件中，可以使用一个或多个<init-param>标签为servlet配置一些初始化参数。</init-param></li>
+<li>当servlet配置了初始化参数后，web容器在创建servlet实例对象时，会自动将这些初始化参数封装到ServletConfig对象中，并在调用servlet的init方法时，将ServletConfig对象传递给servlet。进而，程序员通过ServletConfig对象就可以得到当前servlet的初始化参数信息。</li>
+</ol>
+<h2 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h2><ol>
+<li>WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的ServletContext对象，它代表当前web应用。</li>
+<li>ServletConfig对象中维护了ServletContext对象的引用，开发人员在编写servlet时，可以通过ServletConfig.getServletContext方法获得ServletContext对象。</li>
+<li>由于一个WEB应用中的所有Servlet共享同一个ServletContext对象，因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象。</li>
+</ol>
+<h2 id="Servlet3-0"><a href="#Servlet3-0" class="headerlink" title="Servlet3.0"></a>Servlet3.0</h2><ol>
+<li>Servlet3.0是Java EE6规范的一部分，Servlet3.0提供了注解(annotation)，使得不再需要在web.xml文件中进行Servlet的部署描述，简化开发流程。</li>
+<li>JDK:JDK 1.6+<br>tomcat：tomcat 7+</li>
+<li><a href="http://www.codejava.net/java-ee/servlet/webinitparam-annotation-examples" target="_blank" rel="external">annotation-examples</a></li>
+<li>@WebServlet注解的相关属性<ul>
+<li>NO.    属性名    描述</li>
+<li>1    asyncSupported    声明Servlet是否支持异步操作模式</li>
+<li>2    description    Servlet的描述信息</li>
+<li>3    displayName    Servlet的显示名称</li>
+<li>4    initParams    Servlet的初始化参数</li>
+<li>5    name    Servlet的名称</li>
+<li>6    urlPatterns    Servlet的访问URL</li>
+<li>7    value    Servlet的访问URL</li>
+</ul>
+</li>
+</ol>
+<h2 id="ServletRequest与ServletResponse对象"><a href="#ServletRequest与ServletResponse对象" class="headerlink" title="ServletRequest与ServletResponse对象"></a>ServletRequest与ServletResponse对象</h2><ul>
+<li>Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。request和response对象即然代表请求和响应，那我们要获取客户机提交过来的数据，只需要找request对象就行了。要向客户机输出数据，只需要找response对象就行了。</li>
+<li>使用时查看API文档</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3760336.html" target="_blank" rel="external">孤傲苍狼sevlet</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>Title:</span><a href="/2016/11/19/Servlet笔记/">Servlet笔记</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">liuhang</a></p>
+        <p><span>Created:</span>2016-11-19, 20:54:52</p>
+        <p><span>Updated:</span>2016-11-25, 19:58:19</p>
+        <p>
+            <span>Full URL:</span><a class="post-url" href="/2016/11/19/Servlet笔记/" title="Servlet笔记">http://liuhang.net.cn/blog/2016/11/19/Servlet笔记/</a>
+            <span class="copy-path" data-clipboard-text="From http://liuhang.net.cn/blog/2016/11/19/Servlet笔记/　　By liuhang" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2016/11/20/JSP笔记/">
+                    JSP笔记
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/11/16/Git总结/">
+                    Git笔记
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet简介"><span class="toc-number">1.</span> <span class="toc-text">Servlet简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet运行过程"><span class="toc-number">2.</span> <span class="toc-text">Servlet运行过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet线程安全"><span class="toc-number">3.</span> <span class="toc-text">Servlet线程安全</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ServletConfig对象"><span class="toc-number">4.</span> <span class="toc-text">ServletConfig对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ServletContext对象"><span class="toc-number">5.</span> <span class="toc-text">ServletContext对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Servlet3-0"><span class="toc-number">6.</span> <span class="toc-text">Servlet3.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ServletRequest与ServletResponse对象"><span class="toc-number">7.</span> <span class="toc-text">ServletRequest与ServletResponse对象</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考"><span class="toc-number">8.</span> <span class="toc-text">参考</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
+
+    <script>
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Servlet笔记　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2116901';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2016/11/20/JSP笔记/" title="Pre: JSP笔记">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/11/16/Git总结/" title="Next: Git笔记">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/04/Cookie与Session/">Cookie与Session</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/atom笔记/">atom笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/20/JSP笔记/">JSP笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/19/Servlet笔记/">Servlet笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/16/Git总结/">Git笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/mac技巧总结/">mac技巧总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/14/chrome浏览器总结/">chrome浏览器总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/11/JavaWeb开发入门/">JavaWeb开发入门</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/11/XML笔记/">XML笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/09/Java异常/">Java异常</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/07/junit笔记/">junit笔记(未完)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/07/JDBC笔记/">JDBC笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/03/mysql笔记2/">mysql笔记2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/02/FTP笔记/">FTP笔记(未完)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/01/Java面向对象3/">Java面向对象3(未完)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/27/mysql笔记1/">mysql笔记1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/25/intellij配置ftp/">intellij idea配置FTP服务器</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/25/css笔记/">css笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/25/javascript笔记1/">javascript笔记1(未完)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/23/2016华为软件挑战精英赛总结/">2016华为软件挑战精英赛总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/21/Intellij-IDEA总结/">Intellij IDEA总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/21/html笔记/">html笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/21/Java面向对象2/">Java面向对象2</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/华为实习经历总结/">华为实习经历总结</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/20/数据结构与算法-二分查找/">数据结构与算法-二分查找</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/Java方法/">Java方法(未完)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/java数组/">java数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/18/Java面向对象1/">Java面向对象1</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/spinginaction-ch1/">Spring 之旅</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/16/Java数据类型/">Java数据类型</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/10/15/Java基础概述/">Java基础概述</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 liuhang
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 6;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
