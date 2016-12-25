@@ -1,0 +1,2027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+    
+    <entry>
+      <title><![CDATA[Spring笔记1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/23/Spring%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<h2 id="Java-EE概述"><a href="#Java-EE概述" class="headerlink" title="Java EE概述"></a>Java EE概述</h2><ol>
+<li>Java EE是什么<ul>
+<li>学习Java各种框架之前,有必要对Java EE有基本的了解,方便理解各种框架兴起的原因(为什么要用这个框架,而不用JavaEE中相应的东西).</li>
+<li>Java平台企业版（Java Platform Enterprise Edition），是Sun公司为企业级应用推出的标准平台.</li>
+</ul>
+</li>
+<li>分层模型<ul>
+<li><img src="../images/Java-EE分层模型.jpg" alt=""></li>
+</ul>
+</li>
+<li>组件<ul>
+<li>Java EE是一系列技术标准所组成的平台<ul>
+<li>Applet - Java Applet</li>
+<li>EJB - 企业级JavaBean（Enterprise Java Beans）</li>
+<li>JAAS - Java Authentication and Authorization Service</li>
+<li>JACC - J2EE Authorization Contract for Containers</li>
+<li>JAF - Java Beans Activation Framework</li>
+<li>JAX-RPC - Java API for XML-Based Remote Procedure Calls</li>
+<li>JAX-WS - Java API for XML Web Services</li>
+<li>JAXM - Java API for XML Messaging</li>
+<li>JAXP - Java XML解析API（Java API for XML Processing）</li>
+<li>JAXR - Java API for XML Registries</li>
+<li>JCA - J2EE连接器架构（J2EE Connector Architecture）</li>
+<li>JDBC - Java数据库联接（Java Database Connectivity）</li>
+<li>JMS - Java消息服务（Java Message Service）</li>
+<li>JMX - Java Management</li>
+<li>JNDI - Java名称与目录接口（Java Naming and Directory Interface）</li>
+<li>JSF - Java Server Faces</li>
+<li>JSP - Java服务器页面（Java Server Pages）</li>
+<li>JSTL - Java服务器页面标准标签库（Java Server Pages Standard Tag Library）</li>
+<li>JTA - Java事务API（Java Transaction API）</li>
+<li>JavaMail</li>
+<li>Servlet - Java Servlet API</li>
+<li>StAX - Streaming APIs for XML Parsers</li>
+<li>WS - Web Services</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>参考<ul>
+<li><a href="https://zh.wikipedia.org/zh-cn/Java_EE" target="_blank" rel="external">Java EE维基百科</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/java/j2ee/" target="_blank" rel="external">Java EE简介</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="spring框架概述"><a href="#spring框架概述" class="headerlink" title="spring框架概述"></a>spring框架概述</h2><ol>
+<li>什么是spring<ul>
+<li>Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。<strong>Spring的核心是控制反转（IoC）和面向切面（AOP）</strong>。简单来说，Spring是一个分层的JavaSE/EE full-stack(一站式) 轻量级开源框架。</li>
+<li>分层： 一站式，每一个层都提供的解决方案<ul>
+<li>web层：struts，spring-MVC<ul>
+<li>service层：spring</li>
+<li>dao层：hibernate，mybatis ， jdbcTemplate  –&gt; spring-data</li>
+</ul>
+</li>
+<li><img src="../images/框架体系结构.png" alt="框架体系结构"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>spring体系结构</p>
+<ul>
+<li><img src="../images/spring体系图.png" alt="spring体系结构"></li>
+<li>容器是spring的核心. Spring容器使用DI(Dependency Inject)管理构成应用的组件,它会创建相互协作的组件之间的关联. Spring自带多个容器实现,可以归为两种类型: bean工厂(由<code>org.springframework.beans.factory.BeanFactory</code>接口定义);应用上下文(由<code>org.springframework.context.ApplicationContext</code>接口定义)基于BeanFactory构建</li>
+</ul>
+</li>
+<li><p>spring优点</p>
+</li>
+</ol>
+<h2 id="Spring-IOC入门"><a href="#Spring-IOC入门" class="headerlink" title="Spring IOC入门"></a>Spring IOC入门</h2><h2 id="Demo详解"><a href="#Demo详解" class="headerlink" title="Demo详解"></a>Demo详解</h2><ol>
+<li>单元测试<ul>
+<li>@RunWith注解</li>
+<li>@Rule注解</li>
+<li>Assert用法</li>
+<li><a href="http://stefanbirkner.github.io/system-rules/" target="_blank" rel="external">System Rules用法</a></li>
+</ul>
+</li>
+<li>xmlconfig (基于xml配置)</li>
+<li>autoconfig &amp;&amp; javaconfig(基于注解配置)</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[SpringMvc笔记1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/22/springmvc%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<h2 id="Spring-Mvc框架原理"><a href="#Spring-Mvc框架原理" class="headerlink" title="Spring Mvc框架原理"></a>Spring Mvc框架原理</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://sishuok.com/forum/blogPost/list/5188.html" target="_blank" rel="external">DispatcherServlet详解</a></li>
+<li><a href="http://www.cnblogs.com/brolanda/p/4265597.html" target="_blank" rel="external">应用上下文详解</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java常见对象2]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/21/Java%E5%B8%B8%E8%A7%81%E5%AF%B9%E8%B1%A12/</url>
+      <content type="html"><![CDATA[<h2 id="Object类"><a href="#Object类" class="headerlink" title="Object类"></a>Object类</h2><ul>
+<li>Object类是Java中所有类的始祖,在Java中每个类都是由它扩展而来的.</li>
+<li>Object类的hashCode方法</li>
+<li>Object类的getClass方法</li>
+<li>Object类的equals方法</li>
+<li>Object类的toString方法</li>
+<li>Object类的clone方法<ul>
+<li>copy一个变量时,原始变量和copy变量引用同一个对象<br><img src="/images/Object类.png" alt="Object类"></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java面向对象4]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/21/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A14/</url>
+      <content type="html"><![CDATA[<h2 id="类及其组成所使用的常见修饰符"><a href="#类及其组成所使用的常见修饰符" class="headerlink" title="类及其组成所使用的常见修饰符"></a>类及其组成所使用的常见修饰符</h2><ul>
+<li><p>修饰符</p>
+<ul>
+<li>权限修饰符: private,默认,protected, public</li>
+<li>状态修饰符: static, final</li>
+<li>抽象修饰符: abstract</li>
+</ul>
+</li>
+<li><p>四种权限修饰符的权限</p>
+</li>
+</ul>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><ul>
+<li>package, import, class 有没有顺序关系<ul>
+<li>答: 有, package位于第一行可执行的语句,import在中间,class在最后.</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hibernate笔记1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/20/hibernate%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<h2 id="框架体系结构"><a href="#框架体系结构" class="headerlink" title="框架体系结构"></a>框架体系结构</h2><p><img src="/images/框架体系结构.png" alt="框架体系结构"></p>
+<h2 id="hibernate入门"><a href="#hibernate入门" class="headerlink" title="hibernate入门"></a>hibernate入门</h2><ul>
+<li>ORM框架<ul>
+<li>Object Relational Mapping, 对象关系映射</li>
+</ul>
+</li>
+<li>主流的ORM框架<ul>
+<li>JPA: Java Persistence API. JDK5.0通过注解或者xml描述对象-关系表的映射关系的一套接口规范</li>
+<li>Hibernate</li>
+<li>mybatis</li>
+</ul>
+</li>
+<li>hibernate<ul>
+<li>hibernate是轻量级JavaEE应用的持久层解决方案,是一个关系型数据库ORM框架</li>
+<li>hibernate结构<br><img src="/images/arch_hibernate.png" alt=""><ul>
+<li>JNDI: Java 命名与目录接口（Java Naming and Directory Interface）;<a href="http://blog.csdn.net/afeilxc/article/details/3025854" target="_blank" rel="external">参考</a></li>
+<li>JTA: Java Transaction API（Java事务API） (JTA)Java Transaction API(Application Programming Interface); <a href="http://www.hollischuang.com/archives/1658" target="_blank" rel="external">参考</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="http://howtodoinjava.com/hibernate/hibernate-3-introduction-and-writing-hello-world-application/" target="_blank" rel="external">hello world demo </a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[MVC模式]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/18/MVC%E6%A8%A1%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="Web-MVC架构"><a href="#Web-MVC架构" class="headerlink" title="Web MVC架构"></a>Web MVC架构</h2><p><img src="/images/web-mvc架构.png" alt="web-mvc架构"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[正则表达式]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/18/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ul>
+<li>定义:是指一个用来描述或者匹配一系列符合某个语法规则的字符串的单个字符串</li>
+</ul>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ul>
+<li>常用的元字符<ul>
+<li>.    匹配除换行符以外的任意字符</li>
+<li>\w    匹配字母或数字或下划线或汉字</li>
+<li>\s    匹配任意的空白符</li>
+<li>\d    匹配数字</li>
+<li>\b    匹配单词的开始或结束</li>
+<li>^    匹配字符串的开始</li>
+<li>$    匹配字符串的结束</li>
+</ul>
+</li>
+<li><p>重复</p>
+<ul>
+<li><ul>
+<li>重复零次或更多次</li>
+</ul>
+</li>
+<li>重复一次或更多次</li>
+<li>?    重复零次或一次</li>
+<li>{n}    重复n次</li>
+<li>{n,}    重复n次或更多次</li>
+<li>{n,m}    重复n到m次</li>
+</ul>
+</li>
+<li><p>反义<br>+</p>
+</li>
+</ul>
+<h2 id="glob-模式"><a href="#glob-模式" class="headerlink" title="glob 模式"></a>glob 模式</h2><ul>
+<li>shell所使用的简化的正则表达式</li>
+<li>星号（<code>*</code>）匹配零个或多个任意字符；[abc] 匹配任何一个列在方括号中的字符（这个例子要么匹配一个 a，要么匹配一个 b，要么匹配一个 c）；问号（?）只匹配一个任意字符；如果在方括号中使用短划线分隔两个字符，表示所有在这两个字符范围内的都可以匹配（比如 [0-9] 表示匹配所有 0 到 9 的数字）。 使用两个星号（<code>*</code>) 表示匹配任意中间目录，比如a/<code>**</code>/z 可以匹配 a/z, a/b/z 或 a/b/c/z等  </li>
+</ul>
+<h2 id="Java正则表达式使用"><a href="#Java正则表达式使用" class="headerlink" title="Java正则表达式使用"></a>Java正则表达式使用</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">强烈推荐教程</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[事物&数据库连接池&DBUtils框架]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/16/%E4%BA%8B%E7%89%A9-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0-DBUtils%E6%A1%86%E6%9E%B6/</url>
+      <content type="html"><![CDATA[<h2 id="事物"><a href="#事物" class="headerlink" title="事物"></a>事物</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3984001.html" target="_blank" rel="external">参考</a>  </li>
+</ul>
+<h2 id="数据库连接池"><a href="#数据库连接池" class="headerlink" title="数据库连接池"></a>数据库连接池</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/4002804.html" target="_blank" rel="external">参考</a></li>
+<li>DBCP 数据库连接池</li>
+<li>C3P0 数据库连接池</li>
+</ul>
+<h2 id="DBUtils框架"><a href="#DBUtils框架" class="headerlink" title="DBUtils框架"></a>DBUtils框架</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/4007225.html" target="_blank" rel="external">参考</a></li>
+<li>commons-dbutils简介</li>
+<li>QueryRunner</li>
+<li>ResultSetHandler</li>
+</ul>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><div class="github-widget" data-repo="husthang/bookStore"></div>    
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[过滤器与监听器]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/15/%E8%BF%87%E6%BB%A4%E5%99%A8%E4%B8%8E%E7%9B%91%E5%90%AC%E5%99%A8/</url>
+      <content type="html"><![CDATA[<h2 id="过滤器filter"><a href="#过滤器filter" class="headerlink" title="过滤器filter"></a>过滤器filter</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3948353.html" target="_blank" rel="external">参考</a></li>
+</ul>
+<h2 id="监听器"><a href="#监听器" class="headerlink" title="监听器"></a>监听器</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3961929.html" target="_blank" rel="external">参考</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[设计模式-Decorator模式]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/15/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-Decorator%E6%A8%A1%E5%BC%8F/</url>
+      <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。装饰模式是一种用于替代继承的技术,使用对象之间的关联关系取代类之间的继承关系。在装饰模式中引入了装饰类，在装饰类中既可以调用待装饰的原有类的方法，还可以增加新的方法，以扩充原有类的功能。</li>
+<li>适用场景:装饰原有对象、在不改变原有对象的情况下扩展增强新功能/新特征.。当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式。</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li>看需要被增强的对象继承了哪些类或者接口,编写一个类去继承或者实现这些接口或者父类</li>
+<li>在这个编写的类中,增加一个变量,变量类型为要增强的对象的类型;然后定义构造函数,构造这个变量;</li>
+<li>这个类去实现接口或者父类时,调用2中定义的变量的相应方法(从而在装饰类中保留原有类的方法)</li>
+<li>重写需要增强的方法(从而增强要装饰的方法,增强这个方法的功能)</li>
+</ol>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><ul>
+<li>装饰模式中的四种角色<ul>
+<li>①Component（抽象构件）：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务方法。</li>
+<li>②ConcreteComponent（具体构件）：它是抽象构件类的子类，用于定义具体的构件对象（被装饰者），实现了在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。</li>
+<li>③Decorator（抽象装饰类）：它也是抽象构件类的子类，用于给具体构件增加职责，但是具体职责在其子类中实现。它维护一个指向抽象构件对象的引用，通过该引用可以调用装饰之前构件对象的方法，并通过其子类扩展该方法，以达到装饰的目的。</li>
+<li>④ConcreteDecorator（具体装饰类）：它是抽象装饰类的子类，负责向构件添加新的职责。每一个具体装饰类都定义了一些新的行为，它可以调用在抽象装饰类中定义的方法，并可以增加新的方法用以扩充对象的行为。</li>
+</ul>
+</li>
+<li>抽象构件 Component.Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 角色：抽象构件 Component.Java</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line">```  </div><div class="line">- 具体构件类 ConcreteComponent.java</div><div class="line"></div><div class="line">```java</div><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 具体构建类,继承抽象类Component</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteComponent</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的构件类,被装饰(增强)的"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>抽象装饰类 Decorator.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 作用:引入抽象构件类， 给具体构件类增加职责，但是具体职责在其子类中实现</div><div class="line"></div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Decorator</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Component component;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Decorator</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.component = component;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//调用原有业务方法</span></div><div class="line">        component.operation();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>具体装饰类A</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorA</span> <span class="keyword">extends</span> <span class="title">Decorator</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteDecoratorA</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(component);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.operation();</div><div class="line">        addedBehavior();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">addedBehavior</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的装饰类A，我可以增强原有对象方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>具体装饰类B</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorB</span> <span class="keyword">extends</span> <span class="title">Decorator</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteDecoratorB</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(component);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.operation();</div><div class="line">        addedAnotherBehavior();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">addedAnotherBehavior</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的装饰类B，我也可以增强原有对象方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Component component, decoratorA;</div><div class="line"></div><div class="line">        component = <span class="keyword">new</span> ConcreteComponent();</div><div class="line">        decoratorA = <span class="keyword">new</span> ConcreteDecoratorA(component);<span class="comment">//对原有具体构件component进行装饰</span></div><div class="line"></div><div class="line">        component.operation();</div><div class="line">        System.out.println(<span class="string">"\n装饰一次后:"</span>);</div><div class="line">        decoratorA.operation();</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"\n二次装饰"</span>);</div><div class="line">        Component decoratorB;</div><div class="line">        decoratorB = <span class="keyword">new</span> ConcreteDecoratorB(decoratorA);<span class="comment">// 如果需要对原有构件对象装饰后的decoratorA对象上进行再次装饰</span></div><div class="line">        decoratorB.operation();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line"></div><div class="line">装饰一次后:</div><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line">我是具体的装饰类A，我可以增强原有对象方法</div><div class="line"></div><div class="line">二次装饰</div><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line">我是具体的装饰类A，我可以增强原有对象方法</div><div class="line">我是具体的装饰类B，我可以增强原有对象方法</div><div class="line"></div><div class="line">Process finished with exit code 0</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/janice0529/article/details/44160091" target="_blank" rel="external">Decorator参考</a></li>
+<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143730" target="_blank" rel="external">设计模式参考</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java反射]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/14/Java%E5%8F%8D%E5%B0%84/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CMake笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/13/CMake%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://hahack.com/codes/cmake/" target="_blank" rel="external">参考此处</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java流]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/10/Java%E6%B5%81/</url>
+      <content type="html"><![CDATA[<h2 id="Java流"><a href="#Java流" class="headerlink" title="Java流"></a>Java流</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3634409.html" target="_blank" rel="external">Java流讲解</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java其他总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/09/Java%E5%85%B6%E4%BB%96%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="java读取properties文件"><a href="#java读取properties文件" class="headerlink" title="java读取properties文件"></a>java读取properties文件</h2><ul>
+<li>推荐用ResourceBundle读取<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * java.util.ResourceBundle;</div><div class="line"> * ResourceBundle读取properties文件,类路径下寻找文件,不带后缀名</div><div class="line"> */</div><div class="line">ResourceBundle resourceBundle = ResourceBundle.getBundle(<span class="string">"dbInfo"</span>);</div><div class="line">driverClass = resourceBundle.getString(<span class="string">"driverClass"</span>);</div><div class="line">url = resourceBundle.getString(<span class="string">"url"</span>);</div><div class="line">user = resourceBundle.getString(<span class="string">"user"</span>);</div><div class="line">password = resourceBundle.getString(<span class="string">"password"</span>);</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java泛型]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/09/Java%E6%B3%9B%E5%9E%8B/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java集合框架]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/09/Java%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/</url>
+      <content type="html"><![CDATA[<h2 id="集合体系"><a href="#集合体系" class="headerlink" title="集合体系"></a>集合体系</h2><ul>
+<li>集合体系图<br><img src="/images/集合体系图.png" alt="集合体系图"></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[各种bug修复记录]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/05/%E5%90%84%E7%A7%8Dbug%E8%AE%B0%E5%BD%95/</url>
+      <content type="html"><![CDATA[<ol>
+<li><p>Mac端口占用</p>
+<ul>
+<li><code>错误: 代理抛出异常错误: java.rmi.server.ExportException: Port already in use: 1099; nested exception is:
+java.net.BindException: Address already in use</code></li>
+<li><a href="http://www.jianshu.com/p/58bfb5917d5f" target="_blank" rel="external">详见</a></li>
+</ul>
+</li>
+<li><p>mysql事务回滚失败</p>
+<ul>
+<li>问题:<code>Some non-transactional changed tables couldn&#39;t be rolled back</code></li>
+<li>解决: 数据库表的引擎需要设置为InnoDB才能支持事物<ul>
+<li><code>alter table myTable ENGINE=InnoDB;</code></li>
+<li><a href="http://stackoverflow.com/questions/23940814/django-w-mysql-non-transactional-changed-tables-couldnt-be-rolled-back" target="_blank" rel="external">参考</a></li>
+<li><a href="http://www.ha97.com/4197.html" target="_blank" rel="external">资料:mysql存储引擎MyISAM与InnoDB的主要区别对比</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>修改IntelliJ IDEA中Maven项目的默认JDK版本</p>
+<ul>
+<li>问题:在IntelliJ IDEA 15中使用Maven时，IDEA将默认的编译版本、源码版本设置为jdk5。编译项目的时候出现警告：”Warning:java: 源值1.5已过时, 将在未来所有发行版中删除”，并且无法编译jdk1.5以上的代码。</li>
+<li><p>解决</p>
+<ul>
+<li><p>maven 配置jdk版本如jdk1.8</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">      &lt;build&gt;</div><div class="line">    &lt;finalName&gt;bookStore&lt;/finalName&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin&gt;</div><div class="line">            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;</div><div class="line">            &lt;configuration&gt;</div><div class="line">                &lt;source&gt;1.8&lt;/source&gt;</div><div class="line">                &lt;target&gt;1.8&lt;/target&gt;</div><div class="line">            &lt;/configuration&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/build&gt;</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="http://blog.csdn.net/zhaoyongnj2012/article/details/23970451" target="_blank" rel="external">参考</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<div class="github-widget" data-repo="husthang/bookStore"></div>    
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[hexo笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/05/hexo%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h2><p><a href="http://jelon.top/2016/05/15/fill-hexo/" target="_blank" rel="external">基本教程</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java常见对象1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/05/Java%E5%B8%B8%E8%A7%81%E5%AF%B9%E8%B1%A11/</url>
+      <content type="html"><![CDATA[<h2 id="基本类型包装类"><a href="#基本类型包装类" class="headerlink" title="基本类型包装类"></a>基本类型包装类</h2><ol>
+<li>作用: 可以在对象中定义更多的功能方法,操作该书籍</li>
+<li>常用操作: 用于基本数据类型和字符串之间的转换</li>
+<li>基本类型和包装类的对应<ul>
+<li><code>byte Byte</code></li>
+<li><code>short Short</code></li>
+<li><code>int Integer</code></li>
+<li><code>long Long</code></li>
+<li><code>char Character</code></li>
+<li><code>float Float</code></li>
+<li><code>double Double</code></li>
+<li><code>boolean Boolean</code></li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Cookie与Session]]></title>
+      <url>http://blog.liuhang.net.cn/2016/12/04/Cookie%E4%B8%8ESession/</url>
+      <content type="html"><![CDATA[<h2 id="会话"><a href="#会话" class="headerlink" title="会话"></a>会话</h2><p>1.</p>
+<ol>
+<li>保存会话的两种技术<ul>
+<li>Cookie: 客户端技术. 程序把每个用户的数据存在用户各自的浏览器中.</li>
+<li>Session: 服务端技术.</li>
+</ul>
+</li>
+</ol>
+<h2 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3803033.html" target="_blank" rel="external">参考</a>  </li>
+</ul>
+<h2 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3855702.html" target="_blank" rel="external">参考</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[atom笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol>
+<li><a href="https://atom.io/" target="_blank" rel="external">主页</a></li>
+<li><a href="https://atom-china.org/" target="_blank" rel="external">中文社区</a></li>
+<li><a href="https://atom-china.org/t/atom/62" target="_blank" rel="external">Atom基础使用</a></li>
+<li>终端命令行用<code>atom [file]</code>可打开文件()在 Atom 的菜单栏中有一个名为 Install Shell Commands 的菜单项)</li>
+<li><code>cmd-shift-P</code>打开命令面板;<code>cmd-P</code>直接在文件夹中搜索;<code>ctrl-shift-M</code> markdown预览.</li>
+</ol>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ol>
+<li><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">atom-hexo插件</a>  atom结合此插件,用markdown写作体验超级棒!</li>
+<li><a href="https://atom.io/packages/platformio-ide-terminal" target="_blank" rel="external">terminal</a> 在编辑器中打开终端,避免频繁切换窗口.<ul>
+<li><code>shift-cmd-T</code>    platformio-ide-terminal:new</li>
+<li><code>shift-cmd-X</code>    platformio-ide-terminal:close</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JSP笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/20/JSP%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Servlet笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/19/Servlet%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="Servlet简介"><a href="#Servlet简介" class="headerlink" title="Servlet简介"></a>Servlet简介</h2><ol>
+<li>Servlet是sun公司提供的一门用于开发<strong>动态web资源</strong>的技术。</li>
+<li>Sun公司在其API中提供了一个servlet接口，用户若想用发一个动态web资源(即开发一个Java程序向浏览器输出数据)，需要完成以下2个步骤：<ul>
+<li>编写一个Java类，实现servlet接口;</li>
+<li>把开发好的Java类部署到web服务器中;</li>
+</ul>
+</li>
+<li>按照一种约定俗成的称呼习惯，通常我们也把<strong>实现了servlet接口的java程序，称之为Servlet</strong></li>
+<li>Servlet是一个供其他Java程序（Servlet引擎）调用的Java类，它不能独立运行，它的运行完全由Servlet引擎来控制和调度。<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Servlet</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">(ServletConfig var1)</span> <span class="keyword">throws</span> ServletException</span>;</div><div class="line">    <span class="function">ServletConfig <span class="title">getServletConfig</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">service</span><span class="params">(ServletRequest var1, ServletResponse var2)</span> <span class="keyword">throws</span> ServletException, IOException</span>;</div><div class="line">    <span class="function">String <span class="title">getServletInfo</span><span class="params">()</span></span>;</div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">destroy</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Servlet运行过程"><a href="#Servlet运行过程" class="headerlink" title="Servlet运行过程"></a>Servlet运行过程</h2><ul>
+<li>Servlet程序是由WEB服务器调用，web服务器收到客户端的Servlet访问请求后：<ol>
+<li>Web服务器首先检查是否已经装载并创建了该Servlet的实例对象。如果是，则直接执行第④步，否则，执行第②步。</li>
+<li>装载并创建该Servlet的一个实例对象。</li>
+<li>调用Servlet实例对象的init()方法。</li>
+<li>创建一个用于封装HTTP请求消息的HttpServletRequest对象和一个代表HTTP响应消息的HttpServletResponse对象，然后调用Servlet的service()方法并将请求和响应对象作为参数传递进去。</li>
+<li>WEB应用程序被停止或重新启动之前，Servlet引擎将卸载Servlet，并在卸载之前调用Servlet的</li>
+</ol>
+</li>
+</ul>
+<h2 id="Servlet线程安全"><a href="#Servlet线程安全" class="headerlink" title="Servlet线程安全"></a>Servlet线程安全</h2><ul>
+<li>对于实现了SingleThreadModel接口的Servlet，Servlet引擎仍然支持对该Servlet的多线程并发访问，其采用的方式是产生多个Servlet实例对象，并发的每个线程分别调用一个独立的Servlet实例对象</li>
+</ul>
+<h2 id="ServletConfig对象"><a href="#ServletConfig对象" class="headerlink" title="ServletConfig对象"></a>ServletConfig对象</h2><ol>
+<li>在Servlet的配置文件中，可以使用一个或多个<init-param>标签为servlet配置一些初始化参数。</init-param></li>
+<li>当servlet配置了初始化参数后，web容器在创建servlet实例对象时，会自动将这些初始化参数封装到ServletConfig对象中，并在调用servlet的init方法时，将ServletConfig对象传递给servlet。进而，程序员通过ServletConfig对象就可以得到当前servlet的初始化参数信息。</li>
+</ol>
+<h2 id="ServletContext对象"><a href="#ServletContext对象" class="headerlink" title="ServletContext对象"></a>ServletContext对象</h2><ol>
+<li>WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的ServletContext对象，它代表当前web应用。</li>
+<li>ServletConfig对象中维护了ServletContext对象的引用，开发人员在编写servlet时，可以通过ServletConfig.getServletContext方法获得ServletContext对象。</li>
+<li>由于一个WEB应用中的所有Servlet共享同一个ServletContext对象，因此Servlet对象之间可以通过ServletContext对象来实现通讯。ServletContext对象通常也被称之为context域对象。</li>
+</ol>
+<h2 id="Servlet3-0"><a href="#Servlet3-0" class="headerlink" title="Servlet3.0"></a>Servlet3.0</h2><ol>
+<li>Servlet3.0是Java EE6规范的一部分，Servlet3.0提供了注解(annotation)，使得不再需要在web.xml文件中进行Servlet的部署描述，简化开发流程。</li>
+<li>JDK:JDK 1.6+<br>tomcat：tomcat 7+</li>
+<li><a href="http://www.codejava.net/java-ee/servlet/webinitparam-annotation-examples" target="_blank" rel="external">annotation-examples</a></li>
+<li>@WebServlet注解的相关属性<ul>
+<li>NO.    属性名    描述</li>
+<li>1    asyncSupported    声明Servlet是否支持异步操作模式</li>
+<li>2    description    Servlet的描述信息</li>
+<li>3    displayName    Servlet的显示名称</li>
+<li>4    initParams    Servlet的初始化参数</li>
+<li>5    name    Servlet的名称</li>
+<li>6    urlPatterns    Servlet的访问URL</li>
+<li>7    value    Servlet的访问URL</li>
+</ul>
+</li>
+</ol>
+<h2 id="ServletRequest与ServletResponse对象"><a href="#ServletRequest与ServletResponse对象" class="headerlink" title="ServletRequest与ServletResponse对象"></a>ServletRequest与ServletResponse对象</h2><ul>
+<li>Web服务器收到客户端的http请求，会针对每一次请求，分别创建一个用于代表请求的request对象、和代表响应的response对象。<strong>要获取客户机提交过来的数据，找request对象;向客户机输出数据，找response对象</strong></li>
+<li>使用时查看API文档</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3760336.html" target="_blank" rel="external">孤傲苍狼sevlet</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/16/Git%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
+<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
+<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
+</ol>
+<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
+<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
+<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
+<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
+<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
+<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
+<li>总结<ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+</li>
+</ul>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
+<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
+</ul>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
+</ul>
+<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
+<li>reset<ul>
+<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
+</ul>
+</li>
+<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
+<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
+<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
+<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
+<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
+<li>文件 .gitignore 的格式规范如下：<ul>
+<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
+<li>可以使用标准的 glob 模式匹配。</li>
+<li>匹配模式可以以（/）开头防止递归。</li>
+<li>匹配模式可以以（/）结尾指定目录。</li>
+<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
+</ul>
+</li>
+<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
+<li>命令<ul>
+<li>查看分支：git branch</li>
+<li>创建分支：git branch <name></name></li>
+<li>切换分支：git checkout <name></name></li>
+<li>创建+切换分支：git checkout -b <name></name></li>
+<li>合并某分支到当前分支：git merge <name></name></li>
+<li>删除分支：git branch -d <name></name></li>
+</ul>
+</li>
+<li>HEAD<ul>
+<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
+</ul>
+</li>
+<li>远程分支<ul>
+<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
+<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
+<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
+</ul>
+</li>
+<li>参考<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[mac技巧总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/14/mac%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
+<li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
+<li><p>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</p>
+</li>
+<li><p>个人常用快捷键</p>
+<ul>
+<li>Option-Command-V    移动：将剪贴板中的文件从其原始位置移动到当前位置。</li>
+<li>Command–空格键    Spotlight</li>
+<li>Command-M    将最前面的窗口最小化至 Dock。</li>
+<li>control +command+f 窗口最大化(退出最大化)切换</li>
+</ul>
+</li>
+</ol>
+<h2 id="Parallels-Desktop-for-Mac安装win10虚拟机"><a href="#Parallels-Desktop-for-Mac安装win10虚拟机" class="headerlink" title="Parallels Desktop for Mac安装win10虚拟机"></a>Parallels Desktop for Mac安装win10虚拟机</h2><ol>
+<li><a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a></li>
+<li>强烈推荐</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[chrome浏览器总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/14/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
+<li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
+<li>个人常用<ul>
+<li>打开新窗口    ⌘ + n</li>
+<li>打开新的标签页，并跳转到该标签页    ⌘ + t</li>
+<li>关闭当前标签页或弹出式窗口    ⌘ + w</li>
+<li>退出 Google Chrome     ⌘ + q</li>
+<li>打开“开发者工具”    ⌘ + Option + i</li>
+<li>重新加载当前网页     ⌘ + r</li>
+<li>开启或关闭全屏模式    ⌘ + Ctrl + f</li>
+<li>跳转到地址栏    ⌘ + l</li>
+</ul>
+</li>
+</ol>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" target="_blank" rel="external">Octotree</a><br>Github查看代码神器</li>
+</ol>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>chrome浏览器,地址栏搜索出现:无法访问,连接已经重置,与hosts文件无关<br> 用搜索框搜索出现链接重置,问题无关 hosts，在于链接是http方式访问。搜索框输入 chrome://net-internals/#hsts<br> 在 Input a domain name to add it to the HSTS set: 这一行下面的 Domain: [ ]<br> 输入 www.google.com.hk 点 Add这个方法可以让 Chrome 访问 www.google.com.hk 时，强制选择 https 方式<br> <a href="https://github.com/racaljk/hosts/issues/387" target="_blank" rel="external">参考</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaWeb开发入门]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/11/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</url>
+      <content type="html"><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="/images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
+<h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
+<li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
+<li>容器: 举例说明: Servlet没有main()方法。Servlet受控于另一个Java应用，这个Java应用称为容器.<ul>
+<li><a href="http://openhome.cc/Gossip/ServletJSP/Container.html" target="_blank" rel="external">何谓容器</a> ,关于容器的详解</li>
+<li>在具体层面,容器实际上是Java应用程序,运行于JVM之上,不同类型的容器负责不同的工作，例如Servlet/JSP所运行的Web容器（Web Container),功能之一就是把JSP代码翻译成java代码</li>
+</ul>
+</li>
+<li>服务器，硬件角度上说就是一台高性能的Computer。我们通常指的服务器其实应该是装有能够处理具体请求事务的服务器软件的Computer</li>
+<li>Web服务器是指驻留于因特网上某种类型计算机的程序，是可以向发出请求的浏览器提供文档的程序。当Web浏览器（客户端）连到服务器上并请求文件时，服务器将处理该请求并将文件反馈到该浏览器上</li>
+<li>Client-Server架构<br><img src="/images/Client-Server.png" alt="Client-Server"></li>
+</ol>
+<ul>
+<li>动态WEB中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox等），通过网络(Network)连接到服务器上，使用HTTP协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源(<em>.htm或者是</em>.htm)还是动态资源。</li>
+<li>如果WEB Server Plugin发现客户端请求的是静态资源(<em>.htm或者是</em>.htm)，则将请求直接转交给WEB服务器，之后WEB服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</li>
+<li>如果WEB Server Plugin发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container(WEB容器)，在WEB Container中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给WEB服务器，之后通过WEB服务器将内容发送回客户端浏览器进行解析执行。</li>
+</ul>
+<h2 id="Apache、Tomcat与Catalina作为软件名字的含义与关系"><a href="#Apache、Tomcat与Catalina作为软件名字的含义与关系" class="headerlink" title="Apache、Tomcat与Catalina作为软件名字的含义与关系"></a>Apache、Tomcat与Catalina作为软件名字的含义与关系</h2><ol>
+<li>JavaWeb中常见这三个词,一直没闹清楚这三个词命名的来源和含义,找到一篇文章总结的不错.<a href="http://blog.csdn.net/yingchengsun/article/details/44340211" target="_blank" rel="external">文章戳这里</a></li>
+</ol>
+<h2 id="JavaWeb应用的组成结构"><a href="#JavaWeb应用的组成结构" class="headerlink" title="JavaWeb应用的组成结构"></a>JavaWeb应用的组成结构</h2><p><img src="/images/JavaWeb应用组成结构.png" alt="JavaWeb目录结构"></p>
+<h2 id="浏览器与服务器的交互过程"><a href="#浏览器与服务器的交互过程" class="headerlink" title="浏览器与服务器的交互过程"></a>浏览器与服务器的交互过程</h2><ol>
+<li>URL:统一资源定位符(即网址) uniform resources location<br>URI:统一资源标识符, uniform resource identify<br><a href="http://localhost:8080/doc/1.html" target="_blank" rel="external">http://localhost:8080/doc/1.html</a><br>协议  主机IP(端口号)   URI(当前应用的资源路径)</li>
+<li>浏览器与服务器交互过程图<br><img src="/images/浏览器与服务器交互图.png" alt="浏览器与服务器交互过程图"></li>
+</ol>
+<h2 id="Tomcat简介"><a href="#Tomcat简介" class="headerlink" title="Tomcat简介"></a>Tomcat简介</h2><ol>
+<li><p>Tomcat目录层次结构<br><img src="/images/Tomcat目录层次结构.png" alt="Tomcat目录结构"><br><strong>应学会查看logs日志信息来排查错误</strong></p>
+</li>
+<li><p>Tomcat体系结构<br><img src="/images/Tomcat体系结构.png" alt="Tomcat体系结构"><br>Tomcat服务器的启动是基于一个server.xml文件的，Tomcat启动的时候首先会启动一个Server，Server里面就会启动Service，Service里面就会启动多个”Connector(连接器)”，每一个连接器都在等待客户机的连接，当有用户使用浏览器去访问服务器上面的web资源时，首先是连接到Connector(连接器)，Connector(连接器)是不处理用户的请求的，而是将用户的请求交给一个Engine(引擎)去处理，Engine(引擎)接收到请求后就会解析用户想要访问的Host，然后将请求交给相应的Host，Host收到请求后就会解析出用户想要访问这个Host下面的哪一个Web应用,一个web应用对应一个Context。</p>
+</li>
+</ol>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
+<li>hypertext transfer protocol（超文本传输协议）</li>
+<li>HTTP请求<ul>
+<li>一个完整的HTTP请求包括如下内容：一个请求行、若干消息头、以及实体内容<br><img src="/images/httpRequest.png" alt="范例"></li>
+<li>第一行请求行 请求方式(get,post) URI  协议版本    </li>
+</ul>
+</li>
+<li>HTTP响应<ul>
+<li>状态码<br><img src="/images/状态码.png" alt="状态码"></li>
+<li>一个HTTP响应代表服务器向客户端回送的数据，它包括： 一个状态行、若干消息头、以及实体内容 。<br><img src="/images/httpResponse.png" alt="http响应"></li>
+</ul>
+</li>
+</ol>
+<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[XML笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/11/XML%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="XML概述"><a href="#XML概述" class="headerlink" title="XML概述"></a>XML概述</h2><ul>
+<li>XML: extensible Markup Language 可扩展标记语言</li>
+<li>可扩展:所有的标签是自定义的</li>
+<li>功能:数据存储<ul>
+<li>配置文件</li>
+<li>数据传输</li>
+</ul>
+</li>
+<li>html和xml区别<ul>
+<li>html语法松散,xml语法严格</li>
+<li>html做页面展示,xml做数据存储</li>
+<li>html所有标签是预定义,xml标签是自定义</li>
+</ul>
+</li>
+<li>W3C: World Wide Web Consortium 万维网联盟    </li>
+</ul>
+<h2 id="XML语法"><a href="#XML语法" class="headerlink" title="XML语法"></a>XML语法</h2><ul>
+<li>文档声明<ul>
+<li>必须写在xml文档的第一行</li>
+<li>写法: <code>&lt;?xml version=&quot;1.0&quot; ?&gt;</code></li>
+<li>属性<ul>
+<li>version: 版本号,固定值1.0</li>
+<li>encoding: 文档编码</li>
+<li>standalone: 指定文档是否独立 yes或no</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>元素<ul>
+<li>文档中必须有且只能有一个根元素</li>
+<li>元素名称:<ul>
+<li>元素名称区分大小写</li>
+<li>数字不能开头</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="XML约束"><a href="#XML约束" class="headerlink" title="XML约束"></a>XML约束</h2><ul>
+<li>约束就是xml的书写规则</li>
+<li>约束分类<ul>
+<li>dtd: Document Type Definition.<ul>
+<li>内部dtd: 在xml内部定义dtd</li>
+<li>外部dtd: 在外部定义dtd:</li>
+</ul>
+</li>
+<li>schema:<ul>
+<li>导入xsd约束文档<ol>
+<li>编写跟标签</li>
+<li>引入实例命名空间 xmlns:xsi=””</li>
+<li>引入名称空间 xsi:schemaLocation=””</li>
+<li>引入默认的名称空间</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java异常]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/09/Java%E5%BC%82%E5%B8%B8/</url>
+      <content type="html"><![CDATA[<h2 id="异常分类"><a href="#异常分类" class="headerlink" title="异常分类"></a>异常分类</h2><ul>
+<li>Java中的异常层次结构<ul>
+<li>Throwable<ul>
+<li>Error</li>
+<li>Exception<ul>
+<li>RuntimeException : 由程序错误导致的异常,包含这几种情况: 错误的类型转换; 数组访问越界; 访问空指针;</li>
+<li>其他Exception:  包括情况: 试图在文件尾部后面读取数据; 试图打开一个不存在的文件; 试图根据给定的字符串查找Class对象,而该字符串表示的类并不存在;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>出现RuntimeException 则一定是程序员的问题</li>
+<li>将派生于Error类或者RuntimeException类的所有异常,称为<strong>未检查异常</strong></li>
+<li>其他Exception称为<strong>已检查异常</strong>, 需要程序员显示声明(throws)或者捕获(try,catch),不然不能通过编译</li>
+</ul>
+<h2 id="异常的处理"><a href="#异常的处理" class="headerlink" title="异常的处理"></a>异常的处理</h2><ul>
+<li>异常处理的两种方式<ul>
+<li>a: try..catch..finally 捕获并处理异常</li>
+<li>b: throws: 声明异常,交给该方法的调用者来处理<ul>
+<li>跟在方法声明后面,表示抛出异常.</li>
+<li>声明抛出异常,由该方法的调用者来处理</li>
+<li>方法体内里通过<code>throw</code>抛出异常,则方法声明中要用<code>throws</code>声明.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>注意事项<ul>
+<li>原则: 如果方法内部可以将问题处理,用try处理; 如果处理不了,用throws在方法上声明有异常,交由方法的调用者处理.</li>
+<li>区别: 后续程序需要继续运行,则用try catch处理; 后续程序不需要继续运行,就用throws处理   </li>
+</ul>
+</li>
+<li>方法重写注意<ul>
+<li>子类重写方法时,如果父类方法抛出多个异常,子类方法只能抛出父类异常的子集; 子类方法只能抛出父类异常相同的类或者子类.<h2 id="finally关键字"><a href="#finally关键字" class="headerlink" title="finally关键字"></a>finally关键字</h2></li>
+</ul>
+</li>
+<li>被finally控制的语句体一定会执行(特殊: 执行到finally之前,jvm退出了,比如遇到了<code>System.exit(0);</code>)</li>
+<li>finally作用: 用于释放资源,例如IO和数据库操作中<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo3</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            System.out.println(<span class="number">10</span>/<span class="number">0</span>);</div><div class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</div><div class="line">            System.out.println(<span class="string">"除数为零"</span>);</div><div class="line">            <span class="comment">//System.exit(0);</span></div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;<span class="keyword">finally</span> &#123;</div><div class="line">            System.out.println(<span class="string">"是否执行"</span>);<span class="comment">//有return语句也会执行;碰到exit(0),jvm提前退出,则不执行</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h2><ul>
+<li>使用自定义异常的步骤<ul>
+<li>1.通过继承<code>java.lang.Exception</code>声明自己的异常类</li>
+<li>2.在方法的适当位置,生成自定义异常的实例,并用throw语句抛出</li>
+<li>3.在方法声明部分,用throws声明异常</li>
+</ul>
+</li>
+</ul>
+<h2 id="练习demo"><a href="#练习demo" class="headerlink" title="练习demo"></a>练习demo</h2><ul>
+<li><a href="https://github.com/husthang/javaFoundation/tree/master/src/exception" target="_blank" rel="external">ExceptionDemo</a></li>
+<li>博客推荐: <a href="http://www.cnblogs.com/xdp-gacl/p/3627390.html" target="_blank" rel="external">孤傲苍狼博客java异常</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[junit笔记(未完)]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/07/junit%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="junit概述"><a href="#junit概述" class="headerlink" title="junit概述"></a>junit概述</h2><ul>
+<li>概述<ul>
+<li>JUnit 是一个 Java 编程语言的单元测试框架</li>
+</ul>
+</li>
+<li>junit入门demo<ul>
+<li><a href="https://github.com/husthang/javaWebFoundation/tree/master/jdbc_study/src/junitDemo" target="_blank" rel="external">demo</a></li>
+<li>junit4官方demo,<a href="https://github.com/junit-team/junit4/wiki/Getting-started" target="_blank" rel="external">getting started</a></li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JDBC笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/07/JDBC%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h2 id="JDBC概述"><a href="#JDBC概述" class="headerlink" title="JDBC概述"></a>JDBC概述</h2><ul>
+<li>java database connectivity</li>
+<li>JDBC规范(掌握四个核心对象)<ul>
+<li>DriverManager: 用于注册驱动</li>
+<li>Connection: 表示与数据库创建的连接</li>
+<li>Statement: 操作数据库的sql语句的对象</li>
+<li>ResultSet: 结果集或者一张虚拟表</li>
+</ul>
+</li>
+<li>步骤<ul>
+<li>注册驱动</li>
+<li>创建连接</li>
+<li>得到执行sql语句的Statement对象</li>
+<li>执行sql语句,返回结果</li>
+<li>处理结果</li>
+<li>关闭资源</li>
+</ul>
+</li>
+<li>example<ul>
+<li><a href="https://github.com/husthang/javaWebFoundation/tree/master/jdbc_study" target="_blank" rel="external">jdbc demo</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="JDBC常用的类和接口详解"><a href="#JDBC常用的类和接口详解" class="headerlink" title="JDBC常用的类和接口详解"></a>JDBC常用的类和接口详解</h2><ul>
+<li>注册驱动(加载驱动)    <ul>
+<li><code>DriverManager.registerDriver(new com.mysql.jdbc.Driver());</code>不建议使用. 内部又注册了一次</li>
+<li>建议使用: <code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code></li>
+</ul>
+</li>
+<li>与数据库建立连接<ul>
+<li>URL:sun公司与数据库厂商的协议<ul>
+<li>jdbc:mysql://localhost:3306/study</li>
+<li>协议 子协议    ip    端口号   数据库</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>sql注入问题<ul>
+<li>用 preparedStatement 先编译sql语句  </li>
+<li><code>adkg or &#39;1&#39;=</code>1 `</li>
+</ul>
+</li>
+</ul>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3984001.html" target="_blank" rel="external">reference</a>          </p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[mysql笔记2]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/03/mysql%E7%AC%94%E8%AE%B02/</url>
+      <content type="html"><![CDATA[<h4 id="练习源码"><a href="#练习源码" class="headerlink" title="练习源码"></a>练习源码</h4><ul>
+<li><a href="ftp://123.206.232.76/resource/" target="_blank" rel="external">mysql练习代码2</a></li>
+</ul>
+<h3 id="练习1-合并结果集"><a href="#练习1-合并结果集" class="headerlink" title="练习1:合并结果集"></a>练习1:合并结果集</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- ------------联合查询------------------</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> A(</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">10</span>),</div><div class="line">  score <span class="built_in">int</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> B(</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">10</span>),</div><div class="line">  score <span class="built_in">int</span></div><div class="line">);</div><div class="line"></div><div class="line">  <span class="keyword">insert</span> <span class="keyword">into</span> A <span class="keyword">values</span>(<span class="string">'a'</span>,<span class="number">10</span>),(<span class="string">'b'</span>,<span class="number">20</span>),(<span class="string">'c'</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> B <span class="keyword">values</span>(<span class="string">'a'</span>,<span class="number">10</span>),(<span class="string">'b'</span>,<span class="number">20</span>),(<span class="string">'d'</span>,<span class="number">40</span>);</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> A <span class="keyword">union</span> <span class="keyword">select</span> * <span class="keyword">from</span> B;</div><div class="line"></div><div class="line"><span class="comment">-- union 被合并的两个结果,列数,列类型必须相同(名字可不同)</span></div><div class="line"><span class="comment">-- union all不去重复</span></div></pre></td></tr></table></figure>
+<h3 id="练习2-定义表约束"><a href="#练习2-定义表约束" class="headerlink" title="练习2:定义表约束"></a>练习2:定义表约束</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- 主键约束 primary key</span></div><div class="line"><span class="comment">-- 特点:主键数据唯一,且不能为null;每个表中要有一个主键</span></div><div class="line"></div><div class="line"><span class="keyword">drop</span> <span class="keyword">table</span> student;</div><div class="line">desc student;</div><div class="line"></div><div class="line"><span class="comment">-- 方法一</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>)</div><div class="line">);</div><div class="line"><span class="comment">-- 方法二, 可以用来创建联合主键</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>),</div><div class="line">  primary <span class="keyword">key</span>(<span class="keyword">id</span>)</div><div class="line">);</div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span> ,</div><div class="line">  classId <span class="built_in">int</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>),</div><div class="line">  primary <span class="keyword">key</span>(<span class="keyword">id</span>,classId)</div><div class="line">);</div><div class="line"><span class="comment">-- 方法三</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>)</div><div class="line">);</div><div class="line"><span class="keyword">alter</span> <span class="keyword">table</span> student <span class="keyword">add</span> primary <span class="keyword">key</span>(<span class="keyword">id</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 唯一约束 unique</span></div><div class="line"><span class="comment">-- 特点:数据不能重复</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">unique</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">-- 自动增长列 auto_increment oracle (sequence)</span></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span> auto_increment,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>)</div><div class="line">);</div><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> student (<span class="keyword">name</span>)<span class="keyword">values</span>(<span class="string">'Tom'</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 域完整性</span></div><div class="line"><span class="comment">-- 限制字段的格式</span></div><div class="line"></div><div class="line"><span class="comment">-- 非空 not null</span></div><div class="line"><span class="comment">-- 默认值约束 default</span></div><div class="line"><span class="keyword">drop</span> <span class="keyword">table</span> student;</div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> student(</div><div class="line">  <span class="keyword">id</span> <span class="built_in">int</span> primary <span class="keyword">key</span>,</div><div class="line">  <span class="keyword">name</span> <span class="built_in">varchar</span>(<span class="number">50</span>) <span class="keyword">not</span> <span class="literal">null</span>,</div><div class="line">  gender <span class="built_in">varchar</span>(<span class="number">10</span>) <span class="keyword">default</span> <span class="string">'男'</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="comment">-- 引用完整性</span></div><div class="line"><span class="comment">-- 外键约束 foreign key</span></div><div class="line"><span class="comment">-- 联合查询</span></div><div class="line"><span class="comment">-- 学生表</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> student(</div><div class="line">  stuid <span class="built_in">VARCHAR</span>(<span class="number">10</span>)PRIMARY <span class="keyword">KEY</span>,</div><div class="line">  stuname <span class="built_in">VARCHAR</span>(<span class="number">50</span>)</div><div class="line">);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> score(</div><div class="line">  stuid <span class="built_in">VARCHAR</span>(<span class="number">10</span>),</div><div class="line">  score <span class="built_in">INT</span>,</div><div class="line">  courseid <span class="built_in">INT</span>,</div><div class="line">  <span class="keyword">CONSTRAINT</span> fk_stu_sco  FOREIGN <span class="keyword">KEY</span>(stuid) <span class="keyword">REFERENCES</span> student(stuid)</div><div class="line">);</div></pre></td></tr></table></figure>
+<h3 id="练习3-多表查询"><a href="#练习3-多表查询" class="headerlink" title="练习3:多表查询"></a>练习3:多表查询</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"><span class="comment">-- 多表查询练习</span></div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> emp(</div><div class="line">  empno		<span class="built_in">INT</span>,</div><div class="line">  ename		<span class="built_in">VARCHAR</span>(<span class="number">50</span>),</div><div class="line">  job		<span class="built_in">VARCHAR</span>(<span class="number">50</span>),</div><div class="line">  mgr		<span class="built_in">INT</span>,</div><div class="line">  hiredate	<span class="built_in">DATE</span>,</div><div class="line">  sal		<span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>),<span class="comment">-- 小数</span></div><div class="line">  comm		<span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>),</div><div class="line">  deptno		<span class="built_in">INT</span></div><div class="line">) ;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7369</span>,<span class="string">'SMITH'</span>,<span class="string">'CLERK'</span>,<span class="number">7902</span>,<span class="string">'1980-12-17'</span>,<span class="number">800</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7499</span>,<span class="string">'ALLEN'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-02-20'</span>,<span class="number">1600</span>,<span class="number">300</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7521</span>,<span class="string">'WARD'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-02-22'</span>,<span class="number">1250</span>,<span class="number">500</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7566</span>,<span class="string">'JONES'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-04-02'</span>,<span class="number">2975</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7654</span>,<span class="string">'MARTIN'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-09-28'</span>,<span class="number">1250</span>,<span class="number">1400</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7698</span>,<span class="string">'BLAKE'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-05-01'</span>,<span class="number">2850</span>,<span class="literal">NULL</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7782</span>,<span class="string">'CLARK'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-06-09'</span>,<span class="number">2450</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7788</span>,<span class="string">'SCOTT'</span>,<span class="string">'ANALYST'</span>,<span class="number">7566</span>,<span class="string">'1987-04-19'</span>,<span class="number">3000</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7839</span>,<span class="string">'KING'</span>,<span class="string">'PRESIDENT'</span>,<span class="literal">NULL</span>,<span class="string">'1981-11-17'</span>,<span class="number">5000</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7844</span>,<span class="string">'TURNER'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-09-08'</span>,<span class="number">1500</span>,<span class="number">0</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7876</span>,<span class="string">'ADAMS'</span>,<span class="string">'CLERK'</span>,<span class="number">7788</span>,<span class="string">'1987-05-23'</span>,<span class="number">1100</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7900</span>,<span class="string">'JAMES'</span>,<span class="string">'CLERK'</span>,<span class="number">7698</span>,<span class="string">'1981-12-03'</span>,<span class="number">950</span>,<span class="literal">NULL</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7902</span>,<span class="string">'FORD'</span>,<span class="string">'ANALYST'</span>,<span class="number">7566</span>,<span class="string">'1981-12-03'</span>,<span class="number">3000</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7934</span>,<span class="string">'MILLER'</span>,<span class="string">'CLERK'</span>,<span class="number">7782</span>,<span class="string">'1982-01-23'</span>,<span class="number">1300</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> dept(</div><div class="line">  deptno		<span class="built_in">INT</span>,</div><div class="line">  dname		<span class="built_in">VARCHAR</span>(<span class="number">14</span>),</div><div class="line">  loc		<span class="built_in">VARCHAR</span>(<span class="number">13</span>)</div><div class="line">);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">10</span>, <span class="string">'ACCOUNTING'</span>, <span class="string">'NEW YORK'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">20</span>, <span class="string">'RESEARCH'</span>, <span class="string">'DALLAS'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">30</span>, <span class="string">'SALES'</span>, <span class="string">'CHICAGO'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">40</span>, <span class="string">'OPERATIONS'</span>, <span class="string">'BOSTON'</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 内连接 必须满足查询条件</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp e <span class="keyword">inner</span> <span class="keyword">join</span> dept d <span class="keyword">on</span> e.deptno=d.deptno;</div><div class="line"></div><div class="line"><span class="keyword">insert</span> <span class="keyword">into</span> emp <span class="keyword">values</span>(<span class="number">1014</span>,<span class="string">'张三'</span>,<span class="string">'保洁员'</span>,<span class="number">1009</span>,<span class="string">'19991231'</span>,<span class="number">1000</span>,<span class="number">500</span>,<span class="number">50</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 外连接:查询的结果可能不满足条件</span></div><div class="line"><span class="comment">-- 左连接  先查询左表(以左为主),右表总满足条件的显示出来,不满足条件的显示null</span></div><div class="line"><span class="comment">-- 右连接  先查询右表(以右为主),右表中所有记录查询出来,左表总满足条件的显示出来,不满足条件的显示null</span></div><div class="line"><span class="comment">-- 左外连接</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">left</span> <span class="keyword">outer</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno=dept.deptno;</div><div class="line"><span class="comment">-- 右外连接</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">right</span> <span class="keyword">outer</span> <span class="keyword">join</span> dept <span class="keyword">on</span> emp.deptno=dept.deptno;</div><div class="line"></div><div class="line"><span class="comment">-- 自然连接</span></div><div class="line"><span class="comment">-- 两张连接的表中,名称和类型完全一致 会被自然连接找到</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">join</span> dept;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">left</span> <span class="keyword">join</span> dept;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">natural</span> <span class="keyword">right</span> <span class="keyword">join</span> dept;</div><div class="line"></div><div class="line"><span class="comment">-- 子查询(重要)</span></div><div class="line"><span class="comment">-- 一个select语句中包含另一个完整的select语句</span></div><div class="line"><span class="comment">-- 练习一 工资高于JONES的员工</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;(<span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> ename=<span class="string">'JONES'</span>);</div><div class="line"><span class="comment">-- 练习二 查询与SCOOT同一部门的员工 子查询结果为单行单列</span></div><div class="line"><span class="keyword">select</span>* <span class="keyword">from</span> emp <span class="keyword">where</span> deptno=(<span class="keyword">select</span> deptno <span class="keyword">from</span> emp <span class="keyword">where</span> ename=<span class="string">'SCOTT'</span>);</div><div class="line"><span class="comment">-- 练习三 工资高于30号部门所有人的员工信息 可使用all关键字</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;(<span class="keyword">select</span> <span class="keyword">max</span>(sal) <span class="keyword">from</span> emp <span class="keyword">where</span> deptno=<span class="number">30</span>);</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;all(<span class="keyword">select</span> sal <span class="keyword">from</span> emp <span class="keyword">where</span> deptno=<span class="number">30</span>);</div><div class="line"><span class="comment">-- 练习四 查询工作和工资与MARTIN完全相同的员工信息 in 关键字使用</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> (job,sal)<span class="keyword">in</span> (<span class="keyword">select</span> job,sal <span class="keyword">from</span> emp <span class="keyword">where</span> ename=<span class="string">'MARTIN'</span>);</div><div class="line"><span class="comment">-- 练习五 有两个以上直接下属的员工信息  (重要)</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> empno <span class="keyword">in</span>(<span class="keyword">select</span> mgr <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> mgr <span class="keyword">having</span> <span class="keyword">count</span>(mgr)&gt;=<span class="number">2</span>);</div><div class="line"><span class="comment">-- 练习六 查询编号为7788的员工名称,员工工资,部门名称,部门地址</span></div><div class="line"><span class="keyword">select</span> emp.ename,emp.sal,dept.dname,dept.loc <span class="keyword">from</span> emp,dept <span class="keyword">where</span> emp.deptno=dept.deptno <span class="keyword">and</span> emp.empno=<span class="number">7788</span>;</div><div class="line"><span class="comment">-- 练习七 求各个部门薪水最高的员工的所有信息</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> sal <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">max</span>(sal) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno);<span class="comment">-- 这样查是有问题的,没有加上部门约束</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">where</span> (sal,deptno) <span class="keyword">in</span> (<span class="keyword">select</span> <span class="keyword">max</span>(sal),deptno <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno);</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[FTP笔记(未完)]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/02/FTP%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h3 id="FTP概述"><a href="#FTP概述" class="headerlink" title="FTP概述"></a>FTP概述</h3><ul>
+<li>File Transfer Protocol<br><a href="http://wuyouyao.blog.51cto.com/6345106/1594599" target="_blank" rel="external">http://wuyouyao.blog.51cto.com/6345106/1594599</a></li>
+</ul>
+<h3 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h3><ul>
+<li><p>mac os finder连接到服务器”…”时出现问题,服务器上不存在改共享,请检查该共共享名称</p>
+<ul>
+<li>见此<a href="http://apple.stackexchange.com/questions/110965/connect-to-ftp-server-in-finder-not-working" target="_blank" rel="external">链接</a></li>
+<li>登录密码中含有@,将这个字符干掉</li>
+</ul>
+</li>
+<li><p>intellij idea配置FTP服务器,connect to “…” failed. Could not list.. 用FileZilla可连接,itellij idea 连接不上</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/30606712/intellij-fails-to-open-ftp-conection?answertab=votes#tab-top" target="_blank" rel="external">stackoverflow解决</a></li>
+<li><a href="http://www.cnblogs.com/jiguang/archive/2012/02/05/2339305.html" target="_blank" rel="external">配置步骤及说明</a>    </li>
+</ol>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java面向对象3]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/01/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A13/</url>
+      <content type="html"><![CDATA[<h2 id="多态概述"><a href="#多态概述" class="headerlink" title="多态概述"></a>多态概述</h2><ul>
+<li>多态:polymorphic 事物存在的多种形态</li>
+<li>多态前提:<ul>
+<li>要有继承关系;</li>
+<li>要有方法重写;</li>
+<li>要有父类引用指向子类对象;</li>
+</ul>
+</li>
+<li>example<ul>
+<li><a href="https://github.com/husthang/javaFoundation/tree/master/src/polymorphic" target="_blank" rel="external">多态案例</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="多态中成员访问特点"><a href="#多态中成员访问特点" class="headerlink" title="多态中成员访问特点"></a>多态中成员访问特点</h2><ul>
+<li>访问成员变量<ul>
+<li>编译看左边(父类),运行看左边(父类)</li>
+</ul>
+</li>
+<li>访问成员方法<ul>
+<li>编译看左边(父类),运行看右边(子类).即动态绑定</li>
+</ul>
+</li>
+<li>example<ul>
+<li><a href="https://github.com/husthang/javaFoundation/tree/master/src/polymorphic" target="_blank" rel="external">动态绑定代码演示</a></li>
+</ul>
+</li>
+<li>reference<ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3644035.html" target="_blank" rel="external">多态讲解的博客</a>    </li>
+</ul>
+</li>
+</ul>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><ul>
+<li><p>概述及特点</p>
+<ul>
+<li>抽象方法充当着占位的角色,其具体实现在子类中</li>
+<li>当一个类中含有抽象方法时,这个类必须被声明为抽象类</li>
+<li>抽象类不能被实例化;应该按照多态的方式,由具体的子类实例化,抽象类多态</li>
+</ul>
+</li>
+<li><p>参考及代码演示</p>
+<ul>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3648398.html" target="_blank" rel="external">抽象类讲解</a></li>
+<li><div class="github-widget" data-repo="husthang/javaFoundation"></div>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[mysql笔记1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/27/mysql%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<h3 id="数据库的基本概念"><a href="#数据库的基本概念" class="headerlink" title="数据库的基本概念"></a>数据库的基本概念</h3><ul>
+<li>数据库,DataBase,DB: 指长期保存在计算机存储设备上,按照一定规则组织起来,可以被各种用户或应用共享的数据集合</li>
+<li>数据库管理系统,DataBase Management System,DBMS: 用户通过数据库管理系统访问数据库中的数据</li>
+<li>注意: 通常说的数据库软件为数据库管理系统,数据库是通过数据库管理系统创建和操作的.</li>
+</ul>
+<h3 id="常见的数据库管理系统"><a href="#常见的数据库管理系统" class="headerlink" title="常见的数据库管理系统"></a>常见的数据库管理系统</h3><ul>
+<li>Oracle</li>
+<li>DB2: IBM</li>
+<li>SQL sever: Microsoft</li>
+<li>MySql</li>
+</ul>
+<h3 id="SQL"><a href="#SQL" class="headerlink" title="SQL"></a>SQL</h3><ul>
+<li>SQL: Structure Query Language</li>
+<li>SQL分类<ul>
+<li>DDL: data definition language 定义库,表,列等 create alter drop</li>
+<li>DML: data manipulation language 操作数据,插入,删除,修改数据 insert update delete</li>
+<li>DQL: data query language 查询数据  select</li>
+<li>DCL: data control language 定义访问权限和安全级别</li>
+</ul>
+</li>
+</ul>
+<h3 id="mysql资料笔记"><a href="#mysql资料笔记" class="headerlink" title="mysql资料笔记"></a>mysql资料笔记</h3><ul>
+<li>mysql资料<ul>
+<li><a href="ftp://123.206.232.76/resource/" target="_blank" rel="external">mysql教程</a></li>
+<li><a href="ftp://123.206.232.76/resource/" target="_blank" rel="external">mysql练习代码</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="DQL练习"><a href="#DQL练习" class="headerlink" title="DQL练习"></a>DQL练习</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">database</span> study;</div><div class="line"><span class="keyword">use</span> study;</div><div class="line"><span class="comment">-- 查询练习- -----------</span></div><div class="line"></div><div class="line"><span class="comment">-- 学生表</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> stu (</div><div class="line">  <span class="keyword">sid</span>	<span class="built_in">CHAR</span>(<span class="number">6</span>),</div><div class="line">  sname		<span class="built_in">VARCHAR</span>(<span class="number">50</span>),</div><div class="line">  age		<span class="built_in">INT</span>,</div><div class="line">  gender	<span class="built_in">VARCHAR</span>(<span class="number">50</span>)</div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1001'</span>, <span class="string">'liuYi'</span>, <span class="number">35</span>, <span class="string">'male'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1002'</span>, <span class="string">'chenEr'</span>, <span class="number">15</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1003'</span>, <span class="string">'zhangSan'</span>, <span class="number">95</span>, <span class="string">'male'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1004'</span>, <span class="string">'liSi'</span>, <span class="number">65</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1005'</span>, <span class="string">'wangWu'</span>, <span class="number">55</span>, <span class="string">'male'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1006'</span>, <span class="string">'zhaoLiu'</span>, <span class="number">75</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1007'</span>, <span class="string">'sunQi'</span>, <span class="number">25</span>, <span class="string">'male'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1008'</span>, <span class="string">'zhouBa'</span>, <span class="number">45</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1009'</span>, <span class="string">'wuJiu'</span>, <span class="number">85</span>, <span class="string">'male'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1010'</span>, <span class="string">'zhengShi'</span>, <span class="number">5</span>, <span class="string">'female'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> stu <span class="keyword">VALUES</span>(<span class="string">'S_1011'</span>, <span class="string">'xxx'</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 雇员表</span></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> emp(</div><div class="line">  empno		<span class="built_in">INT</span>,</div><div class="line">  ename		<span class="built_in">VARCHAR</span>(<span class="number">50</span>),</div><div class="line">  job		<span class="built_in">VARCHAR</span>(<span class="number">50</span>),</div><div class="line">  mgr		<span class="built_in">INT</span>,</div><div class="line">  hiredate	<span class="built_in">DATE</span>,</div><div class="line">  sal		<span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>),<span class="comment">-- 小数</span></div><div class="line">  comm		<span class="built_in">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>),</div><div class="line">  deptno		<span class="built_in">INT</span></div><div class="line">) ;</div><div class="line"></div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7369</span>,<span class="string">'SMITH'</span>,<span class="string">'CLERK'</span>,<span class="number">7902</span>,<span class="string">'1980-12-17'</span>,<span class="number">800</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7499</span>,<span class="string">'ALLEN'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-02-20'</span>,<span class="number">1600</span>,<span class="number">300</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7521</span>,<span class="string">'WARD'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-02-22'</span>,<span class="number">1250</span>,<span class="number">500</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7566</span>,<span class="string">'JONES'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-04-02'</span>,<span class="number">2975</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7654</span>,<span class="string">'MARTIN'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-09-28'</span>,<span class="number">1250</span>,<span class="number">1400</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7698</span>,<span class="string">'BLAKE'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-05-01'</span>,<span class="number">2850</span>,<span class="literal">NULL</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7782</span>,<span class="string">'CLARK'</span>,<span class="string">'MANAGER'</span>,<span class="number">7839</span>,<span class="string">'1981-06-09'</span>,<span class="number">2450</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7788</span>,<span class="string">'SCOTT'</span>,<span class="string">'ANALYST'</span>,<span class="number">7566</span>,<span class="string">'1987-04-19'</span>,<span class="number">3000</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7839</span>,<span class="string">'KING'</span>,<span class="string">'PRESIDENT'</span>,<span class="literal">NULL</span>,<span class="string">'1981-11-17'</span>,<span class="number">5000</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7844</span>,<span class="string">'TURNER'</span>,<span class="string">'SALESMAN'</span>,<span class="number">7698</span>,<span class="string">'1981-09-08'</span>,<span class="number">1500</span>,<span class="number">0</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7876</span>,<span class="string">'ADAMS'</span>,<span class="string">'CLERK'</span>,<span class="number">7788</span>,<span class="string">'1987-05-23'</span>,<span class="number">1100</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7900</span>,<span class="string">'JAMES'</span>,<span class="string">'CLERK'</span>,<span class="number">7698</span>,<span class="string">'1981-12-03'</span>,<span class="number">950</span>,<span class="literal">NULL</span>,<span class="number">30</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7902</span>,<span class="string">'FORD'</span>,<span class="string">'ANALYST'</span>,<span class="number">7566</span>,<span class="string">'1981-12-03'</span>,<span class="number">3000</span>,<span class="literal">NULL</span>,<span class="number">20</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> emp <span class="keyword">VALUES</span>(<span class="number">7934</span>,<span class="string">'MILLER'</span>,<span class="string">'CLERK'</span>,<span class="number">7782</span>,<span class="string">'1982-01-23'</span>,<span class="number">1300</span>,<span class="literal">NULL</span>,<span class="number">10</span>);</div><div class="line"></div><div class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> dept(</div><div class="line">  deptno		<span class="built_in">INT</span>,</div><div class="line">  dname		<span class="built_in">VARCHAR</span>(<span class="number">14</span>),</div><div class="line">  loc		<span class="built_in">VARCHAR</span>(<span class="number">13</span>)</div><div class="line">);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">10</span>, <span class="string">'ACCOUNTING'</span>, <span class="string">'NEW YORK'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">20</span>, <span class="string">'RESEARCH'</span>, <span class="string">'DALLAS'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">30</span>, <span class="string">'SALES'</span>, <span class="string">'CHICAGO'</span>);</div><div class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> dept <span class="keyword">VALUES</span>(<span class="number">40</span>, <span class="string">'OPERATIONS'</span>, <span class="string">'BOSTON'</span>);</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> dept;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> emp;</div><div class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> stu;</div><div class="line"></div><div class="line"><span class="comment">-- DQL练习</span></div><div class="line"></div><div class="line"><span class="comment">-- 查询指定列</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">sid</span>,sname,age <span class="keyword">from</span> stu;</div><div class="line"></div><div class="line"><span class="comment">-- 查询性别为女,且年龄大于等于50的记录</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> gender=<span class="string">'female'</span> <span class="keyword">and</span> age&gt;=<span class="number">50</span>;</div><div class="line"></div><div class="line"><span class="comment">-- 查询学号为s_1001 或者姓名为liSi的记录</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> <span class="keyword">sid</span>=<span class="string">'s_1001'</span><span class="keyword">or</span> sname=<span class="string">'lisi'</span>;</div><div class="line"></div><div class="line"><span class="comment">-- 查询学号为001 002 003的记录 in的用法</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> <span class="keyword">sid</span> <span class="keyword">in</span>(<span class="string">'S_1001'</span>,<span class="string">'S_1002'</span>,<span class="string">'S_1003'</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 查询学号不是001 002 003的记录 in的用法</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> <span class="keyword">sid</span> <span class="keyword">not</span> <span class="keyword">in</span> (<span class="string">'S_1001'</span>,<span class="string">'S_1002'</span>,<span class="string">'S_1003'</span>);</div><div class="line"></div><div class="line"><span class="comment">-- 查询年龄为null/not null的记录</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> age <span class="keyword">is</span> <span class="literal">NULL</span>;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> age <span class="keyword">is</span> <span class="keyword">NOT</span> <span class="literal">NULL</span>;</div><div class="line"></div><div class="line"><span class="comment">-- 查询年龄在20-40 between用法</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> age <span class="keyword">between</span> <span class="number">20</span> <span class="keyword">and</span> <span class="number">40</span>;</div><div class="line"></div><div class="line"><span class="comment">-- 查询非男性记录</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> gender!=<span class="string">'male'</span>;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> gender=<span class="string">'female'</span>;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> gender&lt;&gt;<span class="string">'male'</span>; <span class="comment">-- &lt;&gt; not equal</span></div><div class="line"></div><div class="line"><span class="comment">-- 模糊查询 like关键字 '_'匹配任意一个字母,'%'匹配0-n个字母</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">'_____'</span>;</div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">'____'</span>; <span class="comment">-- 5个字母构成,最后一个字母为i</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">'z%'</span>;<span class="comment">-- 以z开头的</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">'_i%'</span>;<span class="comment">-- 第二个字母i开头</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">where</span> sname <span class="keyword">like</span> <span class="string">'%a%'</span>;<span class="comment">-- 字母中含有a的</span></div><div class="line"></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp;</div><div class="line"><span class="comment">-- 字段控制查询</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">distinct</span> deptno <span class="keyword">from</span> emp;<span class="comment">-- 去除重复 distinct</span></div><div class="line"><span class="keyword">select</span> *,sal+comm <span class="keyword">from</span> emp; <span class="comment">-- 任何东西与null相加还是null</span></div><div class="line"><span class="keyword">select</span> *,sal+<span class="keyword">ifnull</span>(comm,<span class="number">0</span>) <span class="keyword">from</span> emp;<span class="comment">-- ifnull 用法</span></div><div class="line"><span class="keyword">select</span> *,sal+<span class="keyword">ifnull</span>(comm,<span class="number">0</span>) <span class="keyword">as</span> total <span class="keyword">from</span> emp; <span class="comment">-- 给列起别名</span></div><div class="line"><span class="keyword">select</span> sname <span class="keyword">as</span> 姓名 ,gender <span class="keyword">as</span> 性别 <span class="keyword">from</span> stu;<span class="comment">-- 给列起别名</span></div><div class="line"><span class="keyword">select</span> sname,sname 姓名 <span class="keyword">from</span> stu;<span class="comment">-- as可省略</span></div><div class="line"></div><div class="line"><span class="comment">-- 排序</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">asc</span>;<span class="comment">-- 升序</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> stu <span class="keyword">order</span> <span class="keyword">by</span> age <span class="keyword">desc</span>;<span class="comment">-- 降序</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">order</span> <span class="keyword">by</span> sal,empno <span class="keyword">desc</span>;<span class="comment">-- 按月薪升序排,月薪相同,按编号排降序</span></div><div class="line"></div><div class="line"><span class="comment">-- 聚合函数</span></div><div class="line"><span class="comment">-- 聚合函数是用来做纵向运算的函数</span></div><div class="line"></div><div class="line"><span class="comment">-- count()统计指定列不为null的记录行数</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*)<span class="keyword">from</span> stu;</div><div class="line"><span class="keyword">select</span> <span class="keyword">count</span>(comm)<span class="keyword">from</span> emp;<span class="comment">-- 查询emp表中有佣金的人数</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*)<span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;<span class="number">2500</span>;<span class="comment">-- 查询月薪大于2500人数</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">count</span>(comm),<span class="keyword">count</span>(mgr) <span class="keyword">from</span> emp;<span class="comment">-- 查询有佣金 有领导的人数</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">count</span>(*)<span class="keyword">from</span> emp <span class="keyword">where</span> comm <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span> <span class="keyword">and</span> mgr <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">null</span>;<span class="comment">-- 查询有佣金且有领导的人数</span></div><div class="line"><span class="comment">-- sum()计算指定列的数据和,不是数值类型则为0</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(sal)<span class="keyword">from</span> emp;</div><div class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(sal),<span class="keyword">sum</span>(comm) <span class="keyword">from</span> emp;</div><div class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(sal)+<span class="keyword">ifnull</span>(comm,<span class="number">0</span>) <span class="keyword">as</span> 和 <span class="keyword">from</span> emp;</div><div class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(sal),<span class="keyword">count</span>(sal) <span class="keyword">from</span> emp;</div><div class="line"><span class="keyword">select</span> <span class="keyword">sum</span>(sal)/<span class="keyword">count</span>(sal) <span class="keyword">as</span> 平均工资 <span class="keyword">from</span> emp;<span class="comment">-- 计算出了平均工资</span></div><div class="line"><span class="comment">-- avg()计算平均值 min max 指定列的最大和最小,为字符串类型,使用字符串排序</span></div><div class="line"><span class="keyword">select</span> <span class="keyword">avg</span>(sal) <span class="keyword">from</span> emp;</div><div class="line"><span class="keyword">select</span> <span class="keyword">max</span>(sal),<span class="keyword">min</span>(sal)<span class="keyword">from</span> emp;</div><div class="line"></div><div class="line"><span class="comment">-- 分组查询</span></div><div class="line"><span class="comment">-- 例如,查询每个部门的工资和</span></div><div class="line"><span class="comment">-- group by</span></div><div class="line"><span class="keyword">select</span> deptno,<span class="keyword">count</span>(*),<span class="keyword">sum</span>(sal) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno;</div><div class="line"><span class="keyword">select</span> deptno,<span class="keyword">count</span>(*),<span class="keyword">sum</span>(sal) <span class="keyword">from</span> emp <span class="keyword">where</span> sal&gt;<span class="number">1500</span> <span class="keyword">group</span> <span class="keyword">by</span> deptno; <span class="comment">-- 每个部门工资大于5000的人数</span></div><div class="line"><span class="comment">-- having</span></div><div class="line"><span class="keyword">select</span> deptno,<span class="keyword">count</span>(*),<span class="keyword">sum</span>(sal) <span class="keyword">from</span> emp <span class="keyword">group</span> <span class="keyword">by</span> deptno <span class="keyword">having</span> <span class="keyword">sum</span>(sal)&gt;<span class="number">9000</span>;<span class="comment">-- 查询总工资和大于9000的部门和编号</span></div><div class="line"><span class="comment">-- where 是分组前对数据进行过滤; having 分组后对数据进行过滤</span></div><div class="line"></div><div class="line"><span class="comment">-- limit</span></div><div class="line"><span class="comment">-- 用于限定查询结果的起始行和总行数,用于分页</span></div><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> emp <span class="keyword">limit</span> <span class="number">3</span>,<span class="number">10</span>; <span class="comment">-- 起始行从0开始</span></div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[css笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/25/css%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h3 id="css简介"><a href="#css简介" class="headerlink" title="css简介"></a>css简介</h3><ul>
+<li>什么是css<ul>
+<li>层叠样式表 Cascading Style Sheets</li>
+<li>对html进行样式修饰</li>
+<li>层叠： 就是层层覆盖叠加</li>
+<li>样式表： 属性的集合</li>
+</ul>
+</li>
+<li><p>css引入方式和书写规范</p>
+<ul>
+<li>内嵌样式<ul>
+<li>语法： 使用style属性嵌入html标签;属性写法 属性：属性值 多个属性间，用分号隔开</li>
+<li>example: <code>&lt;div style=&quot;color:red;font-size: 50px;&quot;&gt;你好&lt;/div&gt;</code></li>
+</ul>
+</li>
+<li><p>内部样式</p>
+<ul>
+<li>在head标签中使用style标签进行css的引入</li>
+<li>example:<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    div&#123;color:red;font-size: 50px&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>外部样式</p>
+<ul>
+<li>将css样式抽取成一个单独的文件,在head标签中，用link引入</li>
+<li>example： <code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;demo.css&quot;&gt;</code></li>
+</ul>
+</li>
+<li>@import方式</li>
+</ul>
+</li>
+</ul>
+<h3 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h3><ul>
+<li>基本选择器<ul>
+<li>元素选择器<ul>
+<li>语法 <code>html标签名{css属性}</code></li>
+<li>example <code>span{color:red}</code></li>
+</ul>
+</li>
+<li>id选择器<ul>
+<li>语法 <code>#id值{css属性}</code></li>
+<li>id唯一性</li>
+</ul>
+</li>
+<li>class选择器<ul>
+<li>语法 <code>.class值{css属性}</code></li>
+</ul>
+</li>
+<li>选择器的优先级：id&gt;class&gt;元素</li>
+</ul>
+</li>
+<li><p>属性选择器</p>
+<ul>
+<li>语法 <code>基本选择器[属性=&#39;属性值&#39;]{css属性}</code></li>
+<li>example<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></div><div class="line">    name:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span>&gt;</span></div><div class="line">    pass:<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    input[type='text']&#123;background: yellow&#125;</div><div class="line">    input[type='password']&#123;background:pink&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>伪元素选择器</p>
+<ul>
+<li>a标签的伪元素选择器，语法 <ul>
+<li>静止状态 a:link{}</li>
+<li>悬浮状态 a:hover{}</li>
+<li>触发状态 a:active{}</li>
+<li>完成状态 a:visited{]<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>点击我吧<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">    a:link&#123;color:blue&#125;</div><div class="line">    a:hover&#123;color:red&#125;</div><div class="line">    a:active&#123;color:yellow&#125;</div><div class="line">    a:visited&#123;color:green&#125;</div><div class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>层级选择器</p>
+<ul>
+<li>语法： 父级选择器 子级选择器</li>
+<li>example:<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d1"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dd1"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">span</span>&gt;</span>span1-1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dd2"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">span</span>&gt;</span>span1-2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"d2"</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dd1"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">span</span>&gt;</span>span1-1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">       <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"dd2"</span>&gt;</span></div><div class="line">           <span class="tag">&lt;<span class="name">span</span>&gt;</span>span1-2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line">       <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">   <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line">       #d1 .dd2 span&#123;color:red&#125;</div><div class="line">   <span class="tag">&lt;/<span class="name">style</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="css属性"><a href="#css属性" class="headerlink" title="css属性"></a>css属性</h3>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[javascript笔记1(未完)]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/25/javascript%E7%AC%94%E8%AE%B01/</url>
+      <content type="html"><![CDATA[<h3 id="js简介"><a href="#js简介" class="headerlink" title="js简介"></a>js简介</h3><ul>
+<li>js是什么<ul>
+<li>js是可以嵌入到html中,是基于对象和事件驱动的脚本语言</li>
+<li>特点:<ul>
+<li>交互性</li>
+<li>安全性: js不能访问本地磁盘</li>
+<li>跨平台:浏览器具备js解析器</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>js能做什么<ul>
+<li>js能动态的修改(增删)html和css代码</li>
+<li>能动态的校验数据</li>
+</ul>
+</li>
+<li>js历史<ul>
+<li><a href="http://www.w3school.com.cn/js/pro_js_history.asp" target="_blank" rel="external">js历史</a>    </li>
+</ul>
+</li>
+<li>js引入方式<ul>
+<li>内嵌脚本<ul>
+<li>``</li>
+</ul>
+</li>
+<li>内部脚本</li>
+<li>外部脚本</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2016华为软件挑战精英赛总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/23/2016%E5%8D%8E%E4%B8%BA%E8%BD%AF%E4%BB%B6%E6%8C%91%E6%88%98%E7%B2%BE%E8%8B%B1%E8%B5%9B%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="总结连接"><a href="#总结连接" class="headerlink" title="总结连接"></a>总结连接</h2><ul>
+<li><a href="https://github.com/husthang/future_net2016" target="_blank" rel="external">https://github.com/husthang/future_net2016</a></li>
+</ul>
+<h2 id="初赛-amp-amp-复赛赛题"><a href="#初赛-amp-amp-复赛赛题" class="headerlink" title="初赛&amp;&amp;复赛赛题"></a>初赛&amp;&amp;复赛赛题</h2><ul>
+<li>连接<ul>
+<li><a href="http://codecraft.huawei.com/home/detail" target="_blank" rel="external">http://codecraft.huawei.com/home/detail</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="算法总结"><a href="#算法总结" class="headerlink" title="算法总结"></a>算法总结</h2><h2 id="测试总结-python测试程序"><a href="#测试总结-python测试程序" class="headerlink" title="测试总结(python测试程序)"></a>测试总结(python测试程序)</h2><ul>
+<li><a href="https://github.com/husthang/cc-trevize" target="_blank" rel="external">https://github.com/husthang/cc-trevize</a></li>
+</ul>
+<h2 id="IDE推荐"><a href="#IDE推荐" class="headerlink" title="IDE推荐"></a>IDE推荐</h2><p><a href="https://www.jetbrains.com/clion/" target="_blank" rel="external">Clion</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Intellij IDEA总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/21/Intellij-IDEA%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
+<ul>
+<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
+<li>command+D 复制当前行到下一行</li>
+<li>command+X 剪切当前行</li>
+<li>Fn+ ← home</li>
+<li>Fn+ → end</li>
+<li>command+B go to Declaration</li>
+<li>⌘⇧↩ 自动结束代码，行末自动添加分号</li>
+</ul>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li>Jrebel<ul>
+<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[html笔记]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/21/html%E7%AC%94%E8%AE%B0/</url>
+      <content type="html"><![CDATA[<h3 id="html简介"><a href="#html简介" class="headerlink" title="html简介"></a>html简介</h3><ul>
+<li>html含义<ul>
+<li>Hyper Text Markup Language 超文本标记语言</li>
+<li>不是编程语言,是一套标签</li>
+<li>超文本<ul>
+<li>能实现普通文本不能实现的功能</li>
+<li>包括超链接的文本</li>
+</ul>
+</li>
+<li>标记<ul>
+<li>就是标签,不同标签实现不同功能</li>
+</ul>
+</li>
+<li>语言<ul>
+<li>人与计算机交互的工具</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="html书写规范"><a href="#html书写规范" class="headerlink" title="html书写规范"></a>html书写规范</h3><ul>
+<li>html不区分大小写,建议用小写<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">        包括整个页面属性,指导浏览器解析的标签,引入外部文件的标签</div><div class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">        主体,要展示的信息</div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="html基本标签"><a href="#html基本标签" class="headerlink" title="html基本标签"></a>html基本标签</h3><ul>
+<li>文件标签(结构标签)<ul>
+<li><html></html>根标签</li>
+<li><body></body>内容</li>
+</ul>
+</li>
+<li>排版标签<ul>
+<li>注释 <code>&lt;!--注释--&gt;</code></li>
+<li>换行 <code>&lt;br/&gt;</code></li>
+<li>段落 <code>&lt;p&gt;文本文字&lt;/p&gt;</code><ul>
+<li>段落之间有空行;属性: align:left,center,right</li>
+</ul>
+</li>
+<li>水平 <code>&lt;hr/&gt;</code>    </li>
+</ul>
+</li>
+<li>块标签<ul>
+<li><code>&lt;div&gt;&lt;/div&gt;</code></li>
+<li><code>&lt;span&gt;&lt;/span&gt;</code></li>
+</ul>
+</li>
+<li>文字标签<ul>
+<li><code>&lt;font&gt;&lt;/font&gt;</code></li>
+<li><code>&lt;h1&gt;&lt;/h1&gt;-&lt;h6&gt;</code></li>
+</ul>
+</li>
+<li>清单标签<ul>
+<li>无序列表 <code>&lt;ul&gt;&lt;/ul&gt;; &lt;li&gt;&lt;/li&gt;</code>列表项</li>
+<li>有序列表 <code>&lt;ol&gt;&lt;/ol&gt;</code><pre><code class="html"><span class="tag">&lt;<span class="name">ul</span>&gt;</span>
+<span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
+<span class="tag">&lt;<span class="name">li</span>&gt;</span>列表项<span class="tag">&lt;/<span class="name">li</span>&gt;</span>
+<span class="tag">&lt;<span class="name">ul</span>&gt;</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li>图形标签<ul>
+<li><code>&lt;img/&gt;</code> (自关闭标签)</li>
+</ul>
+</li>
+<li>链接标签<ul>
+<li><code>&lt;a&gt;&lt;/a&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="html表单标签"><a href="#html表单标签" class="headerlink" title="html表单标签"></a>html表单标签</h3><ul>
+<li><p>form标签:<code>&lt;form&gt;&lt;/form&gt;</code></p>
+<ul>
+<li>属性<ul>
+<li>ame:表单名称</li>
+<li>action:提交的路径地址</li>
+<li>method:提交的方式<ul>
+<li>get提交：将提交的数据加在地址栏的后面，提交大小有限制</li>
+<li>post提交：将数据封装在请求体中</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>input标签</p>
+<ul>
+<li>属性<ul>
+<li>type: 根据type值不同,显示不同功能的表单项;<ul>
+<li>text:普通的文本输入框</li>
+<li>password: 密码输入框</li>
+<li>radio: 单选按钮. 注意:组的概念,如果想让一组单选按钮互斥,必须name属性值相同</li>
+<li>checkbox: 复选框</li>
+<li>file:上传文件</li>
+<li>button: 普通按钮,无内置功能</li>
+<li>submit:提交按钮,点击后表达安装action地址进行提交</li>
+<li>reset: 重置</li>
+<li>image:图片按钮,src代表图片地址,alt代表图片的提示文字信息,内置功能同submit</li>
+<li>hidden: 隐藏表单，在提交数据的时候，服务器需要这个数据，但不需要用户看到</li>
+</ul>
+</li>
+<li>name和value属性是提交到后台的，对应 键-值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>select标签</li>
+<li>textarea标签(文本域标签)    <ul>
+<li>属性<ul>
+<li>col 列数</li>
+<li>row 行数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java面向对象2]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/21/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/</url>
+      <content type="html"><![CDATA[<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><ul>
+<li>在java中,使用{}括起来的代码称为代码块;根据其位置和声明的不同,分为局部代码块,构造代码块,静态代码块,同步代码块(多线程)</li>
+<li>应用<ul>
+<li>局部代码块<ul>
+<li>在方法中出现:限定生命周期,及早释放,提高内存利用率</li>
+</ul>
+</li>
+<li>构造代码块(初始化快)<ul>
+<li>在类中方法外出现:每次调用构造方法都执行,并且在构造方法前执行.</li>
+</ul>
+</li>
+<li>静态代码块<ul>
+<li>在类中方法外,并加上static修饰:用于给类初始化,随着类的加载而加载,且只执行一次(一般用来加载驱动)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>面试题<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"Student静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    &#123;</div><div class="line">        System.out.println(<span class="string">"Student构造代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"Student构造方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentTest</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"StudentTest静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是main方法"</span>);</div><div class="line">        Student s1=<span class="keyword">new</span> Student();</div><div class="line">        Student s2=<span class="keyword">new</span> Student();</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">StudentTest静态代码块</div><div class="line">我是main方法</div><div class="line">Student静态代码块</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line"></div><div class="line">Process finished with <span class="built_in">exit</span> code 0</div></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul>
+<li>Java中类的继承的特点<ul>
+<li>Java只支持单继承(一个儿子只能有一个爹)</li>
+<li>Java支持多层继承</li>
+</ul>
+</li>
+<li>继承的好处<ul>
+<li><strong>让类与类之间产生了关系,是多态的前提</strong></li>
+<li>提高代码的复用性</li>
+</ul>
+</li>
+<li>继承的弊端<ul>
+<li>类的耦合性增强</li>
+<li>开发的原则:高内聚,低耦合</li>
+<li>内聚:就是自己完成某件事情的能力</li>
+<li>耦合:类与类的关系</li>
+</ul>
+</li>
+<li>Java继承的注意事项<ul>
+<li>子类只能继承父类所有的非私有的成员</li>
+<li>子类不能继承父类的构造方法,但可以通过super去访问父类构造方法</li>
+<li>不要为了部分功能而去继承</li>
+</ul>
+</li>
+<li><strong>继承中构造方法的关系</strong><ul>
+<li>子类的构造方法中,一定要先调用父类的构造方法; 继承的目的,就是要继承父类的数据,可能还会使用父类的数据</li>
+<li>子类中的所有构造方法默认会访问父类中的空参数的构造方法(即默认加上 super();语句)</li>
+<li>子类初始化之前,一定要先完成父类的初始化 (有父才有子)</li>
+</ul>
+</li>
+<li><p>this,super的应用和区别</p>
+<ul>
+<li>调用成员变量和成员方法<ul>
+<li>this.  调用本类或者调用父类的</li>
+<li>super. 调用父类的</li>
+</ul>
+</li>
+<li>调用构造方法<ul>
+<li>this(…)调用本类</li>
+<li>super(…)调用父类的构造方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3></li>
+<li><p>概述</p>
+<ul>
+<li>修饰类,方法及变量  最终,阻止继承</li>
+</ul>
+</li>
+<li>final特点<ul>
+<li>修饰类,类不能被继承</li>
+<li>修饰变量,则该变量只能赋值一次</li>
+<li>修饰方法,方法不能被继承  </li>
+</ul>
+</li>
+<li>final修饰局部变量特点<ul>
+<li>基本类型 值不能变</li>
+<li>引用类型 地址值不能变,对象中属性可以变   </li>
+</ul>
+</li>
+<li>final 修饰变量的初始化<ul>
+<li>最好显示初始化,不使用成员默认初始化值  </li>
+</ul>
+</li>
+</ul>
+<h3 id="Overload与Override"><a href="#Overload与Override" class="headerlink" title="Overload与Override"></a>Overload与Override</h3><ul>
+<li>Override 重写 子类中出现和父类中方法声明一模一样的方法,返回类型值一致</li>
+<li>Overload 重载 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关                             </li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[华为实习经历总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/20/%E5%8D%8E%E4%B8%BA%E5%AE%9E%E4%B9%A0%E7%BB%8F%E5%8E%86%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h3 id="实习概况"><a href="#实习概况" class="headerlink" title="实习概况"></a>实习概况</h3><ul>
+<li>时间: 2016.7.22-2016.9.22</li>
+<li>地点: 华为公司武汉研究所固网光应用开发部平台组</li>
+<li>项目: 统一网元采集器平台<ul>
+<li>项目介绍:<ul>
+<li>在web平台,批量连接网元设备(连接协议有ssh,mml协议),下发采集脚本(tcl脚本)到网元设备上,执行脚本获取网元信息(比如网元设备类型,设备硬件信息等)</li>
+<li>过程:通过web平台操作,输入要连接的网元的信息(IP,连接网元需要的账户密码,端口号),选择要执行的脚本,连接网元,下发脚本,然后执行采集任务,返回采集信息</li>
+</ul>
+</li>
+<li>技术选型<ul>
+<li>Spring, MyBatis, Spring Restful</li>
+<li>反向代理服务器: Nginx(web服务器)</li>
+<li>jetty</li>
+<li>sqlite(数据库)</li>
+<li>数据库: mysql, sqlite</li>
+<li>工程管理: maven</li>
+</ul>
+</li>
+<li>开发环境<ul>
+<li>Eclipse</li>
+<li>Maven</li>
+<li>Git(版本管理)</li>
+</ul>
+</li>
+<li>项目中的职责<ul>
+<li>后台管理: 网元信息管理(批量导入网元信息等),操作日志信息管理(记录每个网元的脚本执行情况:开始结束时间,执行进度),脚本信息管理.</li>
+<li>安装部署: windows ,linux, solaris 三个系统的安装部署.<ul>
+<li>安装脚本编写: windows批处理脚本;shell脚本</li>
+<li>内容包括: 设置安装路径,linux(unix)需设置文件权限,启动服务.主要是文件操作,然后执行jar包;</li>
+</ul>
+</li>
+<li>测试工作</li>
+</ul>
+</li>
+<li>项目中遇到的问题</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[数据结构与算法-二分查找]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE/</url>
+      <content type="html"><![CDATA[<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>二分搜索是一种在有序数组中,寻找目标值得经典方法.使用前提是<strong>有序数组</strong>. 有的情况需要自己构造有序数组</li>
+<li>使用场景<ul>
+<li>可转换为find the first/last position of..</li>
+<li>时间复杂度最少为O(logN).</li>
+</ul>
+</li>
+</ul>
+<h2 id="模板总结"><a href="#模板总结" class="headerlink" title="模板总结"></a>模板总结</h2><ul>
+<li>核心: binary search问题转化为:寻找第一个或者最后一个,target元素出现的位置. Find the first/last position of target in numbers.</li>
+<li>要素1: 第一步是异常处理</li>
+<li>要素2: while 循环条件  start+1&lt;end;防止陷入死循环.</li>
+<li>要素3: <code>mid=start+(end-start)/2;</code> 需要考虑 int overflow问题.</li>
+<li>要素4: array[mid]==,&gt;,&lt;在循环中,分三种情况讨论边界;在移动start和end时,单纯移动到mid位置,不要+1或者-1;统一在程序最后写return语句,有利于可读性</li>
+<li>要素5: 循环结束后,讨论情况:1. start+1==end 分别讨论start,end与target的关系; 2. start==end 同情况一一样讨论.</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/10/28.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">binarySearchSolution</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lowerBound</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Find the first position of target</div><div class="line">         */</div><div class="line">        <span class="keyword">if</span> (array == <span class="keyword">null</span> || array.length == <span class="number">0</span>)</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = array.length - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</div><div class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</div><div class="line">            <span class="keyword">if</span> (array[mid] == target)</div><div class="line">                end = mid;</div><div class="line">            <span class="keyword">if</span> (array[mid] &gt; target)</div><div class="line">                end = mid;</div><div class="line">            <span class="keyword">if</span> (array[mid] &lt; target)</div><div class="line">                start = mid;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (array[start] == target)<span class="comment">//返回第一个target值,先看start</span></div><div class="line">            <span class="keyword">return</span> start;</div><div class="line">        <span class="keyword">if</span> (array[end] == target)</div><div class="line">            <span class="keyword">return</span> end;</div><div class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">upperBound</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> target)</span> </span>&#123;</div><div class="line">        <span class="comment">/**</span></div><div class="line">         * Find the last position of target;</div><div class="line">         */</div><div class="line">        <span class="keyword">if</span> (array == <span class="keyword">null</span> || array.length == <span class="number">0</span>)</div><div class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">        <span class="keyword">int</span> start = <span class="number">0</span>, end = array.length - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span> (start + <span class="number">1</span> &lt; end) &#123;</div><div class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</div><div class="line">            <span class="keyword">if</span> (array[mid] == target)</div><div class="line">                start = mid;<span class="comment">//start往前提</span></div><div class="line">            <span class="keyword">if</span> (array[mid] &gt; target)</div><div class="line">                end = mid;</div><div class="line">            <span class="keyword">if</span> (array[mid] &lt; target)</div><div class="line">                start = mid;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (array[end] == target)<span class="comment">//返回最后一个target</span></div><div class="line">            <span class="keyword">return</span> end;</div><div class="line">        <span class="keyword">if</span> (array[start] == target)</div><div class="line">            <span class="keyword">return</span> start;</div><div class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java方法(未完)]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/18/Java%E6%96%B9%E6%B3%95/</url>
+      <content type="html"><![CDATA[<h3 id="Java方法概述"><a href="#Java方法概述" class="headerlink" title="Java方法概述"></a>Java方法概述</h3><ul>
+<li>什么是方法<ul>
+<li>完成特定功能的代码块</li>
+</ul>
+</li>
+<li>方法格式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">修饰符 返回值类型 方法名(参数类型 参数名1,参数类型 参数名...)&#123;</div><div class="line">       代码;</div><div class="line">       return 返回值;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[java数组]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/18/java%E6%95%B0%E7%BB%84/</url>
+      <content type="html"><![CDATA[<h3 id="数组概述"><a href="#数组概述" class="headerlink" title="数组概述"></a>数组概述</h3><ul>
+<li>数组作用<ul>
+<li>为了存储同种数据类型的多个值</li>
+</ul>
+</li>
+<li>数组概念<ul>
+<li>数组是存储统一数据类型的多个元素的集合</li>
+<li>数组既可以存储基本数据类型,也可以存储引用数据类型</li>
+</ul>
+</li>
+<li>数组定义格式<ul>
+<li>数据类型[]数组名=new 数据类型[数组长度];<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[]arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="数组的静态初始化-动态初始化"><a href="#数组的静态初始化-动态初始化" class="headerlink" title="数组的静态初始化,动态初始化"></a>数组的静态初始化,动态初始化</h3><ul>
+<li>什么是数组初始化<ul>
+<li>就是为数组开辟连续的内存空间,并为每个数组元素赋值</li>
+</ul>
+</li>
+<li><p>初始化方法</p>
+<ul>
+<li><p>静态初始化:给出初始化值,由系统决定长度</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[]arr=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;<span class="comment">//不可拆开,声明和赋值在同一行,不可写为:int[]arr;arr=&#123;1,2,3&#125;;</span></div><div class="line"><span class="keyword">int</span>[]arr=<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>&#125;;<span class="comment">//可拆开写,先声明后赋值;</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>动态初始化:只指定长度,由系统给出初始化值</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[]arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong><em>数组动态初始化,系统默认初始化值</em></strong></p>
+<ul>
+<li>整型数组(byte,short,int,long),默认初始化值为0;</li>
+<li>浮点型(float,double),默认初始化值为0.0;</li>
+<li>布尔型(boolean),默认初始化值为false;</li>
+<li>字符型(char):默认初始化值为’\u0000’,char在内存中两个字节,16位,\u转移序列符为Unicode编码</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayTest</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</div><div class="line">        <span class="keyword">int</span>[]arr=<span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">5</span>];</div><div class="line">        System.out.println(arr[<span class="number">0</span>]);</div><div class="line">        arr[<span class="number">0</span>]=<span class="number">10</span>;</div><div class="line">        System.out.println(arr[<span class="number">0</span>]);</div><div class="line">        System.out.println(arr);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">0</div><div class="line">10</div><div class="line">[I@4361bd48</div><div class="line">[Finished <span class="keyword">in</span> 1.6s]</div></pre></td></tr></table></figure>
+<ul>
+<li>example解释:[I@7852e922<ul>
+<li>[代表数组,几个就代表几维</li>
+<li>I代表int型</li>
+<li>@是固定的<br>*</li>
+</ul>
+</li>
+</ul>
+<h3 id="Java中的内存分配以及栈和堆的区别"><a href="#Java中的内存分配以及栈和堆的区别" class="headerlink" title="Java中的内存分配以及栈和堆的区别"></a>Java中的内存分配以及栈和堆的区别</h3><ul>
+<li>栈<ul>
+<li>存储局部变量和方法调用<ul>
+<li>局部变量:定义在方法声明上和方法中的变量</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>堆<ul>
+<li>存储new出来的数组或对象</li>
+</ul>
+</li>
+<li>方法区<ul>
+<li>代码区(见面向对象部分)</li>
+</ul>
+</li>
+<li>本地方法区<ul>
+<li>和系统相关</li>
+</ul>
+</li>
+<li>寄存器<ul>
+<li>给CPU使用</li>
+</ul>
+</li>
+<li><strong><em>堆主要用来存放对象的，栈主要是用来执行程序的</em></strong></li>
+</ul>
+<h3 id="深入分析java中的length和length"><a href="#深入分析java中的length和length" class="headerlink" title="深入分析java中的length和length()"></a>深入分析java中的length和length()</h3><ul>
+<li><p>问题</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</div><div class="line">System.out.println(arr.length);<span class="comment">//使用length获取数组的程度</span></div><div class="line"></div><div class="line">String str = <span class="string">"abc"</span>;</div><div class="line">System.out.println(str.length());<span class="comment">//使用length()获取字符串的长度</span></div></pre></td></tr></table></figure>
+<ul>
+<li>为什么数组有length属性，而字符串没有？</li>
+</ul>
+</li>
+<li>分析<ul>
+<li><a href="http://www.hollischuang.com/archives/1261" target="_blank" rel="external">详见这篇文章</a></li>
+<li>数组length理解为其属性<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Object obj = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];<span class="comment">//本句合法</span></div><div class="line"><span class="keyword">int</span>[] arr = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</div><div class="line">System.out.println(arr.getClass());<span class="comment">//输出为 class [I</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java面向对象1]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/18/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A11/</url>
+      <content type="html"><![CDATA[<h3 id="面向对象思想概述"><a href="#面向对象思想概述" class="headerlink" title="面向对象思想概述"></a>面向对象思想概述</h3><ul>
+<li>面向过程思想<ul>
+<li>强调的过程,即第一步,第二步…</li>
+</ul>
+</li>
+<li>面向对象思想<ul>
+<li>强调对象,对象里面封装了第一步,第二步</li>
+</ul>
+</li>
+<li>两种思想比较<ul>
+<li>举例:买煎饼果子吃<ul>
+<li>面向对象<ul>
+<li>找会摊煎饼的大妈(大妈提供怎么摊)-给钱-吃</li>
+</ul>
+</li>
+<li>面向过程<ul>
+<li>学习摊煎饼技术-买材料-开始摊-吃</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>面向对象思想特点</strong><ul>
+<li>更符合我们思想习惯:<em>其实就是”懒人思想”,把事情交给别人去做</em></li>
+<li>将复杂的事情简单化:对我(调用者)来说,简单化,去调对象即可;对象也被复用,其他人也可用</li>
+<li>将我们从执行者变成了指挥者: <em>角色发生了改变</em></li>
+</ul>
+</li>
+<li>面向对象开发<ul>
+<li>就是不断的创建对象,使用对象,指挥对象做事情.</li>
+</ul>
+</li>
+<li>面向对象设计<ul>
+<li>其实就是在管理和维护对象之间的关系.</li>
+</ul>
+</li>
+<li><strong>面向对象特征</strong><ul>
+<li>封装(encapsulation)</li>
+<li>继承(inheritance)</li>
+<li>多态(polymorphism)</li>
+</ul>
+</li>
+</ul>
+<h3 id="类与对象概述"><a href="#类与对象概述" class="headerlink" title="类与对象概述"></a>类与对象概述</h3><ul>
+<li>编程的作用<ul>
+<li>把我们日常生活中的实物,事件等用编程语言描述出来</li>
+</ul>
+</li>
+<li>如何描述现实世界实物<ul>
+<li>属性 事务的描述信息(名词)</li>
+<li>行为 事务能够做什么(动词)</li>
+</ul>
+</li>
+<li>Java中最基本的单位是类,class<ul>
+<li>成员变量:事务的属性</li>
+<li>成员方法:事务的行为</li>
+</ul>
+</li>
+<li>定义类,就是定义类的成员(成员变量,成员方法)</li>
+<li>类和对象的该你<ul>
+<li>类:是一组相关的属性和行为的集合</li>
+<li>对象:是该类事务的具体体现</li>
+<li>example<ul>
+<li>类:学生</li>
+<li>对象:具体的某个学生,张三</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</div><div class="line">    <span class="keyword">private</span> String name;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">    <span class="keyword">private</span> String gender;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name,<span class="keyword">int</span> age,String gender)</span></span>&#123;</div><div class="line">        <span class="keyword">this</span>.name=name;</div><div class="line">        <span class="keyword">this</span>.age=age;</div><div class="line">        <span class="keyword">this</span>.gender=gender;</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">study</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(name+<span class="string">"("</span>+age+<span class="string">"-"</span>+gender+<span class="string">")"</span>+<span class="string">":学习"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">play</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"玩耍"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StudentTheest</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">        Student student=<span class="keyword">new</span> Student(<span class="string">"刘航"</span>,<span class="number">18</span>,<span class="string">"男"</span>);</div><div class="line">        student.study();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><ul>
+<li>作用<ul>
+<li>给对象的数据(属性)进行初始化</li>
+</ul>
+</li>
+<li>格式特点<ul>
+<li>方法名与类名完全一致</li>
+<li>没有返回值类型</li>
+</ul>
+</li>
+</ul>
+<h3 id="成员变量与局部变量区别"><a href="#成员变量与局部变量区别" class="headerlink" title="成员变量与局部变量区别"></a>成员变量与局部变量区别</h3><ul>
+<li>在类中的位置不同<ul>
+<li>成员变量:在类中方法外</li>
+<li>局部变量:在方法定义中或者方法声明上</li>
+</ul>
+</li>
+<li>在内存中的位置不同<ul>
+<li>成员变量:在堆内存(成员变量属于对象,对象在堆内存)</li>
+<li>局部变量:在栈内存(局部变量属于方法,方法进栈内存)</li>
+</ul>
+</li>
+<li>生命周期不同<ul>
+<li>成员变量:随着对象的创建而存在</li>
+<li>局部变量:随着方法的调用(进栈)而存在,调用完毕(弹栈)而消失</li>
+</ul>
+</li>
+<li>初始化值不同<ul>
+<li>成员变量:有默认初始化值</li>
+<li>局部变量:没有默认初始化值,必须定义,赋值,然后才能使用</li>
+</ul>
+</li>
+<li>注意事项<ul>
+<li>局部变量名称可以和成员变量一样,方法中使用时,就近原则</li>
+<li>基本数据类型变量:8中基本</li>
+<li>引用数据类型变量:数组,类,接口,枚举</li>
+</ul>
+</li>
+</ul>
+<h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><ul>
+<li>封装概述<ul>
+<li>封装是指隐藏对象的属性和实现细节,仅对外提供公共访问方式</li>
+</ul>
+</li>
+<li>封装好处<ul>
+<li>隐藏实现细节,提供公共的访问方式</li>
+<li>提高代码的复用性</li>
+<li>提高安全性</li>
+</ul>
+</li>
+<li>封装原著<ul>
+<li>将不需要对外提供的内容隐藏起来</li>
+<li>把属性隐藏,提供公共的方法对其访问</li>
+</ul>
+</li>
+</ul>
+<h3 id="static关键字"><a href="#static关键字" class="headerlink" title="static关键字"></a>static关键字</h3><ul>
+<li>static特点<ul>
+<li>随着类的加载而加载</li>
+<li>优先于对象而存在</li>
+<li>被类的所有对象共享<ul>
+<li>例如,同一个班级的学生公用一个班级编号</li>
+<li>如果某个成员变量是被所有对象共享的,则应该定义为静态的.</li>
+</ul>
+</li>
+<li>可通过类名调用<ul>
+<li>推荐通过类名调用,也可通过对象调用</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>注意事项<ul>
+<li>静态只能访问静态</li>
+<li><strong>在静态方法中是没有this关键字的</strong><ul>
+<li>静态是随着类的加载而加载的,this是随着对象的创建而存在;静态比对象先存在</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>静态变量和成员变量<ul>
+<li>静态变量属于类,存于方法区的静态区,也称为类变量;成员变量属于对象,存于堆内存,也称为实例变量</li>
+<li>静态可通过类名,也可通过对象调用;成员变量只能通过对象名调用</li>
+</ul>
+</li>
+</ul>
+<h3 id="mian方法详解"><a href="#mian方法详解" class="headerlink" title="mian方法详解"></a>mian方法详解</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span></span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</div><div class="line">        <span class="comment">//public:被jvm调用,权限足够大</span></div><div class="line">        <span class="comment">//static:被jvm调用,不需要创建对象,直接类名来调用即可</span></div><div class="line">        <span class="comment">//void:不需要返回值</span></div><div class="line">        <span class="comment">//main:规定,被jvm识别;**main不是关键字**</span></div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;args.length;i++)</div><div class="line">            System.out.println(args[i]);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring 之旅]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/16/spinginaction-ch1/</url>
+      <content type="html"><![CDATA[<h2 id="JavaBean-POJO-EJB"><a href="#JavaBean-POJO-EJB" class="headerlink" title="JavaBean,POJO,EJB"></a>JavaBean,POJO,EJB</h2><ul>
+<li>JavaBean<br>  JavaBean:符合一定规范编写的Java类 <a href="http://www.cnblogs.com/xdp-gacl/p/3871730.html" target="_blank" rel="external">http://www.cnblogs.com/xdp-gacl/p/3871730.html</a></li>
+<li>POJO<br>  Plain Old Java Object.一个POJO是一个不受任何限制的Java对象；当一个Pojo可序列化，有一个无参的构造函数，使用getter和setter方法来访问属性时，它就是一个JavaBean<br>  <a href="http://www.cnblogs.com/zhwl/p/3175306.html" target="_blank" rel="external">http://www.cnblogs.com/zhwl/p/3175306.html</a>  与javabean区别    </li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java数据类型]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/16/Java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+      <content type="html"><![CDATA[<h2 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h2><ul>
+<li>A:什么是常量<ul>
+<li>在程序执行过程中,值不可以发生改变</li>
+</ul>
+</li>
+<li>B:Java中常量的分类<ul>
+<li>字面值常量</li>
+<li>自定义常量(见面向对象部分)</li>
+</ul>
+</li>
+<li>C:字面值常量<ul>
+<li>字符串常量:用双引号括起来的内容</li>
+<li>整数常量</li>
+<li>小数常量</li>
+<li>字符常量:单引号括起来,里面只能放单个数字,单个字母,单个符号;<ul>
+<li>字符常量’’不能单引号中什么都不放(报错,未结束的文字字符);</li>
+</ul>
+</li>
+<li>布尔常量:boolean 只有 true false;</li>
+<li>空常量: null(见数组部分)</li>
+</ul>
+</li>
+</ul>
+<h2 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h2><ul>
+<li>A:什么是进制<ul>
+<li>进位制,某一位上的数运算是,逢X进一位</li>
+</ul>
+</li>
+<li>B:十进制<ul>
+<li>默认是十进制</li>
+</ul>
+</li>
+<li>C:二进制<ul>
+<li>0,1组成;以0b(b可大写小写)开头表示</li>
+<li>1byte=8bit;1k=1024byte</li>
+</ul>
+</li>
+<li>D:八进制<ul>
+<li>由0,1..,7组成;以0开头表示</li>
+</ul>
+</li>
+<li>E:十六进制<ul>
+<li>0,1..,9,a,b,c,d,e,f(大小写均可);以0x(x大小写均可)开头</li>
+</ul>
+</li>
+</ul>
+<h2 id="原码补码反码"><a href="#原码补码反码" class="headerlink" title="原码补码反码"></a>原码补码反码</h2><ul>
+<li>有符号数据表示的几种方法<ul>
+<li>原码:<ul>
+<li>最高位为符号位,”0”表示正,”1”表示负;其余位表示数值大小</li>
+</ul>
+</li>
+<li>反码<ul>
+<li>正数的反码与其原码相同;负数的反码是对其原码诸位取反,<strong>但符号位除外</strong>;</li>
+</ul>
+</li>
+<li>补码<ul>
+<li>正数的补码与其原码相同;负数的补码是在其反码末位加1.</li>
+</ul>
+</li>
+<li>计算机存储运算时,都是用数据的补码形式</li>
+</ul>
+</li>
+</ul>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
+<li>什么是变量<ul>
+<li>在程序执行的过程中,在某个范围内其值可以发生改变的量</li>
+</ul>
+</li>
+<li>变量的定义格式<ul>
+<li>数据类型 变量名=变量值;</li>
+</ul>
+</li>
+<li>变量使用注意事项<ul>
+<li>初始化问题<br>  局部变量在使用前必须赋值</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li>数据类型作概述<ul>
+<li>java语言是强类型语言,对每一种数据,都定义了明确的具体数据类型,在内存中分配了不同大小的内存空间</li>
+<li>java中,没有无符号类型</li>
+</ul>
+</li>
+<li>数据类型分类<ul>
+<li>基本数据类型</li>
+<li>引用数据类型(见面向对象部分)</li>
+</ul>
+</li>
+<li>基本数据类型分类(4类8种)<ul>
+<li>整数型<ul>
+<li>byte 一个字节,-128~127</li>
+<li>short 两个字节,-2^15~2^15-1</li>
+<li>int 四个字节,-2^31-2^31-1</li>
+<li>long 八个字节,-2^63-2^63-1</li>
+</ul>
+</li>
+<li>浮点型:即小数型<ul>
+<li>float 四个字节</li>
+<li>double 八个字节</li>
+</ul>
+</li>
+<li>字符型<ul>
+<li>char 两个字节 0~65535(2^16-1),没有负数</li>
+</ul>
+</li>
+<li>布尔型<ul>
+<li>boolean :只有 true false ; boolean理论上占八分之一字节,但java中boolean类型没有明确指定它的大小</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据类型转换"><a href="#数据类型转换" class="headerlink" title="数据类型转换"></a>数据类型转换</h2><ul>
+<li>隐式转换<ul>
+<li>Java中默认转换规则<ul>
+<li>取值范围小的数据类型与取值范围大的数据类型进行运算,会先将小的数据类型提升为大的,再运算</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>强制转换</p>
+<ul>
+<li><p>example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> a=<span class="number">20</span>;</div><div class="line"><span class="keyword">byte</span> b=<span class="number">3</span>;</div><div class="line">b=a+b;</div></pre></td></tr></table></figure>
+<ul>
+<li>会报错,改为’b=(byte)(a+b)’,可编译通过;</li>
+</ul>
+</li>
+<li>注意<ul>
+<li>强制转换,如果超出了被赋值的数据类型的取值范围,会得到错误结果</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>面试题:变量相加和常量相加的区别</p>
+<ul>
+<li><p>example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">byte</span> a=<span class="number">10</span>;</div><div class="line"><span class="keyword">byte</span> b=<span class="number">9</span>;</div><div class="line"><span class="keyword">byte</span> c=a+b;</div></pre></td></tr></table></figure>
+<p>这段代码是否有问题,有何问题</p>
+</li>
+<li>byte类型的变量在运算时,会自动提升为int类型;最后int类型赋值给byte类型,报错,会损失</li>
+<li>编译时,无法判两个变量的具体值,相加有可能会超出byte的取值范围</li>
+</ul>
+</li>
+<li>混合运算<ul>
+<li>进行混合运算时,byte,short,char不会相互转换,都会自动提升为int型;其他类型进行混合运算时,晓得数据类型提升为大的:byte,short,char–int–long–float–double</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符和字符串参与运算”‘“"><a href="#字符和字符串参与运算”‘“" class="headerlink" title="字符和字符串参与运算”‘“"></a>字符和字符串参与运算”‘“</h2><ul>
+<li><p>example</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">System.out.println(<span class="string">'a'</span>);</div><div class="line">System.out.println(<span class="string">'a'</span>+<span class="number">1</span>);</div><div class="line">System.out.println(<span class="string">"hello"</span>+<span class="string">'a'</span>+<span class="number">1</span>);</div><div class="line">System.out.println(<span class="string">"5+5"</span>=<span class="number">5</span>+<span class="number">5</span>);</div><div class="line">System.out.println(<span class="number">5</span>+<span class="number">5</span>+<span class="string">"=5+5"</span>)</div></pre></td></tr></table></figure>
+</li>
+<li><p>+在有字符串参与时,为字符串连接符</p>
+</li>
+<li>字符通过查看ASCII码表,得出其值<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&apos;0&apos; 48</div><div class="line">&apos;A&apos; 65</div><div class="line">&apos;a&apos; 97</div></pre></td></tr></table></figure>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础概述]]></title>
+      <url>http://blog.liuhang.net.cn/2016/10/15/Java%E5%9F%BA%E7%A1%80%E6%A6%82%E8%BF%B0/</url>
+      <content type="html"><![CDATA[<h2 id="Java语言概述（了解）"><a href="#Java语言概述（了解）" class="headerlink" title="Java语言概述（了解）"></a>Java语言概述（了解）</h2><ul>
+<li>A:Java语言发展简史<br>  James Gosling,Patrick,Mike Sheridan等,由”Green计划”,开始叫”Oak”,后改名Java.<br>  Java取名来源:Oak被注册,java本来含义为一个岛名”爪洼岛”,这个岛盛产咖啡.<br>  SUN公司:Stanford University Network,斯坦福大学网络公司</li>
+<li>B:Java语言版本<br>  *</li>
+<li>C:Java语言平台<ul>
+<li>跨平台</li>
+<li>面向对象</li>
+<li>自动垃圾回收</li>
+<li>解释性</li>
+<li>多线程</li>
+<li>分布式处理</li>
+</ul>
+</li>
+<li>D:Java语言平台版本<ul>
+<li>J2SE(Java 2 Platform Standard Edition)标准版, 即java的基础,是下面两版的基础</li>
+<li>J2ME(Java 2 Platform Micro Edition)小型版,电子消费产品和嵌入式设备用的,现在用的很少了</li>
+<li>J2EE(Java 2 Platform Enterprise Edition)企业版 ,开发企业环境应用程序,主要针对Web应用程序开发</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java语言跨平台原理（掌握）"><a href="#Java语言跨平台原理（掌握）" class="headerlink" title="Java语言跨平台原理（掌握）"></a>Java语言跨平台原理（掌握）</h2><ul>
+<li>A:什么是跨平台<br>  write once,run anywhere!<br>  通过Java语言编写的应用程序,在不同的系统平台上都可以运行.即良好的可移植性,Java应用程序源代码不用改.</li>
+<li>B:Java跨平台原理<ul>
+<li>只要在需要运行Java应用程序的操作系统上，安装一个Java虚拟机（JVM java virtual machine）。由jvm负责java程序在该系统中的运行</li>
+</ul>
+</li>
+</ul>
+<h2 id="JRE和JDk（掌握）"><a href="#JRE和JDk（掌握）" class="headerlink" title="JRE和JDk（掌握）"></a>JRE和JDk（掌握）</h2><ul>
+<li>A:什么是JRE<ul>
+<li>java runtime environment. Java运行环境，包括JVM和Java程序所需的核心类库,运行已经开发好的Java程序,只需安装了JRE即可</li>
+</ul>
+</li>
+<li>B:什么是JDK<ul>
+<li>Java Development Kit. Java开发包</li>
+<li>JDK供开发人员使用,包含Java开发工具,也包含JRE;</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java标识符-掌握"><a href="#Java标识符-掌握" class="headerlink" title="Java标识符(掌握)"></a>Java标识符(掌握)</h2><ul>
+<li>A:什么是标识(zhi)符<ul>
+<li>就是给类,接口,方法,变量起名字时使用的字符序列</li>
+</ul>
+</li>
+<li>B:标识符的组成规则<ul>
+<li>以字母开头的,由字母或者数字构成的序列</li>
+<li>包括’_’,’$’</li>
+<li>大小写敏感,变量名长度没有限制</li>
+<li>不能是java当中的关键字,不能有空格</li>
+</ul>
+</li>
+<li>C:标识符常见命名规则<ul>
+<li>包:域名的倒序,所有字母小写</li>
+<li>类or接口:<ul>
+<li>如果是一个单词,首字母大写;</li>
+<li>多个单词,则每个单侧首字母大写(驼峰标识)</li>
+</ul>
+</li>
+<li>方法or变量(驼峰命名法)<ul>
+<li>如果是一个单词,全部小写</li>
+<li>如果多个单词,从第二个单词首字母大写</li>
+</ul>
+</li>
+<li>常量<ul>
+<li>一个单词,所有字母大写</li>
+<li>多个单词,所有单词大写,单词之间用下划线间隔</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java关键字"><a href="#Java关键字" class="headerlink" title="Java关键字"></a>Java关键字</h2><ul>
+<li>A:什么是关键字<ul>
+<li>被java语言赋予特定含义的单词</li>
+</ul>
+</li>
+<li>B:特点<ul>
+<li>组成关键字的字母全部小写</li>
+<li>goto和const作为保留关键字存在,目前并不使用</li>
+</ul>
+</li>
+</ul>
+<h2 id="Java文件名与类名"><a href="#Java文件名与类名" class="headerlink" title="Java文件名与类名"></a>Java文件名与类名</h2><ul>
+<li><p>一个java文件中,可以有多个类(编译后,每个类都会生成一个.class文件),但是最多只能有一个public类,如果有public类,则java文件名必须与此public类名保持一致.</p>
+</li>
+<li><p>java.lang包<br>在整个JDK API中，大约包含1200个包，总体来看，包名第一个名称主要有三种：java、javax和org。其中以java开头的包名是JDK的基础语言包，以javax开头的属于JDK扩展包(其中x是extend的简写)，而以org开头的则是第三方组织提供的功能包org是organization的简写)。<br>java.lang包是Java基础语言包(其中lang是language(语言)的简写)，该包中包含Java语言所需要的基本的功能类、接口等信息，是进行Java语言编程的基础。在Java语言中，该包是被默认引入的。</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    
+  
+  
+</search>
