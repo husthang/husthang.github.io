@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[Spring笔记1]]></title>
+      <title></title>
       <url>http://blog.liuhang.net.cn/2016/12/23/Spring%E7%AC%94%E8%AE%B01/</url>
       <content type="html"><![CDATA[<h2 id="Java-EE概述"><a href="#Java-EE概述" class="headerlink" title="Java EE概述"></a>Java EE概述</h2><ol>
 <li>Java EE是什么<ul>
@@ -526,8 +526,59 @@ java.net.BindException: Address already in use</code></li>
     </entry>
     
     <entry>
-      <title><![CDATA[Git笔记]]></title>
-      <url>http://blog.liuhang.net.cn/2016/11/16/Git%E6%80%BB%E7%BB%93/</url>
+      <title></title>
+      <url>http://blog.liuhang.net.cn/2016/11/19/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</url>
+      <content type="html"><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="../images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
+<h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
+<li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
+<li>容器: 举例说明: Servlet没有main()方法。Servlet受控于另一个Java应用，这个Java应用称为容器.<ul>
+<li><a href="http://openhome.cc/Gossip/ServletJSP/Container.html" target="_blank" rel="external">何谓容器</a> ,关于容器的详解</li>
+<li>在具体层面,容器实际上是Java应用程序,运行于JVM之上,不同类型的容器负责不同的工作，例如Servlet/JSP所运行的Web容器（Web Container),功能之一就是把JSP代码翻译成java代码</li>
+</ul>
+</li>
+<li>服务器，硬件角度上说就是一台高性能的Computer。我们通常指的服务器其实应该是装有能够处理具体请求事务的服务器软件的Computer</li>
+<li>Web服务器是指驻留于因特网上某种类型计算机的程序，是可以向发出请求的浏览器提供文档的程序。当Web浏览器（客户端）连到服务器上并请求文件时，服务器将处理该请求并将文件反馈到该浏览器上</li>
+<li>Client-Server架构<br><img src="../images/Client-Server.png" alt="Client-Server"></li>
+</ol>
+<ul>
+<li>动态WEB中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox等），通过网络(Network)连接到服务器上，使用HTTP协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源(<em>.htm或者是</em>.htm)还是动态资源。</li>
+<li>如果WEB Server Plugin发现客户端请求的是静态资源(<em>.htm或者是</em>.htm)，则将请求直接转交给WEB服务器，之后WEB服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</li>
+<li>如果WEB Server Plugin发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container(WEB容器)，在WEB Container中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给WEB服务器，之后通过WEB服务器将内容发送回客户端浏览器进行解析执行。</li>
+</ul>
+<h2 id="Apache、Tomcat与Catalina作为软件名字的含义与关系"><a href="#Apache、Tomcat与Catalina作为软件名字的含义与关系" class="headerlink" title="Apache、Tomcat与Catalina作为软件名字的含义与关系"></a>Apache、Tomcat与Catalina作为软件名字的含义与关系</h2><ol>
+<li>JavaWeb中常见这三个词,一直没闹清楚这三个词命名的来源和含义,找到一篇文章总结的不错.<a href="http://blog.csdn.net/yingchengsun/article/details/44340211" target="_blank" rel="external">文章戳这里</a></li>
+</ol>
+<h2 id="JavaWeb应用的组成结构"><a href="#JavaWeb应用的组成结构" class="headerlink" title="JavaWeb应用的组成结构"></a>JavaWeb应用的组成结构</h2><p><img src="../images/JavaWeb应用组成结构.png" alt="JavaWeb目录结构"></p>
+<h2 id="浏览器与服务器的交互过程"><a href="#浏览器与服务器的交互过程" class="headerlink" title="浏览器与服务器的交互过程"></a>浏览器与服务器的交互过程</h2><ol>
+<li>URL:统一资源定位符(即网址) uniform resources location<br>URI:统一资源标识符, uniform resource identify<br><a href="http://localhost:8080/doc/1.html" target="_blank" rel="external">http://localhost:8080/doc/1.html</a><br>协议  主机IP(端口号)   URI(当前应用的资源路径)</li>
+<li>浏览器与服务器交互过程图<br><img src="../images/浏览器与服务器交互图.png" alt="浏览器与服务器交互过程图"></li>
+</ol>
+<h2 id="Tomcat简介"><a href="#Tomcat简介" class="headerlink" title="Tomcat简介"></a>Tomcat简介</h2><ol>
+<li><p>Tomcat目录层次结构<br><img src="../images/Tomcat目录层次结构.png" alt="Tomcat目录结构"><br><strong>应学会查看logs日志信息来排查错误</strong></p>
+</li>
+<li><p>Tomcat体系结构<br><img src="../images/Tomcat体系结构.png" alt="Tomcat体系结构"><br>Tomcat服务器的启动是基于一个server.xml文件的，Tomcat启动的时候首先会启动一个Server，Server里面就会启动Service，Service里面就会启动多个”Connector(连接器)”，每一个连接器都在等待客户机的连接，当有用户使用浏览器去访问服务器上面的web资源时，首先是连接到Connector(连接器)，Connector(连接器)是不处理用户的请求的，而是将用户的请求交给一个Engine(引擎)去处理，Engine(引擎)接收到请求后就会解析用户想要访问的Host，然后将请求交给相应的Host，Host收到请求后就会解析出用户想要访问这个Host下面的哪一个Web应用,一个web应用对应一个Context。</p>
+</li>
+</ol>
+<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
+<li>hypertext transfer protocol（超文本传输协议）</li>
+<li>HTTP请求<ul>
+<li>一个完整的HTTP请求包括如下内容：一个请求行、若干消息头、以及实体内容<br><img src="../images/httpRequest.png" alt="范例"></li>
+<li>第一行请求行 请求方式(get,post) URI  协议版本    </li>
+</ul>
+</li>
+<li>HTTP响应<ul>
+<li>状态码<br><img src="../images/状态码.png" alt="状态码"></li>
+<li>一个HTTP响应代表服务器向客户端回送的数据，它包括： 一个状态行、若干消息头、以及实体内容 。<br><img src="../images/httpResponse.png" alt="http响应"></li>
+</ul>
+</li>
+</ol>
+<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://blog.liuhang.net.cn/2016/11/19/Git%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
 <li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
 <li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
@@ -549,7 +600,7 @@ java.net.BindException: Address already in use</code></li>
 </li>
 </ul>
 <h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
-<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<li><img src="../images/工作区暂存区示意图.jpeg" alt="示意图"></li>
 <li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
 </ul>
 <h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
@@ -560,9 +611,9 @@ java.net.BindException: Address already in use</code></li>
 <h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
 <li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
 <li>reset<ul>
-<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
-<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
-<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
+<li><img src="../images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="../images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="../images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
 </ul>
 </li>
 <li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
@@ -620,31 +671,8 @@ java.net.BindException: Address already in use</code></li>
     </entry>
     
     <entry>
-      <title><![CDATA[mac技巧总结]]></title>
-      <url>http://blog.liuhang.net.cn/2016/11/14/mac%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</url>
-      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
-<li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
-<li><p>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</p>
-</li>
-<li><p>个人常用快捷键</p>
-<ul>
-<li>Option-Command-V    移动：将剪贴板中的文件从其原始位置移动到当前位置。</li>
-<li>Command–空格键    Spotlight</li>
-<li>Command-M    将最前面的窗口最小化至 Dock。</li>
-<li>control +command+f 窗口最大化(退出最大化)切换</li>
-</ul>
-</li>
-</ol>
-<h2 id="Parallels-Desktop-for-Mac安装win10虚拟机"><a href="#Parallels-Desktop-for-Mac安装win10虚拟机" class="headerlink" title="Parallels Desktop for Mac安装win10虚拟机"></a>Parallels Desktop for Mac安装win10虚拟机</h2><ol>
-<li><a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a></li>
-<li>强烈推荐</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[chrome浏览器总结]]></title>
-      <url>http://blog.liuhang.net.cn/2016/11/14/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%80%BB%E7%BB%93/</url>
+      <title></title>
+      <url>http://blog.liuhang.net.cn/2016/11/18/chrome%E6%B5%8F%E8%A7%88%E5%99%A8%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
 <li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
 <li>个人常用<ul>
@@ -669,53 +697,25 @@ java.net.BindException: Address already in use</code></li>
     </entry>
     
     <entry>
-      <title><![CDATA[JavaWeb开发入门]]></title>
-      <url>http://blog.liuhang.net.cn/2016/11/11/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</url>
-      <content type="html"><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="/images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
-<h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
-<li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
-<li>容器: 举例说明: Servlet没有main()方法。Servlet受控于另一个Java应用，这个Java应用称为容器.<ul>
-<li><a href="http://openhome.cc/Gossip/ServletJSP/Container.html" target="_blank" rel="external">何谓容器</a> ,关于容器的详解</li>
-<li>在具体层面,容器实际上是Java应用程序,运行于JVM之上,不同类型的容器负责不同的工作，例如Servlet/JSP所运行的Web容器（Web Container),功能之一就是把JSP代码翻译成java代码</li>
-</ul>
+      <title><![CDATA[mac技巧总结]]></title>
+      <url>http://blog.liuhang.net.cn/2016/11/14/mac%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
+<li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
+<li><p>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</p>
 </li>
-<li>服务器，硬件角度上说就是一台高性能的Computer。我们通常指的服务器其实应该是装有能够处理具体请求事务的服务器软件的Computer</li>
-<li>Web服务器是指驻留于因特网上某种类型计算机的程序，是可以向发出请求的浏览器提供文档的程序。当Web浏览器（客户端）连到服务器上并请求文件时，服务器将处理该请求并将文件反馈到该浏览器上</li>
-<li>Client-Server架构<br><img src="/images/Client-Server.png" alt="Client-Server"></li>
-</ol>
+<li><p>个人常用快捷键</p>
 <ul>
-<li>动态WEB中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox等），通过网络(Network)连接到服务器上，使用HTTP协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源(<em>.htm或者是</em>.htm)还是动态资源。</li>
-<li>如果WEB Server Plugin发现客户端请求的是静态资源(<em>.htm或者是</em>.htm)，则将请求直接转交给WEB服务器，之后WEB服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</li>
-<li>如果WEB Server Plugin发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container(WEB容器)，在WEB Container中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给WEB服务器，之后通过WEB服务器将内容发送回客户端浏览器进行解析执行。</li>
-</ul>
-<h2 id="Apache、Tomcat与Catalina作为软件名字的含义与关系"><a href="#Apache、Tomcat与Catalina作为软件名字的含义与关系" class="headerlink" title="Apache、Tomcat与Catalina作为软件名字的含义与关系"></a>Apache、Tomcat与Catalina作为软件名字的含义与关系</h2><ol>
-<li>JavaWeb中常见这三个词,一直没闹清楚这三个词命名的来源和含义,找到一篇文章总结的不错.<a href="http://blog.csdn.net/yingchengsun/article/details/44340211" target="_blank" rel="external">文章戳这里</a></li>
-</ol>
-<h2 id="JavaWeb应用的组成结构"><a href="#JavaWeb应用的组成结构" class="headerlink" title="JavaWeb应用的组成结构"></a>JavaWeb应用的组成结构</h2><p><img src="/images/JavaWeb应用组成结构.png" alt="JavaWeb目录结构"></p>
-<h2 id="浏览器与服务器的交互过程"><a href="#浏览器与服务器的交互过程" class="headerlink" title="浏览器与服务器的交互过程"></a>浏览器与服务器的交互过程</h2><ol>
-<li>URL:统一资源定位符(即网址) uniform resources location<br>URI:统一资源标识符, uniform resource identify<br><a href="http://localhost:8080/doc/1.html" target="_blank" rel="external">http://localhost:8080/doc/1.html</a><br>协议  主机IP(端口号)   URI(当前应用的资源路径)</li>
-<li>浏览器与服务器交互过程图<br><img src="/images/浏览器与服务器交互图.png" alt="浏览器与服务器交互过程图"></li>
-</ol>
-<h2 id="Tomcat简介"><a href="#Tomcat简介" class="headerlink" title="Tomcat简介"></a>Tomcat简介</h2><ol>
-<li><p>Tomcat目录层次结构<br><img src="/images/Tomcat目录层次结构.png" alt="Tomcat目录结构"><br><strong>应学会查看logs日志信息来排查错误</strong></p>
-</li>
-<li><p>Tomcat体系结构<br><img src="/images/Tomcat体系结构.png" alt="Tomcat体系结构"><br>Tomcat服务器的启动是基于一个server.xml文件的，Tomcat启动的时候首先会启动一个Server，Server里面就会启动Service，Service里面就会启动多个”Connector(连接器)”，每一个连接器都在等待客户机的连接，当有用户使用浏览器去访问服务器上面的web资源时，首先是连接到Connector(连接器)，Connector(连接器)是不处理用户的请求的，而是将用户的请求交给一个Engine(引擎)去处理，Engine(引擎)接收到请求后就会解析用户想要访问的Host，然后将请求交给相应的Host，Host收到请求后就会解析出用户想要访问这个Host下面的哪一个Web应用,一个web应用对应一个Context。</p>
-</li>
-</ol>
-<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
-<li>hypertext transfer protocol（超文本传输协议）</li>
-<li>HTTP请求<ul>
-<li>一个完整的HTTP请求包括如下内容：一个请求行、若干消息头、以及实体内容<br><img src="/images/httpRequest.png" alt="范例"></li>
-<li>第一行请求行 请求方式(get,post) URI  协议版本    </li>
-</ul>
-</li>
-<li>HTTP响应<ul>
-<li>状态码<br><img src="/images/状态码.png" alt="状态码"></li>
-<li>一个HTTP响应代表服务器向客户端回送的数据，它包括： 一个状态行、若干消息头、以及实体内容 。<br><img src="/images/httpResponse.png" alt="http响应"></li>
+<li>Option-Command-V    移动：将剪贴板中的文件从其原始位置移动到当前位置。</li>
+<li>Command–空格键    Spotlight</li>
+<li>Command-M    将最前面的窗口最小化至 Dock。</li>
+<li>control +command+f 窗口最大化(退出最大化)切换</li>
 </ul>
 </li>
 </ol>
-<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
+<h2 id="Parallels-Desktop-for-Mac安装win10虚拟机"><a href="#Parallels-Desktop-for-Mac安装win10虚拟机" class="headerlink" title="Parallels Desktop for Mac安装win10虚拟机"></a>Parallels Desktop for Mac安装win10虚拟机</h2><ol>
+<li><a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a></li>
+<li>强烈推荐</li>
+</ol>
 ]]></content>
     </entry>
     
@@ -839,6 +839,103 @@ java.net.BindException: Address already in use</code></li>
 <h2 id="练习demo"><a href="#练习demo" class="headerlink" title="练习demo"></a>练习demo</h2><ul>
 <li><a href="https://github.com/husthang/javaFoundation/tree/master/src/exception" target="_blank" rel="external">ExceptionDemo</a></li>
 <li>博客推荐: <a href="http://www.cnblogs.com/xdp-gacl/p/3627390.html" target="_blank" rel="external">孤傲苍狼博客java异常</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title></title>
+      <url>http://blog.liuhang.net.cn/2016/11/07/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/</url>
+      <content type="html"><![CDATA[<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><ul>
+<li>在java中,使用{}括起来的代码称为代码块;根据其位置和声明的不同,分为局部代码块,构造代码块,静态代码块,同步代码块(多线程)</li>
+<li>应用<ul>
+<li>局部代码块<ul>
+<li>在方法中出现:限定生命周期,及早释放,提高内存利用率</li>
+</ul>
+</li>
+<li>构造代码块(初始化快)<ul>
+<li>在类中方法外出现:每次调用构造方法都执行,并且在构造方法前执行.</li>
+</ul>
+</li>
+<li>静态代码块<ul>
+<li>在类中方法外,并加上static修饰:用于给类初始化,随着类的加载而加载,且只执行一次(一般用来加载驱动)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>面试题<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"Student静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    &#123;</div><div class="line">        System.out.println(<span class="string">"Student构造代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"Student构造方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentTest</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"StudentTest静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是main方法"</span>);</div><div class="line">        Student s1=<span class="keyword">new</span> Student();</div><div class="line">        Student s2=<span class="keyword">new</span> Student();</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">StudentTest静态代码块</div><div class="line">我是main方法</div><div class="line">Student静态代码块</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line"></div><div class="line">Process finished with <span class="built_in">exit</span> code 0</div></pre></td></tr></table></figure>
+<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul>
+<li>Java中类的继承的特点<ul>
+<li>Java只支持单继承(一个儿子只能有一个爹)</li>
+<li>Java支持多层继承</li>
+</ul>
+</li>
+<li>继承的好处<ul>
+<li><strong>让类与类之间产生了关系,是多态的前提</strong></li>
+<li>提高代码的复用性</li>
+</ul>
+</li>
+<li>继承的弊端<ul>
+<li>类的耦合性增强</li>
+<li>开发的原则:高内聚,低耦合</li>
+<li>内聚:就是自己完成某件事情的能力</li>
+<li>耦合:类与类的关系</li>
+</ul>
+</li>
+<li>Java继承的注意事项<ul>
+<li>子类只能继承父类所有的非私有的成员</li>
+<li>子类不能继承父类的构造方法,但可以通过super去访问父类构造方法</li>
+<li>不要为了部分功能而去继承</li>
+</ul>
+</li>
+<li><strong>继承中构造方法的关系</strong><ul>
+<li>子类的构造方法中,一定要先调用父类的构造方法; 继承的目的,就是要继承父类的数据,可能还会使用父类的数据</li>
+<li>子类中的所有构造方法默认会访问父类中的空参数的构造方法(即默认加上 super();语句)</li>
+<li>子类初始化之前,一定要先完成父类的初始化 (有父才有子)</li>
+</ul>
+</li>
+<li><p>this,super的应用和区别</p>
+<ul>
+<li>调用成员变量和成员方法<ul>
+<li>this.  调用本类或者调用父类的</li>
+<li>super. 调用父类的</li>
+</ul>
+</li>
+<li>调用构造方法<ul>
+<li>this(…)调用本类</li>
+<li>super(…)调用父类的构造方法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3></li>
+<li><p>概述</p>
+<ul>
+<li>修饰类,方法及变量  最终,阻止继承</li>
+</ul>
+</li>
+<li>final特点<ul>
+<li>修饰类,类不能被继承</li>
+<li>修饰变量,则该变量只能赋值一次</li>
+<li>修饰方法,方法不能被继承  </li>
+</ul>
+</li>
+<li>final修饰局部变量特点<ul>
+<li>基本类型 值不能变</li>
+<li>引用类型 地址值不能变,对象中属性可以变   </li>
+</ul>
+</li>
+<li>final 修饰变量的初始化<ul>
+<li>最好显示初始化,不使用成员默认初始化值  </li>
+</ul>
+</li>
+</ul>
+<h3 id="Overload与Override"><a href="#Overload与Override" class="headerlink" title="Overload与Override"></a>Overload与Override</h3><ul>
+<li>Override 重写 子类中出现和父类中方法声明一模一样的方法,返回类型值一致</li>
+<li>Overload 重载 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关                             </li>
 </ul>
 ]]></content>
     </entry>
@@ -1311,103 +1408,6 @@ java.net.BindException: Address already in use</code></li>
 </li>
 </ul>
 </li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Java面向对象2]]></title>
-      <url>http://blog.liuhang.net.cn/2016/10/21/Java%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A12/</url>
-      <content type="html"><![CDATA[<h3 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h3><ul>
-<li>在java中,使用{}括起来的代码称为代码块;根据其位置和声明的不同,分为局部代码块,构造代码块,静态代码块,同步代码块(多线程)</li>
-<li>应用<ul>
-<li>局部代码块<ul>
-<li>在方法中出现:限定生命周期,及早释放,提高内存利用率</li>
-</ul>
-</li>
-<li>构造代码块(初始化快)<ul>
-<li>在类中方法外出现:每次调用构造方法都执行,并且在构造方法前执行.</li>
-</ul>
-</li>
-<li>静态代码块<ul>
-<li>在类中方法外,并加上static修饰:用于给类初始化,随着类的加载而加载,且只执行一次(一般用来加载驱动)</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>面试题<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"Student静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    &#123;</div><div class="line">        System.out.println(<span class="string">"Student构造代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"Student构造方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">StudentTest</span></span>&#123;</div><div class="line">    <span class="keyword">static</span> &#123;</div><div class="line">        System.out.println(<span class="string">"StudentTest静态代码块"</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[]args)</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是main方法"</span>);</div><div class="line">        Student s1=<span class="keyword">new</span> Student();</div><div class="line">        Student s2=<span class="keyword">new</span> Student();</div><div class="line"></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">StudentTest静态代码块</div><div class="line">我是main方法</div><div class="line">Student静态代码块</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line">Student构造代码块</div><div class="line">Student构造方法</div><div class="line"></div><div class="line">Process finished with <span class="built_in">exit</span> code 0</div></pre></td></tr></table></figure>
-<h3 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h3><ul>
-<li>Java中类的继承的特点<ul>
-<li>Java只支持单继承(一个儿子只能有一个爹)</li>
-<li>Java支持多层继承</li>
-</ul>
-</li>
-<li>继承的好处<ul>
-<li><strong>让类与类之间产生了关系,是多态的前提</strong></li>
-<li>提高代码的复用性</li>
-</ul>
-</li>
-<li>继承的弊端<ul>
-<li>类的耦合性增强</li>
-<li>开发的原则:高内聚,低耦合</li>
-<li>内聚:就是自己完成某件事情的能力</li>
-<li>耦合:类与类的关系</li>
-</ul>
-</li>
-<li>Java继承的注意事项<ul>
-<li>子类只能继承父类所有的非私有的成员</li>
-<li>子类不能继承父类的构造方法,但可以通过super去访问父类构造方法</li>
-<li>不要为了部分功能而去继承</li>
-</ul>
-</li>
-<li><strong>继承中构造方法的关系</strong><ul>
-<li>子类的构造方法中,一定要先调用父类的构造方法; 继承的目的,就是要继承父类的数据,可能还会使用父类的数据</li>
-<li>子类中的所有构造方法默认会访问父类中的空参数的构造方法(即默认加上 super();语句)</li>
-<li>子类初始化之前,一定要先完成父类的初始化 (有父才有子)</li>
-</ul>
-</li>
-<li><p>this,super的应用和区别</p>
-<ul>
-<li>调用成员变量和成员方法<ul>
-<li>this.  调用本类或者调用父类的</li>
-<li>super. 调用父类的</li>
-</ul>
-</li>
-<li>调用构造方法<ul>
-<li>this(…)调用本类</li>
-<li>super(…)调用父类的构造方法</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3></li>
-<li><p>概述</p>
-<ul>
-<li>修饰类,方法及变量  最终,阻止继承</li>
-</ul>
-</li>
-<li>final特点<ul>
-<li>修饰类,类不能被继承</li>
-<li>修饰变量,则该变量只能赋值一次</li>
-<li>修饰方法,方法不能被继承  </li>
-</ul>
-</li>
-<li>final修饰局部变量特点<ul>
-<li>基本类型 值不能变</li>
-<li>引用类型 地址值不能变,对象中属性可以变   </li>
-</ul>
-</li>
-<li>final 修饰变量的初始化<ul>
-<li>最好显示初始化,不使用成员默认初始化值  </li>
-</ul>
-</li>
-</ul>
-<h3 id="Overload与Override"><a href="#Overload与Override" class="headerlink" title="Overload与Override"></a>Overload与Override</h3><ul>
-<li>Override 重写 子类中出现和父类中方法声明一模一样的方法,返回类型值一致</li>
-<li>Overload 重载 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关                             </li>
 </ul>
 ]]></content>
     </entry>
@@ -1977,7 +1977,7 @@ java.net.BindException: Address already in use</code></li>
 </li>
 <li>B:标识符的组成规则<ul>
 <li>以字母开头的,由字母或者数字构成的序列</li>
-<li>包括’_’,’$’</li>
+<li>包括<code>&#39;_&#39;,&#39;$&#39;</code></li>
 <li>大小写敏感,变量名长度没有限制</li>
 <li>不能是java当中的关键字,不能有空格</li>
 </ul>
