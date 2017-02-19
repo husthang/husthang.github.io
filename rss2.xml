@@ -639,37 +639,6 @@ java.net.BindException: Address already in use</code></li>
     </item>
     
     <item>
-      <title>atom笔记</title>
-      <link>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/</link>
-      <guid>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/</guid>
-      <pubDate>Sun, 20 Nov 2016 04:53:10 GMT</pubDate>
-      <description>
-      
-        发现神器atom,特此记录;写markdown爽爆了
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol>
-<li><a href="https://atom.io/" target="_blank" rel="external">主页</a></li>
-<li><a href="https://atom-china.org/" target="_blank" rel="external">中文社区</a></li>
-<li><a href="https://atom-china.org/t/atom/62" target="_blank" rel="external">Atom基础使用</a></li>
-<li>终端命令行用<code>atom [file]</code>可打开文件()在 Atom 的菜单栏中有一个名为 Install Shell Commands 的菜单项)</li>
-<li><code>cmd-shift-P</code>打开命令面板;<code>cmd-P</code>直接在文件夹中搜索;<code>ctrl-shift-M</code> markdown预览.</li>
-</ol>
-<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ol>
-<li><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">atom-hexo插件</a>  atom结合此插件,用markdown写作体验超级棒!</li>
-<li><a href="https://atom.io/packages/platformio-ide-terminal" target="_blank" rel="external">terminal</a> 在编辑器中打开终端,避免频繁切换窗口.<ul>
-<li><code>shift-cmd-T</code>    platformio-ide-terminal:new</li>
-<li><code>shift-cmd-X</code>    platformio-ide-terminal:close</li>
-</ul>
-</li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>JavaWeb开发入门</title>
       <link>http://blog.liuhang.net.cn/2016/11/20/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</link>
       <guid>http://blog.liuhang.net.cn/2016/11/20/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/</guid>
@@ -728,6 +697,37 @@ java.net.BindException: Address already in use</code></li>
 ]]></content:encoded>
       
       <comments>http://blog.liuhang.net.cn/2016/11/20/JavaWeb%E5%BC%80%E5%8F%91%E5%85%A5%E9%97%A8/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>atom笔记</title>
+      <link>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/</link>
+      <guid>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/</guid>
+      <pubDate>Sun, 20 Nov 2016 04:53:10 GMT</pubDate>
+      <description>
+      
+        发现神器atom,特此记录;写markdown爽爆了
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol>
+<li><a href="https://atom.io/" target="_blank" rel="external">主页</a></li>
+<li><a href="https://atom-china.org/" target="_blank" rel="external">中文社区</a></li>
+<li><a href="https://atom-china.org/t/atom/62" target="_blank" rel="external">Atom基础使用</a></li>
+<li>终端命令行用<code>atom [file]</code>可打开文件()在 Atom 的菜单栏中有一个名为 Install Shell Commands 的菜单项)</li>
+<li><code>cmd-shift-P</code>打开命令面板;<code>cmd-P</code>直接在文件夹中搜索;<code>ctrl-shift-M</code> markdown预览.</li>
+</ol>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><ol>
+<li><a href="https://atom.io/packages/atom-hexo" target="_blank" rel="external">atom-hexo插件</a>  atom结合此插件,用markdown写作体验超级棒!</li>
+<li><a href="https://atom.io/packages/platformio-ide-terminal" target="_blank" rel="external">terminal</a> 在编辑器中打开终端,避免频繁切换窗口.<ul>
+<li><code>shift-cmd-T</code>    platformio-ide-terminal:new</li>
+<li><code>shift-cmd-X</code>    platformio-ide-terminal:close</li>
+</ul>
+</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://blog.liuhang.net.cn/2016/11/20/atom%E7%AC%94%E8%AE%B0/#disqus_thread</comments>
     </item>
     
     <item>
