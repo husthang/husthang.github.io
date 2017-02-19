@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="KM算法，匈牙利算法," />
+  <meta name="keywords" content="简单工厂模式," />
 
 
 
@@ -86,22 +86,18 @@
 
 
 
-<meta name="description" content="匈牙利算法和KM算法详解及java实现">
+<meta name="description" content="设计模式总结(一) 简单工厂模式">
 <meta property="og:type" content="article">
-<meta property="og:title" content="匈牙利算法和KM算法详解及java实现">
-<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/匈牙利算法和KM算法详解及java实现/index.html">
+<meta property="og:title" content="设计模式(一) 简单工厂模式">
+<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/设计模式-一-简单工厂模式/index.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="匈牙利算法和KM算法详解及java实现">
-<meta property="og:image" content="http://liuhang.net.cn/media/graph.png">
-<meta property="og:image" content="http://liuhang.net.cn/media/增广路径.png">
-<meta property="og:image" content="http://liuhang.net.cn/media/14846300394186.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14846361640808.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/顶标变换.png">
-<meta property="og:updated_time" content="2017-02-19T17:23:39.000Z">
+<meta property="og:description" content="设计模式总结(一) 简单工厂模式">
+<meta property="og:image" content="http://liuhang.net.cn/media/14873386849094.png">
+<meta property="og:updated_time" content="2017-02-19T17:40:30.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="匈牙利算法和KM算法详解及java实现">
-<meta name="twitter:description" content="匈牙利算法和KM算法详解及java实现">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/graph.png">
+<meta name="twitter:title" content="设计模式(一) 简单工厂模式">
+<meta name="twitter:description" content="设计模式总结(一) 简单工厂模式">
+<meta name="twitter:image" content="http://liuhang.net.cn/media/14873386849094.png">
 
 
 
@@ -119,7 +115,7 @@
   };
 </script>
 
-  <title> 匈牙利算法和KM算法详解及java实现 | 刘航 </title>
+  <title> 设计模式(一) 简单工厂模式 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -292,7 +288,7 @@
             
             
               
-                匈牙利算法和KM算法详解及java实现
+                设计模式(一) 简单工厂模式
               
             
           </h1>
@@ -304,7 +300,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T01:19:23+08:00" content="2017-02-20">
+            <time itemprop="dateCreated" datetime="2017-02-20T01:36:37+08:00" content="2017-02-20">
               2017-02-20
             </time>
           </span>
@@ -318,8 +314,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -334,8 +330,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/20/匈牙利算法和KM算法详解及java实现/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/匈牙利算法和KM算法详解及java实现/" itemprop="commentsCount"></span>
+                <a href="/2017/02/20/设计模式-一-简单工厂模式/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/设计模式-一-简单工厂模式/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -358,73 +354,58 @@
       
 
       
-        <h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="/media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+        <h2 id="一、模式定义"><a href="#一、模式定义" class="headerlink" title="一、模式定义"></a>一、模式定义</h2><ul>
+<li>简单工厂模式(Simple Factory Pattern)：又称为静态工厂方法(Static Factory Method)模式，它属于<strong>类创建型模式</strong>（同属于创建型模式的还有工厂方法模式，抽象工厂模式，单例模式，建造者模式）。在简单工厂模式中，可以<strong>根据参数的不同返回不同类的实例</strong>。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。</li>
 </ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="/media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
+<h2 id="二、模式结构"><a href="#二、模式结构" class="headerlink" title="二、模式结构"></a>二、模式结构</h2><p><img src="/media/14873386849094.png" alt=""></p>
 <ul>
-<li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""> </li>
-<li><p><img src="/media/顶标变换.png" alt=""> </p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+<li>从上图可以看出，简单工厂模式由三部分组成：具体工厂、具体产品和抽象产品。<ul>
+<li>工厂类（Creator）角色：担任这个角色的是简单工厂模式的核心，含有与应用紧密相关的商业逻辑。工厂类在客户端的直接调用下创建产品对象，它往往由一个具体Java类实现。</li>
+<li>抽象产品（AbstractProduct）角色：担任这个角色的类是由简单工厂模式所创建的对象的父类，或它们共同拥有的接口。抽象产品角色可以用一个Java接口或者Java抽象类实现。</li>
+<li>具体产品（ConcreteProduct）角色：简单工厂模式所创建的任何对象都是这个角色的实例，具体产品角色由一个具体Java类实现。</li>
 </ul>
 </li>
 </ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+<h2 id="三、模式动机"><a href="#三、模式动机" class="headerlink" title="三、模式动机"></a>三、模式动机</h2><ul>
+<li>使用简单工厂模式可以将产品的“消费”和生产完全分开，客户端只需要知道自己需要什么产品，如何来使用产品就可以了，具体的产品生产任务由具体的工厂类来实现。工厂类根据传进来的参数生产具体的产品供消费者使用。这种模式使得更加利于扩展，当有新的产品加入时仅仅需要在工厂中加入新产品的构造就可以了。</li>
+</ul>
+<h2 id="四、实例分析"><a href="#四、实例分析" class="headerlink" title="四、实例分析"></a>四、实例分析</h2><ul>
+<li>话说有一位土豪，他家有三辆汽车——Benz奔驰、Bmw宝马、Audi奥迪，还雇了司机为他开车。不过，土豪坐车时总是怪怪的：上Benz车后跟司机说“开奔驰车！”坐上Bmw后他说“开宝马车！”，坐上Audi说“开奥迪车！”。你一定说：这人有病！直接说开车不就行了？！ 而当把土豪的行为放到我们程序设计中来时，会发现这是一个普遍存在的现象。幸运的是，这种有病的现象在OO（面向对象）语言中可以避免了。下面就以Java语言为例来讲解一下如何避免这种问题。</li>
+<li>实例代码实现</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 汽车抽象类,所有汽车类的父类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Audi奥迪类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Audi</span> <span class="keyword">extends</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Audi</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Create an Audi"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Audi start engine"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Car工厂类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Car <span class="title">getCar</span><span class="params">(String type)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        <span class="keyword">if</span> (type.equals(<span class="string">"Audi"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Audi();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Bmw"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Bmw();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Benz"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Benz();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 测试简单工厂模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyFactoryModelTest</span> </span>&#123;</div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testEasyFactoryModel</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        Car car = Driver.getCar(<span class="string">"Benz"</span>);</div><div class="line">        car.drive();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>从这个实例的实现中,我们可以看到,土豪不需要自己new汽车对象，而是告诉Driver类今天我想要开什么车，Driver就会自动的将想要的汽车创建出来，然后土豪坐在车里只需要说开车就好了，这与我们现实中的逻辑相符合.Driver类就是我们说的工厂，他用if-else语句来判断需要创建什么类型的对象（当然也可以使用switch语句），这就是<strong>简单工厂模式</strong>。</li>
+</ul>
+<h2 id="五、模式优点"><a href="#五、模式优点" class="headerlink" title="五、模式优点"></a>五、模式优点</h2><ul>
+<li>工厂类含有必要的判断逻辑，可以决定在什么时候创建哪一个产品类的实例，客户端可以免除直接创建产品对象的责任，而仅仅“消费”产品；简单工厂模式通过这种做法实现了对责任的分割，它提供了专门的工厂类用于创建对象。</li>
+<li>客户端无须知道所创建的具体产品类的类名，只需要知道具体产品类所对应的参数即可，对于一些复杂的类名，通过简单工厂模式可以减少使用者的记忆量。</li>
+<li>通过引入配置文件，可以在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性。</li>
+<li>当需要引入新的产品是不需要修改客户端的代码，只需要添加相应的产品类并修改工厂类就可以了，所以说从产品的角度上简单工厂模式是符合“开-闭”原则的。</li>
+</ul>
+<h2 id="六、模式缺点"><a href="#六、模式缺点" class="headerlink" title="六、模式缺点"></a>六、模式缺点</h2><ul>
+<li>由于工厂类集中了所有产品创建逻辑，工厂类一般被我们称作“全能类”或者“<strong>上帝类</strong>”，因为所有的产品创建他都能完成，这看似是好事，但仔细想想是有问题的。比如全国上下所有的事情都有国家主义一个人干会不会有问题，当然有！一旦不能正常工作，整个系统都要受到影响。</li>
+<li>使用简单工厂模式将会增加系统中类的个数，在一定程序上增加了系统的复杂度和理解难度。</li>
+<li>系统扩展困难，一旦添加新产品就不得不修改工厂逻辑，在产品类型较多时，有可能造成工厂逻辑过于复杂，不利于系统的扩展和维护。所以说从工厂的角度来说简单工厂模式是不符合“开-闭”原则的。</li>
+<li>简单工厂模式由于使用了静态工厂方法，造成工厂角色无法形成基于继承的等级结构。</li>
+</ul>
+<h2 id="七、适用场景"><a href="#七、适用场景" class="headerlink" title="七、适用场景"></a>七、适用场景</h2><ul>
+<li>在以下情况下可以使用简单工厂模式：<ol>
+<li>工厂类负责创建的对象比较少：由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。</li>
+<li>客户端只知道传入工厂类的参数，对于如何创建对象不关心：客户端既不需要关心创建细节，甚至连类名都不需要记住，只需要知道类型所对应的参数。</li>
 </ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
+</li>
+</ul>
+<h2 id="八、简单工厂模式在JDK中的应用"><a href="#八、简单工厂模式在JDK中的应用" class="headerlink" title="八、简单工厂模式在JDK中的应用"></a>八、简单工厂模式在JDK中的应用</h2><ul>
+<li>JDK类库中广泛使用了简单工厂模式，如工具类java.text.DateFormat，它用于格式化一个本地日期或者时间。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">()</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style)</span></span>; </div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style,Locale locale)</span></span>;</div></pre></td></tr></table></figure>
+<h2 id="八、参考"><a href="#八、参考" class="headerlink" title="八、参考"></a>八、参考</h2><ol>
+<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
+<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/factoryModel" target="_blank" rel="external">我的代码|GitHub</a></li>
 </ol>
 
       
@@ -463,7 +444,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/KM算法，匈牙利算法/" rel="tag">#KM算法，匈牙利算法</a>
+            <a href="/tags/简单工厂模式/" rel="tag">#简单工厂模式</a>
           
         </div>
       
@@ -472,13 +453,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/02/20/匈牙利算法和KM算法详解及java实现/" rel="next" title="匈牙利算法和KM算法详解及java实现">
+                <i class="fa fa-chevron-left"></i> 匈牙利算法和KM算法详解及java实现
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/20/设计模式-一-简单工厂模式/" rel="prev" title="设计模式(一) 简单工厂模式">
-                设计模式(一) 简单工厂模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -504,8 +485,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/匈牙利算法和KM算法详解及java实现/"
-           data-title="匈牙利算法和KM算法详解及java实现" data-url="http://liuhang.net.cn/2017/02/20/匈牙利算法和KM算法详解及java实现/">
+      <div class="ds-thread" data-thread-key="2017/02/20/设计模式-一-简单工厂模式/"
+           data-title="设计模式(一) 简单工厂模式" data-url="http://liuhang.net.cn/2017/02/20/设计模式-一-简单工厂模式/">
       </div>
     
   </div>
@@ -632,7 +613,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#匈牙利算法"><span class="nav-number">1.</span> <span class="nav-text">匈牙利算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本概念"><span class="nav-number">1.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#求图最大匹配的匈牙利算法"><span class="nav-number">1.2.</span> <span class="nav-text">求图最大匹配的匈牙利算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KM算法"><span class="nav-number">2.</span> <span class="nav-text">KM算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#KM算法原理"><span class="nav-number">2.1.</span> <span class="nav-text">KM算法原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#KM算法流程及实例"><span class="nav-number">2.2.</span> <span class="nav-text">KM算法流程及实例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、模式定义"><span class="nav-number">1.</span> <span class="nav-text">一、模式定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、模式结构"><span class="nav-number">2.</span> <span class="nav-text">二、模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、模式动机"><span class="nav-number">3.</span> <span class="nav-text">三、模式动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、实例分析"><span class="nav-number">4.</span> <span class="nav-text">四、实例分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、模式优点"><span class="nav-number">5.</span> <span class="nav-text">五、模式优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、模式缺点"><span class="nav-number">6.</span> <span class="nav-text">六、模式缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、适用场景"><span class="nav-number">7.</span> <span class="nav-text">七、适用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、简单工厂模式在JDK中的应用"><span class="nav-number">8.</span> <span class="nav-text">八、简单工厂模式在JDK中的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、参考"><span class="nav-number">9.</span> <span class="nav-text">八、参考</span></a></li></ol></div>
             
           </div>
         </section>
