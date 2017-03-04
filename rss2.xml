@@ -81,6 +81,144 @@
     </item>
     
     <item>
+      <title>linux总结</title>
+      <link>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
+      <guid>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
+      <pubDate>Sun, 19 Feb 2017 17:19:23 GMT</pubDate>
+      <description>
+      
+        linux基础知识和常用命令总结
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
+<li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
+</li>
+<li><p>文件属性与权限的更改</p>
+<ul>
+<li><code>chgrp</code>：改变文件用户组</li>
+<li><code>chown</code>：改变文件所有者</li>
+<li><code>chmod</code> ：改变文件权限，rwx对应数字4，2，1</li>
+</ul>
+</li>
+<li>文件类型<ul>
+<li>任何设备在Linux中都是文件</li>
+</ul>
+</li>
+<li>参考：<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php" target="_blank" rel="external">文件权限</a></li>
+</ol>
+<h1 id="linux文件与目录管理"><a href="#linux文件与目录管理" class="headerlink" title="linux文件与目录管理"></a>linux文件与目录管理</h1><h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><ol>
+<li>目录相关操作<ul>
+<li><code>.</code>：此层目录</li>
+<li><code>..</code>：上层目录</li>
+<li><code>-</code>：代表前一个工作目录</li>
+<li><code>~</code>：代表目前用户所在的文件夹</li>
+<li><code>cd</code>： change directory</li>
+<li><code>mkdir</code>： make directory</li>
+<li><code>pwd</code>：print working directory</li>
+<li><code>rmdir</code>： 删除空目录</li>
+</ul>
+</li>
+<li>查看文件与目录<ul>
+<li>ls <ul>
+<li><code>-a</code>：常用，列出全部，包括隐藏</li>
+<li><code>-l</code>：常用，列出详细信息， <code>ll</code>缩写</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>复制、移动与删除： <code>cp,rm,mv</code><ul>
+<li><code>cp</code>： 复制文件或目录<ul>
+<li><code>-r</code>，递归复制，用于目录的复制行为（常用）</li>
+</ul>
+</li>
+<li><code>rm</code>： remove,移除文件或者目录<ul>
+<li><code>rm [-fir] 文件或目录</code>，f强制，i删除前询问，r递归（用于目录删除）</li>
+</ul>
+</li>
+<li><code>mv</code>：移动文件与目录，或更名</li>
+</ul>
+</li>
+<li>取得路径的文件名与目录名称<ul>
+<li><code>basename</code>：取得最后的文件名</li>
+<li><code>dirname</code>：取得目录名</li>
+</ul>
+</li>
+</ol>
+<h2 id="文件内容查询"><a href="#文件内容查询" class="headerlink" title="文件内容查询"></a>文件内容查询</h2><ol>
+<li><code>cat</code>：从第一行显示文件内容</li>
+<li><code>tac</code>：cat的倒写，从最后一行显示文件内容</li>
+<li><code>head</code>：<code>head [-n number] file</code>，只看头几行</li>
+<li><code>tail</code>：只看结尾几行</li>
+<li><code>nl</code>：显示的时候，输出行号</li>
+<li><code>touch</code>：创建新文件或修改文件更新时间</li>
+<li><code>file</code>： 查看文件类型</li>
+</ol>
+<h2 id="命令与文件查询"><a href="#命令与文件查询" class="headerlink" title="命令与文件查询"></a>命令与文件查询</h2><ol>
+<li>脚本文件名的查询<ul>
+<li><code>which</code>：寻找执行文件，根据PATH路径寻找，例如<code>which ifconfig</code>,<code>which cd</code></li>
+</ul>
+</li>
+<li>文件名的查找<ul>
+<li><code>whereis</code>：寻找特定文件</li>
+<li><code>locate</code>：后面跟文件的步伐名称</li>
+<li><code>find</code>：<ul>
+<li>find命令具体使用见：<a href="http://man.linuxde.net/find" target="_blank" rel="external">find命令用法</a></li>
+<li>将当前目录下所有文件转为unix类型： <code>find . -type f | xargs dos2unix</code>;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h2><ol>
+<li>压缩<ul>
+<li><code>tar -zcvf log.tar.gz a.log</code>,-c 创建</li>
+</ul>
+</li>
+<li>解压<ul>
+<li><code>tar -zxvf log.tar.gz</code>，-x extract 欢迎</li>
+</ul>
+</li>
+</ol>
+<h1 id="vim基本使用"><a href="#vim基本使用" class="headerlink" title="vim基本使用"></a>vim基本使用</h1><ol>
+<li>i → Insert 模式，按 ESC 回到 Normal 模式.</li>
+<li>:wq → 存盘 + 退出 (:w 存盘, :q 退出)</li>
+<li>hjkl移动光标(←↓↑→).</li>
+<li>命令模式下，输入<code>/关键字</code>，查询关键字</li>
+<li>q! → 退出不保存</li>
+</ol>
+<h1 id="shell-script"><a href="#shell-script" class="headerlink" title="shell script"></a>shell script</h1><ol>
+<li>管道命令 <code>|</code></li>
+<li>参数代换 <code>xargs</code>,有的命令不支持管道命令<ul>
+<li><code>find . -type f | xargs dos2unix</code>，将当期目录下所有文件转化为unix类型;</li>
+</ul>
+</li>
+<li><p>条件判断： if..then </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then </div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>默认变量（<code>$0</code>,<code>$1</code>…）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/path/scriptname opt1 opt2 opt3</div><div class="line">     $0          $1</div></pre></td></tr></table></figure>
+<ul>
+<li><code>$0</code> 表示脚本本身文件名，脚本传入的参数为<code>$1,$2...</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><ol>
+<li><code>su</code>:switch user 切换用户</li>
+<li><code>sudo</code>:superuser do,在不需要知晓root密码的情况下，执行root权限的命令操作</li>
+<li><code>ps</code>,查看进程，<code>ps aux</code> 查看所有进程,<code>ps aux|grep java</code> 查看java进程</li>
+<li><code>kill</code>,关进程</li>
+<li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
+<li><code>ifconfig</code>,查看ip</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>匈牙利算法和KM算法详解及java实现</title>
       <link>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</link>
       <guid>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</guid>
