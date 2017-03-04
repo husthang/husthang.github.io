@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="chrome," />
 
 
 
@@ -86,19 +86,16 @@
 
 
 
-<meta name="description" content="linux基础知识和常用命令总结">
+<meta name="description" content="chrome浏览器总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/linux命令总结/index.html">
+<meta property="og:title" content="chrome总结">
+<meta property="og:url" content="http://liuhang.net.cn/2017/03/04/chrome总结/index.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="linux基础知识和常用命令总结">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281048094.gif">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281421383.gif">
-<meta property="og:updated_time" content="2017-03-04T13:38:26.000Z">
+<meta property="og:description" content="chrome浏览器总结">
+<meta property="og:updated_time" content="2017-03-04T15:32:33.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux总结">
-<meta name="twitter:description" content="linux基础知识和常用命令总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14886281048094.gif">
+<meta name="twitter:title" content="chrome总结">
+<meta name="twitter:description" content="chrome浏览器总结">
 
 
 
@@ -116,7 +113,7 @@
   };
 </script>
 
-  <title> linux总结 | 刘航 </title>
+  <title> chrome总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +286,7 @@
             
             
               
-                linux总结
+                chrome总结
               
             
           </h1>
@@ -301,8 +298,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T01:19:23+08:00" content="2017-02-20">
-              2017-02-20
+            <time itemprop="dateCreated" datetime="2017-03-04T23:31:21+08:00" content="2017-03-04">
+              2017-03-04
             </time>
           </span>
 
@@ -331,8 +328,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/20/linux命令总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/linux命令总结/" itemprop="commentsCount"></span>
+                <a href="/2017/03/04/chrome总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/04/chrome总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -360,127 +357,27 @@
       
 
       
-        <h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
-<li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
-</li>
-<li><p>文件属性与权限的更改</p>
-<ul>
-<li><code>chgrp</code>：改变文件用户组</li>
-<li><code>chown</code>：改变文件所有者</li>
-<li><code>chmod</code> ：改变文件权限，rwx对应数字4，2，1</li>
-</ul>
-</li>
-<li>文件类型<ul>
-<li>任何设备在Linux中都是文件</li>
-</ul>
-</li>
-<li>参考：<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php" target="_blank" rel="external">文件权限</a></li>
-</ol>
-<h1 id="linux文件与目录管理"><a href="#linux文件与目录管理" class="headerlink" title="linux文件与目录管理"></a>linux文件与目录管理</h1><h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><ol>
-<li>目录相关操作<ul>
-<li><code>.</code>：此层目录</li>
-<li><code>..</code>：上层目录</li>
-<li><code>-</code>：代表前一个工作目录</li>
-<li><code>~</code>：代表目前用户所在的文件夹</li>
-<li><code>cd</code>： change directory</li>
-<li><code>mkdir</code>： make directory</li>
-<li><code>pwd</code>：print working directory</li>
-<li><code>rmdir</code>： 删除空目录</li>
-</ul>
-</li>
-<li>查看文件与目录<ul>
-<li>ls <ul>
-<li><code>-a</code>：常用，列出全部，包括隐藏</li>
-<li><code>-l</code>：常用，列出详细信息， <code>ll</code>缩写</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>复制、移动与删除： <code>cp,rm,mv</code><ul>
-<li><code>cp</code>： 复制文件或目录<ul>
-<li><code>-r</code>，递归复制，用于目录的复制行为（常用）</li>
-</ul>
-</li>
-<li><code>rm</code>： remove,移除文件或者目录<ul>
-<li><code>rm [-fir] 文件或目录</code>，f强制，i删除前询问，r递归（用于目录删除）</li>
-</ul>
-</li>
-<li><code>mv</code>：移动文件与目录，或更名</li>
-</ul>
-</li>
-<li>取得路径的文件名与目录名称<ul>
-<li><code>basename</code>：取得最后的文件名</li>
-<li><code>dirname</code>：取得目录名</li>
+        <h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
+<li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
+<li>个人常用<ul>
+<li>打开新窗口    ⌘ + n</li>
+<li>打开新的标签页，并跳转到该标签页    ⌘ + t</li>
+<li>关闭当前标签页或弹出式窗口    ⌘ + w</li>
+<li>退出 Google Chrome     ⌘ + q</li>
+<li>打开“开发者工具”    ⌘ + Option + i</li>
+<li>重新加载当前网页     ⌘ + r</li>
+<li>开启或关闭全屏模式    ⌘ + Ctrl + f</li>
+<li>跳转到地址栏    ⌘ + l</li>
 </ul>
 </li>
 </ol>
-<h2 id="文件内容查询"><a href="#文件内容查询" class="headerlink" title="文件内容查询"></a>文件内容查询</h2><ol>
-<li><code>cat</code>：从第一行显示文件内容</li>
-<li><code>tac</code>：cat的倒写，从最后一行显示文件内容</li>
-<li><code>head</code>：<code>head [-n number] file</code>，只看头几行</li>
-<li><code>tail</code>：只看结尾几行</li>
-<li><code>nl</code>：显示的时候，输出行号</li>
-<li><code>touch</code>：创建新文件或修改文件更新时间</li>
-<li><code>file</code>： 查看文件类型</li>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" target="_blank" rel="external">Octotree</a><br>Github查看代码神器，强烈推荐！！</li>
+<li><a href="https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc/related?utm_source=chrome-ntp-icon" target="_blank" rel="external">印象笔记剪藏</a>，查资料时做笔记的神器 </li>
+<li><a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-ntp-icon" target="_blank" rel="external">postman</a>，java web后端开发必备</li>
 </ol>
-<h2 id="命令与文件查询"><a href="#命令与文件查询" class="headerlink" title="命令与文件查询"></a>命令与文件查询</h2><ol>
-<li>脚本文件名的查询<ul>
-<li><code>which</code>：寻找执行文件，根据PATH路径寻找，例如<code>which ifconfig</code>,<code>which cd</code></li>
-</ul>
-</li>
-<li>文件名的查找<ul>
-<li><code>whereis</code>：寻找特定文件</li>
-<li><code>locate</code>：后面跟文件的步伐名称</li>
-<li><code>find</code>：<ul>
-<li>find命令具体使用见：<a href="http://man.linuxde.net/find" target="_blank" rel="external">find命令用法</a></li>
-<li>将当前目录下所有文件转为unix类型： <code>find . -type f | xargs dos2unix</code>;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h2><ol>
-<li>压缩<ul>
-<li><code>tar -zcvf log.tar.gz a.log</code>,-c 创建</li>
-</ul>
-</li>
-<li>解压<ul>
-<li><code>tar -zxvf log.tar.gz</code>，-x extract 欢迎</li>
-</ul>
-</li>
-</ol>
-<h1 id="vim基本使用"><a href="#vim基本使用" class="headerlink" title="vim基本使用"></a>vim基本使用</h1><ol>
-<li>i → Insert 模式，按 ESC 回到 Normal 模式.</li>
-<li>:wq → 存盘 + 退出 (:w 存盘, :q 退出)</li>
-<li>hjkl移动光标(←↓↑→).</li>
-<li>命令模式下，输入<code>/关键字</code>，查询关键字</li>
-<li>q! → 退出不保存</li>
-</ol>
-<h1 id="shell-script"><a href="#shell-script" class="headerlink" title="shell script"></a>shell script</h1><ol>
-<li>管道命令 <code>|</code></li>
-<li>参数代换 <code>xargs</code>,有的命令不支持管道命令<ul>
-<li><code>find . -type f | xargs dos2unix</code>，将当期目录下所有文件转化为unix类型;</li>
-</ul>
-</li>
-<li><p>条件判断： if..then </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then </div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>默认变量（<code>$0</code>,<code>$1</code>…）</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/path/scriptname opt1 opt2 opt3</div><div class="line">     $0          $1</div></pre></td></tr></table></figure>
-<ul>
-<li><code>$0</code> 表示脚本本身文件名，脚本传入的参数为<code>$1,$2...</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><ol>
-<li><code>su</code>:switch user 切换用户</li>
-<li><code>sudo</code>:superuser do,在不需要知晓root密码的情况下，执行root权限的命令操作</li>
-<li><code>ps</code>,查看进程，<code>ps aux</code> 查看所有进程,<code>ps aux|grep java</code> 查看java进程</li>
-<li><code>kill</code>,关进程</li>
-<li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
-<li><code>ifconfig</code>,查看ip</li>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>chrome浏览器,地址栏搜索出现:无法访问,连接已经重置,与hosts文件无关<br> 用搜索框搜索出现链接重置,问题无关 hosts，在于链接是http方式访问。搜索框输入 chrome://net-internals/#hsts<br> 在 Input a domain name to add it to the HSTS set: 这一行下面的 Domain: [ ]<br> 输入 www.google.com.hk 点 Add这个方法可以让 Chrome 访问 www.google.com.hk 时，强制选择 https 方式<br> <a href="https://github.com/racaljk/hosts/issues/387" target="_blank" rel="external">参考</a></li>
 </ol>
 
       
@@ -524,7 +421,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
+            <a href="/tags/chrome/" rel="tag">#chrome</a>
           
         </div>
       
@@ -533,16 +430,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/20/匈牙利算法和KM算法详解及java实现/" rel="next" title="匈牙利算法和KM算法详解及java实现">
-                <i class="fa fa-chevron-left"></i> 匈牙利算法和KM算法详解及java实现
+              <a href="/2017/03/04/Git总结/" rel="next" title="Git总结">
+                <i class="fa fa-chevron-left"></i> Git总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/20/设计模式-一-简单工厂模式/" rel="prev" title="设计模式(一) 简单工厂模式">
-                设计模式(一) 简单工厂模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/04/Intellij-IDEA总结/" rel="prev" title="Intellij IDEA总结">
+                Intellij IDEA总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,8 +466,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/linux命令总结/"
-           data-title="linux总结" data-url="http://liuhang.net.cn/2017/02/20/linux命令总结/">
+      <div class="ds-thread" data-thread-key="2017/03/04/chrome总结/"
+           data-title="chrome总结" data-url="http://liuhang.net.cn/2017/03/04/chrome总结/">
       </div>
     
   </div>
@@ -697,7 +594,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件属性与权限"><span class="nav-number">1.</span> <span class="nav-text">linux文件属性与权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">linux文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录管理"><span class="nav-number">2.1.</span> <span class="nav-text">文件与目录管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容查询"><span class="nav-number">2.2.</span> <span class="nav-text">文件内容查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令与文件查询"><span class="nav-number">2.3.</span> <span class="nav-text">命令与文件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩与解压缩"><span class="nav-number">2.4.</span> <span class="nav-text">压缩与解压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim基本使用"><span class="nav-number">3.</span> <span class="nav-text">vim基本使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell-script"><span class="nav-number">4.</span> <span class="nav-text">shell script</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他补充"><span class="nav-number">5.</span> <span class="nav-text">其他补充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键篇"><span class="nav-number">1.</span> <span class="nav-text">快捷键篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件篇"><span class="nav-number">2.</span> <span class="nav-text">插件篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
             
           </div>
         </section>

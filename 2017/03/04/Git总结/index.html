@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="Git,GitHub," />
 
 
 
@@ -86,19 +86,21 @@
 
 
 
-<meta name="description" content="linux基础知识和常用命令总结">
+<meta name="description" content="Git及GitHub使用总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/linux命令总结/index.html">
+<meta property="og:title" content="Git总结">
+<meta property="og:url" content="http://liuhang.net.cn/2017/03/04/Git总结/index.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="linux基础知识和常用命令总结">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281048094.gif">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281421383.gif">
-<meta property="og:updated_time" content="2017-03-04T13:38:26.000Z">
+<meta property="og:description" content="Git及GitHub使用总结">
+<meta property="og:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-soft.png">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-mixed.png">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-hard.png">
+<meta property="og:updated_time" content="2017-03-04T15:30:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux总结">
-<meta name="twitter:description" content="linux基础知识和常用命令总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14886281048094.gif">
+<meta name="twitter:title" content="Git总结">
+<meta name="twitter:description" content="Git及GitHub使用总结">
+<meta name="twitter:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
 
 
 
@@ -116,7 +118,7 @@
   };
 </script>
 
-  <title> linux总结 | 刘航 </title>
+  <title> Git总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -289,7 +291,7 @@
             
             
               
-                linux总结
+                Git总结
               
             
           </h1>
@@ -301,8 +303,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T01:19:23+08:00" content="2017-02-20">
-              2017-02-20
+            <time itemprop="dateCreated" datetime="2017-03-04T23:28:32+08:00" content="2017-03-04">
+              2017-03-04
             </time>
           </span>
 
@@ -331,8 +333,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/20/linux命令总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/linux命令总结/" itemprop="commentsCount"></span>
+                <a href="/2017/03/04/Git总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/04/Git总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -360,127 +362,93 @@
       
 
       
-        <h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
-<li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
-</li>
-<li><p>文件属性与权限的更改</p>
-<ul>
-<li><code>chgrp</code>：改变文件用户组</li>
-<li><code>chown</code>：改变文件所有者</li>
-<li><code>chmod</code> ：改变文件权限，rwx对应数字4，2，1</li>
-</ul>
-</li>
-<li>文件类型<ul>
-<li>任何设备在Linux中都是文件</li>
-</ul>
-</li>
-<li>参考：<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php" target="_blank" rel="external">文件权限</a></li>
+        <h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
+<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
+<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
 </ol>
-<h1 id="linux文件与目录管理"><a href="#linux文件与目录管理" class="headerlink" title="linux文件与目录管理"></a>linux文件与目录管理</h1><h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><ol>
-<li>目录相关操作<ul>
-<li><code>.</code>：此层目录</li>
-<li><code>..</code>：上层目录</li>
-<li><code>-</code>：代表前一个工作目录</li>
-<li><code>~</code>：代表目前用户所在的文件夹</li>
-<li><code>cd</code>： change directory</li>
-<li><code>mkdir</code>： make directory</li>
-<li><code>pwd</code>：print working directory</li>
-<li><code>rmdir</code>： 删除空目录</li>
+<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
+<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
+<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
+<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
+<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
+<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
 </ul>
-</li>
-<li>查看文件与目录<ul>
-<li>ls <ul>
-<li><code>-a</code>：常用，列出全部，包括隐藏</li>
-<li><code>-l</code>：常用，列出详细信息， <code>ll</code>缩写</li>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
+<li>总结<ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>复制、移动与删除： <code>cp,rm,mv</code><ul>
-<li><code>cp</code>： 复制文件或目录<ul>
-<li><code>-r</code>，递归复制，用于目录的复制行为（常用）</li>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
+<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
+</ul>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
+</ul>
+<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
+<li>reset<ul>
+<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
 </ul>
 </li>
-<li><code>rm</code>： remove,移除文件或者目录<ul>
-<li><code>rm [-fir] 文件或目录</code>，f强制，i删除前询问，r递归（用于目录删除）</li>
-</ul>
-</li>
-<li><code>mv</code>：移动文件与目录，或更名</li>
-</ul>
-</li>
-<li>取得路径的文件名与目录名称<ul>
-<li><code>basename</code>：取得最后的文件名</li>
-<li><code>dirname</code>：取得目录名</li>
-</ul>
-</li>
-</ol>
-<h2 id="文件内容查询"><a href="#文件内容查询" class="headerlink" title="文件内容查询"></a>文件内容查询</h2><ol>
-<li><code>cat</code>：从第一行显示文件内容</li>
-<li><code>tac</code>：cat的倒写，从最后一行显示文件内容</li>
-<li><code>head</code>：<code>head [-n number] file</code>，只看头几行</li>
-<li><code>tail</code>：只看结尾几行</li>
-<li><code>nl</code>：显示的时候，输出行号</li>
-<li><code>touch</code>：创建新文件或修改文件更新时间</li>
-<li><code>file</code>： 查看文件类型</li>
-</ol>
-<h2 id="命令与文件查询"><a href="#命令与文件查询" class="headerlink" title="命令与文件查询"></a>命令与文件查询</h2><ol>
-<li>脚本文件名的查询<ul>
-<li><code>which</code>：寻找执行文件，根据PATH路径寻找，例如<code>which ifconfig</code>,<code>which cd</code></li>
-</ul>
-</li>
-<li>文件名的查找<ul>
-<li><code>whereis</code>：寻找特定文件</li>
-<li><code>locate</code>：后面跟文件的步伐名称</li>
-<li><code>find</code>：<ul>
-<li>find命令具体使用见：<a href="http://man.linuxde.net/find" target="_blank" rel="external">find命令用法</a></li>
-<li>将当前目录下所有文件转为unix类型： <code>find . -type f | xargs dos2unix</code>;</li>
+<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
+<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
+<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
-<h2 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h2><ol>
-<li>压缩<ul>
-<li><code>tar -zcvf log.tar.gz a.log</code>,-c 创建</li>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
+<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
+<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
+<li>文件 .gitignore 的格式规范如下：<ul>
+<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
+<li>可以使用标准的 glob 模式匹配。</li>
+<li>匹配模式可以以（/）开头防止递归。</li>
+<li>匹配模式可以以（/）结尾指定目录。</li>
+<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
 </ul>
 </li>
-<li>解压<ul>
-<li><code>tar -zxvf log.tar.gz</code>，-x extract 欢迎</li>
+<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
+<li>命令<ul>
+<li>查看分支：git branch</li>
+<li>创建分支：git branch <name></name></li>
+<li>切换分支：git checkout <name></name></li>
+<li>创建+切换分支：git checkout -b <name></name></li>
+<li>合并某分支到当前分支：git merge <name></name></li>
+<li>删除分支：git branch -d <name></name></li>
 </ul>
 </li>
-</ol>
-<h1 id="vim基本使用"><a href="#vim基本使用" class="headerlink" title="vim基本使用"></a>vim基本使用</h1><ol>
-<li>i → Insert 模式，按 ESC 回到 Normal 模式.</li>
-<li>:wq → 存盘 + 退出 (:w 存盘, :q 退出)</li>
-<li>hjkl移动光标(←↓↑→).</li>
-<li>命令模式下，输入<code>/关键字</code>，查询关键字</li>
-<li>q! → 退出不保存</li>
-</ol>
-<h1 id="shell-script"><a href="#shell-script" class="headerlink" title="shell script"></a>shell script</h1><ol>
-<li>管道命令 <code>|</code></li>
-<li>参数代换 <code>xargs</code>,有的命令不支持管道命令<ul>
-<li><code>find . -type f | xargs dos2unix</code>，将当期目录下所有文件转化为unix类型;</li>
+<li>HEAD<ul>
+<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
 </ul>
 </li>
-<li><p>条件判断： if..then </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then </div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>默认变量（<code>$0</code>,<code>$1</code>…）</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/path/scriptname opt1 opt2 opt3</div><div class="line">     $0          $1</div></pre></td></tr></table></figure>
-<ul>
-<li><code>$0</code> 表示脚本本身文件名，脚本传入的参数为<code>$1,$2...</code></li>
+<li>远程分支<ul>
+<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
+<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
+<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
 </ul>
 </li>
-</ol>
-<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><ol>
-<li><code>su</code>:switch user 切换用户</li>
-<li><code>sudo</code>:superuser do,在不需要知晓root密码的情况下，执行root权限的命令操作</li>
-<li><code>ps</code>,查看进程，<code>ps aux</code> 查看所有进程,<code>ps aux|grep java</code> 查看java进程</li>
-<li><code>kill</code>,关进程</li>
-<li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
-<li><code>ifconfig</code>,查看ip</li>
+<li>参考<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
 </ol>
 
       
@@ -524,7 +492,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag">#linux</a>
+            <a href="/tags/Git/" rel="tag">#Git</a>
+          
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
           
         </div>
       
@@ -533,16 +503,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/20/匈牙利算法和KM算法详解及java实现/" rel="next" title="匈牙利算法和KM算法详解及java实现">
-                <i class="fa fa-chevron-left"></i> 匈牙利算法和KM算法详解及java实现
+              <a href="/2017/03/04/mac总结/" rel="next" title="mac总结">
+                <i class="fa fa-chevron-left"></i> mac总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/02/20/设计模式-一-简单工厂模式/" rel="prev" title="设计模式(一) 简单工厂模式">
-                设计模式(一) 简单工厂模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/04/chrome总结/" rel="prev" title="chrome总结">
+                chrome总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,8 +539,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/linux命令总结/"
-           data-title="linux总结" data-url="http://liuhang.net.cn/2017/02/20/linux命令总结/">
+      <div class="ds-thread" data-thread-key="2017/03/04/Git总结/"
+           data-title="Git总结" data-url="http://liuhang.net.cn/2017/03/04/Git总结/">
       </div>
     
   </div>
@@ -697,7 +667,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件属性与权限"><span class="nav-number">1.</span> <span class="nav-text">linux文件属性与权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">linux文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录管理"><span class="nav-number">2.1.</span> <span class="nav-text">文件与目录管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容查询"><span class="nav-number">2.2.</span> <span class="nav-text">文件内容查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令与文件查询"><span class="nav-number">2.3.</span> <span class="nav-text">命令与文件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩与解压缩"><span class="nav-number">2.4.</span> <span class="nav-text">压缩与解压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim基本使用"><span class="nav-number">3.</span> <span class="nav-text">vim基本使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell-script"><span class="nav-number">4.</span> <span class="nav-text">shell script</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他补充"><span class="nav-number">5.</span> <span class="nav-text">其他补充</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub团队合作"><span class="nav-number">1.</span> <span class="nav-text">GitHub团队合作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git基础"><span class="nav-number">2.</span> <span class="nav-text">Git基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#add-commit"><span class="nav-number">2.1.</span> <span class="nav-text">add,commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重置解密"><span class="nav-number">2.5.</span> <span class="nav-text">重置解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签管理"><span class="nav-number">2.6.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略文件"><span class="nav-number">2.7.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git分支"><span class="nav-number">2.8.</span> <span class="nav-text">git分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
             
           </div>
         </section>

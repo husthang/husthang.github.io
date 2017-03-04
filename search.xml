@@ -4,6 +4,175 @@
   
     
     <entry>
+      <title><![CDATA[Intellij IDEA总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
+<ul>
+<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
+<li>command+D 复制当前行到下一行</li>
+<li>command+X 剪切当前行</li>
+<li>Fn+ ← home</li>
+<li>Fn+ → end</li>
+<li>command+B go to Declaration</li>
+<li>⌘⇧↩ 自动结束代码，行末自动添加分号</li>
+</ul>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li>Jrebel<ul>
+<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
+</ul>
+</li>
+<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">IDEA教程</a></li>
+<li><a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="external">Intellij学生授权</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[chrome总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/04/chrome%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
+<li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
+<li>个人常用<ul>
+<li>打开新窗口    ⌘ + n</li>
+<li>打开新的标签页，并跳转到该标签页    ⌘ + t</li>
+<li>关闭当前标签页或弹出式窗口    ⌘ + w</li>
+<li>退出 Google Chrome     ⌘ + q</li>
+<li>打开“开发者工具”    ⌘ + Option + i</li>
+<li>重新加载当前网页     ⌘ + r</li>
+<li>开启或关闭全屏模式    ⌘ + Ctrl + f</li>
+<li>跳转到地址栏    ⌘ + l</li>
+</ul>
+</li>
+</ol>
+<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
+<li><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" target="_blank" rel="external">Octotree</a><br>Github查看代码神器，强烈推荐！！</li>
+<li><a href="https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc/related?utm_source=chrome-ntp-icon" target="_blank" rel="external">印象笔记剪藏</a>，查资料时做笔记的神器 </li>
+<li><a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-ntp-icon" target="_blank" rel="external">postman</a>，java web后端开发必备</li>
+</ol>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>chrome浏览器,地址栏搜索出现:无法访问,连接已经重置,与hosts文件无关<br> 用搜索框搜索出现链接重置,问题无关 hosts，在于链接是http方式访问。搜索框输入 chrome://net-internals/#hsts<br> 在 Input a domain name to add it to the HSTS set: 这一行下面的 Domain: [ ]<br> 输入 www.google.com.hk 点 Add这个方法可以让 Chrome 访问 www.google.com.hk 时，强制选择 https 方式<br> <a href="https://github.com/racaljk/hosts/issues/387" target="_blank" rel="external">参考</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Git总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/04/Git%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
+<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
+<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
+</ol>
+<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
+<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
+<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
+<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
+<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
+<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
+<li>总结<ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
+</li>
+</ul>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
+<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
+</ul>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
+</ul>
+<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
+<li>reset<ul>
+<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
+</ul>
+</li>
+<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
+<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
+<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
+<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
+<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
+<li>文件 .gitignore 的格式规范如下：<ul>
+<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
+<li>可以使用标准的 glob 模式匹配。</li>
+<li>匹配模式可以以（/）开头防止递归。</li>
+<li>匹配模式可以以（/）结尾指定目录。</li>
+<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
+</ul>
+</li>
+<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
+<li>命令<ul>
+<li>查看分支：git branch</li>
+<li>创建分支：git branch <name></name></li>
+<li>切换分支：git checkout <name></name></li>
+<li>创建+切换分支：git checkout -b <name></name></li>
+<li>合并某分支到当前分支：git merge <name></name></li>
+<li>删除分支：git branch -d <name></name></li>
+</ul>
+</li>
+<li>HEAD<ul>
+<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
+</ul>
+</li>
+<li>远程分支<ul>
+<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
+<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
+<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
+</ul>
+</li>
+<li>参考<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[mac总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/04/mac%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
+<li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
+<li>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</li>
+<li>个人常用快捷键<ul>
+<li>Option-Command-V    移动：将剪贴板中的文件从其原始位置移动到当前位置。</li>
+<li>Command–空格键    Spotlight</li>
+<li>Command-M    将最前面的窗口最小化至 Dock。</li>
+<li>control +command+f 窗口最大化(退出最大化)切换</li>
+</ul>
+</li>
+</ol>
+<h2 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h2><ol>
+<li>数据库管理：<a href="https://www.sequelpro.com/" target="_blank" rel="external">Sequle Pro</a></li>
+<li>Git GUI：<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
+<li>FTP客户端：<a href="https://www.filezilla.cn/" target="_blank" rel="external">FileZilla</a></li>
+<li>虚拟机：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a>,<a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a>,VirtualBox免费，也比较好用，装Ubuntu等没有压力。</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[设计模式(一) 简单工厂模式]]></title>
       <url>http://liuhang.net.cn/2017/02/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
       <content type="html"><![CDATA[<h2 id="一、模式定义"><a href="#一、模式定义" class="headerlink" title="一、模式定义"></a>一、模式定义</h2><ul>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="刘航, NexT" />
 
 
 
@@ -86,19 +86,12 @@
 
 
 
-<meta name="description" content="linux基础知识和常用命令总结">
-<meta property="og:type" content="article">
-<meta property="og:title" content="linux总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/linux命令总结/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="刘航">
+<meta property="og:url" content="http://liuhang.net.cn/tags/mac/index.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="linux基础知识和常用命令总结">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281048094.gif">
-<meta property="og:image" content="http://liuhang.net.cn/media/14886281421383.gif">
-<meta property="og:updated_time" content="2017-03-04T13:38:26.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux总结">
-<meta name="twitter:description" content="linux基础知识和常用命令总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14886281048094.gif">
+<meta name="twitter:title" content="刘航">
 
 
 
@@ -116,7 +109,7 @@
   };
 </script>
 
-  <title> linux总结 | 刘航 </title>
+  <title> 标签: mac | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -137,7 +130,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container one-collumn sidebar-position-left  ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,298 +261,46 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <div id="posts" class="posts-collapse">
+    <div class="collection-title">
+      <h2 >
+        mac
+        <small>标签</small>
+      </h2>
+    </div>
 
     
-      <header class="post-header">
+      
 
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
+            <a class="post-title-link" href="/2017/03/04/mac总结/" itemprop="url">
               
-                linux总结
+                <span itemprop="name">mac总结</span>
               
-            
-          </h1>
+            </a>
         
+      </h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T01:19:23+08:00" content="2017-02-20">
-              2017-02-20
-            </time>
-          </span>
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-03-04T23:24:14+08:00"
+              content="2017-03-04" >
+          03-04
+        </time>
+      </div>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2017/02/20/linux命令总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/linux命令总结/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-              &nbsp; | &nbsp;
-              <span class="page-pv">本文总阅读量
-              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
-              </span>
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
-<li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
-</li>
-<li><p>文件属性与权限的更改</p>
-<ul>
-<li><code>chgrp</code>：改变文件用户组</li>
-<li><code>chown</code>：改变文件所有者</li>
-<li><code>chmod</code> ：改变文件权限，rwx对应数字4，2，1</li>
-</ul>
-</li>
-<li>文件类型<ul>
-<li>任何设备在Linux中都是文件</li>
-</ul>
-</li>
-<li>参考：<a href="http://cn.linux.vbird.org/linux_basic/0210filepermission.php" target="_blank" rel="external">文件权限</a></li>
-</ol>
-<h1 id="linux文件与目录管理"><a href="#linux文件与目录管理" class="headerlink" title="linux文件与目录管理"></a>linux文件与目录管理</h1><h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><ol>
-<li>目录相关操作<ul>
-<li><code>.</code>：此层目录</li>
-<li><code>..</code>：上层目录</li>
-<li><code>-</code>：代表前一个工作目录</li>
-<li><code>~</code>：代表目前用户所在的文件夹</li>
-<li><code>cd</code>： change directory</li>
-<li><code>mkdir</code>： make directory</li>
-<li><code>pwd</code>：print working directory</li>
-<li><code>rmdir</code>： 删除空目录</li>
-</ul>
-</li>
-<li>查看文件与目录<ul>
-<li>ls <ul>
-<li><code>-a</code>：常用，列出全部，包括隐藏</li>
-<li><code>-l</code>：常用，列出详细信息， <code>ll</code>缩写</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>复制、移动与删除： <code>cp,rm,mv</code><ul>
-<li><code>cp</code>： 复制文件或目录<ul>
-<li><code>-r</code>，递归复制，用于目录的复制行为（常用）</li>
-</ul>
-</li>
-<li><code>rm</code>： remove,移除文件或者目录<ul>
-<li><code>rm [-fir] 文件或目录</code>，f强制，i删除前询问，r递归（用于目录删除）</li>
-</ul>
-</li>
-<li><code>mv</code>：移动文件与目录，或更名</li>
-</ul>
-</li>
-<li>取得路径的文件名与目录名称<ul>
-<li><code>basename</code>：取得最后的文件名</li>
-<li><code>dirname</code>：取得目录名</li>
-</ul>
-</li>
-</ol>
-<h2 id="文件内容查询"><a href="#文件内容查询" class="headerlink" title="文件内容查询"></a>文件内容查询</h2><ol>
-<li><code>cat</code>：从第一行显示文件内容</li>
-<li><code>tac</code>：cat的倒写，从最后一行显示文件内容</li>
-<li><code>head</code>：<code>head [-n number] file</code>，只看头几行</li>
-<li><code>tail</code>：只看结尾几行</li>
-<li><code>nl</code>：显示的时候，输出行号</li>
-<li><code>touch</code>：创建新文件或修改文件更新时间</li>
-<li><code>file</code>： 查看文件类型</li>
-</ol>
-<h2 id="命令与文件查询"><a href="#命令与文件查询" class="headerlink" title="命令与文件查询"></a>命令与文件查询</h2><ol>
-<li>脚本文件名的查询<ul>
-<li><code>which</code>：寻找执行文件，根据PATH路径寻找，例如<code>which ifconfig</code>,<code>which cd</code></li>
-</ul>
-</li>
-<li>文件名的查找<ul>
-<li><code>whereis</code>：寻找特定文件</li>
-<li><code>locate</code>：后面跟文件的步伐名称</li>
-<li><code>find</code>：<ul>
-<li>find命令具体使用见：<a href="http://man.linuxde.net/find" target="_blank" rel="external">find命令用法</a></li>
-<li>将当前目录下所有文件转为unix类型： <code>find . -type f | xargs dos2unix</code>;</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="压缩与解压缩"><a href="#压缩与解压缩" class="headerlink" title="压缩与解压缩"></a>压缩与解压缩</h2><ol>
-<li>压缩<ul>
-<li><code>tar -zcvf log.tar.gz a.log</code>,-c 创建</li>
-</ul>
-</li>
-<li>解压<ul>
-<li><code>tar -zxvf log.tar.gz</code>，-x extract 欢迎</li>
-</ul>
-</li>
-</ol>
-<h1 id="vim基本使用"><a href="#vim基本使用" class="headerlink" title="vim基本使用"></a>vim基本使用</h1><ol>
-<li>i → Insert 模式，按 ESC 回到 Normal 模式.</li>
-<li>:wq → 存盘 + 退出 (:w 存盘, :q 退出)</li>
-<li>hjkl移动光标(←↓↑→).</li>
-<li>命令模式下，输入<code>/关键字</code>，查询关键字</li>
-<li>q! → 退出不保存</li>
-</ol>
-<h1 id="shell-script"><a href="#shell-script" class="headerlink" title="shell script"></a>shell script</h1><ol>
-<li>管道命令 <code>|</code></li>
-<li>参数代换 <code>xargs</code>,有的命令不支持管道命令<ul>
-<li><code>find . -type f | xargs dos2unix</code>，将当期目录下所有文件转化为unix类型;</li>
-</ul>
-</li>
-<li><p>条件判断： if..then </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then </div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<ol>
-<li><p>默认变量（<code>$0</code>,<code>$1</code>…）</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/path/scriptname opt1 opt2 opt3</div><div class="line">     $0          $1</div></pre></td></tr></table></figure>
-<ul>
-<li><code>$0</code> 表示脚本本身文件名，脚本传入的参数为<code>$1,$2...</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><ol>
-<li><code>su</code>:switch user 切换用户</li>
-<li><code>sudo</code>:superuser do,在不需要知晓root密码的情况下，执行root权限的命令操作</li>
-<li><code>ps</code>,查看进程，<code>ps aux</code> 查看所有进程,<code>ps aux|grep java</code> 查看java进程</li>
-<li><code>kill</code>,关进程</li>
-<li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
-<li><code>ifconfig</code>,查看ip</li>
-</ol>
-
-      
-    </div>
-
-    <div>
-      
-        
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>欢迎打赏，谢谢您的支持！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatPay.png" alt="刘航 WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/Alipay.jpeg" alt="刘航 Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/linux/" rel="tag">#linux</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/02/20/匈牙利算法和KM算法详解及java实现/" rel="next" title="匈牙利算法和KM算法详解及java实现">
-                <i class="fa fa-chevron-left"></i> 匈牙利算法和KM算法详解及java实现
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/02/20/设计模式-一-简单工厂模式/" rel="prev" title="设计模式(一) 简单工厂模式">
-                设计模式(一) 简单工厂模式 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
+    </header>
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
+
+  
 
 
           </div>
@@ -567,14 +308,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div class="ds-thread" data-thread-key="2017/02/20/linux命令总结/"
-           data-title="linux总结" data-url="http://liuhang.net.cn/2017/02/20/linux命令总结/">
-      </div>
-    
-  </div>
-
 
         </div>
         
@@ -594,17 +327,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel ">
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -690,17 +414,6 @@
 
       </section>
 
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件属性与权限"><span class="nav-number">1.</span> <span class="nav-text">linux文件属性与权限</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#linux文件与目录管理"><span class="nav-number">2.</span> <span class="nav-text">linux文件与目录管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件与目录管理"><span class="nav-number">2.1.</span> <span class="nav-text">文件与目录管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件内容查询"><span class="nav-number">2.2.</span> <span class="nav-text">文件内容查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#命令与文件查询"><span class="nav-number">2.3.</span> <span class="nav-text">命令与文件查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩与解压缩"><span class="nav-number">2.4.</span> <span class="nav-text">压缩与解压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vim基本使用"><span class="nav-number">3.</span> <span class="nav-text">vim基本使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shell-script"><span class="nav-number">4.</span> <span class="nav-text">shell script</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他补充"><span class="nav-number">5.</span> <span class="nav-text">其他补充</span></a></li></ol></div>
-            
-          </div>
-        </section>
       
 
     </div>
@@ -801,10 +514,6 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
-
-
 
   
 
