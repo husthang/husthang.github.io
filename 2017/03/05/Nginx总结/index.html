@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Intellij IDEA," />
+  <meta name="keywords" content="Nginx," />
 
 
 
@@ -86,16 +86,16 @@
 
 
 
-<meta name="description" content="Intellij IDEA使用总结">
+<meta name="description" content="Nginx学习及相关配置总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Intellij IDEA总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/03/04/Intellij-IDEA总结/index.html">
+<meta property="og:title" content="Nginx总结">
+<meta property="og:url" content="http://liuhang.net.cn/2017/03/05/Nginx总结/index.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="Intellij IDEA使用总结">
-<meta property="og:updated_time" content="2017-03-04T15:35:48.000Z">
+<meta property="og:description" content="Nginx学习及相关配置总结">
+<meta property="og:updated_time" content="2017-03-05T16:04:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Intellij IDEA总结">
-<meta name="twitter:description" content="Intellij IDEA使用总结">
+<meta name="twitter:title" content="Nginx总结">
+<meta name="twitter:description" content="Nginx学习及相关配置总结">
 
 
 
@@ -113,7 +113,7 @@
   };
 </script>
 
-  <title> Intellij IDEA总结 | 刘航 </title>
+  <title> Nginx总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -286,7 +286,7 @@
             
             
               
-                Intellij IDEA总结
+                Nginx总结
               
             
           </h1>
@@ -298,8 +298,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-04T23:33:35+08:00" content="2017-03-04">
-              2017-03-04
+            <time itemprop="dateCreated" datetime="2017-03-05T20:57:38+08:00" content="2017-03-05">
+              2017-03-05
             </time>
           </span>
 
@@ -312,8 +312,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/工具/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
+                  <a href="/categories/项目实战/" itemprop="url" rel="index">
+                    <span itemprop="name">项目实战</span>
                   </a>
                 </span>
 
@@ -328,8 +328,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/04/Intellij-IDEA总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/04/Intellij-IDEA总结/" itemprop="commentsCount"></span>
+                <a href="/2017/03/05/Nginx总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/Nginx总结/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -357,24 +357,45 @@
       
 
       
-        <h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
-<ul>
-<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
-<li>command+D 复制当前行到下一行</li>
-<li>command+X 剪切当前行</li>
-<li>Fn+ ← home</li>
-<li>Fn+ → end</li>
-<li>command+B go to Declaration</li>
-<li>⌘⇧↩ 自动结束代码，行末自动添加分号</li>
+        <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
+<li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
 </ul>
-<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
-<li>Jrebel<ul>
-<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
+<h2 id="Nginx-应用场景"><a href="#Nginx-应用场景" class="headerlink" title="Nginx 应用场景"></a>Nginx 应用场景</h2><ul>
+<li>http服务器。Nginx是一个http服务可以独立提供http服务。可以做网页静态服务器。</li>
+<li>虚拟主机。可以实现在一台服务器虚拟出多个网站。例如个人网站使用的虚拟主机。</li>
+<li>反向代理，负载均衡。当网站的访问量达到一定程度后，单台服务器不能满足用户的请求时，需要用多台服务器集群可以使用nginx做反向代理。并且多台服务器可以平均分担负载，不会因为某台服务器负载高宕机而某台服务器闲置的情况。</li>
 </ul>
+<h2 id="Mac下Nginx安装配置相关问题"><a href="#Mac下Nginx安装配置相关问题" class="headerlink" title="Mac下Nginx安装配置相关问题"></a>Mac下Nginx安装配置相关问题</h2><ul>
+<li><p>mac下直接用homebrew安装，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
 </li>
-<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">IDEA教程</a></li>
-<li><a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="external">Intellij学生授权</a></li>
-</ol>
+<li><p>跟Linux系统有些不同，在Mac下面Nginx默认监听了8080端口号,若要<strong>改到80端口</strong>（http协议默认端口），输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 下面的1.8.0请根据最新安装版本号对应修改，给nginx足够权限</span></div><div class="line">sudo chown root:wheel /usr/<span class="built_in">local</span>/Cellar/nginx/1.8.0/bin/nginx</div><div class="line">sudo chmod u+s /usr/<span class="built_in">local</span>/Cellar/nginx/1.8.0/bin/nginx</div><div class="line"></div><div class="line"><span class="comment"># 用vi编辑器打开nginx配置文件，找到server字段的listen字段并将其值修改为80</span></div><div class="line">vi /usr/<span class="built_in">local</span>/etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Nginx配置解析"><a href="#Nginx配置解析" class="headerlink" title="Nginx配置解析"></a>Nginx配置解析</h2><ul>
+<li><p>默认配置文件解析：可以在终端执行 cat /usr/local/etc/nginx/nginx.conf.default 查看默认配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># user字段表明了Nginx服务是由哪个用户哪个群组来负责维护进程的，默认是nobody</span></div><div class="line"><span class="comment"># 查看当前用户命令： whoami</span></div><div class="line">user nobody;</div><div class="line"></div><div class="line"><span class="comment"># worker_processes字段表示Nginx服务占用的内核数量</span></div><div class="line"><span class="comment"># 为了充分利用服务器性能你可以直接写你本机最高内核</span></div><div class="line"><span class="comment"># 查看本机最高内核数量命令： sysctl -n hw.ncpu</span></div><div class="line">worker_processes 4;</div><div class="line"></div><div class="line"><span class="comment"># error_log字段表示Nginx错误日志记录的位置</span></div><div class="line"><span class="comment"># 模式选择：debug/info/notice/warn/error/crit</span></div><div class="line"><span class="comment"># 上面模式从左到右记录的信息从最详细到最少</span></div><div class="line">error_log  /usr/<span class="built_in">local</span>/var/logs/nginx/error.log debug;</div><div class="line"></div><div class="line"><span class="comment"># Nginx执行的进程id,默认配置文件是注释了</span></div><div class="line"><span class="comment"># 如果上面worker_processes的数量大于1那Nginx就会启动多个进程</span></div><div class="line"><span class="comment"># 而发信号的时候需要知道要向哪个进程发信息，不同进程有不同的pid，所以写进文件发信号比较简单</span></div><div class="line"><span class="comment"># 你只需要手动创建，比如我下面的位置： touch /usr/local/var/run/nginx.pid</span></div><div class="line">pid  /usr/<span class="built_in">local</span>/var/run/nginx.pid;</div><div class="line"></div><div class="line">events &#123;</div><div class="line">    <span class="comment"># 每一个worker进程能并发处理的最大连接数</span></div><div class="line">    <span class="comment"># 当作为反向代理服务器，计算公式为： `worker_processes * worker_connections / 4`</span></div><div class="line">    <span class="comment"># 当作为HTTP服务器时，公式是除以2</span></div><div class="line">    worker_connections  2048;</div><div class="line">&#125;</div><div class="line"></div><div class="line">http &#123;</div><div class="line">    <span class="comment"># 关闭错误页面的nginx版本数字，提高安全性</span></div><div class="line">    server_tokens off;</div><div class="line">    include       mime.types;</div><div class="line">    default_type  application/octet-stream;</div><div class="line"></div><div class="line">    <span class="comment"># 日志记录格式，如果关闭了access_log可以注释掉这段</span></div><div class="line">    <span class="comment">#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</span></div><div class="line">    <span class="comment">#                 '$status $body_bytes_sent "$http_referer" '</span></div><div class="line">    <span class="comment">#                '"$http_user_agent" "$http_x_forwarded_for"';</span></div><div class="line"></div><div class="line">    <span class="comment"># 关闭access_log可以让读取磁盘IO操作更快</span></div><div class="line">    <span class="comment"># 当然如果你在学习的过程中可以打开方便查看Nginx的访问日志</span></div><div class="line">    access_log off;</div><div class="line"></div><div class="line">    sendfile        on;</div><div class="line"></div><div class="line">    <span class="comment"># 在一个数据包里发送所有头文件，而不是一个接一个的发送</span></div><div class="line">    tcp_nopush     on;</div><div class="line"></div><div class="line">    <span class="comment"># 不要缓存</span></div><div class="line">    tcp_nodelay on;</div><div class="line"></div><div class="line">    keepalive_timeout  65;</div><div class="line"></div><div class="line">    gzip  on;</div><div class="line">    client_max_body_size 10m;</div><div class="line">    client_body_buffer_size 128k;</div><div class="line"></div><div class="line">   include /usr/<span class="built_in">local</span>/etc/nginx/sites-enabled/*;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx配置文件结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">events &#123;</div><div class="line">    ...</div><div class="line">&#125;</div><div class="line">http &#123;</div><div class="line">    ...</div><div class="line">    server &#123;</div><div class="line">        ...</div><div class="line">        location xxx &#123;</div><div class="line">            ...</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>举例说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    <span class="comment"># Nginx监听端口号</span></div><div class="line">    listen       80;</div><div class="line">    <span class="comment"># 服务器的名字，默认为localhost，你也可以写成aotu.jd.com，这样子就可以通过aotu.jd.com来访问</span></div><div class="line">    server_name  localhost;</div><div class="line">    <span class="comment"># 代码放置的根目录</span></div><div class="line">    root /var/www/;</div><div class="line">    <span class="comment"># 编码</span></div><div class="line">    charset utf-8;    </div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        <span class="comment"># index字段声明了解析的后缀名的先后顺序</span></div><div class="line">        <span class="comment"># 下面匹配到/的时候默认找找html，再找不到就找htm</span></div><div class="line">        index index.html index.htm;</div><div class="line">        <span class="comment"># 自动索引</span></div><div class="line">        autoindex on;</div><div class="line"></div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><h2 id="Nginx配置反向代理"><a href="#Nginx配置反向代理" class="headerlink" title="Nginx配置反向代理"></a>Nginx配置反向代理</h2><ul>
+<li>如下配置，访问tomcat.taotao.com时，分别轮流的访问8080和8081两个tomcat，配置tomcat集群<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Nginx配置负载均衡"><a href="#Nginx配置负载均衡" class="headerlink" title="Nginx配置负载均衡"></a>Nginx配置负载均衡</h2><ul>
+<li>如下，upstream的server后面添加一个weight即可代表权重。权重越高，分配请求的数量就越多。默认权重是1<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080 weight=2;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        <span class="comment">#charset koi8-r;</span></div><div class="line"></div><div class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="反向代理理解"><a href="#反向代理理解" class="headerlink" title="反向代理理解"></a>反向代理理解</h2><ul>
+<li><strong>正向代理</strong>就是<strong>代理服务器替代访问方【用户A】去访问目标服务器【服务器B】</strong>，在现实中的例子就是『翻墙』，通过代理服务器去访问真实想访问的，代理服务器为一堆客户做代理；目标服务器不知道真实的客户端是谁。</li>
+<li><strong>反向代理</strong>，用户去访问的时候，不知道真正访问的是哪一台服务器，就跟打10086一样，只管拨通10086，不管那边是哪个服务人员；<strong>为服务器做代理</strong>；</li>
+</ul>
 
       
     </div>
@@ -417,7 +438,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Intellij-IDEA/" rel="tag">#Intellij IDEA</a>
+            <a href="/tags/Nginx/" rel="tag">#Nginx</a>
           
         </div>
       
@@ -426,17 +447,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/04/chrome总结/" rel="next" title="chrome总结">
-                <i class="fa fa-chevron-left"></i> chrome总结
+              <a href="/2017/03/05/Fastdfs总结/" rel="next" title="FastDFS总结">
+                <i class="fa fa-chevron-left"></i> FastDFS总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/05/Fastdfs总结/" rel="prev" title="FastDFS总结">
-                FastDFS总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -462,8 +479,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/04/Intellij-IDEA总结/"
-           data-title="Intellij IDEA总结" data-url="http://liuhang.net.cn/2017/03/04/Intellij-IDEA总结/">
+      <div class="ds-thread" data-thread-key="2017/03/05/Nginx总结/"
+           data-title="Nginx总结" data-url="http://liuhang.net.cn/2017/03/05/Nginx总结/">
       </div>
     
   </div>
@@ -590,7 +607,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键篇"><span class="nav-number">1.</span> <span class="nav-text">快捷键篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件篇"><span class="nav-number">2.</span> <span class="nav-text">插件篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nginx"><span class="nav-number">1.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Nginx"><span class="nav-number">1.1.</span> <span class="nav-text">What is Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-应用场景"><span class="nav-number">1.2.</span> <span class="nav-text">Nginx 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下Nginx安装配置相关问题"><span class="nav-number">1.3.</span> <span class="nav-text">Mac下Nginx安装配置相关问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置解析"><span class="nav-number">1.4.</span> <span class="nav-text">Nginx配置解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向代理"><span class="nav-number">2.</span> <span class="nav-text">反向代理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置反向代理"><span class="nav-number">2.1.</span> <span class="nav-text">Nginx配置反向代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置负载均衡"><span class="nav-number">2.2.</span> <span class="nav-text">Nginx配置负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向代理理解"><span class="nav-number">2.3.</span> <span class="nav-text">反向代理理解</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

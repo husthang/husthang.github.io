@@ -4,6 +4,84 @@
   
     
     <entry>
+      <title><![CDATA[Nginx总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
+<li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
+</ul>
+<h2 id="Nginx-应用场景"><a href="#Nginx-应用场景" class="headerlink" title="Nginx 应用场景"></a>Nginx 应用场景</h2><ul>
+<li>http服务器。Nginx是一个http服务可以独立提供http服务。可以做网页静态服务器。</li>
+<li>虚拟主机。可以实现在一台服务器虚拟出多个网站。例如个人网站使用的虚拟主机。</li>
+<li>反向代理，负载均衡。当网站的访问量达到一定程度后，单台服务器不能满足用户的请求时，需要用多台服务器集群可以使用nginx做反向代理。并且多台服务器可以平均分担负载，不会因为某台服务器负载高宕机而某台服务器闲置的情况。</li>
+</ul>
+<h2 id="Mac下Nginx安装配置相关问题"><a href="#Mac下Nginx安装配置相关问题" class="headerlink" title="Mac下Nginx安装配置相关问题"></a>Mac下Nginx安装配置相关问题</h2><ul>
+<li><p>mac下直接用homebrew安装，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
+</li>
+<li><p>跟Linux系统有些不同，在Mac下面Nginx默认监听了8080端口号,若要<strong>改到80端口</strong>（http协议默认端口），输入以下命令</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 下面的1.8.0请根据最新安装版本号对应修改，给nginx足够权限</span></div><div class="line">sudo chown root:wheel /usr/<span class="built_in">local</span>/Cellar/nginx/1.8.0/bin/nginx</div><div class="line">sudo chmod u+s /usr/<span class="built_in">local</span>/Cellar/nginx/1.8.0/bin/nginx</div><div class="line"></div><div class="line"><span class="comment"># 用vi编辑器打开nginx配置文件，找到server字段的listen字段并将其值修改为80</span></div><div class="line">vi /usr/<span class="built_in">local</span>/etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Nginx配置解析"><a href="#Nginx配置解析" class="headerlink" title="Nginx配置解析"></a>Nginx配置解析</h2><ul>
+<li><p>默认配置文件解析：可以在终端执行 cat /usr/local/etc/nginx/nginx.conf.default 查看默认配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># user字段表明了Nginx服务是由哪个用户哪个群组来负责维护进程的，默认是nobody</span></div><div class="line"><span class="comment"># 查看当前用户命令： whoami</span></div><div class="line">user nobody;</div><div class="line"></div><div class="line"><span class="comment"># worker_processes字段表示Nginx服务占用的内核数量</span></div><div class="line"><span class="comment"># 为了充分利用服务器性能你可以直接写你本机最高内核</span></div><div class="line"><span class="comment"># 查看本机最高内核数量命令： sysctl -n hw.ncpu</span></div><div class="line">worker_processes 4;</div><div class="line"></div><div class="line"><span class="comment"># error_log字段表示Nginx错误日志记录的位置</span></div><div class="line"><span class="comment"># 模式选择：debug/info/notice/warn/error/crit</span></div><div class="line"><span class="comment"># 上面模式从左到右记录的信息从最详细到最少</span></div><div class="line">error_log  /usr/<span class="built_in">local</span>/var/logs/nginx/error.log debug;</div><div class="line"></div><div class="line"><span class="comment"># Nginx执行的进程id,默认配置文件是注释了</span></div><div class="line"><span class="comment"># 如果上面worker_processes的数量大于1那Nginx就会启动多个进程</span></div><div class="line"><span class="comment"># 而发信号的时候需要知道要向哪个进程发信息，不同进程有不同的pid，所以写进文件发信号比较简单</span></div><div class="line"><span class="comment"># 你只需要手动创建，比如我下面的位置： touch /usr/local/var/run/nginx.pid</span></div><div class="line">pid  /usr/<span class="built_in">local</span>/var/run/nginx.pid;</div><div class="line"></div><div class="line">events &#123;</div><div class="line">    <span class="comment"># 每一个worker进程能并发处理的最大连接数</span></div><div class="line">    <span class="comment"># 当作为反向代理服务器，计算公式为： `worker_processes * worker_connections / 4`</span></div><div class="line">    <span class="comment"># 当作为HTTP服务器时，公式是除以2</span></div><div class="line">    worker_connections  2048;</div><div class="line">&#125;</div><div class="line"></div><div class="line">http &#123;</div><div class="line">    <span class="comment"># 关闭错误页面的nginx版本数字，提高安全性</span></div><div class="line">    server_tokens off;</div><div class="line">    include       mime.types;</div><div class="line">    default_type  application/octet-stream;</div><div class="line"></div><div class="line">    <span class="comment"># 日志记录格式，如果关闭了access_log可以注释掉这段</span></div><div class="line">    <span class="comment">#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</span></div><div class="line">    <span class="comment">#                 '$status $body_bytes_sent "$http_referer" '</span></div><div class="line">    <span class="comment">#                '"$http_user_agent" "$http_x_forwarded_for"';</span></div><div class="line"></div><div class="line">    <span class="comment"># 关闭access_log可以让读取磁盘IO操作更快</span></div><div class="line">    <span class="comment"># 当然如果你在学习的过程中可以打开方便查看Nginx的访问日志</span></div><div class="line">    access_log off;</div><div class="line"></div><div class="line">    sendfile        on;</div><div class="line"></div><div class="line">    <span class="comment"># 在一个数据包里发送所有头文件，而不是一个接一个的发送</span></div><div class="line">    tcp_nopush     on;</div><div class="line"></div><div class="line">    <span class="comment"># 不要缓存</span></div><div class="line">    tcp_nodelay on;</div><div class="line"></div><div class="line">    keepalive_timeout  65;</div><div class="line"></div><div class="line">    gzip  on;</div><div class="line">    client_max_body_size 10m;</div><div class="line">    client_body_buffer_size 128k;</div><div class="line"></div><div class="line">   include /usr/<span class="built_in">local</span>/etc/nginx/sites-enabled/*;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>Nginx配置文件结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">events &#123;</div><div class="line">    ...</div><div class="line">&#125;</div><div class="line">http &#123;</div><div class="line">    ...</div><div class="line">    server &#123;</div><div class="line">        ...</div><div class="line">        location xxx &#123;</div><div class="line">            ...</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>举例说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    <span class="comment"># Nginx监听端口号</span></div><div class="line">    listen       80;</div><div class="line">    <span class="comment"># 服务器的名字，默认为localhost，你也可以写成aotu.jd.com，这样子就可以通过aotu.jd.com来访问</span></div><div class="line">    server_name  localhost;</div><div class="line">    <span class="comment"># 代码放置的根目录</span></div><div class="line">    root /var/www/;</div><div class="line">    <span class="comment"># 编码</span></div><div class="line">    charset utf-8;    </div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        <span class="comment"># index字段声明了解析的后缀名的先后顺序</span></div><div class="line">        <span class="comment"># 下面匹配到/的时候默认找找html，再找不到就找htm</span></div><div class="line">        index index.html index.htm;</div><div class="line">        <span class="comment"># 自动索引</span></div><div class="line">        autoindex on;</div><div class="line"></div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><h2 id="Nginx配置反向代理"><a href="#Nginx配置反向代理" class="headerlink" title="Nginx配置反向代理"></a>Nginx配置反向代理</h2><ul>
+<li>如下配置，访问tomcat.taotao.com时，分别轮流的访问8080和8081两个tomcat，配置tomcat集群<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="Nginx配置负载均衡"><a href="#Nginx配置负载均衡" class="headerlink" title="Nginx配置负载均衡"></a>Nginx配置负载均衡</h2><ul>
+<li>如下，upstream的server后面添加一个weight即可代表权重。权重越高，分配请求的数量就越多。默认权重是1<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080 weight=2;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        <span class="comment">#charset koi8-r;</span></div><div class="line"></div><div class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="反向代理理解"><a href="#反向代理理解" class="headerlink" title="反向代理理解"></a>反向代理理解</h2><ul>
+<li><strong>正向代理</strong>就是<strong>代理服务器替代访问方【用户A】去访问目标服务器【服务器B】</strong>，在现实中的例子就是『翻墙』，通过代理服务器去访问真实想访问的，代理服务器为一堆客户做代理；目标服务器不知道真实的客户端是谁。</li>
+<li><strong>反向代理</strong>，用户去访问的时候，不知道真正访问的是哪一台服务器，就跟打10086一样，只管拨通10086，不管那边是哪个服务人员；<strong>为服务器做代理</strong>；</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[FastDFS总结]]></title>
+      <url>http://liuhang.net.cn/2017/03/05/Fastdfs%E6%80%BB%E7%BB%93/</url>
+      <content type="html"><![CDATA[<h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
+<li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
+</ul>
+<h2 id="FastDFS架构"><a href="#FastDFS架构" class="headerlink" title="FastDFS架构"></a>FastDFS架构</h2><ul>
+<li>Tracker server是FastDFS的协调者，负责管理所有的storage server和group，每个storage在启动后会连接Tracker，告知自己所属的group等信息；</li>
+<li>Storage server以组（group）为单位组织，一个group内包含多台storage机器，数据互为备份</li>
+<li><img src="/media/14887163155946.jpg" alt=""></li>
+</ul>
+<h2 id="文件上传流程"><a href="#文件上传流程" class="headerlink" title="文件上传流程"></a>文件上传流程</h2><ul>
+<li><img src="/media/14887165375824.jpg" alt="文件上传流程"></li>
+</ul>
+<h2 id="文件下载流程"><a href="#文件下载流程" class="headerlink" title="文件下载流程"></a>文件下载流程</h2><ul>
+<li><img src="/media/14887165496609.jpg" alt="文件下载流程"></li>
+</ul>
+<h2 id="上传的文件名"><a href="#上传的文件名" class="headerlink" title="上传的文件名"></a>上传的文件名</h2><ul>
+<li><img src="/media/14887169687396.jpg" alt=""></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/happyfish100/fastdfs" target="_blank" rel="external">FastDFS源码</a></li>
+<li><a href="http://tech.uc.cn/?p=221" target="_blank" rel="external">FastDFS原理介绍</a></li>
+</ul>
+<h1 id="Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1"><a href="#Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1" class="headerlink" title="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1"></a>Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1</h1><h2 id="完全配置过程"><a href="#完全配置过程" class="headerlink" title="完全配置过程"></a>完全配置过程</h2><ul>
+<li>mac环境下，建议安装一个linux虚拟机进行配置，直接osx中配置，可能出现一些莫名的错误；VirtualBox安装Ubuntu 14.04虚拟机；配置过程略复杂，详情步骤参考下面的链接！(有时间我重新配置一篇，再贴出详细截图)</li>
+</ul>
+<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.linuxidc.com/Linux/2016-07/133485.htm" target="_blank" rel="external">Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.9.14</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Intellij IDEA总结]]></title>
       <url>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="刘航, NexT" />
+  <meta name="keywords" content="Fastdfs," />
 
 
 
@@ -86,12 +86,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘航">
-<meta property="og:url" content="http://liuhang.net.cn/tags/Git/index.html">
+<meta name="description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FastDFS总结">
+<meta property="og:url" content="http://liuhang.net.cn/2017/03/05/Fastdfs总结/index.html">
 <meta property="og:site_name" content="刘航">
+<meta property="og:description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
+<meta property="og:image" content="http://liuhang.net.cn/media/14887163155946.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14887165375824.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14887165496609.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14887169687396.jpg">
+<meta property="og:updated_time" content="2017-03-05T12:57:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘航">
+<meta name="twitter:title" content="FastDFS总结">
+<meta name="twitter:description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
+<meta name="twitter:image" content="http://liuhang.net.cn/media/14887163155946.jpg">
 
 
 
@@ -109,7 +118,7 @@
   };
 </script>
 
-  <title> 标签: Git | 刘航 </title>
+  <title> FastDFS总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -130,7 +139,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,46 +270,203 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Git
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                FastDFS总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-05T19:52:20+08:00" content="2017-03-05">
+              2017-03-05
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/项目实战/" itemprop="url" rel="index">
+                    <span itemprop="name">项目实战</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/05/Fastdfs总结/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/Fastdfs总结/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
+<li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
+</ul>
+<h2 id="FastDFS架构"><a href="#FastDFS架构" class="headerlink" title="FastDFS架构"></a>FastDFS架构</h2><ul>
+<li>Tracker server是FastDFS的协调者，负责管理所有的storage server和group，每个storage在启动后会连接Tracker，告知自己所属的group等信息；</li>
+<li>Storage server以组（group）为单位组织，一个group内包含多台storage机器，数据互为备份</li>
+<li><img src="/media/14887163155946.jpg" alt=""></li>
+</ul>
+<h2 id="文件上传流程"><a href="#文件上传流程" class="headerlink" title="文件上传流程"></a>文件上传流程</h2><ul>
+<li><img src="/media/14887165375824.jpg" alt="文件上传流程"></li>
+</ul>
+<h2 id="文件下载流程"><a href="#文件下载流程" class="headerlink" title="文件下载流程"></a>文件下载流程</h2><ul>
+<li><img src="/media/14887165496609.jpg" alt="文件下载流程"></li>
+</ul>
+<h2 id="上传的文件名"><a href="#上传的文件名" class="headerlink" title="上传的文件名"></a>上传的文件名</h2><ul>
+<li><img src="/media/14887169687396.jpg" alt=""></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://github.com/happyfish100/fastdfs" target="_blank" rel="external">FastDFS源码</a></li>
+<li><a href="http://tech.uc.cn/?p=221" target="_blank" rel="external">FastDFS原理介绍</a></li>
+</ul>
+<h1 id="Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1"><a href="#Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1" class="headerlink" title="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1"></a>Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1</h1><h2 id="完全配置过程"><a href="#完全配置过程" class="headerlink" title="完全配置过程"></a>完全配置过程</h2><ul>
+<li>mac环境下，建议安装一个linux虚拟机进行配置，直接osx中配置，可能出现一些莫名的错误；VirtualBox安装Ubuntu 14.04虚拟机；配置过程略复杂，详情步骤参考下面的链接！(有时间我重新配置一篇，再贴出详细截图)</li>
+</ul>
+<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://www.linuxidc.com/Linux/2016-07/133485.htm" target="_blank" rel="external">Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.9.14</a></li>
+</ul>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/03/04/Git总结/" itemprop="url">
-              
-                <span itemprop="name">Git总结</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎打赏，谢谢您的支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatPay.png" alt="刘航 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/Alipay.jpeg" alt="刘航 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-04T23:28:32+08:00"
-              content="2017-03-04" >
-          03-04
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Fastdfs/" rel="tag">#Fastdfs</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/04/Intellij-IDEA总结/" rel="next" title="Intellij IDEA总结">
+                <i class="fa fa-chevron-left"></i> Intellij IDEA总结
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/05/Nginx总结/" rel="prev" title="Nginx总结">
+                Nginx总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -308,6 +474,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/05/Fastdfs总结/"
+           data-title="FastDFS总结" data-url="http://liuhang.net.cn/2017/03/05/Fastdfs总结/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -327,8 +501,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -414,6 +597,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FastDFS介绍"><span class="nav-number">1.</span> <span class="nav-text">FastDFS介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是FastDFS"><span class="nav-number">1.1.</span> <span class="nav-text">什么是FastDFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FastDFS架构"><span class="nav-number">1.2.</span> <span class="nav-text">FastDFS架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传流程"><span class="nav-number">1.3.</span> <span class="nav-text">文件上传流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件下载流程"><span class="nav-number">1.4.</span> <span class="nav-text">文件下载流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传的文件名"><span class="nav-number">1.5.</span> <span class="nav-text">上传的文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.6.</span> <span class="nav-text">参考</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#完全配置过程"><span class="nav-number">2.1.</span> <span class="nav-text">完全配置过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考-1"><span class="nav-number">2.2.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -514,6 +708,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
