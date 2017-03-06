@@ -4,6 +4,64 @@
   
     
     <entry>
+      <title><![CDATA[SSM框架整合]]></title>
+      <url>http://liuhang.net.cn/2017/03/06/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/</url>
+      <content type="html"><![CDATA[<h1 id="框架体系结构"><a href="#框架体系结构" class="headerlink" title="框架体系结构"></a>框架体系结构</h1><ol>
+<li><p>框架三层架构<img src="/media/14887819567898.jpg" alt=""></p>
+</li>
+<li><p>框架的意义与作用</p>
+<ul>
+<li>所谓框架，就是把一些繁琐的重复性代码封装起来，使程序员在编码中把更多的经历放到业务需求的分析和理解上面。框架封装了很多细节，程序员在使用的时候会非常简单。常用框架有ssh(struts2,spring,hibernate),ssm(springMvc,spring,mybatis)</li>
+</ul>
+</li>
+</ol>
+<h1 id="Intellij搭建ssm框架记录"><a href="#Intellij搭建ssm框架记录" class="headerlink" title="Intellij搭建ssm框架记录"></a>Intellij搭建ssm框架记录</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li>新建Maven工程，并建立各层的包，如下图<img src="/media/14887846658067.jpg" alt=""></li>
+<li>依赖管理，集中定义依赖版本号<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">&lt;!--集中定义依赖版本号--&gt;</div><div class="line">&lt;properties&gt;</div><div class="line">    &lt;junit.version&gt;4.12&lt;/junit.version&gt;</div><div class="line">    &lt;spring.version&gt;4.1.3.RELEASE&lt;/spring.version&gt;</div><div class="line">    &lt;jstl.version&gt;1.2&lt;/jstl.version&gt;</div><div class="line">    &lt;jsp-api.version&gt;2.0&lt;/jsp-api.version&gt;</div><div class="line">    &lt;servlet-api.version&gt;2.5&lt;/servlet-api.version&gt;</div><div class="line">    &lt;mybatis.version&gt;3.4.0&lt;/mybatis.version&gt;</div><div class="line">    &lt;mybatis.spring.version&gt;1.3.1&lt;/mybatis.spring.version&gt;</div><div class="line">    &lt;mybatis.generator.version&gt;1.3.2&lt;/mybatis.generator.version&gt;</div><div class="line">    &lt;druid.version&gt;1.0.9&lt;/druid.version&gt;</div><div class="line">    &lt;mysql.version&gt;5.1.32&lt;/mysql.version&gt;</div><div class="line">    &lt;slf4j.version&gt;1.7.12&lt;/slf4j.version&gt;</div><div class="line">    &lt;jackson.version&gt;2.4.2&lt;/jackson.version&gt;</div><div class="line">    &lt;pagehelper.version&gt;4.1.6&lt;/pagehelper.version&gt;</div><div class="line">    &lt;commons-fileupload.version&gt;1.3.1&lt;/commons-fileupload.version&gt;</div><div class="line">    &lt;commons-io.version&gt;1.3.2&lt;/commons-io.version&gt;</div><div class="line">&lt;/properties&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Dao层"><a href="#Dao层" class="headerlink" title="Dao层"></a>Dao层</h2><ol>
+<li><p><strong>依赖配置</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;dependencies&gt;</div><div class="line">        &lt;!--Mybatis相关--&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;mybatis&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;$&#123;mybatis.version&#125;&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;$&#123;mybatis.spring.version&#125;&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">        &lt;!--mybatis分页插件--&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;com.github.pagehelper&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;pagehelper&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;$&#123;pagehelper.version&#125;&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">        &lt;!--数据库连接池--&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;druid&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;$&#123;druid.version&#125;&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">        &lt;!--Mysql--&gt;</div><div class="line">        &lt;dependency&gt;</div><div class="line">            &lt;groupId&gt;mysql&lt;/groupId&gt;</div><div class="line">            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</div><div class="line">            &lt;version&gt;$&#123;mysql.version&#125;&lt;/version&gt;</div><div class="line">        &lt;/dependency&gt;</div><div class="line">&lt;/dependencies&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>mybatis配置文件</strong>:MybatisConfig.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</div><div class="line">&lt;!DOCTYPE configuration</div><div class="line">        PUBLIC &quot;-//mybatis.org//DTD Config 3.0//EN&quot;</div><div class="line">        &quot;http://mybatis.org/dtd/mybatis-3-config.dtd&quot;&gt;</div><div class="line">&lt;configuration&gt;</div><div class="line">    &lt;!--配置mybatis分页插件--&gt;</div><div class="line">    &lt;plugins&gt;</div><div class="line">        &lt;plugin interceptor=&quot;com.github.pagehelper.PageHelper&quot;&gt;</div><div class="line">            &lt;property name=&quot;dialect&quot; value=&quot;mysql&quot;/&gt;</div><div class="line">        &lt;/plugin&gt;</div><div class="line">    &lt;/plugins&gt;</div><div class="line">&lt;/configuration&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>spring配置文件</strong>applicationContext-dao.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</div><div class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd</div><div class="line">	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&quot;&gt;</div><div class="line">    &lt;!--加载配置文件--&gt;</div><div class="line">    &lt;context:property-placeholder location=&quot;classpath:properties/*.properties&quot;/&gt;</div><div class="line">    &lt;!--数据库连接池--&gt;</div><div class="line">    &lt;bean id=&quot;dataSource&quot; class=&quot;com.alibaba.druid.pool.DruidDataSource&quot; destroy-method=&quot;close&quot;&gt;</div><div class="line">        &lt;property name=&quot;url&quot; value=&quot;$&#123;jdbc.url&#125;&quot;/&gt;</div><div class="line">        &lt;property name=&quot;username&quot; value=&quot;$&#123;jdbc.username&#125;&quot;/&gt;</div><div class="line">        &lt;property name=&quot;password&quot; value=&quot;$&#123;jdbc.password&#125;&quot;/&gt;</div><div class="line">        &lt;property name=&quot;driverClassName&quot; value=&quot;$&#123;jdbc.driver&#125;&quot;/&gt;</div><div class="line">        &lt;property name=&quot;maxActive&quot; value=&quot;10&quot;/&gt;</div><div class="line">        &lt;property name=&quot;minIdle&quot; value=&quot;5&quot;/&gt;</div><div class="line">    &lt;/bean&gt;</div><div class="line">    &lt;!--配置SqlSessionFactory--&gt;</div><div class="line">    &lt;bean id=&quot;sqlSessionFactory&quot; class=&quot;org.mybatis.spring.SqlSessionFactoryBean&quot;&gt;</div><div class="line">        &lt;property name=&quot;configLocation&quot; value=&quot;classpath:mybatis/MybatisConfig.xml&quot;/&gt;</div><div class="line">        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;</div><div class="line">    &lt;/bean&gt;</div><div class="line">    &lt;!--扫描mapper接口生成的代理对象放到spring容器中--&gt;</div><div class="line">    &lt;bean class=&quot;org.mybatis.spring.mapper.MapperScannerConfigurer&quot;&gt;</div><div class="line">        &lt;property name=&quot;basePackage&quot; value=&quot;com.taotao.manager.mapper&quot;/&gt;</div><div class="line">    &lt;/bean&gt;</div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>数据库配置文件dp.properties</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">jdbc.driver=com.mysql.jdbc.Driver</div><div class="line">jdbc.url=jdbc:mysql://localhost:3306/taotao?characterEncoding=utf-8</div><div class="line">jdbc.username=liuhang</div><div class="line">jdbc.password=liuhang</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="Service层"><a href="#Service层" class="headerlink" title="Service层"></a>Service层</h2><ol>
+<li><p>依赖配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">&lt;!-- Spring相关 --&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-beans&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">    &lt;groupId&gt;org.springframework&lt;/groupId&gt;</div><div class="line">    &lt;artifactId&gt;spring-aspects&lt;/artifactId&gt;</div><div class="line">    &lt;version&gt;$&#123;spring.version&#125;&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>spring配置文件：applicationContext-service.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</div><div class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd</div><div class="line">	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd&quot;&gt;</div><div class="line">    &lt;!--启用组件扫描，扫描带@service注解的类--&gt;</div><div class="line">    &lt;context:component-scan base-package=&quot;com.liuhang.service&quot;/&gt;</div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>事物配置文件：applicationContext-transaction.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">       xmlns:tx=&quot;http://www.springframework.org/schema/tx&quot;</div><div class="line">       xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;</div><div class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd&quot;&gt;</div><div class="line">    &lt;bean id=&quot;transactionManager&quot;</div><div class="line">          class=&quot;org.springframework.jdbc.datasource.DataSourceTransactionManager&quot;&gt;</div><div class="line">        &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;/&gt;</div><div class="line">    &lt;/bean&gt;</div><div class="line">    &lt;tx:advice id=&quot;txAdvice&quot; transaction-manager=&quot;transactionManager&quot;&gt;</div><div class="line">        &lt;tx:attributes&gt;</div><div class="line">            &lt;!-- 传播行为 --&gt;</div><div class="line">            &lt;tx:method name=&quot;save*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;insert*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;add*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;create*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;delete*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;update*&quot; propagation=&quot;REQUIRED&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;find*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;select*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot;/&gt;</div><div class="line">            &lt;tx:method name=&quot;get*&quot; propagation=&quot;SUPPORTS&quot; read-only=&quot;true&quot;/&gt;</div><div class="line">        &lt;/tx:attributes&gt;</div><div class="line">    &lt;/tx:advice&gt;</div><div class="line">    &lt;aop:config&gt;</div><div class="line">        &lt;aop:advisor advice-ref=&quot;txAdvice&quot;</div><div class="line">                     pointcut=&quot;execution(* com.liuhang.service.*.*(..))&quot;/&gt;</div><div class="line">    &lt;/aop:config&gt;</div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="表现层"><a href="#表现层" class="headerlink" title="表现层"></a>表现层</h2><ol>
+<li><p>配置springmvc</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</div><div class="line">       xmlns:context=&quot;http://www.springframework.org/schema/context&quot;</div><div class="line">       xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">       xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;</div><div class="line">       xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd</div><div class="line">	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd&quot;&gt;</div><div class="line">    &lt;!--启用注解驱动的mvc组件--&gt;</div><div class="line">    &lt;mvc:annotation-driven/&gt;</div><div class="line">    &lt;!--包扫描器 扫描@Controller--&gt;</div><div class="line">    &lt;context:component-scan base-package=&quot;com.liuhang.controller&quot;/&gt;</div><div class="line">    &lt;!--配置视图解析器--&gt;</div><div class="line">    &lt;bean class=&quot;org.springframework.web.servlet.view.InternalResourceViewResolver&quot;&gt;</div><div class="line">        &lt;property name=&quot;prefix&quot; value=&quot;/WEB-INF/jsp/&quot;/&gt;</div><div class="line">        &lt;property name=&quot;suffix&quot; value=&quot;.jsp&quot;/&gt;</div><div class="line">    &lt;/bean&gt;</div><div class="line">    &lt;!-- 配置静态资源映射：两个*，它表示映射resources/下所有的URL，包括子路径（即接多个/）--&gt;</div><div class="line">    &lt;mvc:resources mapping=&quot;/js/**&quot; location=&quot;/WEB-INF/js/&quot;/&gt;</div><div class="line">    &lt;mvc:resources mapping=&quot;/css/**&quot; location=&quot;/WEB-INF/css/&quot;/&gt;</div><div class="line"></div><div class="line">&lt;/beans&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>配置web.xml</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</div><div class="line">&lt;web-app xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;</div><div class="line">         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</div><div class="line">         xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee</div><div class="line">          http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd&quot;</div><div class="line">         version=&quot;3.0&quot;&gt;</div><div class="line">    &lt;display-name&gt;ssm-liuhang&lt;/display-name&gt;</div><div class="line">    &lt;welcome-file-list&gt;</div><div class="line">        &lt;welcome-file&gt;index.jsp&lt;/welcome-file&gt;</div><div class="line">    &lt;/welcome-file-list&gt;</div><div class="line"></div><div class="line">    &lt;!--加载Spring容器--&gt;</div><div class="line">    &lt;context-param&gt;</div><div class="line">        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</div><div class="line">        &lt;param-value&gt;classpath:spring/applicationContext*.xml&lt;/param-value&gt;</div><div class="line">    &lt;/context-param&gt;</div><div class="line">    &lt;listener&gt;</div><div class="line">        &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;</div><div class="line">    &lt;/listener&gt;</div><div class="line"></div><div class="line">    &lt;!--配置DispatchServlet--&gt;</div><div class="line">    &lt;servlet&gt;</div><div class="line">        &lt;servlet-name&gt;ssm&lt;/servlet-name&gt;</div><div class="line">        &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;</div><div class="line">        &lt;init-param&gt;</div><div class="line">            &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;</div><div class="line">            &lt;param-value&gt;classpath:spring/springMvc.xml&lt;/param-value&gt;</div><div class="line">        &lt;/init-param&gt;</div><div class="line">        &lt;!--启动tomcat时就初始化--&gt;</div><div class="line">        &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;</div><div class="line">    &lt;/servlet&gt;</div><div class="line">    &lt;servlet-mapping&gt;</div><div class="line">        &lt;servlet-name&gt;ssm&lt;/servlet-name&gt;</div><div class="line">        &lt;url-pattern&gt;/&lt;/url-pattern&gt;</div><div class="line">    &lt;/servlet-mapping&gt;</div><div class="line">&lt;/web-app&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>搭建完毕后的目录结构如下：<br><img src="/media/14887877133769.jpg" alt=""></p>
+<h1 id="代码链接"><a href="#代码链接" class="headerlink" title="代码链接"></a>代码链接</h1></li>
+</ol>
+<ul>
+<li><a href="https://github.com/husthang/ssm" target="_blank" rel="external">GitHub|我的ssm模板</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Nginx总结]]></title>
       <url>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/</url>
       <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
@@ -246,6 +304,7 @@
 <li>Git GUI：<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
 <li>FTP客户端：<a href="https://www.filezilla.cn/" target="_blank" rel="external">FileZilla</a></li>
 <li>虚拟机：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a>,<a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a>,VirtualBox免费，也比较好用，装Ubuntu等没有压力。</li>
+<li>SwitchHosts: <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="external">快速切换hosts文件工具</a>，强烈推荐，<strong>方便翻墙，web开发</strong>，<a href="https://laod.cn/hosts/2017-google-hosts.html" target="_blank" rel="external">hosts更新网站</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -305,80 +364,6 @@
 <h2 id="八、参考"><a href="#八、参考" class="headerlink" title="八、参考"></a>八、参考</h2><ol>
 <li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
 <li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/factoryModel" target="_blank" rel="external">我的代码|GitHub</a></li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
-      <url>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</url>
-      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="/media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
-</ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="/media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
-<ul>
-<li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""> </li>
-<li><p><img src="/media/顶标变换.png" alt=""> </p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -507,6 +492,80 @@
 <li><code>kill</code>,关进程</li>
 <li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
 <li><code>ifconfig</code>,查看ip</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
+      <url>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</url>
+      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
+<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
+<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
+<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
+<li><img src="/media/graph.png" alt=""></li>
+<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+</ul>
+<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
+<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
+<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
+<li><img src="/media/增广路径.png" alt=""></li>
+<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
+<li>由增广路径的定义,可以推出三个结论:<ol>
+<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
+<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
+<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
+</ol>
+</li>
+<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
+<li>置M为空;</li>
+<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
+<li>重复步骤2,直到找不出增广路径为止.</li>
+</ol>
+</li>
+<li><strong>匈牙利算法实现(java)</strong><ul>
+<li><img src="/media/14846300394186.jpg" alt=""></li>
+<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
+<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
+<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
+<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
+<li>对任意的G和M,可行标都是存在的</li>
+<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
+</ul>
+<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
+<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
+<li>初始化可行顶标的值</li>
+<li>用匈牙利算法在等价子图中寻找完备匹配</li>
+<li>若未找到完备匹配则修改可行顶标的值</li>
+<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
+</ol>
+</li>
+<li><p>实例解释算法过程:</p>
+<ul>
+<li>带权二分图如下:</li>
+<li><img src="/media/14846361640808.jpg" alt=""> </li>
+<li><p><img src="/media/顶标变换.png" alt=""> </p>
+</li>
+<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
+</li>
+<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
+<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
     </entry>
