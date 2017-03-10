@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 10 Mar 2017 07:00:47 GMT</pubDate>
+    <pubDate>Fri, 10 Mar 2017 07:09:43 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,11 +18,15 @@
       <pubDate>Fri, 10 Mar 2017 06:57:58 GMT</pubDate>
       <description>
       
-        这里的博客和[oschina博客](https://my.oschina.net/husthang/blog)保持一致，欢迎同步访问；由于此网站seo做的不好，人气不高，所有另开[oschina博客](https://my.oschina.net/husthang/blog)
+        这里的博客和&lt;a href=&quot;https://my.oschina.net/husthang/blog&quot; &gt;刘航的oschina博客&lt;/a&gt;保持一致，欢迎同步访问；由于seo问题，此个人网址流量不高，所所以另开&lt;a href=&quot;https://my.oschina.net/husthang/blog&quot; &gt;oschina博客&lt;/a&gt;保持同步
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="博客分类"><a href="#博客分类" class="headerlink" title="博客分类"></a>博客分类</h1>]]></content:encoded>
+      <content:encoded><![CDATA[<h1 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h1><ul>
+<li><a href="https://my.oschina.net/husthang/blog" target="_blank" rel="external">oschina博客</a></li>
+<li><a href="http://liuhang.net.cn/">个人网站</a></li>
+</ul>
+<h1 id="博客分类"><a href="#博客分类" class="headerlink" title="博客分类"></a>博客分类</h1>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/2017/03/10/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/#disqus_thread</comments>
     </item>
