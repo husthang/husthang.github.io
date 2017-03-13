@@ -5,4 +5,5 @@ Allow: /categories/
 Allow: /tags/
 Allow: /about/
 Sitemap: http://liuhang.net.cn/sitemap.xml
+Sitemap: http://liuhang.net.cn/baidusitemap.xml
 
