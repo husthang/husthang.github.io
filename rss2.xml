@@ -907,6 +907,7 @@ return result;
 <li>FTP客户端：<a href="https://www.filezilla.cn/" target="_blank" rel="external">FileZilla</a></li>
 <li>虚拟机：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a>,<a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a>,VirtualBox免费，也比较好用，装Ubuntu等没有压力。</li>
 <li>SwitchHosts: <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="external">快速切换hosts文件工具</a>，强烈推荐，<strong>方便翻墙，web开发</strong>，<a href="https://laod.cn/hosts/2017-google-hosts.html" target="_blank" rel="external">hosts更新网站</a></li>
+<li>PDF阅读编辑：<a href="http://skim-app.sourceforge.net/" target="_blank" rel="external">Skim</a></li>
 </ol>
 ]]></content:encoded>
       
