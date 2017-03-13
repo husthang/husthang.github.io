@@ -4,6 +4,5 @@ Allow: /archives/
 Allow: /categories/
 Allow: /tags/
 Allow: /about/
-Sitemap: http://blog.liuhang.net.cn/sitemap.xml
-Sitemap: http://blog.liuhang.net.cn/baidusitemap.xml
+Sitemap: http://liuhang.net.cn/sitemap.xml
 

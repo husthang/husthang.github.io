@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Fastdfs," />
+  <meta name="keywords" content="数据结构,二叉树," />
 
 
 
@@ -86,21 +86,18 @@
 
 
 
-<meta name="description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
+<meta name="description" content="数据结构之二叉树，包括二叉树的遍历算法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="FastDFS总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/03/05/Fastdfs总结/index.html">
+<meta property="og:title" content="基础数据结构-二叉树">
+<meta property="og:url" content="http://liuhang.net.cn/基础数据结构-二叉树.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
-<meta property="og:image" content="http://liuhang.net.cn/media/14887163155946.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14887165375824.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14887165496609.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14887169687396.jpg">
-<meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
+<meta property="og:description" content="数据结构之二叉树，包括二叉树的遍历算法">
+<meta property="og:image" content="http://liuhang.net.cn/images/binary_tree_traversal.png">
+<meta property="og:updated_time" content="2017-03-13T11:48:55.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="FastDFS总结">
-<meta name="twitter:description" content="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1；FastDFS介绍">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14887163155946.jpg">
+<meta name="twitter:title" content="基础数据结构-二叉树">
+<meta name="twitter:description" content="数据结构之二叉树，包括二叉树的遍历算法">
+<meta name="twitter:image" content="http://liuhang.net.cn/images/binary_tree_traversal.png">
 
 
 
@@ -118,7 +115,7 @@
   };
 </script>
 
-  <title> FastDFS总结 | 刘航 </title>
+  <title> 基础数据结构-二叉树 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -331,7 +328,7 @@
             
             
               
-                FastDFS总结
+                基础数据结构-二叉树
               
             
           </h1>
@@ -343,8 +340,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-05T19:52:20+08:00" content="2017-03-05">
-              2017-03-05
+            <time itemprop="dateCreated" datetime="2017-03-06T21:09:42+08:00" content="2017-03-06">
+              2017-03-06
             </time>
           </span>
 
@@ -357,8 +354,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/web/" itemprop="url" rel="index">
-                    <span itemprop="name">web</span>
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
                   </a>
                 </span>
 
@@ -373,8 +370,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/05/Fastdfs总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/05/Fastdfs总结/" itemprop="commentsCount"></span>
+                <a href="/基础数据结构-二叉树.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="基础数据结构-二叉树.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -402,32 +399,64 @@
       
 
       
-        <h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
-<li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li>二叉树的前序中序后序三种遍历方法，用递归实现较为容易，在上数据结构的课时，非递归实现会了，但过了一段时间又忘了，每次要写非递归实现的时候都要想好久。这里总结一下，将前序和后序遍历非递归实现方法统一，便于理解记忆！</li>
 </ul>
-<h2 id="FastDFS架构"><a href="#FastDFS架构" class="headerlink" title="FastDFS架构"></a>FastDFS架构</h2><ul>
-<li>Tracker server是FastDFS的协调者，负责管理所有的storage server和group，每个storage在启动后会连接Tracker，告知自己所属的group等信息；</li>
-<li>Storage server以组（group）为单位组织，一个group内包含多台storage机器，数据互为备份</li>
-<li><img src="/media/14887163155946.jpg" alt=""></li>
+<h2 id="二叉树DFS非递归实现"><a href="#二叉树DFS非递归实现" class="headerlink" title="二叉树DFS非递归实现"></a>二叉树DFS非递归实现</h2><h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><ul>
+<li>depth first search:先访问子节点，再访问父节点，最后访问第二个子节点。根据根节点相对于左右子节点的访问先后顺序又可细分为以下三种方式:<ul>
+<li>前序(pre-order)：先根后左再右</li>
+<li>中序(in-order)：先左后根再右</li>
+<li>后序(post-order)：先左后右再根<br><img src="/images/binary_tree_traversal.png" alt=""></li>
 </ul>
-<h2 id="文件上传流程"><a href="#文件上传流程" class="headerlink" title="文件上传流程"></a>文件上传流程</h2><ul>
-<li><img src="/media/14887165375824.jpg" alt="文件上传流程"></li>
+</li>
 </ul>
-<h2 id="文件下载流程"><a href="#文件下载流程" class="headerlink" title="文件下载流程"></a>文件下载流程</h2><ul>
-<li><img src="/media/14887165496609.jpg" alt="文件下载流程"></li>
+<h3 id="DFS非递归实现"><a href="#DFS非递归实现" class="headerlink" title="DFS非递归实现"></a>DFS非递归实现</h3><h4 id="前序和后序遍历"><a href="#前序和后序遍历" class="headerlink" title="前序和后序遍历"></a>前序和后序遍历</h4><ul>
+<li><strong>前序遍历和后序遍历归为一类</strong>,所用思想基本一模一样:</li>
+<li>前序遍历的步骤为<ul>
+<li>对root进行异常处理</li>
+<li>将root压入栈</li>
+<li>while循环遍历,终止条件为栈为空，所有元素均已处理完</li>
+<li>从栈顶取元素读,取并存入结果</li>
+<li>将取出元素的右、左节点分别压入栈内，以便下次循环取元素时为本次节点的左,右子节点.</li>
 </ul>
-<h2 id="上传的文件名"><a href="#上传的文件名" class="headerlink" title="上传的文件名"></a>上传的文件名</h2><ul>
-<li><img src="/media/14887169687396.jpg" alt=""></li>
+</li>
+<li>运用辅助栈,保存遍历到的节点(用栈后入先出的特性,控制已经遍历到的节点的访问顺序). 以前序深度优先遍历为例,先访问根节点,然后访问左树,左树全部访问完了,再访问右树</li>
+<li><strong>后续遍历思想</strong>: 左-右-根;<strong>可以视为, 根-右-左,然后结果转置即可</strong>. 如前面示意图,根右左,访问顺序则为:<code>ACFBED</code>;可以看出,这样访问刚好为后续遍历的转置. 根右左访问与前序(根左右)遍历操作思想一模一样</li>
+<li><p>前序遍历</p>
+<ul>
+<li><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">leetcode|Binary Tree Preorder Traversal二叉树前序遍历</a></li>
+<li><a href="http://www.lintcode.com/en/problem/binary-tree-preorder-traversal/" target="_blank" rel="external">lintcode|Binary Tree Preorder Traversal二叉树前序遍历</a><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * 前序遍历,迭代法</div><div class="line">  */</div><div class="line"> <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">     List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">     <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">     Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">     stack.push(root);</div><div class="line">     <span class="keyword">while</span> (!stack.isEmpty()) &#123;</div><div class="line">         TreeNode node = stack.pop();</div><div class="line">         result.add(node.val);</div><div class="line">         <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) stack.push(node.right);</div><div class="line">         <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) stack.push(node.left);</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> result;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://github.com/happyfish100/fastdfs" target="_blank" rel="external">FastDFS源码</a></li>
-<li><a href="http://tech.uc.cn/?p=221" target="_blank" rel="external">FastDFS原理介绍</a></li>
+</li>
+<li><p>后序遍历</p>
+<ul>
+<li><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">leetcode|Binary Tree Postorder Traversal后序遍历</a><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">        Deque&lt;TreeNode&gt; stack=<span class="keyword">new</span> ArrayDeque&lt;&gt;();</div><div class="line">        stack.push(root);</div><div class="line">        <span class="keyword">while</span>(!stack.isEmpty())&#123;</div><div class="line">            TreeNode node=stack.pop();</div><div class="line">            result.add(node.val);</div><div class="line">            <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) stack.push(node.left);</div><div class="line">            <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) stack.push(node.right);</div><div class="line">        &#125;</div><div class="line">        Collections.reverse(result);</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h1 id="Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1"><a href="#Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1" class="headerlink" title="Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1"></a>Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1</h1><h2 id="完全配置过程"><a href="#完全配置过程" class="headerlink" title="完全配置过程"></a>完全配置过程</h2><ul>
-<li>mac环境下，建议安装一个linux虚拟机进行配置，直接osx中配置，可能出现一些莫名的错误；VirtualBox安装Ubuntu 14.04虚拟机；配置过程略复杂，详情步骤参考下面的链接！(有时间我重新配置一篇，再贴出详细截图)</li>
+</li>
 </ul>
-<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="http://www.linuxidc.com/Linux/2016-07/133485.htm" target="_blank" rel="external">Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.9.14</a></li>
+<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><ul>
+<li>中序遍历思路: 中序遍历迭代法思路不同于前序和后序.<ol>
+<li>首先针对对当前节点,一直对其左子树迭代并将非空节点入栈</li>
+<li>节点指针迭代为空(到树底了)后不再入栈,然后取栈顶元素,存结果;</li>
+<li>将当前指针用出栈的节点的右子节点替代,然后回到第一步继续迭代,直到当前节点为空且栈为空.</li>
+</ol>
+</li>
+<li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="external">|leetcodeBinary Tree Inorder Traversal中序遍历</a><br>```java<br>public List<integer> inorderTraversal(TreeNode root){<pre><code>List&lt;Integer&gt; result = new ArrayList&lt;&gt;();
+if(root==null) return result;
+Deque&lt;TreeNode&gt; stack = new ArrayDeque&lt;&gt;();
+while (root!=null||!stack.isEmpty()){
+    while(root!=null){
+        stack.push(root);
+        root=root.left;
+    }
+    TreeNode node=stack.pop();
+    result.add(node.val);
+    root=node.right;
+}
+return result;
+</code></pre>  }</integer></li>
 </ul>
 
       
@@ -471,7 +500,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fastdfs/" rel="tag">#Fastdfs</a>
+            <a href="/tags/数据结构/" rel="tag">#数据结构</a>
+          
+            <a href="/tags/二叉树/" rel="tag">#二叉树</a>
           
         </div>
       
@@ -480,16 +511,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/04/Intellij-IDEA总结/" rel="next" title="Intellij IDEA总结">
-                <i class="fa fa-chevron-left"></i> Intellij IDEA总结
+              <a href="/Spring笔记2-spring-IOC.html" rel="next" title="Spring笔记2-spring-IOC">
+                <i class="fa fa-chevron-left"></i> Spring笔记2-spring-IOC
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/05/Nginx总结/" rel="prev" title="Nginx总结">
-                Nginx总结 <i class="fa fa-chevron-right"></i>
+              <a href="/redis总结.html" rel="prev" title="redis总结">
+                redis总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -516,8 +547,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/05/Fastdfs总结/"
-           data-title="FastDFS总结" data-url="http://liuhang.net.cn/2017/03/05/Fastdfs总结/">
+      <div class="ds-thread" data-thread-key="基础数据结构-二叉树.html"
+           data-title="基础数据结构-二叉树" data-url="http://liuhang.net.cn/基础数据结构-二叉树.html">
       </div>
     
   </div>
@@ -644,7 +675,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#FastDFS介绍"><span class="nav-number">1.</span> <span class="nav-text">FastDFS介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是FastDFS"><span class="nav-number">1.1.</span> <span class="nav-text">什么是FastDFS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FastDFS架构"><span class="nav-number">1.2.</span> <span class="nav-text">FastDFS架构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件上传流程"><span class="nav-number">1.3.</span> <span class="nav-text">文件上传流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件下载流程"><span class="nav-number">1.4.</span> <span class="nav-text">文件下载流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#上传的文件名"><span class="nav-number">1.5.</span> <span class="nav-text">上传的文件名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">1.6.</span> <span class="nav-text">参考</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu-14-04下部署FastDFS-5-08-Nginx-1-8-1"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu 14.04下部署FastDFS 5.08+Nginx 1.8.1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#完全配置过程"><span class="nav-number">2.1.</span> <span class="nav-text">完全配置过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考-1"><span class="nav-number">2.2.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树DFS非递归实现"><span class="nav-number">2.</span> <span class="nav-text">二叉树DFS非递归实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DFS"><span class="nav-number">2.1.</span> <span class="nav-text">DFS</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DFS非递归实现"><span class="nav-number">2.2.</span> <span class="nav-text">DFS非递归实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#前序和后序遍历"><span class="nav-number">2.2.1.</span> <span class="nav-text">前序和后序遍历</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#中序遍历"><span class="nav-number">2.2.2.</span> <span class="nav-text">中序遍历</span></a></li></ol></li></ol></li></ol></div>
             
           </div>
         </section>

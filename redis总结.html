@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Intellij IDEA," />
+  <meta name="keywords" content="redis," />
 
 
 
@@ -86,16 +86,24 @@
 
 
 
-<meta name="description" content="Intellij IDEA使用总结，持续更新中">
+<meta name="description" content="redis入门指南，学习总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Intellij IDEA总结">
-<meta property="og:url" content="http://liuhang.net.cn/2017/03/04/Intellij-IDEA总结/index.html">
+<meta property="og:title" content="redis总结">
+<meta property="og:url" content="http://liuhang.net.cn/redis总结.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="Intellij IDEA使用总结，持续更新中">
+<meta property="og:description" content="redis入门指南，学习总结">
+<meta property="og:image" content="http://liuhang.net.cn/media/14890418974755.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14890484914948.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14890472547872.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14891152268107.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14890502770124.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14891164162143.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/media/14891282942094.jpg">
 <meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Intellij IDEA总结">
-<meta name="twitter:description" content="Intellij IDEA使用总结，持续更新中">
+<meta name="twitter:title" content="redis总结">
+<meta name="twitter:description" content="redis入门指南，学习总结">
+<meta name="twitter:image" content="http://liuhang.net.cn/media/14890418974755.jpg">
 
 
 
@@ -113,7 +121,7 @@
   };
 </script>
 
-  <title> Intellij IDEA总结 | 刘航 </title>
+  <title> redis总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -326,7 +334,7 @@
             
             
               
-                Intellij IDEA总结
+                redis总结
               
             
           </h1>
@@ -338,8 +346,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-04T23:33:35+08:00" content="2017-03-04">
-              2017-03-04
+            <time itemprop="dateCreated" datetime="2017-03-09T14:34:52+08:00" content="2017-03-09">
+              2017-03-09
             </time>
           </span>
 
@@ -352,8 +360,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
+                  <a href="/categories/web/" itemprop="url" rel="index">
+                    <span itemprop="name">web</span>
                   </a>
                 </span>
 
@@ -368,8 +376,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/04/Intellij-IDEA总结/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/04/Intellij-IDEA总结/" itemprop="commentsCount"></span>
+                <a href="/redis总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="redis总结.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -397,23 +405,148 @@
       
 
       
-        <h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
-<ul>
-<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
-<li>command+D 复制当前行到下一行</li>
-<li>command+X 剪切当前行</li>
-<li>Fn+ ← home</li>
-<li>Fn+ → end</li>
-<li>command+B go to Declaration</li>
-<li>⌘⇧↩ 自动结束代码，行末自动添加分号</li>
+        <h1 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h1><h2 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h2><ul>
+<li>NoSQL，泛指非关系型的数据库，NoSQL即Not-Only SQL，它可以作为关系型数据库的良好补充;</li>
 </ul>
-<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
-<li>Jrebel<ul>
-<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
+<h2 id="NoSql数据库分类"><a href="#NoSql数据库分类" class="headerlink" title="NoSql数据库分类"></a>NoSql数据库分类</h2><ol>
+<li>键值(Key-Value)存储数据库: <strong>Redis</strong>、Voldemort、Berkeley DB</li>
+<li>列存储数据库：Cassandra, <strong>HBase</strong>, Riak</li>
+<li>文档型数据库：CouchDB、<strong>MongoDB</strong></li>
+<li>图形(Graph)数据库： Neo4J，InfoGrid</li>
+</ol>
+<h2 id="Redis简介-1"><a href="#Redis简介-1" class="headerlink" title="Redis简介"></a>Redis简介</h2><ol>
+<li>Redis是用C语言开发的一个开源的高性能键值对（key-value）数据库。支持的键值数据类型包括：字符串类型，散列类型，列表类型，集合类型，有序集合类型。</li>
+<li>应用场景<ul>
+<li><strong>缓存（数据查询、短连接、新闻内容、商品内容等等）（最多使用）</strong>，缓存还可以用<strong>memcached</strong></li>
+<li>分布式集群架构中的session分离。</li>
+<li>聊天室的在线好友列表。</li>
+<li>任务队列。（秒杀、抢购、12306等等）</li>
+<li>应用排行榜。</li>
+<li>网站访问统计。</li>
+<li>数据过期处理（可以精确到毫秒）</li>
 </ul>
 </li>
-<li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">IDEA教程</a></li>
-<li><a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="external">Intellij学生授权</a></li>
+</ol>
+<h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><ol>
+<li>Redis约定次版本号（即第一个小数点后的数字）为偶数的版本是稳定版<br>（如2.4版、2.6版），奇数版本是非稳定版（如2.5版、2.7版）</li>
+<li><p>Download, extract and compile Redis with:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.8.tar.gz</div><div class="line">tar xzf redis-3.2.8.tar.gz</div><div class="line">cd redis-3.2.8</div><div class="line">make</div></pre></td></tr></table></figure>
+</li>
+<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="/media/14890418974755.jpg" alt=""></p>
+</li>
+<li><p>启动</p>
+<ul>
+<li>直接运行<code>redis-server</code>,Redis服务器默认会使用6379端口，通过–port端口可指定端口号。（注释：6379是手机键盘上MERZ对应的数字，MERZ是一个意大利歌手的名字）;<code>redis-server --port 6380</code></li>
+</ul>
+</li>
+<li>打开命令行客户端<ul>
+<li><code>redis-cli</code></li>
+</ul>
+</li>
+<li>停止<ul>
+<li><code>redis-cli shutdown</code></li>
+</ul>
+</li>
+</ol>
+<h1 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h1><ul>
+<li>Redis中存储数据是通过key-value存储的，对于value的类型有以下几种：<ul>
+<li>字符串</li>
+<li>Hash类型</li>
+<li>List</li>
+<li>Set</li>
+<li>SortedSet（zset）</li>
+</ul>
+</li>
+<li>在redis中的命令语句中，命令是忽略大小写的，而key是不忽略大小写的。</li>
+</ul>
+<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><ul>
+<li>命令用法<ul>
+<li>赋值 <code>set key value</code></li>
+<li>取制 <code>get key</code></li>
+<li>取值赋值（多个） <code>MSET key value [key value …] ; MGET key [key …]</code></li>
+<li>取值并赋值 <code>getset key value</code></li>
+<li>删除 <code>del key</code></li>
+<li>数值增减<ul>
+<li>递增 <code>incr key</code>; 增加指定的整数 <code>incrby key increment</code></li>
+<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="/media/14890484914948.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型"></a>Hash类型</h2><ul>
+<li>散列类型，提供字段和字段值的映射，字段值只能是字符串类型（不可嵌套其他类型）</li>
+<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="/media/14890472547872.jpg" alt=""></li>
+<li>命令用法<ul>
+<li>赋值 <code>hset key filed value</code></li>
+<li>取制 <code>hget key filed</code></li>
+<li>取值赋值（多个） <code>hmest key filed value [filed value …] ; hmget key  filed [filed]</code></li>
+<li>取值并赋值 <code>getset key value</code></li>
+<li>删除 <code>hdel key filed [filed...]</code>,删除一个或多个，返回被删除字段个数</li>
+</ul>
+</li>
+</ul>
+<h2 id="List类型"><a href="#List类型" class="headerlink" title="List类型"></a>List类型</h2><ul>
+<li>列表类型（list）可以存储一个有序的字符串列表，常用的<strong>操作是向列表两端添加元素，或者获得列表的某一个片段</strong>。</li>
+<li>列表类型内部是使用双向链表（double linked list）实现的，所以向列表两端添加元素的时间复杂度为0(1)，获取越接近两端的元素速度就越快。这意味着即使是一个有几千万个元素的列表，获取头部或尾部的10条记录也是极快的。</li>
+<li>命令用法<ul>
+<li>向列表两端增加元素:<code>lpush key value [value]</code>向列表左边添加;<code>rpush key value [value]</code>右边添加</li>
+<li>查看列表<code>lrange key start stop</code>,索引从0开始，可以是负数，如-1代表最后边的</li>
+<li>从列表两端弹出元素<code>lpop key</code>;<code>rpop key</code>;</li>
+<li>获取列表元素个数<code>llen key</code>;<br><img src="/media/14891152268107.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="Set类型"><a href="#Set类型" class="headerlink" title="Set类型"></a>Set类型</h2><ul>
+<li>集合中的数据是不重复且没有顺序</li>
+<li>与List类型比较</li>
+</ul>
+<p><img src="/media/14890502770124.jpg" alt=""></p>
+<ul>
+<li>集合类型的常用操作是<strong>向集合中加入或删除元素</strong>、<strong>判断某个元素是否存在</strong>等，由于集合类型的Redis内部是使用值为空的散列表实现，所有这些操作的时间复杂度都为0(1)。 Redis还提供了多个集合之间的交集、并集、差集的运算。</li>
+<li>常用命令<ul>
+<li>增加/删除元素：<code>sadd key member [member...]</code>;<code>srem key memeber [member]</code></li>
+<li>获得集合中的所有元素：<code>smembers key</code></li>
+<li>判断元素是否在集合中：<code>sismember key member</code></li>
+<li>运算命令<ul>
+<li>差集（属于A且不属于B的元素集合）<code>sdiff key [key ...]</code></li>
+<li>交集 <code>sinter key [key...]</code></li>
+<li>并集 <code>sunion key [key...]</code><br><img src="/media/14891164162143.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="SortedSet类型"><a href="#SortedSet类型" class="headerlink" title="SortedSet类型"></a>SortedSet类型</h2><ul>
+<li>在集合类型的基础上，有序集合类型为集合中的每个元素都关联一个分数，这使得我们不仅可以完成插入、删除和判断元素是否存在在集合中，还能够获得分数最高或最低的前N个元素、获取指定分数范围内的元素等与分数有关的操作。 </li>
+<li>在某些方面有序集合和列表类型有些相似。 <ol>
+<li>二者都是有序的。 </li>
+<li>二者都可以获得某一范围的元素。 </li>
+</ol>
+</li>
+<li>但是，二者有着很大区别： <ol>
+<li>列表类型是通过链表实现的，获取靠近两端的数据速度极快，而当元素增多后，访问中间数据的速度会变慢。 </li>
+<li>有序集合类型使用散列表实现，所有即使读取位于中间部分的数据也很快。 </li>
+<li>列表中不能简单的调整某个元素的位置，但是有序集合可以（通过更改分数实现） </li>
+<li>有序集合要比列表类型更耗内存。 </li>
+</ol>
+</li>
+<li>命令：<ul>
+<li>增加元素：向有序集合中加入一个元素和该元素的分数，如果该元素已经存在则会用新的分数替换原有的分数。返回值是新加入到集合中的元素个数，不包含之前已经存在的元素。<code>zadd key score member [score member...]</code></li>
+<li>获取元素分数 <code>zscore key member</code></li>
+<li>删除元素：移除有序集key中的一个或多个成员，不存在的成员将被忽略。当key存在但不是有序集类型时，返回一个错误。<code>zrem key member [member...]</code></li>
+<li>获得排名在某个范围的元素列表<ul>
+<li>按照元素分数从小到大的顺序返回索引从start到stop之间的所有元素（包含两端的元素）<code>zrange key start stop [withscores]</code></li>
+<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="/media/14891282942094.jpg" alt=""></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://redisdoc.com/" target="_blank" rel="external">Redis 命令参考</a></li>
+<li><a href="https://redis.io/download" target="_blank" rel="external">Redis 下载安装</a></li>
+<li><a href="http://www.redis.cn/" target="_blank" rel="external">Redis中文网</a></li>
 </ol>
 
       
@@ -457,7 +590,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Intellij-IDEA/" rel="tag">#Intellij IDEA</a>
+            <a href="/tags/redis/" rel="tag">#redis</a>
           
         </div>
       
@@ -466,16 +599,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/04/chrome总结/" rel="next" title="chrome总结">
-                <i class="fa fa-chevron-left"></i> chrome总结
+              <a href="/基础数据结构-二叉树.html" rel="next" title="基础数据结构-二叉树">
+                <i class="fa fa-chevron-left"></i> 基础数据结构-二叉树
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/05/Fastdfs总结/" rel="prev" title="FastDFS总结">
-                FastDFS总结 <i class="fa fa-chevron-right"></i>
+              <a href="/我的博客汇总.html" rel="prev" title="我的博客汇总">
+                我的博客汇总 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,8 +635,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/04/Intellij-IDEA总结/"
-           data-title="Intellij IDEA总结" data-url="http://liuhang.net.cn/2017/03/04/Intellij-IDEA总结/">
+      <div class="ds-thread" data-thread-key="redis总结.html"
+           data-title="redis总结" data-url="http://liuhang.net.cn/redis总结.html">
       </div>
     
   </div>
@@ -630,7 +763,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#快捷键篇"><span class="nav-number">1.</span> <span class="nav-text">快捷键篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#插件篇"><span class="nav-number">2.</span> <span class="nav-text">插件篇</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis简介"><span class="nav-number">1.</span> <span class="nav-text">Redis简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSql"><span class="nav-number">1.1.</span> <span class="nav-text">NoSql</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NoSql数据库分类"><span class="nav-number">1.2.</span> <span class="nav-text">NoSql数据库分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis简介-1"><span class="nav-number">1.3.</span> <span class="nav-text">Redis简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Redis安装"><span class="nav-number">1.4.</span> <span class="nav-text">Redis安装</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Redis数据类型"><span class="nav-number">2.</span> <span class="nav-text">Redis数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#String类型"><span class="nav-number">2.1.</span> <span class="nav-text">String类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hash类型"><span class="nav-number">2.2.</span> <span class="nav-text">Hash类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List类型"><span class="nav-number">2.3.</span> <span class="nav-text">List类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set类型"><span class="nav-number">2.4.</span> <span class="nav-text">Set类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SortedSet类型"><span class="nav-number">2.5.</span> <span class="nav-text">SortedSet类型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>

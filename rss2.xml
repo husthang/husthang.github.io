@@ -13,8 +13,8 @@
     
     <item>
       <title>Java基础增强-多线程</title>
-      <link>http://liuhang.net.cn/2017/03/13/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
-      <guid>http://liuhang.net.cn/2017/03/13/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</guid>
       <pubDate>Mon, 13 Mar 2017 12:18:54 GMT</pubDate>
       <description>
       
@@ -27,13 +27,13 @@
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/13/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>我的博客汇总</title>
-      <link>http://liuhang.net.cn/2017/03/10/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</link>
-      <guid>http://liuhang.net.cn/2017/03/10/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</guid>
+      <link>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html</link>
+      <guid>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html</guid>
       <pubDate>Fri, 10 Mar 2017 06:57:58 GMT</pubDate>
       <description>
       
@@ -47,13 +47,13 @@
 </ul>
 <h1 id="博客分类"><a href="#博客分类" class="headerlink" title="博客分类"></a>博客分类</h1>]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/10/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>redis总结</title>
-      <link>http://liuhang.net.cn/2017/03/09/redis%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/09/redis%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Thu, 09 Mar 2017 06:34:52 GMT</pubDate>
       <description>
       
@@ -206,13 +206,13 @@
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/09/redis%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>基础数据结构-二叉树</title>
-      <link>http://liuhang.net.cn/2017/03/06/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
-      <guid>http://liuhang.net.cn/2017/03/06/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html</guid>
       <pubDate>Mon, 06 Mar 2017 13:09:42 GMT</pubDate>
       <description>
       
@@ -281,13 +281,13 @@ return result;
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/06/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>Spring笔记2-spring-IOC</title>
-      <link>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B02-spring-IOC/</link>
-      <guid>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B02-spring-IOC/</guid>
+      <link>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</link>
+      <guid>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</guid>
       <pubDate>Mon, 06 Mar 2017 09:06:09 GMT</pubDate>
       <description>
       
@@ -382,13 +382,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B02-spring-IOC/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>Spring笔记1-spring入门</title>
-      <link>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8/</link>
-      <guid>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8/</guid>
+      <link>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</link>
+      <guid>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</guid>
       <pubDate>Mon, 06 Mar 2017 09:00:57 GMT</pubDate>
       <description>
       
@@ -492,13 +492,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>JavaWeb入门</title>
-      <link>http://liuhang.net.cn/2017/03/06/JavaWeb%E5%85%A5%E9%97%A8/</link>
-      <guid>http://liuhang.net.cn/2017/03/06/JavaWeb%E5%85%A5%E9%97%A8/</guid>
+      <link>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</link>
+      <guid>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</guid>
       <pubDate>Mon, 06 Mar 2017 08:45:25 GMT</pubDate>
       <description>
       
@@ -553,13 +553,13 @@ return result;
 <h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/06/JavaWeb%E5%85%A5%E9%97%A8/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>SSM框架整合</title>
-      <link>http://liuhang.net.cn/2017/03/06/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/</link>
-      <guid>http://liuhang.net.cn/2017/03/06/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/</guid>
+      <link>http://liuhang.net.cn/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html</link>
+      <guid>http://liuhang.net.cn/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html</guid>
       <pubDate>Mon, 06 Mar 2017 02:49:44 GMT</pubDate>
       <description>
       
@@ -621,13 +621,13 @@ return result;
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/06/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>Nginx总结</title>
-      <link>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/Nginx%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/Nginx%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sun, 05 Mar 2017 12:57:38 GMT</pubDate>
       <description>
       
@@ -676,13 +676,13 @@ return result;
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Nginx%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>FastDFS总结</title>
-      <link>http://liuhang.net.cn/2017/03/05/Fastdfs%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/05/Fastdfs%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sun, 05 Mar 2017 11:52:20 GMT</pubDate>
       <description>
       
@@ -719,13 +719,13 @@ return result;
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/05/Fastdfs%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>Intellij IDEA总结</title>
-      <link>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sat, 04 Mar 2017 15:33:35 GMT</pubDate>
       <description>
       
@@ -753,13 +753,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>chrome总结</title>
-      <link>http://liuhang.net.cn/2017/03/04/chrome%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/04/chrome%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sat, 04 Mar 2017 15:31:21 GMT</pubDate>
       <description>
       
@@ -791,13 +791,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/04/chrome%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>Git总结</title>
-      <link>http://liuhang.net.cn/2017/03/04/Git%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/04/Git%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sat, 04 Mar 2017 15:28:32 GMT</pubDate>
       <description>
       
@@ -895,13 +895,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/04/Git%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>mac总结</title>
-      <link>http://liuhang.net.cn/2017/03/04/mac%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/03/04/mac%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sat, 04 Mar 2017 15:24:14 GMT</pubDate>
       <description>
       
@@ -930,13 +930,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/03/04/mac%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>设计模式(一) 简单工厂模式</title>
-      <link>http://liuhang.net.cn/2017/02/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</link>
-      <guid>http://liuhang.net.cn/2017/02/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</guid>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</guid>
       <pubDate>Sun, 19 Feb 2017 17:36:37 GMT</pubDate>
       <description>
       
@@ -999,13 +999,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/02/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>linux总结</title>
-      <link>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</link>
-      <guid>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</guid>
+      <link>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sun, 19 Feb 2017 17:19:23 GMT</pubDate>
       <description>
       
@@ -1137,13 +1137,13 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>匈牙利算法和KM算法详解及java实现</title>
-      <link>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</link>
-      <guid>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</guid>
+      <link>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</link>
+      <guid>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</guid>
       <pubDate>Sun, 19 Feb 2017 17:19:23 GMT</pubDate>
       <description>
       
@@ -1221,7 +1221,7 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html#disqus_thread</comments>
     </item>
     
   </channel>

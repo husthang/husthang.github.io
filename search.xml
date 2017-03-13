@@ -5,7 +5,7 @@
     
     <entry>
       <title><![CDATA[Java基础增强-多线程]]></title>
-      <url>http://liuhang.net.cn/2017/03/13/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</url>
       <content type="html"><![CDATA[<h1 id="什么是多线程"><a href="#什么是多线程" class="headerlink" title="什么是多线程"></a>什么是多线程</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href=""></a></li>
 </ol>
@@ -14,7 +14,7 @@
     
     <entry>
       <title><![CDATA[我的博客汇总]]></title>
-      <url>http://liuhang.net.cn/2017/03/10/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB/</url>
+      <url>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html</url>
       <content type="html"><![CDATA[<h1 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h1><ul>
 <li><a href="https://my.oschina.net/husthang/blog" target="_blank" rel="external">oschina博客</a></li>
 <li><a href="http://liuhang.net.cn/">个人网站</a></li>
@@ -24,7 +24,7 @@
     
     <entry>
       <title><![CDATA[redis总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/09/redis%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h1><h2 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h2><ul>
 <li>NoSQL，泛指非关系型的数据库，NoSQL即Not-Only SQL，它可以作为关系型数据库的良好补充;</li>
 </ul>
@@ -173,7 +173,7 @@
     
     <entry>
       <title><![CDATA[基础数据结构-二叉树]]></title>
-      <url>http://liuhang.net.cn/2017/03/06/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+      <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html</url>
       <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li>二叉树的前序中序后序三种遍历方法，用递归实现较为容易，在上数据结构的课时，非递归实现会了，但过了一段时间又忘了，每次要写非递归实现的时候都要想好久。这里总结一下，将前序和后序遍历非递归实现方法统一，便于理解记忆！</li>
 </ul>
@@ -238,7 +238,7 @@ return result;
     
     <entry>
       <title><![CDATA[Spring笔记2-spring-IOC]]></title>
-      <url>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B02-spring-IOC/</url>
+      <url>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</url>
       <content type="html"><![CDATA[<h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
 <li>基本概念<ul>
 <li><strong>控制反转(Inversion of Control)</strong>是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。实现控制反转主要有两种方式：<strong>依赖注入</strong>和<strong>依赖查找</strong>。两者的区别在于，前者是被动的接收对象，在类A的实例创建过程中即创建了依赖的B对象，通过类型或名称来判断将不同的对象注入到不同的属性中，而后者是主动索取响应名称的对象，获得依赖对象的时间也可以在代码中自由控制。</li>
@@ -329,7 +329,7 @@ return result;
     
     <entry>
       <title><![CDATA[Spring笔记1-spring入门]]></title>
-      <url>http://liuhang.net.cn/2017/03/06/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8/</url>
+      <url>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</url>
       <content type="html"><![CDATA[<h2 id="Java-EE了解"><a href="#Java-EE了解" class="headerlink" title="Java EE了解"></a>Java EE了解</h2><ol>
 <li>Java EE是什么<ul>
 <li>学习Java各种框架之前,有必要对Java EE有基本的了解,方便理解各种框架兴起的原因(为什么要用这个框架,而不用JavaEE中相应的东西).</li>
@@ -429,7 +429,7 @@ return result;
     
     <entry>
       <title><![CDATA[JavaWeb入门]]></title>
-      <url>http://liuhang.net.cn/2017/03/06/JavaWeb%E5%85%A5%E9%97%A8/</url>
+      <url>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</url>
       <content type="html"><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="/images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
 <h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
 <li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
@@ -480,7 +480,7 @@ return result;
     
     <entry>
       <title><![CDATA[SSM框架整合]]></title>
-      <url>http://liuhang.net.cn/2017/03/06/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88/</url>
+      <url>http://liuhang.net.cn/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html</url>
       <content type="html"><![CDATA[<h1 id="框架体系结构"><a href="#框架体系结构" class="headerlink" title="框架体系结构"></a>框架体系结构</h1><ol>
 <li><p>框架三层架构<img src="/media/14887819567898.jpg" alt=""></p>
 </li>
@@ -538,7 +538,7 @@ return result;
     
     <entry>
       <title><![CDATA[Nginx总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/05/Nginx%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/Nginx%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
 <li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
 </ul>
@@ -583,7 +583,7 @@ return result;
     
     <entry>
       <title><![CDATA[FastDFS总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/05/Fastdfs%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
 <li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
 </ul>
@@ -616,7 +616,7 @@ return result;
     
     <entry>
       <title><![CDATA[Intellij IDEA总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/04/Intellij-IDEA%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
 <ul>
 <li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
@@ -640,7 +640,7 @@ return result;
     
     <entry>
       <title><![CDATA[chrome总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/04/chrome%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
 <li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
 <li>个人常用<ul>
@@ -668,7 +668,7 @@ return result;
     
     <entry>
       <title><![CDATA[Git总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/04/Git%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
 <li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
 <li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
@@ -762,7 +762,7 @@ return result;
     
     <entry>
       <title><![CDATA[mac总结]]></title>
-      <url>http://liuhang.net.cn/2017/03/04/mac%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
 <li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
 <li>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</li>
@@ -787,7 +787,7 @@ return result;
     
     <entry>
       <title><![CDATA[设计模式(一) 简单工厂模式]]></title>
-      <url>http://liuhang.net.cn/2017/02/20/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/</url>
+      <url>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</url>
       <content type="html"><![CDATA[<h2 id="一、模式定义"><a href="#一、模式定义" class="headerlink" title="一、模式定义"></a>一、模式定义</h2><ul>
 <li>简单工厂模式(Simple Factory Pattern)：又称为静态工厂方法(Static Factory Method)模式，它属于<strong>类创建型模式</strong>（同属于创建型模式的还有工厂方法模式，抽象工厂模式，单例模式，建造者模式）。在简单工厂模式中，可以<strong>根据参数的不同返回不同类的实例</strong>。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。</li>
 </ul>
@@ -845,8 +845,82 @@ return result;
     </entry>
     
     <entry>
+      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
+      <url>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
+<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
+<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
+<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
+<li><img src="/media/graph.png" alt=""></li>
+<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+</ul>
+<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
+<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
+<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
+<li><img src="/media/增广路径.png" alt=""></li>
+<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
+<li>由增广路径的定义,可以推出三个结论:<ol>
+<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
+<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
+<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
+</ol>
+</li>
+<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
+<li>置M为空;</li>
+<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
+<li>重复步骤2,直到找不出增广路径为止.</li>
+</ol>
+</li>
+<li><strong>匈牙利算法实现(java)</strong><ul>
+<li><img src="/media/14846300394186.jpg" alt=""></li>
+<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
+<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
+<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
+<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
+<li>对任意的G和M,可行标都是存在的</li>
+<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
+</ul>
+<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
+<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
+<li>初始化可行顶标的值</li>
+<li>用匈牙利算法在等价子图中寻找完备匹配</li>
+<li>若未找到完备匹配则修改可行顶标的值</li>
+<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
+</ol>
+</li>
+<li><p>实例解释算法过程:</p>
+<ul>
+<li>带权二分图如下:</li>
+<li><img src="/media/14846361640808.jpg" alt=""> </li>
+<li><p><img src="/media/顶标变换.png" alt=""> </p>
+</li>
+<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
+</li>
+<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
+<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[linux总结]]></title>
-      <url>http://liuhang.net.cn/2017/02/20/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</url>
+      <url>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
 <li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
 </li>
@@ -968,80 +1042,6 @@ return result;
 <li><code>kill</code>,关进程</li>
 <li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
 <li><code>ifconfig</code>,查看ip</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
-      <url>http://liuhang.net.cn/2017/02/20/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0/</url>
-      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="/media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
-</ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="/media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
-<ul>
-<li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""> </li>
-<li><p><img src="/media/顶标变换.png" alt=""> </p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
     </entry>

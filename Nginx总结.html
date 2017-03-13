@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="JavaWeb入门," />
+  <meta name="keywords" content="Nginx," />
 
 
 
@@ -86,26 +86,16 @@
 
 
 
-<meta name="description" content="JavaWeb入门基础">
+<meta name="description" content="Nginx学习及相关配置总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaWeb入门">
-<meta property="og:url" content="http://liuhang.net.cn/2017/03/06/JavaWeb入门/index.html">
+<meta property="og:title" content="Nginx总结">
+<meta property="og:url" content="http://liuhang.net.cn/Nginx总结.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="JavaWeb入门基础">
-<meta property="og:image" content="http://liuhang.net.cn/images/JavaWeb基础知识体系.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/Client-Server.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/JavaWeb应用组成结构.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/浏览器与服务器交互图.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/Tomcat目录层次结构.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/Tomcat体系结构.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/httpRequest.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/状态码.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/httpResponse.png">
+<meta property="og:description" content="Nginx学习及相关配置总结">
 <meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaWeb入门">
-<meta name="twitter:description" content="JavaWeb入门基础">
-<meta name="twitter:image" content="http://liuhang.net.cn/images/JavaWeb基础知识体系.png">
+<meta name="twitter:title" content="Nginx总结">
+<meta name="twitter:description" content="Nginx学习及相关配置总结">
 
 
 
@@ -123,7 +113,7 @@
   };
 </script>
 
-  <title> JavaWeb入门 | 刘航 </title>
+  <title> Nginx总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -336,7 +326,7 @@
             
             
               
-                JavaWeb入门
+                Nginx总结
               
             
           </h1>
@@ -348,8 +338,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-06T16:45:25+08:00" content="2017-03-06">
-              2017-03-06
+            <time itemprop="dateCreated" datetime="2017-03-05T20:57:38+08:00" content="2017-03-05">
+              2017-03-05
             </time>
           </span>
 
@@ -378,8 +368,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/03/06/JavaWeb入门/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/06/JavaWeb入门/" itemprop="commentsCount"></span>
+                <a href="/Nginx总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Nginx总结.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -407,51 +397,45 @@
       
 
       
-        <h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="/images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
-<h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
-<li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
-<li>容器: 举例说明: Servlet没有main()方法。Servlet受控于另一个Java应用，这个Java应用称为容器.<ul>
-<li><a href="http://openhome.cc/Gossip/ServletJSP/Container.html" target="_blank" rel="external">何谓容器</a> ,关于容器的详解</li>
-<li>在具体层面,容器实际上是Java应用程序,运行于JVM之上,不同类型的容器负责不同的工作，例如Servlet/JSP所运行的Web容器（Web Container),功能之一就是把JSP代码翻译成java代码</li>
+        <h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
+<li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
 </ul>
-</li>
-<li>服务器，硬件角度上说就是一台高性能的Computer。我们通常指的服务器其实应该是装有能够处理具体请求事务的服务器软件的Computer</li>
-<li>Web服务器是指驻留于因特网上某种类型计算机的程序，是可以向发出请求的浏览器提供文档的程序。当Web浏览器（客户端）连到服务器上并请求文件时，服务器将处理该请求并将文件反馈到该浏览器上</li>
-<li>Client-Server架构<br><img src="/images/Client-Server.png" alt="Client-Server"></li>
-</ol>
-<ul>
-<li>动态WEB中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox等），通过网络(Network)连接到服务器上，使用HTTP协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源(<em>.htm或者是</em>.htm)还是动态资源。</li>
-<li>如果WEB Server Plugin发现客户端请求的是静态资源(<em>.htm或者是</em>.htm)，则将请求直接转交给WEB服务器，之后WEB服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</li>
-<li>如果WEB Server Plugin发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container(WEB容器)，在WEB Container中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给WEB服务器，之后通过WEB服务器将内容发送回客户端浏览器进行解析执行。</li>
+<h2 id="Nginx-应用场景"><a href="#Nginx-应用场景" class="headerlink" title="Nginx 应用场景"></a>Nginx 应用场景</h2><ul>
+<li>http服务器。Nginx是一个http服务可以独立提供http服务。可以做网页静态服务器。</li>
+<li>虚拟主机。可以实现在一台服务器虚拟出多个网站。例如个人网站使用的虚拟主机。</li>
+<li>反向代理，负载均衡。当网站的访问量达到一定程度后，单台服务器不能满足用户的请求时，需要用多台服务器集群可以使用nginx做反向代理。并且多台服务器可以平均分担负载，不会因为某台服务器负载高宕机而某台服务器闲置的情况。</li>
 </ul>
-<h2 id="Apache、Tomcat与Catalina作为软件名字的含义与关系"><a href="#Apache、Tomcat与Catalina作为软件名字的含义与关系" class="headerlink" title="Apache、Tomcat与Catalina作为软件名字的含义与关系"></a>Apache、Tomcat与Catalina作为软件名字的含义与关系</h2><ol>
-<li>JavaWeb中常见这三个词,一直没闹清楚这三个词命名的来源和含义,找到一篇文章总结的不错.<a href="http://blog.csdn.net/yingchengsun/article/details/44340211" target="_blank" rel="external">文章戳这里</a></li>
-</ol>
-<h2 id="JavaWeb应用的组成结构"><a href="#JavaWeb应用的组成结构" class="headerlink" title="JavaWeb应用的组成结构"></a>JavaWeb应用的组成结构</h2><p><img src="/images/JavaWeb应用组成结构.png" alt="JavaWeb目录结构"></p>
-<h2 id="浏览器与服务器的交互过程"><a href="#浏览器与服务器的交互过程" class="headerlink" title="浏览器与服务器的交互过程"></a>浏览器与服务器的交互过程</h2><ol>
-<li>URL:统一资源定位符(即网址) uniform resources location<br>URI:统一资源标识符, uniform resource identify<br><a href="http://localhost:8080/doc/1.html" target="_blank" rel="external">http://localhost:8080/doc/1.html</a><br>协议  主机IP(端口号)   URI(当前应用的资源路径)</li>
-<li>浏览器与服务器交互过程图<br><img src="/images/浏览器与服务器交互图.png" alt="浏览器与服务器交互过程图"></li>
-</ol>
-<h2 id="Tomcat简介"><a href="#Tomcat简介" class="headerlink" title="Tomcat简介"></a>Tomcat简介</h2><ol>
-<li><p>Tomcat目录层次结构<br><img src="/images/Tomcat目录层次结构.png" alt="Tomcat目录结构"><br><strong>应学会查看logs日志信息来排查错误</strong></p>
+<h2 id="Mac下Nginx安装配置相关问题"><a href="#Mac下Nginx安装配置相关问题" class="headerlink" title="Mac下Nginx安装配置相关问题"></a>Mac下Nginx安装配置相关问题</h2><ul>
+<li><p>mac下直接用homebrew安装，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
 </li>
-<li><p>Tomcat体系结构<br><img src="/images/Tomcat体系结构.png" alt="Tomcat体系结构"><br>Tomcat服务器的启动是基于一个server.xml文件的，Tomcat启动的时候首先会启动一个Server，Server里面就会启动Service，Service里面就会启动多个”Connector(连接器)”，每一个连接器都在等待客户机的连接，当有用户使用浏览器去访问服务器上面的web资源时，首先是连接到Connector(连接器)，Connector(连接器)是不处理用户的请求的，而是将用户的请求交给一个Engine(引擎)去处理，Engine(引擎)接收到请求后就会解析用户想要访问的Host，然后将请求交给相应的Host，Host收到请求后就会解析出用户想要访问这个Host下面的哪一个Web应用,一个web应用对应一个Context。</p>
+<li><p>跟Linux系统有些不同，在Mac下面Nginx默认监听了8080端口号,若要<strong>改到80端口</strong>（http协议默认端口），输入以下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 下面的1.8.0请根据最新安装版本号对应修改，给nginx足够权限</div><div class="line">sudo chown root:wheel /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line">sudo chmod u+s /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line"></div><div class="line"># 用vi编辑器打开nginx配置文件，找到server字段的listen字段并将其值修改为80</div><div class="line">vi /usr/local/etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
 </li>
-</ol>
-<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
-<li>hypertext transfer protocol（超文本传输协议）</li>
-<li>HTTP请求<ul>
-<li>一个完整的HTTP请求包括如下内容：一个请求行、若干消息头、以及实体内容<br><img src="/images/httpRequest.png" alt="范例"></li>
-<li>第一行请求行 请求方式(get,post) URI  协议版本    </li>
 </ul>
+<h2 id="Nginx配置解析"><a href="#Nginx配置解析" class="headerlink" title="Nginx配置解析"></a>Nginx配置解析</h2><ul>
+<li><p>默认配置文件解析：可以在终端执行 cat /usr/local/etc/nginx/nginx.conf.default 查看默认配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># user字段表明了Nginx服务是由哪个用户哪个群组来负责维护进程的，默认是nobody</span></div><div class="line"><span class="comment"># 查看当前用户命令： whoami</span></div><div class="line">user nobody;</div><div class="line"></div><div class="line"><span class="comment"># worker_processes字段表示Nginx服务占用的内核数量</span></div><div class="line"><span class="comment"># 为了充分利用服务器性能你可以直接写你本机最高内核</span></div><div class="line"><span class="comment"># 查看本机最高内核数量命令： sysctl -n hw.ncpu</span></div><div class="line">worker_processes 4;</div><div class="line"></div><div class="line"><span class="comment"># error_log字段表示Nginx错误日志记录的位置</span></div><div class="line"><span class="comment"># 模式选择：debug/info/notice/warn/error/crit</span></div><div class="line"><span class="comment"># 上面模式从左到右记录的信息从最详细到最少</span></div><div class="line">error_log  /usr/<span class="built_in">local</span>/var/logs/nginx/error.log debug;</div><div class="line"></div><div class="line"><span class="comment"># Nginx执行的进程id,默认配置文件是注释了</span></div><div class="line"><span class="comment"># 如果上面worker_processes的数量大于1那Nginx就会启动多个进程</span></div><div class="line"><span class="comment"># 而发信号的时候需要知道要向哪个进程发信息，不同进程有不同的pid，所以写进文件发信号比较简单</span></div><div class="line"><span class="comment"># 你只需要手动创建，比如我下面的位置： touch /usr/local/var/run/nginx.pid</span></div><div class="line">pid  /usr/<span class="built_in">local</span>/var/run/nginx.pid;</div><div class="line"></div><div class="line">events &#123;</div><div class="line">    <span class="comment"># 每一个worker进程能并发处理的最大连接数</span></div><div class="line">    <span class="comment"># 当作为反向代理服务器，计算公式为： `worker_processes * worker_connections / 4`</span></div><div class="line">    <span class="comment"># 当作为HTTP服务器时，公式是除以2</span></div><div class="line">    worker_connections  2048;</div><div class="line">&#125;</div><div class="line"></div><div class="line">http &#123;</div><div class="line">    <span class="comment"># 关闭错误页面的nginx版本数字，提高安全性</span></div><div class="line">    server_tokens off;</div><div class="line">    include       mime.types;</div><div class="line">    default_type  application/octet-stream;</div><div class="line"></div><div class="line">    <span class="comment"># 日志记录格式，如果关闭了access_log可以注释掉这段</span></div><div class="line">    <span class="comment">#log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '</span></div><div class="line">    <span class="comment">#                 '$status $body_bytes_sent "$http_referer" '</span></div><div class="line">    <span class="comment">#                '"$http_user_agent" "$http_x_forwarded_for"';</span></div><div class="line"></div><div class="line">    <span class="comment"># 关闭access_log可以让读取磁盘IO操作更快</span></div><div class="line">    <span class="comment"># 当然如果你在学习的过程中可以打开方便查看Nginx的访问日志</span></div><div class="line">    access_log off;</div><div class="line"></div><div class="line">    sendfile        on;</div><div class="line"></div><div class="line">    <span class="comment"># 在一个数据包里发送所有头文件，而不是一个接一个的发送</span></div><div class="line">    tcp_nopush     on;</div><div class="line"></div><div class="line">    <span class="comment"># 不要缓存</span></div><div class="line">    tcp_nodelay on;</div><div class="line"></div><div class="line">    keepalive_timeout  65;</div><div class="line"></div><div class="line">    gzip  on;</div><div class="line">    client_max_body_size 10m;</div><div class="line">    client_body_buffer_size 128k;</div><div class="line"></div><div class="line">   include /usr/<span class="built_in">local</span>/etc/nginx/sites-enabled/*;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li>HTTP响应<ul>
-<li>状态码<br><img src="/images/状态码.png" alt="状态码"></li>
-<li>一个HTTP响应代表服务器向客户端回送的数据，它包括： 一个状态行、若干消息头、以及实体内容 。<br><img src="/images/httpResponse.png" alt="http响应"></li>
+<li><p>Nginx配置文件结构</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">...</div><div class="line">events &#123;</div><div class="line">    ...</div><div class="line">&#125;</div><div class="line">http &#123;</div><div class="line">    ...</div><div class="line">    server &#123;</div><div class="line">        ...</div><div class="line">        location xxx &#123;</div><div class="line">            ...</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>举例说明</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">server &#123;</div><div class="line">    <span class="comment"># Nginx监听端口号</span></div><div class="line">    listen       80;</div><div class="line">    <span class="comment"># 服务器的名字，默认为localhost，你也可以写成aotu.jd.com，这样子就可以通过aotu.jd.com来访问</span></div><div class="line">    server_name  localhost;</div><div class="line">    <span class="comment"># 代码放置的根目录</span></div><div class="line">    root /var/www/;</div><div class="line">    <span class="comment"># 编码</span></div><div class="line">    charset utf-8;    </div><div class="line"></div><div class="line">    location / &#123;</div><div class="line">        <span class="comment"># index字段声明了解析的后缀名的先后顺序</span></div><div class="line">        <span class="comment"># 下面匹配到/的时候默认找找html，再找不到就找htm</span></div><div class="line">        index index.html index.htm;</div><div class="line">        <span class="comment"># 自动索引</span></div><div class="line">        autoindex on;</div><div class="line"></div><div class="line">    &#125;    </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ul>
+<h1 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h1><h2 id="Nginx配置反向代理"><a href="#Nginx配置反向代理" class="headerlink" title="Nginx配置反向代理"></a>Nginx配置反向代理</h2><ul>
+<li>如下配置，访问tomcat.taotao.com时，分别轮流的访问8080和8081两个tomcat，配置tomcat集群<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
 </li>
-</ol>
-<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
+</ul>
+<h2 id="Nginx配置负载均衡"><a href="#Nginx配置负载均衡" class="headerlink" title="Nginx配置负载均衡"></a>Nginx配置负载均衡</h2><ul>
+<li>如下，upstream的server后面添加一个weight即可代表权重。权重越高，分配请求的数量就越多。默认权重是1<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">upstream tomcats&#123;</div><div class="line">	server 192.168.25.148:8080 weight=2;</div><div class="line">	server 192.168.25.148:8081;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   server &#123;</div><div class="line">        listen       80;</div><div class="line">        server_name  tomcat.taotao.com;</div><div class="line"></div><div class="line">        <span class="comment">#charset koi8-r;</span></div><div class="line"></div><div class="line">        <span class="comment">#access_log  logs/host.access.log  main;</span></div><div class="line"></div><div class="line">        location / &#123;</div><div class="line">            proxy_pass   http://tomcats;</div><div class="line">            index  index.html index.htm;</div><div class="line">        &#125;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="反向代理理解"><a href="#反向代理理解" class="headerlink" title="反向代理理解"></a>反向代理理解</h2><ul>
+<li><strong>正向代理</strong>就是<strong>代理服务器替代访问方【用户A】去访问目标服务器【服务器B】</strong>，在现实中的例子就是『翻墙』，通过代理服务器去访问真实想访问的，代理服务器为一堆客户做代理；目标服务器不知道真实的客户端是谁。</li>
+<li><strong>反向代理</strong>，用户去访问的时候，不知道真正访问的是哪一台服务器，就跟打10086一样，只管拨通10086，不管那边是哪个服务人员；<strong>为服务器做代理</strong>；</li>
+</ul>
 
       
     </div>
@@ -494,7 +478,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/JavaWeb入门/" rel="tag">#JavaWeb入门</a>
+            <a href="/tags/Nginx/" rel="tag">#Nginx</a>
           
         </div>
       
@@ -503,16 +487,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/06/SSM框架整合/" rel="next" title="SSM框架整合">
-                <i class="fa fa-chevron-left"></i> SSM框架整合
+              <a href="/Fastdfs总结.html" rel="next" title="FastDFS总结">
+                <i class="fa fa-chevron-left"></i> FastDFS总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/06/Spring笔记1-spring入门/" rel="prev" title="Spring笔记1-spring入门">
-                Spring笔记1-spring入门 <i class="fa fa-chevron-right"></i>
+              <a href="/SSM框架整合.html" rel="prev" title="SSM框架整合">
+                SSM框架整合 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -539,8 +523,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/03/06/JavaWeb入门/"
-           data-title="JavaWeb入门" data-url="http://liuhang.net.cn/2017/03/06/JavaWeb入门/">
+      <div class="ds-thread" data-thread-key="Nginx总结.html"
+           data-title="Nginx总结" data-url="http://liuhang.net.cn/Nginx总结.html">
       </div>
     
   </div>
@@ -667,7 +651,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaWeb基础知识体系"><span class="nav-number">1.</span> <span class="nav-text">JavaWeb基础知识体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web容器、服务器的含义和区别"><span class="nav-number">2.</span> <span class="nav-text">Web容器、服务器的含义和区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Apache、Tomcat与Catalina作为软件名字的含义与关系"><span class="nav-number">3.</span> <span class="nav-text">Apache、Tomcat与Catalina作为软件名字的含义与关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JavaWeb应用的组成结构"><span class="nav-number">4.</span> <span class="nav-text">JavaWeb应用的组成结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器与服务器的交互过程"><span class="nav-number">5.</span> <span class="nav-text">浏览器与服务器的交互过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tomcat简介"><span class="nav-number">6.</span> <span class="nav-text">Tomcat简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP协议"><span class="nav-number">7.</span> <span class="nav-text">HTTP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#博客推荐"><span class="nav-number">8.</span> <span class="nav-text">博客推荐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Nginx"><span class="nav-number">1.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-is-Nginx"><span class="nav-number">1.1.</span> <span class="nav-text">What is Nginx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx-应用场景"><span class="nav-number">1.2.</span> <span class="nav-text">Nginx 应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac下Nginx安装配置相关问题"><span class="nav-number">1.3.</span> <span class="nav-text">Mac下Nginx安装配置相关问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置解析"><span class="nav-number">1.4.</span> <span class="nav-text">Nginx配置解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#反向代理"><span class="nav-number">2.</span> <span class="nav-text">反向代理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置反向代理"><span class="nav-number">2.1.</span> <span class="nav-text">Nginx配置反向代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nginx配置负载均衡"><span class="nav-number">2.2.</span> <span class="nav-text">Nginx配置负载均衡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反向代理理解"><span class="nav-number">2.3.</span> <span class="nav-text">反向代理理解</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

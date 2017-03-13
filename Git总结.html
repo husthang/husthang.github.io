@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="简单工厂模式," />
+  <meta name="keywords" content="Git,GitHub," />
 
 
 
@@ -86,18 +86,21 @@
 
 
 
-<meta name="description" content="设计模式总结(一) 简单工厂模式">
+<meta name="description" content="Git及GitHub使用总结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="设计模式(一) 简单工厂模式">
-<meta property="og:url" content="http://liuhang.net.cn/2017/02/20/设计模式-一-简单工厂模式/index.html">
+<meta property="og:title" content="Git总结">
+<meta property="og:url" content="http://liuhang.net.cn/Git总结.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="设计模式总结(一) 简单工厂模式">
-<meta property="og:image" content="http://liuhang.net.cn/media/14873386849094.png">
+<meta property="og:description" content="Git及GitHub使用总结">
+<meta property="og:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-soft.png">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-mixed.png">
+<meta property="og:image" content="http://liuhang.net.cn/images/reset-hard.png">
 <meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="设计模式(一) 简单工厂模式">
-<meta name="twitter:description" content="设计模式总结(一) 简单工厂模式">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14873386849094.png">
+<meta name="twitter:title" content="Git总结">
+<meta name="twitter:description" content="Git及GitHub使用总结">
+<meta name="twitter:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
 
 
 
@@ -115,7 +118,7 @@
   };
 </script>
 
-  <title> 设计模式(一) 简单工厂模式 | 刘航 </title>
+  <title> Git总结 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -328,7 +331,7 @@
             
             
               
-                设计模式(一) 简单工厂模式
+                Git总结
               
             
           </h1>
@@ -340,8 +343,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-02-20T01:36:37+08:00" content="2017-02-20">
-              2017-02-20
+            <time itemprop="dateCreated" datetime="2017-03-04T23:28:32+08:00" content="2017-03-04">
+              2017-03-04
             </time>
           </span>
 
@@ -354,8 +357,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/designPattern/" itemprop="url" rel="index">
-                    <span itemprop="name">designPattern</span>
+                  <a href="/categories/tool/" itemprop="url" rel="index">
+                    <span itemprop="name">tool</span>
                   </a>
                 </span>
 
@@ -370,8 +373,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2017/02/20/设计模式-一-简单工厂模式/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/02/20/设计模式-一-简单工厂模式/" itemprop="commentsCount"></span>
+                <a href="/Git总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Git总结.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -399,58 +402,93 @@
       
 
       
-        <h2 id="一、模式定义"><a href="#一、模式定义" class="headerlink" title="一、模式定义"></a>一、模式定义</h2><ul>
-<li>简单工厂模式(Simple Factory Pattern)：又称为静态工厂方法(Static Factory Method)模式，它属于<strong>类创建型模式</strong>（同属于创建型模式的还有工厂方法模式，抽象工厂模式，单例模式，建造者模式）。在简单工厂模式中，可以<strong>根据参数的不同返回不同类的实例</strong>。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。</li>
-</ul>
-<h2 id="二、模式结构"><a href="#二、模式结构" class="headerlink" title="二、模式结构"></a>二、模式结构</h2><p><img src="/media/14873386849094.png" alt=""></p>
-<ul>
-<li>从上图可以看出，简单工厂模式由三部分组成：具体工厂、具体产品和抽象产品。<ul>
-<li>工厂类（Creator）角色：担任这个角色的是简单工厂模式的核心，含有与应用紧密相关的商业逻辑。工厂类在客户端的直接调用下创建产品对象，它往往由一个具体Java类实现。</li>
-<li>抽象产品（AbstractProduct）角色：担任这个角色的类是由简单工厂模式所创建的对象的父类，或它们共同拥有的接口。抽象产品角色可以用一个Java接口或者Java抽象类实现。</li>
-<li>具体产品（ConcreteProduct）角色：简单工厂模式所创建的任何对象都是这个角色的实例，具体产品角色由一个具体Java类实现。</li>
-</ul>
-</li>
-</ul>
-<h2 id="三、模式动机"><a href="#三、模式动机" class="headerlink" title="三、模式动机"></a>三、模式动机</h2><ul>
-<li>使用简单工厂模式可以将产品的“消费”和生产完全分开，客户端只需要知道自己需要什么产品，如何来使用产品就可以了，具体的产品生产任务由具体的工厂类来实现。工厂类根据传进来的参数生产具体的产品供消费者使用。这种模式使得更加利于扩展，当有新的产品加入时仅仅需要在工厂中加入新产品的构造就可以了。</li>
-</ul>
-<h2 id="四、实例分析"><a href="#四、实例分析" class="headerlink" title="四、实例分析"></a>四、实例分析</h2><ul>
-<li>话说有一位土豪，他家有三辆汽车——Benz奔驰、Bmw宝马、Audi奥迪，还雇了司机为他开车。不过，土豪坐车时总是怪怪的：上Benz车后跟司机说“开奔驰车！”坐上Bmw后他说“开宝马车！”，坐上Audi说“开奥迪车！”。你一定说：这人有病！直接说开车不就行了？！ 而当把土豪的行为放到我们程序设计中来时，会发现这是一个普遍存在的现象。幸运的是，这种有病的现象在OO（面向对象）语言中可以避免了。下面就以Java语言为例来讲解一下如何避免这种问题。</li>
-<li>实例代码实现</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 汽车抽象类,所有汽车类的父类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Audi奥迪类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Audi</span> <span class="keyword">extends</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Audi</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Create an Audi"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Audi start engine"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Car工厂类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Car <span class="title">getCar</span><span class="params">(String type)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        <span class="keyword">if</span> (type.equals(<span class="string">"Audi"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Audi();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Bmw"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Bmw();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Benz"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Benz();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 测试简单工厂模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyFactoryModelTest</span> </span>&#123;</div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testEasyFactoryModel</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        Car car = Driver.getCar(<span class="string">"Benz"</span>);</div><div class="line">        car.drive();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>从这个实例的实现中,我们可以看到,土豪不需要自己new汽车对象，而是告诉Driver类今天我想要开什么车，Driver就会自动的将想要的汽车创建出来，然后土豪坐在车里只需要说开车就好了，这与我们现实中的逻辑相符合.Driver类就是我们说的工厂，他用if-else语句来判断需要创建什么类型的对象（当然也可以使用switch语句），这就是<strong>简单工厂模式</strong>。</li>
-</ul>
-<h2 id="五、模式优点"><a href="#五、模式优点" class="headerlink" title="五、模式优点"></a>五、模式优点</h2><ul>
-<li>工厂类含有必要的判断逻辑，可以决定在什么时候创建哪一个产品类的实例，客户端可以免除直接创建产品对象的责任，而仅仅“消费”产品；简单工厂模式通过这种做法实现了对责任的分割，它提供了专门的工厂类用于创建对象。</li>
-<li>客户端无须知道所创建的具体产品类的类名，只需要知道具体产品类所对应的参数即可，对于一些复杂的类名，通过简单工厂模式可以减少使用者的记忆量。</li>
-<li>通过引入配置文件，可以在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性。</li>
-<li>当需要引入新的产品是不需要修改客户端的代码，只需要添加相应的产品类并修改工厂类就可以了，所以说从产品的角度上简单工厂模式是符合“开-闭”原则的。</li>
-</ul>
-<h2 id="六、模式缺点"><a href="#六、模式缺点" class="headerlink" title="六、模式缺点"></a>六、模式缺点</h2><ul>
-<li>由于工厂类集中了所有产品创建逻辑，工厂类一般被我们称作“全能类”或者“<strong>上帝类</strong>”，因为所有的产品创建他都能完成，这看似是好事，但仔细想想是有问题的。比如全国上下所有的事情都有国家主义一个人干会不会有问题，当然有！一旦不能正常工作，整个系统都要受到影响。</li>
-<li>使用简单工厂模式将会增加系统中类的个数，在一定程序上增加了系统的复杂度和理解难度。</li>
-<li>系统扩展困难，一旦添加新产品就不得不修改工厂逻辑，在产品类型较多时，有可能造成工厂逻辑过于复杂，不利于系统的扩展和维护。所以说从工厂的角度来说简单工厂模式是不符合“开-闭”原则的。</li>
-<li>简单工厂模式由于使用了静态工厂方法，造成工厂角色无法形成基于继承的等级结构。</li>
-</ul>
-<h2 id="七、适用场景"><a href="#七、适用场景" class="headerlink" title="七、适用场景"></a>七、适用场景</h2><ul>
-<li>在以下情况下可以使用简单工厂模式：<ol>
-<li>工厂类负责创建的对象比较少：由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。</li>
-<li>客户端只知道传入工厂类的参数，对于如何创建对象不关心：客户端既不需要关心创建细节，甚至连类名都不需要记住，只需要知道类型所对应的参数。</li>
+        <h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
+<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
+<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
 </ol>
+<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
+<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
+<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
+<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
+<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
+<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
+</ul>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
+<li>总结<ul>
+<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
+<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
+<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+</ul>
 </li>
 </ul>
-<h2 id="八、简单工厂模式在JDK中的应用"><a href="#八、简单工厂模式在JDK中的应用" class="headerlink" title="八、简单工厂模式在JDK中的应用"></a>八、简单工厂模式在JDK中的应用</h2><ul>
-<li>JDK类库中广泛使用了简单工厂模式，如工具类java.text.DateFormat，它用于格式化一个本地日期或者时间。</li>
+<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
+<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">()</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style)</span></span>; </div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style,Locale locale)</span></span>;</div></pre></td></tr></table></figure>
-<h2 id="八、参考"><a href="#八、参考" class="headerlink" title="八、参考"></a>八、参考</h2><ol>
-<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
-<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/factoryModel" target="_blank" rel="external">我的代码|GitHub</a></li>
+<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
+<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
+<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
+</ul>
+<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
+<li>reset<ul>
+<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
+</ul>
+</li>
+<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
+<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
+<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
+<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
+<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
+<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
+<li>文件 .gitignore 的格式规范如下：<ul>
+<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
+<li>可以使用标准的 glob 模式匹配。</li>
+<li>匹配模式可以以（/）开头防止递归。</li>
+<li>匹配模式可以以（/）结尾指定目录。</li>
+<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
+</ul>
+</li>
+<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
+</ul>
+<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
+<li>命令<ul>
+<li>查看分支：git branch</li>
+<li>创建分支：git branch <name></name></li>
+<li>切换分支：git checkout <name></name></li>
+<li>创建+切换分支：git checkout -b <name></name></li>
+<li>合并某分支到当前分支：git merge <name></name></li>
+<li>删除分支：git branch -d <name></name></li>
+</ul>
+</li>
+<li>HEAD<ul>
+<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
+</ul>
+</li>
+<li>远程分支<ul>
+<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
+<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
+<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
+</ul>
+</li>
+<li>参考<ul>
+<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
 </ol>
 
       
@@ -494,7 +532,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/简单工厂模式/" rel="tag">#简单工厂模式</a>
+            <a href="/tags/Git/" rel="tag">#Git</a>
+          
+            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
           
         </div>
       
@@ -503,16 +543,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/02/20/linux命令总结/" rel="next" title="linux总结">
-                <i class="fa fa-chevron-left"></i> linux总结
+              <a href="/mac总结.html" rel="next" title="mac总结">
+                <i class="fa fa-chevron-left"></i> mac总结
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/04/mac总结/" rel="prev" title="mac总结">
-                mac总结 <i class="fa fa-chevron-right"></i>
+              <a href="/chrome总结.html" rel="prev" title="chrome总结">
+                chrome总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -539,8 +579,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2017/02/20/设计模式-一-简单工厂模式/"
-           data-title="设计模式(一) 简单工厂模式" data-url="http://liuhang.net.cn/2017/02/20/设计模式-一-简单工厂模式/">
+      <div class="ds-thread" data-thread-key="Git总结.html"
+           data-title="Git总结" data-url="http://liuhang.net.cn/Git总结.html">
       </div>
     
   </div>
@@ -667,7 +707,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、模式定义"><span class="nav-number">1.</span> <span class="nav-text">一、模式定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、模式结构"><span class="nav-number">2.</span> <span class="nav-text">二、模式结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、模式动机"><span class="nav-number">3.</span> <span class="nav-text">三、模式动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、实例分析"><span class="nav-number">4.</span> <span class="nav-text">四、实例分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#五、模式优点"><span class="nav-number">5.</span> <span class="nav-text">五、模式优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#六、模式缺点"><span class="nav-number">6.</span> <span class="nav-text">六、模式缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#七、适用场景"><span class="nav-number">7.</span> <span class="nav-text">七、适用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、简单工厂模式在JDK中的应用"><span class="nav-number">8.</span> <span class="nav-text">八、简单工厂模式在JDK中的应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#八、参考"><span class="nav-number">9.</span> <span class="nav-text">八、参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub团队合作"><span class="nav-number">1.</span> <span class="nav-text">GitHub团队合作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git基础"><span class="nav-number">2.</span> <span class="nav-text">Git基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#add-commit"><span class="nav-number">2.1.</span> <span class="nav-text">add,commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重置解密"><span class="nav-number">2.5.</span> <span class="nav-text">重置解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签管理"><span class="nav-number">2.6.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略文件"><span class="nav-number">2.7.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git分支"><span class="nav-number">2.8.</span> <span class="nav-text">git分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
             
           </div>
         </section>
