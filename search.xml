@@ -4,9 +4,89 @@
   
     
     <entry>
+      <title><![CDATA[2017-3-15记]]></title>
+      <url>http://liuhang.net.cn/2017-3-15%E8%AE%B0.html</url>
+      <content type="html"><![CDATA[<h1 id="今日待总结："><a href="#今日待总结：" class="headerlink" title="今日待总结："></a>今日待总结：</h1><ol>
+<li>在线编程 5；</li>
+<li>java基础练习题 30；</li>
+</ol>
+<h1 id="Java基础增强总结"><a href="#Java基础增强总结" class="headerlink" title="Java基础增强总结"></a>Java基础增强总结</h1><ol>
+<li>泛型</li>
+<li>集合框架  （包含常见面试题，问题套路）</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-集合框架]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-代理]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-序列化和反序列化]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-注解]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3622275.html" target="_blank" rel="external">Java注解总结-孤傲苍狼</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-反射]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%8F%8D%E5%B0%84.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-泛型]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%9B%E5%9E%8B.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3629723.html" target="_blank" rel="external">泛型总结-孤傲苍狼</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[我的各种面试&&笔试记录]]></title>
       <url>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E8%AE%B0%E5%BD%95.html</url>
-      <content type="html"><![CDATA[<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1>]]></content>
+      <content type="html"><![CDATA[<h1 id="时间节点记录"><a href="#时间节点记录" class="headerlink" title="时间节点记录"></a>时间节点记录</h1><ol>
+<li>美团点评<ul>
+<li>笔试： 2017年3月21日 在线笔试</li>
+</ul>
+</li>
+<li>网易<ul>
+<li>笔试：2017年3月25日 在线笔试</li>
+</ul>
+</li>
+<li>腾讯<ul>
+<li>笔试：2017年4月3日 19:00-21:00 技术类在线笔试</li>
+</ul>
+</li>
+<li><p>京东</p>
+<ul>
+<li>笔试：2017年4月7日 在线笔试</li>
+</ul>
+</li>
+<li><p>今日头条</p>
+<ul>
+<li>笔试: 时间未定</li>
+</ul>
+</li>
+</ol>
+<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1>]]></content>
     </entry>
     
     <entry>
@@ -26,6 +106,8 @@
       <content type="html"><![CDATA[<h1 id="什么是多线程"><a href="#什么是多线程" class="headerlink" title="什么是多线程"></a>什么是多线程</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://www.cnblogs.com/xdp-gacl/p/3633936.html" target="_blank" rel="external">多线程总结一-孤傲苍狼</a></li>
 <li><a href="http://www.cnblogs.com/xdp-gacl/p/3634382.html" target="_blank" rel="external">多线程总结二-孤傲苍狼</a></li>
+<li><a href="http://blog.csdn.net/jiyiqinlovexx/article/details/50989328" target="_blank" rel="external">volatile理解-此博客推荐！</a></li>
+<li><a href="">我的练习代码|GitHub</a></li>
 </ol>
 ]]></content>
     </entry>
