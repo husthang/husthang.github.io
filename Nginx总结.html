@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://liuhang.net.cn/Nginx总结.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="Nginx学习及相关配置总结">
-<meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
+<meta property="og:updated_time" content="2017-03-19T12:12:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Nginx总结">
 <meta name="twitter:description" content="Nginx学习及相关配置总结">
@@ -418,7 +418,7 @@
 </ul>
 <h2 id="Mac下Nginx安装配置相关问题"><a href="#Mac下Nginx安装配置相关问题" class="headerlink" title="Mac下Nginx安装配置相关问题"></a>Mac下Nginx安装配置相关问题</h2><ul>
 <li><p>mac下直接用homebrew安装，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
 </li>
 <li><p>跟Linux系统有些不同，在Mac下面Nginx默认监听了8080端口号,若要<strong>改到80端口</strong>（http协议默认端口），输入以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 下面的1.8.0请根据最新安装版本号对应修改，给nginx足够权限</div><div class="line">sudo chown root:wheel /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line">sudo chmod u+s /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line"></div><div class="line"># 用vi编辑器打开nginx配置文件，找到server字段的listen字段并将其值修改为80</div><div class="line">vi /usr/local/etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
@@ -580,7 +580,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-count">34</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

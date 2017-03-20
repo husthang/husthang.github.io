@@ -8,8 +8,123 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 17 Mar 2017 08:53:48 GMT</pubDate>
+    <pubDate>Sun, 19 Mar 2017 12:03:31 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>设计模式-概述</title>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:57:11 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;设计模式的分类&quot;&gt;&lt;a href=&quot;#设计模式的分类&quot; class=&quot;headerlink&quot; title=&quot;设计模式的分类&quot;&gt;&lt;/a&gt;设计模式的分类&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;设计模式可以分为三大类，分别是&lt;strong&gt;创建型设计模式&lt;/strong&gt;、&lt;str
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="设计模式的分类"><a href="#设计模式的分类" class="headerlink" title="设计模式的分类"></a>设计模式的分类</h1><ul>
+<li>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</li>
+</ul>
+<h2 id="创建型设计模式"><a href="#创建型设计模式" class="headerlink" title="创建型设计模式"></a>创建型设计模式</h2><ul>
+<li>单例模式(Singleton) </li>
+<li>构建模式(Builder) </li>
+<li>原型模式(Prototype) </li>
+<li>抽象工厂模式(Abstract Factory) </li>
+<li>工厂方法模式(Factory Method) </li>
+</ul>
+<h2 id="行为设计模式"><a href="#行为设计模式" class="headerlink" title="行为设计模式"></a>行为设计模式</h2><ul>
+<li>策略模式(Strategy) </li>
+<li>状态模式(State) </li>
+<li>责任链模式(Chain of Responsibility) </li>
+<li>解释器模式(Interpreter) </li>
+<li>命令模式(Command) </li>
+<li>观察者模式(Observer) </li>
+<li>备忘录模式(Memento) </li>
+<li>迭代器模式(Iterator) </li>
+<li>模板方法模式(Template Method) </li>
+<li>访问者模式(Visitor) </li>
+<li>中介者模式(Mediator) </li>
+</ul>
+<h2 id="结构型设计模式"><a href="#结构型设计模式" class="headerlink" title="结构型设计模式"></a>结构型设计模式</h2><ul>
+<li>装饰者模式(Decorator) </li>
+<li>代理模式(Proxy) </li>
+<li>组合模式(Composite) </li>
+<li>桥连接模式(Bridge) </li>
+<li>适配器模式(Adapter) </li>
+<li>蝇量模式(Flyweight) </li>
+<li>外观模式(Facade) </li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础算法-动态规划</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:39:33 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础算法-排序</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:38:18 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/media/14899260569003.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="/media/14899260569003.jpg" alt=""></p>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础算法-查找</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:38:06 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础数据结构-栈和队列</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:37:02 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础数据结构-链表</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html</guid>
+      <pubDate>Sun, 19 Mar 2017 11:36:24 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>设计模式(二) 单例模式</title>
@@ -23,7 +138,7 @@
       </description>
       
       <content:encoded><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><ul>
-<li>单例模式(Singleton Pattern)：单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它<br>提供全局访问的方法。</li>
+<li>单例模式(Singleton Pattern)：单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。</li>
 </ul>
 <h1 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h1><ul>
 <li>类加载时就创建对象<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 饿汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EagerSingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖默认的构造方法，将默认的构造方法声明为私有的，防止其他类直接创建对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EagerSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 直接创建一个本类的对象</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> EagerSingleton eagerSingleton = <span class="keyword">new</span> EagerSingleton();</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 提供一个工厂方法来返回本类的唯一对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> EagerSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> eagerSingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -35,7 +150,9 @@
 </ul>
 <h1 id="单例模式使用场景"><a href="#单例模式使用场景" class="headerlink" title="单例模式使用场景"></a>单例模式使用场景</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
 <li>系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器，或者需要考虑资源消耗太大而只允许创建一个对象。</li>
-<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例<h2 id="单例模式优点"><a href="#单例模式优点" class="headerlink" title="单例模式优点"></a>单例模式优点</h2></li>
+<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例</li>
+</ul>
+<h2 id="单例模式优点"><a href="#单例模式优点" class="headerlink" title="单例模式优点"></a>单例模式优点</h2><ul>
 <li>提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它，并为设计及开发团队提<br>供了共享的概念。</li>
 <li>由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象，单例模式无疑可以提高系统的性能。</li>
 </ul>
@@ -55,7 +172,8 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>]]></content:encoded>
+      <content:encoded><![CDATA[<h1 id="四中权限修饰符"><a href="#四中权限修饰符" class="headerlink" title="四中权限修饰符"></a>四中权限修饰符</h1><p><img src="media/14899742700152.jpg" alt=""></p>
+<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
@@ -87,12 +205,13 @@
       <pubDate>Mon, 13 Mar 2017 16:20:01 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://kakajw.iteye.com/blog/935226&quot; target=&quot;_blank&quot; re
+        &lt;h1 id=&quot;集合框架&quot;&gt;&lt;a href=&quot;#集合框架&quot; class=&quot;headerlink&quot; title=&quot;集合框架&quot;&gt;&lt;/a&gt;集合框架&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;/images/集合体系图.png&quot; alt=&quot;集合体系图&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;参考&quot;&gt;&lt;a h
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+      <content:encoded><![CDATA[<h1 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h1><p><img src="/images/集合体系图.png" alt="集合体系图"></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://kakajw.iteye.com/blog/935226" target="_blank" rel="external">深入解析Java对象的hashCode和hashCode在HashMap的底层数据结构的应用</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%93%88%E5%B8%8C%E8%A1%A8" target="_blank" rel="external">哈希表</a></li>
 <li><a href="http://blog.csdn.net/zcg_java/article/details/43232251" target="_blank" rel="external">List,Set,Map接口</a></li>
@@ -191,7 +310,7 @@
       
       <content:encoded><![CDATA[<h1 id="时间节点记录"><a href="#时间节点记录" class="headerlink" title="时间节点记录"></a>时间节点记录</h1><ol>
 <li>美团点评<ul>
-<li>笔试： 2017年3月21日 在线笔试</li>
+<li>笔试： 2017年3月21日19:00 在线笔试</li>
 </ul>
 </li>
 <li>网易<ul>
@@ -212,6 +331,27 @@
 <li>笔试: 时间未定</li>
 </ul>
 </li>
+</ol>
+<h1 id="掌握的东西梳理"><a href="#掌握的东西梳理" class="headerlink" title="掌握的东西梳理"></a>掌握的东西梳理</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol>
+<li>链表</li>
+<li>树</li>
+<li>栈</li>
+<li>队列</li>
+<li>哈希表</li>
+</ol>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ol>
+<li>查找<ul>
+<li>二分查找</li>
+</ul>
+</li>
+<li>排序<ul>
+<li>归并排序</li>
+<li>快速排序</li>
+<li>各种排序的效率</li>
+</ul>
+</li>
+<li>动态规划</li>
+<li>贪婪算法</li>
 </ol>
 <h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1>]]></content:encoded>
       
@@ -256,7 +396,7 @@
 <li><a href="http://blog.csdn.net/jiyiqinlovexx/article/details/50989328" target="_blank" rel="external">volatile理解-此博客推荐！</a></li>
 <li><a href="http://blog.psjay.com/posts/summary-of-java-concurrency-two-synchronized-and-atomicity/" target="_blank" rel="external">Java并发总结：同步与原子性-推荐</a></li>
 <li><a href="http://www.kancloud.cn/seaboat/java-concurrent/117870" target="_blank" rel="external">CAS算法-乐观锁</a></li>
-<li><a href="">我的练习代码|GitHub</a></li>
+<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/thread" target="_blank" rel="external">我的练习代码|GitHub</a></li>
 </ol>
 ]]></content:encoded>
       
@@ -878,7 +1018,7 @@ return result;
 </ul>
 <h2 id="Mac下Nginx安装配置相关问题"><a href="#Mac下Nginx安装配置相关问题" class="headerlink" title="Mac下Nginx安装配置相关问题"></a>Mac下Nginx安装配置相关问题</h2><ul>
 <li><p>mac下直接用homebrew安装，命令如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew update &amp;&amp; brew install nginx</div></pre></td></tr></table></figure>
 </li>
 <li><p>跟Linux系统有些不同，在Mac下面Nginx默认监听了8080端口号,若要<strong>改到80端口</strong>（http协议默认端口），输入以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># 下面的1.8.0请根据最新安装版本号对应修改，给nginx足够权限</div><div class="line">sudo chown root:wheel /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line">sudo chmod u+s /usr/local/Cellar/nginx/1.8.0/bin/nginx</div><div class="line"></div><div class="line"># 用vi编辑器打开nginx配置文件，找到server字段的listen字段并将其值修改为80</div><div class="line">vi /usr/local/etc/nginx/nginx.conf</div></pre></td></tr></table></figure>
