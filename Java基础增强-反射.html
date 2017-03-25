@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="刘航, NexT" />
+  <meta name="keywords" content="反射," />
 
 
 
@@ -86,13 +86,16 @@
 
 
 
+<meta name="description" content="Java基础增强-反射">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java基础增强-反射">
 <meta property="og:url" content="http://liuhang.net.cn/Java基础增强-反射.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-03-14T16:51:17.000Z">
+<meta property="og:description" content="Java基础增强-反射">
+<meta property="og:updated_time" content="2017-03-24T14:36:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础增强-反射">
+<meta name="twitter:description" content="Java基础增强-反射">
 
 
 
@@ -405,7 +408,44 @@
       
 
       
-        
+        <h1 id="Class类的使用"><a href="#Class类的使用" class="headerlink" title="Class类的使用"></a>Class类的使用</h1><ul>
+<li><strong>Java中万事万物皆对象，我们写的每一个类，也是对象，它是java.lang.Class类的实例对象</strong></li>
+<li>类是Class类的实例对象，这个实例对象中，存了类的各种信息，<strong>类类型</strong>；</li>
+<li>基本的数据类型，void关键字，也存在类类型</li>
+<li>三种方法获取类的类类型（class type）<ul>
+<li><code>Class c1=Foo.class</code> <code>int.class</code>也可，每个类都有隐含的静态变量class</li>
+<li><code>Class c2=foo.getClass()</code> 已知类的对象（实例）</li>
+<li><code>Class c3=Class.forName(&quot;类的全称&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.reflection;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/23.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Foo foo1 = <span class="keyword">new</span> Foo(); <span class="comment">//foo1是Foo类的实例对象</span></div><div class="line">        <span class="comment">//Foo这个类，也是一个实例对象，它是Class类的实例对象，"类类型"，这个Class类的实例对象中，保存了这个类的各种信息</span></div><div class="line">        <span class="comment">//获取Class类实例对象的三种方式</span></div><div class="line">        <span class="comment">//知道类名，每个类都有隐含的静态变量class</span></div><div class="line">        Class c1 = Foo.class;</div><div class="line">        <span class="comment">//知道类的实例对象</span></div><div class="line">        Class c2 = foo1.getClass();</div><div class="line">        System.out.println(c1 == c2);<span class="comment">//输出 true， 每个类，只可能是Class类的一个实例对象；</span></div><div class="line">        <span class="comment">//知道类的全称</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            Class c3 = Class.forName(<span class="string">"com.liuhang.reflection.Foo"</span>);</div><div class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//可以类的类类型，来创建该类实例对象</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            Foo foo2 = (Foo) c1.newInstance();</div><div class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="动态加载类"><a href="#动态加载类" class="headerlink" title="动态加载类"></a>动态加载类</h1><ul>
+<li><code>Class.forName(&quot;类的全称&quot;)</code>，还代表动态加载类，运行时加载</li>
+<li>编译时刻加载类-静态加载类，运行时刻加载类-动态加载类</li>
+<li><code>new</code>对象，是静态加载，在编译时刻就要加载所有可能使用到的类;</li>
+</ul>
+<h1 id="获取方法信息"><a href="#获取方法信息" class="headerlink" title="获取方法信息"></a>获取方法信息</h1><ul>
+<li><code>java.lang.reflect.Method</code></li>
+<li><code>getMethods(),getDecleardMethods()</code></li>
+<li>method.getReturnType,getParameterTypes`</li>
+</ul>
+<h1 id="获取成员变量、构造函数信息"><a href="#获取成员变量、构造函数信息" class="headerlink" title="获取成员变量、构造函数信息"></a>获取成员变量、构造函数信息</h1><ul>
+<li><code>java.lang.reflect.Field</code>,Field类封装了关于类成员变量的操作</li>
+<li><code>java.lang.reflect.Constructor;</code>Constructor类封装了冠以类的构造函的操作</li>
+</ul>
+<h1 id="方法反射的基本操作"><a href="#方法反射的基本操作" class="headerlink" title="方法反射的基本操作"></a>方法反射的基本操作</h1><ul>
+<li><code>method.invoke</code></li>
+</ul>
+<h1 id="通过反射了解集合泛型的本质"><a href="#通过反射了解集合泛型的本质" class="headerlink" title="通过反射了解集合泛型的本质"></a>通过反射了解集合泛型的本质</h1><ul>
+<li>编译之后，集合是去泛型化得，Java中集合的泛型，是防止错误输入的，只在编译时有效</li>
+</ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.reflection;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Field;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Method;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/24.</div><div class="line"> * 获取类的方法信息</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo3</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Print class message.</div><div class="line">     * 打印类的成员信息</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> object the object该类的对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printClassMessage</span><span class="params">(Object object)</span> </span>&#123;</div><div class="line">        <span class="comment">//要获取类的信息，首先要获取类的类类型class type</span></div><div class="line">        Class c1 = object.getClass();<span class="comment">//传递的是哪个子类的d对象，c1就是该子类的类类型</span></div><div class="line">        <span class="comment">//获取类的全称</span></div><div class="line">        System.out.println(<span class="string">"类的名称"</span> + c1.getName());</div><div class="line"></div><div class="line">        <span class="comment">//一个成员方法，就是一个java.lang.reflect.Method对象,getMethods获取的是所有的public方法，包括继承而来的</span></div><div class="line">        <span class="comment">//getDeclaredMethods获取所有该类自己声明的方法，不问访问权限</span></div><div class="line">        System.out.println(<span class="string">"输出类的方法信息methods:"</span>);</div><div class="line">        Method[] methods = c1.getMethods();</div><div class="line">        c1.getDeclaredMethods();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; methods.length; i++) &#123;</div><div class="line">            <span class="comment">//得到方法返回值类型的类类型</span></div><div class="line">            Class returnType = methods[i].getReturnType();</div><div class="line">            System.out.print(returnType.getName() + <span class="string">" "</span>);</div><div class="line">            <span class="comment">//得到方法的名称</span></div><div class="line">            System.out.print(methods[i].getName() + <span class="string">"("</span>);</div><div class="line">            <span class="comment">//获取参数类型,得到参数列表的类型的类类型</span></div><div class="line">            Class[] paramTypes = methods[i].getParameterTypes();</div><div class="line">            <span class="keyword">for</span> (Class c : paramTypes) &#123;</div><div class="line">                System.out.print(c.getName() + <span class="string">","</span>);</div><div class="line">            &#125;</div><div class="line">            System.out.println(<span class="string">")"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//getFields方法，获取所有的public成员变量信息</span></div><div class="line">        System.out.println(<span class="string">"输出类的成员变量信息fields:"</span>);</div><div class="line">        Field[] fields = c1.getFields();</div><div class="line">        c1.getDeclaredFields();</div><div class="line">        <span class="keyword">for</span> (Field field : fields) &#123;</div><div class="line">            Class fieldType = field.getType();</div><div class="line">            <span class="comment">//得到成员变量的名称</span></div><div class="line">            String fieldName = field.getName();</div><div class="line">            <span class="comment">//得到成员变量的类型名称</span></div><div class="line">            String typeName = fieldType.getName();</div><div class="line">            System.out.println(typeName + <span class="string">" "</span> + fieldName);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//getConstructors方法，所有共有</span></div><div class="line">        System.out.println(<span class="string">"输出类的构造函数信息constructor:"</span>);</div><div class="line">        Constructor[] constructors = c1.getConstructors();</div><div class="line">        <span class="keyword">for</span> (Constructor constructor : constructors) &#123;</div><div class="line">            System.out.print(constructor.getName() + <span class="string">"（"</span>);</div><div class="line">            Class[] paraTypes = constructor.getParameterTypes();</div><div class="line">            <span class="keyword">for</span> (Class c : paraTypes) &#123;</div><div class="line">                System.out.print(c.getSimpleName() + <span class="string">","</span>);</div><div class="line">            &#125;</div><div class="line">            System.out.println(<span class="string">")"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        String s = "hello";</span></div><div class="line"><span class="comment">//        printClassMessage(s);</span></div><div class="line">        Integer n1 = <span class="number">1</span>;</div><div class="line">        printClassMessage(n1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/reflection" target="_blank" rel="external">练习代码</a></li>
+<li><a href="http://www.imooc.com/learn/199" target="_blank" rel="external">慕课网-反射</a></li>
+</ul>
+
       
     </div>
 
@@ -444,6 +484,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/反射/" rel="tag">#反射</a>
+          
+        </div>
       
 
       
@@ -549,7 +595,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -614,7 +660,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Class类的使用"><span class="nav-number">1.</span> <span class="nav-text">Class类的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#动态加载类"><span class="nav-number">2.</span> <span class="nav-text">动态加载类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取方法信息"><span class="nav-number">3.</span> <span class="nav-text">获取方法信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取成员变量、构造函数信息"><span class="nav-number">4.</span> <span class="nav-text">获取成员变量、构造函数信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法反射的基本操作"><span class="nav-number">5.</span> <span class="nav-text">方法反射的基本操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#通过反射了解集合泛型的本质"><span class="nav-number">6.</span> <span class="nav-text">通过反射了解集合泛型的本质</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
