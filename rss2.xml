@@ -8,8 +8,29 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 19 Mar 2017 12:03:31 GMT</pubDate>
+    <pubDate>Mon, 27 Mar 2017 06:54:23 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>读书笔记-简单的逻辑学</title>
+      <link>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6.html</link>
+      <guid>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6.html</guid>
+      <pubDate>Mon, 27 Mar 2017 06:31:09 GMT</pubDate>
+      <description>
+      
+        简单的逻辑学
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Chapter-1-学习逻辑学的思想准备"><a href="#Chapter-1-学习逻辑学的思想准备" class="headerlink" title="Chapter 1 学习逻辑学的思想准备"></a>Chapter 1 学习逻辑学的思想准备</h1><ol>
+<li>语言敏感度及运用叫</li>
+<li>对现实的正确认识</li>
+<li>主观认识与客观存在的相互作用方式</li>
+</ol>
+<h2 id="全神贯注"><a href="#全神贯注" class="headerlink" title="全神贯注"></a>全神贯注</h2><h2 id="确认事实"><a href="#确认事实" class="headerlink" title="确认事实"></a>确认事实</h2>]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>设计模式-概述</title>
