@@ -10,6 +10,10 @@
 <h1 id="节点流和处理流"><a href="#节点流和处理流" class="headerlink" title="节点流和处理流"></a>节点流和处理流</h1><p><img src="../media/节点流和处理流.png" alt=""></p>
 <h2 id="节点流类型"><a href="#节点流类型" class="headerlink" title="节点流类型"></a>节点流类型</h2><p><img src="../media/节点流类型.png" alt=""></p>
 <h2 id="处理流类型"><a href="#处理流类型" class="headerlink" title="处理流类型"></a>处理流类型</h2><p><img src="../media/处理流类型.png" alt=""></p>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.cnblogs.com/xdp-gacl/p/3634409.html" target="_blank" rel="external">java-流</a></li>
+<li><a href="http://tool.oschina.net/apidocs/apidoc?api=jdk-zh" target="_blank" rel="external">java-api</a></li>
+</ol>
 ]]></content>
     </entry>
     
