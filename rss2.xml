@@ -1522,6 +1522,7 @@ return result;
 <li>SwitchHosts: <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="external">快速切换hosts文件工具</a>，强烈推荐，<strong>方便翻墙，web开发</strong>，<a href="https://laod.cn/hosts/2017-google-hosts.html" target="_blank" rel="external">hosts更新网站</a></li>
 <li>PDF阅读编辑：<a href="http://skim-app.sourceforge.net/" target="_blank" rel="external">Skim</a></li>
 <li>文本编辑器：<a href="https://atom.io/" target="_blank" rel="external">Atom</a>，markdown编辑神器，GitHub官方推荐</li>
+<li>Synergy 实现Windows与Mac OSX之间共享一套键鼠: <a href="http://www.jianshu.com/p/c4b538d2152e" target="_blank" rel="external">Synergy</a></li>
 </ol>
 ]]></content:encoded>
       
@@ -1609,7 +1610,7 @@ return result;
       </description>
       
       <content:encoded><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
-<li><p>文件属性和权限<br> <img src="/media/14886281048094.gif" alt=""><img src="/media/14886281421383.gif" alt=""></p>
+<li><p>文件属性和权限<br> <img src="../media/14886281048094.gif" alt=""><img src="../media/14886281421383.gif" alt=""></p>
 </li>
 <li><p>文件属性与权限的更改</p>
 <ul>
@@ -1637,7 +1638,7 @@ return result;
 </ul>
 </li>
 <li>查看文件与目录<ul>
-<li>ls <ul>
+<li>ls<ul>
 <li><code>-a</code>：常用，列出全部，包括隐藏</li>
 <li><code>-l</code>：常用，列出详细信息， <code>ll</code>缩写</li>
 </ul>
@@ -1710,11 +1711,9 @@ return result;
 <li><code>find . -type f | xargs dos2unix</code>，将当期目录下所有文件转化为unix类型;</li>
 </ul>
 </li>
-<li><p>条件判断： if..then </p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then </div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
+<li><p>条件判断： if..then</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">if [条件判断试]</div><div class="line">then</div><div class="line">fi #反过来写表示结束</div></pre></td></tr></table></figure>
 </li>
-</ol>
-<ol>
 <li><p>默认变量（<code>$0</code>,<code>$1</code>…）</p>
  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/path/scriptname opt1 opt2 opt3</div><div class="line">     $0          $1</div></pre></td></tr></table></figure>
 <ul>
