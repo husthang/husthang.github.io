@@ -8,13 +8,140 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 09 Apr 2017 14:25:40 GMT</pubDate>
+    <pubDate>Wed, 12 Apr 2017 02:01:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
+      <title>个人计划至四月底</title>
+      <link>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html</link>
+      <guid>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html</guid>
+      <pubDate>Tue, 11 Apr 2017 01:40:15 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;每日日程流程&quot;&gt;&lt;a href=&quot;#每日日程流程&quot; class=&quot;headerlink&quot; title=&quot;每日日程流程&quot;&gt;&lt;/a&gt;每日日程流程&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;刷面试题5x3;(3)&lt;/li&gt;
+&lt;li&gt;刷剑指offer,4题(2.5小时)&lt;/li&gt;
+&lt;li
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="每日日程流程"><a href="#每日日程流程" class="headerlink" title="每日日程流程"></a>每日日程流程</h1><ol>
+<li>刷面试题5x3;(3)</li>
+<li>刷剑指offer,4题(2.5小时)</li>
+<li>Java面试知识点总结: 5点(30分钟)</li>
+<li>下午看书: effective java/Spring/jvm</li>
+<li>晚上总结成文档</li>
+</ol>
+<h1 id="Spring-IOC-AOP-MVC总结"><a href="#Spring-IOC-AOP-MVC总结" class="headerlink" title="Spring IOC/AOP/MVC总结"></a>Spring IOC/AOP/MVC总结</h1><ol>
+<li>Spring AOP深入总结–4.15号之前完成,四天时间</li>
+<li>Spring MVC深入总结–4.22号之前完成,一周时间</li>
+<li>Spring ICO深入总结–4.29号之前完成,一周时间</li>
+<li>总结其中用到的各种设计模式</li>
+</ol>
+<h1 id="剑指offer总结"><a href="#剑指offer总结" class="headerlink" title="剑指offer总结"></a>剑指offer总结</h1><ol>
+<li>每日刷4题–4.22号之前将66个题刷完</li>
+<li>剑指offer刷题总结,分类整理总结–4.25号完成,三天时间</li>
+</ol>
+<h1 id="Effective-Java-1-4章-第10章"><a href="#Effective-Java-1-4章-第10章" class="headerlink" title="Effective Java: 1-4章,第10章"></a>Effective Java: 1-4章,第10章</h1><ol>
+<li>涉及到的各种设计模式总结<ul>
+<li>构建者模式,一天(已完成)</li>
+<li>装饰者模式,一天(已完成)</li>
+<li>适配器模式,一天(已完成)</li>
+<li>FlyWeight模式,一天</li>
+<li>观察者模式(书p234),一天</li>
+</ul>
+</li>
+<li>总结Java对象通用方法:equals, hashCode, toString, clone ,finalize</li>
+</ol>
+<h1 id="Java并发总结-深入理解jvm第五部分"><a href="#Java并发总结-深入理解jvm第五部分" class="headerlink" title="Java并发总结(深入理解jvm第五部分)"></a>Java并发总结(深入理解jvm第五部分)</h1><ol>
+<li>java内存模型</li>
+<li>java并发工具<ul>
+<li>Executor framework</li>
+<li>Concurrent Collection</li>
+<li>Synchronizer</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java垃圾回收总结"><a href="#Java垃圾回收总结" class="headerlink" title="Java垃圾回收总结"></a>Java垃圾回收总结</h1><ol>
+<li>finalize与 System.gc();</li>
+<li>Java内存管理机制</li>
+<li>垃圾收集器与内存分配策略</li>
+</ol>
+<h1 id="面试题练习"><a href="#面试题练习" class="headerlink" title="面试题练习"></a>面试题练习</h1><ol>
+<li>每天练习15道题目: 5x3;</li>
+<li>Java面试常考知识点总结: 每日总结10点</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>设计模式6-装饰者模式</title>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F6-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F6-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F.html</guid>
+      <pubDate>Mon, 10 Apr 2017 06:43:15 GMT</pubDate>
+      <description>
+      
+        &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。装饰模式是
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。装饰模式是一种用于替代继承的技术,使用对象之间的关联关系取代类之间的继承关系。在装饰模式中引入了装饰类，在装饰类中既可以调用待装饰的原有类的方法，还可以增加新的方法，以扩充原有类的功能。</li>
+<li>适用场景:装饰原有对象、在不改变原有对象的情况下扩展增强新功能/新特征.。当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式。</li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><ol>
+<li>看需要被增强的对象继承了哪些类或者接口,编写一个类去继承或者实现这些接口或者父类</li>
+<li>在这个编写的类中,增加一个变量,变量类型为要增强的对象的类型;然后定义构造函数,构造这个变量;</li>
+<li>这个类去实现接口或者父类时,调用2中定义的变量的相应方法(从而在装饰类中保留原有类的方法)</li>
+<li>重写需要增强的方法(从而增强要装饰的方法,增强这个方法的功能)</li>
+</ol>
+<h2 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h2><ul>
+<li>装饰模式中的四种角色<ul>
+<li>①Component（抽象构件）：它是具体构件和抽象装饰类的共同父类，声明了在具体构件中实现的业务方法。</li>
+<li>②ConcreteComponent（具体构件）：它是抽象构件类的子类，用于定义具体的构件对象（被装饰者），实现了在抽象构件中声明的方法，装饰器可以给它增加额外的职责（方法）。</li>
+<li>③Decorator（抽象装饰类）：它也是抽象构件类的子类，用于给具体构件增加职责，但是具体职责在其子类中实现。它维护一个指向抽象构件对象的引用，通过该引用可以调用装饰之前构件对象的方法，并通过其子类扩展该方法，以达到装饰的目的。</li>
+<li>④ConcreteDecorator（具体装饰类）：它是抽象装饰类的子类，负责向构件添加新的职责。每一个具体装饰类都定义了一些新的行为，它可以调用在抽象装饰类中定义的方法，并可以增加新的方法用以扩充对象的行为。</li>
+</ul>
+</li>
+<li>抽象构件 Component.Java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 角色：抽象构件 Component.Java</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line">```  </div><div class="line">- 具体构件类 ConcreteComponent.java</div><div class="line"></div><div class="line">```java</div><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 具体构建类,继承抽象类Component</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteComponent</span> <span class="keyword">extends</span> <span class="title">Component</span></span>&#123;</div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的构件类,被装饰(增强)的"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>抽象装饰类 Decorator.java</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> * 作用:引入抽象构件类， 给具体构件类增加职责，但是具体职责在其子类中实现</div><div class="line"></div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Decorator</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Component component;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Decorator</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">this</span>.component = component;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="comment">//调用原有业务方法</span></div><div class="line">        component.operation();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>具体装饰类A</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorA</span> <span class="keyword">extends</span> <span class="title">Decorator</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteDecoratorA</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(component);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.operation();</div><div class="line">        addedBehavior();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">addedBehavior</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的装饰类A，我可以增强原有对象方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>具体装饰类B</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ConcreteDecoratorB</span> <span class="keyword">extends</span> <span class="title">Decorator</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">ConcreteDecoratorB</span><span class="params">(Component component)</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>(component);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">operation</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">super</span>.operation();</div><div class="line">        addedAnotherBehavior();</div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">addedAnotherBehavior</span><span class="params">()</span></span>&#123;</div><div class="line">        System.out.println(<span class="string">"我是具体的装饰类B，我也可以增强原有对象方法"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试类</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> decorator;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/12/15.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Component component, decoratorA;</div><div class="line"></div><div class="line">        component = <span class="keyword">new</span> ConcreteComponent();</div><div class="line">        decoratorA = <span class="keyword">new</span> ConcreteDecoratorA(component);<span class="comment">//对原有具体构件component进行装饰</span></div><div class="line"></div><div class="line">        component.operation();</div><div class="line">        System.out.println(<span class="string">"\n装饰一次后:"</span>);</div><div class="line">        decoratorA.operation();</div><div class="line"></div><div class="line">        System.out.println(<span class="string">"\n二次装饰"</span>);</div><div class="line">        Component decoratorB;</div><div class="line">        decoratorB = <span class="keyword">new</span> ConcreteDecoratorB(decoratorA);<span class="comment">// 如果需要对原有构件对象装饰后的decoratorA对象上进行再次装饰</span></div><div class="line">        decoratorB.operation();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ul>
+<li>测试结果</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line"></div><div class="line">装饰一次后:</div><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line">我是具体的装饰类A，我可以增强原有对象方法</div><div class="line"></div><div class="line">二次装饰</div><div class="line">我是具体的构件类,被装饰(增强)的</div><div class="line">我是具体的装饰类A，我可以增强原有对象方法</div><div class="line">我是具体的装饰类B，我可以增强原有对象方法</div><div class="line"></div><div class="line">Process finished with exit code 0</div></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="http://blog.csdn.net/janice0529/article/details/44160091" target="_blank" rel="external">Decorator参考</a></li>
+<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143730" target="_blank" rel="external">设计模式参考</a></li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F6-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
+    </item>
+    
+    <item>
       <title>设计模式-构建者模式</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</guid>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</guid>
       <pubDate>Sun, 09 Apr 2017 14:17:01 GMT</pubDate>
       <description>
       
@@ -22,17 +149,31 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="构建者模式"><a href="#构建者模式" class="headerlink" title="构建者模式"></a>构建者模式</h1><h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NutritionFacts</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//final 修饰必须初始化,声明时或者构造函数或者非静态块中</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="comment">//Required parameter</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line"></div><div class="line">        <span class="comment">// Optional parameters: initialized to default values</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setCalories</span><span class="params">(<span class="keyword">int</span> calories)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.calories = calories;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setFat</span><span class="params">(<span class="keyword">int</span> fat)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.fat = fat;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setCarbohydrate</span><span class="params">(<span class="keyword">int</span> carbohydrate)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.carbohydrate = carbohydrate;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setSodium</span><span class="params">(<span class="keyword">int</span> sodium)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.sodium = sodium;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> NutritionFacts <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NutritionFacts(<span class="keyword">this</span>);<span class="comment">//静态内部类,访问私有构造方法</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//私有构造方法</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NutritionFacts</span><span class="params">(Builder builder)</span> </span>&#123;</div><div class="line">        servingSize = builder.servingSize;</div><div class="line">        servings = builder.servings;</div><div class="line">        calories = builder.calories;</div><div class="line">        fat = builder.fat;</div><div class="line">        sodium = builder.sodium;</div><div class="line">        carbohydrate = builder.carbohydrate;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+      <content:encoded><![CDATA[<h1 id="构建者模式"><a href="#构建者模式" class="headerlink" title="构建者模式"></a>构建者模式</h1><h2 id="什么是Builder-model"><a href="#什么是Builder-model" class="headerlink" title="什么是Builder model"></a>什么是Builder model</h2><ul>
+<li><p>解决痛点: 一个类中包含几个必须参数,多个可选参数,使用重叠构造器(构造器重载),当有许多参数时,构造器很多,代码难以阅读; 可使用JavaBean模式,用set方法对每个参数进行赋值,但可能有线程安全问题; 用builder model,可保证像重叠构造器的安全性和JavaBeany模式一样的可读性.</p>
+</li>
+<li><p>使用场景: 如果类的构造器或者静态工厂中具有多个参数,设计这种类时,可选择Builder模式,特别是当大多数参数是可选的时候,与使用传统的重叠构造器模式相比,使用Builder模式的客户端代码更容易阅读和编写,构建器也比JavaBeans更安全.</p>
+</li>
+</ul>
+<h2 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h2><ul>
+<li>builder model 设计步骤<ol>
+<li>设计内部类Builder,用必要的参数构造构造器,得到builder对象</li>
+<li>在builder对象上调用各个可选参数的setter方法,设置相关可选参数</li>
+<li>调用builder对象的无参build方法生成不可变对象.(这里,原对象的构造方法传入build对象参数)</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NutritionFacts</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">//final 修饰必须初始化,声明时或者构造函数或者非静态块中</span></div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> calories;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> fat;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> sodium;</div><div class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> carbohydrate;</div><div class="line"></div><div class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Builder</span> </span>&#123;</div><div class="line">        <span class="comment">//Required parameter</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servingSize;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">final</span> <span class="keyword">int</span> servings;</div><div class="line"></div><div class="line">        <span class="comment">// Optional parameters: initialized to default values</span></div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> calories = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> fat = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> carbohydrate = <span class="number">0</span>;</div><div class="line">        <span class="keyword">private</span> <span class="keyword">int</span> sodium = <span class="number">0</span>;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> <span class="title">Builder</span><span class="params">(<span class="keyword">int</span> servingSize, <span class="keyword">int</span> servings)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.servingSize = servingSize;</div><div class="line">            <span class="keyword">this</span>.servings = servings;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setCalories</span><span class="params">(<span class="keyword">int</span> calories)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.calories = calories;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setFat</span><span class="params">(<span class="keyword">int</span> fat)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.fat = fat;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setCarbohydrate</span><span class="params">(<span class="keyword">int</span> carbohydrate)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.carbohydrate = carbohydrate;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> Builder <span class="title">setSodium</span><span class="params">(<span class="keyword">int</span> sodium)</span> </span>&#123;</div><div class="line">            <span class="keyword">this</span>.sodium = sodium;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">this</span>;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="function"><span class="keyword">public</span> NutritionFacts <span class="title">build</span><span class="params">()</span> </span>&#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> NutritionFacts(<span class="keyword">this</span>);<span class="comment">//静态内部类,访问私有构造方法</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">//私有构造方法</span></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">NutritionFacts</span><span class="params">(Builder builder)</span> </span>&#123;</div><div class="line">        servingSize = builder.servingSize;</div><div class="line">        servings = builder.servings;</div><div class="line">        calories = builder.calories;</div><div class="line">        fat = builder.fat;</div><div class="line">        sodium = builder.sodium;</div><div class="line">        carbohydrate = builder.carbohydrate;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>客户端调用<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line">       NutritionFacts nutritionFacts = <span class="keyword">new</span> NutritionFacts.Builder(<span class="number">1</span>, <span class="number">2</span>).setCarbohydrate(<span class="number">1</span>).build();</div><div class="line">   &#125;</div></pre></td></tr></table></figure></p>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
       <title>设计模式-服务提供者框架-适配器模式</title>
-      <link>http://liuhang.net.cn/%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E7%BB%93%E5%90%88JDBC%E5%88%86%E6%9E%90.html</link>
-      <guid>http://liuhang.net.cn/%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E7%BB%93%E5%90%88JDBC%E5%88%86%E6%9E%90.html</guid>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5-%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5-%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F.html</guid>
       <pubDate>Thu, 06 Apr 2017 12:15:26 GMT</pubDate>
       <description>
       
@@ -52,7 +193,6 @@
 <li>服务访问API(Service Access API):用于客户端获取相应的服务，如JDBC就是通过DriverManager的getConnection来获取具体的服务。</li>
 <li>提供者注册API(Provider Registration API)：用于<strong>加载（注册）服务提供者</strong>，使得客户端可以访问它实现的服务； 如JDBC的DriverManager，当调用class.forName加载MySQL的驱动包时，就会把MySQL的Driver注册到DriverManager中，后续调用getConnection，返回的就是MySQL实现的Connection。</li>
 </ol>
-<h2 id="简单代码示例"><a href="#简单代码示例" class="headerlink" title="简单代码示例"></a>简单代码示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Service Interface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Service</span> </span>&#123;</div><div class="line">    ...<span class="comment">//Service specific methods here;</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// Service Provider Interface : get service instance</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Provider</span> </span>&#123;</div><div class="line">    <span class="function">Service <span class="title">newService</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/4/6.</div><div class="line"> * Non instantiable class for service registration and access</div><div class="line"> * 非 可实例化的类，提供服务访问API和服务提供者注册API</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServiceManager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ServiceManager</span><span class="params">()</span> </span>&#123;<span class="comment">//私有化构造方法</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;String, Provider&gt; providers = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();<span class="comment">//线程安全map</span></div><div class="line"></div><div class="line">    <span class="comment">// Provider registration API</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerProviders</span><span class="params">(String name, Provider provider)</span> </span>&#123;</div><div class="line">        providers.put(name, provider);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Service access API</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Service <span class="title">newInstance</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        Provider provider = providers.get(name);</div><div class="line">        <span class="keyword">if</span> (provider == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No provider registered with name: "</span> + name);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> provider.newService();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><ul>
 <li>service provider framework 包含四个部分<ol>
 <li>服务接口 service interface</li>
@@ -64,6 +204,7 @@
 <li><strong>设计一个服务提供者框架,就是做一个服务接口(让别人,服务提供者,去实现),然后做一个类,来注册(加载)别人的实现,即我在客户端可以选择我要使用(加载)哪个提供者提供的服务.</strong></li>
 <li><strong>优点:</strong> 以jdbc为例,java api 提供数据库连接服务,但数据库厂商有很多家,jdk里面不能为每个厂商编写连接,java api只需要提供一个服务接口,各个数据库厂商去实现这个接口即可,客户端调用数据库连接服务时,自助选择加载哪个厂商提供的数据库连接.客户端只需要用java api提供的接口进行编程即可,如<code>java.sql.Connection</code>. <strong>“多个服务提供者实现一个服务(多个数据库厂商都实现了数据库连接服务),系统(java api)为服务提供者的客户端(即我们这些要使用数据库连接服务的人或代码)提供多个实现,并把他们从多个实现解耦出来(提供者与服务者解耦,java api不去实现不同数据库的具体连接)”</strong></li>
 </ul>
+<h2 id="简单代码示例"><a href="#简单代码示例" class="headerlink" title="简单代码示例"></a>简单代码示例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Service Interface</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Service</span> </span>&#123;</div><div class="line">    ...<span class="comment">//Service specific methods here;</span></div><div class="line">&#125;</div><div class="line"><span class="comment">// Service Provider Interface : get service instance</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Provider</span> </span>&#123;</div><div class="line">    <span class="function">Service <span class="title">newService</span><span class="params">()</span></span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/4/6.</div><div class="line"> * Non instantiable class for service registration and access</div><div class="line"> * 非 可实例化的类，提供服务访问API和服务提供者注册API</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServiceManager</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">ServiceManager</span><span class="params">()</span> </span>&#123;<span class="comment">//私有化构造方法</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Map&lt;String, Provider&gt; providers = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();<span class="comment">//线程安全map</span></div><div class="line"></div><div class="line">    <span class="comment">// Provider registration API</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">registerProviders</span><span class="params">(String name, Provider provider)</span> </span>&#123;</div><div class="line">        providers.put(name, provider);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// Service access API</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Service <span class="title">newInstance</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">        Provider provider = providers.get(name);</div><div class="line">        <span class="keyword">if</span> (provider == <span class="keyword">null</span>) &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="string">"No provider registered with name: "</span> + name);</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> provider.newService();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h2 id="服务提供者框架在JDBC中的应用分析"><a href="#服务提供者框架在JDBC中的应用分析" class="headerlink" title="服务提供者框架在JDBC中的应用分析"></a>服务提供者框架在JDBC中的应用分析</h2><ul>
 <li>使用jdbc的简单步骤(mysql为例)<ol>
 <li>加载数据库驱动<code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code><ul>
@@ -88,14 +229,27 @@
 <li><a href="http://noahsnail.com/2016/09/27/2016-9-28-%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6/" target="_blank" rel="external">服务提供者框架</a></li>
 </ol>
 <h1 id="服务提供者框架变体-适配器模式"><a href="#服务提供者框架变体-适配器模式" class="headerlink" title="服务提供者框架变体-适配器模式"></a>服务提供者框架变体-适配器模式</h1><h2 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h2><ul>
+<li>适配器模式定义: <strong>适配器模式将一个类的接口，转化成客户期望的另一个接口。适配器让原本接口不兼容的类可以合作无间</strong>。</li>
+<li>适配器模式与装饰者模式:<ul>
 <li>适配器模式,与装饰模式(Decorator model),代理模式有类似的地方,都属于<strong>结构型设计模式</strong></li>
+<li>适配器模式:对不符合接口要求的类,改成跟接口要求一样(例如改个名字)</li>
+<li>装饰者模式: 对原有类,进行增强(装饰), 两者实现方法都是,先拥有一个被装饰(被适配)的类实例,然后对其进行装饰增强(适配器模式就是只改名字,改成符合要求的接口样子)</li>
+</ul>
+</li>
+<li>适配器模式设计方法:<ul>
+<li>适配器其实是分为对象适配器和类适配器两种</li>
+<li><strong>对象适配器</strong>:使用组合的方法，在Adapter中会保留一个原对象（Adaptee）的引用，适配器的实现就是讲Target中的方法委派给Adaptee对象来做,用Adaptee中的方法实现Target中的方法。</li>
+<li><strong>类适配器</strong>:是通过类的继承来实现的。Adpater直接继承了Target和Adaptee中的所有方法，并进行改写，从而实现了Target中的方法。</li>
+</ul>
+</li>
 </ul>
 <h2 id="适配器模式在spring-mvc应用分析"><a href="#适配器模式在spring-mvc应用分析" class="headerlink" title="适配器模式在spring mvc应用分析"></a>适配器模式在spring mvc应用分析</h2><h2 id="参考-1"><a href="#参考-1" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="http://blog.csdn.net/u010288264/article/details/53835185" target="_blank" rel="external">从SpringMVC来看适配器模式</a></li>
+<li><a href="http://haolloyin.blog.51cto.com/1177454/346128" target="_blank" rel="external">适配器模式:对象适配器和类适配器</a></li>
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E7%BB%93%E5%90%88JDBC%E5%88%86%E6%9E%90.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F5-%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E8%80%85%E6%A1%86%E6%9E%B6-%E9%80%82%E9%85%8D%E5%99%A8%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -250,51 +404,58 @@
     
     <item>
       <title>设计模式-概述</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html</guid>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1-%E6%A6%82%E8%BF%B0.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1-%E6%A6%82%E8%BF%B0.html</guid>
       <pubDate>Sun, 19 Mar 2017 11:57:11 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;设计模式的分类&quot;&gt;&lt;a href=&quot;#设计模式的分类&quot; class=&quot;headerlink&quot; title=&quot;设计模式的分类&quot;&gt;&lt;/a&gt;设计模式的分类&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;设计模式可以分为三大类，分别是&lt;strong&gt;创建型设计模式&lt;/strong&gt;、&lt;str
+        &lt;h1 id=&quot;设计原则-开闭原则&quot;&gt;&lt;a href=&quot;#设计原则-开闭原则&quot; class=&quot;headerlink&quot; title=&quot;设计原则-开闭原则&quot;&gt;&lt;/a&gt;设计原则-开闭原则&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;“一个软件实体应当对扩展开放，对修改关闭(Software entiti
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="设计模式的分类"><a href="#设计模式的分类" class="headerlink" title="设计模式的分类"></a>设计模式的分类</h1><ul>
+      <content:encoded><![CDATA[<h1 id="设计原则-开闭原则"><a href="#设计原则-开闭原则" class="headerlink" title="设计原则-开闭原则"></a>设计原则-开闭原则</h1><ul>
+<li>“一个软件实体应当对扩展开放，对修改关闭(Software entities should be open for extension, but closed for modification)”</li>
+<li>开闭原则理解，在设计一个模块的时候应该使这个模块可以在不被修改的前提下被扩展。换言之，应该可以在不必修改源代码的情况下改变这个模块的行为。</li>
+</ul>
+<h1 id="设计模式的分类"><a href="#设计模式的分类" class="headerlink" title="设计模式的分类"></a>设计模式的分类</h1><ul>
 <li>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</li>
 </ul>
 <h2 id="创建型设计模式"><a href="#创建型设计模式" class="headerlink" title="创建型设计模式"></a>创建型设计模式</h2><ul>
-<li>单例模式(Singleton) </li>
-<li>构建模式(Builder) </li>
-<li>原型模式(Prototype) </li>
-<li>抽象工厂模式(Abstract Factory) </li>
-<li>工厂方法模式(Factory Method) </li>
+<li>单例模式(Singleton)</li>
+<li>构建模式(Builder)</li>
+<li>原型模式(Prototype)</li>
+<li>抽象工厂模式(Abstract Factory)</li>
+<li>工厂方法模式(Factory Method)</li>
 </ul>
 <h2 id="行为设计模式"><a href="#行为设计模式" class="headerlink" title="行为设计模式"></a>行为设计模式</h2><ul>
-<li>策略模式(Strategy) </li>
-<li>状态模式(State) </li>
-<li>责任链模式(Chain of Responsibility) </li>
-<li>解释器模式(Interpreter) </li>
-<li>命令模式(Command) </li>
-<li>观察者模式(Observer) </li>
-<li>备忘录模式(Memento) </li>
-<li>迭代器模式(Iterator) </li>
-<li>模板方法模式(Template Method) </li>
-<li>访问者模式(Visitor) </li>
-<li>中介者模式(Mediator) </li>
+<li>策略模式(Strategy)</li>
+<li>状态模式(State)</li>
+<li>责任链模式(Chain of Responsibility)</li>
+<li>解释器模式(Interpreter)</li>
+<li>命令模式(Command)</li>
+<li>观察者模式(Observer)</li>
+<li>备忘录模式(Memento)</li>
+<li>迭代器模式(Iterator)</li>
+<li>模板方法模式(Template Method)</li>
+<li>访问者模式(Visitor)</li>
+<li>中介者模式(Mediator)</li>
 </ul>
 <h2 id="结构型设计模式"><a href="#结构型设计模式" class="headerlink" title="结构型设计模式"></a>结构型设计模式</h2><ul>
-<li>装饰者模式(Decorator) </li>
-<li>代理模式(Proxy) </li>
-<li>组合模式(Composite) </li>
-<li>桥连接模式(Bridge) </li>
-<li>适配器模式(Adapter) </li>
-<li>蝇量模式(Flyweight) </li>
-<li>外观模式(Facade) </li>
+<li>装饰者模式(Decorator)</li>
+<li>代理模式(Proxy)</li>
+<li>组合模式(Composite)</li>
+<li>桥连接模式(Bridge)</li>
+<li>适配器模式(Adapter)</li>
+<li>蝇量模式(Flyweight)</li>
+<li>外观模式(Facade)</li>
 </ul>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
+</ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E6%A6%82%E8%BF%B0.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F1-%E6%A6%82%E8%BF%B0.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -386,9 +547,9 @@
     </item>
     
     <item>
-      <title>设计模式(二) 单例模式</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%8C-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%8C-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</guid>
+      <title>设计模式-单例模式</title>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</guid>
       <pubDate>Fri, 17 Mar 2017 07:47:01 GMT</pubDate>
       <description>
       
@@ -417,7 +578,7 @@
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BA%8C-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -623,6 +784,7 @@
 </li>
 <li>腾讯<ul>
 <li>笔试：2017年4月3日 19:00-21:00 技术类在线笔试(模拟：2017年3月25日17:00至18:00)</li>
+<li>笔试太难了..</li>
 </ul>
 </li>
 <li><p>京东</p>
@@ -633,10 +795,15 @@
 <li><p>今日头条</p>
 <ul>
 <li>笔试: 时间未定</li>
+<li>笔试连接:(4个编程题,简单粗暴)</li>
 </ul>
 </li>
 <li>360<ul>
 <li>笔试： 25晚19：00-21:00</li>
+</ul>
+</li>
+<li>百度<ul>
+<li>笔试: 4.27号</li>
 </ul>
 </li>
 </ol>
@@ -972,11 +1139,11 @@ return result;
       <pubDate>Mon, 06 Mar 2017 09:06:09 GMT</pubDate>
       <description>
       
-        Spring学习系列第二篇,Spring-IOC学习,bean的装配.
+        Spring-IOC基础学习,spring-ioc深入分析及个人模拟
       
       </description>
       
-      <content:encoded><![CDATA[<h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
+      <content:encoded><![CDATA[<h1 id="Spring-IOC基础"><a href="#Spring-IOC基础" class="headerlink" title="Spring-IOC基础"></a>Spring-IOC基础</h1><h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
 <li>基本概念<ul>
 <li><strong>控制反转(Inversion of Control)</strong>是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。实现控制反转主要有两种方式：<strong>依赖注入</strong>和<strong>依赖查找</strong>。两者的区别在于，前者是被动的接收对象，在类A的实例创建过程中即创建了依赖的B对象，通过类型或名称来判断将不同的对象注入到不同的属性中，而后者是主动索取响应名称的对象，获得依赖对象的时间也可以在代码中自由控制。</li>
 <li><strong>依赖注入</strong>就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。</li>
@@ -1032,8 +1199,8 @@ return result;
 </li>
 <li><p>Bean的生命周期</p>
 <ul>
-<li>流程 <ul>
-<li><img src="/images/Spring-Bean生命周期.png" alt="Spring-Bean生命周期"></li>
+<li>流程<ul>
+<li><img src="../images/Spring-Bean生命周期.png" alt="Spring-Bean生命周期"></li>
 </ul>
 </li>
 <li><a href="http://www.jianshu.com/p/3944792a5fff" target="_blank" rel="external">参考</a></li>
@@ -1061,7 +1228,7 @@ return result;
 </li>
 <li><a href="https://github.com/husthang/spring-learning/tree/master/spring-ioc" target="_blank" rel="external">代码</a></li>
 </ol>
-]]></content:encoded>
+<h1 id="Spirng-IOC深入分析"><a href="#Spirng-IOC深入分析" class="headerlink" title="Spirng-IOC深入分析"></a>Spirng-IOC深入分析</h1>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html#disqus_thread</comments>
     </item>
@@ -1618,8 +1785,8 @@ return result;
     
     <item>
       <title>设计模式(一) 简单工厂模式</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</guid>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</guid>
       <pubDate>Sun, 19 Feb 2017 17:36:37 GMT</pubDate>
       <description>
       
@@ -1682,7 +1849,7 @@ return result;
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%B8%80-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>

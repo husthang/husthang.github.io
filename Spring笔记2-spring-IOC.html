@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Spring学习系列第二篇,Spring-IOC学习,bean的装配.">
+<meta name="description" content="Spring-IOC基础学习,spring-ioc深入分析及个人模拟">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Spring笔记2-spring-IOC">
 <meta property="og:url" content="http://liuhang.net.cn/Spring笔记2-spring-IOC.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="Spring学习系列第二篇,Spring-IOC学习,bean的装配.">
-<meta property="og:image" content="http://liuhang.net.cn/images/Spring-Bean生命周期.png">
-<meta property="og:updated_time" content="2017-03-13T11:48:55.000Z">
+<meta property="og:description" content="Spring-IOC基础学习,spring-ioc深入分析及个人模拟">
+<meta property="og:image" content="http://liuhang.net.cn/../images/Spring-Bean生命周期.png">
+<meta property="og:updated_time" content="2017-04-10T08:52:28.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring笔记2-spring-IOC">
-<meta name="twitter:description" content="Spring学习系列第二篇,Spring-IOC学习,bean的装配.">
-<meta name="twitter:image" content="http://liuhang.net.cn/images/Spring-Bean生命周期.png">
+<meta name="twitter:description" content="Spring-IOC基础学习,spring-ioc深入分析及个人模拟">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/Spring-Bean生命周期.png">
 
 
 
@@ -410,7 +410,7 @@
       
 
       
-        <h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
+        <h1 id="Spring-IOC基础"><a href="#Spring-IOC基础" class="headerlink" title="Spring-IOC基础"></a>Spring-IOC基础</h1><h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
 <li>基本概念<ul>
 <li><strong>控制反转(Inversion of Control)</strong>是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。实现控制反转主要有两种方式：<strong>依赖注入</strong>和<strong>依赖查找</strong>。两者的区别在于，前者是被动的接收对象，在类A的实例创建过程中即创建了依赖的B对象，通过类型或名称来判断将不同的对象注入到不同的属性中，而后者是主动索取响应名称的对象，获得依赖对象的时间也可以在代码中自由控制。</li>
 <li><strong>依赖注入</strong>就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。</li>
@@ -466,8 +466,8 @@
 </li>
 <li><p>Bean的生命周期</p>
 <ul>
-<li>流程 <ul>
-<li><img src="/images/Spring-Bean生命周期.png" alt="Spring-Bean生命周期"></li>
+<li>流程<ul>
+<li><img src="../images/Spring-Bean生命周期.png" alt="Spring-Bean生命周期"></li>
 </ul>
 </li>
 <li><a href="http://www.jianshu.com/p/3944792a5fff" target="_blank" rel="external">参考</a></li>
@@ -495,7 +495,7 @@
 </li>
 <li><a href="https://github.com/husthang/spring-learning/tree/master/spring-ioc" target="_blank" rel="external">代码</a></li>
 </ol>
-
+<h1 id="Spirng-IOC深入分析"><a href="#Spirng-IOC深入分析" class="headerlink" title="Spirng-IOC深入分析"></a>Spirng-IOC深入分析</h1>
       
     </div>
 
@@ -628,7 +628,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">40</span>
+              <span class="site-state-item-count">42</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -710,7 +710,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC与DI"><span class="nav-number">1.</span> <span class="nav-text">IOC与DI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中Bean的基本装配"><span class="nav-number">2.</span> <span class="nav-text">Spring中Bean的基本装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bean高级装配"><span class="nav-number">3.</span> <span class="nav-text">Bean高级装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码及单元测试"><span class="nav-number">4.</span> <span class="nav-text">示例代码及单元测试</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-IOC基础"><span class="nav-number">1.</span> <span class="nav-text">Spring-IOC基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IOC与DI"><span class="nav-number">1.1.</span> <span class="nav-text">IOC与DI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中Bean的基本装配"><span class="nav-number">1.2.</span> <span class="nav-text">Spring中Bean的基本装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bean高级装配"><span class="nav-number">1.3.</span> <span class="nav-text">Bean高级装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例代码及单元测试"><span class="nav-number">1.4.</span> <span class="nav-text">示例代码及单元测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spirng-IOC深入分析"><span class="nav-number">2.</span> <span class="nav-text">Spirng-IOC深入分析</span></a></li></ol></div>
             
           </div>
         </section>
