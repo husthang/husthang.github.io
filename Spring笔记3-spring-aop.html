@@ -86,12 +86,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘航">
-<meta property="og:url" content="http://liuhang.net.cn/tags/Intellij-IDEA/index.html">
+<meta name="description" content="Spring-AOP基础,Spring-AOP原理深入分析及简单模拟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring笔记3-Spring-AOP">
+<meta property="og:url" content="http://liuhang.net.cn/Spring笔记3-spring-aop.html">
 <meta property="og:site_name" content="刘航">
+<meta property="og:description" content="Spring-AOP基础,Spring-AOP原理深入分析及简单模拟">
+<meta property="og:updated_time" content="2017-04-13T09:05:13.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘航">
+<meta name="twitter:title" content="Spring笔记3-Spring-AOP">
+<meta name="twitter:description" content="Spring-AOP基础,Spring-AOP原理深入分析及简单模拟">
 
 
 
@@ -109,7 +113,7 @@
   };
 </script>
 
-  <title> 标签: Intellij IDEA | 刘航 </title>
+  <title> Spring笔记3-Spring-AOP | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -130,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -312,46 +316,156 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        Intellij IDEA
-        <small>标签</small>
-      </h2>
-    </div>
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Spring笔记3-Spring-AOP
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-04-10T16:55:04+08:00" content="2017-04-10">
+              2017-04-10
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Spring笔记3-spring-aop.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Spring笔记3-spring-aop.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+      
+        <h1 id="Spirng-AOP基础"><a href="#Spirng-AOP基础" class="headerlink" title="Spirng AOP基础"></a>Spirng AOP基础</h1><h2 id="什么是AOP"><a href="#什么是AOP" class="headerlink" title="什么是AOP"></a>什么是AOP</h2><ul>
+<li>AOP: aspect-oriented programming 面向切面编程</li>
+<li>理解:<strong><em>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。</em></strong></li>
+<li>应用举例:  事物管理</li>
+</ul>
 
-      <h1 class="post-title">
+      
+    </div>
+
+    <div>
+      
         
-            <a class="post-title-link" href="/Intellij-IDEA总结.html" itemprop="url">
-              
-                <span itemprop="name">Intellij IDEA总结</span>
-              
-            </a>
+      
+    </div>
+
+    <div>
+      
         
-      </h1>
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎打赏，谢谢您的支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatPay.png" alt="刘航 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/Alipay.jpeg" alt="刘航 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-03-04T23:33:35+08:00"
-              content="2017-03-04" >
-          03-04
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/设计模式6-装饰者模式.html" rel="next" title="设计模式6-装饰者模式">
+                <i class="fa fa-chevron-left"></i> 设计模式6-装饰者模式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/个人计划至四月底.html" rel="prev" title="个人计划至四月底">
+                个人计划至四月底 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
-    
-  </div>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -359,6 +473,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Spring笔记3-spring-aop.html"
+           data-title="Spring笔记3-Spring-AOP" data-url="http://liuhang.net.cn/Spring笔记3-spring-aop.html">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -378,8 +500,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpeg"
@@ -465,6 +596,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spirng-AOP基础"><span class="nav-number">1.</span> <span class="nav-text">Spirng AOP基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是AOP"><span class="nav-number">1.1.</span> <span class="nav-text">什么是AOP</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -568,6 +710,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
