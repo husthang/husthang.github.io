@@ -8,8 +8,103 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sun, 16 Apr 2017 05:42:22 GMT</pubDate>
+    <pubDate>Sun, 16 Apr 2017 14:01:20 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>数据结构和算法总结</title>
+      <link>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</guid>
+      <pubDate>Sun, 16 Apr 2017 13:25:41 GMT</pubDate>
+      <description>
+      
+        剑指offer,LeetCode,牛客网等OJ刷题总结,各种基础数据结构和常见算法总结.
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="https://algorithm.yuanbin.me/zh-hans/index.html" target="_blank" rel="external">数据结构与算法/leetcode/lintcode题解||:总结超详细,推荐!!</a></li>
+</ol>
+<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉查找树"><a href="#二叉查找树" class="headerlink" title="二叉查找树"></a>二叉查找树</h2><ul>
+<li>一颗二叉查找树(BST)是一颗二叉树，其中每个节点都含有一个可进行比较的键及相应的值，且每个节点的<br>键都大于等于左子树中的任意节点的键，而小于右子树中的任意节点的键。</li>
+</ul>
+<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><h2 id="哈夫曼树-最优二叉树"><a href="#哈夫曼树-最优二叉树" class="headerlink" title="哈夫曼树(最优二叉树)"></a>哈夫曼树(最优二叉树)</h2><h1 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h1><h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h1 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><h1 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h1><h2 id="约数"><a href="#约数" class="headerlink" title="约数"></a>约数</h2><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
+<ol>
+<li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1): 可以把最右边的一个1变成0;<br>2.</li>
+</ol>
+<h1 id="其他经典算法"><a href="#其他经典算法" class="headerlink" title="其他经典算法"></a>其他经典算法</h1><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2>]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java基础-Object类通用方法</title>
+      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-Object%E7%B1%BB%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-Object%E7%B1%BB%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95.html</guid>
+      <pubDate>Sun, 16 Apr 2017 05:57:37 GMT</pubDate>
+      <description>
+      
+        effective java 第三章,对于所有对象都通用的方法.
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Object类概览"><a href="#Object类概览" class="headerlink" title="Object类概览"></a>Object类概览</h1><p><img src="../images/object.png" alt=""></p>
+<ul>
+<li>Object类,主要是用来扩展,它的所有非final方法(如上图,hashCode, equals, clone, toString, finalize)都有明确的通用约定,它们被设计成要被覆盖的(override),任何一个类,覆盖这些方法时,都要遵守这些约定.</li>
+</ul>
+<h1 id="equals方法"><a href="#equals方法" class="headerlink" title="equals方法"></a>equals方法</h1><ul>
+<li>设计目的: 用于检测一个对象是否等于另外一个对象.Object类中,这个方法默认将判断两个对象是否具有相同的引用.<br><img src="../images/equals方法.png" alt=""></li>
+<li>equals方法满足特性<ul>
+<li>自反性 x.equals(x)返回true</li>
+<li>对称性</li>
+<li>传递性</li>
+<li>一致性</li>
+<li>非空性 x.equals(null) 返回false</li>
+</ul>
+</li>
+<li><strong>覆盖equals方法时,遵守约定</strong></li>
+</ul>
+<h1 id="hashCode方法"><a href="#hashCode方法" class="headerlink" title="hashCode方法"></a>hashCode方法</h1><ul>
+<li>设计目的:由对象导出的一个整型值,java用hash算法的原理,来查找比较元素,提高查找效率(例如java集合中)</li>
+<li><strong>覆盖equals时,总要覆盖hashCode</strong></li>
+<li>规范<ul>
+<li>如果x.equals(y)为true, x.hashCode()与y.hashCode()具有相同的值,<strong>相等的对象必须具有相等的散列码</strong></li>
+<li>如果两个对象,equals方法比较不相等,则hashCode方法不一定产生不同的整数结果</li>
+</ul>
+</li>
+<li>hashMap底层原理<ul>
+<li><a href="http://kakajw.iteye.com/blog/935226" target="_blank" rel="external">深入解析Java对象的hashCode和hashCode在HashMap的底层数据结构的应用</a></li>
+</ul>
+</li>
+</ul>
+<h1 id="toString方法"><a href="#toString方法" class="headerlink" title="toString方法"></a>toString方法</h1><ul>
+<li>设计目的: 返回表示对象值得字符;通用约定:被返回的字符串应该是一个”简洁的,但信息丰富,且易于阅读的形式”</li>
+<li>java.lang.Object默认返回类的名称+”@”符号+散列码的无符号16进制表示<br><img src="../images/toString方法.png" alt=""></li>
+<li>当对象被传递给println, printf, 字符串联操作符(+)以及assert或者被调试器打印出来时,toString方法会被自动调用. <strong>建议所有子类覆盖toStirng方法</strong></li>
+</ul>
+<h1 id="clone方法"><a href="#clone方法" class="headerlink" title="clone方法"></a>clone方法</h1><ul>
+<li>默认的clone操作是浅copy,它并没有克隆包含爱对象中的内部对象</li>
+<li><p>所有的数组类型均包含一个public的clone方法,可以利用这个方法创建一个包含所有数组元素拷贝的一个新数组.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span>[] luckNums = &#123;<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">11</span>,<span class="number">13</span>&#125;;</div><div class="line"><span class="keyword">int</span>[] cloned = luckNums.clone();</div><div class="line">cloned[<span class="number">5</span>]=<span class="number">12</span>;<span class="comment">//doesn't change luckNums[5];</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>要进行clone处理,</p>
+<ul>
+<li>则要实现标记接口Cloneable,</li>
+<li>用public修饰符重新定义clone方法</li>
+</ul>
+</li>
+<li><strong>谨慎的覆盖clone</strong></li>
+</ul>
+<h1 id="finalize方法"><a href="#finalize方法" class="headerlink" title="finalize方法"></a>finalize方法</h1><ul>
+<li><img src="../images/finalize.png" alt=""></li>
+<li><strong>工作原理</strong>: 一旦垃圾回收器准备好释放对象占用的存储空间,将首先调用其finalize()方法,并且在下一次垃圾回收动作发生时才会真正回收对象占用的内存.</li>
+<li><strong>避免使用finalize方法</strong></li>
+<li><a href="http://www.cnblogs.com/yantz/p/4610614.html" target="_blank" rel="external">finalize()和System.gc()区别</a></li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-Object%E7%B1%BB%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>面试常考知识点总结</title>
@@ -22,14 +117,14 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="项目-实习"><a href="#项目-实习" class="headerlink" title="项目/实习"></a>项目/实习</h1><h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><p>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</p>
+      <content:encoded><![CDATA[<h1 id="项目-实习"><a href="#项目-实习" class="headerlink" title="项目/实习"></a>项目/实习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><p>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</p>
 <h2 id="1-2-JDK和JRE的区别"><a href="#1-2-JDK和JRE的区别" class="headerlink" title="1.2    JDK和JRE的区别"></a>1.2    JDK和JRE的区别</h2><p>JRE: java runtime environment运行时环境(JRE)是将要执行Java程序的Java虚拟机。它同时也包含了执行applet需要的浏览器插件。J<br>JDK: java development kit完整的Java软件开发包，包含了JRE，编译器和其他的工具(比如：JavaDoc，Java调试器)，可以让开发者开发、编译、执行Java应用程序</p>
 <h2 id="1-3-面向对象三大特征"><a href="#1-3-面向对象三大特征" class="headerlink" title="1.3    面向对象三大特征"></a>1.3    面向对象三大特征</h2><p>封装encapsulation：封装是指隐藏对象的属性和实现细节,仅对外提供公共访问方式<br>继承inheritance：Java只支持单继承,<br>多态polymorphism：</p>
 <h2 id="1-4-override和overload"><a href="#1-4-override和overload" class="headerlink" title="1.4    override和overload"></a>1.4    override和overload</h2><p>override:方法重写: 子类中出现和父类中方法声明一模一样的方法<br>方法的重写（override）两同两小一大原则：<br>方法名相同，参数类型相同<br>子类返回类型小于等于父类方法返回类型，(从而可类型自动转换)<br>子类抛出异常小于等于父类方法抛出异常，<br>子类访问权限大于等于父类方法访问权限。</p>
 <p>overload：方法重载: 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关</p>
 <h2 id="1-5-static和final"><a href="#1-5-static和final" class="headerlink" title="1.5    static和final"></a>1.5    static和final</h2><p>static，final初始化总结：<br>1、被final修饰而没有被static修饰的类的属性变量只能在两种情况下初始化:(必须初始化）<br>   a.在它被声明的时候赋值;b.在构造函数里初始化;c .在非静态块里<br>2、被static修饰而没有被final修饰的类的属性变量只能在两种情况下初始化:(可以不初始化）<br>   a.在它被声明的时候赋值;b.在静态或非静态快里初始化;<br>3、同时被final和static修饰的类的属性变量只能在两种情况下初始化:（必须初始化）<br>   a.在它被定义的时候;b.在类的静态块里初始化</p>
 <p>接口里面定义的常量必须初始化；</p>
-<h2 id="1-6-代码块执行顺序"><a href="#1-6-代码块执行顺序" class="headerlink" title="1.6    代码块执行顺序"></a>1.6    代码块执行顺序</h2><p>父类静态-子类静态-父类属性初始化,普通代码,块构造函数-子类属性初始 构造块和构造函数(new 则执行)<br>1.父类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）<br>2 .子类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）</p>
+<h2 id="1-6-代码块执行顺序"><a href="#1-6-代码块执行顺序" class="headerlink" title="1.6    代码块执行顺序"></a>1.6    代码块执行顺序</h2><p><strong>父类静态-子类静态-父类属性初始化,普通代码,块构造函数-子类属性初始 构造块和构造函数(new 则执行)</strong><br>1.父类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）<br>2 .子类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）</p>
 <ol>
 <li>父类属性对象初始化<br>4.父类普通代码块（每次new,每次执行 ）</li>
 <li>父类构造函数（每次new,每次执行）<br>6.子 类 属性对象初始化<br>7.子类普通代码块（每次new,每次执行 ）<br>8.子 类构造函数（每次new,每次执行</li>
@@ -63,7 +158,7 @@
 <h2 id="1-16-监视器-Monitor-如何线程同步"><a href="#1-16-监视器-Monitor-如何线程同步" class="headerlink" title="1.16    监视器(Monitor)如何线程同步"></a>1.16    监视器(Monitor)如何线程同步</h2><h2 id="1-17-Java集合框架有哪些接口"><a href="#1-17-Java集合框架有哪些接口" class="headerlink" title="1.17    Java集合框架有哪些接口"></a>1.17    Java集合框架有哪些接口</h2><h2 id="1-18-什么是迭代器-Iterator-？"><a href="#1-18-什么是迭代器-Iterator-？" class="headerlink" title="1.18    什么是迭代器(Iterator)？"></a>1.18    什么是迭代器(Iterator)？</h2><h2 id="1-19-Iterator和ListIterator的区别是什么？"><a href="#1-19-Iterator和ListIterator的区别是什么？" class="headerlink" title="1.19    Iterator和ListIterator的区别是什么？"></a>1.19    Iterator和ListIterator的区别是什么？</h2><h2 id="1-20-Map遍历的几种方法"><a href="#1-20-Map遍历的几种方法" class="headerlink" title="1.20    Map遍历的几种方法"></a>1.20    Map遍历的几种方法</h2><p><a href="http://www.trinea.cn/android/hashmap-loop-performance/" target="_blank" rel="external">http://www.trinea.cn/android/hashmap-loop-performance/</a></p>
 <h2 id="1-21-快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？"><a href="#1-21-快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？" class="headerlink" title="1.21    快速失败(fail-fast)和安全失败(fail-safe)的区别是什么？"></a>1.21    快速失败(fail-fast)和安全失败(fail-safe)的区别是什么？</h2><h2 id="1-22-为什么集合类没有实现Cloneable和Serializable接口？"><a href="#1-22-为什么集合类没有实现Cloneable和Serializable接口？" class="headerlink" title="1.22    为什么集合类没有实现Cloneable和Serializable接口？"></a>1.22    为什么集合类没有实现Cloneable和Serializable接口？</h2><h2 id="1-23-Java中的HashMap的工作原理是什么？"><a href="#1-23-Java中的HashMap的工作原理是什么？" class="headerlink" title="1.23        Java中的HashMap的工作原理是什么？"></a>1.23        Java中的HashMap的工作原理是什么？</h2><h2 id="1-24-HashMap和Hashtable有什么区别？"><a href="#1-24-HashMap和Hashtable有什么区别？" class="headerlink" title="1.24    HashMap和Hashtable有什么区别？"></a>1.24    HashMap和Hashtable有什么区别？</h2><h2 id="1-25-hashCode-和equals-方法的重要性体现在什么地方？"><a href="#1-25-hashCode-和equals-方法的重要性体现在什么地方？" class="headerlink" title="1.25    hashCode()和equals()方法的重要性体现在什么地方？"></a>1.25    hashCode()和equals()方法的重要性体现在什么地方？</h2><h2 id="1-26-数组-Array-和列表-ArrayList-有什么区别？"><a href="#1-26-数组-Array-和列表-ArrayList-有什么区别？" class="headerlink" title="1.26    数组(Array)和列表(ArrayList)有什么区别？"></a>1.26    数组(Array)和列表(ArrayList)有什么区别？</h2><h2 id="1-27-ArrayList和LinkedList有什么区别？"><a href="#1-27-ArrayList和LinkedList有什么区别？" class="headerlink" title="1.27    ArrayList和LinkedList有什么区别？"></a>1.27    ArrayList和LinkedList有什么区别？</h2><p>1.ArrayList是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构.<br>这里的所谓动态数组并不是那个“ 有多少元素就申请多少空间 ”的意思，通过查看源码，可以发现，这个动态数组是这样实现的，如果没指定数组大小，则申请默认大小为10的数组，当元素个数增加，数组无法存储时，系统会另个申请一个长度为当前长度1.5倍的数组，然后，把之前的数据拷贝到新建的数组。<br>     2.对于随机访问get和set，ArrayList优于LinkedList，因为LinkedList要移动指针。<br>     3.对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。</p>
 <h2 id="1-28-Comparable和Comparator接口是干什么的？"><a href="#1-28-Comparable和Comparator接口是干什么的？" class="headerlink" title="1.28    Comparable和Comparator接口是干什么的？"></a>1.28    Comparable和Comparator接口是干什么的？</h2><h2 id="1-29-什么是Java优先级队列-Priority-Queue-？"><a href="#1-29-什么是Java优先级队列-Priority-Queue-？" class="headerlink" title="1.29    什么是Java优先级队列(Priority Queue)？"></a>1.29    什么是Java优先级队列(Priority Queue)？</h2><h2 id="1-30-HashSet和TreeSet有什么区别？"><a href="#1-30-HashSet和TreeSet有什么区别？" class="headerlink" title="1.30    HashSet和TreeSet有什么区别？"></a>1.30    HashSet和TreeSet有什么区别？</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.nowcoder.com/ta/review-java" target="_blank" rel="external">https://www.nowcoder.com/ta/review-java</a></p>
-<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1>]]></content:encoded>
+<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95%E5%B8%B8%E8%80%83%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
@@ -109,7 +204,7 @@
 <li>观察者模式(书p234),一天</li>
 </ul>
 </li>
-<li>总结Java对象通用方法:equals, hashCode, toString, clone ,finalize</li>
+<li>总结Java对象通用方法:equals, hashCode, toString,  ,finalizeclone (已完成)</li>
 </ol>
 <h1 id="Java并发总结-深入理解jvm第五部分"><a href="#Java并发总结-深入理解jvm第五部分" class="headerlink" title="Java并发总结(深入理解jvm第五部分)"></a>Java并发总结(深入理解jvm第五部分)</h1><ol>
 <li>java内存模型</li>
