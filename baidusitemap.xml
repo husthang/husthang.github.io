@@ -4,14 +4,58 @@
 
     
   <url>
+    <loc>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</loc>
+    <lastmod>2017-04-17T12:38:59.000Z</lastmod>
+    <data>
+        <display>
+        <title>正则表达式</title>
+        <pubTime>2016-12-17T16:16:59.000Z</pubTime>
+        
+        <tag>Java基础</tag>
+         
+        <tag>正则表达式</tag>
+         
+         
+           
+             
+              <breadCrumb title="Java" url="http://liuhang.net.cn/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</loc>
-    <lastmod>2017-04-16T14:01:20.000Z</lastmod>
+    <lastmod>2017-04-17T09:04:29.000Z</lastmod>
     <data>
         <display>
         <title>数据结构和算法总结</title>
         <pubTime>2017-04-16T13:25:41.000Z</pubTime>
         
-        <tag>面试</tag>
+        <tag>面试,数据结构和算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="algorithm" url="http://liuhang.net.cn/categories/algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://liuhang.net.cn/TSP%E9%97%AE%E9%A2%98%E4%B9%8B%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%BB%93%E5%90%88%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3.html</loc>
+    <lastmod>2017-04-17T08:00:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>TSP问题之分支定界结合匈牙利算法求解</title>
+        <pubTime>2017-04-17T07:59:02.000Z</pubTime>
+        
+        <tag>TSP</tag>
+         
+        <tag>2016华为软件精英挑战赛</tag>
          
          
            
@@ -115,14 +159,14 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</loc>
+    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</loc>
     <lastmod>2017-04-12T08:22:12.000Z</lastmod>
     <data>
         <display>
-        <title>设计模式4-构建者模式</title>
-        <pubTime>2017-04-09T14:17:01.000Z</pubTime>
+        <title>设计模式3-单例模式</title>
+        <pubTime>2017-03-17T07:47:01.000Z</pubTime>
         
-        <tag>BuilderModel</tag>
+        <tag>单例模式</tag>
          
          
            
@@ -157,14 +201,14 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</loc>
+    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</loc>
     <lastmod>2017-04-12T08:22:12.000Z</lastmod>
     <data>
         <display>
-        <title>设计模式2-简单工厂模式</title>
-        <pubTime>2017-02-19T17:36:37.000Z</pubTime>
+        <title>设计模式4-构建者模式</title>
+        <pubTime>2017-04-09T14:17:01.000Z</pubTime>
         
-        <tag>简单工厂模式</tag>
+        <tag>BuilderModel</tag>
          
          
            
@@ -177,14 +221,14 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</loc>
+    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</loc>
     <lastmod>2017-04-12T08:22:12.000Z</lastmod>
     <data>
         <display>
-        <title>设计模式3-单例模式</title>
-        <pubTime>2017-03-17T07:47:01.000Z</pubTime>
+        <title>设计模式2-简单工厂模式</title>
+        <pubTime>2017-02-19T17:36:37.000Z</pubTime>
         
-        <tag>单例模式</tag>
+        <tag>简单工厂模式</tag>
          
          
            
@@ -551,12 +595,12 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</loc>
+    <loc>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</loc>
     <lastmod>2017-03-19T11:40:05.000Z</lastmod>
     <data>
         <display>
-        <title>基础算法-动态规划</title>
-        <pubTime>2017-03-19T11:39:33.000Z</pubTime>
+        <title>基础算法-查找</title>
+        <pubTime>2017-03-19T11:38:06.000Z</pubTime>
         
          
            
@@ -569,12 +613,12 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</loc>
+    <loc>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</loc>
     <lastmod>2017-03-19T11:40:05.000Z</lastmod>
     <data>
         <display>
-        <title>基础算法-查找</title>
-        <pubTime>2017-03-19T11:38:06.000Z</pubTime>
+        <title>基础算法-动态规划</title>
+        <pubTime>2017-03-19T11:39:33.000Z</pubTime>
         
          
            
@@ -659,12 +703,12 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</loc>
+    <loc>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html</loc>
     <lastmod>2017-03-14T16:51:17.000Z</lastmod>
     <data>
         <display>
-        <title>Java基础增强-代理</title>
-        <pubTime>2017-03-13T16:18:49.000Z</pubTime>
+        <title>Java基础增强-注解</title>
+        <pubTime>2017-03-13T16:14:30.000Z</pubTime>
         
          
            
@@ -677,12 +721,12 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html</loc>
+    <loc>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</loc>
     <lastmod>2017-03-14T16:51:17.000Z</lastmod>
     <data>
         <display>
-        <title>Java基础增强-注解</title>
-        <pubTime>2017-03-13T16:14:30.000Z</pubTime>
+        <title>Java基础增强-代理</title>
+        <pubTime>2017-03-13T16:18:49.000Z</pubTime>
         
          
            
@@ -715,14 +759,16 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>Intellij IDEA总结</title>
-        <pubTime>2017-03-04T15:33:35.000Z</pubTime>
+        <title>Git总结</title>
+        <pubTime>2017-03-04T15:28:32.000Z</pubTime>
         
-        <tag>Intellij IDEA</tag>
+        <tag>Git</tag>
+         
+        <tag>GitHub</tag>
          
          
            
@@ -735,19 +781,19 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>FastDFS总结</title>
-        <pubTime>2017-03-05T11:52:20.000Z</pubTime>
+        <title>chrome总结</title>
+        <pubTime>2017-03-04T15:31:21.000Z</pubTime>
         
-        <tag>Fastdfs</tag>
+        <tag>chrome</tag>
          
          
            
              
-              <breadCrumb title="web" url="http://liuhang.net.cn/categories/web/"/>
+              <breadCrumb title="tool" url="http://liuhang.net.cn/categories/tool/"/>
           
         </display>
     </data>
@@ -795,21 +841,19 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>Git总结</title>
-        <pubTime>2017-03-04T15:28:32.000Z</pubTime>
+        <title>FastDFS总结</title>
+        <pubTime>2017-03-05T11:52:20.000Z</pubTime>
         
-        <tag>Git</tag>
-         
-        <tag>GitHub</tag>
+        <tag>Fastdfs</tag>
          
          
            
              
-              <breadCrumb title="tool" url="http://liuhang.net.cn/categories/tool/"/>
+              <breadCrumb title="web" url="http://liuhang.net.cn/categories/web/"/>
           
         </display>
     </data>
@@ -817,14 +861,14 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>chrome总结</title>
-        <pubTime>2017-03-04T15:31:21.000Z</pubTime>
+        <title>Intellij IDEA总结</title>
+        <pubTime>2017-03-04T15:33:35.000Z</pubTime>
         
-        <tag>chrome</tag>
+        <tag>Intellij IDEA</tag>
          
          
            
