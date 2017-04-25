@@ -86,51 +86,52 @@
 
 
 
-<meta name="description" content="交换排序思想：序列中的两个元素相比较，若与排序要求相逆，则两者交换；
-冒泡排序
-稳定性：稳定
+<meta name="description" content="稳定性: 若相同关键码元素间的位置关系在排序前与排序后保持一致,则为稳定的
 
-快速排序
-稳定性：不稳定
+插入排序
+插入排序的基本思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
 
-插入排序思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
-选择排序思想：在未排序的序列中选择出最小的已经排序的末尾
-归并排序思想：归并排序是采用分治法的一个非常典型的应用。归并排序的思想就是先递归分解数组，再合并数组。
-堆排序
-二叉堆具有以下性质">
+直接插入排序
+基本过程:
+对n个记录的表,从第二个记录开始,直到第n个记录,逐个向有序表中进行插入操作,得到n个记录有序的表
+
+
+性能分析:
+最好情况: 待排序序列已经有序,只需要比较n-1次,每次直接插入到已排">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础算法-排序">
 <meta property="og:url" content="http://liuhang.net.cn/基础算法-排序.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="交换排序思想：序列中的两个元素相比较，若与排序要求相逆，则两者交换；
-冒泡排序
-稳定性：稳定
+<meta property="og:description" content="稳定性: 若相同关键码元素间的位置关系在排序前与排序后保持一致,则为稳定的
 
-快速排序
-稳定性：不稳定
+插入排序
+插入排序的基本思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
 
-插入排序思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
-选择排序思想：在未排序的序列中选择出最小的已经排序的末尾
-归并排序思想：归并排序是采用分治法的一个非常典型的应用。归并排序的思想就是先递归分解数组，再合并数组。
-堆排序
-二叉堆具有以下性质">
+直接插入排序
+基本过程:
+对n个记录的表,从第二个记录开始,直到第n个记录,逐个向有序表中进行插入操作,得到n个记录有序的表
+
+
+性能分析:
+最好情况: 待排序序列已经有序,只需要比较n-1次,每次直接插入到已排">
+<meta property="og:image" content="http://liuhang.net.cn/../images/排序.png">
 <meta property="og:image" content="http://liuhang.net.cn/../media/14899260569003.jpg">
-<meta property="og:updated_time" content="2017-03-28T08:38:34.000Z">
+<meta property="og:updated_time" content="2017-04-25T08:44:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础算法-排序">
-<meta name="twitter:description" content="交换排序思想：序列中的两个元素相比较，若与排序要求相逆，则两者交换；
-冒泡排序
-稳定性：稳定
+<meta name="twitter:description" content="稳定性: 若相同关键码元素间的位置关系在排序前与排序后保持一致,则为稳定的
 
-快速排序
-稳定性：不稳定
+插入排序
+插入排序的基本思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
 
-插入排序思想：每次将一个待排序的记录，按排序要求，插入到已经排序好的序列中的适当位置；
-选择排序思想：在未排序的序列中选择出最小的已经排序的末尾
-归并排序思想：归并排序是采用分治法的一个非常典型的应用。归并排序的思想就是先递归分解数组，再合并数组。
-堆排序
-二叉堆具有以下性质">
-<meta name="twitter:image" content="http://liuhang.net.cn/../media/14899260569003.jpg">
+直接插入排序
+基本过程:
+对n个记录的表,从第二个记录开始,直到第n个记录,逐个向有序表中进行插入操作,得到n个记录有序的表
+
+
+性能分析:
+最好情况: 待排序序列已经有序,只需要比较n-1次,每次直接插入到已排">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/排序.png">
 
 
 
@@ -443,17 +444,59 @@
       
 
       
-        <h1 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h1><p>思想：序列中的两个元素相比较，若与排序要求相逆，则两者<strong><em>交换</em></strong>；</p>
+        <p><img src="../images/排序.png" alt="各种排序比较"></p>
+<ol>
+<li>稳定性: 若相同关键码元素间的位置关系在排序前与排序后保持一致,则为稳定的</li>
+</ol>
+<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
+<li>插入排序的基本思想：每次将一个待排序的记录，按排序要求，<strong><em>插入</em></strong>到已经排序好的序列中的适当位置；</li>
+</ul>
+<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><ul>
+<li>基本过程:<ul>
+<li>对n个记录的表,从第二个记录开始,直到第n个记录,逐个向有序表中进行插入操作,得到n个记录有序的表</li>
+</ul>
+</li>
+<li>性能分析:<ul>
+<li>最好情况: 待排序序列已经有序,只需要比较n-1次,每次直接插入到已排序序列的尾部,复杂度O(n);</li>
+<li>最坏情况,第i趟操作,插入的记录要插入到已排序序列的最前面,复杂度达到O(n^2);</li>
+<li><strong>直接插入排序的性能与序列初始排列有关,初始基本有序,则效率可达O(n);</strong></li>
+</ul>
+</li>
+<li>稳定性<ul>
+<li><strong>直接插入排序是稳定的</strong>,根据其过程,关键码相同,位置关系会保持不变;</li>
+</ul>
+</li>
+</ul>
+<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><ul>
+<li>希尔排序是对直接插入排序的改进: 根据直接插入排序的两个性质: 当n比较小时,直接插入排序效率较高;当n很大时,若已经基本有序,其效率可提高到O(n);</li>
+<li>基本过程:<ul>
+<li>小增量排序: 选取一个步长d,将n个元素分为d个组,间隔d的为一个组,分别对每组进行直接插入排序,然后减少步长,知道步长为1,使得间隔为1的记录有序;</li>
+</ul>
+</li>
+<li>性能分析: 跟选取的步长有关</li>
+<li>稳定性: <strong>希尔排序不稳定</strong>,不同组内的相同值得元素,相对位置可能会发生变化;</li>
+</ul>
+<h1 id="交换排序"><a href="#交换排序" class="headerlink" title="交换排序"></a>交换排序</h1><ul>
+<li>交换排序的思想：序列中的两个元素相比较，若与排序要求相逆，则两者<strong>交换</strong>；</li>
+</ul>
 <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><ul>
-<li>稳定性：<strong>稳定</strong></li>
+<li>基本过程<ul>
+<li>对n个记录,进行n-1趟排序,第一趟从第1个到第n个记录,两两比较,最大的”冒泡”到底部,第2趟从第1个到n-1个记录,最大的到n-1的位置;</li>
+<li>如果在某趟两两比较中,一次交换都未发生,则表明已经有序,排序结束.</li>
+</ul>
+</li>
+<li>性能分析<ul>
+<li>最好情况: 已经有序,一趟两两比较之后就结束了,复杂度达到O(n);</li>
+<li>最坏情况:逆序,复杂度到O(n^2)</li>
+</ul>
+</li>
+<li>稳定性：<strong>冒泡排序是稳定的</strong>,值相同时不会进行交换</li>
 </ul>
 <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><ul>
 <li>稳定性：<strong>不稳定</strong></li>
 </ul>
-<h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><p>思想：每次将一个待排序的记录，按排序要求，<strong><em>插入</em></strong>到已经排序好的序列中的适当位置；</p>
-<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><p>思想：在未排序的序列中<strong><em>选择</em></strong>出最小的已经排序的末尾</p>
-<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>思想：归并排序是采用分治法的一个非常典型的应用。归并排序的思想就是先递归分解数组，再合并数组。</p>
-<h1 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h1><ul>
+<h1 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h1><h2 id="直接选择排序"><a href="#直接选择排序" class="headerlink" title="直接选择排序"></a>直接选择排序</h2><p>思想：在未排序的序列中<strong><em>选择</em></strong>出最小的已经排序的末尾</p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><ul>
 <li>二叉堆具有以下性质：<ul>
 <li>父节点的键值总是大于或等于（小于或等于）任何一个子节点的键值。</li>
 <li>每个节点的左右子树都是一个二叉堆（都是最大堆或最小堆）。</li>
@@ -461,6 +504,7 @@
 </li>
 <li>堆排序使用于 top K 问题</li>
 </ul>
+<h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><p>思想：归并排序是采用分治法的一个非常典型的应用。归并排序的思想就是先递归分解数组，再合并数组。</p>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p><img src="../media/14899260569003.jpg" alt=""></p>
 <h1 id="代码详解"><a href="#代码详解" class="headerlink" title="代码详解"></a>代码详解</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> sorting;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2016/11/6.</div><div class="line"> * 各种经典的排序方法</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Sort</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span>[] unSortedArray = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">2</span>, <span class="number">4</span>&#125;;</div><div class="line">        <span class="keyword">int</span>[] unSortedArray1 = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">6</span>&#125;;</div><div class="line"><span class="comment">//        bubbleSort(unSortedArray);</span></div><div class="line"><span class="comment">//        selectionSort(unSortedArray);</span></div><div class="line"><span class="comment">//        quickSort(unSortedArray);</span></div><div class="line">        insertionSort(unSortedArray);</div><div class="line"><span class="comment">//        mergeSort(unSortedArray);</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i : unSortedArray) &#123;</div><div class="line">            System.out.print(i + <span class="string">"-"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 冒泡排序</div><div class="line">     * 1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。</div><div class="line">     * 2. 对第0个到第n-1个数据做同样的工作。这时，最大的数就“浮”到了数组最后的位置上。</div><div class="line">     * 3. 针对所有的元素重复以上的步骤，除了最后一个。</div><div class="line">     * 4. 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> array 待排序的数组</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; array.length - i; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (array[j - <span class="number">1</span>] &gt; array[j]) &#123;</div><div class="line">                    <span class="keyword">int</span> temp = array[j - <span class="number">1</span>];</div><div class="line">                    array[j - <span class="number">1</span>] = array[j];</div><div class="line">                    array[j] = temp;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 选择排序</div><div class="line">     * 1.在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。</div><div class="line">     * 2.再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。</div><div class="line">     * 3.以此类推，直到所有元素均排序完毕。</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> array 待排序的序列</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">selectionSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length; i++) &#123;</div><div class="line">            <span class="keyword">int</span> minIndex = i;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = i + <span class="number">1</span>; j &lt; array.length; j++) &#123;</div><div class="line">                <span class="keyword">if</span> (array[j] &lt; array[minIndex]) &#123;</div><div class="line">                    minIndex = j;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">int</span> temp = array[i];</div><div class="line">            array[i] = array[minIndex];</div><div class="line">            array[minIndex] = temp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Quick sort.</div><div class="line">     * 1.从数列中挑出一个元素作为基准数。(一般把第一个当基准)</div><div class="line">     * 2. 分区过程，将比基准数大的放到右边，小于或等于它的数都放到左边。</div><div class="line">     * 3. 再对左右区间递归执行第二步，直至各区间只有一个数。</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> array 待排序的序列</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">        partition(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">partition</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> l, <span class="keyword">int</span> u)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span> m = l;</div><div class="line">        <span class="keyword">if</span> (l &gt;= u) &#123;</div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="comment">//比基准小，就放到小序列的最后</span></div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = l + <span class="number">1</span>; i &lt;= u; i++) &#123;</div><div class="line">            <span class="keyword">if</span> (array[i] &lt; array[l]) &#123;</div><div class="line">                m += <span class="number">1</span>;</div><div class="line">                <span class="keyword">int</span> temp = array[m];</div><div class="line">                array[m] = array[i];</div><div class="line">                array[i] = temp;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> temp = array[m];</div><div class="line">        array[m] = array[l];</div><div class="line">        array[l] = temp;</div><div class="line">        partition(array, l, m - <span class="number">1</span>);</div><div class="line">        partition(array, m + <span class="number">1</span>, u);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 插入排序.</div><div class="line">     * 1.从第一个元素开始，该元素可以认为已经被排序</div><div class="line">     * 2.取出下一个元素，在已经排序的元素序列中从后向前扫描</div><div class="line">     * 3.如果被扫描的元素（已排序）大于新元素，将该元素后移一位</div><div class="line">     * 4.重复步骤3，直到找到已排序的元素小于或者等于新元素的位置</div><div class="line">     * 5.将新元素插入到该位置后</div><div class="line">     * 6.重复步骤2~5</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> array the array</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; array.length - <span class="number">1</span>; i++) &#123;</div><div class="line">            <span class="keyword">int</span> key = array[i + <span class="number">1</span>];</div><div class="line">            <span class="keyword">int</span> index = i;</div><div class="line">            <span class="keyword">while</span> (index &gt;= <span class="number">0</span> &amp;&amp; array[index] &gt; key) &#123;</div><div class="line">                array[index + <span class="number">1</span>] = array[index];</div><div class="line">                index--;</div><div class="line">            &#125;</div><div class="line">            array[index + <span class="number">1</span>] = key;</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Merge sort.</div><div class="line">     * 归并排序的思想就是先递归分解数组，再合并数组</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> array the array</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span>[] array)</span> </span>&#123;</div><div class="line">        divide(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 递归分解数组 基本思路是将数组分解成left和right</div><div class="line">     * ，如果这两个数组内部数据是有序的，那么就可以用上面合并数组的方法将这两个数组合并排序。</div><div class="line">     * 如何让这两个数组内部是有序的？可以再二分</div><div class="line">     * ，直至分解出的小组只含有一个元素时为止，此时认为该小组内部已有序。然后合并排序相邻二个小组即可。</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> low, <span class="keyword">int</span> up)</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (low &gt;= up) <span class="keyword">return</span>;</div><div class="line">        <span class="keyword">int</span> mid = low + (up - low) / <span class="number">2</span>;</div><div class="line">        divide(array, low, mid);</div><div class="line">        divide(array, mid + <span class="number">1</span>, up);</div><div class="line">        merge(array, low, mid, up);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 合并两个已经有序的数组</div><div class="line">     * 基本思路是比较两个数组的最前面的数，谁小就先取谁，取了后相应的指针就往后移一位。</div><div class="line">     * 然后再比较，直至一个数组为空，最后把另一个数组的剩余部分复制过来即可。</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] array, <span class="keyword">int</span> low, <span class="keyword">int</span> mid, <span class="keyword">int</span> up)</span> </span>&#123;</div><div class="line">        <span class="keyword">int</span>[] helper = <span class="keyword">new</span> <span class="keyword">int</span>[array.length];</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = low; i &lt;= up; i++) &#123;</div><div class="line">            helper[i] = array[i];</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">int</span> i = low, j = mid + <span class="number">1</span>, k = low;</div><div class="line">        <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= up) &#123;</div><div class="line">            <span class="keyword">if</span> (helper[i] &lt; helper[j]) &#123;</div><div class="line">                array[k] = helper[i];</div><div class="line">                k++;</div><div class="line">                i++;</div><div class="line">            &#125; <span class="keyword">else</span> &#123;</div><div class="line">                array[k] = helper[j];</div><div class="line">                k++;</div><div class="line">                j++;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span> (j &lt;= up) &#123;</div><div class="line">            array[k] = helper[j];</div><div class="line">            j++;</div><div class="line">            k++;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">while</span> (i &lt;= mid) &#123;</div><div class="line">            array[k] = helper[i];</div><div class="line">            i++;</div><div class="line">            k++;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
@@ -675,7 +719,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#交换排序"><span class="nav-number">1.</span> <span class="nav-text">交换排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">1.2.</span> <span class="nav-text">快速排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插入排序"><span class="nav-number">2.</span> <span class="nav-text">插入排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选择排序"><span class="nav-number">3.</span> <span class="nav-text">选择排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并排序"><span class="nav-number">4.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#堆排序"><span class="nav-number">5.</span> <span class="nav-text">堆排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码详解"><span class="nav-number">7.</span> <span class="nav-text">代码详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">8.</span> <span class="nav-text">参考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入排序"><span class="nav-number">1.</span> <span class="nav-text">插入排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接插入排序"><span class="nav-number">1.1.</span> <span class="nav-text">直接插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#希尔排序"><span class="nav-number">1.2.</span> <span class="nav-text">希尔排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#交换排序"><span class="nav-number">2.</span> <span class="nav-text">交换排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#冒泡排序"><span class="nav-number">2.1.</span> <span class="nav-text">冒泡排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速排序"><span class="nav-number">2.2.</span> <span class="nav-text">快速排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#选择排序"><span class="nav-number">3.</span> <span class="nav-text">选择排序</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#直接选择排序"><span class="nav-number">3.1.</span> <span class="nav-text">直接选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#堆排序"><span class="nav-number">3.2.</span> <span class="nav-text">堆排序</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#归并排序"><span class="nav-number">4.</span> <span class="nav-text">归并排序</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码详解"><span class="nav-number">6.</span> <span class="nav-text">代码详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>
