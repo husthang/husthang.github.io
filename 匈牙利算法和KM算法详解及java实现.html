@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://liuhang.net.cn/media/14846300394186.jpg">
 <meta property="og:image" content="http://liuhang.net.cn/media/14846361640808.jpg">
 <meta property="og:image" content="http://liuhang.net.cn/media/顶标变换.png">
-<meta property="og:updated_time" content="2017-03-13T11:48:55.000Z">
+<meta property="og:updated_time" content="2017-04-27T09:11:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="匈牙利算法和KM算法详解及java实现">
 <meta name="twitter:description" content="匈牙利算法和KM算法详解及java实现">
@@ -463,8 +463,8 @@
 <li><p>实例解释算法过程:</p>
 <ul>
 <li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""> </li>
-<li><p><img src="/media/顶标变换.png" alt=""> </p>
+<li><img src="/media/14846361640808.jpg" alt=""></li>
+<li><p><img src="/media/顶标变换.png" alt=""></p>
 </li>
 <li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
 </li>
@@ -479,7 +479,7 @@
 <li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
 <li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 

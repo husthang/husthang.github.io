@@ -238,9 +238,15 @@
 </ul>
 </li>
 </ol>
-<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p>##经典题目记录</p>
-<ol>
-<li>长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数</li>
+<h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><p><img src="../images/排序.png" alt=""></p>
+<ul>
+<li>参考:<a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html">见本人排序总结</a></li>
+</ul>
+<h2 id="经典题目记录"><a href="#经典题目记录" class="headerlink" title="经典题目记录"></a>经典题目记录</h2><ol>
+<li>长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数<ul>
+<li>使用堆排序</li>
+</ul>
+</li>
 </ol>
 <h1 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><h1 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h1><h2 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数/最小公倍数"></a>最大公约数/最小公倍数</h2><ul>
 <li>最大公约数:greatest common divisor</li>
@@ -248,7 +254,10 @@
 <li>最小公倍数:lowest common multiple; <code>lcm(a,b)*gcd(a,b)=a*b</code>;</li>
 <li>求两个数或n个数的最小公倍数或最大公约数:<br><img src="../images/gcd.png" alt=""></li>
 </ul>
-<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
+<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
+<li>素数: 只有1和本身两个约数;判断是否为素数,只需要对前根号n个数进行判断<br><img src="../images/prime.png" alt=""></li>
+</ul>
+<h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
 <ol>
 <li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1): 可以把最右边的一个1变成0;<br>2.</li>
 </ol>
@@ -2229,8 +2238,8 @@ return result;
 <li><p>实例解释算法过程:</p>
 <ul>
 <li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""> </li>
-<li><p><img src="/media/顶标变换.png" alt=""> </p>
+<li><img src="/media/14846361640808.jpg" alt=""></li>
+<li><p><img src="/media/顶标变换.png" alt=""></p>
 </li>
 <li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
 </li>
@@ -2245,7 +2254,7 @@ return result;
 <li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
 <li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a> </li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
