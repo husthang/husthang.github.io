@@ -278,10 +278,23 @@
 <ol>
 <li>长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数</li>
 </ol>
-<h1 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><h1 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h1><h2 id="约数"><a href="#约数" class="headerlink" title="约数"></a>约数</h2><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
+<h1 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><h1 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h1><h2 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数/最小公倍数"></a>最大公约数/最小公倍数</h2><ul>
+<li>最大公约数:greatest common divisor</li>
+<li>欧几里得法(辗转相除法):设<code>a&gt;b</code>,<code>a=b*p+q</code>,b与q的最大公约也就是a与b的最大公约数,直到q为0,直接返回;</li>
+<li>最小公倍数:lowest common multiple; <code>lcm(a,b)*gcd(a,b)=a*b</code>;</li>
+<li>求两个数或n个数的最小公倍数或最大公约数:<br><img src="../images/gcd.png" alt=""></li>
+</ul>
+<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
 <ol>
 <li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1): 可以把最右边的一个1变成0;<br>2.</li>
 </ol>
+<h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><ul>
+<li>卡特兰数递推关系:<img src="../images/卡特兰.png" alt=""></li>
+<li><p>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></p>
+</li>
+<li><p>栈的出栈序列:1到n的序列,依次进栈,有多少种不同的出栈序列</p>
+</li>
+</ul>
 <h1 id="其他经典算法"><a href="#其他经典算法" class="headerlink" title="其他经典算法"></a>其他经典算法</h1><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
@@ -367,11 +380,31 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="项目-实习"><a href="#项目-实习" class="headerlink" title="项目/实习"></a>项目/实习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><p>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</p>
-<h2 id="1-2-JDK和JRE的区别"><a href="#1-2-JDK和JRE的区别" class="headerlink" title="1.2    JDK和JRE的区别"></a>1.2    JDK和JRE的区别</h2><p>JRE: java runtime environment运行时环境(JRE)是将要执行Java程序的Java虚拟机。它同时也包含了执行applet需要的浏览器插件。J<br>JDK: java development kit完整的Java软件开发包，包含了JRE，编译器和其他的工具(比如：JavaDoc，Java调试器)，可以让开发者开发、编译、执行Java应用程序</p>
-<h2 id="1-3-面向对象三大特征"><a href="#1-3-面向对象三大特征" class="headerlink" title="1.3    面向对象三大特征"></a>1.3    面向对象三大特征</h2><p>封装encapsulation：封装是指隐藏对象的属性和实现细节,仅对外提供公共访问方式<br>继承inheritance：Java只支持单继承,<br>多态polymorphism：</p>
-<h2 id="1-4-override和overload"><a href="#1-4-override和overload" class="headerlink" title="1.4    override和overload"></a>1.4    override和overload</h2><p>override:方法重写: 子类中出现和父类中方法声明一模一样的方法<br>方法的重写（override）两同两小一大原则：<br>方法名相同，参数类型相同<br>子类返回类型小于等于父类方法返回类型，(从而可类型自动转换)<br>子类抛出异常小于等于父类方法抛出异常，<br>子类访问权限大于等于父类方法访问权限。</p>
-<p>overload：方法重载: 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关</p>
+      <content:encoded><![CDATA[<h1 id="项目-实习"><a href="#项目-实习" class="headerlink" title="项目/实习"></a>项目/实习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#1-1-什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>1.1    什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
+<li>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</li>
+</ul>
+<h2 id="1-2-JDK和JRE的区别"><a href="#1-2-JDK和JRE的区别" class="headerlink" title="1.2    JDK和JRE的区别"></a>1.2    JDK和JRE的区别</h2><ul>
+<li>JRE: java runtime environment运行时环境(JRE)是将要执行Java程序的Java虚拟机。它同时也包含了执行applet需要的浏览器插件。J</li>
+<li>JDK: java development kit完整的Java软件开发包，包含了JRE，编译器和其他的工具(比如：JavaDoc，Java调试器)，可以让开发者开发、编译、执行Java应用程序</li>
+</ul>
+<h2 id="1-3-面向对象三大特征"><a href="#1-3-面向对象三大特征" class="headerlink" title="1.3    面向对象三大特征"></a>1.3    面向对象三大特征</h2><ul>
+<li>封装encapsulation：封装是指隐藏对象的属性和实现细节,仅对外提供公共访问方式</li>
+<li>继承inheritance：Java只支持单继承,</li>
+<li>多态polymorphism：</li>
+</ul>
+<h2 id="1-4-override和overload"><a href="#1-4-override和overload" class="headerlink" title="1.4    override和overload"></a>1.4    override和overload</h2><ul>
+<li>override:方法重写: 子类中出现和父类中方法声明一模一样的方法</li>
+<li><p>方法的重写（override）两同两小一大原则：</p>
+<ul>
+<li>方法名相同，参数类型相同</li>
+<li>子类返回类型小于等于父类方法返回类型，(从而可类型自动转换)</li>
+<li>子类抛出异常小于等于父类方法抛出异常，</li>
+<li>子类访问权限大于等于父类方法访问权限。</li>
+</ul>
+</li>
+<li><p>overload：方法重载: 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关</p>
+</li>
+</ul>
 <h2 id="1-5-static和final"><a href="#1-5-static和final" class="headerlink" title="1.5    static和final"></a>1.5    static和final</h2><p>static，final初始化总结：<br>1、被final修饰而没有被static修饰的类的属性变量只能在两种情况下初始化:(必须初始化）<br>   a.在它被声明的时候赋值;b.在构造函数里初始化;c .在非静态块里<br>2、被static修饰而没有被final修饰的类的属性变量只能在两种情况下初始化:(可以不初始化）<br>   a.在它被声明的时候赋值;b.在静态或非静态快里初始化;<br>3、同时被final和static修饰的类的属性变量只能在两种情况下初始化:（必须初始化）<br>   a.在它被定义的时候;b.在类的静态块里初始化</p>
 <p>接口里面定义的常量必须初始化；</p>
 <h2 id="1-6-代码块执行顺序"><a href="#1-6-代码块执行顺序" class="headerlink" title="1.6    代码块执行顺序"></a>1.6    代码块执行顺序</h2><p><strong>父类静态-子类静态-父类属性初始化,普通代码,块构造函数-子类属性初始 构造块和构造函数(new 则执行)</strong><br>1.父类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）<br>2 .子类静态代码块 （  java虚拟机加载类时，就会执行该块代码，故只执行一次）</p>
@@ -435,7 +468,9 @@
 <h2 id="1-23-Java中的HashMap的工作原理是什么？"><a href="#1-23-Java中的HashMap的工作原理是什么？" class="headerlink" title="1.23        Java中的HashMap的工作原理是什么？"></a>1.23        Java中的HashMap的工作原理是什么？</h2><h2 id="1-24-HashMap和Hashtable有什么区别？"><a href="#1-24-HashMap和Hashtable有什么区别？" class="headerlink" title="1.24    HashMap和Hashtable有什么区别？"></a>1.24    HashMap和Hashtable有什么区别？</h2><h2 id="1-25-hashCode-和equals-方法的重要性体现在什么地方？"><a href="#1-25-hashCode-和equals-方法的重要性体现在什么地方？" class="headerlink" title="1.25    hashCode()和equals()方法的重要性体现在什么地方？"></a>1.25    hashCode()和equals()方法的重要性体现在什么地方？</h2><h2 id="1-26-数组-Array-和列表-ArrayList-有什么区别？"><a href="#1-26-数组-Array-和列表-ArrayList-有什么区别？" class="headerlink" title="1.26    数组(Array)和列表(ArrayList)有什么区别？"></a>1.26    数组(Array)和列表(ArrayList)有什么区别？</h2><h2 id="1-27-ArrayList和LinkedList有什么区别？"><a href="#1-27-ArrayList和LinkedList有什么区别？" class="headerlink" title="1.27    ArrayList和LinkedList有什么区别？"></a>1.27    ArrayList和LinkedList有什么区别？</h2><ul>
 <li>1.ArrayList是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构.<br>这里的所谓动态数组并不是那个“ 有多少元素就申请多少空间 ”的意思，通过查看源码，可以发现，这个动态数组是这样实现的，如果没指定数组大小，则申请默认大小为10的数组，当元素个数增加，数组无法存储时，系统会另个申请一个长度为当前长度1.5倍的数组，然后，把之前的数据拷贝到新建的数组。</li>
 <li>2.对于随机访问get和set，ArrayList优于LinkedList，因为LinkedList要移动指针。</li>
-<li>3.对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。<h2 id="1-28-Comparable和Comparator接口是干什么的？"><a href="#1-28-Comparable和Comparator接口是干什么的？" class="headerlink" title="1.28    Comparable和Comparator接口是干什么的？"></a>1.28    Comparable和Comparator接口是干什么的？</h2><h2 id="1-29-什么是Java优先级队列-Priority-Queue-？"><a href="#1-29-什么是Java优先级队列-Priority-Queue-？" class="headerlink" title="1.29    什么是Java优先级队列(Priority Queue)？"></a>1.29    什么是Java优先级队列(Priority Queue)？</h2><h2 id="1-30-HashSet和TreeSet有什么区别？"><a href="#1-30-HashSet和TreeSet有什么区别？" class="headerlink" title="1.30    HashSet和TreeSet有什么区别？"></a>1.30    HashSet和TreeSet有什么区别？</h2></li>
+<li>3.对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。</li>
+</ul>
+<h2 id="1-28-Comparable和Comparator接口是干什么的？"><a href="#1-28-Comparable和Comparator接口是干什么的？" class="headerlink" title="1.28    Comparable和Comparator接口是干什么的？"></a>1.28    Comparable和Comparator接口是干什么的？</h2><h2 id="1-29-什么是Java优先级队列-Priority-Queue-？"><a href="#1-29-什么是Java优先级队列-Priority-Queue-？" class="headerlink" title="1.29    什么是Java优先级队列(Priority Queue)？"></a>1.29    什么是Java优先级队列(Priority Queue)？</h2><h2 id="1-30-HashSet和TreeSet有什么区别？"><a href="#1-30-HashSet和TreeSet有什么区别？" class="headerlink" title="1.30    HashSet和TreeSet有什么区别？"></a>1.30    HashSet和TreeSet有什么区别？</h2><ul>
 <li>HashSet是由一个hash表来实现的，因此，它的元素是无序的。add()，remove()，contains()方法的时间复杂度是O(1)。<br>另一方面，TreeSet是由一个树形的结构来实现的，它里面的元素是有序的。因此，add()，remove()，contains()方法的时间复杂度是O(logn)。</li>
 </ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.nowcoder.com/ta/review-java" target="_blank" rel="external">https://www.nowcoder.com/ta/review-java</a></p>
@@ -453,24 +488,36 @@
 </ol>
 </li>
 </ul>
-<h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><p><img src="../images/tcp.jpg" alt=""></p>
-<ol>
-<li><p>三次握手和四次分手的过程</p>
-</li>
-<li><p>为什么要三次握手和四次分手</p>
-</li>
-<li>参考:<a href="http://www.jellythink.com/archives/705" target="_blank" rel="external">简析TCP的三次握手与四次分手</a></li>
-</ol>
 <h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><p><img src="../images/ip.png" alt=""><br><img src="../images/ip1.png" alt=""></p>
 <ul>
-<li>注意:<ol>
-<li>A,B,C三类地址,每个网络中的最大主机数都要减2(如上图),主机号全零和全一的不能用(主机号全为0的时候，表示一个网段;主机号全1表示一个指向网络的广播)</li>
-<li>A,B,C三类地址,可用网络号</li>
-</ol>
+<li>A类地址,<ul>
+<li>可指派的网络号126个(2^7-2),见2的原因是: 网络号全0为保留地址,表示本网络;网络号127(0111 1111)保留为回环测试(如127.0.0.1)</li>
+<li>可指派的主机号: 2^24-2; 减去全0的主机号,减去全1主机号</li>
+</ul>
+</li>
+<li>B类地址<ul>
+<li>可指派网络号2^14-1:128.0不指派,最小可指派的网络号是128.1</li>
+<li>主机号减2,2^16-2;</li>
+</ul>
+</li>
+<li>C类地址<ul>
+<li>可指派网络号2^21-1:192.0.0不指派,最小可指派的网络号192.0.1</li>
+<li>主机号减2: 2^8-2;</li>
+</ul>
 </li>
 </ul>
 <h2 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h2><ul>
-<li>传输层定义两种传输协议：TCP（传输控制协议）和 UDP（或用户数据报协议）<br><img src="../images/tcp-udp.png" alt=""></li>
+<li>运输层协议和网络层协议的主要区别<br><img src="../images/运输层网络层.png" alt=""></li>
+<li><p>运输层的协议端口号</p>
+<ul>
+<li>协议端口号(protocol port number),简称端口;使不同的操作系统中的进程可以相互通信,用统一的方法对TCP/IP体系中的应用进程进行标识;16位的端口号(65535个)</li>
+<li>通信的终点是应用进程,但我们只需把要传送的报文交到目的主机的某一个合适的目的端口，剩下的工作（即最后交付目的进程）就由 TCP 来完成</li>
+</ul>
+</li>
+<li><p>tcp字段含义<br><img src="../images/tcp字段.png" alt=""></p>
+</li>
+<li><p>传输层定义两种传输协议：TCP（传输控制协议）和 UDP（或用户数据报协议）<br><img src="../images/tcp-udp.png" alt=""></p>
+</li>
 <li>TCP协议和UDP协议特性区别总结：<ol>
 <li>TCP协议在传送数据段的时候要给段标号；UDP协议不</li>
 <li>TCP协议可靠；UDP协议不可靠</li>
@@ -481,12 +528,22 @@
 </ol>
 </li>
 </ul>
+<h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><p><img src="../images/tcp.jpg" alt=""></p>
+<ol>
+<li>三次握手和四次分手的过程</li>
+<li>为什么要三次握手和四次分手</li>
+<li>参考:<a href="http://www.jellythink.com/archives/705" target="_blank" rel="external">简析TCP的三次握手与四次分手</a></li>
+</ol>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
 <li>http状态码<br><img src="../images/http状态码.png" alt=""><ul>
 <li>404  未找到，服务器找不到所请求的网页。</li>
 <li>302  临时移动，服务器从不同位置的网页响应请求，请求者应继续使用原有位置进行以后的请求。</li>
 <li>500  （服务器内部错误），服务器遇到错误，无法完成请求。</li>
 <li>403  （禁止）服务器拒绝请求</li>
+</ul>
+</li>
+<li>http与https<ul>
+<li>HTTP的端口号是80，https的端口号是443</li>
 </ul>
 </li>
 </ul>
