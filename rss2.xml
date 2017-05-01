@@ -210,6 +210,7 @@
 </ol>
 <h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><ul>
 <li>定义: 如果某二叉树中任意结点的左右子树的深度相差不超过1,那么它就是一颗平衡二叉树</li>
+<li>AVL树,自平衡二叉树;<br><img src="../images/AVL.png" alt=""></li>
 </ul>
 <h3 id="平衡二叉树的判定"><a href="#平衡二叉树的判定" class="headerlink" title="平衡二叉树的判定"></a>平衡二叉树的判定</h3><ol>
 <li><a href="https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222?tpId=13&amp;tqId=11192&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第39题-平衡二叉树</a></li>
@@ -278,12 +279,13 @@
 <ul>
 <li>参考:<a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html">见本人排序总结</a></li>
 </ul>
-<h2 id="经典题目记录"><a href="#经典题目记录" class="headerlink" title="经典题目记录"></a>经典题目记录</h2><ol>
-<li>长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数<ul>
-<li>使用堆排序</li>
-</ul>
-</li>
+<h2 id="经典题目记录"><a href="#经典题目记录" class="headerlink" title="经典题目记录"></a>经典题目记录</h2><h2 id="长度10000的数组-假设数组中的元素平均分成了100段-每一段内的元素有序-求整个数组最大的前20个数"><a href="#长度10000的数组-假设数组中的元素平均分成了100段-每一段内的元素有序-求整个数组最大的前20个数" class="headerlink" title="长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数"></a>长度10000的数组,假设数组中的元素平均分成了100段,每一段内的元素有序,求整个数组最大的前20个数</h2><ul>
+<li>使用堆排序<h2 id="最小的k个数"><a href="#最小的k个数" class="headerlink" title="最小的k个数"></a>最小的k个数</h2><ol>
+<li><a href="https://www.nowcoder.com/practice/6a296eb82cf844ca8539b57c23e6e9bf?tpId=13&amp;tqId=11182&amp;tPage=2&amp;rp=2&amp;ru=%2Fta%2Fcoding-interviews&amp;qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking" target="_blank" rel="external">牛客网-剑指offer第29题-最小的k个数</a></li>
+<li>思路: O(nlogk)算法,堆排序</li>
 </ol>
+</li>
+</ul>
 <h1 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h1><h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><h2 id="哈希表查找"><a href="#哈希表查找" class="headerlink" title="哈希表查找"></a>哈希表查找</h2><h1 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h1><h2 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数/最小公倍数"></a>最大公约数/最小公倍数</h2><ul>
 <li>最大公约数:greatest common divisor</li>
 <li>欧几里得法(辗转相除法):设<code>a&gt;b</code>,<code>a=b*p+q</code>,b与q的最大公约也就是a与b的最大公约数,直到q为0,直接返回;</li>
@@ -293,10 +295,13 @@
 <h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
 <li>素数: 只有1和本身两个约数;判断是否为素数,只需要对前根号n个数进行判断<br><img src="../images/prime.png" alt=""></li>
 </ul>
-<h2 id="位操作"><a href="#位操作" class="headerlink" title="位操作"></a>位操作</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
 <ol>
 <li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1): 可以把最右边的一个1变成0;<br>2.</li>
 </ol>
+<h3 id="二进制中的1的个数"><a href="#二进制中的1的个数" class="headerlink" title="二进制中的1的个数"></a>二进制中的1的个数</h3><ul>
+<li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1)</li>
+</ul>
 <h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><ul>
 <li>卡特兰数递推关系:<img src="../images/卡特兰.png" alt=""></li>
 <li><p>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></p>
