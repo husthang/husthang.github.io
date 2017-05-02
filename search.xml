@@ -268,10 +268,11 @@
 </ul>
 <h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><ul>
 <li>卡特兰数递推关系:<img src="../images/卡特兰.png" alt=""></li>
-<li><p>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></p>
-</li>
-<li><p>栈的出栈序列:1到n的序列,依次进栈,有多少种不同的出栈序列</p>
-</li>
+<li>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></li>
+<li>栈的出栈序列:1到n的序列,依次进栈,有多少种不同的出栈序列</li>
+</ul>
+<h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><ul>
+<li>思路: 从集合依次选出每一个元素，作为排列的第一个元素，然后对剩余的元素进行全排列，如此递归处理；</li>
 </ul>
 <h1 id="其他经典算法"><a href="#其他经典算法" class="headerlink" title="其他经典算法"></a>其他经典算法</h1><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2>]]></content>
     </entry>
@@ -2128,6 +2129,7 @@ return result;
 <li>PDF阅读编辑：<a href="http://skim-app.sourceforge.net/" target="_blank" rel="external">Skim</a></li>
 <li>文本编辑器：<a href="https://atom.io/" target="_blank" rel="external">Atom</a>，markdown编辑神器，GitHub官方推荐</li>
 <li>Synergy 实现Windows与Mac OSX之间共享一套键鼠: <a href="http://www.jianshu.com/p/c4b538d2152e" target="_blank" rel="external">Synergy</a></li>
+<li>邮件客户端: <a href="http://www.yomail.com/" target="_blank" rel="external">YoMail</a></li>
 </ol>
 ]]></content>
     </entry>
