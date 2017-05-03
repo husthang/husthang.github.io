@@ -402,11 +402,7 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书"><a href="#最近看了什么书" class="headerlink" title="最近看了什么书"></a>最近看了什么书</h2><ul>
-<li>Spring技术内幕:解析Spring 设计架构与技术原理</li>
-<li>effective java</li>
-</ul>
-<h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
+      <content:encoded><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
 <li>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</li>
 </ul>
 <h2 id="JDK和JRE的区别"><a href="#JDK和JRE的区别" class="headerlink" title="JDK和JRE的区别"></a>JDK和JRE的区别</h2><ul>
@@ -644,7 +640,29 @@
 <h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ul>
 <li>IEEE 802.3—CSMA/CD网络，定义CSMA/CD总线网的MAC子层和物理层的规范,人们习惯将<strong>IEEE 802.3称为”以太网</strong>;</li>
 </ul>
-<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1>]]></content:encoded>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="数据库四大特性"><a href="#数据库四大特性" class="headerlink" title="数据库四大特性"></a>数据库四大特性</h2><ol>
+<li>原子性</li>
+<li>一致性</li>
+<li>隔离性</li>
+<li>持久性</li>
+</ol>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1><h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书"><a href="#最近看了什么书" class="headerlink" title="最近看了什么书"></a>最近看了什么书</h2><ul>
+<li>Spring技术内幕:解析Spring 设计架构与技术原理</li>
+<li>effective java</li>
+</ul>
+<h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><ul>
+<li>您好,我叫刘航,湖北孝感人;来自华中科技大学电信学院,18年6月份研究生毕业;</li>
+<li>研究生一年级期间,参加华为软件精英挑战赛,并获得全国亚军; 16年暑假在华为公司武汉研究所实习;</li>
+<li>在软件技能方面,熟悉Java基础,了解linux, Spring框架,对设计模式也有一定的了解; 有个人博客站点,总结学习成果;</li>
+<li>个人爱好方面,喜欢运动,特别是跑步,大概每周会跑一次8公里;感觉跑步特别锻炼人的意志力;</li>
+</ul>
+<h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><ul>
+<li>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛</li>
+<li>描述：在有向图中求最短路径的问题，约束是：给定了起点和重点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</li>
+</ul>
+<p>解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。</p>
+<p>求指派问题： 用匈牙利算法，km算法（效率更高）</p>
+]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
