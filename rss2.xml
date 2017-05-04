@@ -474,7 +474,7 @@
 <li>abstract 不能与private、static、final或native并列修饰同一个方法<br><img src="../images/接口和抽象类区别.png" alt=""></li>
 </ol>
 <h2 id="1-12-进程和线程的区别"><a href="#1-12-进程和线程的区别" class="headerlink" title="1.12    进程和线程的区别"></a>1.12    进程和线程的区别</h2><p>进程是一种静态的概念，；进程是表示资源分配的基本单位，一个进程内可以包含多个线程；进程间切换开销大；<br>线程是进程中执行运算的最小单位，可以理解为程序内部的一条执行路径，顺序控制流；每个线程有独立的有独立的线程栈和程序计数器，线程切换开销小。</p>
-<h2 id="1-13-线程的几种可用状态"><a href="#1-13-线程的几种可用状态" class="headerlink" title="1.13    线程的几种可用状态"></a>1.13    线程的几种可用状态</h2><ol>
+<h2 id="线程的几种可用状态"><a href="#线程的几种可用状态" class="headerlink" title="线程的几种可用状态"></a>线程的几种可用状态</h2><ol>
 <li>新建( new )：新创建了一个线程对象。</li>
 <li>可运行( runnable )：线程对象创建后，其他线程(比如 main 线程）调用了该对象 的 start ()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取 cpu 的使用权 。</li>
 <li>运行( running )：可运行状态( runnable )的线程获得了 cpu 时间片（ timeslice ） ，执行程序代码。</li>
@@ -555,7 +555,12 @@
 <li>参考:<a href="http://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="external">深入剖析Java中的装箱和拆箱</a></li>
 </ol>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.nowcoder.com/ta/review-java" target="_blank" rel="external">https://www.nowcoder.com/ta/review-java</a></p>
-<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h1 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h1><h2 id="对mvc模式的理解"><a href="#对mvc模式的理解" class="headerlink" title="对mvc模式的理解"></a>对mvc模式的理解</h2><ul>
+<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="对Spring的理解"><a href="#对Spring的理解" class="headerlink" title="对Spring的理解"></a>对Spring的理解</h2><ul>
+<li>Spring是一个轻量级的JavaEE开发框架; Spring的核心思想是控制反转和面向切面;</li>
+<li>控制反转: 借助于“第三方”实现具有依赖关系的对象之间的解耦</li>
+<li>面向切面:在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。</li>
+</ul>
+<h1 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h1><h2 id="对mvc模式的理解"><a href="#对mvc模式的理解" class="headerlink" title="对mvc模式的理解"></a>对mvc模式的理解</h2><ul>
 <li>一般J2EE web开发,是一个分层式的架构,表现层(web层)-业务层(service)层-持久层(dao层),mvc模式是表现层开发的一种设计模式,目的是解除控制逻辑,业务逻辑,视图之间的耦合;mvc模式由模型,视图,控制器三部分组成;控制器是接收客户端所提交的请求,将请求转发给适当的模型进行处理,然后将处理的结构返回给视图;</li>
 </ul>
 <h2 id="Session和cookie的区别"><a href="#Session和cookie的区别" class="headerlink" title="Session和cookie的区别"></a>Session和cookie的区别</h2><ol>
