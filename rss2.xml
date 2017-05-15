@@ -65,7 +65,7 @@
     </item>
     
     <item>
-      <title>数据结构和算法总结</title>
+      <title>面试笔试编程题总结(数据结构和算法总结)</title>
       <link>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</link>
       <guid>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</guid>
       <pubDate>Sun, 16 Apr 2017 13:25:41 GMT</pubDate>
@@ -127,10 +127,14 @@
 </li>
 </ul>
 <h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
-<li><a href="http://www.lintcode.com/en/problem/longest-common-substring/" target="_blank" rel="external">lintcode: 最长公共子串</a></li>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-substring/" target="_blank" rel="external">最长公共子串</a></li>
 <li>思路: 暴力法和<strong>动态规划法</strong>.</li>
 </ol>
-<h2 id="字符串与整数-数组的互相转换"><a href="#字符串与整数-数组的互相转换" class="headerlink" title="字符串与整数,数组的互相转换"></a>字符串与整数,数组的互相转换</h2><h3 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h3><h2 id="字符串反转-1"><a href="#字符串反转-1" class="headerlink" title="字符串反转"></a>字符串反转</h2><ul>
+<h2 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h2><ol>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-subsequence/" target="_blank" rel="external">最长公共子序列</a></li>
+</ol>
+<h2 id="字符串与整数-数组的互相转换"><a href="#字符串与整数-数组的互相转换" class="headerlink" title="字符串与整数,数组的互相转换"></a>字符串与整数,数组的互相转换</h2><p>1.</p>
+<h3 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h3><h2 id="字符串反转-1"><a href="#字符串反转-1" class="headerlink" title="字符串反转"></a>字符串反转</h2><ul>
 <li>StringBuilder.reverse方法;</li>
 <li><a href="https://leetcode.com/problems/reverse-words-in-a-string/#/description" target="_blank" rel="external">leetcode|字符串反转</a></li>
 </ul>
@@ -147,8 +151,9 @@
 <h2 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/75e878df47f24fdc9dc3e400ec6058ca?tpId=13&amp;tqId=11168&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第15题-反转链表</a></li>
 </ol>
-<h2 id="合并两个排序链表"><a href="#合并两个排序链表" class="headerlink" title="合并两个排序链表"></a>合并两个排序链表</h2><ol>
+<h2 id="合并两个排序链表-合并排序数组"><a href="#合并两个排序链表-合并排序数组" class="headerlink" title="合并两个排序链表/合并排序数组"></a>合并两个排序链表/合并排序数组</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/d8b6b4358f774294a89de2a6ac4d9337?tpId=13&amp;tqId=11169&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第16题-合并两个排序链表</a></li>
+<li>合并排序数组,不用辅助空间的方法</li>
 </ol>
 <h2 id="复杂链表的复制"><a href="#复杂链表的复制" class="headerlink" title="复杂链表的复制"></a>复杂链表的复制</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/f836b2c43afc4b35ad6adc41ec941dba?tpId=13&amp;tqId=11178&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第25题-复杂链表的复制</a></li>
@@ -314,10 +319,14 @@
 <li>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></li>
 <li>栈的出栈序列:1到n的序列,依次进栈,有多少种不同的出栈序列</li>
 </ul>
-<h2 id="全排列"><a href="#全排列" class="headerlink" title="全排列"></a>全排列</h2><ul>
+<h2 id="全排列和全组合"><a href="#全排列和全组合" class="headerlink" title="全排列和全组合"></a>全排列和全组合</h2><ul>
 <li>思路: 从集合依次选出每一个元素，作为排列的第一个元素，然后对剩余的元素进行全排列，如此递归处理；</li>
+<li>参考:<a href="https://segmentfault.com/a/1190000002710424" target="_blank" rel="external">全排列/全组合</a></li>
 </ul>
-<h1 id="其他经典算法"><a href="#其他经典算法" class="headerlink" title="其他经典算法"></a>其他经典算法</h1><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2>]]></content:encoded>
+<h1 id="其他经典算法"><a href="#其他经典算法" class="headerlink" title="其他经典算法"></a>其他经典算法</h1><h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><h2 id="贪心算法"><a href="#贪心算法" class="headerlink" title="贪心算法"></a>贪心算法</h2><h1 id="其他经典题目"><a href="#其他经典题目" class="headerlink" title="其他经典题目"></a>其他经典题目</h1><h2 id="打印日历"><a href="#打印日历" class="headerlink" title="打印日历"></a>打印日历</h2><ul>
+<li>见java核心技术一书</li>
+</ul>
+]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
@@ -656,15 +665,32 @@
 <h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ul>
 <li>IEEE 802.3—CSMA/CD网络，定义CSMA/CD总线网的MAC子层和物理层的规范,人们习惯将<strong>IEEE 802.3称为”以太网</strong>;</li>
 </ul>
-<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库四大特性"><a href="#数据库四大特性" class="headerlink" title="数据库四大特性"></a>数据库四大特性</h2><ol>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><ul>
+<li>描述操作系统的两个主要责任。</li>
+<li>定义内存和进程管理。</li>
+<li>解释分时操作是如何创建虚拟机假象的。</li>
+<li>解释逻辑地址和物理地址之间的关系。</li>
+<li>比较内存管理方法。</li>
+<li>区别固定分区法和固定分区法。</li>
+<li>定义和应用分区选择算法。</li>
+<li>解释请求分页是如何创建虚拟机假象的。</li>
+<li>解释进程生存周期的各个阶段和过渡。</li>
+<li>解释各种 CPU 调度算法的处理。</li>
+</ul>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库四大特性"><a href="#数据库四大特性" class="headerlink" title="数据库四大特性"></a>数据库四大特性</h2><ol>
 <li>原子性</li>
 <li>一致性</li>
 <li>隔离性</li>
 <li>持久性</li>
 </ol>
-<h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1><h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书"><a href="#最近看了什么书" class="headerlink" title="最近看了什么书"></a>最近看了什么书</h2><ul>
+<h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1><h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书-待看的书籍"><a href="#最近看了什么书-待看的书籍" class="headerlink" title="最近看了什么书/待看的书籍"></a>最近看了什么书/待看的书籍</h2><ul>
 <li>Spring技术内幕:解析Spring 设计架构与技术原理</li>
 <li>effective java</li>
+<li>Java并发编程实战</li>
+<li>深入理解Java虚拟机 <strong>优先</strong></li>
+<li>Mysql必知必会  <strong>优先</strong></li>
+<li>计算机网络(谢仁希版) <strong>优先</strong></li>
+<li>操作系统(教材版) <strong>优先</strong></li>
 </ul>
 <h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><ul>
 <li>您好,我叫刘航,湖北孝感人;来自华中科技大学电信学院,18年6月份研究生毕业;</li>
@@ -2770,90 +2796,6 @@ return result;
     </item>
     
     <item>
-      <title>匈牙利算法和KM算法详解及java实现</title>
-      <link>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</link>
-      <guid>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</guid>
-      <pubDate>Sun, 19 Feb 2017 17:19:23 GMT</pubDate>
-      <description>
-      
-        匈牙利算法和KM算法详解及java实现
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="/media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
-</ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="/media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
-<ul>
-<li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""></li>
-<li><p><img src="/media/顶标变换.png" alt=""></p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html#disqus_thread</comments>
-    </item>
-    
-    <item>
       <title>linux总结</title>
       <link>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</link>
       <guid>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</guid>
@@ -2987,6 +2929,90 @@ return result;
 ]]></content:encoded>
       
       <comments>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>匈牙利算法和KM算法详解及java实现</title>
+      <link>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</link>
+      <guid>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</guid>
+      <pubDate>Sun, 19 Feb 2017 17:19:23 GMT</pubDate>
+      <description>
+      
+        匈牙利算法和KM算法详解及java实现
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
+<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
+<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
+<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
+<li><img src="/media/graph.png" alt=""></li>
+<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+</ul>
+<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
+<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
+<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
+<li><img src="/media/增广路径.png" alt=""></li>
+<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
+<li>由增广路径的定义,可以推出三个结论:<ol>
+<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
+<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
+<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
+</ol>
+</li>
+<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
+<li>置M为空;</li>
+<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
+<li>重复步骤2,直到找不出增广路径为止.</li>
+</ol>
+</li>
+<li><strong>匈牙利算法实现(java)</strong><ul>
+<li><img src="/media/14846300394186.jpg" alt=""></li>
+<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
+<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
+<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
+<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
+<li>对任意的G和M,可行标都是存在的</li>
+<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
+</ul>
+<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
+<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
+<li>初始化可行顶标的值</li>
+<li>用匈牙利算法在等价子图中寻找完备匹配</li>
+<li>若未找到完备匹配则修改可行顶标的值</li>
+<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
+</ol>
+</li>
+<li><p>实例解释算法过程:</p>
+<ul>
+<li>带权二分图如下:</li>
+<li><img src="/media/14846361640808.jpg" alt=""></li>
+<li><p><img src="/media/顶标变换.png" alt=""></p>
+</li>
+<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
+</li>
+<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
+<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html#disqus_thread</comments>
     </item>
     
   </channel>
