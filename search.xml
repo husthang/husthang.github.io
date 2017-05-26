@@ -4,6 +4,151 @@
   
     
     <entry>
+      <title><![CDATA[操作系统总结]]></title>
+      <url>http://liuhang.net.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"><![CDATA[<h1 id="操作系统概念"><a href="#操作系统概念" class="headerlink" title="操作系统概念"></a>操作系统概念</h1><ol>
+<li>基本概念：管理计算机硬件和软件资源，方便用户使用计算机的程序集合；</li>
+<li>操作系统提供的服务和功能：<ul>
+<li>提供用户的<ul>
+<li>用户界面</li>
+<li>程序执行</li>
+<li>I/O操作</li>
+<li>文件系统操作</li>
+<li>通信</li>
+<li>错误检测</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>命令解释器：</p>
+<ul>
+<li>命令解释器从用户或文件中读取命令并执行，一般而言把他们转化<br>成系统调用，它通常是不属于内核</li>
+</ul>
+</li>
+<li><p>中断</p>
+<ul>
+<li>操作系统由中断驱动</li>
+<li>中断：值CPU对系统中发生的异步事件的响应</li>
+</ul>
+</li>
+</ol>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><ol>
+<li>进程的概念： 进程是具有一定独立功能的程序关于某个数据集合的一次运行活动。进程是程序的执行，动态概念，一次运行过程，有生命过程。</li>
+<li>进程控制块（process control block, PCB）:记录进程的属性信息，进程标识信息，处理器状态信息，进程控制信息</li>
+<li>进程间通信的两种基本模式： 1）共享内存， 2）消息传递<br><img src="../images/进程通信模型.png" alt="进程通信模型"></li>
+</ol>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><ol>
+<li>多处理器系统带来的物理并行称为<strong>并行性</strong>，用编程技术达到的虚拟并行性，称为并发性</li>
+<li>线程是CPU调度的基本单元，由线程ID,程序计数器，寄存器集合，栈组成。</li>
+</ol>
+<h1 id="互斥和同步"><a href="#互斥和同步" class="headerlink" title="互斥和同步"></a>互斥和同步</h1><ol>
+<li>互斥（对资源的独用），同步（进程/线程之间的通信）</li>
+<li>生产者和消费者问题：有限缓冲问题，用于多线程同步；多生产者消费者算法：用二元信号量保证互斥<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">semaphore mutex = 1;//二元信号量</div><div class="line">semaphore fillCount = 0;// 满缓存信号量</div><div class="line">semaphore emptyCount = BUFFER_SIZE;//空缓存信号量</div><div class="line"></div><div class="line"></div><div class="line">procedure producer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        item = produceItem();//生产者生产数据</div><div class="line">        down(emptyCount);</div><div class="line">            down(mutex);//互斥，申请使用权</div><div class="line">                putItemIntoBuffer(item);//将数据放入缓存区</div><div class="line">            up(mutex);//释放使用权</div><div class="line">        up(fillCount);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">procedure consumer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        down(fillCount);</div><div class="line">            down(mutex);</div><div class="line">                item = removeItemFromBuffer();//从缓存区中读取数据</div><div class="line">            up(mutex);</div><div class="line">        up(emptyCount);</div><div class="line">        consumeItem(item);//消费者使用数据</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98" target="_blank" rel="external">参考</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[计算机网络总结]]></title>
+      <url>http://liuhang.net.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[基础数据结构-字符串]]></title>
+      <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E7%AC%A6%E4%B8%B2.html</url>
+      <content type="html"><![CDATA[<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>重难点是: <strong>模式匹配(kmp算法)</strong>和<strong>正则表达式匹配</strong>; 在选择题中,可能会出现问next数组的题目</p>
+<h2 id="Java字符串API"><a href="#Java字符串API" class="headerlink" title="Java字符串API"></a>Java字符串API</h2><ul>
+<li>toCharArray();</li>
+<li><strong>StringBuilder</strong>常用,线程不安全,效率高; StringBuffer  线程安全,效率低;</li>
+<li>matches()字符串是否匹配给定的正则表达式。</li>
+<li>indexOf()返回指定子字符串在此字符串中第一次出现处的索引。(模式匹配api)</li>
+<li>trim()返回字符串的副本，忽略前导空白和尾部空白。</li>
+<li>valueOf()返回…字符串形式</li>
+<li>split()按给定的正则表达式拆分字符串</li>
+<li>replace/replaceAll/replaceFirst 替换字符串</li>
+<li>reverse() 逆序</li>
+</ul>
+<h2 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h2><ul>
+<li>定义:s和t为给定的两个字符串,在主串s中查找子串t的过程称为模式匹配,返回t在s中第一次出现的位置</li>
+<li>OJ题目:<a href="https://leetcode.com/problems/implement-strstr/" target="_blank" rel="external">LeetCode|字符串匹配,子串第一次出现的位置</a></li>
+<li>三种方法:<ol>
+<li>java api: indexOf;</li>
+<li>暴力搜</li>
+<li>KMP算法</li>
+</ol>
+</li>
+<li>kmp算法选择题:next数组<ul>
+<li><a href="https://www.nowcoder.com/questionTerminal/57bdf294407c4477969fc7b4d56c7be7" target="_blank" rel="external">next数组</a></li>
+</ul>
+</li>
+<li>求next数组的方法（递归法）<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(String source, String pattern)</span></span>&#123;</div><div class="line">       <span class="keyword">char</span>[] src = source.toCharArray();</div><div class="line">       <span class="keyword">char</span>[] pat = pattern.toCharArray();</div><div class="line">       <span class="keyword">int</span>[] next = getNext(pat);</div><div class="line">       <span class="keyword">int</span> sLen = src.length;</div><div class="line">       <span class="keyword">int</span> pLen = pat.length;</div><div class="line">       <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</div><div class="line">       <span class="keyword">while</span>(i &lt; sLen &amp;&amp; j &lt; pLen)&#123;</div><div class="line">           <span class="keyword">if</span>(j== -<span class="number">1</span> || src[i] == pat[j])&#123;</div><div class="line">               i++;</div><div class="line">               j++;</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               j = next[j];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">if</span>(j == pLen)&#123;</div><div class="line">           <span class="keyword">return</span> i - pLen;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getNext(<span class="keyword">char</span>[] p)&#123;</div><div class="line">       <span class="comment">/**</span></div><div class="line">        * 求next数组的方法</div><div class="line">        * 已知next[j]=k,求next[j+1];</div><div class="line">        * 1. 如果p[j] = p[k], 则next[j+1] = next[k] + 1;</div><div class="line">        * 2. 如果p[j] != p[k], 则令k=next[k],如果此时p[j]==p[k],则next[j+1]=k+1,</div><div class="line">        *    如果不相等,则继续递归前缀索引,令 k=next[k],继续判断,直至k=-1(即k=next[0])或者p[j]=p[k]为止</div><div class="line">        */</div><div class="line">       <span class="keyword">int</span> pLen = p.length;</div><div class="line">       <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[pLen];</div><div class="line">       next[<span class="number">0</span>] = -<span class="number">1</span>;</div><div class="line">       <span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">       <span class="keyword">int</span> k = -<span class="number">1</span>;</div><div class="line">       <span class="keyword">while</span>(j &lt; pLen-<span class="number">1</span>)&#123;</div><div class="line">           <span class="keyword">if</span>(k == -<span class="number">1</span> || p[k] == p[j])&#123;</div><div class="line">               j++;</div><div class="line">               k++;</div><div class="line">               next[j] = k;</div><div class="line">           &#125;<span class="keyword">else</span> &#123;</div><div class="line">               k = next[k];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> next;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h2><ul>
+<li>OJ题目:剑指offer第52题,Solution52;</li>
+<li><a href="https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&amp;tqId=11205&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer|正则表达式匹配</a> ;<a href="https://leetcode.com/problems/regular-expression-matching/#/description" target="_blank" rel="external">LeetCode|正则表达式匹配</a></li>
+<li>解题思路<ul>
+<li>字符串 正则表达式匹配<ol>
+<li>模式中,当前字符的下一个字符不是<code>*</code><ul>
+<li>如果当前字符匹配,则字符串和模式串都下移一位</li>
+<li>如果当前字符不匹配,则直接返回false</li>
+</ul>
+</li>
+<li>模式中,当前字符的下一个字符是<code>*</code><ul>
+<li>如果当前字符不匹配,则<code>*</code>匹配0个前位字符,模式串后移两位(前位字符,<code>*</code>前面的那个字符)</li>
+<li>如果当前字符匹配,分两组<ul>
+<li><code>*</code>匹配0个前位字符,模式串后移两位</li>
+<li><code>*</code>匹配一个或者多个前位字符,字符串后移以为,模式串不变</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串平移-String-shift"><a href="#字符串平移-String-shift" class="headerlink" title="字符串平移(String shift)"></a>字符串平移(String shift)</h2><ul>
+<li>题目描述<ul>
+<li>我们规定对一个字符串的shift操作如下： shift(“ABCD”, 0) = “ABCD” shift(“ABCD”, 1) = “BCDA” shift(“ABCD”, 2) = “CDAB” 换言之, 我们把最左侧的N个字符剪切下来, 按序附加到了右侧。给定一个长度为n的字符串，我们规定最多可以进行n次向左的循环shift操作。如果shift(string, x) = string (0＜= x ＜n), 我们称其为一次匹配(match)。求在shift过程中出现匹配的次数。</li>
+</ul>
+</li>
+<li>解决： 字符串必为周期字符串，计算出最短周期（用kmp算法中的next数组计算）</li>
+</ul>
+<h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-substring/" target="_blank" rel="external">最长公共子串</a></li>
+<li>思路: 暴力法和<strong>动态规划法</strong>.</li>
+</ol>
+<h2 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h2><ol>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-subsequence/" target="_blank" rel="external">最长公共子序列</a></li>
+</ol>
+<h2 id="字符串与整数-数组的互相转换"><a href="#字符串与整数-数组的互相转换" class="headerlink" title="字符串与整数,数组的互相转换"></a>字符串与整数,数组的互相转换</h2><p>1.</p>
+<h3 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h3><h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><ul>
+<li>StringBuilder.reverse方法;</li>
+<li><a href="https://leetcode.com/problems/reverse-words-in-a-string/#/description" target="_blank" rel="external">leetcode|字符串反转</a></li>
+</ul>
+<h2 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串"></a>回文字符串</h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[shell总结]]></title>
+      <url>http://liuhang.net.cn/shell%E7%AC%94%E8%AE%B0.html</url>
+      <content type="html"><![CDATA[<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><ol>
+<li>概念：shell, 壳。 接收用户的命令，然后调用相应的应用程序；（命令解析器）</li>
+</ol>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
+<li><a href="https://leetcode.com/problems/valid-phone-numbers/#/description" target="_blank" rel="external">正则表达式|grep|awk</a></li>
+<li><a href="https://leetcode.com/problems/tenth-line/#/description" target="_blank" rel="external">文件第几行</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[基础数据结构-字典树]]></title>
       <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8%E6%A0%91.html</url>
       <content type="html"><![CDATA[<h1 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h1><ol>
@@ -23,9 +168,25 @@
     <entry>
       <title><![CDATA[MySQL/数据库总结]]></title>
       <url>http://liuhang.net.cn/MySQL-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"><![CDATA[<h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><h2 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h2><h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
-<li><a href="https://leetcode.com/problems/duplicate-emails/#/description" target="_blank" rel="external">找出表中某个字段重复的记录|leetcode</a></li>
+      <content type="html"><![CDATA[<h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><ul>
+<li>理解笛卡尔乘积</li>
+</ul>
+<h2 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h2><h2 id="全文搜索"><a href="#全文搜索" class="headerlink" title="全文搜索"></a>全文搜索</h2><h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><ul>
+<li>提供对select语句的一层封装</li>
+</ul>
+<h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><ol>
+<li><a href="https://leetcode.com/problems/duplicate-emails/#/description" target="_blank" rel="external">找出重复的记录|leetcode|重点</a></li>
 <li><a href="https://leetcode.com/problems/combine-two-tables/#/description" target="_blank" rel="external">两个表联结查询|leetcode</a></li>
+<li><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers/#/description" target="_blank" rel="external">表自联结|leetcode</a></li>
+<li><a href="https://leetcode.com/problems/customers-who-never-order/#/description" target="_blank" rel="external">leetcode练习1</a></li>
+<li><a href="https://leetcode.com/problems/rising-temperature/#/description" target="_blank" rel="external">leetcode练习2</a></li>
+<li><a href="https://leetcode.com/problems/delete-duplicate-emails/#/description" target="_blank" rel="external">删除重复记录，只保留一个）|leetcode|重点</a></li>
+<li><a href="https://leetcode.com/problems/second-highest-salary/#/description" target="_blank" rel="external">选择排名第二大的|limit使用|leetcode|重点</a></li>
+<li><a href="https://leetcode.com/problems/big-countries/#/description" target="_blank" rel="external">单间检索数据|leetcode</a></li>
+</ol>
+<h2 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h2><ol>
+<li><a href="https://leetcode.com/problems/rank-scores/#/description" target="_blank" rel="external">对分数进行排名，并显示名次|leetcode|难</a></li>
+<li><a href="https://leetcode.com/problems/consecutive-numbers/#/description" target="_blank" rel="external">选址连续出现的|leetcode</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -48,7 +209,16 @@
     <entry>
       <title><![CDATA[个人计划至6月底]]></title>
       <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B36%E6%9C%88%E5%BA%95.html</url>
-      <content type="html"><![CDATA[<h1 id="完成python基础学习"><a href="#完成python基础学习" class="headerlink" title="完成python基础学习"></a>完成python基础学习</h1><ol>
+      <content type="html"><![CDATA[<h1 id="本月总体"><a href="#本月总体" class="headerlink" title="本月总体"></a>本月总体</h1><ol>
+<li>看书:mysql/shell两本书看完，python简明教程看完,shell书看完前四章</li>
+<li>看书:java高并发一书，java虚拟机一书看完（附带看完操作系统）</li>
+<li>操作系统，计算机网络，数据库，linux shell复习完</li>
+<li>编程练习，每日1-2题（只有周六除外）,《程序员面试经典》84个题刷(java和python，熟悉，练习语法)</li>
+<li>每早8：30-9：30看一小时书</li>
+<li>网络编程小项目： 聊天室/文件共享 python/java实现，练手（java做成网页版）</li>
+<li>每周日一整天编程真题</li>
+</ol>
+<h1 id="完成python基础学习"><a href="#完成python基础学习" class="headerlink" title="完成python基础学习"></a>完成python基础学习</h1><ol>
 <li>任务一：用python编写一个批量测试脚本（测试zte代码）</li>
 <li>任务二：学习完简明python教程一书<strong>完成</strong></li>
 <li>时间： 一周完成（5.15号-5.20号）</li>
@@ -59,27 +229,86 @@
 <li>时间：两周完成（5.21号-6.1号）</li>
 </ol>
 <h1 id="完成数据库学习"><a href="#完成数据库学习" class="headerlink" title="完成数据库学习"></a>完成数据库学习</h1><ol>
-<li>任务一：学习完mysql必知必会一书</li>
-<li>任务二：完成leetcode 上database题目</li>
+<li>任务一：学习完mysql必知必会一书<strong>mysql必知必会1-22章基本看完</strong></li>
+<li>任务二：完成leetcode 上database题目,总计13题，并总结<strong>已总结10题</strong></li>
 <li>时间： 一周完成（5.21-5.26号）</li>
-<li>任务三：牛客网上mysql习题 50%完成</li>
+<li>任务三：牛客网上mysql习题 50%完成(<strong>取消</strong>)</li>
 </ol>
 <h1 id="完成Java并发编程学习"><a href="#完成Java并发编程学习" class="headerlink" title="完成Java并发编程学习"></a>完成Java并发编程学习</h1><ol>
 <li>任务一： 学习完java并发编程实战一书</li>
+<li>任务二：深入理解java虚拟机一书</li>
 </ol>
-<h1 id="每日学习记录"><a href="#每日学习记录" class="headerlink" title="每日学习记录"></a>每日学习记录</h1><h2 id="5-15"><a href="#5-15" class="headerlink" title="5.15"></a>5.15</h2><ol>
+<h1 id="完成操作系统复习"><a href="#完成操作系统复习" class="headerlink" title="完成操作系统复习"></a>完成操作系统复习</h1><ol>
+<li>操作系统概念，第七版一书</li>
+</ol>
+<h1 id="完成计算机网络复习"><a href="#完成计算机网络复习" class="headerlink" title="完成计算机网络复习"></a>完成计算机网络复习</h1><h1 id="日程记录"><a href="#日程记录" class="headerlink" title="日程记录"></a>日程记录</h1><h2 id="5-15-5-24（10天任务）"><a href="#5-15-5-24（10天任务）" class="headerlink" title="5.15-5.24（10天任务）"></a>5.15-5.24（10天任务）</h2><ul>
+<li>总结<ol>
+<li>完成数据库（mysql）基础学习</li>
+<li>完成linux shell基础xuex</li>
+<li>完成python基础学习</li>
+<li>今日头条2017四个编程题完成</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-15"><a href="#5-15" class="headerlink" title="5.15"></a>5.15</h3><ol>
 <li>学习了python基础</li>
 </ol>
-<h2 id="5-16"><a href="#5-16" class="headerlink" title="5.16"></a>5.16</h2><ol>
+<h3 id="5-16"><a href="#5-16" class="headerlink" title="5.16"></a>5.16</h3><ol>
 <li>学习完python基础-<strong>完成</strong></li>
 <li>完成批量测试代码-<strong>完成</strong></li>
 <li>编程练习： 显示日历；<strong>完成</strong></li>
 </ol>
-<h2 id="5-17"><a href="#5-17" class="headerlink" title="5.17"></a>5.17</h2><ol>
-<li>编程练习：2题;<a href="http://exercise.acmcoder.com/online/online_judge_ques?ques_id=3339&amp;konwledgeId=158" target="_blank" rel="external">今日头条真题1</a></li>
-<li>简明python教程一书例题做完</li>
-<li>完善zte测试代码<em>**</em></li>
-<li>看mysql必知必会1-8章<strong>完成,见mysql总结</strong></li>
+<h3 id="5-17"><a href="#5-17" class="headerlink" title="5.17"></a>5.17</h3><ol>
+<li>编程练习：2题;<strong>完成,今日头条真题2个</strong></li>
+<li>简明python教程一书例题做完- 未完成</li>
+<li>完善zte测试代码 - 未完成</li>
+<li>看mysql必知必会1-8章<strong>完成,见mysql总结</strong>，刷了2个leetcode数据库题目</li>
+</ol>
+<h3 id="5-18"><a href="#5-18" class="headerlink" title="5.18"></a>5.18</h3><ol>
+<li>实验室804项目报告<strong>完成</strong></li>
+<li>编程练习：1题<strong>完成</strong></li>
+<li>看书：mysql必知必会9-16章-未完成</li>
+</ol>
+<h3 id="5-19"><a href="#5-19" class="headerlink" title="5.19"></a>5.19</h3><ol>
+<li>String kmp算法总结完毕，编程练习刷题1 未完成</li>
+<li>看书：mysql必知必会9-16章<strong>完成,刷数据库题目3个</strong></li>
+<li>看书：python简明教程看完；（刷题2）未完成</li>
+</ol>
+<h3 id="5-20"><a href="#5-20" class="headerlink" title="5.20"></a>5.20</h3><ol>
+<li>看书： linux私房菜看完bash和shell script两章<strong>完成</strong></li>
+<li>编程练习： 1题 <strong>字典序，重点看</strong></li>
+</ol>
+<h3 id="5-21"><a href="#5-21" class="headerlink" title="5.21"></a>5.21</h3><ol>
+<li>看书: python简明教程后面内容看完<strong>延后</strong></li>
+<li>编程练习：1题，今日头条的四题总结完，kmp算法总结完成<strong>未完成</strong></li>
+<li>python编程练习，剑指offer题目练习（3）</li>
+</ol>
+<h3 id="5-22"><a href="#5-22" class="headerlink" title="5.22"></a>5.22</h3><ol>
+<li>python简明教程后面看完<strong>完成</strong></li>
+</ol>
+<h3 id="5-23"><a href="#5-23" class="headerlink" title="5.23"></a>5.23</h3><ol>
+<li>早上看书：mysql必知必会17-22章看完<strong>完成,并刷了三个leetcode数据库题目</strong></li>
+<li>下午编码：编程题练习，2题<strong>修改，完成KMP算法总结</strong></li>
+<li>晚上看书：看linxu shell脚本攻略<strong>完成，看完第一章，并编写一测试脚本</strong></li>
+</ol>
+<h3 id="5-24"><a href="#5-24" class="headerlink" title="5.24"></a>5.24</h3><ol>
+<li>早上看书：linux shell脚本攻略第二章过完<strong>完成</strong></li>
+<li>下午编码： 编程练习，2题，总结完字符串与整数部分（面试经典）</li>
+<li>晚上看书：操作系统第一章过一遍<strong>完成</strong></li>
+</ol>
+<h2 id="5-25-6-04（10天任务）"><a href="#5-25-6-04（10天任务）" class="headerlink" title="5.25-6.04（10天任务）"></a>5.25-6.04（10天任务）</h2><ul>
+<li>计划<ol>
+<li>复习完操作系统，总结完成（操作系统概念一书）</li>
+<li>复习完计算机网络，总结完成（计算机网络-谢仁希一书）</li>
+<li>编程真题8道<a href="https://www.nowcoder.com/contestRoom?orderByHotValue=1&amp;filter=0&amp;mutiTagIds=672_139_138" target="_blank" rel="external">链接</a>；总共需要三小时做完；三小时总结；</li>
+<li>每日一小题/周日4个真题 code!</li>
+</ol>
+</li>
+<li>总结</li>
+</ul>
+<h3 id="5-25"><a href="#5-25" class="headerlink" title="5.25"></a>5.25</h3><ol>
+<li>早上看书：复习完操作系统</li>
+<li>当日1编程题,总结完字符串和数组</li>
 </ol>
 ]]></content>
     </entry>
@@ -146,6 +375,7 @@
 <li><a href="https://www.nowcoder.com/questionTerminal/57bdf294407c4477969fc7b4d56c7be7" target="_blank" rel="external">next数组</a></li>
 </ul>
 </li>
+<li>求next数组的方法（递归法）</li>
 </ul>
 <h2 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h2><ul>
 <li>OJ题目:剑指offer第52题,Solution52;</li>
@@ -171,7 +401,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
+<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><h2 id="字符串平移-String-shift"><a href="#字符串平移-String-shift" class="headerlink" title="字符串平移(String shift)"></a>字符串平移(String shift)</h2><ul>
+<li>题目描述<ul>
+<li>我们规定对一个字符串的shift操作如下： shift(“ABCD”, 0) = “ABCD” shift(“ABCD”, 1) = “BCDA” shift(“ABCD”, 2) = “CDAB” 换言之, 我们把最左侧的N个字符剪切下来, 按序附加到了右侧。给定一个长度为n的字符串，我们规定最多可以进行n次向左的循环shift操作。如果shift(string, x) = string (0＜= x ＜n), 我们称其为一次匹配(match)。求在shift过程中出现匹配的次数。</li>
+</ul>
+</li>
+<li>解决： 字符串必为周期字符串，计算出最短周期（用kmp算法中的next数组计算）</li>
+</ul>
+<h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
 <li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-substring/" target="_blank" rel="external">最长公共子串</a></li>
 <li>思路: 暴力法和<strong>动态规划法</strong>.</li>
 </ol>
@@ -372,7 +609,7 @@
 <li><a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%97%A5%E5%8E%86%E8%AE%A1%E7%AE%97.html">日历计算</a></li>
 </ul>
 <h1 id="校招真题练习"><a href="#校招真题练习" class="headerlink" title="校招真题练习"></a>校招真题练习</h1><h2 id="今日头条"><a href="#今日头条" class="headerlink" title="今日头条"></a>今日头条</h2><ol>
-<li><a href="">异或|字典树应用</a>   <strong>本题重点，不可暴力枚举,应用字典树</strong></li>
+<li><a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8%E6%A0%91.html">异或|字典树应用</a>   <strong>本题重点，不可暴力枚举,应用字典树</strong></li>
 </ol>
 <h2 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h2>]]></content>
     </entry>
@@ -704,6 +941,16 @@
 <li>解释请求分页是如何创建虚拟机假象的。</li>
 <li>解释进程生存周期的各个阶段和过渡。</li>
 <li>解释各种 CPU 调度算法的处理。</li>
+<li>进程间的通信方式</li>
+</ul>
+<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><p>UNIX中有如下的通信方式：</p>
+<ul>
+<li>1） 文件和记录锁定。<br>为避免两个进程间同时要求访问同一共享资源而引起访问和操作的混乱，在进程对<br>共享资源进行访问前必须对其进行锁定，该进程访问完后再释放。这是UNIX为共享<br>资源提供的互斥性保障。</li>
+<li>2 ）管道。<br>管道一般用于两个不同进程之间的通信。当一个进程创建一个管道，并调用fork创<br>建自己的一个子进程后，父进程关闭读管道端，子进程关闭写管道端，这样 提供了<br>两个进程之间数据流动的一种方式。</li>
+<li>3 ） FIFO 。<br>FIFO是一种先进先出的队列。它类似于一个管道，只允许数据的单向流动。每个<br>FIFO都有一个名字，允许不相关的进程访问同一个FIFO。因此也成为命名管。</li>
+<li>4）消息队列。<br>UNIX下不同进程之间可实现共享资源的一种机制；UNIX允许不同进程将格式化的数<br>据流以消息形式发送给任意<br>进程。对消息队列具有操作权限的进程都可以使用msget完成对消息队列的操作控制<br>。通过使用消息类型，进程可以按任何顺序读消息，或为消息安排优先级顺序。</li>
+<li>5 ）信号灯。<br>作为进程间通讯的一种方法，它不是用于交换大批数据，而用于多进程之间的同步<br>（协调对共享存储段的存取）。</li>
+<li>6 ）共享内存。<br>通过信号灯实现存储共享（类似“红灯停、绿灯行”）</li>
 </ul>
 <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库四大特性"><a href="#数据库四大特性" class="headerlink" title="数据库四大特性"></a>数据库四大特性</h2><ol>
 <li>原子性</li>
@@ -747,8 +994,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Java基础-正则表达式]]></title>
-      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</url>
+      <title><![CDATA[正则表达式]]></title>
+      <url>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</url>
       <content type="html"><![CDATA[<h1 id="正则表达式基础语法"><a href="#正则表达式基础语法" class="headerlink" title="正则表达式基础语法"></a>正则表达式基础语法</h1><ul>
 <li><p>定义:是指一个用来描述或者匹配一系列符合某个语法规则的字符串的单个字符串</p>
 </li>
@@ -810,6 +1057,7 @@
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">强烈推荐教程</a></li>
+<li><a href="https://regexper.com/" target="_blank" rel="external">正则表达式可视化理解</a></li>
 </ul>
 ]]></content>
     </entry>
@@ -2419,6 +2667,80 @@ return result;
     </entry>
     
     <entry>
+      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
+      <url>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
+<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
+<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
+<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
+<li><img src="/media/graph.png" alt=""></li>
+<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+</ul>
+<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
+<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
+<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
+<li><img src="/media/增广路径.png" alt=""></li>
+<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
+<li>由增广路径的定义,可以推出三个结论:<ol>
+<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
+<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
+<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
+</ol>
+</li>
+<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
+<li>置M为空;</li>
+<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
+<li>重复步骤2,直到找不出增广路径为止.</li>
+</ol>
+</li>
+<li><strong>匈牙利算法实现(java)</strong><ul>
+<li><img src="/media/14846300394186.jpg" alt=""></li>
+<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
+<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
+<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
+<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
+<li>对任意的G和M,可行标都是存在的</li>
+<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
+</ul>
+<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
+<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
+<li>初始化可行顶标的值</li>
+<li>用匈牙利算法在等价子图中寻找完备匹配</li>
+<li>若未找到完备匹配则修改可行顶标的值</li>
+<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
+</ol>
+</li>
+<li><p>实例解释算法过程:</p>
+<ul>
+<li>带权二分图如下:</li>
+<li><img src="/media/14846361640808.jpg" alt=""></li>
+<li><p><img src="/media/顶标变换.png" alt=""></p>
+</li>
+<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
+</li>
+<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
+<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[linux总结]]></title>
       <url>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
@@ -2540,80 +2862,6 @@ return result;
 <li><code>kill</code>,关进程</li>
 <li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
 <li><code>ifconfig</code>,查看ip</li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[匈牙利算法和KM算法详解及java实现]]></title>
-      <url>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
-      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="/media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
-</ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="/media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
-<ul>
-<li>带权二分图如下:</li>
-<li><img src="/media/14846361640808.jpg" alt=""></li>
-<li><p><img src="/media/顶标变换.png" alt=""></p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
     </entry>

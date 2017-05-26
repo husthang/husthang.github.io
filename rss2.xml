@@ -8,8 +8,191 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 17 May 2017 14:30:14 GMT</pubDate>
+    <pubDate>Wed, 24 May 2017 14:41:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>操作系统总结</title>
+      <link>http://liuhang.net.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html</guid>
+      <pubDate>Wed, 24 May 2017 08:38:07 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;操作系统概念&quot;&gt;&lt;a href=&quot;#操作系统概念&quot; class=&quot;headerlink&quot; title=&quot;操作系统概念&quot;&gt;&lt;/a&gt;操作系统概念&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;基本概念：管理计算机硬件和软件资源，方便用户使用计算机的程序集合；&lt;/li&gt;
+&lt;li&gt;操作系统提
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="操作系统概念"><a href="#操作系统概念" class="headerlink" title="操作系统概念"></a>操作系统概念</h1><ol>
+<li>基本概念：管理计算机硬件和软件资源，方便用户使用计算机的程序集合；</li>
+<li>操作系统提供的服务和功能：<ul>
+<li>提供用户的<ul>
+<li>用户界面</li>
+<li>程序执行</li>
+<li>I/O操作</li>
+<li>文件系统操作</li>
+<li>通信</li>
+<li>错误检测</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>命令解释器：</p>
+<ul>
+<li>命令解释器从用户或文件中读取命令并执行，一般而言把他们转化<br>成系统调用，它通常是不属于内核</li>
+</ul>
+</li>
+<li><p>中断</p>
+<ul>
+<li>操作系统由中断驱动</li>
+<li>中断：值CPU对系统中发生的异步事件的响应</li>
+</ul>
+</li>
+</ol>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><ol>
+<li>进程的概念： 进程是具有一定独立功能的程序关于某个数据集合的一次运行活动。进程是程序的执行，动态概念，一次运行过程，有生命过程。</li>
+<li>进程控制块（process control block, PCB）:记录进程的属性信息，进程标识信息，处理器状态信息，进程控制信息</li>
+<li>进程间通信的两种基本模式： 1）共享内存， 2）消息传递<br><img src="../images/进程通信模型.png" alt="进程通信模型"></li>
+</ol>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><ol>
+<li>多处理器系统带来的物理并行称为<strong>并行性</strong>，用编程技术达到的虚拟并行性，称为并发性</li>
+<li>线程是CPU调度的基本单元，由线程ID,程序计数器，寄存器集合，栈组成。</li>
+</ol>
+<h1 id="互斥和同步"><a href="#互斥和同步" class="headerlink" title="互斥和同步"></a>互斥和同步</h1><ol>
+<li>互斥（对资源的独用），同步（进程/线程之间的通信）</li>
+<li>生产者和消费者问题：有限缓冲问题，用于多线程同步；多生产者消费者算法：用二元信号量保证互斥<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">semaphore mutex = 1;//二元信号量</div><div class="line">semaphore fillCount = 0;// 满缓存信号量</div><div class="line">semaphore emptyCount = BUFFER_SIZE;//空缓存信号量</div><div class="line"></div><div class="line"></div><div class="line">procedure producer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        item = produceItem();//生产者生产数据</div><div class="line">        down(emptyCount);</div><div class="line">            down(mutex);//互斥，申请使用权</div><div class="line">                putItemIntoBuffer(item);//将数据放入缓存区</div><div class="line">            up(mutex);//释放使用权</div><div class="line">        up(fillCount);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">procedure consumer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        down(fillCount);</div><div class="line">            down(mutex);</div><div class="line">                item = removeItemFromBuffer();//从缓存区中读取数据</div><div class="line">            up(mutex);</div><div class="line">        up(emptyCount);</div><div class="line">        consumeItem(item);//消费者使用数据</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98" target="_blank" rel="external">参考</a></li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>计算机网络总结</title>
+      <link>http://liuhang.net.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html</guid>
+      <pubDate>Wed, 24 May 2017 07:32:11 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础数据结构-字符串</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E7%AC%A6%E4%B8%B2.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E7%AC%A6%E4%B8%B2.html</guid>
+      <pubDate>Tue, 23 May 2017 14:12:47 GMT</pubDate>
+      <description>
+      
+        字符串总结，字符串相关面试题总结
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>重难点是: <strong>模式匹配(kmp算法)</strong>和<strong>正则表达式匹配</strong>; 在选择题中,可能会出现问next数组的题目</p>
+<h2 id="Java字符串API"><a href="#Java字符串API" class="headerlink" title="Java字符串API"></a>Java字符串API</h2><ul>
+<li>toCharArray();</li>
+<li><strong>StringBuilder</strong>常用,线程不安全,效率高; StringBuffer  线程安全,效率低;</li>
+<li>matches()字符串是否匹配给定的正则表达式。</li>
+<li>indexOf()返回指定子字符串在此字符串中第一次出现处的索引。(模式匹配api)</li>
+<li>trim()返回字符串的副本，忽略前导空白和尾部空白。</li>
+<li>valueOf()返回…字符串形式</li>
+<li>split()按给定的正则表达式拆分字符串</li>
+<li>replace/replaceAll/replaceFirst 替换字符串</li>
+<li>reverse() 逆序</li>
+</ul>
+<h2 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h2><ul>
+<li>定义:s和t为给定的两个字符串,在主串s中查找子串t的过程称为模式匹配,返回t在s中第一次出现的位置</li>
+<li>OJ题目:<a href="https://leetcode.com/problems/implement-strstr/" target="_blank" rel="external">LeetCode|字符串匹配,子串第一次出现的位置</a></li>
+<li>三种方法:<ol>
+<li>java api: indexOf;</li>
+<li>暴力搜</li>
+<li>KMP算法</li>
+</ol>
+</li>
+<li>kmp算法选择题:next数组<ul>
+<li><a href="https://www.nowcoder.com/questionTerminal/57bdf294407c4477969fc7b4d56c7be7" target="_blank" rel="external">next数组</a></li>
+</ul>
+</li>
+<li>求next数组的方法（递归法）<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">indexOf</span><span class="params">(String source, String pattern)</span></span>&#123;</div><div class="line">       <span class="keyword">char</span>[] src = source.toCharArray();</div><div class="line">       <span class="keyword">char</span>[] pat = pattern.toCharArray();</div><div class="line">       <span class="keyword">int</span>[] next = getNext(pat);</div><div class="line">       <span class="keyword">int</span> sLen = src.length;</div><div class="line">       <span class="keyword">int</span> pLen = pat.length;</div><div class="line">       <span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>;</div><div class="line">       <span class="keyword">while</span>(i &lt; sLen &amp;&amp; j &lt; pLen)&#123;</div><div class="line">           <span class="keyword">if</span>(j== -<span class="number">1</span> || src[i] == pat[j])&#123;</div><div class="line">               i++;</div><div class="line">               j++;</div><div class="line">           &#125;<span class="keyword">else</span>&#123;</div><div class="line">               j = next[j];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">if</span>(j == pLen)&#123;</div><div class="line">           <span class="keyword">return</span> i - pLen;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">   &#125;</div><div class="line"></div><div class="line">   <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] getNext(<span class="keyword">char</span>[] p)&#123;</div><div class="line">       <span class="comment">/**</span></div><div class="line">        * 求next数组的方法</div><div class="line">        * 已知next[j]=k,求next[j+1];</div><div class="line">        * 1. 如果p[j] = p[k], 则next[j+1] = next[k] + 1;</div><div class="line">        * 2. 如果p[j] != p[k], 则令k=next[k],如果此时p[j]==p[k],则next[j+1]=k+1,</div><div class="line">        *    如果不相等,则继续递归前缀索引,令 k=next[k],继续判断,直至k=-1(即k=next[0])或者p[j]=p[k]为止</div><div class="line">        */</div><div class="line">       <span class="keyword">int</span> pLen = p.length;</div><div class="line">       <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[pLen];</div><div class="line">       next[<span class="number">0</span>] = -<span class="number">1</span>;</div><div class="line">       <span class="keyword">int</span> j = <span class="number">0</span>;</div><div class="line">       <span class="keyword">int</span> k = -<span class="number">1</span>;</div><div class="line">       <span class="keyword">while</span>(j &lt; pLen-<span class="number">1</span>)&#123;</div><div class="line">           <span class="keyword">if</span>(k == -<span class="number">1</span> || p[k] == p[j])&#123;</div><div class="line">               j++;</div><div class="line">               k++;</div><div class="line">               next[j] = k;</div><div class="line">           &#125;<span class="keyword">else</span> &#123;</div><div class="line">               k = next[k];</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> next;</div><div class="line">   &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h2><ul>
+<li>OJ题目:剑指offer第52题,Solution52;</li>
+<li><a href="https://www.nowcoder.com/practice/45327ae22b7b413ea21df13ee7d6429c?tpId=13&amp;tqId=11205&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer|正则表达式匹配</a> ;<a href="https://leetcode.com/problems/regular-expression-matching/#/description" target="_blank" rel="external">LeetCode|正则表达式匹配</a></li>
+<li>解题思路<ul>
+<li>字符串 正则表达式匹配<ol>
+<li>模式中,当前字符的下一个字符不是<code>*</code><ul>
+<li>如果当前字符匹配,则字符串和模式串都下移一位</li>
+<li>如果当前字符不匹配,则直接返回false</li>
+</ul>
+</li>
+<li>模式中,当前字符的下一个字符是<code>*</code><ul>
+<li>如果当前字符不匹配,则<code>*</code>匹配0个前位字符,模式串后移两位(前位字符,<code>*</code>前面的那个字符)</li>
+<li>如果当前字符匹配,分两组<ul>
+<li><code>*</code>匹配0个前位字符,模式串后移两位</li>
+<li><code>*</code>匹配一个或者多个前位字符,字符串后移以为,模式串不变</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符串平移-String-shift"><a href="#字符串平移-String-shift" class="headerlink" title="字符串平移(String shift)"></a>字符串平移(String shift)</h2><ul>
+<li>题目描述<ul>
+<li>我们规定对一个字符串的shift操作如下： shift(“ABCD”, 0) = “ABCD” shift(“ABCD”, 1) = “BCDA” shift(“ABCD”, 2) = “CDAB” 换言之, 我们把最左侧的N个字符剪切下来, 按序附加到了右侧。给定一个长度为n的字符串，我们规定最多可以进行n次向左的循环shift操作。如果shift(string, x) = string (0＜= x ＜n), 我们称其为一次匹配(match)。求在shift过程中出现匹配的次数。</li>
+</ul>
+</li>
+<li>解决： 字符串必为周期字符串，计算出最短周期（用kmp算法中的next数组计算）</li>
+</ul>
+<h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-substring/" target="_blank" rel="external">最长公共子串</a></li>
+<li>思路: 暴力法和<strong>动态规划法</strong>.</li>
+</ol>
+<h2 id="最长公共子序列"><a href="#最长公共子序列" class="headerlink" title="最长公共子序列"></a>最长公共子序列</h2><ol>
+<li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-subsequence/" target="_blank" rel="external">最长公共子序列</a></li>
+</ol>
+<h2 id="字符串与整数-数组的互相转换"><a href="#字符串与整数-数组的互相转换" class="headerlink" title="字符串与整数,数组的互相转换"></a>字符串与整数,数组的互相转换</h2><p>1.</p>
+<h3 id="把字符串转换成整数"><a href="#把字符串转换成整数" class="headerlink" title="把字符串转换成整数"></a>把字符串转换成整数</h3><h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><ul>
+<li>StringBuilder.reverse方法;</li>
+<li><a href="https://leetcode.com/problems/reverse-words-in-a-string/#/description" target="_blank" rel="external">leetcode|字符串反转</a></li>
+</ul>
+<h2 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串"></a>回文字符串</h2>]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E7%AC%A6%E4%B8%B2.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>shell总结</title>
+      <link>http://liuhang.net.cn/shell%E7%AC%94%E8%AE%B0.html</link>
+      <guid>http://liuhang.net.cn/shell%E7%AC%94%E8%AE%B0.html</guid>
+      <pubDate>Sat, 20 May 2017 12:28:01 GMT</pubDate>
+      <description>
+      
+        shell笔记
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><ol>
+<li>概念：shell, 壳。 接收用户的命令，然后调用相应的应用程序；（命令解析器）</li>
+</ol>
+<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
+<li><a href="https://leetcode.com/problems/valid-phone-numbers/#/description" target="_blank" rel="external">正则表达式|grep|awk</a></li>
+<li><a href="https://leetcode.com/problems/tenth-line/#/description" target="_blank" rel="external">文件第几行</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/shell%E7%AC%94%E8%AE%B0.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>基础数据结构-字典树</title>
@@ -49,9 +232,25 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><h2 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h2><h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
-<li><a href="https://leetcode.com/problems/duplicate-emails/#/description" target="_blank" rel="external">找出表中某个字段重复的记录|leetcode</a></li>
+      <content:encoded><![CDATA[<h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><ul>
+<li>理解笛卡尔乘积</li>
+</ul>
+<h2 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h2><h2 id="全文搜索"><a href="#全文搜索" class="headerlink" title="全文搜索"></a>全文搜索</h2><h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><ul>
+<li>提供对select语句的一层封装</li>
+</ul>
+<h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><ol>
+<li><a href="https://leetcode.com/problems/duplicate-emails/#/description" target="_blank" rel="external">找出重复的记录|leetcode|重点</a></li>
 <li><a href="https://leetcode.com/problems/combine-two-tables/#/description" target="_blank" rel="external">两个表联结查询|leetcode</a></li>
+<li><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers/#/description" target="_blank" rel="external">表自联结|leetcode</a></li>
+<li><a href="https://leetcode.com/problems/customers-who-never-order/#/description" target="_blank" rel="external">leetcode练习1</a></li>
+<li><a href="https://leetcode.com/problems/rising-temperature/#/description" target="_blank" rel="external">leetcode练习2</a></li>
+<li><a href="https://leetcode.com/problems/delete-duplicate-emails/#/description" target="_blank" rel="external">删除重复记录，只保留一个）|leetcode|重点</a></li>
+<li><a href="https://leetcode.com/problems/second-highest-salary/#/description" target="_blank" rel="external">选择排名第二大的|limit使用|leetcode|重点</a></li>
+<li><a href="https://leetcode.com/problems/big-countries/#/description" target="_blank" rel="external">单间检索数据|leetcode</a></li>
+</ol>
+<h2 id="Medium"><a href="#Medium" class="headerlink" title="Medium"></a>Medium</h2><ol>
+<li><a href="https://leetcode.com/problems/rank-scores/#/description" target="_blank" rel="external">对分数进行排名，并显示名次|leetcode|难</a></li>
+<li><a href="https://leetcode.com/problems/consecutive-numbers/#/description" target="_blank" rel="external">选址连续出现的|leetcode</a></li>
 </ol>
 ]]></content:encoded>
       
@@ -90,12 +289,20 @@
       <pubDate>Mon, 15 May 2017 13:29:21 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;完成python基础学习&quot;&gt;&lt;a href=&quot;#完成python基础学习&quot; class=&quot;headerlink&quot; title=&quot;完成python基础学习&quot;&gt;&lt;/a&gt;完成python基础学习&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;任务一：用python编写一个批量测试脚本
+        复习基础，巩固基础
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="完成python基础学习"><a href="#完成python基础学习" class="headerlink" title="完成python基础学习"></a>完成python基础学习</h1><ol>
+      <content:encoded><![CDATA[<h1 id="本月总体"><a href="#本月总体" class="headerlink" title="本月总体"></a>本月总体</h1><ol>
+<li>看书:mysql/shell两本书看完，python简明教程看完,shell书看完前四章</li>
+<li>看书:java高并发一书，java虚拟机一书看完（附带看完操作系统）</li>
+<li>操作系统，计算机网络，数据库，linux shell复习完</li>
+<li>编程练习，每日1-2题（只有周六除外）,《程序员面试经典》84个题刷(java和python，熟悉，练习语法)</li>
+<li>每早8：30-9：30看一小时书</li>
+<li>网络编程小项目： 聊天室/文件共享 python/java实现，练手（java做成网页版）</li>
+<li>每周日一整天编程真题</li>
+</ol>
+<h1 id="完成python基础学习"><a href="#完成python基础学习" class="headerlink" title="完成python基础学习"></a>完成python基础学习</h1><ol>
 <li>任务一：用python编写一个批量测试脚本（测试zte代码）</li>
 <li>任务二：学习完简明python教程一书<strong>完成</strong></li>
 <li>时间： 一周完成（5.15号-5.20号）</li>
@@ -106,27 +313,86 @@
 <li>时间：两周完成（5.21号-6.1号）</li>
 </ol>
 <h1 id="完成数据库学习"><a href="#完成数据库学习" class="headerlink" title="完成数据库学习"></a>完成数据库学习</h1><ol>
-<li>任务一：学习完mysql必知必会一书</li>
-<li>任务二：完成leetcode 上database题目</li>
+<li>任务一：学习完mysql必知必会一书<strong>mysql必知必会1-22章基本看完</strong></li>
+<li>任务二：完成leetcode 上database题目,总计13题，并总结<strong>已总结10题</strong></li>
 <li>时间： 一周完成（5.21-5.26号）</li>
-<li>任务三：牛客网上mysql习题 50%完成</li>
+<li>任务三：牛客网上mysql习题 50%完成(<strong>取消</strong>)</li>
 </ol>
 <h1 id="完成Java并发编程学习"><a href="#完成Java并发编程学习" class="headerlink" title="完成Java并发编程学习"></a>完成Java并发编程学习</h1><ol>
 <li>任务一： 学习完java并发编程实战一书</li>
+<li>任务二：深入理解java虚拟机一书</li>
 </ol>
-<h1 id="每日学习记录"><a href="#每日学习记录" class="headerlink" title="每日学习记录"></a>每日学习记录</h1><h2 id="5-15"><a href="#5-15" class="headerlink" title="5.15"></a>5.15</h2><ol>
+<h1 id="完成操作系统复习"><a href="#完成操作系统复习" class="headerlink" title="完成操作系统复习"></a>完成操作系统复习</h1><ol>
+<li>操作系统概念，第七版一书</li>
+</ol>
+<h1 id="完成计算机网络复习"><a href="#完成计算机网络复习" class="headerlink" title="完成计算机网络复习"></a>完成计算机网络复习</h1><h1 id="日程记录"><a href="#日程记录" class="headerlink" title="日程记录"></a>日程记录</h1><h2 id="5-15-5-24（10天任务）"><a href="#5-15-5-24（10天任务）" class="headerlink" title="5.15-5.24（10天任务）"></a>5.15-5.24（10天任务）</h2><ul>
+<li>总结<ol>
+<li>完成数据库（mysql）基础学习</li>
+<li>完成linux shell基础xuex</li>
+<li>完成python基础学习</li>
+<li>今日头条2017四个编程题完成</li>
+</ol>
+</li>
+</ul>
+<h3 id="5-15"><a href="#5-15" class="headerlink" title="5.15"></a>5.15</h3><ol>
 <li>学习了python基础</li>
 </ol>
-<h2 id="5-16"><a href="#5-16" class="headerlink" title="5.16"></a>5.16</h2><ol>
+<h3 id="5-16"><a href="#5-16" class="headerlink" title="5.16"></a>5.16</h3><ol>
 <li>学习完python基础-<strong>完成</strong></li>
 <li>完成批量测试代码-<strong>完成</strong></li>
 <li>编程练习： 显示日历；<strong>完成</strong></li>
 </ol>
-<h2 id="5-17"><a href="#5-17" class="headerlink" title="5.17"></a>5.17</h2><ol>
-<li>编程练习：2题;<a href="http://exercise.acmcoder.com/online/online_judge_ques?ques_id=3339&amp;konwledgeId=158" target="_blank" rel="external">今日头条真题1</a></li>
-<li>简明python教程一书例题做完</li>
-<li>完善zte测试代码<em>**</em></li>
-<li>看mysql必知必会1-8章<strong>完成,见mysql总结</strong></li>
+<h3 id="5-17"><a href="#5-17" class="headerlink" title="5.17"></a>5.17</h3><ol>
+<li>编程练习：2题;<strong>完成,今日头条真题2个</strong></li>
+<li>简明python教程一书例题做完- 未完成</li>
+<li>完善zte测试代码 - 未完成</li>
+<li>看mysql必知必会1-8章<strong>完成,见mysql总结</strong>，刷了2个leetcode数据库题目</li>
+</ol>
+<h3 id="5-18"><a href="#5-18" class="headerlink" title="5.18"></a>5.18</h3><ol>
+<li>实验室804项目报告<strong>完成</strong></li>
+<li>编程练习：1题<strong>完成</strong></li>
+<li>看书：mysql必知必会9-16章-未完成</li>
+</ol>
+<h3 id="5-19"><a href="#5-19" class="headerlink" title="5.19"></a>5.19</h3><ol>
+<li>String kmp算法总结完毕，编程练习刷题1 未完成</li>
+<li>看书：mysql必知必会9-16章<strong>完成,刷数据库题目3个</strong></li>
+<li>看书：python简明教程看完；（刷题2）未完成</li>
+</ol>
+<h3 id="5-20"><a href="#5-20" class="headerlink" title="5.20"></a>5.20</h3><ol>
+<li>看书： linux私房菜看完bash和shell script两章<strong>完成</strong></li>
+<li>编程练习： 1题 <strong>字典序，重点看</strong></li>
+</ol>
+<h3 id="5-21"><a href="#5-21" class="headerlink" title="5.21"></a>5.21</h3><ol>
+<li>看书: python简明教程后面内容看完<strong>延后</strong></li>
+<li>编程练习：1题，今日头条的四题总结完，kmp算法总结完成<strong>未完成</strong></li>
+<li>python编程练习，剑指offer题目练习（3）</li>
+</ol>
+<h3 id="5-22"><a href="#5-22" class="headerlink" title="5.22"></a>5.22</h3><ol>
+<li>python简明教程后面看完<strong>完成</strong></li>
+</ol>
+<h3 id="5-23"><a href="#5-23" class="headerlink" title="5.23"></a>5.23</h3><ol>
+<li>早上看书：mysql必知必会17-22章看完<strong>完成,并刷了三个leetcode数据库题目</strong></li>
+<li>下午编码：编程题练习，2题<strong>修改，完成KMP算法总结</strong></li>
+<li>晚上看书：看linxu shell脚本攻略<strong>完成，看完第一章，并编写一测试脚本</strong></li>
+</ol>
+<h3 id="5-24"><a href="#5-24" class="headerlink" title="5.24"></a>5.24</h3><ol>
+<li>早上看书：linux shell脚本攻略第二章过完<strong>完成</strong></li>
+<li>下午编码： 编程练习，2题，总结完字符串与整数部分（面试经典）</li>
+<li>晚上看书：操作系统第一章过一遍<strong>完成</strong></li>
+</ol>
+<h2 id="5-25-6-04（10天任务）"><a href="#5-25-6-04（10天任务）" class="headerlink" title="5.25-6.04（10天任务）"></a>5.25-6.04（10天任务）</h2><ul>
+<li>计划<ol>
+<li>复习完操作系统，总结完成（操作系统概念一书）</li>
+<li>复习完计算机网络，总结完成（计算机网络-谢仁希一书）</li>
+<li>编程真题8道<a href="https://www.nowcoder.com/contestRoom?orderByHotValue=1&amp;filter=0&amp;mutiTagIds=672_139_138" target="_blank" rel="external">链接</a>；总共需要三小时做完；三小时总结；</li>
+<li>每日一小题/周日4个真题 code!</li>
+</ol>
+</li>
+<li>总结</li>
+</ul>
+<h3 id="5-25"><a href="#5-25" class="headerlink" title="5.25"></a>5.25</h3><ol>
+<li>早上看书：复习完操作系统</li>
+<li>当日1编程题,总结完字符串和数组</li>
 </ol>
 ]]></content:encoded>
       
@@ -223,6 +489,7 @@
 <li><a href="https://www.nowcoder.com/questionTerminal/57bdf294407c4477969fc7b4d56c7be7" target="_blank" rel="external">next数组</a></li>
 </ul>
 </li>
+<li>求next数组的方法（递归法）</li>
 </ul>
 <h2 id="正则表达式匹配"><a href="#正则表达式匹配" class="headerlink" title="正则表达式匹配"></a>正则表达式匹配</h2><ul>
 <li>OJ题目:剑指offer第52题,Solution52;</li>
@@ -248,7 +515,14 @@
 </ul>
 </li>
 </ul>
-<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
+<h2 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h2><h2 id="字符串平移-String-shift"><a href="#字符串平移-String-shift" class="headerlink" title="字符串平移(String shift)"></a>字符串平移(String shift)</h2><ul>
+<li>题目描述<ul>
+<li>我们规定对一个字符串的shift操作如下： shift(“ABCD”, 0) = “ABCD” shift(“ABCD”, 1) = “BCDA” shift(“ABCD”, 2) = “CDAB” 换言之, 我们把最左侧的N个字符剪切下来, 按序附加到了右侧。给定一个长度为n的字符串，我们规定最多可以进行n次向左的循环shift操作。如果shift(string, x) = string (0＜= x ＜n), 我们称其为一次匹配(match)。求在shift过程中出现匹配的次数。</li>
+</ul>
+</li>
+<li>解决： 字符串必为周期字符串，计算出最短周期（用kmp算法中的next数组计算）</li>
+</ul>
+<h2 id="最长公共子串"><a href="#最长公共子串" class="headerlink" title="最长公共子串"></a>最长公共子串</h2><ol>
 <li><a href="http://www.lintcode.com/zh-cn/problem/longest-common-substring/" target="_blank" rel="external">最长公共子串</a></li>
 <li>思路: 暴力法和<strong>动态规划法</strong>.</li>
 </ol>
@@ -449,7 +723,7 @@
 <li><a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%97%A5%E5%8E%86%E8%AE%A1%E7%AE%97.html">日历计算</a></li>
 </ul>
 <h1 id="校招真题练习"><a href="#校招真题练习" class="headerlink" title="校招真题练习"></a>校招真题练习</h1><h2 id="今日头条"><a href="#今日头条" class="headerlink" title="今日头条"></a>今日头条</h2><ol>
-<li><a href="">异或|字典树应用</a>   <strong>本题重点，不可暴力枚举,应用字典树</strong></li>
+<li><a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8%E6%A0%91.html">异或|字典树应用</a>   <strong>本题重点，不可暴力枚举,应用字典树</strong></li>
 </ol>
 <h2 id="网易"><a href="#网易" class="headerlink" title="网易"></a>网易</h2>]]></content:encoded>
       
@@ -801,6 +1075,16 @@
 <li>解释请求分页是如何创建虚拟机假象的。</li>
 <li>解释进程生存周期的各个阶段和过渡。</li>
 <li>解释各种 CPU 调度算法的处理。</li>
+<li>进程间的通信方式</li>
+</ul>
+<h2 id="进程间的通信方式"><a href="#进程间的通信方式" class="headerlink" title="进程间的通信方式"></a>进程间的通信方式</h2><p>UNIX中有如下的通信方式：</p>
+<ul>
+<li>1） 文件和记录锁定。<br>为避免两个进程间同时要求访问同一共享资源而引起访问和操作的混乱，在进程对<br>共享资源进行访问前必须对其进行锁定，该进程访问完后再释放。这是UNIX为共享<br>资源提供的互斥性保障。</li>
+<li>2 ）管道。<br>管道一般用于两个不同进程之间的通信。当一个进程创建一个管道，并调用fork创<br>建自己的一个子进程后，父进程关闭读管道端，子进程关闭写管道端，这样 提供了<br>两个进程之间数据流动的一种方式。</li>
+<li>3 ） FIFO 。<br>FIFO是一种先进先出的队列。它类似于一个管道，只允许数据的单向流动。每个<br>FIFO都有一个名字，允许不相关的进程访问同一个FIFO。因此也成为命名管。</li>
+<li>4）消息队列。<br>UNIX下不同进程之间可实现共享资源的一种机制；UNIX允许不同进程将格式化的数<br>据流以消息形式发送给任意<br>进程。对消息队列具有操作权限的进程都可以使用msget完成对消息队列的操作控制<br>。通过使用消息类型，进程可以按任何顺序读消息，或为消息安排优先级顺序。</li>
+<li>5 ）信号灯。<br>作为进程间通讯的一种方法，它不是用于交换大批数据，而用于多进程之间的同步<br>（协调对共享存储段的存取）。</li>
+<li>6 ）共享内存。<br>通过信号灯实现存储共享（类似“红灯停、绿灯行”）</li>
 </ul>
 <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="数据库四大特性"><a href="#数据库四大特性" class="headerlink" title="数据库四大特性"></a>数据库四大特性</h2><ol>
 <li>原子性</li>
@@ -846,9 +1130,9 @@
     </item>
     
     <item>
-      <title>Java基础-正则表达式</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</guid>
+      <title>正则表达式</title>
+      <link>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</guid>
       <pubDate>Sat, 15 Apr 2017 16:16:59 GMT</pubDate>
       <description>
       
@@ -917,10 +1201,11 @@
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
 <li><a href="http://deerchao.net/tutorials/regex/regex.htm" target="_blank" rel="external">强烈推荐教程</a></li>
+<li><a href="https://regexper.com/" target="_blank" rel="external">正则表达式可视化理解</a></li>
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -2669,255 +2954,6 @@ return result;
 ]]></content:encoded>
       
       <comments>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>chrome总结</title>
-      <link>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Sat, 04 Mar 2017 15:31:21 GMT</pubDate>
-      <description>
-      
-        chrome浏览器总结，持续更新中
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
-<li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
-<li>个人常用<ul>
-<li>打开新窗口    ⌘ + n</li>
-<li>打开新的标签页，并跳转到该标签页    ⌘ + t</li>
-<li>关闭当前标签页或弹出式窗口    ⌘ + w</li>
-<li>退出 Google Chrome     ⌘ + q</li>
-<li>打开“开发者工具”    ⌘ + Option + i</li>
-<li>重新加载当前网页     ⌘ + r</li>
-<li>开启或关闭全屏模式    ⌘ + Ctrl + f</li>
-<li>跳转到地址栏    ⌘ + l</li>
-</ul>
-</li>
-</ol>
-<h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
-<li><a href="https://chrome.google.com/webstore/detail/octotree/bkhaagjahfmjljalopjnoealnfndnagc" target="_blank" rel="external">Octotree</a><br>Github查看代码神器，强烈推荐！！</li>
-<li><a href="https://chrome.google.com/webstore/detail/evernote-web-clipper/pioclpoplcdbaefihamjohnefbikjilc/related?utm_source=chrome-ntp-icon" target="_blank" rel="external">印象笔记剪藏</a>，查资料时做笔记的神器 </li>
-<li><a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?utm_source=chrome-ntp-icon" target="_blank" rel="external">postman</a>，java web后端开发必备</li>
-</ol>
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
-<li>chrome浏览器,地址栏搜索出现:无法访问,连接已经重置,与hosts文件无关<br> 用搜索框搜索出现链接重置,问题无关 hosts，在于链接是http方式访问。搜索框输入 chrome://net-internals/#hsts<br> 在 Input a domain name to add it to the HSTS set: 这一行下面的 Domain: [ ]<br> 输入 www.google.com.hk 点 Add这个方法可以让 Chrome 访问 www.google.com.hk 时，强制选择 https 方式<br> <a href="https://github.com/racaljk/hosts/issues/387" target="_blank" rel="external">参考</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Git总结</title>
-      <link>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Sat, 04 Mar 2017 15:28:32 GMT</pubDate>
-      <description>
-      
-        Git及GitHub使用总结
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
-<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
-<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
-</ol>
-<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
-<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
-<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
-<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
-<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
-<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
-</ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
-<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
-<li>总结<ul>
-<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
-<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
-<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
-</ul>
-</li>
-</ul>
-<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
-<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
-<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
-</ul>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
-<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
-<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
-<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
-</ul>
-<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
-<li>reset<ul>
-<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
-<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
-<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
-</ul>
-</li>
-<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
-<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
-<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
-</ul>
-</li>
-</ul>
-<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
-<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
-<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
-<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
-</ul>
-<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
-<li>文件 .gitignore 的格式规范如下：<ul>
-<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
-<li>可以使用标准的 glob 模式匹配。</li>
-<li>匹配模式可以以（/）开头防止递归。</li>
-<li>匹配模式可以以（/）结尾指定目录。</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
-</ul>
-</li>
-<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
-</ul>
-<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
-<li>命令<ul>
-<li>查看分支：git branch</li>
-<li>创建分支：git branch <name></name></li>
-<li>切换分支：git checkout <name></name></li>
-<li>创建+切换分支：git checkout -b <name></name></li>
-<li>合并某分支到当前分支：git merge <name></name></li>
-<li>删除分支：git branch -d <name></name></li>
-</ul>
-</li>
-<li>HEAD<ul>
-<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
-</ul>
-</li>
-<li>远程分支<ul>
-<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
-<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
-<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
-</ul>
-</li>
-<li>参考<ul>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
-<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>mac总结</title>
-      <link>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Sat, 04 Mar 2017 15:24:14 GMT</pubDate>
-      <description>
-      
-        mac使用总结,mac软件推荐，持续更新中!
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
-<li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
-<li>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</li>
-<li>个人常用快捷键<ul>
-<li>Option-Command-V    移动：将剪贴板中的文件从其原始位置移动到当前位置。</li>
-<li>Command–空格键    Spotlight</li>
-<li>Command-M    将最前面的窗口最小化至 Dock。</li>
-<li>control +command+f 窗口最大化(退出最大化)切换</li>
-</ul>
-</li>
-</ol>
-<h2 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h2><ol>
-<li>数据库管理：<a href="https://www.sequelpro.com/" target="_blank" rel="external">Sequle Pro</a></li>
-<li>Git GUI：<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
-<li>FTP客户端：<a href="https://www.filezilla.cn/" target="_blank" rel="external">FileZilla</a></li>
-<li>虚拟机：<a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" rel="external">VirtualBox</a>,<a href="http://www.parallels.com/cn/products/desktop/" target="_blank" rel="external">Parallels Desktop for Mac</a>,VirtualBox免费，也比较好用，装Ubuntu等没有压力。</li>
-<li>SwitchHosts: <a href="https://oldj.github.io/SwitchHosts/" target="_blank" rel="external">快速切换hosts文件工具</a>，强烈推荐，<strong>方便翻墙，web开发</strong>，<a href="https://laod.cn/hosts/2017-google-hosts.html" target="_blank" rel="external">hosts更新网站</a></li>
-<li>PDF阅读编辑：<a href="http://skim-app.sourceforge.net/" target="_blank" rel="external">Skim</a></li>
-<li>文本编辑器：<a href="https://atom.io/" target="_blank" rel="external">Atom</a>，markdown编辑神器，GitHub官方推荐</li>
-<li>Synergy 实现Windows与Mac OSX之间共享一套键鼠: <a href="http://www.jianshu.com/p/c4b538d2152e" target="_blank" rel="external">Synergy</a></li>
-<li>邮件客户端: <a href="http://www.yomail.com/" target="_blank" rel="external">YoMail</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>设计模式2-简单工厂模式</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</guid>
-      <pubDate>Sun, 19 Feb 2017 17:36:37 GMT</pubDate>
-      <description>
-      
-        设计模式总结(一) 简单工厂模式
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="一、模式定义"><a href="#一、模式定义" class="headerlink" title="一、模式定义"></a>一、模式定义</h2><ul>
-<li>简单工厂模式(Simple Factory Pattern)：又称为静态工厂方法(Static Factory Method)模式，它属于<strong>类创建型模式</strong>（同属于创建型模式的还有工厂方法模式，抽象工厂模式，单例模式，建造者模式）。在简单工厂模式中，可以<strong>根据参数的不同返回不同类的实例</strong>。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。</li>
-</ul>
-<h2 id="二、模式结构"><a href="#二、模式结构" class="headerlink" title="二、模式结构"></a>二、模式结构</h2><p><img src="/media/14873386849094.png" alt=""></p>
-<ul>
-<li>从上图可以看出，简单工厂模式由三部分组成：具体工厂、具体产品和抽象产品。<ul>
-<li>工厂类（Creator）角色：担任这个角色的是简单工厂模式的核心，含有与应用紧密相关的商业逻辑。工厂类在客户端的直接调用下创建产品对象，它往往由一个具体Java类实现。</li>
-<li>抽象产品（AbstractProduct）角色：担任这个角色的类是由简单工厂模式所创建的对象的父类，或它们共同拥有的接口。抽象产品角色可以用一个Java接口或者Java抽象类实现。</li>
-<li>具体产品（ConcreteProduct）角色：简单工厂模式所创建的任何对象都是这个角色的实例，具体产品角色由一个具体Java类实现。</li>
-</ul>
-</li>
-</ul>
-<h2 id="三、模式动机"><a href="#三、模式动机" class="headerlink" title="三、模式动机"></a>三、模式动机</h2><ul>
-<li>使用简单工厂模式可以将产品的“消费”和生产完全分开，客户端只需要知道自己需要什么产品，如何来使用产品就可以了，具体的产品生产任务由具体的工厂类来实现。工厂类根据传进来的参数生产具体的产品供消费者使用。这种模式使得更加利于扩展，当有新的产品加入时仅仅需要在工厂中加入新产品的构造就可以了。</li>
-</ul>
-<h2 id="四、实例分析"><a href="#四、实例分析" class="headerlink" title="四、实例分析"></a>四、实例分析</h2><ul>
-<li>话说有一位土豪，他家有三辆汽车——Benz奔驰、Bmw宝马、Audi奥迪，还雇了司机为他开车。不过，土豪坐车时总是怪怪的：上Benz车后跟司机说“开奔驰车！”坐上Bmw后他说“开宝马车！”，坐上Audi说“开奥迪车！”。你一定说：这人有病！直接说开车不就行了？！ 而当把土豪的行为放到我们程序设计中来时，会发现这是一个普遍存在的现象。幸运的是，这种有病的现象在OO（面向对象）语言中可以避免了。下面就以Java语言为例来讲解一下如何避免这种问题。</li>
-<li>实例代码实现</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 汽车抽象类,所有汽车类的父类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="keyword">abstract</span> <span class="class"><span class="keyword">class</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">abstract</span> <span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span></span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Audi奥迪类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Audi</span> <span class="keyword">extends</span> <span class="title">Car</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Audi</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Create an Audi"</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">void</span> <span class="title">drive</span><span class="params">()</span> </span>&#123;</div><div class="line">        System.out.println(<span class="string">"Audi start engine"</span>);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * Car工厂类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Driver</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Car <span class="title">getCar</span><span class="params">(String type)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        <span class="keyword">if</span> (type.equals(<span class="string">"Audi"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Audi();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Bmw"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Bmw();</div><div class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.equals(<span class="string">"Benz"</span>)) &#123;</div><div class="line">            <span class="keyword">return</span> <span class="keyword">new</span> Benz();</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.factoryModel;</div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/2/17.</div><div class="line"> * 测试简单工厂模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EasyFactoryModelTest</span> </span>&#123;</div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testEasyFactoryModel</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">        Car car = Driver.getCar(<span class="string">"Benz"</span>);</div><div class="line">        car.drive();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>从这个实例的实现中,我们可以看到,土豪不需要自己new汽车对象，而是告诉Driver类今天我想要开什么车，Driver就会自动的将想要的汽车创建出来，然后土豪坐在车里只需要说开车就好了，这与我们现实中的逻辑相符合.Driver类就是我们说的工厂，他用if-else语句来判断需要创建什么类型的对象（当然也可以使用switch语句），这就是<strong>简单工厂模式</strong>。</li>
-</ul>
-<h2 id="五、模式优点"><a href="#五、模式优点" class="headerlink" title="五、模式优点"></a>五、模式优点</h2><ul>
-<li>工厂类含有必要的判断逻辑，可以决定在什么时候创建哪一个产品类的实例，客户端可以免除直接创建产品对象的责任，而仅仅“消费”产品；简单工厂模式通过这种做法实现了对责任的分割，它提供了专门的工厂类用于创建对象。</li>
-<li>客户端无须知道所创建的具体产品类的类名，只需要知道具体产品类所对应的参数即可，对于一些复杂的类名，通过简单工厂模式可以减少使用者的记忆量。</li>
-<li>通过引入配置文件，可以在不修改任何客户端代码的情况下更换和增加新的具体产品类，在一定程度上提高了系统的灵活性。</li>
-<li>当需要引入新的产品是不需要修改客户端的代码，只需要添加相应的产品类并修改工厂类就可以了，所以说从产品的角度上简单工厂模式是符合“开-闭”原则的。</li>
-</ul>
-<h2 id="六、模式缺点"><a href="#六、模式缺点" class="headerlink" title="六、模式缺点"></a>六、模式缺点</h2><ul>
-<li>由于工厂类集中了所有产品创建逻辑，工厂类一般被我们称作“全能类”或者“<strong>上帝类</strong>”，因为所有的产品创建他都能完成，这看似是好事，但仔细想想是有问题的。比如全国上下所有的事情都有国家主义一个人干会不会有问题，当然有！一旦不能正常工作，整个系统都要受到影响。</li>
-<li>使用简单工厂模式将会增加系统中类的个数，在一定程序上增加了系统的复杂度和理解难度。</li>
-<li>系统扩展困难，一旦添加新产品就不得不修改工厂逻辑，在产品类型较多时，有可能造成工厂逻辑过于复杂，不利于系统的扩展和维护。所以说从工厂的角度来说简单工厂模式是不符合“开-闭”原则的。</li>
-<li>简单工厂模式由于使用了静态工厂方法，造成工厂角色无法形成基于继承的等级结构。</li>
-</ul>
-<h2 id="七、适用场景"><a href="#七、适用场景" class="headerlink" title="七、适用场景"></a>七、适用场景</h2><ul>
-<li>在以下情况下可以使用简单工厂模式：<ol>
-<li>工厂类负责创建的对象比较少：由于创建的对象较少，不会造成工厂方法中的业务逻辑太过复杂。</li>
-<li>客户端只知道传入工厂类的参数，对于如何创建对象不关心：客户端既不需要关心创建细节，甚至连类名都不需要记住，只需要知道类型所对应的参数。</li>
-</ol>
-</li>
-</ul>
-<h2 id="八、简单工厂模式在JDK中的应用"><a href="#八、简单工厂模式在JDK中的应用" class="headerlink" title="八、简单工厂模式在JDK中的应用"></a>八、简单工厂模式在JDK中的应用</h2><ul>
-<li>JDK类库中广泛使用了简单工厂模式，如工具类java.text.DateFormat，它用于格式化一个本地日期或者时间。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">()</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style)</span></span>;</div><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> DateFormat <span class="title">getDateInstance</span><span class="params">(<span class="keyword">int</span> style,Locale locale)</span></span>;</div></pre></td></tr></table></figure>
-<h2 id="八、参考"><a href="#八、参考" class="headerlink" title="八、参考"></a>八、参考</h2><ol>
-<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
-<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/factoryModel" target="_blank" rel="external">我的代码|GitHub</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
   </channel>
