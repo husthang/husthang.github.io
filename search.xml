@@ -518,32 +518,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[TSP问题之分支定界结合匈牙利算法求解]]></title>
-      <url>http://liuhang.net.cn/TSP%E9%97%AE%E9%A2%98%E4%B9%8B%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%BB%93%E5%90%88%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3.html</url>
-      <content type="html"><![CDATA[<h2 id="分支定界法"><a href="#分支定界法" class="headerlink" title="分支定界法"></a>分支定界法</h2><p>2016华为软件精英挑战赛</p>
-<h2 id="TSP问题的分支定界法结合匈牙利算法"><a href="#TSP问题的分支定界法结合匈牙利算法" class="headerlink" title="TSP问题的分支定界法结合匈牙利算法"></a>TSP问题的分支定界法结合匈牙利算法</h2><ul>
-<li>Example</li>
-</ul>
-<p><img src="../media/14872967925814.jpg" alt=""><br><img src="../media/14872968645084.jpg" alt=""></p>
-<ul>
-<li>分支策略<ul>
-<li>一次AP(assignment problem指派问题)之后,选取节点数最少的环,进行分支,即进行”破环”;分别对每条边进行破环,破开的边不允许出现在下次AP解得的路径上;为了防止重复搜索,已经分支过(已经破开过的边)要必须出现在当前的字节点中.例如,一个环包括(i1,i2,i3)三个点(即三条边),第一个子节点(i1,i2)被破开(forbidden,禁止出现在下次ap中),第二个子节点(i1,i3) is forbidden,(i1,i2)必须出现(required),第三个子节点(i2,i3) is forbidden,(i1,i2)和(i1,i3) required. 如上面图二,为一次分支定界的示意图.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
-<li><a href="https://github.com/husthang/future_net2016" target="_blank" rel="external">分支定界结合指派问题km算法|2016华为软件精英挑战赛|Java/c++实现</a></li>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">KM算法Java实现</a></li>
-</ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
-<li><a href="https://www.kancloud.cn/digest/mathematicalmodelin/183016" target="_blank" rel="external">分支定界法|看云</a></li>
-<li><a href="http://www.ecaa.ntu.edu.tw/weifang/class-or/or-more%E6%8C%87%E6%B4%BE.htm" target="_blank" rel="external">指派问题的特殊解法</a></li>
-<li>Miller D L, Pekny J F. Exact solution of large asymmetric traveling salesman problems.[J]. 1991, 251(4995):754-761.</li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[面试笔试编程题总结(数据结构和算法总结)]]></title>
       <url>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
@@ -3156,6 +3130,32 @@
 <li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
 <li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解]]></title>
+      <url>http://liuhang.net.cn/TSP%E9%97%AE%E9%A2%98%E4%B9%8B%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%BB%93%E5%90%88%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3.html</url>
+      <content type="html"><![CDATA[<h2 id="分支定界法"><a href="#分支定界法" class="headerlink" title="分支定界法"></a>分支定界法</h2><p>2016华为软件精英挑战赛</p>
+<h2 id="TSP问题的分支定界法结合匈牙利算法"><a href="#TSP问题的分支定界法结合匈牙利算法" class="headerlink" title="TSP问题的分支定界法结合匈牙利算法"></a>TSP问题的分支定界法结合匈牙利算法</h2><ul>
+<li>Example</li>
+</ul>
+<p><img src="../media/14872967925814.jpg" alt=""><br><img src="../media/14872968645084.jpg" alt=""></p>
+<ul>
+<li>分支策略<ul>
+<li>一次AP(assignment problem指派问题)之后,选取节点数最少的环,进行分支,即进行”破环”;分别对每条边进行破环,破开的边不允许出现在下次AP解得的路径上;为了防止重复搜索,已经分支过(已经破开过的边)要必须出现在当前的字节点中.例如,一个环包括(i1,i2,i3)三个点(即三条边),第一个子节点(i1,i2)被破开(forbidden,禁止出现在下次ap中),第二个子节点(i1,i3) is forbidden,(i1,i2)必须出现(required),第三个子节点(i2,i3) is forbidden,(i1,i2)和(i1,i3) required. 如上面图二,为一次分支定界的示意图.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li><a href="https://github.com/husthang/future_net2016" target="_blank" rel="external">分支定界结合指派问题km算法|2016华为软件精英挑战赛|Java/c++实现</a></li>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">KM算法Java实现</a></li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.kancloud.cn/digest/mathematicalmodelin/183016" target="_blank" rel="external">分支定界法|看云</a></li>
+<li><a href="http://www.ecaa.ntu.edu.tw/weifang/class-or/or-more%E6%8C%87%E6%B4%BE.htm" target="_blank" rel="external">指派问题的特殊解法</a></li>
+<li>Miller D L, Pekny J F. Exact solution of large asymmetric traveling salesman problems.[J]. 1991, 251(4995):754-761.</li>
+</ul>
 ]]></content>
     </entry>
     
