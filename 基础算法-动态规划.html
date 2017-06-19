@@ -86,13 +86,16 @@
 
 
 
+<meta name="description" content="动态规划总结">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基础算法-动态规划">
 <meta property="og:url" content="http://liuhang.net.cn/基础算法-动态规划.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-03-19T11:40:05.000Z">
+<meta property="og:description" content="动态规划总结">
+<meta property="og:updated_time" content="2017-06-15T01:15:15.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基础算法-动态规划">
+<meta name="twitter:description" content="动态规划总结">
 
 
 
@@ -405,7 +408,18 @@
       
 
       
-        
+        <h1 id="简单理解"><a href="#简单理解" class="headerlink" title="简单理解"></a>简单理解</h1><ul>
+<li>动态规划的核心是，用空间换时间，找到递推关系 </li>
+</ul>
+<h1 id="简单示例："><a href="#简单示例：" class="headerlink" title="简单示例："></a>简单示例：</h1><ol>
+<li>斐波拉契数列<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归方法，效率不行</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>)+fibonacci(n-<span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//动态规划法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</div><div class="line">    dp[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i&lt;=n; i++)&#123;</div><div class="line">        db[i] = dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> dp[n];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><ol>
+<li>背包问题</li>
+</ol>
+
       
     </div>
 
@@ -532,7 +546,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">56</span>
+              <span class="site-state-item-count">58</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -549,7 +563,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -614,7 +628,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简单理解"><span class="nav-number">1.</span> <span class="nav-text">简单理解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单示例："><span class="nav-number">2.</span> <span class="nav-text">简单示例：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#题目"><span class="nav-number">3.</span> <span class="nav-text">题目</span></a></li></ol></div>
             
           </div>
         </section>
