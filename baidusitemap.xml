@@ -508,46 +508,6 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</loc>
-    <lastmod>2017-04-12T08:22:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式4-构建者模式</title>
-        <pubTime>2017-04-09T14:17:01.000Z</pubTime>
-        
-        <tag>BuilderModel</tag>
-         
-         
-           
-             
-              <breadCrumb title="designPattern" url="http://liuhang.net.cn/categories/designPattern/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</loc>
-    <lastmod>2017-04-12T08:22:12.000Z</lastmod>
-    <data>
-        <display>
-        <title>设计模式2-简单工厂模式</title>
-        <pubTime>2017-02-19T17:36:37.000Z</pubTime>
-        
-        <tag>简单工厂模式</tag>
-         
-         
-           
-             
-              <breadCrumb title="designPattern" url="http://liuhang.net.cn/categories/designPattern/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</loc>
     <lastmod>2017-04-12T08:22:12.000Z</lastmod>
     <data>
@@ -578,6 +538,46 @@
         <tag>适配器模式</tag>
          
         <tag>服务提供者框架</tag>
+         
+         
+           
+             
+              <breadCrumb title="designPattern" url="http://liuhang.net.cn/categories/designPattern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F4-%E6%9E%84%E5%BB%BA%E8%80%85%E6%A8%A1%E5%BC%8F.html</loc>
+    <lastmod>2017-04-12T08:22:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式4-构建者模式</title>
+        <pubTime>2017-04-09T14:17:01.000Z</pubTime>
+        
+        <tag>BuilderModel</tag>
+         
+         
+           
+             
+              <breadCrumb title="designPattern" url="http://liuhang.net.cn/categories/designPattern/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F2-%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.html</loc>
+    <lastmod>2017-04-12T08:22:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>设计模式2-简单工厂模式</title>
+        <pubTime>2017-02-19T17:36:37.000Z</pubTime>
+        
+        <tag>简单工厂模式</tag>
          
          
            
@@ -994,34 +994,16 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>Intellij IDEA总结</title>
-        <pubTime>2017-03-04T15:33:35.000Z</pubTime>
+        <title>Git总结</title>
+        <pubTime>2017-03-04T15:28:32.000Z</pubTime>
         
-        <tag>Intellij IDEA</tag>
+        <tag>Git</tag>
          
-         
-           
-             
-              <breadCrumb title="tool" url="http://liuhang.net.cn/categories/tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</loc>
-    <lastmod>2017-03-13T12:01:34.000Z</lastmod>
-    <data>
-        <display>
-        <title>chrome总结</title>
-        <pubTime>2017-03-04T15:31:21.000Z</pubTime>
-        
-        <tag>chrome</tag>
+        <tag>GitHub</tag>
          
          
            
@@ -1054,16 +1036,14 @@
 
     
   <url>
-    <loc>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</loc>
+    <loc>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</loc>
     <lastmod>2017-03-13T12:01:34.000Z</lastmod>
     <data>
         <display>
-        <title>Git总结</title>
-        <pubTime>2017-03-04T15:28:32.000Z</pubTime>
+        <title>chrome总结</title>
+        <pubTime>2017-03-04T15:31:21.000Z</pubTime>
         
-        <tag>Git</tag>
-         
-        <tag>GitHub</tag>
+        <tag>chrome</tag>
          
          
            
@@ -1089,6 +1069,26 @@
            
              
               <breadCrumb title="web" url="http://liuhang.net.cn/categories/web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</loc>
+    <lastmod>2017-03-13T12:01:34.000Z</lastmod>
+    <data>
+        <display>
+        <title>Intellij IDEA总结</title>
+        <pubTime>2017-03-04T15:33:35.000Z</pubTime>
+        
+        <tag>Intellij IDEA</tag>
+         
+         
+           
+             
+              <breadCrumb title="tool" url="http://liuhang.net.cn/categories/tool/"/>
           
         </display>
     </data>
