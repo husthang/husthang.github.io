@@ -8,7 +8,7 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 19 Jun 2017 12:30:49 GMT</pubDate>
+    <pubDate>Wed, 21 Jun 2017 01:42:00 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -27,7 +27,10 @@
 <li>赛题抽象，给定一个无向图G，已知起点s、终点e、必经点集R、必经边集B、禁忌边集F和访问节点数限制k，要求寻找一条从起点s到终点e的最短路径，同时满足以下几个限制条件：（1）不能经过禁忌边集F中的任意边（2）必须经过必经点R集中的所有顶点（3）必须经过必经边集B中的所有边（4）路径访问的节点数量不超过k。</li>
 <li>赛题说明文档</li>
 </ol>
-<p># </p>
+<h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
+<li><a href="http://liuhang.net.cn/images/zte2017-paper.pdf">paper|版权归中兴公司所有</a></li>
+<li><a href="https://github.com/husthang/zte2017" target="_blank" rel="external">代码|版权归中兴公司所有</a></li>
+</ol>
 ]]></content:encoded>
       
       <comments>http://liuhang.net.cn/2017%E4%B8%AD%E5%85%B4%E6%8D%A7%E6%9C%88%E6%9D%AF-%E5%88%9D%E8%B5%9B%E8%B5%9B%E9%A2%98%E6%80%BB%E7%BB%93.html#disqus_thread</comments>

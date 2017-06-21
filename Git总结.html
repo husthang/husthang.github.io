@@ -92,15 +92,15 @@
 <meta property="og:url" content="http://liuhang.net.cn/Git总结.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="Git及GitHub使用总结">
-<meta property="og:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
-<meta property="og:image" content="http://liuhang.net.cn/images/reset-soft.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/reset-mixed.png">
-<meta property="og:image" content="http://liuhang.net.cn/images/reset-hard.png">
-<meta property="og:updated_time" content="2017-03-13T12:01:34.000Z">
+<meta property="og:image" content="http://liuhang.net.cn/../images/工作区暂存区示意图.jpeg">
+<meta property="og:image" content="http://liuhang.net.cn/../images/reset-soft.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/reset-mixed.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/reset-hard.png">
+<meta property="og:updated_time" content="2017-06-19T13:07:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git总结">
 <meta name="twitter:description" content="Git及GitHub使用总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/images/工作区暂存区示意图.jpeg">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/工作区暂存区示意图.jpeg">
 
 
 
@@ -413,18 +413,18 @@
       
 
       
-        <h2 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h2><ol>
+        <h1 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h1><ol>
 <li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
 <li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
 </ol>
-<h2 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h2><h3 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h3><ul>
+<h1 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h1><h2 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h2><ul>
 <li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
 <li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
 <li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
 <li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
 <li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
 </ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
 <li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
 <li>总结<ul>
 <li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
@@ -433,21 +433,21 @@
 </ul>
 </li>
 </ul>
-<h3 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h3><ul>
-<li><img src="/images/工作区暂存区示意图.jpeg" alt="示意图"></li>
+<h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><ul>
+<li><img src="../images/工作区暂存区示意图.jpeg" alt="示意图"></li>
 <li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
 </ul>
-<h3 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h3><ul>
+<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
 <li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
 <li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
 <li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
 </ul>
-<h3 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h3><ul>
+<h2 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h2><ul>
 <li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
 <li>reset<ul>
-<li><img src="/images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
-<li><img src="/images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
-<li><img src="/images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
+<li><img src="../images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
+<li><img src="../images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
+<li><img src="../images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
 </ul>
 </li>
 <li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
@@ -456,12 +456,12 @@
 </ul>
 </li>
 </ul>
-<h3 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h3><ul>
+<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><ul>
 <li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
 <li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
 <li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
 </ul>
-<h3 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h3><ul>
+<h2 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h2><ul>
 <li>文件 .gitignore 的格式规范如下：<ul>
 <li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
 <li>可以使用标准的 glob 模式匹配。</li>
@@ -473,7 +473,7 @@
 <li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
 <li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
 </ul>
-<h3 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h3><ul>
+<h2 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h2><ul>
 <li>命令<ul>
 <li>查看分支：git branch</li>
 <li>创建分支：git branch <name></name></li>
@@ -498,7 +498,17 @@
 </ul>
 </li>
 </ul>
-<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<h2 id="换行符配置"><a href="#换行符配置" class="headerlink" title="换行符配置"></a>换行符配置</h2><ol>
+<li>core.autocrlf<ul>
+<li>如果你在windows系统上，设置为true,提交时crlf转换为lf，检出时lf转换为crlf<code>git config --global core.autocrlf true</code></li>
+<li>如果你在linux或mac系统上，设置为input，提交时crlf转换为lf，检出时不转换<code>git config --global core.autocrlf input</code></li>
+<li>仅仅在windows开发，则设置为false。取消转换功能</li>
+</ul>
+</li>
+<li>core.safecrlf<ul>
+<li><code>git config --global core.safecrlf true(false/ware)</code>是否能提交混合换行符的文件<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1></li>
+</ul>
+</li>
 <li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
 </ol>
 
@@ -718,7 +728,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub团队合作"><span class="nav-number">1.</span> <span class="nav-text">GitHub团队合作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git基础"><span class="nav-number">2.</span> <span class="nav-text">Git基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#add-commit"><span class="nav-number">2.1.</span> <span class="nav-text">add,commit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重置解密"><span class="nav-number">2.5.</span> <span class="nav-text">重置解密</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签管理"><span class="nav-number">2.6.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#忽略文件"><span class="nav-number">2.7.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git分支"><span class="nav-number">2.8.</span> <span class="nav-text">git分支</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub团队合作"><span class="nav-number">1.</span> <span class="nav-text">GitHub团队合作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git基础"><span class="nav-number">2.</span> <span class="nav-text">Git基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#add-commit"><span class="nav-number">2.1.</span> <span class="nav-text">add,commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重置解密"><span class="nav-number">2.5.</span> <span class="nav-text">重置解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">2.6.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略文件"><span class="nav-number">2.7.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git分支"><span class="nav-number">2.8.</span> <span class="nav-text">git分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行符配置"><span class="nav-number">2.9.</span> <span class="nav-text">换行符配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
             
           </div>
         </section>
