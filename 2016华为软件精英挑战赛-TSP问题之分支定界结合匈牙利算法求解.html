@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Git,GitHub," />
+  <meta name="keywords" content="TSP,2016华为软件精英挑战赛," />
 
 
 
@@ -86,21 +86,19 @@
 
 
 
-<meta name="description" content="Git及GitHub使用总结">
+<meta name="description" content="2016华为软件精英挑战赛,利用分支定界结合匈牙利算法(km算法)求解tsp问题;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git总结">
-<meta property="og:url" content="http://liuhang.net.cn/Git总结.html">
+<meta property="og:title" content="2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解">
+<meta property="og:url" content="http://liuhang.net.cn/2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:description" content="Git及GitHub使用总结">
-<meta property="og:image" content="http://liuhang.net.cn/../images/工作区暂存区示意图.jpeg">
-<meta property="og:image" content="http://liuhang.net.cn/../images/reset-soft.png">
-<meta property="og:image" content="http://liuhang.net.cn/../images/reset-mixed.png">
-<meta property="og:image" content="http://liuhang.net.cn/../images/reset-hard.png">
-<meta property="og:updated_time" content="2017-06-19T13:07:57.000Z">
+<meta property="og:description" content="2016华为软件精英挑战赛,利用分支定界结合匈牙利算法(km算法)求解tsp问题;">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14872967925814.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14872968645084.jpg">
+<meta property="og:updated_time" content="2017-06-21T02:34:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git总结">
-<meta name="twitter:description" content="Git及GitHub使用总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/../images/工作区暂存区示意图.jpeg">
+<meta name="twitter:title" content="2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解">
+<meta name="twitter:description" content="2016华为软件精英挑战赛,利用分支定界结合匈牙利算法(km算法)求解tsp问题;">
+<meta name="twitter:image" content="http://liuhang.net.cn/../media/14872967925814.jpg">
 
 
 
@@ -118,7 +116,7 @@
   };
 </script>
 
-  <title> Git总结 | 刘航 </title>
+  <title> 2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -342,7 +340,7 @@
             
             
               
-                Git总结
+                2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解
               
             
           </h1>
@@ -354,8 +352,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-04T23:28:32+08:00" content="2017-03-04">
-              2017-03-04
+            <time itemprop="dateCreated" datetime="2017-02-17T15:59:02+08:00" content="2017-02-17">
+              2017-02-17
             </time>
           </span>
 
@@ -368,8 +366,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
                   </a>
                 </span>
 
@@ -384,8 +382,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/Git总结.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Git总结.html" itemprop="commentsCount"></span>
+                <a href="/2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -413,104 +411,32 @@
       
 
       
-        <h1 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h1><ol>
-<li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
-<li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
-</ol>
-<h1 id="Git基础"><a href="#Git基础" class="headerlink" title="Git基础"></a>Git基础</h1><h2 id="add-commit"><a href="#add-commit" class="headerlink" title="add,commit"></a>add,commit</h2><ul>
-<li><code>git log</code>,<code>git log --pretty=oneline</code>只显示一行</li>
-<li><code>git add &lt;file&gt;</code> <code>git commit -m &quot;...&quot;</code></li>
-<li>commit id: 这是一个由 40 个十六进制字符（0-9 和 a-f）组成字符串，基于 Git 中文件的内容或目录结构计算出来,SHA-1散列</li>
-<li>commit: 每当你觉得文件修改到一定程度的时候，就可以“保存一个快照”，这个快照在Git中被称为commit。提交一个commit快照,就相当于保存了一次版本</li>
-<li>所有的版本控制系统，只能跟踪纯文本文件的改动，比如TXT文件，网页，所有的程序代码等等. 二进制文件(如图片,视频等)可以管理,但不能跟踪改动.</li>
+        <h2 id="分支定界法"><a href="#分支定界法" class="headerlink" title="分支定界法"></a>分支定界法</h2><p>2016华为软件精英挑战赛</p>
+<h2 id="TSP问题的分支定界法结合匈牙利算法"><a href="#TSP问题的分支定界法结合匈牙利算法" class="headerlink" title="TSP问题的分支定界法结合匈牙利算法"></a>TSP问题的分支定界法结合匈牙利算法</h2><ul>
+<li>Example</li>
 </ul>
-<h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><ul>
-<li>版本回退:在Git中，用<code>HEAD</code>表示当前版本，上一个版本就是<code>HEAD^</code>，上上一个版本就是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code>。 <code>git reset --hard HEAD^</code>退回到上一个版本(即这时文件的内容与结构和上次的commit时的一样了). <code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本</li>
-<li>总结<ul>
-<li>HEAD指向的版本就是当前版本，因此，Git允许我们在版本的历史之间穿梭，使用命令<code>git reset commit_id</code>,不指定参数,则默认soft。</li>
-<li>穿梭前，用<code>git log</code>可以查看提交历史，以便确定要回退到哪个版本。<code>git log --pretty=oneline</code>,显示简洁版日志</li>
-<li>要重返未来，用<code>git reflog</code>查看命令历史，以便确定要回到未来的哪个版本。</li>
+<p><img src="../media/14872967925814.jpg" alt=""><br><img src="../media/14872968645084.jpg" alt=""></p>
+<ul>
+<li><p>分支策略</p>
+<ul>
+<li>一次AP(assignment problem指派问题)之后,选取节点数最少的环,进行分支,即进行”破环”;分别对每条边进行破环,破开的边不允许出现在下次AP解得的路径上;为了防止重复搜索,已经分支过(已经破开过的边)要必须出现在当前的字节点中.例如,一个环包括(i1,i2,i3)三个点(即三条边),第一个子节点(i1,i2)被破开(forbidden,禁止出现在下次ap中),第二个子节点(i1,i3) is forbidden,(i1,i2)必须出现(required),第三个子节点(i2,i3) is forbidden,(i1,i2)和(i1,i3) required. 如上面图二,为一次分支定界的示意图.</li>
+</ul>
+</li>
+<li><p>指派模型结合分支定界法求解TSP问题</p>
+<ul>
+<li><a href="http://liuhang.net.cn/tsp-paper.pdf">本人总结论文</a>,此论文详细介绍了利用分支定界法结合指派问题求解TSP的原理和步骤。</li>
 </ul>
 </li>
 </ul>
-<h2 id="工作区和暂存区"><a href="#工作区和暂存区" class="headerlink" title="工作区和暂存区"></a>工作区和暂存区</h2><ul>
-<li><img src="../images/工作区暂存区示意图.jpeg" alt="示意图"></li>
-<li><code>git add</code>命令实际上就是把要提交的所有修改放到暂存区（Stage），然后，执行<code>git commit</code>就可以一次性把暂存区的所有修改提交到分支</li>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ul>
+<li><a href="https://github.com/husthang/future_net2016" target="_blank" rel="external">分支定界结合指派问题km算法|2016华为软件精英挑战赛|Java/c++实现</a></li>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">KM算法Java实现</a></li>
 </ul>
-<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><ul>
-<li><code>git diff HEAD -- file</code>查看工作区和版本库里面最新版本的区别</li>
-<li>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令<code>git checkout -- file</code>。<strong>此命令含义,从index暂存区,检出此文件更新工作区</strong></li>
-<li>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令<code>git reset HEAD file</code>(<strong>reset直接跟文件,默认mixed</strong>,这个命令的全部是: <code>git reset --mixed HEAD file</code>含义是将file从HEAD版本复制到暂存区),这个命令让暂存区恢复,然后只需要丢弃工作区的修改即可,这就回到了场景1，从暂存区检出此文件. <strong>此场景方法二</strong>: 直接一步到位<code>git checkout HEAD -- file</code>同时撤销本地和暂存区修改.</li>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://www.kancloud.cn/digest/mathematicalmodelin/183016" target="_blank" rel="external">分支定界法|看云</a></li>
+<li><a href="http://www.ecaa.ntu.edu.tw/weifang/class-or/or-more%E6%8C%87%E6%B4%BE.htm" target="_blank" rel="external">指派问题的特殊解法</a></li>
+<li>Miller D L, Pekny J F. Exact solution of large asymmetric traveling salesman problems.[J]. 1991, 251(4995):754-761.</li>
 </ul>
-<h2 id="重置解密"><a href="#重置解密" class="headerlink" title="重置解密"></a>重置解密</h2><ul>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E7%BD%AE%E6%8F%AD%E5%AF%86#_git_reset" target="_blank" rel="external">reset与checkout</a></li>
-<li>reset<ul>
-<li><img src="../images/reset-soft.png" alt="`git reset --soft HEAD~`"></li>
-<li><img src="../images/reset-mixed.png" alt="`git reset --mixed HEAD~`"></li>
-<li><img src="../images/reset-hard.png" alt="`git reset --hard HEAD~`"></li>
-</ul>
-</li>
-<li><code>checkout</code>:<code>git checkout [tree-ish] -- file</code><ul>
-<li>如果不指定commit,则默认从index暂存区的内容覆盖本地修改</li>
-<li>如果指定了commit,从commit版本复制出来更新index索引和工作区的修改.<a href="http://cnblog.me/2015/08/15/git-checkout/" target="_blank" rel="external">参考</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="标签管理"><a href="#标签管理" class="headerlink" title="标签管理"></a>标签管理</h2><ul>
-<li>tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起</li>
-<li>命令<code>git tag &lt;name&gt;</code>用于新建一个标签，默认为HEAD，也可以指定一个commit id；</li>
-<li><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/001376951758572072ce1dc172b4178b910d31bc7521ee4000" target="_blank" rel="external">参考</a></li>
-</ul>
-<h2 id="忽略文件"><a href="#忽略文件" class="headerlink" title="忽略文件"></a>忽略文件</h2><ul>
-<li>文件 .gitignore 的格式规范如下：<ul>
-<li>所有空行或者以 ＃ 开头的行都会被 Git 忽略。</li>
-<li>可以使用标准的 glob 模式匹配。</li>
-<li>匹配模式可以以（/）开头防止递归。</li>
-<li>匹配模式可以以（/）结尾指定目录。</li>
-<li>要忽略指定模式以外的文件或目录，可以在模式前加上惊叹号（!）取反。</li>
-</ul>
-</li>
-<li>.gitignore文件 <a href="https://github.com/github/gitignore" target="_blank" rel="external">.gitignore模板</a></li>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%AE%B0%E5%BD%95%E6%AF%8F%E6%AC%A1%E6%9B%B4%E6%96%B0%E5%88%B0%E4%BB%93%E5%BA%93#忽略文件" target="_blank" rel="external">参考</a></li>
-</ul>
-<h2 id="git分支"><a href="#git分支" class="headerlink" title="git分支"></a>git分支</h2><ul>
-<li>命令<ul>
-<li>查看分支：git branch</li>
-<li>创建分支：git branch <name></name></li>
-<li>切换分支：git checkout <name></name></li>
-<li>创建+切换分支：git checkout -b <name></name></li>
-<li>合并某分支到当前分支：git merge <name></name></li>
-<li>删除分支：git branch -d <name></name></li>
-</ul>
-</li>
-<li>HEAD<ul>
-<li>在Git中，HEAD是一个指针，指向版本库中当前所在的本地分支(将 HEAD 想象为当前分支的别名)</li>
-</ul>
-</li>
-<li>远程分支<ul>
-<li>以<code>(remote)/(branch)</code>形式命名,远程分支与远程仓库通信时会自动移动.</li>
-<li><code>git fetch origin</code> 拉取远程仓库,并移动远程分支,<strong>注意</strong><code>git pull</code>命令比较”魔法”,不推荐使用,应显示的使用<code>git fetch</code>与<code>git merge</code>.</li>
-<li><code>git push (remote) (branch)</code>把本地branch分支,推送到远程remote.详细:<code>git push origin serverfix:serverfix</code>，含义“推送本地的 serverfix 分支，将其作为远程仓库的 serverfix分支”</li>
-</ul>
-</li>
-<li>参考<ul>
-<li><a href="https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E7%AE%80%E4%BB%8B" target="_blank" rel="external">GitBook分支</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="换行符配置"><a href="#换行符配置" class="headerlink" title="换行符配置"></a>换行符配置</h2><ol>
-<li>core.autocrlf<ul>
-<li>如果你在windows系统上，设置为true,提交时crlf转换为lf，检出时lf转换为crlf<code>git config --global core.autocrlf true</code></li>
-<li>如果你在linux或mac系统上，设置为input，提交时crlf转换为lf，检出时不转换<code>git config --global core.autocrlf input</code></li>
-<li>仅仅在windows开发，则设置为false。取消转换功能</li>
-</ul>
-</li>
-<li>core.safecrlf<ul>
-<li><code>git config --global core.safecrlf true(false/ware)</code>是否能提交混合换行符的文件<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1></li>
-</ul>
-</li>
-<li>git GUI推荐:<a href="https://www.sourcetreeapp.com/" target="_blank" rel="external">SourceTree</a></li>
-</ol>
 
       
     </div>
@@ -553,9 +479,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Git/" rel="tag">#Git</a>
+            <a href="/tags/TSP/" rel="tag">#TSP</a>
           
-            <a href="/tags/GitHub/" rel="tag">#GitHub</a>
+            <a href="/tags/2016华为软件精英挑战赛/" rel="tag">#2016华为软件精英挑战赛</a>
           
         </div>
       
@@ -564,16 +490,12 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/mac总结.html" rel="next" title="mac总结">
-                <i class="fa fa-chevron-left"></i> mac总结
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/chrome总结.html" rel="prev" title="chrome总结">
-                chrome总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现.html" rel="prev" title="2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现">
+                2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -600,8 +522,8 @@
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="Git总结.html"
-           data-title="Git总结" data-url="http://liuhang.net.cn/Git总结.html">
+      <div class="ds-thread" data-thread-key="2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解.html"
+           data-title="2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解" data-url="http://liuhang.net.cn/2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解.html">
       </div>
     
   </div>
@@ -728,7 +650,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub团队合作"><span class="nav-number">1.</span> <span class="nav-text">GitHub团队合作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Git基础"><span class="nav-number">2.</span> <span class="nav-text">Git基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#add-commit"><span class="nav-number">2.1.</span> <span class="nav-text">add,commit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">2.2.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#工作区和暂存区"><span class="nav-number">2.3.</span> <span class="nav-text">工作区和暂存区</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">2.4.</span> <span class="nav-text">撤销修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重置解密"><span class="nav-number">2.5.</span> <span class="nav-text">重置解密</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标签管理"><span class="nav-number">2.6.</span> <span class="nav-text">标签管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#忽略文件"><span class="nav-number">2.7.</span> <span class="nav-text">忽略文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git分支"><span class="nav-number">2.8.</span> <span class="nav-text">git分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#换行符配置"><span class="nav-number">2.9.</span> <span class="nav-text">换行符配置</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FAQ"><span class="nav-number">3.</span> <span class="nav-text">FAQ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#分支定界法"><span class="nav-number">1.</span> <span class="nav-text">分支定界法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TSP问题的分支定界法结合匈牙利算法"><span class="nav-number">2.</span> <span class="nav-text">TSP问题的分支定界法结合匈牙利算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">4.</span> <span class="nav-text">参考</span></a></li></ol></div>
             
           </div>
         </section>

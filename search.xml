@@ -4,7 +4,7 @@
   
     
     <entry>
-      <title><![CDATA[2017中兴捧月杯-初赛赛题总结]]></title>
+      <title><![CDATA[2017中兴捧月杯-初赛总结]]></title>
       <url>http://liuhang.net.cn/2017%E4%B8%AD%E5%85%B4%E6%8D%A7%E6%9C%88%E6%9D%AF-%E5%88%9D%E8%B5%9B%E8%B5%9B%E9%A2%98%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="赛题描述"><a href="#赛题描述" class="headerlink" title="赛题描述"></a>赛题描述</h1><ol>
 <li>赛题链接：<a href="http://challenge.zte.net/index.php" target="_blank" rel="external">迪杰斯特拉派赛题</a></li>
@@ -12,16 +12,26 @@
 <li>赛题说明文档</li>
 </ol>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><ol>
-<li><a href="http://liuhang.net.cn/images/zte2017-paper.pdf">paper|版权归中兴公司所有</a></li>
+<li><a href="http://liuhang.net.cn/paper.pdf">paper|版权归中兴公司所有</a></li>
 <li><a href="https://github.com/husthang/zte2017" target="_blank" rel="external">代码|版权归中兴公司所有</a></li>
 </ol>
 ]]></content>
     </entry>
     
     <entry>
-      <title><![CDATA[2017中兴捧月杯-决赛赛题总结]]></title>
+      <title><![CDATA[2017中兴捧月杯-决赛总结]]></title>
       <url>http://liuhang.net.cn/2017%E4%B8%AD%E5%85%B4%E6%8D%A7%E6%9C%88%E6%9D%AF-%E5%86%B3%E8%B5%9B%E8%B5%9B%E9%A2%98%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"><![CDATA[<h1 id="赛题描述"><a href="#赛题描述" class="headerlink" title="赛题描述"></a>赛题描述</h1>]]></content>
+      <content type="html"><![CDATA[<h1 id="向量装箱问题"><a href="#向量装箱问题" class="headerlink" title="向量装箱问题"></a>向量装箱问题</h1><h2 id="装箱问题介绍"><a href="#装箱问题介绍" class="headerlink" title="装箱问题介绍"></a>装箱问题介绍</h2><ol>
+<li><a href="https://people.math.gatech.edu/~tetali/PUBLIS/CKPT.pdf" target="_blank" rel="external">对装箱问题的详细介绍|Multidimensional Bin Packing and Other Related Problems: A Survey ∗</a></li>
+<li><a href="http://www.or.deis.unibo.it/knapsack.html" target="_blank" rel="external">背包问题及装箱问题|各种算法及详细介绍</a></li>
+<li><a href="http://vpsolver.dcc.fc.up.pt/" target="_blank" rel="external">向量装箱问题求解器</a>，这个是针对多维向量装箱问题的求解器，功能非常强大。</li>
+</ol>
+<h2 id="二维向量装箱问题"><a href="#二维向量装箱问题" class="headerlink" title="二维向量装箱问题"></a>二维向量装箱问题</h2><ol>
+<li>参考一：A BRANCH-AND-BOUND ALGORITHM FOR THE TWO-DIMENSIONAL VECTOR PACKING PROBLEM</li>
+<li>参考二：<a href="http://www.or.deis.unibo.it/kp/Chapter8.pdf" target="_blank" rel="external">Knapsack Problems|Chapter8,bin packing problems</a></li>
+<li><a href="https://github.com/husthang/zte2017" target="_blank" rel="external">二维向量装箱问题代码|包含基本的FFD|包含分支定界精确求解方法</a></li>
+</ol>
+<h1 id="网络优化问题"><a href="#网络优化问题" class="headerlink" title="网络优化问题"></a>网络优化问题</h1>]]></content>
     </entry>
     
     <entry>
@@ -2010,8 +2020,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[hexo总结]]></title>
-      <url>http://liuhang.net.cn/hexo%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[奇技-hexo总结]]></title>
+      <url>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-hexo%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://www.bootcss.com/p/font-awesome/" target="_blank" rel="external">Font Awesome图标</a></li>
 <li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next主题配置</a></li>
@@ -2722,8 +2732,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Intellij IDEA总结]]></title>
-      <url>http://liuhang.net.cn/Intellij-IDEA%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[奇技-Intellij IDEA总结]]></title>
+      <url>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-Intellij-IDEA%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><p>⌘ Command<br>⇧ Shift<br>⌥ Option<br>⌃ Control<br>↩︎ Return/Enter<br>⌫ Delete<br>⌦ 向前删除键（Fn+Delete）<br>↑ 上箭头<br>↓ 下箭头<br>← 左箭头<br>→ 右箭头<br>⇞ Page Up（Fn+↑）<br>⇟ Page Down（Fn+↓）<br>Home Fn + ←<br>End Fn + →<br>⇥ 右制表符（Tab键）<br>⇤ 左制表符（Shift+Tab）<br>⎋ Escape (Esc)</p>
 <ul>
 <li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial/blob/newMaster/keymap-mac-introduce.md" target="_blank" rel="external">IntelliJ IDEA For Mac 快捷键</a></li>
@@ -2736,9 +2746,11 @@
 </ul>
 <h2 id="插件篇"><a href="#插件篇" class="headerlink" title="插件篇"></a>插件篇</h2><ol>
 <li>Jrebel<ul>
-<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2></li>
+<li>激活: <a href="http://jingyan.baidu.com/article/647f01159d32e77f2048a85d.html" target="_blank" rel="external">免费激活</a> 要绑定Facebook或者Twitter</li>
 </ul>
 </li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
 <li><a href="https://github.com/husthang/IntelliJ-IDEA-Tutorial" target="_blank" rel="external">IDEA教程</a></li>
 <li><a href="https://sales.jetbrains.com/hc/zh-cn/articles/207154369-%E5%AD%A6%E7%94%9F%E6%8E%88%E6%9D%83%E7%94%B3%E8%AF%B7%E6%96%B9%E5%BC%8F" target="_blank" rel="external">Intellij学生授权</a></li>
 </ol>
@@ -2746,8 +2758,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[chrome总结]]></title>
-      <url>http://liuhang.net.cn/chrome%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[奇技-chrome总结]]></title>
+      <url>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-chrome%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键篇"><a href="#快捷键篇" class="headerlink" title="快捷键篇"></a>快捷键篇</h2><ol>
 <li>参考<a href="https://support.google.com/chrome/answer/157179?hl=zh-Hans" target="_blank" rel="external">Chrome 键盘快捷键-mac</a></li>
 <li>个人常用<ul>
@@ -2774,8 +2786,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Git总结]]></title>
-      <url>http://liuhang.net.cn/Git%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[奇技-Git总结]]></title>
+      <url>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-Git%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="GitHub团队合作"><a href="#GitHub团队合作" class="headerlink" title="GitHub团队合作"></a>GitHub团队合作</h1><ol>
 <li><a href="https://code.tutsplus.com/articles/team-collaboration-with-github--net-29876" target="_blank" rel="external">Team Collaboration With GitHub</a><br> <a href="http://xiaocong.github.io/blog/2013/03/20/team-collaboration-with-github/" target="_blank" rel="external">中文翻译在这</a></li>
 <li><a href="http://jinlong.github.io/2015/10/12/syncing-a-fork/" target="_blank" rel="external">如何同步 Github fork 出来的分支</a>    </li>
@@ -2878,8 +2890,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[mac总结]]></title>
-      <url>http://liuhang.net.cn/mac%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[奇技-mac总结]]></title>
+      <url>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-mac%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><ol>
 <li>参考<a href="https://support.apple.com/zh-cn/HT201236" target="_blank" rel="external">Mac 键盘快捷键</a></li>
 <li>修饰键图标<br>Command ⌘<br>Shift ⇧<br>Option ⌥<br>Control ⌃<br>Caps Lock ⇪<br>Fn</li>
@@ -3092,7 +3104,7 @@
     
     <entry>
       <title><![CDATA[2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现]]></title>
-      <url>http://liuhang.net.cn/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
+      <url>http://liuhang.net.cn/2016%E5%8D%8E%E4%B8%BA%E8%BD%AF%E4%BB%B6%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B%E6%80%BB%E7%BB%93-%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
       <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
 <li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
 <li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
@@ -3166,15 +3178,21 @@
     
     <entry>
       <title><![CDATA[2016华为软件精英挑战赛-TSP问题之分支定界结合匈牙利算法求解]]></title>
-      <url>http://liuhang.net.cn/TSP%E9%97%AE%E9%A2%98%E4%B9%8B%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%BB%93%E5%90%88%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3.html</url>
+      <url>http://liuhang.net.cn/2016%E5%8D%8E%E4%B8%BA%E8%BD%AF%E4%BB%B6%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B-TSP%E9%97%AE%E9%A2%98%E4%B9%8B%E5%88%86%E6%94%AF%E5%AE%9A%E7%95%8C%E7%BB%93%E5%90%88%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E6%B1%82%E8%A7%A3.html</url>
       <content type="html"><![CDATA[<h2 id="分支定界法"><a href="#分支定界法" class="headerlink" title="分支定界法"></a>分支定界法</h2><p>2016华为软件精英挑战赛</p>
 <h2 id="TSP问题的分支定界法结合匈牙利算法"><a href="#TSP问题的分支定界法结合匈牙利算法" class="headerlink" title="TSP问题的分支定界法结合匈牙利算法"></a>TSP问题的分支定界法结合匈牙利算法</h2><ul>
 <li>Example</li>
 </ul>
 <p><img src="../media/14872967925814.jpg" alt=""><br><img src="../media/14872968645084.jpg" alt=""></p>
 <ul>
-<li>分支策略<ul>
+<li><p>分支策略</p>
+<ul>
 <li>一次AP(assignment problem指派问题)之后,选取节点数最少的环,进行分支,即进行”破环”;分别对每条边进行破环,破开的边不允许出现在下次AP解得的路径上;为了防止重复搜索,已经分支过(已经破开过的边)要必须出现在当前的字节点中.例如,一个环包括(i1,i2,i3)三个点(即三条边),第一个子节点(i1,i2)被破开(forbidden,禁止出现在下次ap中),第二个子节点(i1,i3) is forbidden,(i1,i2)必须出现(required),第三个子节点(i2,i3) is forbidden,(i1,i2)和(i1,i3) required. 如上面图二,为一次分支定界的示意图.</li>
+</ul>
+</li>
+<li><p>指派模型结合分支定界法求解TSP问题</p>
+<ul>
+<li><a href="http://liuhang.net.cn/tsp-paper.pdf">本人总结论文</a>,此论文详细介绍了利用分支定界法结合指派问题求解TSP的原理和步骤。</li>
 </ul>
 </li>
 </ul>
