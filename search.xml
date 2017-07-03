@@ -4,6 +4,208 @@
   
     
     <entry>
+      <title><![CDATA[Java并发编程5-设计线程安全的类]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B5-%E8%AE%BE%E8%AE%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%B1%BB.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程4-ThreadLocal]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B4-ThreadLocal.html</url>
+      <content type="html"><![CDATA[<h1 id="ThreadLocal变量"><a href="#ThreadLocal变量" class="headerlink" title="ThreadLocal变量"></a>ThreadLocal变量</h1><ol>
+<li>线程局部变量</li>
+</ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程1-线程安全概述]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E6%80%A7.html</url>
+      <content type="html"><![CDATA[<h1 id="什么是线程安全性"><a href="#什么是线程安全性" class="headerlink" title="什么是线程安全性"></a>什么是线程安全性</h1><h2 id="线程安全类："><a href="#线程安全类：" class="headerlink" title="线程安全类："></a>线程安全类：</h2><ul>
+<li>当多个线程访问某个类时，不管运行时环境采用何种调度方式或者这些线程将如何交替执行，并且在主调代码中不需要任何额外的同步或协调，这个类都能表现出正确的行为，那么久称这个类是线程安全的</li>
+<li>在线程安全类中封装了必要的同步机制，因此客户端无须进一步采取同步措施</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程3-Java内存模型]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B3-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html</url>
+      <content type="html"><![CDATA[<h1 id="Java内存模型参考"><a href="#Java内存模型参考" class="headerlink" title="Java内存模型参考"></a>Java内存模型参考</h1><ol>
+<li><a href="http://ifeve.com/java-memory-model-6/" target="_blank" rel="external">Java内存模型|讲的非常详细</a></li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><h2 id="两个关键方面"><a href="#两个关键方面" class="headerlink" title="两个关键方面"></a>两个关键方面</h2><ol>
+<li>可见性 Memory Visibility</li>
+<li>竞态条件（Race Condition）</li>
+</ol>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><ol>
+<li>可见性： assign store </li>
+<li>防止指令重排</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[个人计划至7月底]]></title>
+      <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B37%E6%9C%88%E5%BA%95.html</url>
+      <content type="html"><![CDATA[<h1 id="总体"><a href="#总体" class="headerlink" title="总体"></a>总体</h1><ol>
+<li>《深入理解Java虚拟机》</li>
+<li>《Java并发编程实战》</li>
+</ol>
+<h1 id="每日计划"><a href="#每日计划" class="headerlink" title="每日计划"></a>每日计划</h1><ol>
+<li>6.29-7.1三天<ul>
+<li>Java并发编程，第一部分</li>
+</ul>
+</li>
+<li>6.29周四<ul>
+<li>Java并发编程实战1，2，3章 <strong><em>第3章没看完</em></strong></li>
+<li>刷编程题，2个动态规划/dfs <strong><em>完成</em></strong></li>
+</ul>
+</li>
+<li>6.30周五<ul>
+<li>Java并发编程实战4，5章</li>
+<li>刷编程题，2个动态规划/回溯dfs</li>
+</ul>
+</li>
+<li><p>7.1周六</p>
+<ul>
+<li>Java并发编程实战6章</li>
+</ul>
+</li>
+<li><p>7.2周日</p>
+<ul>
+<li>Java并发编程实战7章</li>
+</ul>
+</li>
+<li>7.3周一<ul>
+<li>面试准备(常见面试问题整理)</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程2-Java多线程基础]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B2-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80.html</url>
+      <content type="html"><![CDATA[<h1 id="多线程与并发参考资料"><a href="#多线程与并发参考资料" class="headerlink" title="多线程与并发参考资料"></a>多线程与并发参考资料</h1><ol>
+<li><a href="http://ifeve.com/java-concurrency-thread-directory/" target="_blank" rel="external">Java并发性和多线程</a></li>
+</ol>
+<h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><h2 id="管理线程的几种方法"><a href="#管理线程的几种方法" class="headerlink" title="管理线程的几种方法"></a>管理线程的几种方法</h2><p><img src="../images/管理线程的几种方法.png" alt=""></p>
+<h2 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h2><ol>
+<li>实现Runnable接口</li>
+<li>继承Thread类</li>
+<li>都通过start方法，启动线程。优先runnable接口，可实现多个接口</li>
+</ol>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><ol>
+<li>每一个对象都隐含着一个锁对象，这个锁对象就是用来解决并发问题的互斥量（mutex）。要调用一个对象的synchronized方法的线程，必须持有这个对象的锁对象，在执行完毕之后，必须释放这个锁对象，以让别的线程得到这个锁对象。</li>
+<li><a href="http://ifeve.com/synchronized-blocks/" target="_blank" rel="external">同步</a></li>
+</ol>
+<h2 id="线程间通信"><a href="#线程间通信" class="headerlink" title="线程间通信"></a>线程间通信</h2><ul>
+<li>以下三个方法，仅在synchronized方法中可以调用</li>
+<li>wait,告知被调用的线程，放弃锁，直到其他线程进入并调用notify唤醒</li>
+<li>notify</li>
+<li>notifyAll</li>
+<li><a href="http://ifeve.com/thread-signaling/#wait_notify" target="_blank" rel="external">notify|wait详解</a></li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-程序编译与代码优化]]></title>
+      <url>http://liuhang.net.cn/JVM-%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96.html</url>
+      <content type="html"><![CDATA[<h1 id="Java语法糖"><a href="#Java语法糖" class="headerlink" title="Java语法糖"></a>Java语法糖</h1><h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><h2 id="自动拆箱与装箱"><a href="#自动拆箱与装箱" class="headerlink" title="自动拆箱与装箱"></a>自动拆箱与装箱</h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-Java内存区域与内存溢出异常]]></title>
+      <url>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8.html</url>
+      <content type="html"><![CDATA[<h1 id="内存空间（运行时数据区）"><a href="#内存空间（运行时数据区）" class="headerlink" title="内存空间（运行时数据区）"></a>内存空间（运行时数据区）</h1><p><img src="../images/jvmneicun.png" alt=""> </p>
+<ol>
+<li>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器</li>
+<li>虚拟机栈： 线程私有；（即常说的堆内存和栈内存中的栈），栈帧结构，存储局部变量表，操作数等</li>
+<li>本地方法栈： 虚拟机使用到的native方法</li>
+<li>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</li>
+<li>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</li>
+</ol>
+<h1 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h1><ol>
+<li>JVM启动参数分为三类：<ul>
+<li>标准参数(-):所有的JVM实现都必须实现这些参数的功能，而且向后兼容; 命令行 java -? 查看参数</li>
+<li>非标准参数(-X):默认jvm实现这些参数的功能，但是并不保证所有jvm实现都满足，且不保证向后兼容；命令行 java -X 查看参数</li>
+<li>非稳定参数(-XX):此类参数各个jvm实现会有所不同，将来可能会随时取消，需要慎重使用；</li>
+</ul>
+</li>
+<li>常用参数设置<ul>
+<li>最大堆和初始堆<code>-Xms</code>初始堆内存大小，<code>-Xmx</code>最大堆内存大小</li>
+<li>新生代配置<code>-Xmn</code>新生代内存大小，<code>-XX:SurvivorRatio</code>设置新生代eden空间和from/to空间比例；<code>-XX:NewRatio</code>老年代和新生代比例</li>
+<li>系统参数查看：<code>-XX:+PrintVMOptions</code>打印虚拟机接收到的显示参数</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-线程安全与锁优化]]></title>
+      <url>http://liuhang.net.cn/JVM-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E4%B8%8E%E9%94%81%E4%BC%98%E5%8C%96.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-Java内存模型与线程]]></title>
+      <url>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaWeb基础-Session与Cookie]]></title>
+      <url>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-Session%E4%B8%8ECookie.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaWeb基础-JDBC]]></title>
+      <url>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-JDBC.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JavaWeb基础-servlet]]></title>
+      <url>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-servlet.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java基础增强-Lambda 表达式]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.oneapm.com/apm-tech/226.html" target="_blank" rel="external">深入浅出 Java 8 Lambda 表达式</a></li>
+</ol>
+<h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><h2 id="语法糖的概念"><a href="#语法糖的概念" class="headerlink" title="语法糖的概念"></a>语法糖的概念</h2><ul>
+<li>指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[基础算法-迪杰斯特拉算法]]></title>
+      <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95.html</url>
+      <content type="html"><![CDATA[<h1 id="Dijkstra算法详细介绍"><a href="#Dijkstra算法详细介绍" class="headerlink" title="Dijkstra算法详细介绍"></a>Dijkstra算法详细介绍</h1><ol>
+<li>参考：<a href="http://www.it165.net/pro/html/201407/16957.html" target="_blank" rel="external">图算法单源最短路径Dijkstra算法</a></li>
+</ol>
+<h1 id="Dijkstra算法优化"><a href="#Dijkstra算法优化" class="headerlink" title="Dijkstra算法优化"></a>Dijkstra算法优化</h1><ol>
+<li>参考：<a href="http://blog.leanote.com/post/coolboy/duiyouhu" target="_blank" rel="external">带堆优化的Dijkstra</a></li>
+</ol>
+<h1 id="Dijkstra实现（java）"><a href="#Dijkstra实现（java）" class="headerlink" title="Dijkstra实现（java）"></a>Dijkstra实现（java）</h1><ol>
+<li><a href="https://github.com/husthang/zte2017/blob/master/tsp/code/src/main/java/route/Dijkstra.java" target="_blank" rel="external">我的实现|java|邻接表</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[2017中兴捧月杯-初赛总结]]></title>
       <url>http://liuhang.net.cn/2017%E4%B8%AD%E5%85%B4%E6%8D%A7%E6%9C%88%E6%9D%AF-%E5%88%9D%E8%B5%9B%E8%B5%9B%E9%A2%98%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="赛题描述"><a href="#赛题描述" class="headerlink" title="赛题描述"></a>赛题描述</h1><ol>
@@ -75,7 +277,7 @@
 <li>最小公倍数:lowest common multiple; <code>lcm(a,b)*gcd(a,b)=a*b</code>;</li>
 <li>求两个数或n个数的最小公倍数或最大公约数:<br><img src="../images/gcd.png" alt=""></li>
 </ul>
-<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
 <li>素数: 只有1和本身两个约数;判断是否为素数,只需要对前根号n个数进行判断<br><img src="../images/prime.png" alt=""></li>
 </ul>
 <h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
@@ -1196,8 +1398,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[正则表达式]]></title>
-      <url>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</url>
+      <title><![CDATA[Java基础-正则表达式]]></title>
+      <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</url>
       <content type="html"><![CDATA[<h1 id="正则表达式基础语法"><a href="#正则表达式基础语法" class="headerlink" title="正则表达式基础语法"></a>正则表达式基础语法</h1><ul>
 <li><p>定义:是指一个用来描述或者匹配一系列符合某个语法规则的字符串的单个字符串</p>
 </li>
@@ -1329,7 +1531,7 @@
     
     <entry>
       <title><![CDATA[Spring笔记3-Spring-AOP]]></title>
-      <url>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B03-spring-aop.html</url>
+      <url>http://liuhang.net.cn/Spring-aop.html</url>
       <content type="html"><![CDATA[<h1 id="AOP基础"><a href="#AOP基础" class="headerlink" title="AOP基础"></a>AOP基础</h1><h2 id="什么是AOP"><a href="#什么是AOP" class="headerlink" title="什么是AOP"></a>什么是AOP</h2><ul>
 <li>AOP: aspect-oriented programming 面向切面编程</li>
 <li>理解:<strong><em>在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。</em></strong>; 把切入到指定类指定方法的代码片段称为<strong>切面</strong>，而切入到哪些类、哪些方法则叫<strong>切入点</strong></li>
@@ -1646,10 +1848,11 @@
     </entry>
     
     <entry>
-      <title><![CDATA[基础算法-动态规划]]></title>
-      <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</url>
+      <title><![CDATA[基础算法-递归和动态规划]]></title>
+      <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</url>
       <content type="html"><![CDATA[<h1 id="简单理解"><a href="#简单理解" class="headerlink" title="简单理解"></a>简单理解</h1><ul>
-<li>动态规划的核心是，用空间换时间，找到递推关系 </li>
+<li><strong>动态规划的核心是，用空间换时间，找到递推关系</strong></li>
+<li>“求第n个，求前n个，求所有的…”可用递归做</li>
 </ul>
 <h1 id="简单示例："><a href="#简单示例：" class="headerlink" title="简单示例："></a>简单示例：</h1><ol>
 <li>斐波拉契数列<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归方法，效率不行</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>)+fibonacci(n-<span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -1658,6 +1861,11 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//动态规划法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</div><div class="line">    dp[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i&lt;=n; i++)&#123;</div><div class="line">        db[i] = dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> dp[n];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><ol>
 <li>背包问题</li>
+<li>n皇后问题<ul>
+<li>dfs深搜</li>
+</ul>
+</li>
+<li>最长公共子序列</li>
 </ol>
 ]]></content>
     </entry>
@@ -1941,6 +2149,7 @@
       <title><![CDATA[Java基础增强-泛型]]></title>
       <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%9B%E5%9E%8B.html</url>
       <content type="html"><![CDATA[<h1 id="为什么使用泛型"><a href="#为什么使用泛型" class="headerlink" title="为什么使用泛型"></a>为什么使用泛型</h1><ul>
+<li>泛型的本质是参数化类型（Parametersized Type）的应用，所操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和方法的创建中，即泛型类，泛型接口和泛型方法</li>
 <li><strong>可读性与安全性</strong>，例如集合中有类型参数，在编译时进行类型检查</li>
 <li>没有使用泛型时，只要是对象，不管是什么类型的对象，都可以存储进同一个集合中，使用泛型集合，可以<strong>将一个集合中的元素限定为一个特定类型</strong>，这样集合中就只能存储同一类型的对象，这样更安全；并且当从集合中获取一个对象时，编译器也知道这个对象的类型，<strong>不需要对对象进行强制类型转换</strong>，这样更方便。</li>
 </ul>
@@ -1948,75 +2157,6 @@
 <li><a href="http://www.cnblogs.com/xdp-gacl/p/3629723.html" target="_blank" rel="external">泛型总结-孤傲苍狼</a></li>
 </ol>
 ]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[我的各种面试&&笔试记录]]></title>
-      <url>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E8%AE%B0%E5%BD%95.html</url>
-      <content type="html"><![CDATA[<h1 id="时间节点记录"><a href="#时间节点记录" class="headerlink" title="时间节点记录"></a>时间节点记录</h1><ol>
-<li>美团点评<ul>
-<li>笔试： 2017年3月21日19:00 在线笔试</li>
-</ul>
-</li>
-<li>网易<ul>
-<li>笔试：2017年3月25日 14：00 在线笔试</li>
-</ul>
-</li>
-<li>腾讯<ul>
-<li>笔试：2017年4月3日 19:00-21:00 技术类在线笔试(模拟：2017年3月25日17:00至18:00)</li>
-<li>笔试太难了..</li>
-<li>面试问题:<ul>
-<li>谈对移动互联网的认识/发展的看法</li>
-<li>谈移动互联网技术的了解</li>
-<li>谈项目经历</li>
-<li>平时通过什么方式学习</li>
-<li>面对一个新的问题,怎么去解决它</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>京东</p>
-<ul>
-<li>笔试：2017年4月7日 在线笔试</li>
-</ul>
-</li>
-<li><p>今日头条</p>
-<ul>
-<li>笔试: 时间未定</li>
-<li>笔试连接:(4个编程题,简单粗暴)</li>
-</ul>
-</li>
-<li>360<ul>
-<li>笔试： 25晚19：00-21:00</li>
-</ul>
-</li>
-<li>百度<ul>
-<li>笔试: 4.27号</li>
-</ul>
-</li>
-</ol>
-<h1 id="掌握的东西梳理"><a href="#掌握的东西梳理" class="headerlink" title="掌握的东西梳理"></a>掌握的东西梳理</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol>
-<li>链表</li>
-<li>树</li>
-<li>栈</li>
-<li>队列</li>
-<li>哈希表</li>
-</ol>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ol>
-<li>查找<ul>
-<li>二分查找</li>
-</ul>
-</li>
-<li>排序<ul>
-<li>归并排序</li>
-<li>快速排序</li>
-<li>各种排序的效率</li>
-</ul>
-</li>
-<li>动态规划</li>
-<li>贪婪算法</li>
-</ol>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1>]]></content>
     </entry>
     
     <entry>
@@ -2055,8 +2195,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[redis总结]]></title>
-      <url>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[Web项目总结-redis总结]]></title>
+      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-redis%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h1><h2 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h2><ul>
 <li>NoSQL，泛指非关系型的数据库，NoSQL即Not-Only SQL，它可以作为关系型数据库的良好补充;</li>
 </ul>
@@ -2355,7 +2495,7 @@
     
     <entry>
       <title><![CDATA[Spring笔记2-spring-IOC]]></title>
-      <url>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</url>
+      <url>http://liuhang.net.cn/Spring-ioc.html</url>
       <content type="html"><![CDATA[<h1 id="Spring-IOC基础"><a href="#Spring-IOC基础" class="headerlink" title="Spring-IOC基础"></a>Spring-IOC基础</h1><h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
 <li>基本概念<ul>
 <li><strong>控制反转(Inversion of Control)</strong>是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。实现控制反转主要有两种方式：<strong>依赖注入</strong>和<strong>依赖查找</strong>。两者的区别在于，前者是被动的接收对象，在类A的实例创建过程中即创建了依赖的B对象，通过类型或名称来判断将不同的对象注入到不同的属性中，而后者是主动索取响应名称的对象，获得依赖对象的时间也可以在代码中自由控制。</li>
@@ -2446,7 +2586,7 @@
     
     <entry>
       <title><![CDATA[Spring笔记1-spring入门]]></title>
-      <url>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</url>
+      <url>http://liuhang.net.cn/Spring-%E5%85%A5%E9%97%A8.html</url>
       <content type="html"><![CDATA[<h2 id="Java-EE了解"><a href="#Java-EE了解" class="headerlink" title="Java EE了解"></a>Java EE了解</h2><ol>
 <li>Java EE是什么<ul>
 <li>学习Java各种框架之前,有必要对Java EE有基本的了解,方便理解各种框架兴起的原因(为什么要用这个框架,而不用JavaEE中相应的东西).</li>
@@ -2545,8 +2685,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[JavaWeb入门]]></title>
-      <url>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</url>
+      <title><![CDATA[JavaWeb基础-入门]]></title>
+      <url>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-%E5%85%A5%E9%97%A8.html</url>
       <content type="html"><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="../images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
 <h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
 <li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
@@ -2596,8 +2736,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[SSM框架整合]]></title>
-      <url>http://liuhang.net.cn/SSM%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html</url>
+      <title><![CDATA[Spring-ssm框架整合]]></title>
+      <url>http://liuhang.net.cn/Spring-ssm%E6%A1%86%E6%9E%B6%E6%95%B4%E5%90%88.html</url>
       <content type="html"><![CDATA[<h1 id="框架体系结构"><a href="#框架体系结构" class="headerlink" title="框架体系结构"></a>框架体系结构</h1><ol>
 <li><p>框架三层架构<img src="/media/14887819567898.jpg" alt=""></p>
 </li>
@@ -2654,8 +2794,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Nginx总结]]></title>
-      <url>http://liuhang.net.cn/Nginx%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[Web项目总结-Nginx总结]]></title>
+      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Nginx%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
 <li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
 </ul>
@@ -2699,8 +2839,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[FastDFS总结]]></title>
-      <url>http://liuhang.net.cn/Fastdfs%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[Web项目总结-Fastdfs总结]]></title>
+      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Fastdfs%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
 <li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
 </ul>
@@ -2915,6 +3055,65 @@
 <li>邮件客户端: <a href="http://www.yomail.com/" target="_blank" rel="external">YoMail</a></li>
 </ol>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-虚拟机类加载机制]]></title>
+      <url>http://liuhang.net.cn/JVM-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6.html</url>
+      <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ul>
+<li>“代码编译的结果是从本地机器码转变为字节码，是存储格式发展的一小步，却是编程语言发展的一大步”</li>
+<li>“write once, run anywhere”-字节码技术的关键。</li>
+<li>Java虚拟机接收的是有效的Class文件，任何一种语言，只要可以编译成Class文件，即可在虚拟机上运行。</li>
+</ul>
+<h1 id="Java源码的编译机制（类文件结构）"><a href="#Java源码的编译机制（类文件结构）" class="headerlink" title="Java源码的编译机制（类文件结构）"></a>Java源码的编译机制（类文件结构）</h1><ol>
+<li>javac将java源码编译为class文件步骤<br><img src="../images/javac.png" alt=""></li>
+</ol>
+<h1 id="类加载机制"><a href="#类加载机制" class="headerlink" title="类加载机制"></a>类加载机制</h1><p><img src="../images/类加载过程.png" alt=""></p>
+<h2 id="装载-Load"><a href="#装载-Load" class="headerlink" title="装载(Load)"></a>装载(Load)</h2><ol>
+<li>装载阶段，JVM完成三件事情<ul>
+<li>通过一个类的全限定名来获取定义此类的二进制字节流（获取不一定要从文件，还可以是zip,网络，运行时计算生成动态代理技术）</li>
+<li>将字节流所代表的静态存储结构转化为<strong>方法区</strong>的运行时数据结构</li>
+<li>在内存中生成一个代表这个类的java.lang.Class对象，作为方法区这个类的各种数据的访问入口(反射机制)（Hotspot这个对象存放在方法区）</li>
+</ul>
+</li>
+<li>数组类本身不通过类加载器创建，由Java虚拟机直接创建。</li>
+</ol>
+<h2 id="链接（Link）"><a href="#链接（Link）" class="headerlink" title="链接（Link）"></a>链接（Link）</h2><ol>
+<li>校验： 确认Class文件中字节流信息符合虚拟机要求，不会危害虚拟机自身安全。</li>
+<li>准备: 准备阶段是正式为类变量（被static修饰的变量）分配内存并设置类变量初始值的阶段。（设置为默认初始值，但在初始化阶段赋值为给定的值）</li>
+<li>解析： 虚拟机将常量池中的符号引用替换为直接引用</li>
+</ol>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><ol>
+<li>初始化阶段是执行类构造器<code>&lt;clinit&gt;()</code>方法的过程：类变量赋值，静态语句块（static{}）执行</li>
+<li>以下情况初始化过程会被触发执行<ul>
+<li>调用了new</li>
+<li>反射java.lang.reflect调用了类方法</li>
+<li>子类调用了初始化</li>
+<li>jVM启动时，执行指定的主类（含main()方法的类）</li>
+</ul>
+</li>
+<li>在执行初始化过程之前，首先必须完成链接过程中的校验和准备阶段，解析阶段不强制。 </li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><p><img src="../images/classloader.png" alt=""></p>
+<ol>
+<li>虚拟机设计团队把类加载阶段中的“通过一个类的全限定名来获取定义此类的二进制字节流”这个动作放到Java虚拟机外部去实现，以便让应用程序自己决定如何去获取所需要的类。 实现这个动作的代码模块称为“类加载器”。</li>
+<li>从虚拟机的角度，只存在两种不同的类加载器：启动类加载器(bootstrap classloader)，c++实现；其他所有的类加载器，都由java实现，全继承自抽象类java.lang.ClassLoader。<ul>
+<li>启动类加载器 bootstrap classloader,java_home/jre/lib/rt.jar</li>
+<li>扩展类加载器，extension classloader.加载jre/lib/ext/*.jar</li>
+<li>应用程序类加载器，application classloader： 加载启动参数中Classpath中的</li>
+<li>自定义类加载器，其父加载器默认为application classloader.</li>
+</ul>
+</li>
+<li>双亲委派模型<ul>
+<li>对于任意一个类，都需要由加载它的类加载器和这个类本身一通确立其在Java虚拟机中的唯一性。</li>
+<li>双亲委派模型工作过程： 一个类加载器收到了类加载请求，首先不会自己尝试加载这个类，委派父类加载，只有当父类反馈无法加载（搜索范围中没有这个类）时，子加载器自己尝试加载。</li>
+</ul>
+</li>
+</ol>
+<h1 id="类执行机制（虚拟机字节码执行引擎）"><a href="#类执行机制（虚拟机字节码执行引擎）" class="headerlink" title="类执行机制（虚拟机字节码执行引擎）"></a>类执行机制（虚拟机字节码执行引擎）</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>执行引擎在执行Java代码的时候可能会用解释执行（通过解释器执行）和编译执行（通过即时编译器产生本地代码执行）</li>
+</ul>
+<h2 id="运行时栈帧结构"><a href="#运行时栈帧结构" class="headerlink" title="运行时栈帧结构"></a>运行时栈帧结构</h2>]]></content>
     </entry>
     
     <entry>
@@ -3206,6 +3405,44 @@
 <li>Miller D L, Pekny J F. Exact solution of large asymmetric traveling salesman problems.[J]. 1991, 251(4995):754-761.</li>
 </ul>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[JVM-自动内存管理机制]]></title>
+      <url>http://liuhang.net.cn/JVM-%08%E5%9E%83%E5%9C%BE%E6%94%B6%E9%9B%86%E5%99%A8%E4%B8%8E%08%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E7%AD%96%E7%95%A5.html</url>
+      <content type="html"><![CDATA[<h1 id="内存分配与回收"><a href="#内存分配与回收" class="headerlink" title="内存分配与回收"></a>内存分配与回收</h1><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li>强烈推荐，总结的超好。<a href="http://jbutton.iteye.com/blog/1569746" target="_blank" rel="external">深入理解JVM–JVM垃圾回收机制</a></li>
+</ol>
+<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>Java的自动内存管理核心是自动化的解决了两大问题：给对象分配内存以及回收分配给对象的内存。</li>
+<li>程序计数器、虚拟机栈、本地方法栈随线程生灭，不用考虑回收</li>
+<li>Java堆和方法区，内存回收的主要区域。</li>
+</ul>
+<h2 id="确定对象是否存活"><a href="#确定对象是否存活" class="headerlink" title="确定对象是否存活"></a>确定对象是否存活</h2><ol>
+<li>引用计数法： 给每个对象一个引用计数器，有地方引用它，计数器加一，引用失效，计数器减一；计数器为0的不再被使用。 缺点：对象间相互循环引用。</li>
+<li>可达性分析算法： 主流的实现为可达性分析算法。 从一系列“GC Roots”对象起始点搜索，如果从“GC Roots”到这个对象不可达，证明对象不可用，可回收。<ul>
+<li>Java中可作为GC Roots的对象有： 虚拟机栈（栈帧中的本地变量表）中引用的对象； 方法区中，静态属性引用的对象； 方法区中常量引用的对象；本地方法栈中native方法引用的对象</li>
+</ul>
+</li>
+<li>可达性分析判断为不可用对象后，还要执行器finalize()方法，筛选一次。</li>
+</ol>
+<h2 id="方法区回收"><a href="#方法区回收" class="headerlink" title="方法区回收"></a>方法区回收</h2><ul>
+<li>永久代，Permanent Generation space。（Hotspot虚拟机中的永久代）。永久代主要回收废弃常量和无用的类</li>
+</ul>
+<h2 id="垃圾收集算法"><a href="#垃圾收集算法" class="headerlink" title="垃圾收集算法"></a>垃圾收集算法</h2><ol>
+<li>分代收集算法： 当前商业虚拟机垃圾回收采用分带收集。根据对象存活周期，把Java堆分为新生代和老年代。新生代：采用<strong>复制算法</strong>，复制少量依旧存活的；老年代：采用<strong>标记清理</strong>或<strong>标记整理</strong></li>
+<li>复制算法： <strong>用于新生代</strong>，将存活的对象之间复制到另一块空间，然后清理掉当前。如Eden区和两块Survivor区</li>
+<li>标记-清除（Mark-Sweep）</li>
+<li>标记-整理(Mark-Compact)</li>
+</ol>
+<h2 id="内存分配和回收策略"><a href="#内存分配和回收策略" class="headerlink" title="内存分配和回收策略"></a>内存分配和回收策略</h2><ol>
+<li>堆内存被分为<strong>新生代</strong>和<strong>老年代</strong>，默认比例为1：2；新生代又分为<strong>Eden、From Survivor、To Survivor</strong>。</li>
+<li>对象优先分配在新生代Eden区</li>
+<li>大对象之间进入老年代</li>
+<li>长期存活的对象将进入老年代</li>
+<li>空间分配担保</li>
+</ol>
+<h1 id="虚拟机调优"><a href="#虚拟机调优" class="headerlink" title="虚拟机调优"></a>虚拟机调优</h1>]]></content>
     </entry>
     
   

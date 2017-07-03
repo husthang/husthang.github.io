@@ -8,8 +8,344 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Wed, 21 Jun 2017 03:16:41 GMT</pubDate>
+    <pubDate>Sat, 01 Jul 2017 12:55:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Java并发编程5-设计线程安全的类</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B5-%E8%AE%BE%E8%AE%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%B1%BB.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B5-%E8%AE%BE%E8%AE%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%B1%BB.html</guid>
+      <pubDate>Sat, 01 Jul 2017 12:55:04 GMT</pubDate>
+      <description>
+      
+        介绍如何设计线程安全的类
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B5-%E8%AE%BE%E8%AE%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%B1%BB.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程4-ThreadLocal</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B4-ThreadLocal.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B4-ThreadLocal.html</guid>
+      <pubDate>Sat, 01 Jul 2017 09:47:42 GMT</pubDate>
+      <description>
+      
+        ThreadLocal
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="ThreadLocal变量"><a href="#ThreadLocal变量" class="headerlink" title="ThreadLocal变量"></a>ThreadLocal变量</h1><ol>
+<li>线程局部变量</li>
+</ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B4-ThreadLocal.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程1-线程安全概述</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E6%80%A7.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E6%80%A7.html</guid>
+      <pubDate>Thu, 29 Jun 2017 15:09:02 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;什么是线程安全性&quot;&gt;&lt;a href=&quot;#什么是线程安全性&quot; class=&quot;headerlink&quot; title=&quot;什么是线程安全性&quot;&gt;&lt;/a&gt;什么是线程安全性&lt;/h1&gt;&lt;h2 id=&quot;线程安全类：&quot;&gt;&lt;a href=&quot;#线程安全类：&quot; class=&quot;headerli
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="什么是线程安全性"><a href="#什么是线程安全性" class="headerlink" title="什么是线程安全性"></a>什么是线程安全性</h1><h2 id="线程安全类："><a href="#线程安全类：" class="headerlink" title="线程安全类："></a>线程安全类：</h2><ul>
+<li>当多个线程访问某个类时，不管运行时环境采用何种调度方式或者这些线程将如何交替执行，并且在主调代码中不需要任何额外的同步或协调，这个类都能表现出正确的行为，那么久称这个类是线程安全的</li>
+<li>在线程安全类中封装了必要的同步机制，因此客户端无须进一步采取同步措施</li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B1-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E6%80%A7.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程3-Java内存模型</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B3-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B3-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html</guid>
+      <pubDate>Wed, 28 Jun 2017 15:17:34 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;Java内存模型参考&quot;&gt;&lt;a href=&quot;#Java内存模型参考&quot; class=&quot;headerlink&quot; title=&quot;Java内存模型参考&quot;&gt;&lt;/a&gt;Java内存模型参考&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://ifeve.com/java
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Java内存模型参考"><a href="#Java内存模型参考" class="headerlink" title="Java内存模型参考"></a>Java内存模型参考</h1><ol>
+<li><a href="http://ifeve.com/java-memory-model-6/" target="_blank" rel="external">Java内存模型|讲的非常详细</a></li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><h2 id="两个关键方面"><a href="#两个关键方面" class="headerlink" title="两个关键方面"></a>两个关键方面</h2><ol>
+<li>可见性 Memory Visibility</li>
+<li>竞态条件（Race Condition）</li>
+</ol>
+<h2 id="volatile"><a href="#volatile" class="headerlink" title="volatile"></a>volatile</h2><ol>
+<li>可见性： assign store </li>
+<li>防止指令重排</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B3-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>个人计划至7月底</title>
+      <link>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B37%E6%9C%88%E5%BA%95.html</link>
+      <guid>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B37%E6%9C%88%E5%BA%95.html</guid>
+      <pubDate>Wed, 28 Jun 2017 11:11:57 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;总体&quot;&gt;&lt;a href=&quot;#总体&quot; class=&quot;headerlink&quot; title=&quot;总体&quot;&gt;&lt;/a&gt;总体&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;《深入理解Java虚拟机》&lt;/li&gt;
+&lt;li&gt;《Java并发编程实战》&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&quot;每日计划&quot;&gt;&lt;a 
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="总体"><a href="#总体" class="headerlink" title="总体"></a>总体</h1><ol>
+<li>《深入理解Java虚拟机》</li>
+<li>《Java并发编程实战》</li>
+</ol>
+<h1 id="每日计划"><a href="#每日计划" class="headerlink" title="每日计划"></a>每日计划</h1><ol>
+<li>6.29-7.1三天<ul>
+<li>Java并发编程，第一部分</li>
+</ul>
+</li>
+<li>6.29周四<ul>
+<li>Java并发编程实战1，2，3章 <strong><em>第3章没看完</em></strong></li>
+<li>刷编程题，2个动态规划/dfs <strong><em>完成</em></strong></li>
+</ul>
+</li>
+<li>6.30周五<ul>
+<li>Java并发编程实战4，5章</li>
+<li>刷编程题，2个动态规划/回溯dfs</li>
+</ul>
+</li>
+<li><p>7.1周六</p>
+<ul>
+<li>Java并发编程实战6章</li>
+</ul>
+</li>
+<li><p>7.2周日</p>
+<ul>
+<li>Java并发编程实战7章</li>
+</ul>
+</li>
+<li>7.3周一<ul>
+<li>面试准备(常见面试问题整理)</li>
+</ul>
+</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B37%E6%9C%88%E5%BA%95.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程2-Java多线程基础</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B2-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B2-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80.html</guid>
+      <pubDate>Wed, 28 Jun 2017 09:16:17 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;多线程与并发参考资料&quot;&gt;&lt;a href=&quot;#多线程与并发参考资料&quot; class=&quot;headerlink&quot; title=&quot;多线程与并发参考资料&quot;&gt;&lt;/a&gt;多线程与并发参考资料&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://ifeve.com/java-c
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="多线程与并发参考资料"><a href="#多线程与并发参考资料" class="headerlink" title="多线程与并发参考资料"></a>多线程与并发参考资料</h1><ol>
+<li><a href="http://ifeve.com/java-concurrency-thread-directory/" target="_blank" rel="external">Java并发性和多线程</a></li>
+</ol>
+<h1 id="多线程基础"><a href="#多线程基础" class="headerlink" title="多线程基础"></a>多线程基础</h1><h2 id="管理线程的几种方法"><a href="#管理线程的几种方法" class="headerlink" title="管理线程的几种方法"></a>管理线程的几种方法</h2><p><img src="../images/管理线程的几种方法.png" alt=""></p>
+<h2 id="创建线程"><a href="#创建线程" class="headerlink" title="创建线程"></a>创建线程</h2><ol>
+<li>实现Runnable接口</li>
+<li>继承Thread类</li>
+<li>都通过start方法，启动线程。优先runnable接口，可实现多个接口</li>
+</ol>
+<h2 id="线程同步"><a href="#线程同步" class="headerlink" title="线程同步"></a>线程同步</h2><ol>
+<li>每一个对象都隐含着一个锁对象，这个锁对象就是用来解决并发问题的互斥量（mutex）。要调用一个对象的synchronized方法的线程，必须持有这个对象的锁对象，在执行完毕之后，必须释放这个锁对象，以让别的线程得到这个锁对象。</li>
+<li><a href="http://ifeve.com/synchronized-blocks/" target="_blank" rel="external">同步</a></li>
+</ol>
+<h2 id="线程间通信"><a href="#线程间通信" class="headerlink" title="线程间通信"></a>线程间通信</h2><ul>
+<li>以下三个方法，仅在synchronized方法中可以调用</li>
+<li>wait,告知被调用的线程，放弃锁，直到其他线程进入并调用notify唤醒</li>
+<li>notify</li>
+<li>notifyAll</li>
+<li><a href="http://ifeve.com/thread-signaling/#wait_notify" target="_blank" rel="external">notify|wait详解</a></li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B2-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%9F%BA%E7%A1%80.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JVM-程序编译与代码优化</title>
+      <link>http://liuhang.net.cn/JVM-%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96.html</link>
+      <guid>http://liuhang.net.cn/JVM-%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96.html</guid>
+      <pubDate>Wed, 28 Jun 2017 08:06:04 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;Java语法糖&quot;&gt;&lt;a href=&quot;#Java语法糖&quot; class=&quot;headerlink&quot; title=&quot;Java语法糖&quot;&gt;&lt;/a&gt;Java语法糖&lt;/h1&gt;&lt;h2 id=&quot;泛型与类型擦除&quot;&gt;&lt;a href=&quot;#泛型与类型擦除&quot; class=&quot;headerlink
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Java语法糖"><a href="#Java语法糖" class="headerlink" title="Java语法糖"></a>Java语法糖</h1><h2 id="泛型与类型擦除"><a href="#泛型与类型擦除" class="headerlink" title="泛型与类型擦除"></a>泛型与类型擦除</h2><h2 id="自动拆箱与装箱"><a href="#自动拆箱与装箱" class="headerlink" title="自动拆箱与装箱"></a>自动拆箱与装箱</h2>]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/JVM-%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%AF%91%E4%B8%8E%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JVM-Java内存区域与内存溢出异常</title>
+      <link>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8.html</link>
+      <guid>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8.html</guid>
+      <pubDate>Wed, 28 Jun 2017 08:01:39 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;内存空间（运行时数据区）&quot;&gt;&lt;a href=&quot;#内存空间（运行时数据区）&quot; class=&quot;headerlink&quot; title=&quot;内存空间（运行时数据区）&quot;&gt;&lt;/a&gt;内存空间（运行时数据区）&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;../images/jvmneicun.
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="内存空间（运行时数据区）"><a href="#内存空间（运行时数据区）" class="headerlink" title="内存空间（运行时数据区）"></a>内存空间（运行时数据区）</h1><p><img src="../images/jvmneicun.png" alt=""> </p>
+<ol>
+<li>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器</li>
+<li>虚拟机栈： 线程私有；（即常说的堆内存和栈内存中的栈），栈帧结构，存储局部变量表，操作数等</li>
+<li>本地方法栈： 虚拟机使用到的native方法</li>
+<li>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</li>
+<li>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</li>
+</ol>
+<h1 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h1><ol>
+<li>JVM启动参数分为三类：<ul>
+<li>标准参数(-):所有的JVM实现都必须实现这些参数的功能，而且向后兼容; 命令行 java -? 查看参数</li>
+<li>非标准参数(-X):默认jvm实现这些参数的功能，但是并不保证所有jvm实现都满足，且不保证向后兼容；命令行 java -X 查看参数</li>
+<li>非稳定参数(-XX):此类参数各个jvm实现会有所不同，将来可能会随时取消，需要慎重使用；</li>
+</ul>
+</li>
+<li>常用参数设置<ul>
+<li>最大堆和初始堆<code>-Xms</code>初始堆内存大小，<code>-Xmx</code>最大堆内存大小</li>
+<li>新生代配置<code>-Xmn</code>新生代内存大小，<code>-XX:SurvivorRatio</code>设置新生代eden空间和from/to空间比例；<code>-XX:NewRatio</code>老年代和新生代比例</li>
+<li>系统参数查看：<code>-XX:+PrintVMOptions</code>打印虚拟机接收到的显示参数</li>
+</ul>
+</li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F%E4%B8%8E%E5%86%85%E5%AD%98%E6%BA%A2%E5%87%BA%E5%BC%82%E5%B8%B8.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JVM-线程安全与锁优化</title>
+      <link>http://liuhang.net.cn/JVM-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E4%B8%8E%E9%94%81%E4%BC%98%E5%8C%96.html</link>
+      <guid>http://liuhang.net.cn/JVM-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E4%B8%8E%E9%94%81%E4%BC%98%E5%8C%96.html</guid>
+      <pubDate>Wed, 28 Jun 2017 07:59:27 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/JVM-%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E4%B8%8E%E9%94%81%E4%BC%98%E5%8C%96.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JVM-Java内存模型与线程</title>
+      <link>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B.html</link>
+      <guid>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B.html</guid>
+      <pubDate>Wed, 28 Jun 2017 07:58:05 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/JVM-Java%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JavaWeb基础-Session与Cookie</title>
+      <link>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-Session%E4%B8%8ECookie.html</link>
+      <guid>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-Session%E4%B8%8ECookie.html</guid>
+      <pubDate>Wed, 28 Jun 2017 02:21:42 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-Session%E4%B8%8ECookie.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JavaWeb基础-JDBC</title>
+      <link>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-JDBC.html</link>
+      <guid>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-JDBC.html</guid>
+      <pubDate>Wed, 28 Jun 2017 02:18:41 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-JDBC.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>JavaWeb基础-servlet</title>
+      <link>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-servlet.html</link>
+      <guid>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-servlet.html</guid>
+      <pubDate>Wed, 28 Jun 2017 02:16:56 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/JavaWeb%E5%9F%BA%E7%A1%80-servlet.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java基础增强-Lambda 表达式</title>
+      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</guid>
+      <pubDate>Tue, 27 Jun 2017 07:29:06 GMT</pubDate>
+      <description>
+      
+        Java8 Lambda 表达式，函数式编程
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.oneapm.com/apm-tech/226.html" target="_blank" rel="external">深入浅出 Java 8 Lambda 表达式</a></li>
+</ol>
+<h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><h2 id="语法糖的概念"><a href="#语法糖的概念" class="headerlink" title="语法糖的概念"></a>语法糖的概念</h2><ul>
+<li>指计算机语言中添加的某种语法，这种语法对语言的功能并没有影响，但是更方便程序员使用</li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-Lambda-%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>基础算法-迪杰斯特拉算法</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95.html</guid>
+      <pubDate>Wed, 21 Jun 2017 12:27:15 GMT</pubDate>
+      <description>
+      
+        Dijkstra算法，Dijkstra算法堆优化（队列）,未详细总结，给出参考的博文。
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="Dijkstra算法详细介绍"><a href="#Dijkstra算法详细介绍" class="headerlink" title="Dijkstra算法详细介绍"></a>Dijkstra算法详细介绍</h1><ol>
+<li>参考：<a href="http://www.it165.net/pro/html/201407/16957.html" target="_blank" rel="external">图算法单源最短路径Dijkstra算法</a></li>
+</ol>
+<h1 id="Dijkstra算法优化"><a href="#Dijkstra算法优化" class="headerlink" title="Dijkstra算法优化"></a>Dijkstra算法优化</h1><ol>
+<li>参考：<a href="http://blog.leanote.com/post/coolboy/duiyouhu" target="_blank" rel="external">带堆优化的Dijkstra</a></li>
+</ol>
+<h1 id="Dijkstra实现（java）"><a href="#Dijkstra实现（java）" class="headerlink" title="Dijkstra实现（java）"></a>Dijkstra实现（java）</h1><ol>
+<li><a href="https://github.com/husthang/zte2017/blob/master/tsp/code/src/main/java/route/Dijkstra.java" target="_blank" rel="external">我的实现|java|邻接表</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E8%BF%AA%E6%9D%B0%E6%96%AF%E7%89%B9%E6%8B%89%E7%AE%97%E6%B3%95.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>2017中兴捧月杯-初赛总结</title>
@@ -123,7 +459,7 @@
 <li>最小公倍数:lowest common multiple; <code>lcm(a,b)*gcd(a,b)=a*b</code>;</li>
 <li>求两个数或n个数的最小公倍数或最大公约数:<br><img src="../images/gcd.png" alt=""></li>
 </ul>
-<h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
 <li>素数: 只有1和本身两个约数;判断是否为素数,只需要对前根号n个数进行判断<br><img src="../images/prime.png" alt=""></li>
 </ul>
 <h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
@@ -462,7 +798,7 @@
       <pubDate>Wed, 17 May 2017 07:42:17 GMT</pubDate>
       <description>
       
-        &lt;h1 id=&quot;MySQL必知必会笔记&quot;&gt;&lt;a href=&quot;#MySQL必知必会笔记&quot; class=&quot;headerlink&quot; title=&quot;MySQL必知必会笔记&quot;&gt;&lt;/a&gt;MySQL必知必会笔记&lt;/h1&gt;&lt;h2 id=&quot;分组&quot;&gt;&lt;a href=&quot;#分组&quot; class=&quot;head
+        mysql必知必会一书
       
       </description>
       
@@ -1374,9 +1710,9 @@
     </item>
     
     <item>
-      <title>正则表达式</title>
-      <link>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</guid>
+      <title>Java基础-正则表达式</title>
+      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html</guid>
       <pubDate>Sat, 15 Apr 2017 16:16:59 GMT</pubDate>
       <description>
       
@@ -1449,7 +1785,7 @@
 </ul>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -1530,8 +1866,8 @@
     
     <item>
       <title>Spring笔记3-Spring-AOP</title>
-      <link>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B03-spring-aop.html</link>
-      <guid>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B03-spring-aop.html</guid>
+      <link>http://liuhang.net.cn/Spring-aop.html</link>
+      <guid>http://liuhang.net.cn/Spring-aop.html</guid>
       <pubDate>Mon, 10 Apr 2017 08:55:04 GMT</pubDate>
       <description>
       
@@ -1553,7 +1889,7 @@
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B03-spring-aop.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/Spring-aop.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -1939,18 +2275,19 @@
     </item>
     
     <item>
-      <title>基础算法-动态规划</title>
-      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</link>
-      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</guid>
+      <title>基础算法-递归和动态规划</title>
+      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</link>
+      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html</guid>
       <pubDate>Sun, 19 Mar 2017 11:39:33 GMT</pubDate>
       <description>
       
-        动态规划总结
+        递归和动态规划总结
       
       </description>
       
       <content:encoded><![CDATA[<h1 id="简单理解"><a href="#简单理解" class="headerlink" title="简单理解"></a>简单理解</h1><ul>
-<li>动态规划的核心是，用空间换时间，找到递推关系 </li>
+<li><strong>动态规划的核心是，用空间换时间，找到递推关系</strong></li>
+<li>“求第n个，求前n个，求所有的…”可用递归做</li>
 </ul>
 <h1 id="简单示例："><a href="#简单示例：" class="headerlink" title="简单示例："></a>简单示例：</h1><ol>
 <li>斐波拉契数列<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//递归方法，效率不行</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">return</span> fibonacci(n-<span class="number">1</span>)+fibonacci(n-<span class="number">2</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -1959,10 +2296,15 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//动态规划法</span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fibonacci</span><span class="params">(n)</span></span>&#123;</div><div class="line">    <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</div><div class="line">    dp[<span class="number">0</span>]=<span class="number">0</span>;</div><div class="line">    dp[<span class="number">1</span>]=<span class="number">1</span>;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">2</span>; i&lt;=n; i++)&#123;</div><div class="line">        db[i] = dp[i-<span class="number">1</span>]+dp[i-<span class="number">2</span>];</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> dp[n];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><ol>
 <li>背包问题</li>
+<li>n皇后问题<ul>
+<li>dfs深搜</li>
+</ul>
+</li>
+<li>最长公共子序列</li>
 </ol>
 ]]></content:encoded>
       
-      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html#disqus_thread</comments>
+      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92%E5%92%8C%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -2204,900 +2546,6 @@
 <h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="内部类分类"><a href="#内部类分类" class="headerlink" title="内部类分类"></a>内部类分类</h2><h3 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h3><h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>]]></content:encoded>
       
       <comments>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-网络编程</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html</guid>
-      <pubDate>Wed, 15 Mar 2017 12:59:30 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xdp-gacl/p/3631965.html&quot; target=
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.cnblogs.com/xdp-gacl/p/3631965.html" target="_blank" rel="external">Java网络编程-孤傲苍狼</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-集合框架</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:20:01 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;集合框架&quot;&gt;&lt;a href=&quot;#集合框架&quot; class=&quot;headerlink&quot; title=&quot;集合框架&quot;&gt;&lt;/a&gt;集合框架&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;../images/集合体系图.png&quot; alt=&quot;集合体系图&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;参考&quot;&gt;&lt;a
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="集合框架"><a href="#集合框架" class="headerlink" title="集合框架"></a>集合框架</h1><p><img src="../images/集合体系图.png" alt="集合体系图"></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://kakajw.iteye.com/blog/935226" target="_blank" rel="external">深入解析Java对象的hashCode和hashCode在HashMap的底层数据结构的应用</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%93%88%E5%B8%8C%E8%A1%A8" target="_blank" rel="external">哈希表</a></li>
-<li><a href="http://blog.csdn.net/zcg_java/article/details/43232251" target="_blank" rel="external">List,Set,Map接口</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-代理</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:18:49 GMT</pubDate>
-      <description>
-      
-        代理模式及Java动态代理详解
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-proxy1/" target="_blank" rel="external">Java 动态代理机制分析及扩展</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-注解</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:14:30 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/xdp-gacl/p/3622275.html&quot; target=
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.cnblogs.com/xdp-gacl/p/3622275.html" target="_blank" rel="external">Java注解总结-孤傲苍狼</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%A8%E8%A7%A3.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-反射</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%8F%8D%E5%B0%84.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%8F%8D%E5%B0%84.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:12:56 GMT</pubDate>
-      <description>
-      
-        Java基础增强-反射
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Class类的使用"><a href="#Class类的使用" class="headerlink" title="Class类的使用"></a>Class类的使用</h1><ul>
-<li><strong>Java中万事万物皆对象，我们写的每一个类，也是对象，它是java.lang.Class类的实例对象</strong></li>
-<li>类是Class类的实例对象，这个实例对象中，存了类的各种信息，<strong>类类型</strong>；</li>
-<li>基本的数据类型，void关键字，也存在类类型</li>
-<li>三种方法获取类的类类型（class type）<ul>
-<li><code>Class c1=Foo.class</code> <code>int.class</code>也可，每个类都有隐含的静态变量class</li>
-<li><code>Class c2=foo.getClass()</code> 已知类的对象（实例）</li>
-<li><code>Class c3=Class.forName(&quot;类的全称&quot;)</code></li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.reflection;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/23.</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo1</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        Foo foo1 = <span class="keyword">new</span> Foo(); <span class="comment">//foo1是Foo类的实例对象</span></div><div class="line">        <span class="comment">//Foo这个类，也是一个实例对象，它是Class类的实例对象，"类类型"，这个Class类的实例对象中，保存了这个类的各种信息</span></div><div class="line">        <span class="comment">//获取Class类实例对象的三种方式</span></div><div class="line">        <span class="comment">//知道类名，每个类都有隐含的静态变量class</span></div><div class="line">        Class c1 = Foo.class;</div><div class="line">        <span class="comment">//知道类的实例对象</span></div><div class="line">        Class c2 = foo1.getClass();</div><div class="line">        System.out.println(c1 == c2);<span class="comment">//输出 true， 每个类，只可能是Class类的一个实例对象；</span></div><div class="line">        <span class="comment">//知道类的全称</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            Class c3 = Class.forName(<span class="string">"com.liuhang.reflection.Foo"</span>);</div><div class="line">        &#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//可以类的类类型，来创建该类实例对象</span></div><div class="line">        <span class="keyword">try</span> &#123;</div><div class="line">            Foo foo2 = (Foo) c1.newInstance();</div><div class="line">        &#125; <span class="keyword">catch</span> (InstantiationException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125; <span class="keyword">catch</span> (IllegalAccessException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="动态加载类"><a href="#动态加载类" class="headerlink" title="动态加载类"></a>动态加载类</h1><ul>
-<li><code>Class.forName(&quot;类的全称&quot;)</code>，还代表动态加载类，运行时加载</li>
-<li>编译时刻加载类-静态加载类，运行时刻加载类-动态加载类</li>
-<li><code>new</code>对象，是静态加载，在编译时刻就要加载所有可能使用到的类;</li>
-</ul>
-<h1 id="获取方法信息"><a href="#获取方法信息" class="headerlink" title="获取方法信息"></a>获取方法信息</h1><ul>
-<li><code>java.lang.reflect.Method</code></li>
-<li><code>getMethods(),getDecleardMethods()</code></li>
-<li>method.getReturnType,getParameterTypes`</li>
-</ul>
-<h1 id="获取成员变量、构造函数信息"><a href="#获取成员变量、构造函数信息" class="headerlink" title="获取成员变量、构造函数信息"></a>获取成员变量、构造函数信息</h1><ul>
-<li><code>java.lang.reflect.Field</code>,Field类封装了关于类成员变量的操作</li>
-<li><code>java.lang.reflect.Constructor;</code>Constructor类封装了冠以类的构造函的操作</li>
-</ul>
-<h1 id="方法反射的基本操作"><a href="#方法反射的基本操作" class="headerlink" title="方法反射的基本操作"></a>方法反射的基本操作</h1><ul>
-<li><code>method.invoke</code></li>
-</ul>
-<h1 id="通过反射了解集合泛型的本质"><a href="#通过反射了解集合泛型的本质" class="headerlink" title="通过反射了解集合泛型的本质"></a>通过反射了解集合泛型的本质</h1><ul>
-<li>编译之后，集合是去泛型化得，Java中集合的泛型，是防止错误输入的，只在编译时有效</li>
-</ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.reflection;</div><div class="line"></div><div class="line"><span class="keyword">import</span> org.junit.Test;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.lang.reflect.Constructor;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Field;</div><div class="line"><span class="keyword">import</span> java.lang.reflect.Method;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/24.</div><div class="line"> * 获取类的方法信息</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo3</span> </span>&#123;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * Print class message.</div><div class="line">     * 打印类的成员信息</div><div class="line">     *</div><div class="line">     * <span class="doctag">@param</span> object the object该类的对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">printClassMessage</span><span class="params">(Object object)</span> </span>&#123;</div><div class="line">        <span class="comment">//要获取类的信息，首先要获取类的类类型class type</span></div><div class="line">        Class c1 = object.getClass();<span class="comment">//传递的是哪个子类的d对象，c1就是该子类的类类型</span></div><div class="line">        <span class="comment">//获取类的全称</span></div><div class="line">        System.out.println(<span class="string">"类的名称"</span> + c1.getName());</div><div class="line"></div><div class="line">        <span class="comment">//一个成员方法，就是一个java.lang.reflect.Method对象,getMethods获取的是所有的public方法，包括继承而来的</span></div><div class="line">        <span class="comment">//getDeclaredMethods获取所有该类自己声明的方法，不问访问权限</span></div><div class="line">        System.out.println(<span class="string">"输出类的方法信息methods:"</span>);</div><div class="line">        Method[] methods = c1.getMethods();</div><div class="line">        c1.getDeclaredMethods();</div><div class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; methods.length; i++) &#123;</div><div class="line">            <span class="comment">//得到方法返回值类型的类类型</span></div><div class="line">            Class returnType = methods[i].getReturnType();</div><div class="line">            System.out.print(returnType.getName() + <span class="string">" "</span>);</div><div class="line">            <span class="comment">//得到方法的名称</span></div><div class="line">            System.out.print(methods[i].getName() + <span class="string">"("</span>);</div><div class="line">            <span class="comment">//获取参数类型,得到参数列表的类型的类类型</span></div><div class="line">            Class[] paramTypes = methods[i].getParameterTypes();</div><div class="line">            <span class="keyword">for</span> (Class c : paramTypes) &#123;</div><div class="line">                System.out.print(c.getName() + <span class="string">","</span>);</div><div class="line">            &#125;</div><div class="line">            System.out.println(<span class="string">")"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//getFields方法，获取所有的public成员变量信息</span></div><div class="line">        System.out.println(<span class="string">"输出类的成员变量信息fields:"</span>);</div><div class="line">        Field[] fields = c1.getFields();</div><div class="line">        c1.getDeclaredFields();</div><div class="line">        <span class="keyword">for</span> (Field field : fields) &#123;</div><div class="line">            Class fieldType = field.getType();</div><div class="line">            <span class="comment">//得到成员变量的名称</span></div><div class="line">            String fieldName = field.getName();</div><div class="line">            <span class="comment">//得到成员变量的类型名称</span></div><div class="line">            String typeName = fieldType.getName();</div><div class="line">            System.out.println(typeName + <span class="string">" "</span> + fieldName);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        <span class="comment">//getConstructors方法，所有共有</span></div><div class="line">        System.out.println(<span class="string">"输出类的构造函数信息constructor:"</span>);</div><div class="line">        Constructor[] constructors = c1.getConstructors();</div><div class="line">        <span class="keyword">for</span> (Constructor constructor : constructors) &#123;</div><div class="line">            System.out.print(constructor.getName() + <span class="string">"（"</span>);</div><div class="line">            Class[] paraTypes = constructor.getParameterTypes();</div><div class="line">            <span class="keyword">for</span> (Class c : paraTypes) &#123;</div><div class="line">                System.out.print(c.getSimpleName() + <span class="string">","</span>);</div><div class="line">            &#125;</div><div class="line">            System.out.println(<span class="string">")"</span>);</div><div class="line">        &#125;</div><div class="line"></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="meta">@Test</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test</span><span class="params">()</span> </span>&#123;</div><div class="line"><span class="comment">//        String s = "hello";</span></div><div class="line"><span class="comment">//        printClassMessage(s);</span></div><div class="line">        Integer n1 = <span class="number">1</span>;</div><div class="line">        printClassMessage(n1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/reflection" target="_blank" rel="external">练习代码</a></li>
-<li><a href="http://www.imooc.com/learn/199" target="_blank" rel="external">慕课网-反射</a></li>
-</ul>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%8F%8D%E5%B0%84.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-泛型</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%9B%E5%9E%8B.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%9B%E5%9E%8B.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:12:09 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;为什么使用泛型&quot;&gt;&lt;a href=&quot;#为什么使用泛型&quot; class=&quot;headerlink&quot; title=&quot;为什么使用泛型&quot;&gt;&lt;/a&gt;为什么使用泛型&lt;/h1&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;可读性与安全性&lt;/strong&gt;，例如集合中有类型参数，在编译时进行类型
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="为什么使用泛型"><a href="#为什么使用泛型" class="headerlink" title="为什么使用泛型"></a>为什么使用泛型</h1><ul>
-<li><strong>可读性与安全性</strong>，例如集合中有类型参数，在编译时进行类型检查</li>
-<li>没有使用泛型时，只要是对象，不管是什么类型的对象，都可以存储进同一个集合中，使用泛型集合，可以<strong>将一个集合中的元素限定为一个特定类型</strong>，这样集合中就只能存储同一类型的对象，这样更安全；并且当从集合中获取一个对象时，编译器也知道这个对象的类型，<strong>不需要对对象进行强制类型转换</strong>，这样更方便。</li>
-</ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.cnblogs.com/xdp-gacl/p/3629723.html" target="_blank" rel="external">泛型总结-孤傲苍狼</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E6%B3%9B%E5%9E%8B.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>我的各种面试&amp;&amp;笔试记录</title>
-      <link>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E8%AE%B0%E5%BD%95.html</link>
-      <guid>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E8%AE%B0%E5%BD%95.html</guid>
-      <pubDate>Mon, 13 Mar 2017 16:03:40 GMT</pubDate>
-      <description>
-      
-        记录我找实习找工作的面试和笔试！持续更新，未完待续
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="时间节点记录"><a href="#时间节点记录" class="headerlink" title="时间节点记录"></a>时间节点记录</h1><ol>
-<li>美团点评<ul>
-<li>笔试： 2017年3月21日19:00 在线笔试</li>
-</ul>
-</li>
-<li>网易<ul>
-<li>笔试：2017年3月25日 14：00 在线笔试</li>
-</ul>
-</li>
-<li>腾讯<ul>
-<li>笔试：2017年4月3日 19:00-21:00 技术类在线笔试(模拟：2017年3月25日17:00至18:00)</li>
-<li>笔试太难了..</li>
-<li>面试问题:<ul>
-<li>谈对移动互联网的认识/发展的看法</li>
-<li>谈移动互联网技术的了解</li>
-<li>谈项目经历</li>
-<li>平时通过什么方式学习</li>
-<li>面对一个新的问题,怎么去解决它</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>京东</p>
-<ul>
-<li>笔试：2017年4月7日 在线笔试</li>
-</ul>
-</li>
-<li><p>今日头条</p>
-<ul>
-<li>笔试: 时间未定</li>
-<li>笔试连接:(4个编程题,简单粗暴)</li>
-</ul>
-</li>
-<li>360<ul>
-<li>笔试： 25晚19：00-21:00</li>
-</ul>
-</li>
-<li>百度<ul>
-<li>笔试: 4.27号</li>
-</ul>
-</li>
-</ol>
-<h1 id="掌握的东西梳理"><a href="#掌握的东西梳理" class="headerlink" title="掌握的东西梳理"></a>掌握的东西梳理</h1><h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><ol>
-<li>链表</li>
-<li>树</li>
-<li>栈</li>
-<li>队列</li>
-<li>哈希表</li>
-</ol>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ol>
-<li>查找<ul>
-<li>二分查找</li>
-</ul>
-</li>
-<li>排序<ul>
-<li>归并排序</li>
-<li>快速排序</li>
-<li>各种排序的效率</li>
-</ul>
-</li>
-<li>动态规划</li>
-<li>贪婪算法</li>
-</ol>
-<h1 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h1><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><h1 id="经历"><a href="#经历" class="headerlink" title="经历"></a>经历</h1>]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95%E8%AE%B0%E5%BD%95.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>奇技-hexo总结</title>
-      <link>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-hexo%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-hexo%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Mon, 13 Mar 2017 13:55:36 GMT</pubDate>
-      <description>
-      
-        hexo博客搭建、配置总结
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.bootcss.com/p/font-awesome/" target="_blank" rel="external">Font Awesome图标</a></li>
-<li><a href="http://theme-next.iissnan.com/" target="_blank" rel="external">next主题配置</a></li>
-<li><a href="http://www.ehcoo.com/seo.html" target="_blank" rel="external">hexo搜索引擎优化seo</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E5%A5%87%E6%8A%80-hexo%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java基础增强-多线程</title>
-      <link>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</link>
-      <guid>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html</guid>
-      <pubDate>Mon, 13 Mar 2017 12:18:54 GMT</pubDate>
-      <description>
-      
-        Java多线程总结
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="什么是多线程"><a href="#什么是多线程" class="headerlink" title="什么是多线程"></a>什么是多线程</h1><h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.cnblogs.com/xdp-gacl/p/3633936.html" target="_blank" rel="external">多线程总结一-孤傲苍狼</a></li>
-<li><a href="http://www.cnblogs.com/xdp-gacl/p/3634382.html" target="_blank" rel="external">多线程总结二-孤傲苍狼</a></li>
-<li><a href="http://blog.csdn.net/jiyiqinlovexx/article/details/50989328" target="_blank" rel="external">volatile理解-此博客推荐！</a></li>
-<li><a href="http://blog.psjay.com/posts/summary-of-java-concurrency-two-synchronized-and-atomicity/" target="_blank" rel="external">Java并发总结：同步与原子性-推荐</a></li>
-<li><a href="http://www.kancloud.cn/seaboat/java-concurrent/117870" target="_blank" rel="external">CAS算法-乐观锁</a></li>
-<li><a href="https://github.com/husthang/java-learning/tree/master/java-advanced/src/main/java/com/liuhang/thread" target="_blank" rel="external">我的练习代码|GitHub</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E5%A4%9A%E7%BA%BF%E7%A8%8B.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>我的博客汇总</title>
-      <link>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html</link>
-      <guid>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html</guid>
-      <pubDate>Fri, 10 Mar 2017 06:57:58 GMT</pubDate>
-      <description>
-      
-        这里的博客和&lt;a href=&quot;https://my.oschina.net/husthang/blog&quot; &gt;刘航的oschina博客&lt;/a&gt;保持一致，欢迎同步访问；由于seo问题，此个人网址流量不高，所所以另开&lt;a href=&quot;https://my.oschina.net/husthang/blog&quot; &gt;oschina博客&lt;/a&gt;保持同步
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="我的博客"><a href="#我的博客" class="headerlink" title="我的博客"></a>我的博客</h1><ul>
-<li><a href="https://my.oschina.net/husthang/blog" target="_blank" rel="external">oschina博客</a></li>
-<li><a href="http://liuhang.net.cn/">个人网站</a></li>
-</ul>
-<h1 id="博客分类"><a href="#博客分类" class="headerlink" title="博客分类"></a>博客分类</h1>]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%B1%87%E6%80%BB.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>redis总结</title>
-      <link>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Thu, 09 Mar 2017 06:34:52 GMT</pubDate>
-      <description>
-      
-        redis入门指南，学习总结
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h1><h2 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h2><ul>
-<li>NoSQL，泛指非关系型的数据库，NoSQL即Not-Only SQL，它可以作为关系型数据库的良好补充;</li>
-</ul>
-<h2 id="NoSql数据库分类"><a href="#NoSql数据库分类" class="headerlink" title="NoSql数据库分类"></a>NoSql数据库分类</h2><ol>
-<li>键值(Key-Value)存储数据库: <strong>Redis</strong>、Voldemort、Berkeley DB</li>
-<li>列存储数据库：Cassandra, <strong>HBase</strong>, Riak</li>
-<li>文档型数据库：CouchDB、<strong>MongoDB</strong></li>
-<li>图形(Graph)数据库： Neo4J，InfoGrid</li>
-</ol>
-<h2 id="Redis简介-1"><a href="#Redis简介-1" class="headerlink" title="Redis简介"></a>Redis简介</h2><ol>
-<li>Redis是用C语言开发的一个开源的高性能键值对（key-value）数据库。支持的键值数据类型包括：字符串类型，散列类型，列表类型，集合类型，有序集合类型。</li>
-<li>应用场景<ul>
-<li><strong>缓存（数据查询、短连接、新闻内容、商品内容等等）（最多使用）</strong>，缓存还可以用<strong>memcached</strong></li>
-<li>分布式集群架构中的session分离。</li>
-<li>聊天室的在线好友列表。</li>
-<li>任务队列。（秒杀、抢购、12306等等）</li>
-<li>应用排行榜。</li>
-<li>网站访问统计。</li>
-<li>数据过期处理（可以精确到毫秒）</li>
-</ul>
-</li>
-</ol>
-<h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><ol>
-<li>Redis约定次版本号（即第一个小数点后的数字）为偶数的版本是稳定版<br>（如2.4版、2.6版），奇数版本是非稳定版（如2.5版、2.7版）</li>
-<li><p>Download, extract and compile Redis with:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.8.tar.gz</div><div class="line">tar xzf redis-3.2.8.tar.gz</div><div class="line">cd redis-3.2.8</div><div class="line">make</div></pre></td></tr></table></figure>
-</li>
-<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="/media/14890418974755.jpg" alt=""></p>
-</li>
-<li><p>启动</p>
-<ul>
-<li>直接运行<code>redis-server</code>,Redis服务器默认会使用6379端口，通过–port端口可指定端口号。（注释：6379是手机键盘上MERZ对应的数字，MERZ是一个意大利歌手的名字）;<code>redis-server --port 6380</code></li>
-</ul>
-</li>
-<li>打开命令行客户端<ul>
-<li><code>redis-cli</code></li>
-</ul>
-</li>
-<li>停止<ul>
-<li><code>redis-cli shutdown</code></li>
-</ul>
-</li>
-</ol>
-<h1 id="Redis数据类型"><a href="#Redis数据类型" class="headerlink" title="Redis数据类型"></a>Redis数据类型</h1><ul>
-<li>Redis中存储数据是通过key-value存储的，对于value的类型有以下几种：<ul>
-<li>字符串</li>
-<li>Hash类型</li>
-<li>List</li>
-<li>Set</li>
-<li>SortedSet（zset）</li>
-</ul>
-</li>
-<li>在redis中的命令语句中，命令是忽略大小写的，而key是不忽略大小写的。</li>
-</ul>
-<h2 id="String类型"><a href="#String类型" class="headerlink" title="String类型"></a>String类型</h2><ul>
-<li>命令用法<ul>
-<li>赋值 <code>set key value</code></li>
-<li>取制 <code>get key</code></li>
-<li>取值赋值（多个） <code>MSET key value [key value …] ; MGET key [key …]</code></li>
-<li>取值并赋值 <code>getset key value</code></li>
-<li>删除 <code>del key</code></li>
-<li>数值增减<ul>
-<li>递增 <code>incr key</code>; 增加指定的整数 <code>incrby key increment</code></li>
-<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="/media/14890484914948.jpg" alt=""></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型"></a>Hash类型</h2><ul>
-<li>散列类型，提供字段和字段值的映射，字段值只能是字符串类型（不可嵌套其他类型）</li>
-<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="/media/14890472547872.jpg" alt=""></li>
-<li>命令用法<ul>
-<li>赋值 <code>hset key filed value</code></li>
-<li>取制 <code>hget key filed</code></li>
-<li>取值赋值（多个） <code>hmest key filed value [filed value …] ; hmget key  filed [filed]</code></li>
-<li>取值并赋值 <code>getset key value</code></li>
-<li>删除 <code>hdel key filed [filed...]</code>,删除一个或多个，返回被删除字段个数</li>
-</ul>
-</li>
-</ul>
-<h2 id="List类型"><a href="#List类型" class="headerlink" title="List类型"></a>List类型</h2><ul>
-<li>列表类型（list）可以存储一个有序的字符串列表，常用的<strong>操作是向列表两端添加元素，或者获得列表的某一个片段</strong>。</li>
-<li>列表类型内部是使用双向链表（double linked list）实现的，所以向列表两端添加元素的时间复杂度为0(1)，获取越接近两端的元素速度就越快。这意味着即使是一个有几千万个元素的列表，获取头部或尾部的10条记录也是极快的。</li>
-<li>命令用法<ul>
-<li>向列表两端增加元素:<code>lpush key value [value]</code>向列表左边添加;<code>rpush key value [value]</code>右边添加</li>
-<li>查看列表<code>lrange key start stop</code>,索引从0开始，可以是负数，如-1代表最后边的</li>
-<li>从列表两端弹出元素<code>lpop key</code>;<code>rpop key</code>;</li>
-<li>获取列表元素个数<code>llen key</code>;<br><img src="/media/14891152268107.jpg" alt=""></li>
-</ul>
-</li>
-</ul>
-<h2 id="Set类型"><a href="#Set类型" class="headerlink" title="Set类型"></a>Set类型</h2><ul>
-<li>集合中的数据是不重复且没有顺序</li>
-<li>与List类型比较</li>
-</ul>
-<p><img src="/media/14890502770124.jpg" alt=""></p>
-<ul>
-<li>集合类型的常用操作是<strong>向集合中加入或删除元素</strong>、<strong>判断某个元素是否存在</strong>等，由于集合类型的Redis内部是使用值为空的散列表实现，所有这些操作的时间复杂度都为0(1)。 Redis还提供了多个集合之间的交集、并集、差集的运算。</li>
-<li>常用命令<ul>
-<li>增加/删除元素：<code>sadd key member [member...]</code>;<code>srem key memeber [member]</code></li>
-<li>获得集合中的所有元素：<code>smembers key</code></li>
-<li>判断元素是否在集合中：<code>sismember key member</code></li>
-<li>运算命令<ul>
-<li>差集（属于A且不属于B的元素集合）<code>sdiff key [key ...]</code></li>
-<li>交集 <code>sinter key [key...]</code></li>
-<li>并集 <code>sunion key [key...]</code><br><img src="/media/14891164162143.jpg" alt=""></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="SortedSet类型"><a href="#SortedSet类型" class="headerlink" title="SortedSet类型"></a>SortedSet类型</h2><ul>
-<li>在集合类型的基础上，有序集合类型为集合中的每个元素都关联一个分数，这使得我们不仅可以完成插入、删除和判断元素是否存在在集合中，还能够获得分数最高或最低的前N个元素、获取指定分数范围内的元素等与分数有关的操作。 </li>
-<li>在某些方面有序集合和列表类型有些相似。 <ol>
-<li>二者都是有序的。 </li>
-<li>二者都可以获得某一范围的元素。 </li>
-</ol>
-</li>
-<li>但是，二者有着很大区别： <ol>
-<li>列表类型是通过链表实现的，获取靠近两端的数据速度极快，而当元素增多后，访问中间数据的速度会变慢。 </li>
-<li>有序集合类型使用散列表实现，所有即使读取位于中间部分的数据也很快。 </li>
-<li>列表中不能简单的调整某个元素的位置，但是有序集合可以（通过更改分数实现） </li>
-<li>有序集合要比列表类型更耗内存。 </li>
-</ol>
-</li>
-<li>命令：<ul>
-<li>增加元素：向有序集合中加入一个元素和该元素的分数，如果该元素已经存在则会用新的分数替换原有的分数。返回值是新加入到集合中的元素个数，不包含之前已经存在的元素。<code>zadd key score member [score member...]</code></li>
-<li>获取元素分数 <code>zscore key member</code></li>
-<li>删除元素：移除有序集key中的一个或多个成员，不存在的成员将被忽略。当key存在但不是有序集类型时，返回一个错误。<code>zrem key member [member...]</code></li>
-<li>获得排名在某个范围的元素列表<ul>
-<li>按照元素分数从小到大的顺序返回索引从start到stop之间的所有元素（包含两端的元素）<code>zrange key start stop [withscores]</code></li>
-<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="/media/14891282942094.jpg" alt=""></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://redisdoc.com/" target="_blank" rel="external">Redis 命令参考</a></li>
-<li><a href="https://redis.io/download" target="_blank" rel="external">Redis 下载安装</a></li>
-<li><a href="http://www.redis.cn/" target="_blank" rel="external">Redis中文网</a></li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/redis%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>基础数据结构-二叉树</title>
-      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html</link>
-      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html</guid>
-      <pubDate>Mon, 06 Mar 2017 13:09:42 GMT</pubDate>
-      <description>
-      
-        数据结构之二叉树，包括二叉树的遍历算法
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
-<li>二叉树的前序中序后序三种遍历方法，用递归实现较为容易，在上数据结构的课时，非递归实现会了，但过了一段时间又忘了，每次要写非递归实现的时候都要想好久。这里总结一下，将前序和后序遍历非递归实现方法统一，便于理解记忆！</li>
-</ul>
-<h2 id="二叉树DFS非递归实现"><a href="#二叉树DFS非递归实现" class="headerlink" title="二叉树DFS非递归实现"></a>二叉树DFS非递归实现</h2><h3 id="DFS"><a href="#DFS" class="headerlink" title="DFS"></a>DFS</h3><ul>
-<li>depth first search:先访问子节点，再访问父节点，最后访问第二个子节点。根据根节点相对于左右子节点的访问先后顺序又可细分为以下三种方式:<ul>
-<li>前序(pre-order)：先根后左再右</li>
-<li>中序(in-order)：先左后根再右</li>
-<li>后序(post-order)：先左后右再根<br><img src="../images/binary_tree_traversal.png" alt=""></li>
-</ul>
-</li>
-</ul>
-<h3 id="DFS非递归实现"><a href="#DFS非递归实现" class="headerlink" title="DFS非递归实现"></a>DFS非递归实现</h3><h4 id="前序和后序遍历"><a href="#前序和后序遍历" class="headerlink" title="前序和后序遍历"></a>前序和后序遍历</h4><ul>
-<li><strong>前序遍历和后序遍历归为一类</strong>,所用思想基本一模一样:</li>
-<li>前序遍历的步骤为<ul>
-<li>对root进行异常处理</li>
-<li>将root压入栈</li>
-<li>while循环遍历,终止条件为栈为空，所有元素均已处理完</li>
-<li>从栈顶取元素读,取并存入结果</li>
-<li>将取出元素的右、左节点分别压入栈内，以便下次循环取元素时为本次节点的左,右子节点.</li>
-</ul>
-</li>
-<li>运用辅助栈,保存遍历到的节点(用栈后入先出的特性,控制已经遍历到的节点的访问顺序). 以前序深度优先遍历为例,先访问根节点,然后访问左树,左树全部访问完了,再访问右树</li>
-<li><strong>后续遍历思想</strong>: 左-右-根;<strong>可以视为, 根-右-左,然后结果转置即可</strong>. 如前面示意图,根右左,访问顺序则为:<code>ACFBED</code>;可以看出,这样访问刚好为后续遍历的转置. 根右左访问与前序(根左右)遍历操作思想一模一样</li>
-<li><p>前序遍历</p>
-<ul>
-<li><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/" target="_blank" rel="external">leetcode|Binary Tree Preorder Traversal二叉树前序遍历</a></li>
-<li><a href="http://www.lintcode.com/en/problem/binary-tree-preorder-traversal/" target="_blank" rel="external">lintcode|Binary Tree Preorder Traversal二叉树前序遍历</a><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line">  * 前序遍历,迭代法</div><div class="line">  */</div><div class="line"> <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">preorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">     List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">     <span class="keyword">if</span> (root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">     Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</div><div class="line">     stack.push(root);</div><div class="line">     <span class="keyword">while</span> (!stack.isEmpty()) &#123;</div><div class="line">         TreeNode node = stack.pop();</div><div class="line">         result.add(node.val);</div><div class="line">         <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) stack.push(node.right);</div><div class="line">         <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) stack.push(node.left);</div><div class="line">     &#125;</div><div class="line">     <span class="keyword">return</span> result;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>后序遍历</p>
-<ul>
-<li><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/" target="_blank" rel="external">leetcode|Binary Tree Postorder Traversal后序遍历</a><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">postorderTraversal</span><span class="params">(TreeNode root)</span> </span>&#123;</div><div class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span>(root == <span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">        Deque&lt;TreeNode&gt; stack=<span class="keyword">new</span> ArrayDeque&lt;&gt;();</div><div class="line">        stack.push(root);</div><div class="line">        <span class="keyword">while</span>(!stack.isEmpty())&#123;</div><div class="line">            TreeNode node=stack.pop();</div><div class="line">            result.add(node.val);</div><div class="line">            <span class="keyword">if</span>(node.left!=<span class="keyword">null</span>) stack.push(node.left);</div><div class="line">            <span class="keyword">if</span>(node.right!=<span class="keyword">null</span>) stack.push(node.right);</div><div class="line">        &#125;</div><div class="line">        Collections.reverse(result);</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h4><ul>
-<li>中序遍历思路: 中序遍历迭代法思路不同于前序和后序.<ol>
-<li>首先针对对当前节点,一直对其左子树迭代并将非空节点入栈</li>
-<li>节点指针迭代为空(到树底了)后不再入栈,然后取栈顶元素,存结果;</li>
-<li>将当前指针用出栈的节点的右子节点替代,然后回到第一步继续迭代,直到当前节点为空且栈为空.</li>
-</ol>
-</li>
-<li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/" target="_blank" rel="external">|leetcodeBinary Tree Inorder Traversal中序遍历</a><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">inorderTraversal</span><span class="params">(TreeNode root)</span></span>&#123;</div><div class="line">        List&lt;Integer&gt; result = <span class="keyword">new</span> ArrayList&lt;&gt;();</div><div class="line">        <span class="keyword">if</span>(root==<span class="keyword">null</span>) <span class="keyword">return</span> result;</div><div class="line">        Deque&lt;TreeNode&gt; stack = <span class="keyword">new</span> ArrayDeque&lt;&gt;();</div><div class="line">        <span class="keyword">while</span> (root!=<span class="keyword">null</span>||!stack.isEmpty())&#123;</div><div class="line">            <span class="keyword">while</span>(root!=<span class="keyword">null</span>)&#123;</div><div class="line">                stack.push(root);</div><div class="line">                root=root.left;</div><div class="line">            &#125;</div><div class="line">            TreeNode node=stack.pop();</div><div class="line">            result.add(node.val);</div><div class="line">            root=node.right;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> result;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉树的定义与性质"><a href="#二叉树的定义与性质" class="headerlink" title="二叉树的定义与性质"></a>二叉树的定义与性质</h2><p><img src="../images/二叉树知识点.png" alt=""></p>
-<ol>
-<li>二叉树的第i层至多有 2^(i−1) 个结点;</li>
-<li>深度为k的二叉树至多有 2^k − 1 个结点;</li>
-<li><strong>对任何一棵二叉树T，如果其终端结点数为 n0, 度为2的结点数为 n2, 则 n0 = n2 + 1。</strong></li>
-<li>一棵深度为 k, 且有 2^k − 1 个节点称之为<strong>满二叉树</strong>;</li>
-<li>深度为 k，有 n 个节点的二叉树，当且仅当其每一个节点都与深度为 k 的满二叉树中序号为 1 至 n 的节点对应时，称之为<strong>完全二叉树</strong>。完全二叉树中重在节点标号对应,即完全二叉树的叶子结点只能出现在最下层和次下层,最下层的全在树的左部.</li>
-<li>具有n个结点的完全二叉树的深度k为<code>(log2n)向下取整+1</code></li>
-<li>对于具有n个结点的完全二叉树,从1开始编号(上下左右):<ul>
-<li>i&gt;1,则序号为i的结点的父结点序号为<code>i/2</code>(整除);</li>
-<li>若2i&lt;=n,则序号为i的结点的左子结点序号为2i; 若2i&gt;n,则结点i无左子结点;</li>
-<li>若2i+1&lt;=n,则序号为i的结点的右子节点为2i+1; 若2i+1&gt;n,则无右子节点</li>
-<li>若从0开始编号,则i的父节点为(i-1)/2,左子节点为2i+1,右2i+2;</li>
-</ul>
-</li>
-</ol>
-<h2 id="二叉树的遍历"><a href="#二叉树的遍历" class="headerlink" title="二叉树的遍历"></a>二叉树的遍历</h2><ol>
-<li>深度优先遍历(DFS)<ul>
-<li>前序中序后序三种遍历方式的递归实现</li>
-<li>前序中序后序三种遍历方式的非递归实现</li>
-<li><a href="http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html">三种遍历方法详解总结</a></li>
-</ul>
-</li>
-<li>广度优先遍历(BFS)<ul>
-<li>层序遍历</li>
-<li>之字形遍历</li>
-<li>镜像</li>
-</ul>
-</li>
-<li>OJ链接<ul>
-<li><a href="https://leetcode.com/problems/binary-tree-preorder-traversal/#/description" target="_blank" rel="external">LeetCode:前序遍历</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-inorder-traversal/#/description" target="_blank" rel="external">LeetCode:中序遍历</a></li>
-<li><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/#/description" target="_blank" rel="external">LeetCode:后序遍历</a></li>
-</ul>
-</li>
-</ol>
-<h2 id="二叉搜索树"><a href="#二叉搜索树" class="headerlink" title="二叉搜索树"></a>二叉搜索树</h2><ul>
-<li>一颗二叉查找树(BST)是一颗二叉树，其中每个节点都含有一个可进行比较的键及相应的值，且每个节点的<br>键都大于等于左子树中的任意节点的键，而小于右子树中的任意节点的键。</li>
-</ul>
-<h3 id="二叉搜索树的后序遍历序列"><a href="#二叉搜索树的后序遍历序列" class="headerlink" title="二叉搜索树的后序遍历序列"></a>二叉搜索树的后序遍历序列</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/a861533d45854474ac791d90e447bafd?tpId=13&amp;tqId=11176&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第23题-二叉搜索树的后序遍历序列</a></li>
-</ol>
-<h3 id="二叉搜索树与双向链表"><a href="#二叉搜索树与双向链表" class="headerlink" title="二叉搜索树与双向链表"></a>二叉搜索树与双向链表</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/947f6eb80d944a84850b0538bf0ec3a5?tpId=13&amp;tqId=11179&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第26题-二叉搜索树与双向链表</a></li>
-</ol>
-<h3 id="二叉搜索树的第k个结点"><a href="#二叉搜索树的第k个结点" class="headerlink" title="二叉搜索树的第k个结点"></a>二叉搜索树的第k个结点</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a?tpId=13&amp;tqId=11215&amp;tPage=4&amp;rp=4&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第62题-二叉搜索树的第k个结点</a></li>
-<li>思路: 用栈对二叉搜索树进行<strong>中序遍历</strong>,搜到第k个结点时跳出</li>
-</ol>
-<h2 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h2><ul>
-<li>定义: 如果某二叉树中任意结点的左右子树的深度相差不超过1,那么它就是一颗平衡二叉树</li>
-<li>AVL树,自平衡二叉树;<br><img src="../images/AVL.png" alt=""></li>
-</ul>
-<h3 id="平衡二叉树的判定"><a href="#平衡二叉树的判定" class="headerlink" title="平衡二叉树的判定"></a>平衡二叉树的判定</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/8b3b95850edb4115918ecebdf1b4d222?tpId=13&amp;tqId=11192&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第39题-平衡二叉树</a></li>
-<li>思路: 每个结点只遍历一次的解法</li>
-</ol>
-<h2 id="哈夫曼树-最优二叉树"><a href="#哈夫曼树-最优二叉树" class="headerlink" title="哈夫曼树(最优二叉树)"></a>哈夫曼树(最优二叉树)</h2><h3 id="哈夫曼二叉树的定义及性质"><a href="#哈夫曼二叉树的定义及性质" class="headerlink" title="哈夫曼二叉树的定义及性质"></a>哈夫曼二叉树的定义及性质</h3><ol>
-<li>最优二叉树,也称为哈夫曼树:对一组带有权值的叶子结点,构造具有最小带权路径长度的二叉树. 选取权值最小和次小的结点构造.</li>
-<li>具有n个叶子节点的哈夫曼树总共有2n-1个结点;</li>
-</ol>
-<h2 id="其他典型题目"><a href="#其他典型题目" class="headerlink" title="其他典型题目"></a>其他典型题目</h2><h3 id="重建二叉树"><a href="#重建二叉树" class="headerlink" title="重建二叉树"></a>重建二叉树</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/8a19cbe657394eeaac2f6ea9b0f6fcf6?tpId=13&amp;tqId=11157&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第4题-重建二叉树</a></li>
-<li>描述: 由先序和中序遍历序列,重建二叉树</li>
-<li>思路:</li>
-</ol>
-<h3 id="树的子结构"><a href="#树的子结构" class="headerlink" title="树的子结构"></a>树的子结构</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88?tpId=13&amp;tqId=11170&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第17题-树的子结构</a></li>
-<li>思路:</li>
-</ol>
-<h3 id="二叉树的镜像"><a href="#二叉树的镜像" class="headerlink" title="二叉树的镜像"></a>二叉树的镜像</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011?tpId=13&amp;tqId=11171&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第18题-二叉树的镜像</a></li>
-<li>思路: 对二叉树进行前序遍历,对遍历到的节点,交换其左右子节点(可用递归实现)</li>
-</ol>
-<h3 id="二叉树中和为某一值的路径"><a href="#二叉树中和为某一值的路径" class="headerlink" title="二叉树中和为某一值的路径"></a>二叉树中和为某一值的路径</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/b736e784e3e34731af99065031301bca?tpId=13&amp;tqId=11177&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第24题-二叉树中和为某一值的路径</a></li>
-<li>思路: 本题重难点!</li>
-</ol>
-<h3 id="二叉树的深度"><a href="#二叉树的深度" class="headerlink" title="二叉树的深度"></a>二叉树的深度</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/435fb86331474282a3499955f0a41e8b?tpId=13&amp;tqId=11191&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第38题-二叉树的深度</a></li>
-<li>思路: 递归;  <strong>思考非递归的方法</strong></li>
-</ol>
-<h3 id="对称的二叉树"><a href="#对称的二叉树" class="headerlink" title="对称的二叉树"></a>对称的二叉树</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&amp;tqId=11211&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第58题-对称的二叉树</a></li>
-<li>思路: 比较二叉树的前序遍历序列(根左右)和对称前序遍历序列(根右左),用<strong>递归</strong>的方式进行遍历</li>
-</ol>
-<h3 id="按之字顺序打印二叉树"><a href="#按之字顺序打印二叉树" class="headerlink" title="按之字顺序打印二叉树"></a>按之字顺序打印二叉树</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/91b69814117f4e8097390d107d2efbe0?tpId=13&amp;tqId=11212&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第59题-按之字形顺序打印二叉树</a></li>
-<li>思路: 用两个栈存;</li>
-</ol>
-<h3 id="把二叉树打印成多行-二叉树层序遍历"><a href="#把二叉树打印成多行-二叉树层序遍历" class="headerlink" title="把二叉树打印成多行(二叉树层序遍历)"></a>把二叉树打印成多行(二叉树层序遍历)</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/445c44d982d04483b04a54f298796288?tpId=13&amp;tqId=11213&amp;tPage=3&amp;rp=3&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第60题-把二叉树打印成多行</a></li>
-</ol>
-<h3 id="序列化二叉树"><a href="#序列化二叉树" class="headerlink" title="序列化二叉树"></a>序列化二叉树</h3><ol>
-<li><a href="https://www.nowcoder.com/practice/cf7e25aa97c04cc1a68c8f040e71fb84?tpId=13&amp;tqId=11214&amp;tPage=4&amp;rp=4&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第61题-序列化二叉树</a></li>
-<li>思路: 前序遍历的递归实现; 注意反序列化如何递归</li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E4%BA%8C%E5%8F%89%E6%A0%91.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Spring笔记2-spring-IOC</title>
-      <link>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</link>
-      <guid>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html</guid>
-      <pubDate>Mon, 06 Mar 2017 09:06:09 GMT</pubDate>
-      <description>
-      
-        Spring-IOC基础学习,spring-ioc深入分析及个人模拟
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="Spring-IOC基础"><a href="#Spring-IOC基础" class="headerlink" title="Spring-IOC基础"></a>Spring-IOC基础</h1><h2 id="IOC与DI"><a href="#IOC与DI" class="headerlink" title="IOC与DI"></a>IOC与DI</h2><ol>
-<li>基本概念<ul>
-<li><strong>控制反转(Inversion of Control)</strong>是一种是面向对象编程中的一种设计原则，用来减低计算机代码之间的耦合度。其基本思想是：借助于“第三方”实现具有依赖关系的对象之间的解耦。实现控制反转主要有两种方式：<strong>依赖注入</strong>和<strong>依赖查找</strong>。两者的区别在于，前者是被动的接收对象，在类A的实例创建过程中即创建了依赖的B对象，通过类型或名称来判断将不同的对象注入到不同的属性中，而后者是主动索取响应名称的对象，获得依赖对象的时间也可以在代码中自由控制。</li>
-<li><strong>依赖注入</strong>就是将实例变量传入到一个对象中去(Dependency injection means giving an object its instance variables)。</li>
-</ul>
-</li>
-<li>ICO与DI的关系<ul>
-<li><strong>依赖注入</strong>是一种设计模式</li>
-<li><strong>控制反转</strong>是一种设计原则,一种编程思想.</li>
-<li>IoC框架使用依赖注入作为实现控制反转的方式，但是控制反转还有其他的实现方式，比如依赖查找，所以不能将控制反转和依赖注入等同。</li>
-</ul>
-</li>
-<li>Spring中的依赖注入<ul>
-<li>Spring依赖注入的两种方式：setter方法注入(setter injection)和构造器注入(constructor injection)</li>
-</ul>
-</li>
-<li><a href="https://zh.wikipedia.org/wiki/%E6%8E%A7%E5%88%B6%E5%8F%8D%E8%BD%AC#.E5.AE.9E.E7.8E.B0.E6.96.B9.E6.B3.95" target="_blank" rel="external">参考</a></li>
-</ol>
-<h2 id="Spring中Bean的基本装配"><a href="#Spring中Bean的基本装配" class="headerlink" title="Spring中Bean的基本装配"></a>Spring中Bean的基本装配</h2><ol>
-<li>两种注入方式,构造器注入(对应xml c空间),属性的settr方法注入(对应xml p空间)</li>
-<li>基于xml装配<ul>
-<li>构造器注入: c-命名空间;元素:<code>&lt;constructor-arg ref=&quot;bean-id&quot;/&gt;</code></li>
-<li>setter注入: p-命名空间;元素:<code>&lt;property name=&quot;属性名&quot; ref=&quot;bean-id&quot;/&gt;</code></li>
-<li>装配集合(此时命名空间无法做到),需用元素</li>
-</ul>
-</li>
-<li><p>基于注解装配</p>
-<ul>
-<li>Spring3基于注解实现Bean依赖注入支持如下四种注解<ul>
-<li>spring自带依赖注入注解： Spring自带的一套依赖注入注解；</li>
-<li>JSR-250注解：Java平台的公共注解，是Java EE 5规范之一，在JDK6中默认包含这些注解，从Spring2.5开始支持。</li>
-<li>JSR-330注解：Java 依赖注入标准，Java EE 6规范之一，可能在加入到未来JDK版本，从Spring3开始支持；</li>
-<li>JPA注解：用于注入持久化上下文和实体管理器。</li>
-</ul>
-</li>
-<li>Spring自带注解<ul>
-<li>@Required: 依赖检查,只能放置在setter方法上,要求xml中配置该Bean时必须注入.</li>
-<li>@Autowired 自动装配,默认是根据类型注入，可以用于构造器、字段、方法注入(不只settr方法)</li>
-<li>@Qualifier 与 Autowired 配合根据名字装配;(还能进行更细粒度的控制)</li>
-<li>@Component: 取代<bean class=""> 声明bean, 用在要被自动扫描和装配的类上(类级别)</bean></li>
-<li>@Bean, 声明一个single bean, 用法方法上(方法级别)</li>
-</ul>
-</li>
-<li>JSR-250注解<ul>
-<li>@Resource：自动装配，默认根据类型装配，如果指定name属性将根据名字装配</li>
-</ul>
-</li>
-<li>SR-330注解<ul>
-<li>@Inject：等价于默认的@Autowired</li>
-<li>@Name,类似@Component</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>Bean的生命周期</p>
-<ul>
-<li>流程<ul>
-<li><img src="../images/Spring-Bean生命周期.png" alt="Spring-Bean生命周期"></li>
-</ul>
-</li>
-<li><a href="http://www.jianshu.com/p/3944792a5fff" target="_blank" rel="external">参考</a></li>
-<li><a href="http://javabeat.net/life-cycle-management-of-a-spring-bean/" target="_blank" rel="external">life cycle</a></li>
-<li><a href="https://github.com/husthang/spring-learning/tree/master/spring-ioc" target="_blank" rel="external">Code</a></li>
-</ul>
-</li>
-</ol>
-<h2 id="Bean高级装配"><a href="#Bean高级装配" class="headerlink" title="Bean高级装配"></a>Bean高级装配</h2><ol>
-<li>Bean的作用域</li>
-<li>Spring profile<ul>
-<li><a href="http://www.jianshu.com/p/948c303b2253" target="_blank" rel="external">参考</a></li>
-</ul>
-</li>
-<li>条件化的Bean声明</li>
-<li>Spring表达式语言(SpEL)</li>
-</ol>
-<h2 id="示例代码及单元测试"><a href="#示例代码及单元测试" class="headerlink" title="示例代码及单元测试"></a>示例代码及单元测试</h2><ol>
-<li>@RunWith注解</li>
-<li>@Rule注解</li>
-<li>Assert用法</li>
-<li>System Rules用法<ul>
-<li><a href="http://stefanbirkner.github.io/system-rules/" target="_blank" rel="external">参考</a></li>
-</ul>
-</li>
-<li><a href="https://github.com/husthang/spring-learning/tree/master/spring-ioc" target="_blank" rel="external">代码</a></li>
-</ol>
-<h1 id="Spirng-IOC深入分析"><a href="#Spirng-IOC深入分析" class="headerlink" title="Spirng-IOC深入分析"></a>Spirng-IOC深入分析</h1>]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B02-spring-IOC.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Spring笔记1-spring入门</title>
-      <link>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</link>
-      <guid>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html</guid>
-      <pubDate>Mon, 06 Mar 2017 09:00:57 GMT</pubDate>
-      <description>
-      
-        Spring学习系列第一篇,Spring框架基本介绍
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="Java-EE了解"><a href="#Java-EE了解" class="headerlink" title="Java EE了解"></a>Java EE了解</h2><ol>
-<li>Java EE是什么<ul>
-<li>学习Java各种框架之前,有必要对Java EE有基本的了解,方便理解各种框架兴起的原因(为什么要用这个框架,而不用JavaEE中相应的东西).</li>
-<li>Java平台企业版（Java Platform Enterprise Edition），是Sun公司为企业级应用推出的标准平台.</li>
-</ul>
-</li>
-<li>分层模型<ul>
-<li>分层结构图<ul>
-<li><img src="../images/Java-EE分层模型.jpg" alt=""></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>组件<ul>
-<li>Java EE是一系列技术标准所组成的平台<ul>
-<li>Applet - Java Applet</li>
-<li>EJB - 企业级JavaBean（Enterprise Java Beans）</li>
-<li>JAAS - Java Authentication and Authorization Service</li>
-<li>JACC - J2EE Authorization Contract for Containers</li>
-<li>JAF - Java Beans Activation Framework</li>
-<li>JAX-RPC - Java API for XML-Based Remote Procedure Calls</li>
-<li>JAX-WS - Java API for XML Web Services</li>
-<li>JAXM - Java API for XML Messaging</li>
-<li>JAXP - Java XML解析API（Java API for XML Processing）</li>
-<li>JAXR - Java API for XML Registries</li>
-<li>JCA - J2EE连接器架构（J2EE Connector Architecture）</li>
-<li>JDBC - Java数据库联接（Java Database Connectivity）</li>
-<li>JMS - Java消息服务（Java Message Service）</li>
-<li>JMX - Java Management</li>
-<li>JNDI - Java名称与目录接口（Java Naming and Directory Interface）</li>
-<li>JSF - Java Server Faces</li>
-<li>JSP - Java服务器页面（Java Server Pages）</li>
-<li>JSTL - Java服务器页面标准标签库（Java Server Pages Standard Tag Library）</li>
-<li>JTA - Java事务API（Java Transaction API）</li>
-<li>JavaMail</li>
-<li>Servlet - Java Servlet API</li>
-<li>StAX - Streaming APIs for XML Parsers</li>
-<li>WS - Web Services</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>参考<ul>
-<li><a href="https://zh.wikipedia.org/zh-cn/Java_EE" target="_blank" rel="external">Java EE维基百科</a></li>
-<li><a href="https://www.ibm.com/developerworks/cn/java/j2ee/" target="_blank" rel="external">Java EE简介</a></li>
-</ul>
-</li>
-</ol>
-<h2 id="spring框架概述"><a href="#spring框架概述" class="headerlink" title="spring框架概述"></a>spring框架概述</h2><ol>
-<li>什么是spring<ul>
-<li>Spring是一个开源框架，Spring是于2003 年兴起的一个轻量级的Java 开发框架，由Rod Johnson 在其著作Expert One-On-One J2EE Development and Design中阐述的部分理念和原型衍生而来。它是为了解决企业应用开发的复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许使用者选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。然而，Spring的用途不仅限于服务器端的开发。从简单性、可测试性和松耦合的角度而言，任何Java应用都可以从Spring中受益。<strong>Spring的核心是控制反转（IoC）和面向切面（AOP）</strong>。简单来说，Spring是一个分层的JavaSE/EE full-stack(一站式) 轻量级开源框架。</li>
-<li>分层： 一站式，每一个层都提供的解决方案(如下结构图)<ul>
-<li>web层：struts，spring-MVC</li>
-<li>service层：spring</li>
-<li>dao层：hibernate，mybatis ， jdbcTemplate  –&gt; spring-data</li>
-<li><img src="../images/框架体系结构.png" alt="框架体系结构"></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>spring体系结构<ul>
-<li><img src="../images/spring体系图.png" alt="spring体系结构"></li>
-<li>容器是spring的核心. Spring容器使用DI(Dependency Inject)管理构成应用的组件,它会创建相互协作的组件之间的关联. Spring自带多个容器实现,可以归为两种类型: bean工厂(由<code>org.springframework.beans.factory.BeanFactory</code>接口定义);应用上下文(由<code>org.springframework.context.ApplicationContext</code>接口定义)基于BeanFactory构建</li>
-</ul>
-</li>
-<li>spring优点<ul>
-<li>方便解耦，简化开发  （高内聚低耦合）<ul>
-<li>Spring就是一个大工厂（容器），可以将所有对象创建和依赖关系维护，交给Spring管理</li>
-<li>spring工厂是用于生成bean</li>
-</ul>
-</li>
-<li>AOP编程的支持<ul>
-<li>Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能</li>
-</ul>
-</li>
-<li>声明式事务的支持<ul>
-<li>只需要通过配置就可以完成对事务的管理，而无需手动编程</li>
-</ul>
-</li>
-<li>方便程序的测试<ul>
-<li>Spring对Junit4支持，可以通过注解方便的测试Spring程序</li>
-</ul>
-</li>
-<li>方便集成各种优秀框架<ul>
-<li>Spring不排斥各种优秀的开源框架，其内部提供了对各种优秀框架（如：Struts、Hibernate、MyBatis、Quartz等）的直接支持</li>
-</ul>
-</li>
-<li>降低JavaEE API的使用难度<ul>
-<li>Spring 对JavaEE开发中非常难用的一些API（JDBC、JavaMail、远程调用等），都提供了封装，使这些API应用难度大大降低</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Spring%E7%AC%94%E8%AE%B01-spring%E5%85%A5%E9%97%A8.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>JavaWeb入门</title>
-      <link>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</link>
-      <guid>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html</guid>
-      <pubDate>Mon, 06 Mar 2017 08:45:25 GMT</pubDate>
-      <description>
-      
-        JavaWeb入门基础
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h2 id="JavaWeb基础知识体系"><a href="#JavaWeb基础知识体系" class="headerlink" title="JavaWeb基础知识体系"></a>JavaWeb基础知识体系</h2><p><img src="../images/JavaWeb基础知识体系.png" alt="JavaWeb基础知识体系"></p>
-<h2 id="Web容器、服务器的含义和区别"><a href="#Web容器、服务器的含义和区别" class="headerlink" title="Web容器、服务器的含义和区别"></a>Web容器、服务器的含义和区别</h2><ol>
-<li><a href="http://aoyouzi.iteye.com/blog/2028611" target="_blank" rel="external">Web容器,服务器理解</a>  博客推荐</li>
-<li>容器: 举例说明: Servlet没有main()方法。Servlet受控于另一个Java应用，这个Java应用称为容器.<ul>
-<li><a href="http://openhome.cc/Gossip/ServletJSP/Container.html" target="_blank" rel="external">何谓容器</a> ,关于容器的详解</li>
-<li>在具体层面,容器实际上是Java应用程序,运行于JVM之上,不同类型的容器负责不同的工作，例如Servlet/JSP所运行的Web容器（Web Container),功能之一就是把JSP代码翻译成java代码</li>
-</ul>
-</li>
-<li>服务器，硬件角度上说就是一台高性能的Computer。我们通常指的服务器其实应该是装有能够处理具体请求事务的服务器软件的Computer</li>
-<li>Web服务器是指驻留于因特网上某种类型计算机的程序，是可以向发出请求的浏览器提供文档的程序。当Web浏览器（客户端）连到服务器上并请求文件时，服务器将处理该请求并将文件反馈到该浏览器上</li>
-<li>Client-Server架构<br><img src="/images/Client-Server.png" alt="Client-Server"></li>
-</ol>
-<ul>
-<li>动态WEB中，程序依然使用客户端和服务端，客户端依然使用浏览器（IE、FireFox等），通过网络(Network)连接到服务器上，使用HTTP协议发起请求（Request），现在的所有请求都先经过一个WEB Server Plugin（服务器插件）来处理，此插件用于区分是请求的是静态资源(<em>.htm或者是</em>.htm)还是动态资源。</li>
-<li>如果WEB Server Plugin发现客户端请求的是静态资源(<em>.htm或者是</em>.htm)，则将请求直接转交给WEB服务器，之后WEB服务器从文件系统中取出内容，发送回客户端浏览器进行解析执行。</li>
-<li>如果WEB Server Plugin发现客户端请求的是动态资源（<em>.jsp、</em>.asp/<em>.aspx、</em>.php），则先将请求转交给WEB Container(WEB容器)，在WEB Container中连接数据库，从数据库中取出数据等一系列操作后动态拼凑页面的展示内容，拼凑页面的展示内容后，把所有的展示内容交给WEB服务器，之后通过WEB服务器将内容发送回客户端浏览器进行解析执行。</li>
-</ul>
-<h2 id="Apache、Tomcat与Catalina作为软件名字的含义与关系"><a href="#Apache、Tomcat与Catalina作为软件名字的含义与关系" class="headerlink" title="Apache、Tomcat与Catalina作为软件名字的含义与关系"></a>Apache、Tomcat与Catalina作为软件名字的含义与关系</h2><ol>
-<li>JavaWeb中常见这三个词,一直没闹清楚这三个词命名的来源和含义,找到一篇文章总结的不错.<a href="http://blog.csdn.net/yingchengsun/article/details/44340211" target="_blank" rel="external">文章戳这里</a></li>
-</ol>
-<h2 id="JavaWeb应用的组成结构"><a href="#JavaWeb应用的组成结构" class="headerlink" title="JavaWeb应用的组成结构"></a>JavaWeb应用的组成结构</h2><p><img src="/images/JavaWeb应用组成结构.png" alt="JavaWeb目录结构"></p>
-<h2 id="浏览器与服务器的交互过程"><a href="#浏览器与服务器的交互过程" class="headerlink" title="浏览器与服务器的交互过程"></a>浏览器与服务器的交互过程</h2><ol>
-<li>URL:统一资源定位符(即网址) uniform resources location<br>URI:统一资源标识符, uniform resource identify<br><a href="http://localhost:8080/doc/1.html" target="_blank" rel="external">http://localhost:8080/doc/1.html</a><br>协议  主机IP(端口号)   URI(当前应用的资源路径)</li>
-<li>浏览器与服务器交互过程图<br><img src="/images/浏览器与服务器交互图.png" alt="浏览器与服务器交互过程图"></li>
-</ol>
-<h2 id="Tomcat简介"><a href="#Tomcat简介" class="headerlink" title="Tomcat简介"></a>Tomcat简介</h2><ol>
-<li><p>Tomcat目录层次结构<br><img src="/images/Tomcat目录层次结构.png" alt="Tomcat目录结构"><br><strong>应学会查看logs日志信息来排查错误</strong></p>
-</li>
-<li><p>Tomcat体系结构<br><img src="/images/Tomcat体系结构.png" alt="Tomcat体系结构"><br>Tomcat服务器的启动是基于一个server.xml文件的，Tomcat启动的时候首先会启动一个Server，Server里面就会启动Service，Service里面就会启动多个”Connector(连接器)”，每一个连接器都在等待客户机的连接，当有用户使用浏览器去访问服务器上面的web资源时，首先是连接到Connector(连接器)，Connector(连接器)是不处理用户的请求的，而是将用户的请求交给一个Engine(引擎)去处理，Engine(引擎)接收到请求后就会解析用户想要访问的Host，然后将请求交给相应的Host，Host收到请求后就会解析出用户想要访问这个Host下面的哪一个Web应用,一个web应用对应一个Context。</p>
-</li>
-</ol>
-<h2 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h2><ol>
-<li>hypertext transfer protocol（超文本传输协议）</li>
-<li>HTTP请求<ul>
-<li>一个完整的HTTP请求包括如下内容：一个请求行、若干消息头、以及实体内容<br><img src="/images/httpRequest.png" alt="范例"></li>
-<li>第一行请求行 请求方式(get,post) URI  协议版本    </li>
-</ul>
-</li>
-<li>HTTP响应<ul>
-<li>状态码<br><img src="/images/状态码.png" alt="状态码"></li>
-<li>一个HTTP响应代表服务器向客户端回送的数据，它包括： 一个状态行、若干消息头、以及实体内容 。<br><img src="/images/httpResponse.png" alt="http响应"></li>
-</ul>
-</li>
-</ol>
-<h2 id="博客推荐"><a href="#博客推荐" class="headerlink" title="博客推荐"></a>博客推荐</h2><p><a href="http://www.cnblogs.com/xdp-gacl/p/3729033.html" target="_blank" rel="external">JavaWeb开发入门-孤傲苍狼</a>   这篇博客非常值得好好学习一下!</p>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/JavaWeb%E5%85%A5%E9%97%A8.html#disqus_thread</comments>
     </item>
     
   </channel>

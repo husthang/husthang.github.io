@@ -1,6 +1,6 @@
 # Copyright (c) 2014-2017, racaljk.
 # https://github.com/racaljk/hosts
-# Last updated: 2017-06-19
+# Last updated: 2017-07-01
 
 # This work is licensed under a CC BY-NC-SA 4.0 International License.
 # https://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -158,55 +158,55 @@
 # Disqus End
 
 # Dropbox Start
-108.160.173.239	dropbox.com
-108.160.173.239	www.dropbox.com
-108.160.173.193	db.tt
-108.160.173.193	www.v.dropbox.com
-108.160.173.193	www.dropbox-dns.com
-108.160.173.193	api.dropbox.com
-108.160.173.193	api-d.dropbox.com
-108.160.173.193	api.dropboxapi.com
-108.160.173.193	api.v.dropbox.com
-108.160.173.193	api-notify.dropbox.com
-108.160.173.193	api-content.dropbox.com
-108.160.173.193	api-content-photos.dropbox.com
-108.160.173.193	blogs.dropbox.com
-108.160.173.193	block.dropbox.com
-108.160.173.193	block.v.dropbox.com
-108.160.173.193	bolt.dropbox.com
-108.160.173.193	client.dropbox.com
-108.160.173.193	client.v.dropbox.com
-108.160.173.193	client-lb.dropbox.com
-108.160.173.193	client-cf.dropbox.com
-108.160.173.193	client-web.dropbox.com
-108.160.173.193	d.dropbox.com
-108.160.173.193	d.v.dropbox.com
-108.160.173.193	dl.dropbox.com
-108.160.173.193	dl-doc.dropbox.com
-108.160.173.193	dl-web.dropbox.com
-108.160.173.193	dl-debug.dropbox.com
-108.160.173.193	forums.dropbox.com
-108.160.173.193	linux.dropbox.com
-108.160.173.193	m.dropbox.com
-108.160.173.193	marketing.dropbox.com
-108.160.173.193	notify.dropbox.com
-108.160.173.193	photos.dropbox.com
-108.160.173.193	photos-1.dropbox.com
-108.160.173.193	photos-2.dropbox.com
-108.160.173.193	photos-3.dropbox.com
-108.160.173.193	photos-4.dropbox.com
-108.160.173.193	photos-5.dropbox.com
-108.160.173.193	photos-6.dropbox.com
-108.160.173.193	photos-thumb.dropbox.com
-108.160.173.193	photos-thumb.x.dropbox.com
-108.160.173.193	status.dropbox.com
-108.160.173.193	snapengage.dropbox.com
-162.125.3.6	dl.dropboxusercontent.com
-104.16.100.29	www.dropboxstatic.com
+162.125.248.1	dropbox.com
+162.125.248.1	www.dropbox.com
+162.125.32.9	db.tt
+162.125.32.14	www.v.dropbox.com
+162.125.7.1	www.dropbox-dns.com
+162.125.82.7	api.dropbox.com
+162.125.82.7	api.dropboxapi.com
+162.125.32.5	api-d.dropbox.com
+162.125.32.13	api.v.dropbox.com
+162.125.32.13	api-notify.dropbox.com
+162.125.1.8	api-content.dropbox.com
+162.125.2.5	api-content-photos.dropbox.com
+52.85.12.34	blogs.dropbox.com
+162.125.32.2	block.dropbox.com
+162.125.34.133	block.v.dropbox.com
+162.125.18.133	bolt.dropbox.com
+162.125.2.3	client.dropbox.com
+162.125.2.3	client-cf.dropbox.com
+162.125.32.12	client.v.dropbox.com
+162.125.80.3	client-lb.dropbox.com
+162.125.80.3	client-web.dropbox.com
+162.125.32.5	d.dropbox.com
+162.125.32.5	d.v.dropbox.com
+162.125.2.6	dl.dropbox.com
+162.125.2.6	dl-web.dropbox.com
+162.125.80.6	dl-doc.dropbox.com
+34.197.94.108	dl-debug.dropbox.com
+52.85.12.7	forums.dropbox.com
+54.192.136.115	linux.dropbox.com
+162.125.32.9	m.dropbox.com
+52.85.12.227	marketing.dropbox.com
+162.125.17.131	notify.dropbox.com
+162.125.32.15	photos.dropbox.com
+162.125.80.5	photos-1.dropbox.com
+162.125.80.5	photos-2.dropbox.com
+162.125.80.5	photos-3.dropbox.com
+162.125.80.5	photos-4.dropbox.com
+162.125.80.5	photos-5.dropbox.com
+162.125.80.5	photos-6.dropbox.com
+162.125.80.5	photos-thumb.dropbox.com
+162.125.18.129	photos-thumb.x.dropbox.com
+52.85.12.41	status.dropbox.com
+52.85.12.72	snapengage.dropbox.com
+162.125.2.6	dl.dropboxusercontent.com
+162.125.32.10	www.dropboxstatic.com
 104.16.100.29	cfl.dropboxstatic.com
-104.16.100.29	cf.dropboxstatic.com
-104.16.100.29	dbxlocal.dropboxstatic.com
-104.16.100.29	log.getdropbox.com
+54.230.125.126	cf.dropboxstatic.com
+162.125.32.10	dbxlocal.dropboxstatic.com
+162.125.32.6	log.getdropbox.com
 # Dropbox End
 
 # DuckDuckGo Start
@@ -709,6 +709,7 @@
 216.58.200.33	www.textcube.com
 216.58.200.33	www.blogspot.com
 216.58.200.33	blogspot.com
+216.58.200.33	bp.blogspot.com
 216.58.200.33	1.bp.blogspot.com
 216.58.200.33	2.bp.blogspot.com
 216.58.200.33	3.bp.blogspot.com
@@ -753,6 +754,17 @@
 216.58.200.33	chrometophone.appspot.com
 216.58.200.33	google-developers.appspot.com
 216.58.200.33	download-chromium.appspot.com
+216.58.200.33	apps.googleusercontent.com
+216.58.200.33	appspot.com.storage.googleapis.com
+216.58.200.33	storage-download.googleapis.com
+216.58.200.33	content-storage-download.googleapis.com
+216.58.200.33	content-storage-upload.googleapis.com
+216.58.200.33	content-storage.googleapis.com
+216.58.200.33	googlesyndication.com
+216.58.200.33	googleweblight.com
+216.58.200.33	static.panoramio.com.storage.googleapis.com
+216.58.200.33	unfiltered.news
+216.58.200.33	jigsaw.google.com
 216.58.200.33	lfe-alpo-gm.appspot.com
 216.58.200.33	m-dot-betaspike.appspot.com
 216.58.200.33	mission-author-dot-betaspike.appspot.com
@@ -1280,6 +1292,7 @@
 216.58.200.33	securetoken.googleapis.com
 216.58.200.33	firebasestorage.googleapis.com
 216.58.200.33	www-tactile-opensocial.googleusercontent.com
+216.58.200.33	safenup.googleusercontent.com
 216.58.200.33	www--google--com.safenup.googleusercontent.com
 216.58.200.33	www--google--com--hk.safenup.googleusercontent.com
 216.58.200.33	doc-00-24-apps-viewer.googleusercontent.com
@@ -2458,6 +2471,7 @@
 216.58.200.33	ytimg.googleusercontent.com
 216.58.200.33	www-opensocial.googleusercontent.com
 216.58.200.33	www-gm-opensocial.googleusercontent.com
+216.58.200.33	sandbox.googleusercontent.com
 216.58.200.33	www-opensocial-sandbox.googleusercontent.com
 216.58.200.33	www-fc-opensocial.googleusercontent.com
 216.58.200.33	www-focus-opensocial.googleusercontent.com
@@ -2966,6 +2980,19 @@
 216.239.38.21	www.madewithcode.com
 # Google:Made the code for girls Start End
 
+# Google:Fit Start
+216.58.200.33	lax17s02-in-f10.1e100.net
+216.58.200.33	lax17s03-in-f10.1e100.net
+216.58.200.33	lax17s04-in-f10.1e100.net
+216.58.200.33	lax17s05-in-f10.1e100.net
+216.58.200.33	lax17s14-in-f10.1e100.net
+216.58.200.33	lax17s15-in-f10.1e100.net
+216.58.200.33	lax17s34-in-f10.1e100.net
+216.58.200.33	lax28s01-in-f10.1e100.net
+216.58.200.33	tsa01s07-in-f10.1e100.net
+216.58.200.33	tsa01s08-in-f10.1e100.net
+# Google:Fit End
+
 # HumbleBundle Start
 5.153.35.171	humble.pubnub.com
 198.41.186.33	humblebundle.com
@@ -3370,9 +3397,73 @@
 204.79.197.217	onedrive.live.com
 204.79.197.217	skyweb.skyprod.akadns.net
 204.79.197.217	webedgegeo.skyprod.akadns.net
-134.170.107.72	skyapi.onedrive.live.com
+104.44.88.28	skyapi.onedrive.live.com
 13.107.42.11	outlook.live.com
 # OneDrive End
+
+# Opera mini Start
+107.167.115.253	mini5.opera-mini.net
+107.167.115.253	gameloft.com.minil.beta.opera-mini.net
+107.167.115.253	opx.opera.com.mini5-9.opera-mini.net
+107.167.115.253	m.tiket.com.mini5-5.opera-mini.net
+107.167.115.253	sharp-cust.opera-mini.net
+107.167.115.253	opx.opera.com.mini5-7.opera-mini.net
+107.167.115.253	wapshop.gameloft.com.minil.beta.opera-mini.net
+107.167.115.253	wapdemon.beta.opera-mini.net
+107.167.115.253	proxytubo.appspot.com.beta.opera-mini.net
+107.167.115.253	skype.com.mini5-1.opera-mini.net
+107.167.115.253	com.indosat.com.mini5-1.opera-mini.net
+107.167.115.253	nokia-s40-12-cust.opera-mini.net
+107.167.115.253	fly-cust.opera-mini.net
+107.167.115.241	mini5-1.opera-mini.net
+107.167.115.241	labs1-turbo-1.beta.opera-mini.net
+107.167.115.242	mini5-2.opera-mini.net
+107.167.115.242	global-4-lvs-colossus-2.opera-mini.net
+107.167.115.238	mini5-6.opera-mini.net
+107.167.115.239	mini5-7.opera-mini.net
+107.167.115.240	mini5-8.opera-mini.net
+107.167.115.240	global-4-lvs-colossus-8.opera-mini.net
+111.11.6.118	mini5cn.opera-mini.net
+111.11.6.118	mini5cn-1.opera-mini.net
+185.26.180.102	n14-03-01.opera-mini.net
+82.145.210.217	cust-demo-test-7.opera-mini.net
+107.167.115.253	helio-cust.opera-mini.net
+107.167.115.253	10.9.labs1-turbo.beta.opera-mini.net
+107.167.115.253	opx.opera.com.turbo-5.beta.opera-mini.net
+107.167.97.236	s35-13.opera-mini.net
+37.228.107.241	global-turbo2-1.opera-mini.net
+37.228.111.170	a13-08-01.opera-mini.net
+107.167.108.184	a25-06-11.opera-mini.net
+185.26.181.241	global-4-lvs-odra-1.opera-mini.net
+82.145.209.242	global-4-lvs-turing-2.opera-mini.net
+37.228.107.239	cdn0.opera-mini.net
+37.228.107.239	sitecheck2.opera-mini.net
+82.145.209.251	global-turbo-2-lvs-turing.opera-mini.net
+141.0.12.125	n24-05-01.opera-mini.net
+82.145.211.251	global-4-lvs-turing-8.opera-mini.net
+37.228.107.239	sitecheck2.opera-mini.net
+82.145.223.56	n19-04-08.opera-mini.net
+107.167.99.181	s22-01-08.opera-mini.net
+107.167.103.4	s23-03-02.opera-mini.net
+82.145.220.251	n08-07-07.opera-mini.net
+141.0.12.126	n24-05-02.opera-mini.net
+185.26.181.242	global-4-lvs-odra-2.opera-mini.net
+185.26.182.62	opera10beta-turbo.opera-mini.net
+82.145.208.44	z01-09-01.opera-mini.net
+107.167.96.210	s20-15.opera-mini.net
+185.26.181.253	global-4-lvs-odra.opera-mini.net
+82.145.211.56	z38-09.opera-mini.net
+82.145.211.9	z24-10.opera-mini.net
+37.228.107.239	af.opera-mini.net
+37.228.109.141	a06-05-08-v04.opera-mini.net
+107.167.110.211	sitecheck.opera-mini.net
+107.167.113.209	global-max-1.opera-mini.net
+82.145.221.193	n11-07-07.opera-mini.net
+37.228.107.253	global-4-lvs-hopper.opera-mini.net
+111.11.6.120	global-turbo2.opera-mini.net
+82.145.210.168	z21-09.opera-mini.net
+82.145.211.1	z24-02.opera-mini.net
+# Opera mini End
 
 # pinterest Start
 151.101.64.84	pinterest.com
