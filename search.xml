@@ -4,6 +4,38 @@
   
     
     <entry>
+      <title><![CDATA[Java并发编程7-Future与Callable,FutureTask]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B7-Future%E4%B8%8ECallable-FutureTask.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.csdn.net/ghsau/article/details/7451464" target="_blank" rel="external">Java线程(七)：Callable和Future|csdn博客</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程7-线程池]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B9-%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程8-信号量]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B8-%E4%BF%A1%E5%8F%B7%E9%87%8F.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程6-阻塞队列]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B6-%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.importnew.com/6695.html" target="_blank" rel="external">阻塞队列实现生产者消费者模式</a></li>
+<li><a href="http://www.cnblogs.com/yzlpersonal/p/5231649.html" target="_blank" rel="external">生产者-消费者 用非阻塞队列、Object.wait()、Object.notify()实现</a></li>
+<li><a href="http://www.chongchonggou.com/g_645129056.html" target="_blank" rel="external">高并发:阻塞队列 实现生产者-消费者模式</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Java并发编程5-设计线程安全的类]]></title>
       <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B5-%E8%AE%BE%E8%AE%A1%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E7%B1%BB.html</url>
       <content type="html"></content>
@@ -16,7 +48,17 @@
 <li>线程局部变量</li>
 </ol>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></li>
+<li><p><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></p>
+</li>
+<li><p>ThreadLocal(线程变量副本)</p>
+<ul>
+<li>Synchronized实现内存共享，ThreadLocal为每个线程维护一个本地变量。</li>
+<li>采用空间换时间，它用于线程间的数据隔离，为每一个使用该变量的线程提供一个副本，每个线程都可以独立地改变自己的副本，而不会和其他线程的副本冲突。</li>
+<li>ThreadLocal类中维护一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值为对应线程的变量副本。</li>
+<li>ThreadLocal在spring中发挥着巨大的作用，在管理Request作用域中的Bean、事务管理、任务调度、AOP等模块都出现了它的身影。</li>
+<li>Spring中绝大部分Bean都可以声明成Singleton作用域，采用ThreadLocal进行封装，因此有状态的Bean就能够以singleton的方式在多线程中正常工作了。</li>
+</ul>
+</li>
 </ol>
 ]]></content>
     </entry>

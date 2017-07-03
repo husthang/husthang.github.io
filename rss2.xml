@@ -8,8 +8,73 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 01 Jul 2017 12:55:45 GMT</pubDate>
+    <pubDate>Mon, 03 Jul 2017 13:10:04 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Java并发编程7-Future与Callable,FutureTask</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B7-Future%E4%B8%8ECallable-FutureTask.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B7-Future%E4%B8%8ECallable-FutureTask.html</guid>
+      <pubDate>Mon, 03 Jul 2017 13:07:08 GMT</pubDate>
+      <description>
+      
+        &lt;h1 id=&quot;参考&quot;&gt;&lt;a href=&quot;#参考&quot; class=&quot;headerlink&quot; title=&quot;参考&quot;&gt;&lt;/a&gt;参考&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/ghsau/article/details/7451464&quot; tar
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://blog.csdn.net/ghsau/article/details/7451464" target="_blank" rel="external">Java线程(七)：Callable和Future|csdn博客</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B7-Future%E4%B8%8ECallable-FutureTask.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程7-线程池</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B9-%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B9-%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</guid>
+      <pubDate>Mon, 03 Jul 2017 12:44:25 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B9-%E7%BA%BF%E7%A8%8B%E6%B1%A0.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程8-信号量</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B8-%E4%BF%A1%E5%8F%B7%E9%87%8F.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B8-%E4%BF%A1%E5%8F%B7%E9%87%8F.html</guid>
+      <pubDate>Mon, 03 Jul 2017 12:43:22 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B8-%E4%BF%A1%E5%8F%B7%E9%87%8F.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>Java并发编程6-阻塞队列</title>
+      <link>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B6-%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97.html</link>
+      <guid>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B6-%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97.html</guid>
+      <pubDate>Mon, 03 Jul 2017 11:59:22 GMT</pubDate>
+      <description>
+      
+        阻塞队列，非阻塞队列，待详细总结
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.importnew.com/6695.html" target="_blank" rel="external">阻塞队列实现生产者消费者模式</a></li>
+<li><a href="http://www.cnblogs.com/yzlpersonal/p/5231649.html" target="_blank" rel="external">生产者-消费者 用非阻塞队列、Object.wait()、Object.notify()实现</a></li>
+<li><a href="http://www.chongchonggou.com/g_645129056.html" target="_blank" rel="external">高并发:阻塞队列 实现生产者-消费者模式</a></li>
+</ol>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B6-%E9%98%BB%E5%A1%9E%E9%98%9F%E5%88%97.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Java并发编程5-设计线程安全的类</title>
@@ -40,7 +105,17 @@
 <li>线程局部变量</li>
 </ol>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></li>
+<li><p><a href="http://blog.zhangjikai.com/2017/03/29/%E3%80%90Java-%E5%B9%B6%E5%8F%91%E3%80%91%E8%AF%A6%E8%A7%A3-ThreadLocal/" target="_blank" rel="external">ThreadLocal详解</a></p>
+</li>
+<li><p>ThreadLocal(线程变量副本)</p>
+<ul>
+<li>Synchronized实现内存共享，ThreadLocal为每个线程维护一个本地变量。</li>
+<li>采用空间换时间，它用于线程间的数据隔离，为每一个使用该变量的线程提供一个副本，每个线程都可以独立地改变自己的副本，而不会和其他线程的副本冲突。</li>
+<li>ThreadLocal类中维护一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值为对应线程的变量副本。</li>
+<li>ThreadLocal在spring中发挥着巨大的作用，在管理Request作用域中的Bean、事务管理、任务调度、AOP等模块都出现了它的身影。</li>
+<li>Spring中绝大部分Bean都可以声明成Singleton作用域，采用ThreadLocal进行封装，因此有状态的Bean就能够以singleton的方式在多线程中正常工作了。</li>
+</ul>
+</li>
 </ol>
 ]]></content:encoded>
       
@@ -2470,82 +2545,6 @@
       </description>
       
       <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>基础数据结构-栈和队列</title>
-      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</link>
-      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html</guid>
-      <pubDate>Sun, 19 Mar 2017 11:37:02 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E6%A0%88%E5%92%8C%E9%98%9F%E5%88%97.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>基础数据结构-链表</title>
-      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html</link>
-      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html</guid>
-      <pubDate>Sun, 19 Mar 2017 11:36:24 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>设计模式3-单例模式</title>
-      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</link>
-      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</guid>
-      <pubDate>Fri, 17 Mar 2017 07:47:01 GMT</pubDate>
-      <description>
-      
-        设计模式总结（二）单例模式
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><ul>
-<li>单例模式(Singleton Pattern)：单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。</li>
-</ul>
-<h1 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h1><ul>
-<li>类加载时就创建对象<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 饿汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EagerSingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖默认的构造方法，将默认的构造方法声明为私有的，防止其他类直接创建对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EagerSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 直接创建一个本类的对象</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> EagerSingleton eagerSingleton = <span class="keyword">new</span> EagerSingleton();</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 提供一个工厂方法来返回本类的唯一对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> EagerSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> eagerSingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="懒汉式单例模式"><a href="#懒汉式单例模式" class="headerlink" title="懒汉式单例模式"></a>懒汉式单例模式</h1><ul>
-<li>懒汉式单例模式的创建对象是在第一次企图获得单例类的对象时。需用synchronize关键字，多线程安全.<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 懒汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖原有的默认构造方法，声明为私有的，防止其他类直接使用构造方法创建单例类对象，同时也使子类无法继承</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 单例类的唯一实例，但是不是加载时初始化</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton lazySingleton;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 线程互斥的获取实例</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (lazySingleton == <span class="keyword">null</span>) &#123;</div><div class="line">            lazySingleton = <span class="keyword">new</span> LazySingleton();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> lazySingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="单例模式使用场景"><a href="#单例模式使用场景" class="headerlink" title="单例模式使用场景"></a>单例模式使用场景</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
-<li>系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器，或者需要考虑资源消耗太大而只允许创建一个对象。</li>
-<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例</li>
-</ul>
-<h2 id="单例模式优点"><a href="#单例模式优点" class="headerlink" title="单例模式优点"></a>单例模式优点</h2><ul>
-<li>提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它，并为设计及开发团队提<br>供了共享的概念。</li>
-<li>由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象，单例模式无疑可以提高系统的性能。</li>
-</ul>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>Java随手总结（零散知识点记录）</title>
-      <link>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html</link>
-      <guid>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html</guid>
-      <pubDate>Thu, 16 Mar 2017 08:27:11 GMT</pubDate>
-      <description>
-      
-        Java零散知识点记录，随手总结，不熟知识点总结
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="四中权限修饰符"><a href="#四中权限修饰符" class="headerlink" title="四中权限修饰符"></a>四中权限修饰符</h1><p><img src="media/14899742700152.jpg" alt=""></p>
-<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="内部类分类"><a href="#内部类分类" class="headerlink" title="内部类分类"></a>内部类分类</h2><h3 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h3><h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html#disqus_thread</comments>
     </item>
     
   </channel>
