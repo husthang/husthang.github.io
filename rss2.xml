@@ -180,14 +180,14 @@
         &lt;h1 id=&quot;总体&quot;&gt;&lt;a href=&quot;#总体&quot; class=&quot;headerlink&quot; title=&quot;总体&quot;&gt;&lt;/a&gt;总体&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;《深入理解Java虚拟机》&lt;/li&gt;
 &lt;li&gt;《Java并发编程实战》&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id=&quot;每日计划&quot;&gt;&lt;a 
+&lt;li&gt;《精通Spring4.x 企业应用开发
       
       </description>
       
       <content:encoded><![CDATA[<h1 id="总体"><a href="#总体" class="headerlink" title="总体"></a>总体</h1><ol>
 <li>《深入理解Java虚拟机》</li>
 <li>《Java并发编程实战》</li>
+<li>《精通Spring4.x 企业应用开发实战》</li>
 </ol>
 <h1 id="每日计划"><a href="#每日计划" class="headerlink" title="每日计划"></a>每日计划</h1><ol>
 <li>6.29-7.1三天<ul>
@@ -214,9 +214,12 @@
 <li>Java并发编程实战7章</li>
 </ul>
 </li>
-<li>7.3周一<ul>
+<li><p>7.3周一</p>
+<ul>
 <li>面试准备(常见面试问题整理)</li>
 </ul>
+</li>
+<li><p>7.8号<br> - </p>
 </li>
 </ol>
 ]]></content:encoded>
@@ -1747,13 +1750,14 @@
 <li>隔离性</li>
 <li>持久性</li>
 </ol>
-<h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1><h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书-待看的书籍"><a href="#最近看了什么书-待看的书籍" class="headerlink" title="最近看了什么书/待看的书籍"></a>最近看了什么书/待看的书籍</h2><ul>
-<li>Spring技术内幕:解析Spring 设计架构与技术原理</li>
-<li>effective java</li>
-<li>Java并发编程实战</li>
-<li>深入理解Java虚拟机 <strong>优先</strong></li>
-<li>Mysql必知必会  <strong>优先</strong></li>
-<li>计算机网络(谢仁希版) <strong>优先</strong></li>
+<h1 id="linux-shell"><a href="#linux-shell" class="headerlink" title="linux/shell"></a>linux/shell</h1><h1 id="面试问题收集"><a href="#面试问题收集" class="headerlink" title="面试问题收集"></a>面试问题收集</h1><ol>
+<li>说说所知道的设计模式</li>
+<li>多线程下的单例模式</li>
+<li>多线程编程，遇到的问题，怎么解决的</li>
+<li>大型项目如何分配，管理</li>
+</ol>
+<h1 id="项目-实习-学习"><a href="#项目-实习-学习" class="headerlink" title="项目/实习/学习"></a>项目/实习/学习</h1><h2 id="说说你所知道的设计模式-及应用"><a href="#说说你所知道的设计模式-及应用" class="headerlink" title="说说你所知道的设计模式,及应用"></a>说说你所知道的设计模式,及应用</h2><h2 id="最近看了什么书-待看的书籍"><a href="#最近看了什么书-待看的书籍" class="headerlink" title="最近看了什么书/待看的书籍"></a>最近看了什么书/待看的书籍</h2><p>**</p>
+<ul>
 <li>操作系统(教材版) <strong>优先</strong></li>
 </ul>
 <h2 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h2><ul>
