@@ -336,6 +336,128 @@
             
               
                 
+                <a class="post-title-link" href="/Java并发编程4-ThreadLocal.html" itemprop="url">
+                  Java并发编程4-ThreadLocal
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-01T17:47:42+08:00" content="2017-07-01">
+              2017-07-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Java并发编程4-ThreadLocal.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Java并发编程4-ThreadLocal.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          ThreadLocal
+          <div class="post-more-link text-center">
+            <a class="btn" href="/Java并发编程4-ThreadLocal.html">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/Java并发编程1-线程安全性.html" itemprop="url">
                   Java并发编程1-线程安全概述
                 </a>
@@ -864,128 +986,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/JVM-Java内存区域与内存溢出异常.html" itemprop="url">
-                  JVM-Java内存区域与内存溢出异常
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-06-28T16:01:39+08:00" content="2017-06-28">
-              2017-06-28
-            </time>
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/JVM-Java内存区域与内存溢出异常.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="JVM-Java内存区域与内存溢出异常.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="内存空间（运行时数据区）"><a href="#内存空间（运行时数据区）" class="headerlink" title="内存空间（运行时数据区）"></a>内存空间（运行时数据区）</h1><p><img src="../images/jvmneicun.png" alt=""> </p>
-<ol>
-<li>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器</li>
-<li>虚拟机栈： 线程私有；（即常说的堆内存和栈内存中的栈），栈帧结构，存储局部变量表，操作数等</li>
-<li>本地方法栈： 虚拟机使用到的native方法</li>
-<li>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</li>
-<li>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</li>
-</ol>
-<h1 id="虚拟机参数"><a href="#虚拟机参数" class="headerlink" title="虚拟机参数"></a>虚拟机参数</h1><ol>
-<li>JVM启动参数分为三类：<ul>
-<li>标准参数(-):所有的JVM实现都必须实现这些参数的功能，而且向后兼容; 命令行 java -? 查看参数</li>
-<li>非标准参数(-X):默认jvm实现这些参数的功能，但是并不保证所有jvm实现都满足，且不保证向后兼容；命令行 java -X 查看参数</li>
-<li>非稳定参数(-XX):此类参数各个jvm实现会有所不同，将来可能会随时取消，需要慎重使用；</li>
-</ul>
-</li>
-<li>常用参数设置<ul>
-<li>最大堆和初始堆<code>-Xms</code>初始堆内存大小，<code>-Xmx</code>最大堆内存大小</li>
-<li>新生代配置<code>-Xmn</code>新生代内存大小，<code>-XX:SurvivorRatio</code>设置新生代eden空间和from/to空间比例；<code>-XX:NewRatio</code>老年代和新生代比例</li>
-<li>系统参数查看：<code>-XX:+PrintVMOptions</code>打印虚拟机接收到的显示参数</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1031,7 +1031,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">81</span>
+              <span class="site-state-item-count">82</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

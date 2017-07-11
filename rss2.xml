@@ -8,8 +8,27 @@
     <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Mon, 03 Jul 2017 13:10:04 GMT</pubDate>
+    <pubDate>Tue, 11 Jul 2017 16:19:17 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>设计模式7-策略模式</title>
+      <link>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F7-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html</link>
+      <guid>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F7-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html</guid>
+      <pubDate>Tue, 11 Jul 2017 16:00:03 GMT</pubDate>
+      <description>
+      
+        策略模式，策略模式在Spring中的使用
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="策略模式在Spring中的使用"><a href="#策略模式在Spring中的使用" class="headerlink" title="策略模式在Spring中的使用"></a>策略模式在Spring中的使用</h1><ul>
+<li>Resource与ResourceLoader配合使用,来访问资源，读取配置文件信息等。</li>
+</ul>
+]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F7-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Java并发编程7-Future与Callable,FutureTask</title>
@@ -2537,18 +2556,6 @@
 ]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>基础算法-查找</title>
-      <link>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</link>
-      <guid>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html</guid>
-      <pubDate>Sun, 19 Mar 2017 11:38:06 GMT</pubDate>
-      <description>
-      
-      </description>
-      
-      <comments>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95-%E6%9F%A5%E6%89%BE.html#disqus_thread</comments>
     </item>
     
   </channel>
