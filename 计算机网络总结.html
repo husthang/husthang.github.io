@@ -86,13 +86,49 @@
 
 
 
+<meta name="description" content="计算机网络OSI七层模型与TCP/IP四层模型
+
+实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层
+各层的作用
+物理层：通过媒介传输比特,确定机械及电气规范
+数据链路层：将比特组装成帧和点到点的传递（帧Frame）
+网络层：负责数据包从源到宿的传递和网际互连（包PackeT）
+传输层：提供端到端的可靠报文传递和错误恢复（段Segment）
+会话层：建立、管理和终止会话（会话协议数据单元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络总结">
 <meta property="og:url" content="http://liuhang.net.cn/计算机网络总结.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-05-24T07:32:11.000Z">
+<meta property="og:description" content="计算机网络OSI七层模型与TCP/IP四层模型
+
+实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层
+各层的作用
+物理层：通过媒介传输比特,确定机械及电气规范
+数据链路层：将比特组装成帧和点到点的传递（帧Frame）
+网络层：负责数据包从源到宿的传递和网际互连（包PackeT）
+传输层：提供端到端的可靠报文传递和错误恢复（段Segment）
+会话层：建立、管理和终止会话（会话协议数据单元">
+<meta property="og:image" content="http://liuhang.net.cn/../images/osi七层模型.gif">
+<meta property="og:image" content="http://liuhang.net.cn/../images/ip.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/ip1.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/运输层网络层.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/tcp字段.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/tcp-udp.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/tcp.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../images/http状态码.png">
+<meta property="og:updated_time" content="2017-07-18T08:18:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络总结">
+<meta name="twitter:description" content="计算机网络OSI七层模型与TCP/IP四层模型
+
+实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层
+各层的作用
+物理层：通过媒介传输比特,确定机械及电气规范
+数据链路层：将比特组装成帧和点到点的传递（帧Frame）
+网络层：负责数据包从源到宿的传递和网际互连（包PackeT）
+传输层：提供端到端的可靠报文传递和错误恢复（段Segment）
+会话层：建立、管理和终止会话（会话协议数据单元">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/osi七层模型.gif">
 
 
 
@@ -386,7 +422,94 @@
       
 
       
-        
+        <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="OSI七层模型与TCP-IP四层模型"><a href="#OSI七层模型与TCP-IP四层模型" class="headerlink" title="OSI七层模型与TCP/IP四层模型"></a>OSI七层模型与TCP/IP四层模型</h2><p><img src="../images/osi七层模型.gif" alt=""></p>
+<ul>
+<li>实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层</li>
+<li>各层的作用<ol>
+<li>物理层：通过媒介传输比特,确定机械及电气规范</li>
+<li>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</li>
+<li>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</li>
+<li>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</li>
+<li>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</li>
+<li>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</li>
+<li>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</li>
+</ol>
+</li>
+</ul>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><p><img src="../images/ip.png" alt=""><br><img src="../images/ip1.png" alt=""></p>
+<ul>
+<li>A类地址,<ul>
+<li>可指派的网络号126个(2^7-2),见2的原因是: 网络号全0为保留地址,表示本网络;网络号127(0111 1111)保留为回环测试(如127.0.0.1)</li>
+<li>可指派的主机号: 2^24-2; 减去全0的主机号,减去全1主机号</li>
+</ul>
+</li>
+<li>B类地址<ul>
+<li>可指派网络号2^14-1:128.0不指派,最小可指派的网络号是128.1</li>
+<li>主机号减2,2^16-2;</li>
+</ul>
+</li>
+<li>C类地址<ul>
+<li>可指派网络号2^21-1:192.0.0不指派,最小可指派的网络号192.0.1</li>
+<li>主机号减2: 2^8-2;</li>
+</ul>
+</li>
+</ul>
+<h2 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h2><ul>
+<li>运输层协议和网络层协议的主要区别<br><img src="../images/运输层网络层.png" alt=""></li>
+<li><p>运输层的协议端口号</p>
+<ul>
+<li>协议端口号(protocol port number),简称端口;使不同的操作系统中的进程可以相互通信,用统一的方法对TCP/IP体系中的应用进程进行标识;16位的端口号(65535个)</li>
+<li>通信的终点是应用进程,但我们只需把要传送的报文交到目的主机的某一个合适的目的端口，剩下的工作（即最后交付目的进程）就由 TCP 来完成</li>
+</ul>
+</li>
+<li><p>tcp字段含义<br><img src="../images/tcp字段.png" alt=""></p>
+</li>
+<li><p>传输层定义两种传输协议：TCP（传输控制协议）和 UDP（或用户数据报协议）<br><img src="../images/tcp-udp.png" alt=""></p>
+</li>
+<li>TCP协议和UDP协议特性区别总结：<ol>
+<li>TCP协议在传送数据段的时候要给段标号；UDP协议不</li>
+<li>TCP协议可靠；UDP协议不可靠</li>
+<li>TCP协议是面向连接；UDP协议采用无连接</li>
+<li>TCP协议负载较高，采用虚电路；UDP采用无连接</li>
+<li>TCP协议的发送方要确认接收方是否收到数据段（3次握手协议）</li>
+<li>TCP协议采用窗口技术和流控制</li>
+</ol>
+</li>
+</ul>
+<h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><p><img src="../images/tcp.jpg" alt=""></p>
+<ol>
+<li>三次握手和四次分手的过程</li>
+<li>为什么要三次握手和四次分手</li>
+<li>参考:<a href="http://www.jellythink.com/archives/705" target="_blank" rel="external">简析TCP的三次握手与四次分手</a></li>
+</ol>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
+<li>http状态码<br><img src="../images/http状态码.png" alt=""><ul>
+<li>404  未找到，服务器找不到所请求的网页。</li>
+<li>302  临时移动，服务器从不同位置的网页响应请求，请求者应继续使用原有位置进行以后的请求。</li>
+<li>500  （服务器内部错误），服务器遇到错误，无法完成请求。</li>
+<li>403  （禁止）服务器拒绝请求</li>
+</ul>
+</li>
+<li>http与https区别<ul>
+<li>http协议</li>
+<li>简单理解: https是安全版的http,</li>
+<li>HTTP的端口号是80，https的端口号是443</li>
+</ul>
+</li>
+</ul>
+<h2 id="SNMP简单网络管理协议"><a href="#SNMP简单网络管理协议" class="headerlink" title="SNMP简单网络管理协议"></a>SNMP简单网络管理协议</h2><ul>
+<li>simple network management protocol 简单网络管理协议</li>
+<li>是一个网络管理员用来管理的工具相当于  一个app 所以是<strong>应用层</strong></li>
+</ul>
+<h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><ul>
+<li>Internet Control Message Protocol 互联网控制消息协议</li>
+<li>网络层协议</li>
+<li>用ping命令,检查一台主机的网络层是否连通;</li>
+</ul>
+<h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ul>
+<li>IEEE 802.3—CSMA/CD网络，定义CSMA/CD总线网的MAC子层和物理层的规范,人们习惯将<strong>IEEE 802.3称为”以太网</strong>;</li>
+</ul>
+
       
     </div>
 
@@ -513,7 +636,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">90</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -521,7 +644,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -530,7 +653,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -595,7 +718,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络"><span class="nav-number">1.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#OSI七层模型与TCP-IP四层模型"><span class="nav-number">1.1.</span> <span class="nav-text">OSI七层模型与TCP/IP四层模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP协议"><span class="nav-number">1.2.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP-UDP协议"><span class="nav-number">1.3.</span> <span class="nav-text">TCP/UDP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP三次握手与四次分手"><span class="nav-number">1.4.</span> <span class="nav-text">TCP三次握手与四次分手</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">1.5.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SNMP简单网络管理协议"><span class="nav-number">1.6.</span> <span class="nav-text">SNMP简单网络管理协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ICMP"><span class="nav-number">1.7.</span> <span class="nav-text">ICMP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以太网"><span class="nav-number">1.8.</span> <span class="nav-text">以太网</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

@@ -4,6 +4,454 @@
   
     
     <entry>
+      <title><![CDATA[Quartz详解及源码探究2-quartz调度器scheduler]]></title>
+      <url>http://liuhang.net.cn/Quartz%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%BA%90%E7%A0%81%E6%8E%A2%E7%A9%B62-quartz%E8%B0%83%E5%BA%A6%E5%99%A8scheduler.html</url>
+      <content type="html"><![CDATA[<h1 id="Quartz-Scheduler"><a href="#Quartz-Scheduler" class="headerlink" title="Quartz Scheduler"></a>Quartz Scheduler</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>客户端会同两种类型的 Scheduler 交互，如图,它们都实现了 org.quartz.Scheduler 接口</li>
+<li><p>Scheduler代表一个Quartz的独立运行容器，Trigger和JobDetail可以注册到Scheduler中，两者在Scheduler中拥有各自的组及名称，组及名称是Scheduler查找定位容器中某一对象的依据，Trigger的组及名称必须唯一，JobDetail的组和名称也必须唯一（但可以和Trigger的组和名称相同，因为它们是不同类型的）<br><img src="../images/QuartzFigure4.2.JPG" alt=""></p>
+</li>
+<li><p>Scheduler 的 API 可以分组成以下三个类别：</p>
+<ul>
+<li>管理 Scheduler</li>
+<li>管理 Job</li>
+<li>管理 Trigger 和 Calendar</li>
+</ul>
+</li>
+</ul>
+<h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><p><img src="../images/quartz类结构.png" alt=""></p>
+<ol>
+<li>StdSchedule只是QuartzSchedule的一个包装类，方法更清晰。</li>
+<li>QuartzScheduler是整个定时任务框架工作的核心类，上面的类图仅仅展现了QuartzScheduler中几个核心成员。</li>
+<li>QuartzSchedulerResources可以认为是存放一切配置以及通过配置初始化出来的一些资源的容器，其中包括了存储job定义的jobStore</li>
+<li>QuartzSchedulerThread多线程启动</li>
+</ol>
+<h1 id="Quartz-SchedulerFactory"><a href="#Quartz-SchedulerFactory" class="headerlink" title="Quartz SchedulerFactory"></a>Quartz SchedulerFactory</h1><h2 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h2><ul>
+<li>用工厂方法构造scheuler实例，并使之正确的得到初始化。 所有的 Scheduler 实例应该由 SchedulerFactory 来创建。</li>
+<li>　Quartz 框架为这一目的提供了 org.quartz.SchedulerFactory 接口。角色 SchedulerFactory 就是用来产生 Scheduler 实例的。当 Scheduler 实例被创建之后，就会存到一个仓库中(org.quartz.impl.SchedulerRepository)，这个仓库还提供了通过一个 class loader 查询实例的机制。<br><img src="../images/QuartzFigure4.3.JPG" alt=""><ul>
+<li>DirectSchedulerFactory 是为那些想绝对控制 Scheduler 实例是如何生产出的人所设计的</li>
+<li>与 DirectSchedulerFactory 形成鲜明对比的是，org.quartz.impl.StdSchedulerFactory 依赖于一系列的属性来决定如何生产出 Scheduler 实例</li>
+</ul>
+</li>
+</ul>
+<h2 id="StdSchedulerFactory源码分析"><a href="#StdSchedulerFactory源码分析" class="headerlink" title="StdSchedulerFactory源码分析"></a>StdSchedulerFactory源码分析</h2><ol>
+<li><p>无参的initialize()方法，StdSchedulerFactory 会执行以下几个步骤去尝试为工厂加载属性：</p>
+<ol>
+<li>检查 System.getProperty(“org.quartz.properties”) 中是否设置了别的文件名</li>
+<li>否则，使用 quartz.properties 作为要加载的文件名</li>
+<li>试图从当前工作目录中加载这个文件</li>
+<li>试图从系统 classpath 下加载这个文件<br><img src="../images/stdchedulerFactory-initialize.png" alt=""></li>
+</ol>
+</li>
+<li><p>StdSchedulerFactory.getScheduler()源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">public Scheduler getScheduler() throws SchedulerException &#123;</div><div class="line">        // 读取quartz配置文件，未指定则顺序遍历各个path下的quartz.properties文件</div><div class="line">        // 解析出quartz配置内容和环境变量，存入PropertiesParser对象</div><div class="line">        // PropertiesParser组合了Properties（继承Hashtable），定义了一系列对Properties的操作方法，比如getPropertyGroup()批量获取相同前缀的配置。配置内容和环境变量存放在Properties成员变量中</div><div class="line">        if (cfg == null) &#123;</div><div class="line">            initialize();</div><div class="line">        &#125;</div><div class="line">        // 获取调度器池，采用了单例模式</div><div class="line">        // 其实，调度器池的核心变量就是一个hashmap，每个元素key是scheduler名，value是scheduler实例</div><div class="line">        // getInstance()用synchronized防止并发创建</div><div class="line">        SchedulerRepository schedRep = SchedulerRepository.getInstance();</div><div class="line"></div><div class="line">        // 从调度器池中取出当前配置所用的调度器</div><div class="line">        Scheduler sched = schedRep.lookup(getSchedulerName());</div><div class="line"></div><div class="line">        ......</div><div class="line"></div><div class="line">        // 如果调度器池中没有当前配置的调度器，则实例化一个调度器，主要动作包括：（见实例化源码分析）</div><div class="line">        sched = instantiate();</div><div class="line"></div><div class="line">        return sched;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>instantiate()实例化，源码分析<br>如果调度器池中没有当前配置的调度器，则实例化一个调度器，主要动作包括：</p>
+<ul>
+<li>1）初始化threadPool(线程池)：开发者可以通过org.quartz.threadPool.class配置指定使用哪个线程池类，比如SimpleThreadPool。先class load线程池类，接着动态生成线程池实例bean，然后通过反射，使用setXXX()方法将以org.quartz.threadPool开头的配置内容赋值给bean成员变量；</li>
+<li>2）初始化jobStore(任务存储方式)：开发者可以通过org.quartz.jobStore.class配置指定使用哪个任务存储类，比如RAMJobStore。先class load任务存储类，接着动态生成实例bean，然后通过反射，使用setXXX()方法将以org.quartz.jobStore开头的配置内容赋值给bean成员变量；</li>
+<li>3）初始化dataSource(数据源)：开发者可以通过org.quartz.dataSource配置指定数据源详情，比如哪个数据库、账号、密码等。jobStore要指定为JDBCJobStore，dataSource才会有效；</li>
+<li>4）初始化其他配置：包括SchedulerPlugins、JobListeners、TriggerListeners等；</li>
+<li>5）初始化threadExecutor(线程执行器)：默认为DefaultThreadExecutor；</li>
+<li>6）创建工作线程：根据配置创建N个工作thread，执行start()启动thread，并将N个thread顺序add进threadPool实例的空闲线程列表availWorkers中；</li>
+<li>7）创建调度器线程：创建QuartzSchedulerThread实例，并通过threadExecutor.execute(实例)启动调度器线程；</li>
+<li>8）创建调度器：创建StdScheduler实例，将上面所有配置和引用组合进实例中，并将实例存入调度器池中</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Quartz详解及源码探究1-quartz入门及核心概念]]></title>
+      <url>http://liuhang.net.cn/Quartz%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%BA%90%E7%A0%81%E6%8E%A2%E7%A9%B61-quartz%E5%85%A5%E9%97%A8%E5%8F%8A%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5.html</url>
+      <content type="html"><![CDATA[<h1 id="Quartz核心概念"><a href="#Quartz核心概念" class="headerlink" title="Quartz核心概念"></a>Quartz核心概念</h1><h2 id="Quartz使用入门"><a href="#Quartz使用入门" class="headerlink" title="Quartz使用入门"></a>Quartz使用入门</h2><ul>
+<li>首先看一个Quartz入门demo，由此入门demo深入剖析Quartz原理。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">package quartz;</div><div class="line"></div><div class="line">import org.quartz.*;</div><div class="line">import org.quartz.impl.StdSchedulerFactory;</div><div class="line"></div><div class="line">/**</div><div class="line"> * Created by liuhang on 2017/8/1.</div><div class="line"> */</div><div class="line">public class QuartzTest &#123;</div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        try &#123;</div><div class="line">            </div><div class="line">            //工程方法模式构造scheduler</div><div class="line">            Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();</div><div class="line"></div><div class="line">            //这里用到Builder模式</div><div class="line">            JobDetail jobDetail = JobBuilder.newJob(JobImpl.class).withIdentity(&quot;myJob&quot;, &quot;myJobGroup&quot;).build();</div><div class="line"></div><div class="line">            Trigger trigger = TriggerBuilder.newTrigger().withIdentity(&quot;myTrigger&quot;, &quot;myTriggerGroup&quot;).startNow().withSchedule(SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(2).repeatForever()).build();</div><div class="line"></div><div class="line">            scheduler.scheduleJob(jobDetail, trigger);</div><div class="line"></div><div class="line">            scheduler.start();</div><div class="line"></div><div class="line"></div><div class="line">        &#125; catch (SchedulerException e) &#123;</div><div class="line">            e.printStackTrace();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">package quartz;</div><div class="line"></div><div class="line">import org.quartz.Job;</div><div class="line">import org.quartz.JobExecutionContext;</div><div class="line">import org.quartz.JobExecutionException;</div><div class="line">import org.slf4j.Logger;</div><div class="line">import org.slf4j.LoggerFactory;</div><div class="line"></div><div class="line">import java.util.Date;</div><div class="line"></div><div class="line">/**</div><div class="line"> * Created by liuhang on 2017/8/1.</div><div class="line"> */</div><div class="line">public class JobImpl implements Job &#123;</div><div class="line">    private static Logger logger = LoggerFactory.getLogger(JobImpl.class);</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException &#123;</div><div class="line">        logger.info(&quot;Hello World! - &quot; + new Date());</div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li><p>由demo可以看出，quartz的几个核心概念：Job，Trigger，Scheduler，Calendar； 如下图所示<br><img src="../images/quartz核心概念.png" alt=""></p>
+<ul>
+<li>Scheduler：代表一个Quartz的独立运行容器，Trigger和JobDetail可以注册到Scheduler中，两者在Scheduler中拥有各自的组及名称，组及名称是Scheduler查找定位容器中某一对象的依据，Trigger的组及名称必须唯一，JobDetail的组和名称也必须唯一（但可以和Trigger的组和名称相同，因为它们是不同类型的）</li>
+<li>Job：是一个接口，只有一个方法void execute(JobExecutionContext context)，开发者实现该接口定义运行任务，JobExecutionContext类提供了调度上下文的各种信息。Job运行时的信息保存在JobDataMap实例中；</li>
+<li>JobDetail：Quartz在每次执行Job时，都重新创建一个Job实例，所以它不直接接受一个Job的实例，相反它接收一个Job实现类，以便运行时通过newInstance()的反射机制实例化Job。因此需要通过一个类来描述Job的实现类及其它相关的静态信息，如Job名字、描述、关联监听器等信息，JobDetail承担了这一角色。</li>
+<li>Trigger：是一个类，描述触发Job执行的时间触发规则。主要有SimpleTrigger和CronTrigger这两个子类。当仅需触发一次或者以固定时间间隔周期执行，SimpleTrigger是最适合的选择；而CronTrigger则可以通过Cron表达式定义出各种复杂时间规则的调度方案：如每早晨9:00执行，周一、周三、周五下午5:00执行等；</li>
+<li>Calendar：org.quartz.Calendar和java.util.Calendar不同，它是一些日历特定时间点的集合（可以简单地将org.quartz.Calendar看作java.util.Calendar的集合——java.util.Calendar代表一个日历时间点，无特殊说明后面的Calendar即指org.quartz.Calendar）。一个Trigger可以和多个Calendar关联，以便排除或包含某些时间点。假设，我们安排每周星期一早上10:00执行任务，但是如果碰到法定的节日，任务则不执行，这时就需要在Trigger触发机制的基础上使用Calendar进行定点排除。</li>
+</ul>
+</li>
+</ol>
+<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><p><a href="http://www.quartz-scheduler.org/documentation/quartz-2.2.x/quick-start.html" target="_blank" rel="external">官方文档</a></p>
+</li>
+<li><p><a href="http://www.quartz-scheduler.org/api/2.2.1/index.html" target="_blank" rel="external">官方api</a></p>
+</li>
+<li><p><a href="https://unmi.cc/category/quartz/" target="_blank" rel="external">quartz详解博客-文档</a></p>
+</li>
+<li><p><a href="http://www.jianshu.com/p/bab8e4e32952" target="_blank" rel="external">quartz原理揭秘和源码解读
+</a></p>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[大数据-Hadoop学习1]]></title>
+      <url>http://liuhang.net.cn/%E5%A4%A7%E6%95%B0%E6%8D%AE-Hadoop%E5%AD%A6%E4%B9%A01.html</url>
+      <content type="html"><![CDATA[<h1 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h1><ol>
+<li>Hadoop提供了一个稳定的共享存储和分析系统。存储由HDFS实现，分析由MapReduce实现</li>
+</ol>
+<h1 id="Mac下Hadoop2-7-x配置伪分布环境-wordcount运行"><a href="#Mac下Hadoop2-7-x配置伪分布环境-wordcount运行" class="headerlink" title="Mac下Hadoop2.7.x配置伪分布环境(wordcount运行)"></a>Mac下Hadoop2.7.x配置伪分布环境(wordcount运行)</h1><h2 id="ssh环境配置"><a href="#ssh环境配置" class="headerlink" title="ssh环境配置"></a>ssh环境配置</h2><ol>
+<li><code>ssh localhost</code>验证是否能无密码登录<ul>
+<li>出现<code>ssh: connect to host localhost port 22: Connection refused</code>，在”系统偏好设置-共享”中打开远程登录选项</li>
+</ul>
+</li>
+<li><code>ssh-keygen -t rsa -f ~/.ssh/id_rsa</code><br> <code>cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</code></li>
+</ol>
+<h2 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h2><ol>
+<li><code>export HADOOP_INSTALL=/Users/home/liuhang/Java/hadoop/hadoop-2.8.1</code><br> <code>export PATH=$PATH:$HADOOP_INSTALL/bin</code> ；export设置只对当前的bash登陆session有效.</li>
+<li>要使得环境变量一直生效，可修改<code>vim ~/.bash_profile</code>,把命令加载进入bash启动脚本中</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="http://kiritor.github.io/2016/04/24/Hadoop-install/" target="_blank" rel="external">Mac下Hadoop2.7.x配置伪分布环境(wordcount运行)</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[随笔-校招记录]]></title>
+      <url>http://liuhang.net.cn/%E9%9A%8F%E7%AC%94-%E6%A0%A1%E6%8B%9B%E8%AE%B0%E5%BD%95.html</url>
+      <content type="html"><![CDATA[<h1 id="练手的"><a href="#练手的" class="headerlink" title="练手的"></a>练手的</h1><h2 id="拼多多-已投"><a href="#拼多多-已投" class="headerlink" title="拼多多(已投)"></a>拼多多(已投)</h2><ol>
+<li>8.1号晚上，牛客</li>
+</ol>
+<h2 id="苏宁（已投）"><a href="#苏宁（已投）" class="headerlink" title="苏宁（已投）"></a>苏宁（已投）</h2><ol>
+<li>筛选中</li>
+</ol>
+<h2 id="科大飞讯-已投"><a href="#科大飞讯-已投" class="headerlink" title="科大飞讯(已投)"></a>科大飞讯(已投)</h2><ol>
+<li>筛选中</li>
+</ol>
+<h2 id="携程"><a href="#携程" class="headerlink" title="携程"></a>携程</h2><ol>
+<li>内推</li>
+<li>面试8.10-8.20左右</li>
+</ol>
+<h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
+<li>管培生，在线笔试：<strong>8月25日</strong></li>
+<li>Java开发，在线笔试：<strong>9月8日</strong></li>
+</ol>
+<h2 id="百度（已投）"><a href="#百度（已投）" class="headerlink" title="百度（已投）"></a>百度（已投）</h2><ol>
+<li>在线笔试：<strong>9月11日</strong>；</li>
+</ol>
+<h2 id="滴滴（已投）"><a href="#滴滴（已投）" class="headerlink" title="滴滴（已投）"></a>滴滴（已投）</h2><ol>
+<li>笔试时间 <strong>8.26日</strong></li>
+</ol>
+<h2 id="今日头条（已投）"><a href="#今日头条（已投）" class="headerlink" title="今日头条（已投）"></a>今日头条（已投）</h2><ol>
+<li>笔试时间未定</li>
+</ol>
+<h2 id="美团点评"><a href="#美团点评" class="headerlink" title="美团点评"></a>美团点评</h2><ol>
+<li>内推 （已投）</li>
+<li>秋招</li>
+</ol>
+<h2 id="网易（已投）"><a href="#网易（已投）" class="headerlink" title="网易（已投）"></a>网易（已投）</h2><ol>
+<li>笔试时间<strong>9月9日</strong></li>
+</ol>
+<h2 id="腾讯（已投）"><a href="#腾讯（已投）" class="headerlink" title="腾讯（已投）"></a>腾讯（已投）</h2><ol>
+<li>笔试时间<strong>9月13日</strong></li>
+</ol>
+<h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2>]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[面试-设计模式]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[面试-JVM相关]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-JVM%E7%9B%B8%E5%85%B3.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程11-Fork/Join框架]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B11-Fork-Join%E6%A1%86%E6%9E%B6.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程0-Java多线程面试总结]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B0-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.importnew.com/12773.html" target="_blank" rel="external">面试问题收集</a></li>
+</ol>
+<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
+<li><p>什么是线程</p>
+<ul>
+<li>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位</li>
+</ul>
+</li>
+<li><p>进程和线程有什么区别</p>
+<ul>
+<li>进程是资源分配的基本单位，一个进程可以包含多个线程，进程间切换开销大；</li>
+<li>引入线程的好处：创建进程开销小，易于调度，提高并发性</li>
+</ul>
+</li>
+<li><p>Java实现多线程的方法</p>
+<ul>
+<li>继承Thread类，重写其run方法</li>
+<li>实现Runnable接口（查看源码，发现Thread类也实现了Runnable接口）</li>
+<li>实现Callable接口,Future,线程池框架</li>
+</ul>
+</li>
+<li><p>用Runnable还是Thread</p>
+<ul>
+<li>Java不支持多继承，允许实现多个接口，如果要继承其他类，用Runable更好</li>
+</ul>
+</li>
+<li><p>Java中Runnable和Callable有什么不同？</p>
+<ul>
+<li>主要区别是Callable的 call() 方法可以返回值和抛出异常，而Runnable的run()方法没有这些功能。Callable可以返回装载有计算结果的Future对象</li>
+</ul>
+</li>
+<li><p>Volatile变量</p>
+<ul>
+<li><strong>可见性</strong>：每次使用v之前，从主内存刷新最新的值(read,load,use操作连在一起)； 每次修改V之后，立马同步回主内存(assign,store,write操作连在一起)；</li>
+<li><strong>防止指令重排</strong>：保证代码执行顺序，与程序顺序相同;下一个读取操作会在前一个写操作之后发生。volatile写之前的所有操作都不会被重排序到volatile之后;保volatile读之后的所有操作都不会被重排序到volatile之前;第一个操作是volatile写操作时,第二个操作是volatile读操作,不能进行重排序.</li>
+</ul>
+</li>
+<li><p>Java内存模型</p>
+<ul>
+<li>规定Java程序在不同硬件平台下，达到一致的内存访问效果。屏蔽掉硬件和操作系统的差异</li>
+</ul>
+</li>
+<li><p>什么是竞态条件。</p>
+<ul>
+<li>当多个线程竞争同一资源时，程序的结果依赖于线程执行的顺序。由于不恰当的执行顺序，而出现不正确的结果，即出现”竞态条件“</li>
+<li>举例： 单例模式，延迟加载。</li>
+</ul>
+</li>
+<li><p>线程池，为什么要用线程池</p>
+<ul>
+<li>创建线程要花费昂贵的资源和时间，如果任务来了才创建线程那么响应时间会变长，而且一个进程能创建的线程数有限。为了避免这些问题，在程序启动的时候就创建若干线程来响应处理</li>
+<li>好处：<ul>
+<li>提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行</li>
+<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ThreadLocal变量</p>
+<ul>
+<li>线程局部变量</li>
+<li>用于线程间的数据隔离，为每一个使用该变量的线程提供一个副本，每个线程都可以独立地改变自己的副本，而不会和其他线程的副本冲突。采用的是空间换时间的策略</li>
+<li>底层原理：ThreadLocal类中维护一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值为对应线程的变量副本</li>
+<li>与同步机制的比较：synchronized同步机制，仅提供一份变量，让不同的线程排队访问，后者为每个线程都提供了一份变量，互相不影响的访问。</li>
+<li>应用：Spirng中，有状态的Bean，用ThreadLocal封装，可以申明为Singleton作用域，变成无状态的</li>
+</ul>
+</li>
+<li><p>Java中interrupted 和 isInterruptedd方法的区别</p>
+<ul>
+<li>interrupted方法，静态方法，Thread.interrupted，测试当前线程是否中断；调用之后，中断状态会被清除为false</li>
+<li>isInterrupted，非静态方法，查询这个线程是否中断</li>
+</ul>
+</li>
+<li><p>读写锁</p>
+<ul>
+<li>读写锁在同一时刻可以允许多个读线程访问，但是在写线程访问时，所有的读线程和其他写线程均被阻塞；</li>
+<li>读写锁维护了一对锁，一个读锁和一个写锁，通过分离读锁和写锁，使得并发性相比一般的排他锁有了很大提升；</li>
+<li>应用场景：读多于写的情况</li>
+</ul>
+</li>
+<li><p>死锁</p>
+<ul>
+<li>产生死锁的四个必要条件<ul>
+<li>互斥（ Mutual exclusion ）条件：一个资源一次只能被一个进程所使用，即是排它性使用。</li>
+<li>不可抢占（ No preemption ）条件：一个资源仅能被占有它的进程所释放，而不能被别的进程强占。</li>
+<li>请求和保持（ Hold-and-wait ）条件：进程已经保持了至少一个资源，但又提出了新的资源要求，而该资源又已被其它进程占有，此时请求进程阻塞，但又对已经获得的其它资源保持不放。</li>
+<li>环路等待（ Circular wait ）条件：当每类资源只有一个时，在发生死锁时，必然存在一个进程-资源的环形链。如一系统状态的资源分配图所示，P1正在等待一个P2 占用的资源R2，P2正在等待一个P1占用的资源R1。</li>
+</ul>
+</li>
+<li>死锁的预防： 破坏四个条件之一</li>
+<li>死锁的避免：在资源分配之前，计算分配是否安全。 如：银行家算法</li>
+</ul>
+</li>
+<li><p>阻塞队列</p>
+<ul>
+<li>阻塞队列（BlockingQueue），支持阻塞的插入和移除方法<ul>
+<li>支持阻塞的插入方法：意思是当队列满时，队列会阻塞插入元素的线程，直到队列不满</li>
+<li>支持阻塞的移除方法：意思是在队列为空时，获取元素的线程会等待队列变为非空</li>
+</ul>
+</li>
+<li>Java里的阻塞队列(Java里的阻塞队列)<ul>
+<li>ArrayBlockingQueue</li>
+<li>LinkedBlockingQueue</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Fork/join框架</p>
+<ul>
+<li>Fork/Join框架是Java 7提供的一个用于并行执行任务的框架，是一个把大任务分割成若干<br>个小任务，最终汇总每个小任务结果后得到大任务结果的框架</li>
+<li>工作窃取（work-stealing）算法是指某个线程从其他队列里窃取任务来执行</li>
+<li>ForkJoinTask：分隔任务；RecursiveTask：用于有返回结果的任务。RecursiveAction：用于没有返回结果的任务。</li>
+<li>ForkJoinPool：执行任务</li>
+</ul>
+</li>
+<li><p>重入锁，公平锁</p>
+<ul>
+<li>重入锁：同一个线程再次进入同步代码的时候.可以再次获取自己已经获取到的锁。</li>
+<li>公平锁：多个线程再等待同一个锁时，必须按照申请锁的实际顺序来依次获得锁</li>
+</ul>
+</li>
+<li><p>CountDownLatch计数门闩与同步屏障CyclicBarrier</p>
+<ul>
+<li>CountDownLatch允许一个或多个线程等待其他线程完成操作（跟join类似）</li>
+<li>CyclicBarrier让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续运行</li>
+<li>区别：CountDownLatch的计数器只能使用一次，而CyclicBarrier的计数器可以使用reset()方法重置</li>
+</ul>
+</li>
+<li><p>控制并发线程数的Semaphore</p>
+<ul>
+<li>Semaphore（信号量）是用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源。</li>
+</ul>
+</li>
+<li><p>线程池原理</p>
+<ul>
+<li>为什么使用线程池，线程池好处<ul>
+<li>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。</li>
+<li>第三：提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，<br>还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ConcurrentHashMap</p>
+<ul>
+<li>使用了锁分段技术技术来保证线程安全的，锁分段技术：首先将数据分成一段一段的存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问</li>
+<li>put和get操作是原子操作，是线程安全</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Java并发编程10-定时器Timer]]></title>
+      <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B10-%E5%AE%9A%E6%97%B6%E5%99%A8Timer.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring-源码研究2-AOP实现]]></title>
+      <url>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B62-AOP%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring-源码研究3-SpringMVC实现]]></title>
+      <url>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B63-SpringMVC%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring-源码研究1-ioc容器实现]]></title>
+      <url>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B61-ioc%E5%AE%B9%E5%99%A8%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Spring-面试问题总结]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Spring-%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"><![CDATA[<h1 id="Spring是什么，简单说下Spring"><a href="#Spring是什么，简单说下Spring" class="headerlink" title="Spring是什么，简单说下Spring"></a>Spring是什么，简单说下Spring</h1><ol>
+<li>Spring是分层的Java EE/SE一站式开源框架，它以IoC控制反转和AOP（面向切面编程）为核心。</li>
+</ol>
+<h1 id="Spring优点"><a href="#Spring优点" class="headerlink" title="Spring优点"></a>Spring优点</h1><ul>
+<li>IoC支持方便解耦，简化开发</li>
+<li>AOP编程的支持</li>
+<li>声明式事务的支持</li>
+<li>方便程序的测试</li>
+<li>方便集成各种优秀框架</li>
+<li>降低JavaEE API的使用难度</li>
+</ul>
+<h1 id="控制反转IoC和依赖注入DI"><a href="#控制反转IoC和依赖注入DI" class="headerlink" title="控制反转IoC和依赖注入DI"></a>控制反转IoC和依赖注入DI</h1><ul>
+<li>控制反转：借助第三方（即容器），把新建对象的控制权，交给了容器，由容器负责对象新建装配</li>
+<li>依赖注入：实现控制反转的方式有依赖注入和依赖查找</li>
+<li>Spring中依赖注入DI的类型：构造函数注入，属性注入；</li>
+</ul>
+<h1 id="Spring中装配Bean的几种方式"><a href="#Spring中装配Bean的几种方式" class="headerlink" title="Spring中装配Bean的几种方式"></a>Spring中装配Bean的几种方式</h1><ul>
+<li>现在有四种方式<ul>
+<li>基于XML配置</li>
+<li>基于注解配置</li>
+<li>基于Java配置</li>
+<li>基于Groovy 动态语言配置</li>
+</ul>
+</li>
+</ul>
+<h1 id="Spring中用到了哪些设计模式"><a href="#Spring中用到了哪些设计模式" class="headerlink" title="Spring中用到了哪些设计模式"></a>Spring中用到了哪些设计模式</h1><ol>
+<li>代理模式,</li>
+<li>工厂模式</li>
+<li>单例模式</li>
+<li>模板方法模式：用来解决代码重复的问题</li>
+<li>策略模式：Resource与ResourceLoader</li>
+</ol>
+<h1 id="描述一下-Spring-Bean的生命周期"><a href="#描述一下-Spring-Bean的生命周期" class="headerlink" title="描述一下 Spring Bean的生命周期"></a>描述一下 Spring Bean的生命周期</h1><p>关键节点</p>
+<ol>
+<li>实例化，前后InstantiationAwareBeanPostProcessor接口的方法；</li>
+<li>设置属性值， 后 BeanNameAware和BeanFactoryAware，感知BeanName和BeanFactory</li>
+<li>初始化方法（init-method） 前后 BeanPostProcessor接口方法，对Bean进行处理，前nitializingBean处理</li>
+<li>销毁方法(destory-method)，前DisposeBean处理</li>
+</ol>
+<p>三类方法调用</p>
+<ol>
+<li>Bean自身的方法调用，构造函数来实例化Bean,Setter方法设置Bean的属性，init_method和destory_method方法</li>
+<li>Bean级生命周期接口方法（Bean自己实现的接口），BeanNameAware和BeanFactoryAware,InitializingBean和DisposeBean</li>
+<li>容器及生命周期接口方法，InstantiationAwareBeanPostProcessor和BeanPostProcessor接口，分别在实例化和初始化前后，对Bean进行处理</li>
+</ol>
+<h1 id="BeanFactory和ApplicationContext的区别"><a href="#BeanFactory和ApplicationContext的区别" class="headerlink" title="BeanFactory和ApplicationContext的区别"></a>BeanFactory和ApplicationContext的区别</h1><ol>
+<li>BeanFactory是Spring最核心的接口，它是工厂模式的实现，来负责实例化Bean并建立Bean之间的依赖关系，控制Bean的生命周期；</li>
+<li>ApplicationContext应用上下文，它是建立在BeanFactory基础上（ApplicationContext接口继承ListableBeanFactory接口，ListableBeanFactory继承BeanFactory接口）；BeanFactory更加底层，它面对Spring本身；而ApplicationContext面向使用Spring的开发者；它的主要实现者有ClassPathXmlApplicationContext，FileSystemXmlApplicationContext等</li>
+<li>ApplicationContext提供了更多面向实际应用的功能<ul>
+<li>国际化消息访问功能</li>
+<li>统一的资源读取方式</li>
+<li>能够发布事件，并允许注册相应的事件监听器；</li>
+</ul>
+</li>
+</ol>
+<h1 id="FactoryBean和BeanFactory"><a href="#FactoryBean和BeanFactory" class="headerlink" title="FactoryBean和BeanFactory"></a>FactoryBean和BeanFactory</h1><ol>
+<li>FactoryBean，顾名思义，工厂Bean（像工厂一样的Bean）,是一个能产生或者修饰对象的Bean，可以在ioc容器中被管理,用户通过实现FacatoryBean接口定制实例化Bean的逻辑,使用“&amp;”前缀，获取FactoryBean产生的对象（getObject方法）；</li>
+<li>BeanFactory，ioc容器，对Bean进行管理；</li>
+</ol>
+<h1 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h1><ol>
+<li>singleton 仅存在一个Bean实例</li>
+<li>prototype 每次调用Bean时，都返回一个新实例</li>
+<li>request 每次http请求，创建一个新的Bean</li>
+<li>session 同一个Http Session，共享一个Bean</li>
+<li>globalSession global-session和Portlet应用相关；</li>
+</ol>
+<h1 id="Spring内部Bean"><a href="#Spring内部Bean" class="headerlink" title="Spring内部Bean"></a>Spring内部Bean</h1><ol>
+<li>内部bean和Java匿名内部类相似，仅仅被某一个bean调用</li>
+</ol>
+<h1 id="基于注解配置，说说所知道的注解"><a href="#基于注解配置，说说所知道的注解" class="headerlink" title="基于注解配置，说说所知道的注解"></a>基于注解配置，说说所知道的注解</h1><ol>
+<li>@Component注解，定义Bean； 对应的在分层结构中，DAO层，@Repository；Service层：@Service； Web层：@Controller</li>
+<li>@Autowired注解，自动装配（required= false），@Lazy注解，延迟注入</li>
+<li>@Configuration注解，基于Java类配置；@Bean注解； </li>
+<li>Spring MVC注解，@RequestMapping</li>
+<li>Spring Cache, @Cacheable注解</li>
+</ol>
+<h1 id="Spring的单例Bean是线程安全的吗"><a href="#Spring的单例Bean是线程安全的吗" class="headerlink" title="Spring的单例Bean是线程安全的吗"></a>Spring的单例Bean是线程安全的吗</h1><ol>
+<li>并没有对单例bean进行任何多线程的封装处理；自行去保证线程安全</li>
+</ol>
+<h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><h2 id="Spring-MVC过程"><a href="#Spring-MVC过程" class="headerlink" title="Spring MVC过程"></a>Spring MVC过程</h2><ol>
+<li>DispatcherServlet接收请求</li>
+<li>HanddlerMappig来寻找对应的处理器(Controller)</li>
+<li>DispatcherServlet根据查找到的处理器，通过HandlerAdapter处理器适配器，调用处理器的方法，</li>
+<li>处理器完成业务逻辑后，返回ModelAndView</li>
+<li>DispatcherServlet调用试图解析器解析视图，视图渲染，得到最后的页面</li>
+<li>返回。</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[设计模式7-策略模式]]></title>
       <url>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F7-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html</url>
       <content type="html"><![CDATA[<h1 id="策略模式在Spring中的使用"><a href="#策略模式在Spring中的使用" class="headerlink" title="策略模式在Spring中的使用"></a>策略模式在Spring中的使用</h1><ul>
@@ -24,7 +472,17 @@
     <entry>
       <title><![CDATA[Java并发编程7-线程池]]></title>
       <url>http://liuhang.net.cn/Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B9-%E7%BA%BF%E7%A8%8B%E6%B1%A0.html</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h1 id="线程池原理"><a href="#线程池原理" class="headerlink" title="线程池原理"></a>线程池原理</h1><p><img src="../images/threadpool.png" alt=""></p>
+<h1 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h1><ul>
+<li>线程池核心代码<br><img src="../images/线程池源码.png" alt=""></li>
+</ul>
+<ul>
+<li>工作线程<ul>
+<li>工作线程：线程池创建线程时，会将线程封装成工作线程Worker，Worker在执行完任务后，<strong>还会循环获取工作队列里的任务来执行</strong><br><img src="../images/多线程worker.png" alt=""></li>
+</ul>
+</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
@@ -100,44 +558,138 @@
     </entry>
     
     <entry>
-      <title><![CDATA[个人计划至7月底]]></title>
+      <title><![CDATA[个人计划至8.5]]></title>
       <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B37%E6%9C%88%E5%BA%95.html</url>
-      <content type="html"><![CDATA[<h1 id="总体"><a href="#总体" class="headerlink" title="总体"></a>总体</h1><ol>
+      <content type="html"><![CDATA[<h1 id="总体：Spring-JVM，多线程"><a href="#总体：Spring-JVM，多线程" class="headerlink" title="总体：Spring,JVM，多线程"></a>总体：Spring,JVM，多线程</h1><h2 id="书"><a href="#书" class="headerlink" title="书"></a>书</h2><ol>
 <li>《深入理解Java虚拟机》</li>
 <li>《Java并发编程实战》</li>
 <li>《精通Spring4.x 企业应用开发实战》</li>
+<li>《Java多线程编程核心技术》</li>
 </ol>
-<h1 id="每日计划"><a href="#每日计划" class="headerlink" title="每日计划"></a>每日计划</h1><ol>
-<li>6.29-7.1三天<ul>
-<li>Java并发编程，第一部分</li>
-</ul>
-</li>
-<li>6.29周四<ul>
-<li>Java并发编程实战1，2，3章 <strong><em>第3章没看完</em></strong></li>
-<li>刷编程题，2个动态规划/dfs <strong><em>完成</em></strong></li>
-</ul>
-</li>
-<li>6.30周五<ul>
-<li>Java并发编程实战4，5章</li>
-<li>刷编程题，2个动态规划/回溯dfs</li>
-</ul>
-</li>
-<li><p>7.1周六</p>
+<h2 id="核心提升"><a href="#核心提升" class="headerlink" title="核心提升"></a>核心提升</h2><ol>
+<li>Java并发编程学习 </li>
+<li>Quartz</li>
+<li>消息中间件知识，KafKa复习</li>
+</ol>
+<h1 id="每日计划"><a href="#每日计划" class="headerlink" title="每日计划"></a>每日计划</h1><pre><code>- 阶段1到阶段6（8.3号），每日一个编程真题（公司笔试真题）
+- 阶段7开始，每日刷公司真题和编程题，自由复习阶段，查漏补缺
+</code></pre><h2 id="阶段一：Spring复习巩固，完成小项目一个7天"><a href="#阶段一：Spring复习巩固，完成小项目一个7天" class="headerlink" title="阶段一：Spring复习巩固，完成小项目一个7天"></a>阶段一：Spring复习巩固，完成小项目一个7天</h2><ol>
+<li><p>7.14看书</p>
 <ul>
-<li>Java并发编程实战6章</li>
+<li>《Spring4.x》7.8.9三章看完（Spring aop内容），结合18论坛项目的代码</li>
 </ul>
 </li>
-<li><p>7.2周日</p>
+<li><p>7.15总结</p>
 <ul>
-<li>Java并发编程实战7章</li>
+<li>总结Spirng ioc、aop、事物</li>
+<li>自己实现简单ioc与aop，研究ioc与aop的源码(结合深入解析那本书)</li>
 </ul>
 </li>
-<li><p>7.3周一</p>
+<li><p>7.16看书</p>
 <ul>
-<li>面试准备(常见面试问题整理)</li>
+<li>《Spring4.x》10.11.12.13.14 Spring数据篇</li>
 </ul>
 </li>
-<li><p>7.8号<br> - </p>
+<li><p>7.17看书</p>
+<ul>
+<li>《Spring4.x》15 Spring缓存，memchched与redis复习</li>
+</ul>
+</li>
+<li><p>7.18总结</p>
+<ul>
+<li>总结Spirng数据库操作，Hibernate与Mybatis相关，缓存相关，数据库常见问题</li>
+</ul>
+</li>
+<li><p>7.19看书</p>
+<ul>
+<li>《Spring4.x》17 SpringMvc复习总结完毕，结合18论坛代码，写完跑通</li>
+</ul>
+</li>
+<li><p>7.20总结</p>
+<ul>
+<li>Spring mvc总结</li>
+<li><strong>Spring面经总结，项目中的Spring遇到的问题及解决方法：包括Spirng ioc,aop,事物，数据库，spring mvc,spring boot</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="阶段二：多线程复习巩固5天"><a href="#阶段二：多线程复习巩固5天" class="headerlink" title="阶段二：多线程复习巩固5天"></a>阶段二：多线程复习巩固5天</h2><ol>
+<li><p>7.21看书</p>
+<ul>
+<li>《Java多线程编程核心技术》1-3章</li>
+</ul>
+</li>
+<li><p>7.22看书</p>
+<ul>
+<li>《Java多线程编程核心技术》4-6章</li>
+</ul>
+</li>
+<li><p>7.23看书</p>
+<ul>
+<li>《Spring4.x》16 Spirng任务调度，exectue框架  Quatrz复习</li>
+</ul>
+</li>
+<li><p>7.24看书</p>
+<ul>
+<li>Quatrz学习总结</li>
+</ul>
+</li>
+<li><p>7.25 </p>
+<ul>
+<li><strong>多线程面试总结</strong></li>
+<li><strong>整理项目中遇到的多线程问题，及解决方法</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="阶段三-消息中间件突击复习，kafka学习4天"><a href="#阶段三-消息中间件突击复习，kafka学习4天" class="headerlink" title="阶段三: 消息中间件突击复习，kafka学习4天"></a>阶段三: 消息中间件突击复习，kafka学习4天</h2><ol>
+<li>7.26</li>
+<li>7.27</li>
+<li>7.28</li>
+<li>7.29</li>
+</ol>
+<h2 id="阶段四：JVM复习总结3天"><a href="#阶段四：JVM复习总结3天" class="headerlink" title="阶段四：JVM复习总结3天"></a>阶段四：JVM复习总结3天</h2><ol>
+<li><p>7.30看书</p>
+<ul>
+<li>JVM书</li>
+</ul>
+</li>
+<li><p>7.31看书</p>
+<ul>
+<li>JVM书</li>
+</ul>
+</li>
+<li><p>8.1总结<br>-JVM面经总结</p>
+<ul>
+<li><strong>项目中遇到的JVM调优问题及解决方法</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="阶段五：-设计模式总结1天"><a href="#阶段五：-设计模式总结1天" class="headerlink" title="阶段五： 设计模式总结1天"></a>阶段五： 设计模式总结1天</h2><ol>
+<li>8.2号<ul>
+<li><strong>设计模式常见面试问题总结</strong></li>
+<li>手写单例模式准备（多线程情况）</li>
+</ul>
+</li>
+</ol>
+<h2 id="阶段六：-Sql基础复习1天"><a href="#阶段六：-Sql基础复习1天" class="headerlink" title="阶段六： Sql基础复习1天"></a>阶段六： Sql基础复习1天</h2><ol>
+<li>8.3号<ul>
+<li>mysql必知必会</li>
+<li>刷Sql题目6+</li>
+</ul>
+</li>
+</ol>
+<h2 id="阶段七：刷公司真题，剑指offer及查漏补缺复习"><a href="#阶段七：刷公司真题，剑指offer及查漏补缺复习" class="headerlink" title="阶段七：刷公司真题，剑指offer及查漏补缺复习"></a>阶段七：刷公司真题，剑指offer及查漏补缺复习</h2><ol>
+<li><p>8.4号</p>
+<ul>
+<li>排序算法复习巩固（手写排序算法）</li>
+<li>排序的选择题巩固</li>
+</ul>
+</li>
+<li><p>8.5号</p>
+<ul>
+<li>公司真题之阿里</li>
+</ul>
+</li>
+<li><p>8.</p>
 </li>
 </ol>
 ]]></content>
@@ -364,19 +916,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[编程真题练习]]></title>
-      <url>http://liuhang.net.cn/%E7%BC%96%E7%A8%8B%E7%9C%9F%E9%A2%98%E7%BB%83%E4%B9%A0.html</url>
-      <content type="html"><![CDATA[<h1 id="5-29练习"><a href="#5-29练习" class="headerlink" title="5.29练习"></a>5.29练习</h1><ul>
-<li>编程真题8道<a href="https://www.nowcoder.com/contestRoom?orderByHotValue=1&amp;filter=0&amp;mutiTagIds=672_139_138" target="_blank" rel="external">链接</a></li>
-<li><a href="https://www.nowcoder.com/profile/2501740/test/8484043/44802" target="_blank" rel="external">解答1</a></li>
-<li><a href="https://www.nowcoder.com/profile/2501740/test/8481119/95824" target="_blank" rel="external">解答2</a></li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[操作系统总结]]></title>
-      <url>http://liuhang.net.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html</url>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="操作系统概念"><a href="#操作系统概念" class="headerlink" title="操作系统概念"></a>操作系统概念</h1><ol>
 <li>基本概念：管理计算机硬件和软件资源，方便用户使用计算机的程序集合；</li>
 <li>操作系统提供的服务和功能：<ul>
@@ -482,8 +1023,95 @@
     
     <entry>
       <title><![CDATA[计算机网络总结]]></title>
-      <url>http://liuhang.net.cn/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"></content>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"><![CDATA[<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="OSI七层模型与TCP-IP四层模型"><a href="#OSI七层模型与TCP-IP四层模型" class="headerlink" title="OSI七层模型与TCP/IP四层模型"></a>OSI七层模型与TCP/IP四层模型</h2><p><img src="../images/osi七层模型.gif" alt=""></p>
+<ul>
+<li>实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层</li>
+<li>各层的作用<ol>
+<li>物理层：通过媒介传输比特,确定机械及电气规范</li>
+<li>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</li>
+<li>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</li>
+<li>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</li>
+<li>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</li>
+<li>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</li>
+<li>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</li>
+</ol>
+</li>
+</ul>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><p><img src="../images/ip.png" alt=""><br><img src="../images/ip1.png" alt=""></p>
+<ul>
+<li>A类地址,<ul>
+<li>可指派的网络号126个(2^7-2),见2的原因是: 网络号全0为保留地址,表示本网络;网络号127(0111 1111)保留为回环测试(如127.0.0.1)</li>
+<li>可指派的主机号: 2^24-2; 减去全0的主机号,减去全1主机号</li>
+</ul>
+</li>
+<li>B类地址<ul>
+<li>可指派网络号2^14-1:128.0不指派,最小可指派的网络号是128.1</li>
+<li>主机号减2,2^16-2;</li>
+</ul>
+</li>
+<li>C类地址<ul>
+<li>可指派网络号2^21-1:192.0.0不指派,最小可指派的网络号192.0.1</li>
+<li>主机号减2: 2^8-2;</li>
+</ul>
+</li>
+</ul>
+<h2 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h2><ul>
+<li>运输层协议和网络层协议的主要区别<br><img src="../images/运输层网络层.png" alt=""></li>
+<li><p>运输层的协议端口号</p>
+<ul>
+<li>协议端口号(protocol port number),简称端口;使不同的操作系统中的进程可以相互通信,用统一的方法对TCP/IP体系中的应用进程进行标识;16位的端口号(65535个)</li>
+<li>通信的终点是应用进程,但我们只需把要传送的报文交到目的主机的某一个合适的目的端口，剩下的工作（即最后交付目的进程）就由 TCP 来完成</li>
+</ul>
+</li>
+<li><p>tcp字段含义<br><img src="../images/tcp字段.png" alt=""></p>
+</li>
+<li><p>传输层定义两种传输协议：TCP（传输控制协议）和 UDP（或用户数据报协议）<br><img src="../images/tcp-udp.png" alt=""></p>
+</li>
+<li>TCP协议和UDP协议特性区别总结：<ol>
+<li>TCP协议在传送数据段的时候要给段标号；UDP协议不</li>
+<li>TCP协议可靠；UDP协议不可靠</li>
+<li>TCP协议是面向连接；UDP协议采用无连接</li>
+<li>TCP协议负载较高，采用虚电路；UDP采用无连接</li>
+<li>TCP协议的发送方要确认接收方是否收到数据段（3次握手协议）</li>
+<li>TCP协议采用窗口技术和流控制</li>
+</ol>
+</li>
+</ul>
+<h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><p><img src="../images/tcp.jpg" alt=""></p>
+<ol>
+<li>三次握手和四次分手的过程</li>
+<li>为什么要三次握手和四次分手</li>
+<li>参考:<a href="http://www.jellythink.com/archives/705" target="_blank" rel="external">简析TCP的三次握手与四次分手</a></li>
+</ol>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
+<li>http状态码<br><img src="../images/http状态码.png" alt=""><ul>
+<li>404  未找到，服务器找不到所请求的网页。</li>
+<li>302  临时移动，服务器从不同位置的网页响应请求，请求者应继续使用原有位置进行以后的请求。</li>
+<li>500  （服务器内部错误），服务器遇到错误，无法完成请求。</li>
+<li>403  （禁止）服务器拒绝请求</li>
+</ul>
+</li>
+<li>http与https区别<ul>
+<li>http协议</li>
+<li>简单理解: https是安全版的http,</li>
+<li>HTTP的端口号是80，https的端口号是443</li>
+</ul>
+</li>
+</ul>
+<h2 id="SNMP简单网络管理协议"><a href="#SNMP简单网络管理协议" class="headerlink" title="SNMP简单网络管理协议"></a>SNMP简单网络管理协议</h2><ul>
+<li>simple network management protocol 简单网络管理协议</li>
+<li>是一个网络管理员用来管理的工具相当于  一个app 所以是<strong>应用层</strong></li>
+</ul>
+<h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><ul>
+<li>Internet Control Message Protocol 互联网控制消息协议</li>
+<li>网络层协议</li>
+<li>用ping命令,检查一台主机的网络层是否连通;</li>
+</ul>
+<h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ul>
+<li>IEEE 802.3—CSMA/CD网络，定义CSMA/CD总线网的MAC子层和物理层的规范,人们习惯将<strong>IEEE 802.3称为”以太网</strong>;</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
@@ -571,19 +1199,6 @@
 </ul>
 <h2 id="回文字符串"><a href="#回文字符串" class="headerlink" title="回文字符串"></a>回文字符串</h2><h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>链接：<a href="https://www.nowcoder.com/questionTerminal/adc291e7e79f452c8b59243a5ce68d3a?orderByHotValue=1&amp;page=1&amp;onlyReference=false" target="_blank" rel="external">https://www.nowcoder.com/questionTerminal/adc291e7e79f452c8b59243a5ce68d3a?orderByHotValue=1&amp;page=1&amp;onlyReference=false</a><br>来源：牛客网</p>
 <p>n = int(raw_input())<br>nums = map(int, raw_input().split())<br>index = sorted(range(len(nums)), key = lambda i: nums[i])<br>count = 1<br>for i in range(1, len(index)):<br>    if index[i] &gt; index[i-1]:<br>        count += 1<br>    else:<br>        break<br>print len(index) - count</p>
-]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[shell总结]]></title>
-      <url>http://liuhang.net.cn/shell%E7%AC%94%E8%AE%B0.html</url>
-      <content type="html"><![CDATA[<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><ol>
-<li>概念：shell, 壳。 接收用户的命令，然后调用相应的应用程序；（命令解析器）</li>
-</ol>
-<h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
-<li><a href="https://leetcode.com/problems/valid-phone-numbers/#/description" target="_blank" rel="external">正则表达式|grep|awk</a></li>
-<li><a href="https://leetcode.com/problems/tenth-line/#/description" target="_blank" rel="external">文件第几行</a></li>
-</ol>
 ]]></content>
     </entry>
     
@@ -807,9 +1422,10 @@
     
     <entry>
       <title><![CDATA[面试笔试编程题总结(数据结构和算法总结)]]></title>
-      <url>http://liuhang.net.cn/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="https://algorithm.yuanbin.me/zh-hans/index.html" target="_blank" rel="external">数据结构与算法/leetcode/lintcode题解||:总结超详细,推荐!!</a></li>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93.html</url>
+      <content type="html"><![CDATA[<h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><ol>
+<li><a href="https://algorithm.yuanbin.me/zh-hans/index.html" target="_blank" rel="external">参考/数据结构与算法/leetcode/lintcode题解||:总结超详细,推荐!!</a></li>
+<li>提交不通过时思考方向： 是否整型溢出！（int,long）</li>
 </ol>
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>重难点是: <strong>模式匹配(kmp算法)</strong>和<strong>正则表达式匹配</strong>; 在选择题中,可能会出现问next数组的题目</p>
 <h2 id="Java字符串API"><a href="#Java字符串API" class="headerlink" title="Java字符串API"></a>Java字符串API</h2><ul>
@@ -1133,8 +1749,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[面试总结]]></title>
-      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[Java基础-面试总结]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80-%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
 <li>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</li>
 </ul>
@@ -1784,6 +2400,7 @@
 </ul>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://www.cnblogs.com/xdp-gacl/p/3777987.html" target="_blank" rel="external">Java序列化与反序列化|孤傲苍狼</a></li>
+<li><a href="https://github.com/giantray/stackoverflow-java-top-qa/blob/master/contents/what-is-a-serialversionuid-and-why-should-i-use-it.md" target="_blank" rel="external">serialVersionUID 有什么作用？该如何使用？</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -1922,6 +2539,11 @@
 </ul>
 </li>
 <li>最长公共子序列</li>
+<li>放苹果</li>
+<li>拼凑钱币问题<ul>
+<li><a href="https://www.nowcoder.com/questionTerminal/178b912722ac42a2865057a66d4e7de2" target="_blank" rel="external">链接</a></li>
+</ul>
+</li>
 </ol>
 ]]></content>
     </entry>
@@ -2088,31 +2710,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[设计模式3-单例模式]]></title>
-      <url>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</url>
-      <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><ul>
-<li>单例模式(Singleton Pattern)：单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。</li>
-</ul>
-<h1 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h1><ul>
-<li>类加载时就创建对象<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 饿汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EagerSingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖默认的构造方法，将默认的构造方法声明为私有的，防止其他类直接创建对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EagerSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 直接创建一个本类的对象</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> EagerSingleton eagerSingleton = <span class="keyword">new</span> EagerSingleton();</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 提供一个工厂方法来返回本类的唯一对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> EagerSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> eagerSingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="懒汉式单例模式"><a href="#懒汉式单例模式" class="headerlink" title="懒汉式单例模式"></a>懒汉式单例模式</h1><ul>
-<li>懒汉式单例模式的创建对象是在第一次企图获得单例类的对象时。需用synchronize关键字，多线程安全.<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 懒汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖原有的默认构造方法，声明为私有的，防止其他类直接使用构造方法创建单例类对象，同时也使子类无法继承</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 单例类的唯一实例，但是不是加载时初始化</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton lazySingleton;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 线程互斥的获取实例</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (lazySingleton == <span class="keyword">null</span>) &#123;</div><div class="line">            lazySingleton = <span class="keyword">new</span> LazySingleton();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> lazySingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="单例模式使用场景"><a href="#单例模式使用场景" class="headerlink" title="单例模式使用场景"></a>单例模式使用场景</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
-<li>系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器，或者需要考虑资源消耗太大而只允许创建一个对象。</li>
-<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例</li>
-</ul>
-<h2 id="单例模式优点"><a href="#单例模式优点" class="headerlink" title="单例模式优点"></a>单例模式优点</h2><ul>
-<li>提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它，并为设计及开发团队提<br>供了共享的概念。</li>
-<li>由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象，单例模式无疑可以提高系统的性能。</li>
-</ul>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[Java随手总结（零散知识点记录）]]></title>
       <url>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="四中权限修饰符"><a href="#四中权限修饰符" class="headerlink" title="四中权限修饰符"></a>四中权限修饰符</h1><p><img src="media/14899742700152.jpg" alt=""></p>
@@ -2145,6 +2742,7 @@
       <url>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80%E5%A2%9E%E5%BC%BA-%E4%BB%A3%E7%90%86.html</url>
       <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="https://www.ibm.com/developerworks/cn/java/j-lo-proxy1/" target="_blank" rel="external">Java 动态代理机制分析及扩展</a></li>
+<li><a href="http://blog.jobbole.com/104433/" target="_blank" rel="external">Java JDK 动态代理使用及实现原理分析</a></li>
 </ol>
 ]]></content>
     </entry>
@@ -2280,7 +2878,7 @@
 <li><p>Download, extract and compile Redis with:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.8.tar.gz</div><div class="line">tar xzf redis-3.2.8.tar.gz</div><div class="line">cd redis-3.2.8</div><div class="line">make</div></pre></td></tr></table></figure>
 </li>
-<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="/media/14890418974755.jpg" alt=""></p>
+<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="../media/14890418974755.jpg" alt=""></p>
 </li>
 <li><p>启动</p>
 <ul>
@@ -2316,7 +2914,7 @@
 <li>删除 <code>del key</code></li>
 <li>数值增减<ul>
 <li>递增 <code>incr key</code>; 增加指定的整数 <code>incrby key increment</code></li>
-<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="/media/14890484914948.jpg" alt=""></li>
+<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="../media/14890484914948.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -2324,7 +2922,7 @@
 </ul>
 <h2 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型"></a>Hash类型</h2><ul>
 <li>散列类型，提供字段和字段值的映射，字段值只能是字符串类型（不可嵌套其他类型）</li>
-<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="/media/14890472547872.jpg" alt=""></li>
+<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="../media/14890472547872.jpg" alt=""></li>
 <li>命令用法<ul>
 <li>赋值 <code>hset key filed value</code></li>
 <li>取制 <code>hget key filed</code></li>
@@ -2341,7 +2939,7 @@
 <li>向列表两端增加元素:<code>lpush key value [value]</code>向列表左边添加;<code>rpush key value [value]</code>右边添加</li>
 <li>查看列表<code>lrange key start stop</code>,索引从0开始，可以是负数，如-1代表最后边的</li>
 <li>从列表两端弹出元素<code>lpop key</code>;<code>rpop key</code>;</li>
-<li>获取列表元素个数<code>llen key</code>;<br><img src="/media/14891152268107.jpg" alt=""></li>
+<li>获取列表元素个数<code>llen key</code>;<br><img src="../media/14891152268107.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -2349,7 +2947,7 @@
 <li>集合中的数据是不重复且没有顺序</li>
 <li>与List类型比较</li>
 </ul>
-<p><img src="/media/14890502770124.jpg" alt=""></p>
+<p><img src="../media/14890502770124.jpg" alt=""></p>
 <ul>
 <li>集合类型的常用操作是<strong>向集合中加入或删除元素</strong>、<strong>判断某个元素是否存在</strong>等，由于集合类型的Redis内部是使用值为空的散列表实现，所有这些操作的时间复杂度都为0(1)。 Redis还提供了多个集合之间的交集、并集、差集的运算。</li>
 <li>常用命令<ul>
@@ -2359,7 +2957,7 @@
 <li>运算命令<ul>
 <li>差集（属于A且不属于B的元素集合）<code>sdiff key [key ...]</code></li>
 <li>交集 <code>sinter key [key...]</code></li>
-<li>并集 <code>sunion key [key...]</code><br><img src="/media/14891164162143.jpg" alt=""></li>
+<li>并集 <code>sunion key [key...]</code><br><img src="../media/14891164162143.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -2385,7 +2983,7 @@
 <li>删除元素：移除有序集key中的一个或多个成员，不存在的成员将被忽略。当key存在但不是有序集类型时，返回一个错误。<code>zrem key member [member...]</code></li>
 <li>获得排名在某个范围的元素列表<ul>
 <li>按照元素分数从小到大的顺序返回索引从start到stop之间的所有元素（包含两端的元素）<code>zrange key start stop [withscores]</code></li>
-<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="/media/14891282942094.jpg" alt=""></li>
+<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="../media/14891282942094.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -3233,7 +3831,7 @@
     
     <entry>
       <title><![CDATA[linux总结]]></title>
-      <url>http://liuhang.net.cn/linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</url>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
 <li><p>文件属性和权限<br> <img src="../media/14886281048094.gif" alt=""><img src="../media/14886281421383.gif" alt=""></p>
 </li>
@@ -3353,6 +3951,13 @@
 <li><code>kill</code>,关进程</li>
 <li><code>dos2unix</code>,dos类型文件转化为unix，如换行符转化</li>
 <li><code>ifconfig</code>,查看ip</li>
+</ol>
+<h1 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h1><ol>
+<li>概念：shell, 壳。 接收用户的命令，然后调用相应的应用程序；（命令解析器）</li>
+</ol>
+<h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
+<li><a href="https://leetcode.com/problems/valid-phone-numbers/#/description" target="_blank" rel="external">正则表达式|grep|awk</a></li>
+<li><a href="https://leetcode.com/problems/tenth-line/#/description" target="_blank" rel="external">文件第几行</a></li>
 </ol>
 ]]></content>
     </entry>

@@ -92,18 +92,18 @@
 <meta property="og:url" content="http://liuhang.net.cn/Web项目总结-redis总结.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="redis入门指南，学习总结">
-<meta property="og:image" content="http://liuhang.net.cn/media/14890418974755.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14890484914948.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14890472547872.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14891152268107.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14890502770124.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14891164162143.jpg">
-<meta property="og:image" content="http://liuhang.net.cn/media/14891282942094.jpg">
-<meta property="og:updated_time" content="2017-06-28T02:32:53.000Z">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14890418974755.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14890484914948.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14890472547872.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14891152268107.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14890502770124.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14891164162143.jpg">
+<meta property="og:image" content="http://liuhang.net.cn/../media/14891282942094.jpg">
+<meta property="og:updated_time" content="2017-07-27T09:47:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web项目总结-redis总结">
 <meta name="twitter:description" content="redis入门指南，学习总结">
-<meta name="twitter:image" content="http://liuhang.net.cn/media/14890418974755.jpg">
+<meta name="twitter:image" content="http://liuhang.net.cn/../media/14890418974755.jpg">
 
 
 
@@ -443,7 +443,7 @@
 <li><p>Download, extract and compile Redis with:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">wget http://download.redis.io/releases/redis-3.2.8.tar.gz</div><div class="line">tar xzf redis-3.2.8.tar.gz</div><div class="line">cd redis-3.2.8</div><div class="line">make</div></pre></td></tr></table></figure>
 </li>
-<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="/media/14890418974755.jpg" alt=""></p>
+<li><p>编译后执行<code>sudo make install</code>,可执行文件会被复制到<code>/usr/local/bin</code>目录内，在命令行内直接输入程序名即可执行；（Redis可执行文件说明见下表）<br><img src="../media/14890418974755.jpg" alt=""></p>
 </li>
 <li><p>启动</p>
 <ul>
@@ -479,7 +479,7 @@
 <li>删除 <code>del key</code></li>
 <li>数值增减<ul>
 <li>递增 <code>incr key</code>; 增加指定的整数 <code>incrby key increment</code></li>
-<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="/media/14890484914948.jpg" alt=""></li>
+<li>递减 <code>decr key</code>; 减少指定的整数 <code>decrby key decrement</code><br><img src="../media/14890484914948.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -487,7 +487,7 @@
 </ul>
 <h2 id="Hash类型"><a href="#Hash类型" class="headerlink" title="Hash类型"></a>Hash类型</h2><ul>
 <li>散列类型，提供字段和字段值的映射，字段值只能是字符串类型（不可嵌套其他类型）</li>
-<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="/media/14890472547872.jpg" alt=""></li>
+<li>例如User对象包括username,password,name,age字段，可使用hash解决<br><img src="../media/14890472547872.jpg" alt=""></li>
 <li>命令用法<ul>
 <li>赋值 <code>hset key filed value</code></li>
 <li>取制 <code>hget key filed</code></li>
@@ -504,7 +504,7 @@
 <li>向列表两端增加元素:<code>lpush key value [value]</code>向列表左边添加;<code>rpush key value [value]</code>右边添加</li>
 <li>查看列表<code>lrange key start stop</code>,索引从0开始，可以是负数，如-1代表最后边的</li>
 <li>从列表两端弹出元素<code>lpop key</code>;<code>rpop key</code>;</li>
-<li>获取列表元素个数<code>llen key</code>;<br><img src="/media/14891152268107.jpg" alt=""></li>
+<li>获取列表元素个数<code>llen key</code>;<br><img src="../media/14891152268107.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -512,7 +512,7 @@
 <li>集合中的数据是不重复且没有顺序</li>
 <li>与List类型比较</li>
 </ul>
-<p><img src="/media/14890502770124.jpg" alt=""></p>
+<p><img src="../media/14890502770124.jpg" alt=""></p>
 <ul>
 <li>集合类型的常用操作是<strong>向集合中加入或删除元素</strong>、<strong>判断某个元素是否存在</strong>等，由于集合类型的Redis内部是使用值为空的散列表实现，所有这些操作的时间复杂度都为0(1)。 Redis还提供了多个集合之间的交集、并集、差集的运算。</li>
 <li>常用命令<ul>
@@ -522,7 +522,7 @@
 <li>运算命令<ul>
 <li>差集（属于A且不属于B的元素集合）<code>sdiff key [key ...]</code></li>
 <li>交集 <code>sinter key [key...]</code></li>
-<li>并集 <code>sunion key [key...]</code><br><img src="/media/14891164162143.jpg" alt=""></li>
+<li>并集 <code>sunion key [key...]</code><br><img src="../media/14891164162143.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -548,7 +548,7 @@
 <li>删除元素：移除有序集key中的一个或多个成员，不存在的成员将被忽略。当key存在但不是有序集类型时，返回一个错误。<code>zrem key member [member...]</code></li>
 <li>获得排名在某个范围的元素列表<ul>
 <li>按照元素分数从小到大的顺序返回索引从start到stop之间的所有元素（包含两端的元素）<code>zrange key start stop [withscores]</code></li>
-<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="/media/14891282942094.jpg" alt=""></li>
+<li>从大到小 <code>zrevrange key start stop [withscores]</code><br><img src="../media/14891282942094.jpg" alt=""></li>
 </ul>
 </li>
 </ul>
@@ -692,7 +692,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">92</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -700,7 +700,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -709,7 +709,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

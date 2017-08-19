@@ -336,8 +336,8 @@
             
               
                 
-                <a class="post-title-link" href="/设计模式4-构建者模式.html" itemprop="url">
-                  设计模式4-构建者模式
+                <a class="post-title-link" href="/基础算法-数学和位操作.html" itemprop="url">
+                  基础算法-数学和位操作
                 </a>
               
             
@@ -350,8 +350,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-04-09T22:17:01+08:00" content="2017-04-09">
-              2017-04-09
+            <time itemprop="dateCreated" datetime="2017-05-31T16:18:45+08:00" content="2017-05-31">
+              2017-05-31
             </time>
           </span>
 
@@ -364,8 +364,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/designPattern/" itemprop="url" rel="index">
-                    <span itemprop="name">designPattern</span>
+                  <a href="/categories/algorithm/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithm</span>
                   </a>
                 </span>
 
@@ -380,8 +380,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/设计模式4-构建者模式.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="设计模式4-构建者模式.html" itemprop="commentsCount"></span>
+                <a href="/基础算法-数学和位操作.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="基础算法-数学和位操作.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -405,12 +405,43 @@
 
       
         
-          BuilderModel, Effective java 第二条,遇到多个构造器参数时要考虑用构建器
-          <div class="post-more-link text-center">
-            <a class="btn" href="/设计模式4-构建者模式.html">
-              阅读全文 &raquo;
-            </a>
-          </div>
+          
+            <h2 id="最大公约数-最小公倍数"><a href="#最大公约数-最小公倍数" class="headerlink" title="最大公约数/最小公倍数"></a>最大公约数/最小公倍数</h2><ul>
+<li>最大公约数:greatest common divisor</li>
+<li>欧几里得法(辗转相除法):设<code>a&gt;b</code>,<code>a=b*p+q</code>,b与q的最大公约也就是a与b的最大公约数,直到q为0,直接返回;</li>
+<li>最小公倍数:lowest common multiple; <code>lcm(a,b)*gcd(a,b)=a*b</code>;</li>
+<li>求两个数或n个数的最小公倍数或最大公约数:<br><img src="../images/gcd.png" alt=""></li>
+</ul>
+<h2 id="进制转换"><a href="#进制转换" class="headerlink" title="进制转换"></a>进制转换</h2><h2 id="素数"><a href="#素数" class="headerlink" title="素数"></a>素数</h2><ul>
+<li>素数: 只有1和本身两个约数;判断是否为素数,只需要对前根号n个数进行判断<br><img src="../images/prime.png" alt=""></li>
+</ul>
+<h2 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h2><p>位操作有按位与、或、非、左移n位和右移n位等操作。</p>
+<ol>
+<li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1): 可以把最右边的一个1变成0;</li>
+<li>常见位操作：获取，设置，清除及更新位操作<br><img src="../images/位-获取.png" alt=""><br><img src="../images/位-更新.png" alt=""><br><img src="../images/位-清零.png" alt=""></li>
+</ol>
+<h3 id="二进制中的1的个数"><a href="#二进制中的1的个数" class="headerlink" title="二进制中的1的个数"></a>二进制中的1的个数</h3><ul>
+<li>将n的二进制表示的右边第一个1变成0:n&amp;(n-1)</li>
+</ul>
+<h2 id="卡特兰数"><a href="#卡特兰数" class="headerlink" title="卡特兰数"></a>卡特兰数</h2><ul>
+<li>卡特兰数递推关系:<img src="../images/卡特兰.png" alt=""></li>
+<li>卡特兰数通项式:<img src="../images/catalan.png" alt=""><img src="../images/catalan1.png" alt=""></li>
+<li>前几项为1，1，2，5，14，42…</li>
+<li>应用:<ul>
+<li>栈的出栈序列:1到n的序列,依次进栈,有多少种不同的出栈序列；根据乘法原理和加法原理，设最后一个出栈的元素为k，则该情况为f(k-1)f(n-k)，所以递推关系满足；<code>f(n) = f(n-1)f(0) + f(n-2)f(1) + f(n-3)f(2) + ... + f(1)f(n-2) + f(0)f(n-1)</code></li>
+<li>不同的二叉查找树： <a href="http://www.lintcode.com/zh-cn/problem/unique-binary-search-trees/" target="_blank" rel="external">lintcode|不同二叉查找树</a>；<code>f(n) = f(n-1)f(0) + f(n-2)f(1) + f(n-3)f(2) + ... + f(1)f(n-2) + f(0)f(n-1)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="模运算"><a href="#模运算" class="headerlink" title="模运算"></a>模运算</h2><h2 id="全排列和全组合"><a href="#全排列和全组合" class="headerlink" title="全排列和全组合"></a>全排列和全组合</h2><ul>
+<li>思路: 从集合依次选出每一个元素，作为排列的第一个元素，然后对剩余的元素进行全排列，如此递归处理；</li>
+<li>参考:<a href="https://segmentfault.com/a/1190000002710424" target="_blank" rel="external">全排列/全组合</a></li>
+</ul>
+<h2 id="lintCode阶梯训练"><a href="#lintCode阶梯训练" class="headerlink" title="lintCode阶梯训练"></a>lintCode阶梯训练</h2><ul>
+<li><a href="http://www.lintcode.com/zh-cn/ladder/" target="_blank" rel="external">lintcode阶梯训练|数学与二进制运算</a></li>
+</ul>
+
+          
         
       
     </div>
@@ -458,8 +489,8 @@
             
               
                 
-                <a class="post-title-link" href="/Java基础-序列化与反序列化.html" itemprop="url">
-                  Java基础-序列化与反序列化
+                <a class="post-title-link" href="/面试-操作系统总结.html" itemprop="url">
+                  操作系统总结
                 </a>
               
             
@@ -472,160 +503,19 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-28T15:21:21+08:00" content="2017-03-28">
-              2017-03-28
+            <time itemprop="dateCreated" datetime="2017-05-24T16:38:07+08:00" content="2017-05-24">
+              2017-05-24
             </time>
           </span>
 
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/java/" itemprop="url" rel="index">
-                    <span itemprop="name">java</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
           
 
           
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/Java基础-序列化与反序列化.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Java基础-序列化与反序列化.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          Java对象的序列化与反序列化
-          <div class="post-more-link text-center">
-            <a class="btn" href="/Java基础-序列化与反序列化.html">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/设计模式1-概述.html" itemprop="url">
-                  设计模式1-概述
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-19T19:57:11+08:00" content="2017-03-19">
-              2017-03-19
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/designPattern/" itemprop="url" rel="index">
-                    <span itemprop="name">designPattern</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/设计模式1-概述.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="设计模式1-概述.html" itemprop="commentsCount"></span>
+                <a href="/面试-操作系统总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="面试-操作系统总结.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -650,44 +540,105 @@
       
         
           
-            <h1 id="设计原则-开闭原则"><a href="#设计原则-开闭原则" class="headerlink" title="设计原则-开闭原则"></a>设计原则-开闭原则</h1><ul>
-<li>“一个软件实体应当对扩展开放，对修改关闭(Software entities should be open for extension, but closed for modification)”</li>
-<li>开闭原则理解，在设计一个模块的时候应该使这个模块可以在不被修改的前提下被扩展。换言之，应该可以在不必修改源代码的情况下改变这个模块的行为。</li>
+            <h1 id="操作系统概念"><a href="#操作系统概念" class="headerlink" title="操作系统概念"></a>操作系统概念</h1><ol>
+<li>基本概念：管理计算机硬件和软件资源，方便用户使用计算机的程序集合；</li>
+<li>操作系统提供的服务和功能：<ul>
+<li>提供用户的<ul>
+<li>用户界面</li>
+<li>程序执行</li>
+<li>I/O操作</li>
+<li>文件系统操作</li>
+<li>通信</li>
+<li>错误检测</li>
 </ul>
-<h1 id="设计模式的分类"><a href="#设计模式的分类" class="headerlink" title="设计模式的分类"></a>设计模式的分类</h1><ul>
-<li>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</li>
+</li>
 </ul>
-<h2 id="创建型设计模式"><a href="#创建型设计模式" class="headerlink" title="创建型设计模式"></a>创建型设计模式</h2><ul>
-<li>单例模式(Singleton)</li>
-<li>构建模式(Builder)</li>
-<li>原型模式(Prototype)</li>
-<li>抽象工厂模式(Abstract Factory)</li>
-<li>工厂方法模式(Factory Method)</li>
+</li>
+<li>计算机系统<br><img src="../images/计算机要素.png" alt=""></li>
+</ol>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><ol>
+<li>进程的概念： 进程是具有一定独立功能的程序关于某个数据集合的一次运行活动。进程是程序的执行，动态概念，一次运行过程，有生命过程。</li>
+<li>进程控制块（process control block, PCB）:记录进程的属性信息，进程标识信息，处理器状态信息，进程控制信息</li>
+<li>进程间通信的两种基本模式： 1）共享内存， 2）消息传递<br><img src="../images/进程通信模型.png" alt="进程通信模型"></li>
+</ol>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><ol>
+<li>多处理器系统带来的物理并行称为<strong>并行性</strong>，用编程技术达到的虚拟并行性，称为并发性</li>
+<li>线程是CPU调度的基本单元，由线程ID,程序计数器，寄存器集合，栈组成。</li>
+</ol>
+<h1 id="互斥和同步"><a href="#互斥和同步" class="headerlink" title="互斥和同步"></a>互斥和同步</h1><ol>
+<li>互斥（对资源的独用），同步（进程/线程之间的通信）</li>
+<li>生产者和消费者问题：有限缓冲问题，用于多线程同步；多生产者消费者算法：用二元信号量保证互斥<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line">semaphore mutex = 1;//二元信号量</div><div class="line">semaphore fillCount = 0;// 满缓存信号量</div><div class="line">semaphore emptyCount = BUFFER_SIZE;//空缓存信号量</div><div class="line"></div><div class="line"></div><div class="line">procedure producer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        item = produceItem();//生产者生产数据</div><div class="line">        down(emptyCount);</div><div class="line">            down(mutex);//互斥，申请使用权</div><div class="line">                putItemIntoBuffer(item);//将数据放入缓存区</div><div class="line">            up(mutex);//释放使用权</div><div class="line">        up(fillCount);</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line">procedure consumer() &#123;</div><div class="line">    while (true) &#123;</div><div class="line">        down(fillCount);</div><div class="line">            down(mutex);</div><div class="line">                item = removeItemFromBuffer();//从缓存区中读取数据</div><div class="line">            up(mutex);</div><div class="line">        up(emptyCount);</div><div class="line">        consumeItem(item);//消费者使用数据</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ul>
+<li><a href="https://zh.wikipedia.org/wiki/%E7%94%9F%E4%BA%A7%E8%80%85%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98" target="_blank" rel="external">参考</a></li>
 </ul>
-<h2 id="行为设计模式"><a href="#行为设计模式" class="headerlink" title="行为设计模式"></a>行为设计模式</h2><ul>
-<li>策略模式(Strategy)</li>
-<li>状态模式(State)</li>
-<li>责任链模式(Chain of Responsibility)</li>
-<li>解释器模式(Interpreter)</li>
-<li>命令模式(Command)</li>
-<li>观察者模式(Observer)</li>
-<li>备忘录模式(Memento)</li>
-<li>迭代器模式(Iterator)</li>
-<li>模板方法模式(Template Method)</li>
-<li>访问者模式(Visitor)</li>
-<li>中介者模式(Mediator)</li>
+<h1 id="进程调用"><a href="#进程调用" class="headerlink" title="进程调用"></a>进程调用</h1><h1 id="CPU调度"><a href="#CPU调度" class="headerlink" title="CPU调度"></a>CPU调度</h1><ol>
+<li>先进先出调度算法（不可抢占）：按进入顺序执行</li>
+<li>最短进程优先调度（事先知道要运行的时间）<ul>
+<li>非抢占式</li>
+<li>抢占式（最短剩余时间优先调度）</li>
 </ul>
-<h2 id="结构型设计模式"><a href="#结构型设计模式" class="headerlink" title="结构型设计模式"></a>结构型设计模式</h2><ul>
-<li>装饰者模式(Decorator)</li>
-<li>代理模式(Proxy)</li>
-<li>组合模式(Composite)</li>
-<li>桥连接模式(Bridge)</li>
-<li>适配器模式(Adapter)</li>
-<li>蝇量模式(Flyweight)</li>
-<li>外观模式(Facade)</li>
+</li>
+<li>时间片轮转法：每个进程轮流使用一段时间</li>
+</ol>
+<h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1><ul>
+<li>死锁：指多个进程因竞争共享资源而造成的一种僵局，若无外力作用，这些进程都将永远不能再向前推进</li>
 </ul>
+<ol>
+<li><p>产生死锁的原因 </p>
+<ul>
+<li><strong>竞争资源引起死锁</strong><ul>
+<li>在多道程序系统，多个进程共享系统的资源。系统资源分为二类:<br>一类是不可抢占的资源，如打印机、磁带机等。当系统把这类资源分配给某进程后，再不能强行收回，只能在进程用完后自动释放。<br>另一类是可抢占的资源，如CPU、内存等。由于系统拥有的不可抢占的资源有限，多个进程共享竞争不可抢占的资源就可能引起死锁。</li>
+</ul>
+</li>
+<li><strong>进程推进顺序不当引起死锁</strong><ul>
+<li>在多道程序系统中，并发执行的进程推进序列不可予测，有些推进顺序，进程可以顺利完成，这些推进顺序是合法的；而有的推进顺序会引起进程无限期地等待永远不会发生的条件而不能向前推进，造成了死锁。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>产生死锁的必要条件</p>
+<ul>
+<li>互斥（ Mutual exclusion ）条件：一个资源一次只能被一个进程所使用，即是排它性使用。</li>
+<li>不可抢占（ No preemption ）条件：一个资源仅能被占有它的进程所释放，而不能被别的进程强占。</li>
+<li>请求和保持（ Hold-and-wait ）条件：进程已经保持了至少一个资源，但又提出了新的资源要求，而该资源又已被其它进程占有，此时请求进程阻塞，但又对已经获得的其它资源保持不放。</li>
+<li>环路等待（ Circular wait ）条件：当每类资源只有一个时，在发生死锁时，必然存在一个进程-资源的环形链。如一系统状态的资源分配图所示，P1正在等待一个P2 占用的资源R2，P2正在等待一个P1占用的资源R1。</li>
+</ul>
+</li>
+<li><p>死锁的预防</p>
+<ul>
+<li><strong>预防死锁的方法是破坏四个产生死锁的必要条件之一</strong>。</li>
+</ul>
+<ol>
+<li>破坏互斥条件: 互斥使用是资源本身特征所决定的。使用硬软件结合可改变资源本身特性，例如采用SPOOLing技术可将“独享” 打印机改变为“共享”的打印机。</li>
+<li>破坏不可抢占条件:如果一个进程的申请没有实现，它要释放所有占有的资源</li>
+<li>破坏请求和保持条件（也叫部分分配条件）: 采用<strong>资源预先静态分配法</strong>，运行前，一次性分配所需要的全部资源</li>
+<li>破坏循环等待条件： <strong>有序资源使用法</strong>，对资源编号，进程只能按照编号递增的顺序申请资源。</li>
+</ol>
+</li>
+<li><p>死锁的避免</p>
+<ol>
+<li>概念： 死锁的预防是严格破坏四个必要条件之一，死锁避免是方法允许进程动态地申请资源，系统在进行资源分配之前，先计算资源分配的安全性。若安全，则分配。避免死锁：确保系统永远不会进入死锁状态</li>
+<li><strong>银行家算法</strong>避免死锁，不足：进程难以预先知道它的最大资源需求</li>
+</ol>
+</li>
+<li><p>死锁的检测和恢复</p>
+</li>
+</ol>
+<h1 id="主存储器管理"><a href="#主存储器管理" class="headerlink" title="主存储器管理"></a>主存储器管理</h1><ol>
+<li>页式存储管理</li>
+<li>段式存储管理</li>
+<li>页的置换算法<ul>
+<li>最佳置换算法</li>
+<li>最佳未使用置换算法(NUR)</li>
+<li>先进先出</li>
+<li>最近最少使用置换算法（LRU）</li>
+</ul>
+</li>
+</ol>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.kancloud.cn/digest/xing-designpattern/143722" target="_blank" rel="external">写最好的设计模式专栏</a></li>
+<li><a href="http://jpkc.scezju.com/czxtyl/redir.php?catalog_id=109249" target="_blank" rel="external">操作系统ppt</a></li>
 </ol>
 
           
@@ -738,8 +689,8 @@
             
               
                 
-                <a class="post-title-link" href="/基础算法-递归和动态规划.html" itemprop="url">
-                  基础算法-递归和动态规划
+                <a class="post-title-link" href="/面试-计算机网络总结.html" itemprop="url">
+                  计算机网络总结
                 </a>
               
             
@@ -752,8 +703,195 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-19T19:39:33+08:00" content="2017-03-19">
-              2017-03-19
+            <time itemprop="dateCreated" datetime="2017-05-24T15:32:11+08:00" content="2017-05-24">
+              2017-05-24
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/面试-计算机网络总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="面试-计算机网络总结.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><h2 id="OSI七层模型与TCP-IP四层模型"><a href="#OSI七层模型与TCP-IP四层模型" class="headerlink" title="OSI七层模型与TCP/IP四层模型"></a>OSI七层模型与TCP/IP四层模型</h2><p><img src="../images/osi七层模型.gif" alt=""></p>
+<ul>
+<li>实际应用的tcp/ip四层: 连接层,网络层,传输层,应用层</li>
+<li>各层的作用<ol>
+<li>物理层：通过媒介传输比特,确定机械及电气规范</li>
+<li>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</li>
+<li>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</li>
+<li>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</li>
+<li>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</li>
+<li>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</li>
+<li>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</li>
+</ol>
+</li>
+</ul>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><p><img src="../images/ip.png" alt=""><br><img src="../images/ip1.png" alt=""></p>
+<ul>
+<li>A类地址,<ul>
+<li>可指派的网络号126个(2^7-2),见2的原因是: 网络号全0为保留地址,表示本网络;网络号127(0111 1111)保留为回环测试(如127.0.0.1)</li>
+<li>可指派的主机号: 2^24-2; 减去全0的主机号,减去全1主机号</li>
+</ul>
+</li>
+<li>B类地址<ul>
+<li>可指派网络号2^14-1:128.0不指派,最小可指派的网络号是128.1</li>
+<li>主机号减2,2^16-2;</li>
+</ul>
+</li>
+<li>C类地址<ul>
+<li>可指派网络号2^21-1:192.0.0不指派,最小可指派的网络号192.0.1</li>
+<li>主机号减2: 2^8-2;</li>
+</ul>
+</li>
+</ul>
+<h2 id="TCP-UDP协议"><a href="#TCP-UDP协议" class="headerlink" title="TCP/UDP协议"></a>TCP/UDP协议</h2><ul>
+<li>运输层协议和网络层协议的主要区别<br><img src="../images/运输层网络层.png" alt=""></li>
+<li><p>运输层的协议端口号</p>
+<ul>
+<li>协议端口号(protocol port number),简称端口;使不同的操作系统中的进程可以相互通信,用统一的方法对TCP/IP体系中的应用进程进行标识;16位的端口号(65535个)</li>
+<li>通信的终点是应用进程,但我们只需把要传送的报文交到目的主机的某一个合适的目的端口，剩下的工作（即最后交付目的进程）就由 TCP 来完成</li>
+</ul>
+</li>
+<li><p>tcp字段含义<br><img src="../images/tcp字段.png" alt=""></p>
+</li>
+<li><p>传输层定义两种传输协议：TCP（传输控制协议）和 UDP（或用户数据报协议）<br><img src="../images/tcp-udp.png" alt=""></p>
+</li>
+<li>TCP协议和UDP协议特性区别总结：<ol>
+<li>TCP协议在传送数据段的时候要给段标号；UDP协议不</li>
+<li>TCP协议可靠；UDP协议不可靠</li>
+<li>TCP协议是面向连接；UDP协议采用无连接</li>
+<li>TCP协议负载较高，采用虚电路；UDP采用无连接</li>
+<li>TCP协议的发送方要确认接收方是否收到数据段（3次握手协议）</li>
+<li>TCP协议采用窗口技术和流控制</li>
+</ol>
+</li>
+</ul>
+<h2 id="TCP三次握手与四次分手"><a href="#TCP三次握手与四次分手" class="headerlink" title="TCP三次握手与四次分手"></a>TCP三次握手与四次分手</h2><p><img src="../images/tcp.jpg" alt=""></p>
+<ol>
+<li>三次握手和四次分手的过程</li>
+<li>为什么要三次握手和四次分手</li>
+<li>参考:<a href="http://www.jellythink.com/archives/705" target="_blank" rel="external">简析TCP的三次握手与四次分手</a></li>
+</ol>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><ul>
+<li>http状态码<br><img src="../images/http状态码.png" alt=""><ul>
+<li>404  未找到，服务器找不到所请求的网页。</li>
+<li>302  临时移动，服务器从不同位置的网页响应请求，请求者应继续使用原有位置进行以后的请求。</li>
+<li>500  （服务器内部错误），服务器遇到错误，无法完成请求。</li>
+<li>403  （禁止）服务器拒绝请求</li>
+</ul>
+</li>
+<li>http与https区别<ul>
+<li>http协议</li>
+<li>简单理解: https是安全版的http,</li>
+<li>HTTP的端口号是80，https的端口号是443</li>
+</ul>
+</li>
+</ul>
+<h2 id="SNMP简单网络管理协议"><a href="#SNMP简单网络管理协议" class="headerlink" title="SNMP简单网络管理协议"></a>SNMP简单网络管理协议</h2><ul>
+<li>simple network management protocol 简单网络管理协议</li>
+<li>是一个网络管理员用来管理的工具相当于  一个app 所以是<strong>应用层</strong></li>
+</ul>
+<h2 id="ICMP"><a href="#ICMP" class="headerlink" title="ICMP"></a>ICMP</h2><ul>
+<li>Internet Control Message Protocol 互联网控制消息协议</li>
+<li>网络层协议</li>
+<li>用ping命令,检查一台主机的网络层是否连通;</li>
+</ul>
+<h2 id="以太网"><a href="#以太网" class="headerlink" title="以太网"></a>以太网</h2><ul>
+<li>IEEE 802.3—CSMA/CD网络，定义CSMA/CD总线网的MAC子层和物理层的规范,人们习惯将<strong>IEEE 802.3称为”以太网</strong>;</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/基础数据结构-字符串和数组.html" itemprop="url">
+                  基础数据结构-字符串和数组
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-05-23T22:12:47+08:00" content="2017-05-23">
+              2017-05-23
             </time>
           </span>
 
@@ -782,8 +920,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/基础算法-递归和动态规划.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="基础算法-递归和动态规划.html" itemprop="commentsCount"></span>
+                <a href="/基础数据结构-字符串和数组.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="基础数据结构-字符串和数组.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -807,9 +945,9 @@
 
       
         
-          递归和动态规划总结
+          字符串总结，字符串相关面试题总结
           <div class="post-more-link text-center">
-            <a class="btn" href="/基础算法-递归和动态规划.html">
+            <a class="btn" href="/基础数据结构-字符串和数组.html">
               阅读全文 &raquo;
             </a>
           </div>
@@ -860,8 +998,8 @@
             
               
                 
-                <a class="post-title-link" href="/基础算法-查找.html" itemprop="url">
-                  基础算法-查找
+                <a class="post-title-link" href="/基础数据结构-字典树.html" itemprop="url">
+                  基础数据结构-字典树
                 </a>
               
             
@@ -874,8 +1012,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-03-19T19:38:06+08:00" content="2017-03-19">
-              2017-03-19
+            <time itemprop="dateCreated" datetime="2017-05-17T21:16:50+08:00" content="2017-05-17">
+              2017-05-17
             </time>
           </span>
 
@@ -904,8 +1042,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/基础算法-查找.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="基础算法-查找.html" itemprop="commentsCount"></span>
+                <a href="/基础数据结构-字典树.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="基础数据结构-字典树.html" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -929,9 +1067,12 @@
 
       
         
-          
-            
-          
+          tire,前缀树，字典树
+          <div class="post-more-link text-center">
+            <a class="btn" href="/基础数据结构-字典树.html">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -962,7 +1103,7 @@
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/17/">17</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/13/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><span class="page-number current">14</span><a class="page-number" href="/page/15/">15</a><span class="space">&hellip;</span><a class="page-number" href="/page/19/">19</a><a class="extend next" rel="next" href="/page/15/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1003,7 +1144,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">92</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1011,7 +1152,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1020,7 +1161,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

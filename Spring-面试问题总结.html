@@ -1,0 +1,1004 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="面试," />
+
+
+
+
+
+  <link rel="alternate" href="/rss2.xml" title="刘航" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="Spring总结，面试问题总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring-面试问题总结">
+<meta property="og:url" content="http://liuhang.net.cn/Spring-面试问题总结.html">
+<meta property="og:site_name" content="刘航">
+<meta property="og:description" content="Spring总结，面试问题总结">
+<meta property="og:updated_time" content="2017-07-19T06:16:37.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Spring-面试问题总结">
+<meta name="twitter:description" content="Spring总结，面试问题总结">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 6388857507749561000,
+      author: '航'
+    }
+  };
+</script>
+
+  <title> Spring-面试问题总结 | 刘航 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <meta name="baidu-site-verification" content="zH6i7VUi6J" />
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">刘航</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-navigation">
+          <a href="/navigation" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bookmark"></i> <br />
+            
+            导航
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tool">
+          <a href="/categories/tool/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-wrench"></i> <br />
+            
+            工具
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-java">
+          <a href="/categories/java/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-coffee"></i> <br />
+            
+            Java
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-frame">
+          <a href="/categories/frame/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-leaf"></i> <br />
+            
+            框架
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-web">
+          <a href="/categories/web/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
+            
+            Web
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-algorithm">
+          <a href="/categories/algorithm/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br />
+            
+            数据结构与算法
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-design">
+          <a href="/categories/designPattern/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tint"></i> <br />
+            
+            设计模式
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-essay">
+          <a href="/categories/essay/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-music"></i> <br />
+            
+            随笔
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="#" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup">
+ <span class="search-icon fa fa-search"></span>
+ <input type="text" id="local-search-input">
+ <div id="local-search-result"></div>
+ <span class="popup-btn-close">close</span>
+</div>
+
+
+    </div>
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Spring-面试问题总结
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-16T10:30:21+08:00" content="2017-07-16">
+              2017-07-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/frame/" itemprop="url" rel="index">
+                    <span itemprop="name">frame</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/Spring-面试问题总结.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="Spring-面试问题总结.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv">本文总阅读量
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Spring是什么，简单说下Spring"><a href="#Spring是什么，简单说下Spring" class="headerlink" title="Spring是什么，简单说下Spring"></a>Spring是什么，简单说下Spring</h1><ol>
+<li>Spring是分层的Java EE/SE一站式开源框架，它以IoC控制反转和AOP（面向切面编程）为核心。</li>
+</ol>
+<h1 id="Spring优点"><a href="#Spring优点" class="headerlink" title="Spring优点"></a>Spring优点</h1><ul>
+<li>IoC支持方便解耦，简化开发</li>
+<li>AOP编程的支持</li>
+<li>声明式事务的支持</li>
+<li>方便程序的测试</li>
+<li>方便集成各种优秀框架</li>
+<li>降低JavaEE API的使用难度</li>
+</ul>
+<h1 id="控制反转IoC和依赖注入DI"><a href="#控制反转IoC和依赖注入DI" class="headerlink" title="控制反转IoC和依赖注入DI"></a>控制反转IoC和依赖注入DI</h1><ul>
+<li>控制反转：借助第三方（即容器），把新建对象的控制权，交给了容器，由容器负责对象新建装配</li>
+<li>依赖注入：实现控制反转的方式有依赖注入和依赖查找</li>
+<li>Spring中依赖注入DI的类型：构造函数注入，属性注入；</li>
+</ul>
+<h1 id="Spring中装配Bean的几种方式"><a href="#Spring中装配Bean的几种方式" class="headerlink" title="Spring中装配Bean的几种方式"></a>Spring中装配Bean的几种方式</h1><ul>
+<li>现在有四种方式<ul>
+<li>基于XML配置</li>
+<li>基于注解配置</li>
+<li>基于Java配置</li>
+<li>基于Groovy 动态语言配置</li>
+</ul>
+</li>
+</ul>
+<h1 id="Spring中用到了哪些设计模式"><a href="#Spring中用到了哪些设计模式" class="headerlink" title="Spring中用到了哪些设计模式"></a>Spring中用到了哪些设计模式</h1><ol>
+<li>代理模式,</li>
+<li>工厂模式</li>
+<li>单例模式</li>
+<li>模板方法模式：用来解决代码重复的问题</li>
+<li>策略模式：Resource与ResourceLoader</li>
+</ol>
+<h1 id="描述一下-Spring-Bean的生命周期"><a href="#描述一下-Spring-Bean的生命周期" class="headerlink" title="描述一下 Spring Bean的生命周期"></a>描述一下 Spring Bean的生命周期</h1><p>关键节点</p>
+<ol>
+<li>实例化，前后InstantiationAwareBeanPostProcessor接口的方法；</li>
+<li>设置属性值， 后 BeanNameAware和BeanFactoryAware，感知BeanName和BeanFactory</li>
+<li>初始化方法（init-method） 前后 BeanPostProcessor接口方法，对Bean进行处理，前nitializingBean处理</li>
+<li>销毁方法(destory-method)，前DisposeBean处理</li>
+</ol>
+<p>三类方法调用</p>
+<ol>
+<li>Bean自身的方法调用，构造函数来实例化Bean,Setter方法设置Bean的属性，init_method和destory_method方法</li>
+<li>Bean级生命周期接口方法（Bean自己实现的接口），BeanNameAware和BeanFactoryAware,InitializingBean和DisposeBean</li>
+<li>容器及生命周期接口方法，InstantiationAwareBeanPostProcessor和BeanPostProcessor接口，分别在实例化和初始化前后，对Bean进行处理</li>
+</ol>
+<h1 id="BeanFactory和ApplicationContext的区别"><a href="#BeanFactory和ApplicationContext的区别" class="headerlink" title="BeanFactory和ApplicationContext的区别"></a>BeanFactory和ApplicationContext的区别</h1><ol>
+<li>BeanFactory是Spring最核心的接口，它是工厂模式的实现，来负责实例化Bean并建立Bean之间的依赖关系，控制Bean的生命周期；</li>
+<li>ApplicationContext应用上下文，它是建立在BeanFactory基础上（ApplicationContext接口继承ListableBeanFactory接口，ListableBeanFactory继承BeanFactory接口）；BeanFactory更加底层，它面对Spring本身；而ApplicationContext面向使用Spring的开发者；它的主要实现者有ClassPathXmlApplicationContext，FileSystemXmlApplicationContext等</li>
+<li>ApplicationContext提供了更多面向实际应用的功能<ul>
+<li>国际化消息访问功能</li>
+<li>统一的资源读取方式</li>
+<li>能够发布事件，并允许注册相应的事件监听器；</li>
+</ul>
+</li>
+</ol>
+<h1 id="FactoryBean和BeanFactory"><a href="#FactoryBean和BeanFactory" class="headerlink" title="FactoryBean和BeanFactory"></a>FactoryBean和BeanFactory</h1><ol>
+<li>FactoryBean，顾名思义，工厂Bean（像工厂一样的Bean）,是一个能产生或者修饰对象的Bean，可以在ioc容器中被管理,用户通过实现FacatoryBean接口定制实例化Bean的逻辑,使用“&amp;”前缀，获取FactoryBean产生的对象（getObject方法）；</li>
+<li>BeanFactory，ioc容器，对Bean进行管理；</li>
+</ol>
+<h1 id="Bean的作用域"><a href="#Bean的作用域" class="headerlink" title="Bean的作用域"></a>Bean的作用域</h1><ol>
+<li>singleton 仅存在一个Bean实例</li>
+<li>prototype 每次调用Bean时，都返回一个新实例</li>
+<li>request 每次http请求，创建一个新的Bean</li>
+<li>session 同一个Http Session，共享一个Bean</li>
+<li>globalSession global-session和Portlet应用相关；</li>
+</ol>
+<h1 id="Spring内部Bean"><a href="#Spring内部Bean" class="headerlink" title="Spring内部Bean"></a>Spring内部Bean</h1><ol>
+<li>内部bean和Java匿名内部类相似，仅仅被某一个bean调用</li>
+</ol>
+<h1 id="基于注解配置，说说所知道的注解"><a href="#基于注解配置，说说所知道的注解" class="headerlink" title="基于注解配置，说说所知道的注解"></a>基于注解配置，说说所知道的注解</h1><ol>
+<li>@Component注解，定义Bean； 对应的在分层结构中，DAO层，@Repository；Service层：@Service； Web层：@Controller</li>
+<li>@Autowired注解，自动装配（required= false），@Lazy注解，延迟注入</li>
+<li>@Configuration注解，基于Java类配置；@Bean注解； </li>
+<li>Spring MVC注解，@RequestMapping</li>
+<li>Spring Cache, @Cacheable注解</li>
+</ol>
+<h1 id="Spring的单例Bean是线程安全的吗"><a href="#Spring的单例Bean是线程安全的吗" class="headerlink" title="Spring的单例Bean是线程安全的吗"></a>Spring的单例Bean是线程安全的吗</h1><ol>
+<li>并没有对单例bean进行任何多线程的封装处理；自行去保证线程安全</li>
+</ol>
+<h1 id="Spring-MVC"><a href="#Spring-MVC" class="headerlink" title="Spring MVC"></a>Spring MVC</h1><h2 id="Spring-MVC过程"><a href="#Spring-MVC过程" class="headerlink" title="Spring MVC过程"></a>Spring MVC过程</h2><ol>
+<li>DispatcherServlet接收请求</li>
+<li>HanddlerMappig来寻找对应的处理器(Controller)</li>
+<li>DispatcherServlet根据查找到的处理器，通过HandlerAdapter处理器适配器，调用处理器的方法，</li>
+<li>处理器完成业务逻辑后，返回ModelAndView</li>
+<li>DispatcherServlet调用试图解析器解析视图，视图渲染，得到最后的页面</li>
+<li>返回。</li>
+</ol>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>欢迎打赏，谢谢您的支持！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatPay.png" alt="刘航 WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/images/Alipay.jpeg" alt="刘航 Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag">#面试</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/设计模式7-策略模式.html" rel="next" title="设计模式7-策略模式">
+                <i class="fa fa-chevron-left"></i> 设计模式7-策略模式
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/Spring-源码研究1-ioc容器实现.html" rel="prev" title="Spring-源码研究1-ioc容器实现">
+                Spring-源码研究1-ioc容器实现 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="Spring-面试问题总结.html"
+           data-title="Spring-面试问题总结" data-url="http://liuhang.net.cn/Spring-面试问题总结.html">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpeg"
+               alt="刘航" />
+          <p class="site-author-name" itemprop="name">刘航</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/">
+              <span class="site-state-item-count">90</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/rss2.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/husthang" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2673306923" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://my.oschina.net/husthang/blog" target="_blank" title="开源中国">
+                  
+                    <i class="fa fa-fw fa-book"></i>
+                  
+                  开源中国
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring是什么，简单说下Spring"><span class="nav-number">1.</span> <span class="nav-text">Spring是什么，简单说下Spring</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring优点"><span class="nav-number">2.</span> <span class="nav-text">Spring优点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#控制反转IoC和依赖注入DI"><span class="nav-number">3.</span> <span class="nav-text">控制反转IoC和依赖注入DI</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring中装配Bean的几种方式"><span class="nav-number">4.</span> <span class="nav-text">Spring中装配Bean的几种方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring中用到了哪些设计模式"><span class="nav-number">5.</span> <span class="nav-text">Spring中用到了哪些设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#描述一下-Spring-Bean的生命周期"><span class="nav-number">6.</span> <span class="nav-text">描述一下 Spring Bean的生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#BeanFactory和ApplicationContext的区别"><span class="nav-number">7.</span> <span class="nav-text">BeanFactory和ApplicationContext的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#FactoryBean和BeanFactory"><span class="nav-number">8.</span> <span class="nav-text">FactoryBean和BeanFactory</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bean的作用域"><span class="nav-number">9.</span> <span class="nav-text">Bean的作用域</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring内部Bean"><span class="nav-number">10.</span> <span class="nav-text">Spring内部Bean</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#基于注解配置，说说所知道的注解"><span class="nav-number">11.</span> <span class="nav-text">基于注解配置，说说所知道的注解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring的单例Bean是线程安全的吗"><span class="nav-number">12.</span> <span class="nav-text">Spring的单例Bean是线程安全的吗</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-MVC"><span class="nav-number">13.</span> <span class="nav-text">Spring MVC</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-MVC过程"><span class="nav-number">13.1.</span> <span class="nav-text">Spring MVC过程</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘航</span>
+</div>
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"liuhang"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+      
+      <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+      <script src="/js/src/hook-duoshuo.js"></script>
+    
+  
+
+
+
+
+
+  
+  
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+       search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body").append('<div class="popoverlay">').css('overflow', 'hidden');
+      $('.popup').toggle();
+
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+    'use strict';
+    $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+            // get the contents from search data
+            isfetched = true;
+            $('.popup').detach().appendTo('.header-inner');
+            var datas = $( "entry", xmlResponse ).map(function() {
+                return {
+                    title: $( "title", this ).text(),
+                    content: $("content",this).text(),
+                    url: $( "url" , this).text()
+                };
+            }).get();
+            var $input = document.getElementById(search_id);
+            var $resultContent = document.getElementById(content_id);
+            $input.addEventListener('input', function(){
+                var matchcounts = 0;
+                var str='<ul class=\"search-result-list\">';                
+                var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                $resultContent.innerHTML = "";
+                if (this.value.trim().length > 1) {
+                // perform local searching
+                datas.forEach(function(data) {
+                    var isMatch = true;
+                    var content_index = [];
+                    var data_title = data.title.trim().toLowerCase();
+                    var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                    var data_url = data.url;
+                    var index_title = -1;
+                    var index_content = -1;
+                    var first_occur = -1;
+                    // only match artiles with not empty titles and contents
+                    if(data_title != '' && data_content != '') {
+                        keywords.forEach(function(keyword, i) {
+                            index_title = data_title.indexOf(keyword);
+                            index_content = data_content.indexOf(keyword);
+                            if( index_title < 0 && index_content < 0 ){
+                                isMatch = false;
+                            } else {
+                                if (index_content < 0) {
+                                    index_content = 0;
+                                }
+                                if (i == 0) {
+                                    first_occur = index_content;
+                                }
+                            }
+                        });
+                    }
+                    // show search results
+                    if (isMatch) {
+                        matchcounts += 1;
+                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                        var content = data.content.trim().replace(/<[^>]+>/g,"");
+                        if (first_occur >= 0) {
+                            // cut out 100 characters
+                            var start = first_occur - 20;
+                            var end = first_occur + 80;
+                            if(start < 0){
+                                start = 0;
+                            }
+                            if(start == 0){
+                                end = 50;
+                            }
+                            if(end > content.length){
+                                end = content.length;
+                            }
+                            var match_content = content.substring(start, end);
+                            // highlight all keywords
+                            keywords.forEach(function(keyword){
+                                var regS = new RegExp(keyword, "gi");
+                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                            });
+                            
+                            str += "<p class=\"search-result\">" + match_content +"...</p>"
+                        }
+                        str += "</li>";
+                    }
+                })};
+                str += "</ul>";
+                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+                $resultContent.innerHTML = str;
+            });
+            proceedsearch();
+        }
+    });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').mousedown(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".popoverlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+  
+
+  
+
+  
+<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
+</script>
+
+
+</body>
+</html>

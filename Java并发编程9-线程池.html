@@ -86,13 +86,20 @@
 
 
 
+<meta name="description" content="线程池原理，线程池框架源码分析">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java并发编程7-线程池">
 <meta property="og:url" content="http://liuhang.net.cn/Java并发编程9-线程池.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-07-03T13:07:47.000Z">
+<meta property="og:description" content="线程池原理，线程池框架源码分析">
+<meta property="og:image" content="http://liuhang.net.cn/../images/threadpool.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/线程池源码.png">
+<meta property="og:image" content="http://liuhang.net.cn/../images/多线程worker.png">
+<meta property="og:updated_time" content="2017-08-11T07:44:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java并发编程7-线程池">
+<meta name="twitter:description" content="线程池原理，线程池框架源码分析">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/threadpool.png">
 
 
 
@@ -352,6 +359,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -386,7 +412,17 @@
       
 
       
-        
+        <h1 id="线程池原理"><a href="#线程池原理" class="headerlink" title="线程池原理"></a>线程池原理</h1><p><img src="../images/threadpool.png" alt=""></p>
+<h1 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h1><ul>
+<li>线程池核心代码<br><img src="../images/线程池源码.png" alt=""></li>
+</ul>
+<ul>
+<li>工作线程<ul>
+<li>工作线程：线程池创建线程时，会将线程封装成工作线程Worker，Worker在执行完任务后，<strong>还会循环获取工作队列里的任务来执行</strong><br><img src="../images/多线程worker.png" alt=""></li>
+</ul>
+</li>
+</ul>
+
       
     </div>
 
@@ -513,7 +549,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">82</span>
+              <span class="site-state-item-count">92</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -521,7 +557,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -530,7 +566,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">39</span>
+                <span class="site-state-item-count">38</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -595,7 +631,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线程池原理"><span class="nav-number">1.</span> <span class="nav-text">线程池原理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源码分析"><span class="nav-number">2.</span> <span class="nav-text">源码分析</span></a></li></ol></div>
             
           </div>
         </section>
