@@ -182,7 +182,10 @@
 <li>内推</li>
 <li>面试8.10-8.20左右</li>
 </ol>
-<h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
+<h2 id="4399（已投）"><a href="#4399（已投）" class="headerlink" title="4399（已投）"></a>4399（已投）</h2><ol>
+<li>时间</li>
+</ol>
+<h2 id="顺丰（已投）"><a href="#顺丰（已投）" class="headerlink" title="顺丰（已投）"></a>顺丰（已投）</h2><h2 id="亚马逊"><a href="#亚马逊" class="headerlink" title="亚马逊"></a>亚马逊</h2><h2 id="Thoughtworks-已投"><a href="#Thoughtworks-已投" class="headerlink" title="Thoughtworks(已投)"></a>Thoughtworks(已投)</h2><h2 id="搜狐（已投）"><a href="#搜狐（已投）" class="headerlink" title="搜狐（已投）"></a>搜狐（已投）</h2><h2 id="搜狗（已投）"><a href="#搜狗（已投）" class="headerlink" title="搜狗（已投）"></a>搜狗（已投）</h2><h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
 <li>管培生，在线笔试：<strong>8月25日</strong></li>
 <li>Java开发，在线笔试：<strong>9月8日</strong></li>
 </ol>
@@ -196,7 +199,7 @@
 <li>笔试时间未定</li>
 </ol>
 <h2 id="美团点评"><a href="#美团点评" class="headerlink" title="美团点评"></a>美团点评</h2><ol>
-<li>内推 （已投）</li>
+<li>内推 （已投） 笔试时间：<em>**8月31日</em></li>
 <li>秋招</li>
 </ol>
 <h2 id="网易（已投）"><a href="#网易（已投）" class="headerlink" title="网易（已投）"></a>网易（已投）</h2><ol>
@@ -205,7 +208,11 @@
 <h2 id="腾讯（已投）"><a href="#腾讯（已投）" class="headerlink" title="腾讯（已投）"></a>腾讯（已投）</h2><ol>
 <li>笔试时间<strong>9月13日</strong></li>
 </ol>
-<h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2>]]></content:encoded>
+<h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2><ol>
+<li><h2 id="58同城"><a href="#58同城" class="headerlink" title="58同城"></a>58同城</h2></li>
+<li><strong>8月23日</strong>，内推提前批笔试</li>
+</ol>
+]]></content:encoded>
       
       <comments>http://liuhang.net.cn/%E9%9A%8F%E7%AC%94-%E6%A0%A1%E6%8B%9B%E8%AE%B0%E5%BD%95.html#disqus_thread</comments>
     </item>
@@ -448,6 +455,37 @@
       </description>
       
       <comments>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B63-SpringMVC%E5%AE%9E%E7%8E%B0.html#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>面试准备</title>
+      <link>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html</link>
+      <guid>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html</guid>
+      <pubDate>Tue, 18 Jul 2017 02:05:59 GMT</pubDate>
+      <description>
+      
+        面试项目
+      
+      </description>
+      
+      <content:encoded><![CDATA[<h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
+<li>不懂得如何拒绝别人，导致影响自己的工作进度。比如，在实验室做的项目，经常是同学碰到一个问题不会，让我帮忙，我就去帮他搞定，导致自己的东西没做完，或者做到很晚。 改进方向是，首先告诉他，自己在什么时候可以给予帮助，而不是立马放下手头的事情去帮忙，让他决定是否继续求助。 其次，在帮助他解决问题的时候，不是一手包办，而是指明一个方向，告诉他查找什么资料可以解决，或者大体是什么思路，让他尽量自己解决。</li>
+<li>喜欢刨根问底的钻一些细节，导致做的一些事情不能按期完成。比如说，使用一些开源框架，就想去看看到底咋回事，导致太发散，没有聚焦点。通过时间管理，改变工作方式。</li>
+</ol>
+<h1 id="项目1：华中科技大学电子工程系官网"><a href="#项目1：华中科技大学电子工程系官网" class="headerlink" title="项目1：华中科技大学电子工程系官网"></a>项目1：华中科技大学电子工程系官网</h1><h2 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h2><ol>
+<li>国际化问题：学院有留学生，院系与外国学校有合作交流，官网的国际化问题是个大问题。前期设计时，没有考虑到国际化。用了一个比较挫的解办法，相当于重新做了一个，部署了两个来切换。  解决办法是，设计阶段考虑国际化问题，目前正在重构。Spring MessageSource.</li>
+<li></li>
+</ol>
+<h1 id="登录、注册、浏览"><a href="#登录、注册、浏览" class="headerlink" title="登录、注册、浏览"></a>登录、注册、浏览</h1><h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><ol>
+<li>用户名合法性检测（长度，敏感词（比如它不能叫管理员之类的），重复）</li>
+<li>密码长度要求</li>
+</ol>
+<h1 id="敏感词检查"><a href="#敏感词检查" class="headerlink" title="敏感词检查"></a>敏感词检查</h1><ul>
+<li>字典树-数据结构</li>
+</ul>
+<h1 id="redis实现缓存，点赞等"><a href="#redis实现缓存，点赞等" class="headerlink" title="redis实现缓存，点赞等"></a>redis实现缓存，点赞等</h1><h1 id="异步事件Redis实现"><a href="#异步事件Redis实现" class="headerlink" title="异步事件Redis实现"></a>异步事件Redis实现</h1>]]></content:encoded>
+      
+      <comments>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html#disqus_thread</comments>
     </item>
     
     <item>
@@ -2593,82 +2631,6 @@
 ]]></content:encoded>
       
       <comments>http://liuhang.net.cn/Java%E5%9F%BA%E7%A1%80-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F.html#disqus_thread</comments>
-    </item>
-    
-    <item>
-      <title>个人计划至四月底</title>
-      <link>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html</link>
-      <guid>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html</guid>
-      <pubDate>Tue, 11 Apr 2017 01:40:15 GMT</pubDate>
-      <description>
-      
-        &lt;h1 id=&quot;每日日程流程&quot;&gt;&lt;a href=&quot;#每日日程流程&quot; class=&quot;headerlink&quot; title=&quot;每日日程流程&quot;&gt;&lt;/a&gt;每日日程流程&lt;/h1&gt;&lt;ol&gt;
-&lt;li&gt;刷面试题5x3;(3)&lt;/li&gt;
-&lt;li&gt;刷剑指offer,4题(2.5小时)&lt;/li&gt;
-&lt;li
-      
-      </description>
-      
-      <content:encoded><![CDATA[<h1 id="每日日程流程"><a href="#每日日程流程" class="headerlink" title="每日日程流程"></a>每日日程流程</h1><ol>
-<li>刷面试题5x3;(3)</li>
-<li>刷剑指offer,4题(2.5小时)</li>
-<li>Java面试知识点总结: 5点(30分钟)</li>
-<li>下午看书: effective java/Spring/jvm</li>
-<li>晚上总结成文档</li>
-</ol>
-<h1 id="Spring-IOC-AOP-MVC总结"><a href="#Spring-IOC-AOP-MVC总结" class="headerlink" title="Spring IOC/AOP/MVC总结"></a>Spring IOC/AOP/MVC总结</h1><ol>
-<li>Spring AOP深入总结–4.15号之前完成,四天时间</li>
-<li>Spring MVC深入总结–4.22号之前完成,一周时间</li>
-<li>Spring ICO深入总结–4.29号之前完成,一周时间</li>
-<li>总结其中用到的各种设计模式</li>
-</ol>
-<h1 id="剑指offer总结"><a href="#剑指offer总结" class="headerlink" title="剑指offer总结"></a>剑指offer总结</h1><ol>
-<li>每日刷4题–4.22号之前将66个题刷完(基本完成,目前已经完成57题)</li>
-<li>剑指offer刷题总结,分类整理总结–4.25号完成,三天时间(基本总结完成)</li>
-</ol>
-<h1 id="Effective-Java-1-4章-第10章"><a href="#Effective-Java-1-4章-第10章" class="headerlink" title="Effective Java: 1-4章,第10章"></a>Effective Java: 1-4章,第10章</h1><ol>
-<li>涉及到的各种设计模式总结<ul>
-<li>构建者模式,一天(已完成)</li>
-<li>装饰者模式,一天(已完成)</li>
-<li>适配器模式,一天(已完成)</li>
-<li>FlyWeight模式,一天</li>
-<li>桥接模式</li>
-<li>观察者模式(书p234),一天</li>
-</ul>
-</li>
-<li>总结Java对象通用方法:equals, hashCode, toString,  ,finalizeclone (已完成)</li>
-</ol>
-<h1 id="Java并发总结-深入理解jvm第五部分"><a href="#Java并发总结-深入理解jvm第五部分" class="headerlink" title="Java并发总结(深入理解jvm第五部分)"></a>Java并发总结(深入理解jvm第五部分)</h1><ol>
-<li>java内存模型</li>
-<li>java并发工具<ul>
-<li>Executor framework</li>
-<li>Concurrent Collection</li>
-<li>Synchronizer</li>
-</ul>
-</li>
-</ol>
-<h1 id="Java垃圾回收总结"><a href="#Java垃圾回收总结" class="headerlink" title="Java垃圾回收总结"></a>Java垃圾回收总结</h1><ol>
-<li>finalize与 System.gc();</li>
-<li>Java内存管理机制</li>
-<li>垃圾收集器与内存分配策略</li>
-</ol>
-<h1 id="面试题练习"><a href="#面试题练习" class="headerlink" title="面试题练习"></a>面试题练习</h1><ol>
-<li>每天练习15道题目: 5x3;</li>
-<li>Java面试常考知识点总结: 每日总结10点</li>
-</ol>
-<h1 id="每日进展记录"><a href="#每日进展记录" class="headerlink" title="每日进展记录"></a>每日进展记录</h1><h2 id="阶段一-4-12-4-15-剑指offer刷到50题"><a href="#阶段一-4-12-4-15-剑指offer刷到50题" class="headerlink" title="阶段一: 4.12-4.15(剑指offer刷到50题)"></a>阶段一: 4.12-4.15(剑指offer刷到50题)</h2><ul>
-<li>4.12 剑指offer刷完40题,还剩26题;刷面试题5*3;</li>
-<li>4.13 刷面试题5*3; 面试腾讯</li>
-<li>4.14 刷剑指offer</li>
-<li>4.15 剑指offer刷至50题!完成</li>
-</ul>
-<h2 id="阶段二-4-16-4-24-编程题总结一波"><a href="#阶段二-4-16-4-24-编程题总结一波" class="headerlink" title="阶段二: 4.16-4.24(编程题总结一波)"></a>阶段二: 4.16-4.24(编程题总结一波)</h2><ul>
-<li>4.16-4.18  编程题归类总结</li>
-<li>4.19 编程题基本总结完成</li>
-</ul>
-]]></content:encoded>
-      
-      <comments>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html#disqus_thread</comments>
     </item>
     
   </channel>

@@ -133,7 +133,10 @@
 <li>内推</li>
 <li>面试8.10-8.20左右</li>
 </ol>
-<h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
+<h2 id="4399（已投）"><a href="#4399（已投）" class="headerlink" title="4399（已投）"></a>4399（已投）</h2><ol>
+<li>时间</li>
+</ol>
+<h2 id="顺丰（已投）"><a href="#顺丰（已投）" class="headerlink" title="顺丰（已投）"></a>顺丰（已投）</h2><h2 id="亚马逊"><a href="#亚马逊" class="headerlink" title="亚马逊"></a>亚马逊</h2><h2 id="Thoughtworks-已投"><a href="#Thoughtworks-已投" class="headerlink" title="Thoughtworks(已投)"></a>Thoughtworks(已投)</h2><h2 id="搜狐（已投）"><a href="#搜狐（已投）" class="headerlink" title="搜狐（已投）"></a>搜狐（已投）</h2><h2 id="搜狗（已投）"><a href="#搜狗（已投）" class="headerlink" title="搜狗（已投）"></a>搜狗（已投）</h2><h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
 <li>管培生，在线笔试：<strong>8月25日</strong></li>
 <li>Java开发，在线笔试：<strong>9月8日</strong></li>
 </ol>
@@ -147,7 +150,7 @@
 <li>笔试时间未定</li>
 </ol>
 <h2 id="美团点评"><a href="#美团点评" class="headerlink" title="美团点评"></a>美团点评</h2><ol>
-<li>内推 （已投）</li>
+<li>内推 （已投） 笔试时间：<em>**8月31日</em></li>
 <li>秋招</li>
 </ol>
 <h2 id="网易（已投）"><a href="#网易（已投）" class="headerlink" title="网易（已投）"></a>网易（已投）</h2><ol>
@@ -156,7 +159,11 @@
 <h2 id="腾讯（已投）"><a href="#腾讯（已投）" class="headerlink" title="腾讯（已投）"></a>腾讯（已投）</h2><ol>
 <li>笔试时间<strong>9月13日</strong></li>
 </ol>
-<h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2>]]></content>
+<h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2><ol>
+<li><h2 id="58同城"><a href="#58同城" class="headerlink" title="58同城"></a>58同城</h2></li>
+<li><strong>8月23日</strong>，内推提前批笔试</li>
+</ol>
+]]></content>
     </entry>
     
     <entry>
@@ -350,6 +357,27 @@
       <title><![CDATA[Spring-源码研究3-SpringMVC实现]]></title>
       <url>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B63-SpringMVC%E5%AE%9E%E7%8E%B0.html</url>
       <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[面试准备]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html</url>
+      <content type="html"><![CDATA[<h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
+<li>不懂得如何拒绝别人，导致影响自己的工作进度。比如，在实验室做的项目，经常是同学碰到一个问题不会，让我帮忙，我就去帮他搞定，导致自己的东西没做完，或者做到很晚。 改进方向是，首先告诉他，自己在什么时候可以给予帮助，而不是立马放下手头的事情去帮忙，让他决定是否继续求助。 其次，在帮助他解决问题的时候，不是一手包办，而是指明一个方向，告诉他查找什么资料可以解决，或者大体是什么思路，让他尽量自己解决。</li>
+<li>喜欢刨根问底的钻一些细节，导致做的一些事情不能按期完成。比如说，使用一些开源框架，就想去看看到底咋回事，导致太发散，没有聚焦点。通过时间管理，改变工作方式。</li>
+</ol>
+<h1 id="项目1：华中科技大学电子工程系官网"><a href="#项目1：华中科技大学电子工程系官网" class="headerlink" title="项目1：华中科技大学电子工程系官网"></a>项目1：华中科技大学电子工程系官网</h1><h2 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h2><ol>
+<li>国际化问题：学院有留学生，院系与外国学校有合作交流，官网的国际化问题是个大问题。前期设计时，没有考虑到国际化。用了一个比较挫的解办法，相当于重新做了一个，部署了两个来切换。  解决办法是，设计阶段考虑国际化问题，目前正在重构。Spring MessageSource.</li>
+<li></li>
+</ol>
+<h1 id="登录、注册、浏览"><a href="#登录、注册、浏览" class="headerlink" title="登录、注册、浏览"></a>登录、注册、浏览</h1><h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><ol>
+<li>用户名合法性检测（长度，敏感词（比如它不能叫管理员之类的），重复）</li>
+<li>密码长度要求</li>
+</ol>
+<h1 id="敏感词检查"><a href="#敏感词检查" class="headerlink" title="敏感词检查"></a>敏感词检查</h1><ul>
+<li>字典树-数据结构</li>
+</ul>
+<h1 id="redis实现缓存，点赞等"><a href="#redis实现缓存，点赞等" class="headerlink" title="redis实现缓存，点赞等"></a>redis实现缓存，点赞等</h1><h1 id="异步事件Redis实现"><a href="#异步事件Redis实现" class="headerlink" title="异步事件Redis实现"></a>异步事件Redis实现</h1>]]></content>
     </entry>
     
     <entry>
