@@ -213,12 +213,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-web">
-          <a href="/categories/web/" rel="section">
+        <li class="menu-item menu-item-project">
+          <a href="/categories/project/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
             
-            Web
+            项目
           </a>
         </li>
       
@@ -228,7 +228,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br />
             
-            数据结构与算法
+            算法
           </a>
         </li>
       
@@ -328,9 +328,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/面试-Java并发编程0-Java多线程面试总结.html" itemprop="url">
+            <a class="post-title-link" href="/面试-Java多线程&&JVM等.html" itemprop="url">
               
-                <span itemprop="name">Java并发编程0-Java多线程面试总结</span>
+                <span itemprop="name">面试-Java多线程/JVM等</span>
               
             </a>
         
@@ -356,9 +356,9 @@
 
       <h1 class="post-title">
         
-            <a class="post-title-link" href="/面试-Java基础-面试总结.html" itemprop="url">
+            <a class="post-title-link" href="/面试-Java基础.html" itemprop="url">
               
-                <span itemprop="name">Java基础-面试总结</span>
+                <span itemprop="name">Java基础</span>
               
             </a>
         
@@ -419,7 +419,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -436,7 +436,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -710,75 +710,6 @@
                     // show search results
                     if (isMatch) {
                         matchcounts += 1;
-                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                        var content = data.content.trim().replace(/<[^>]+>/g,"");
-                        if (first_occur >= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-                            if(start < 0){
-                                start = 0;
-                            }
-                            if(start == 0){
-                                end = 50;
-                            }
-                            if(end > content.length){
-                                end = content.length;
-                            }
-                            var match_content = content.substring(start, end);
-                            // highlight all keywords
-                            keywords.forEach(function(keyword){
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                            });
-                            
-                            str += "<p class=\"search-result\">" + match_content +"...</p>"
-                        }
-                        str += "</li>";
-                    }
-                })};
-                str += "</ul>";
-                if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-                if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-                $resultContent.innerHTML = str;
-            });
-            proceedsearch();
-        }
-    });}
-
-    // handle and trigger popup window;
-    $('.popup-trigger').mousedown(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-
-    });
-
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".popoverlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
-
-  
-
-  
-
-  
-<script type="text/javascript" async src="//push.zhanzhang.baidu.com/push.js">
-</script>
-
-
-</body>
-</html>
-ts += 1;
                         str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
                         var content = data.content.trim().replace(/<[^>]+>/g,"");
                         if (first_occur >= 0) {

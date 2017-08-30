@@ -4,6 +4,57 @@
   
     
     <entry>
+      <title><![CDATA[项目总结-基于Quartz任务调度平台（一）]]></title>
+      <url>http://liuhang.net.cn/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-%E5%9F%BA%E4%BA%8EQuartz%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6%E5%B9%B3%E5%8F%B0%EF%BC%88%E4%B8%80%EF%BC%89.html</url>
+      <content type="html"><![CDATA[<p># </p>
+<h1 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h1><ol>
+<li><p>job-core: 核心</p>
+</li>
+<li><p>job-admin: 调度中心(含web页面) ： 执行一个任务的粗略逻辑（流程）：<code>JobInfoController(&quot;/trigger&quot;) -  JobService.triggerJob - XxlJobDynamicScheduler.triggerJob  -  scheduler.triggerJob ,RemoteHttpJobBean，继承自QuartzJobBean（新增任务时会调用这个），里面为任务逻辑，然后调用-XxlJobTrigger.trigger  - XxlJobTrigger.runExecutor  -  NetComClientProxy为jetty客户端，里面启动时会发送http请求，分发到执行器执行任务逻辑,注意这里的FactoryBean</code></p>
+</li>
+<li><p>执行器：</p>
+<ul>
+<li>ExecutorBiz</li>
+</ul>
+</li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书-书单]]></title>
+      <url>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6-%E4%B9%A6%E5%8D%95.html</url>
+      <content type="html"><![CDATA[<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><ol>
+<li>《Java并发编程的艺术》：粗读了一下，此书不错，Java并发编程入门极好！ 不建议用《Java并发编程实战》一书来入门。</li>
+<li>《深入理解Java虚拟机》 推荐</li>
+</ol>
+<h1 id="杂书"><a href="#杂书" class="headerlink" title="杂书"></a>杂书</h1><ol>
+<li>《解忧杂货铺》：宝宝推荐，似乎还不错，<strong>待读</strong>。</li>
+<li></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[项目总结-异步框架个人实现]]></title>
+      <url>http://liuhang.net.cn/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-%E5%BC%82%E6%AD%A5%E6%A1%86%E6%9E%B6%E4%B8%AA%E4%BA%BA%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[个人计划至9月底]]></title>
+      <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B39%E6%9C%88%E5%BA%95.html</url>
+      <content type="html"><![CDATA[<h2 id="8-23"><a href="#8-23" class="headerlink" title="8.23"></a>8.23</h2><ol>
+<li>复习常见算法及数据结构（剑指offer）</li>
+</ol>
+<h2 id="8-24"><a href="#8-24" class="headerlink" title="8.24"></a>8.24</h2><ol>
+<li>亚马逊笔试</li>
+<li>蘑菇街面试</li>
+</ol>
+<h2 id="8-25"><a href="#8-25" class="headerlink" title="8.25"></a>8.25</h2>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Quartz详解及源码探究2-quartz调度器scheduler]]></title>
       <url>http://liuhang.net.cn/Quartz%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%BA%90%E7%A0%81%E6%8E%A2%E7%A9%B62-quartz%E8%B0%83%E5%BA%A6%E5%99%A8scheduler.html</url>
       <content type="html"><![CDATA[<h1 id="Quartz-Scheduler"><a href="#Quartz-Scheduler" class="headerlink" title="Quartz Scheduler"></a>Quartz Scheduler</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
@@ -120,7 +171,7 @@
     <entry>
       <title><![CDATA[随笔-校招记录]]></title>
       <url>http://liuhang.net.cn/%E9%9A%8F%E7%AC%94-%E6%A0%A1%E6%8B%9B%E8%AE%B0%E5%BD%95.html</url>
-      <content type="html"><![CDATA[<h1 id="练手的"><a href="#练手的" class="headerlink" title="练手的"></a>练手的</h1><h2 id="拼多多-已投"><a href="#拼多多-已投" class="headerlink" title="拼多多(已投)"></a>拼多多(已投)</h2><ol>
+      <content type="html"><![CDATA[<h1 id="投递记录"><a href="#投递记录" class="headerlink" title="投递记录"></a>投递记录</h1><h2 id="拼多多-已投"><a href="#拼多多-已投" class="headerlink" title="拼多多(已投)"></a>拼多多(已投)</h2><ol>
 <li>8.1号晚上，牛客</li>
 </ol>
 <h2 id="苏宁（已投）"><a href="#苏宁（已投）" class="headerlink" title="苏宁（已投）"></a>苏宁（已投）</h2><ol>
@@ -136,7 +187,26 @@
 <h2 id="4399（已投）"><a href="#4399（已投）" class="headerlink" title="4399（已投）"></a>4399（已投）</h2><ol>
 <li>时间</li>
 </ol>
-<h2 id="顺丰（已投）"><a href="#顺丰（已投）" class="headerlink" title="顺丰（已投）"></a>顺丰（已投）</h2><h2 id="亚马逊"><a href="#亚马逊" class="headerlink" title="亚马逊"></a>亚马逊</h2><h2 id="Thoughtworks-已投"><a href="#Thoughtworks-已投" class="headerlink" title="Thoughtworks(已投)"></a>Thoughtworks(已投)</h2><h2 id="搜狐（已投）"><a href="#搜狐（已投）" class="headerlink" title="搜狐（已投）"></a>搜狐（已投）</h2><h2 id="搜狗（已投）"><a href="#搜狗（已投）" class="headerlink" title="搜狗（已投）"></a>搜狗（已投）</h2><h1 id="重点"><a href="#重点" class="headerlink" title="重点"></a>重点</h1><h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
+<h2 id="顺丰（已投）"><a href="#顺丰（已投）" class="headerlink" title="顺丰（已投）"></a>顺丰（已投）</h2><h2 id="亚马逊（）"><a href="#亚马逊（）" class="headerlink" title="亚马逊（）"></a>亚马逊（）</h2><ol>
+<li>笔试已通知<strong>8.24</strong></li>
+</ol>
+<h2 id="Thoughtworks-已投"><a href="#Thoughtworks-已投" class="headerlink" title="Thoughtworks(已投)"></a>Thoughtworks(已投)</h2><h2 id="搜狐（已投）"><a href="#搜狐（已投）" class="headerlink" title="搜狐（已投）"></a>搜狐（已投）</h2><h2 id="搜狗（已投）"><a href="#搜狗（已投）" class="headerlink" title="搜狗（已投）"></a>搜狗（已投）</h2><ol>
+<li>时间<strong>8月30号</strong></li>
+</ol>
+<h2 id="唯品会（已投）"><a href="#唯品会（已投）" class="headerlink" title="唯品会（已投）"></a>唯品会（已投）</h2><ol>
+<li>笔试时间<strong>9月16日左右</strong></li>
+</ol>
+<h2 id="中国银联（已投）"><a href="#中国银联（已投）" class="headerlink" title="中国银联（已投）"></a>中国银联（已投）</h2><ol>
+<li>笔试时间<strong>8月30号</strong></li>
+</ol>
+<h2 id="招商银行信用卡中兴（已投）"><a href="#招商银行信用卡中兴（已投）" class="headerlink" title="招商银行信用卡中兴（已投）"></a>招商银行信用卡中兴（已投）</h2><ol>
+<li>笔试时间</li>
+</ol>
+<h2 id="招银网络科技"><a href="#招银网络科技" class="headerlink" title="招银网络科技"></a>招银网络科技</h2><h2 id="美丽联合"><a href="#美丽联合" class="headerlink" title="美丽联合"></a>美丽联合</h2><ol>
+<li>内推（投递中）</li>
+<li>网申</li>
+</ol>
+<h2 id="京东（已投）"><a href="#京东（已投）" class="headerlink" title="京东（已投）"></a>京东（已投）</h2><ol>
 <li>管培生，在线笔试：<strong>8月25日</strong></li>
 <li>Java开发，在线笔试：<strong>9月8日</strong></li>
 </ol>
@@ -147,7 +217,7 @@
 <li>笔试时间 <strong>8.26日</strong></li>
 </ol>
 <h2 id="今日头条（已投）"><a href="#今日头条（已投）" class="headerlink" title="今日头条（已投）"></a>今日头条（已投）</h2><ol>
-<li>笔试时间未定</li>
+<li>笔试时间  <strong>已收到笔试通知</strong></li>
 </ol>
 <h2 id="美团点评"><a href="#美团点评" class="headerlink" title="美团点评"></a>美团点评</h2><ol>
 <li>内推 （已投） 笔试时间：<em>**8月31日</em></li>
@@ -156,12 +226,15 @@
 <h2 id="网易（已投）"><a href="#网易（已投）" class="headerlink" title="网易（已投）"></a>网易（已投）</h2><ol>
 <li>笔试时间<strong>9月9日</strong></li>
 </ol>
+<h2 id="网易游戏"><a href="#网易游戏" class="headerlink" title="网易游戏"></a>网易游戏</h2><ol>
+<li>笔试时间<strong>9月中旬</strong></li>
+</ol>
 <h2 id="腾讯（已投）"><a href="#腾讯（已投）" class="headerlink" title="腾讯（已投）"></a>腾讯（已投）</h2><ol>
 <li>笔试时间<strong>9月13日</strong></li>
 </ol>
 <h2 id="去哪儿-已投"><a href="#去哪儿-已投" class="headerlink" title="去哪儿(已投)"></a>去哪儿(已投)</h2><ol>
 <li><h2 id="58同城"><a href="#58同城" class="headerlink" title="58同城"></a>58同城</h2></li>
-<li><strong>8月23日</strong>，内推提前批笔试</li>
+<li><strong>8月22日</strong>，内推提前批笔试，<strong>已收到笔试通知</strong></li>
 </ol>
 ]]></content>
     </entry>
@@ -169,13 +242,140 @@
     <entry>
       <title><![CDATA[面试-设计模式]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><ol>
+<li>懒汉式：</li>
+<li>饿汉式</li>
+<li>线程安全： 懒汉式：使用静态内部类实现</li>
+<li>参考：<a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">如何正确地写出单例模式</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 懒汉式，第一次使用时加载，线程不安全；</div><div class="line">public class Singleton&#123;</div><div class="line">    private Singleton()&#123;&#125;</div><div class="line">    private static Singleton instance;</div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        if(instance==null)&#123;</div><div class="line">            instance = new Singleton();</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//线程安全,使用静态内部类,懒汉式</div><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[面试-JVM相关]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-JVM%E7%9B%B8%E5%85%B3.html</url>
-      <content type="html"></content>
+      <content type="html"><![CDATA[<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ol>
+<li>参考：<a href="http://www.importnew.com/23792.html" target="_blank" rel="external">JVM知识点总览-高级Java工程师面试必备</a></li>
+<li><p>参考:<a href="http://blog.csdn.net/hsk256/article/details/49104955" target="_blank" rel="external">java常见面试题及答案 11-20（JVM）</a></p>
+</li>
+<li><p>分四大块</p>
+<ul>
+<li>类的加载机制</li>
+<li>jvm内存结构</li>
+<li>GC算法 垃圾回收</li>
+<li>GC分析 命令调优</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存结构"><a href="#Java内存结构" class="headerlink" title="Java内存结构"></a>Java内存结构</h1><ol>
+<li><p>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。</p>
+</li>
+<li><p>虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内存和栈内存中的栈），栈帧结构，每个方法在执行的时候都会创建一个栈帧，用于存储局部变量表、操作数栈、动态链接和方法出口等信息。</p>
+<ul>
+<li>栈帧的结构<ul>
+<li>局部变量表： 存放方法参数和方法内部定义的局部变量。存储的是基本数据类型，对象引用等； 通过索引定位的方式访问。</li>
+<li>操作数栈：作用主要用来存储运算结果以及运算的操作数；通过压栈和出栈访问。</li>
+<li>动态链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>本地方法栈： 虚拟机使用到的native方法</p>
+</li>
+<li><p>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</p>
+</li>
+<li><p>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</p>
+</li>
+</ol>
+<h1 id="GC-垃圾回收算法"><a href="#GC-垃圾回收算法" class="headerlink" title="GC 垃圾回收算法"></a>GC 垃圾回收算法</h1><ol>
+<li><p>常用的垃圾回收算法：</p>
+<ul>
+<li><p>标记-清除算法：这是垃圾收集算法中最基础的，根据名字就可以知道，它的思想就是标记哪些要被回收的对象，然后统一回收。这种方法很简单，但是会有两个主要问题：1.效率不高，标记和清除的效率都很低；2.会产生大量不连续的内存碎片，导致以后程序在分配较大的对象时，由于没有充足的连续内存而提前触发一次GC动作。</p>
+</li>
+<li><p>复制算法：为了解决效率问题，复制算法将可用内存按容量划分为相等的两部分，然后每次只使用其中的一块，当一块内存用完时，就将还存活的对象复制到第二块内存上，然后一次性清楚完第一块内存，再将第二块上的对象复制到第一块。但是这种方式，内存的代价太高，每次基本上都要浪费一般的内存。于是将该算法进行了改进，内存区域不再是按照1：1去划分，而是将内存划分为8:1:1三部分，较大那份内存为Eden区，其余是两块较小的内存区叫Survior区。每次都会优先使用Eden区，若Eden区满，就将对象复制到第二块内存区（Survior）上，然后清除Eden区，如果此时存活的对象太多，以至于Survivor不够时，会将这些对象通过分配担保机制复制到老年代中。(java堆又分为新生代和老年代)</p>
+</li>
+<li><p>标记-整理算法: 标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。（解决了内存碎片的问题）</p>
+</li>
+<li><p>分代回收算法：把Java堆分新生代和老年代，在新生代用复制算法（，由于对象生存期短，每次回收都会有大量对象死去），在老年代（老年代里的对象存活率较高）用标记-清理或标记-整理算法，是现代虚拟机通常采用的算法。</p>
+</li>
+</ul>
+</li>
+<li><p>GC的基本过程：</p>
+<ul>
+<li>堆内存分为新生代和老年代，而新生代又分为Eden区和两个Survivor区。</li>
+<li>先将对象放入Eden区，如果空间不足就向其中的一个survivor区上放，如果仍然放不下就会引发一次发生在新生代的minor GC。将存活的对象放入另一个survivor区中，然后清空Eden和之前的那个survivor区的内存。</li>
+<li>大对象以及长期存活的对象，进入老年代</li>
+<li>空间分配担保，当每次执行minor GC的时候应该对要晋升到老年代的对象进行分析，如果这些马上要到老年区的老年对象的大小超过了老年区的剩余大小，那么执行一次Full GC以尽可能地获得老年区的空间。那么执行一次Full GC以尽可能地获得老年区的空间。</li>
+</ul>
+</li>
+<li><p>判断对象是否存活：</p>
+<ul>
+<li><p>判断对象是否存活有两种方法：引用计数法，可达性算法。</p>
+</li>
+<li><p>引用计数法：给每一个对象设置一个引用计数器，每当有一个地方引用这个对象时，就将计数器加一，引用失效时，计数器就减一。当一个对象的引用计数器为零时，说明此对象没有被引用，也就是“死对象”,将会被垃圾回收. 存在问题：循环引用，A引用对象B，对象B又引用者对象A，那么此时A,B对象的引用计数器都不为零，也就造成无法完成垃圾回收，所以主流的虚拟机都没有采用这种算法。</p>
+</li>
+<li><p>可达性分析算法：从一个被称为GC Roots的对象开始向下搜索，如果一个对象到GC Roots没有任何引用链相连时，则说明此对象不可用。</p>
+<ul>
+<li>在java中可以作为GC Roots的对象有以下几种:<ul>
+<li>虚拟机栈中引用的对象</li>
+<li>方法区类静态属性引用的对象</li>
+<li>方法区常量池引用的对象</li>
+<li>本地方法栈JNI引用的对象(Native方法引用对象)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><ol>
+<li>java内存模型(JMM)是线程间通信的控制机制.JMM定义了主内存和线程之间抽象关系。<strong>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory）</strong>，本地内存中存储了该线程以读/写共享变量的副本。本地内存是JMM的一个抽象概念，并不真实存在。它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化。<br> 首先，线程A把本地内存A中更新过的共享变量刷新到主内存中去。<br> 然后，线程B到主内存中去读取线程A之前已更新过的共享变量<br> <img src="../images/jmm.png" alt=""></li>
+</ol>
+<ol>
+<li></li>
+</ol>
+<h1 id="Java类加载机制"><a href="#Java类加载机制" class="headerlink" title="Java类加载机制"></a>Java类加载机制</h1><h2 id="Java类加载过程"><a href="#Java类加载过程" class="headerlink" title="Java类加载过程"></a>Java类加载过程</h2><p>java类加载需要经历一下7个过程：</p>
+<ol>
+<li><p>加载<br>加载时类加载的第一个过程，在这个阶段，将完成一下三件事情：</p>
+<ol>
+<li>通过一个类的全限定名获取该类的二进制流。（类加载器作用）</li>
+<li>将该二进制流中的静态存储结构转化为方法去运行时数据结构。 </li>
+<li>在内存中生成该类的Class对象，作为该类的数据访问入口。</li>
+</ol>
+</li>
+<li><p>验证<br>验证的目的是为了确保Class文件的字节流中的信息不回危害到虚拟机.在该阶段主要完成以下四钟验证:</p>
+<ol>
+<li>文件格式验证：验证字节流是否符合Class文件的规范，如主次版本号是否在当前虚拟机范围内，常量池中的常量是否有不被支持的类型.</li>
+<li>元数据验证:对字节码描述的信息进行语义分析，如这个类是否有父类，是否集成了不被继承的类等。</li>
+<li>字节码验证：是整个验证过程中最复杂的一个阶段，通过验证数据流和控制流的分析，确定程序语义是否正确，主要针对方法体的验证。如：方法中的类型转换是否正确，跳转指令是否正确等。</li>
+<li>符号引用验证：这个动作在后面的解析过程中发生，主要是为了确保解析动作能正确执行。</li>
+</ol>
+</li>
+<li><p>准备<br>准备阶段是为类的静态变量（即 类变量）分配内存并将其初始化为默认值，这些内存都将在方法区中进行分配。准备阶段不分配类中的实例变量的内存，实例变量将会在对象实例化时随着对象一起分配在Java堆中。<br> public static int value=123;//在准备阶段value初始值为0 。在初始化阶段才会变为123 。</p>
+</li>
+<li><p>解析<br>该阶段主要完成符号引用到直接引用的转换动作。解析动作并不一定在初始化动作完成之前，也有可能在初始化之后。</p>
+</li>
+<li><p>初始化<br>初始化时类加载的最后一步，前面的类加载过程，除了在加载阶段用户应用程序可以通过自定义类加载器参与之外，其余动作完全由虚拟机主导和控制。到了初始化阶段，才真正开始执行类中定义的Java程序代码。</p>
+</li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><ol>
+<li><p>双亲委派模型</p>
+<ul>
+<li>当一个类收到了类加载请求时，不会自己先去加载这个类，而是将其委派给父类，由父类去加载，如果此时父类不能加载，反馈给子类，由子类去完成类的加载。</li>
+<li>使用双亲委派模型的好处在于Java类随着它的类加载器一起具备了一种带有优先级的层次关系。比如java.lang.Object，最终都是委派顶端的启动类加载器去加载。</li>
+</ul>
+</li>
+<li><p>什么是类加载器，类加载器有哪些<br> 实现通过类的权限定名获取该类的二进制字节流的代码块叫做类加载器。<br>主要有一下四种类加载器:</p>
+<ol>
+<li>启动类加载器(Bootstrap ClassLoader)用来加载java核心类库，无法被java程序直接引用。</li>
+<li>扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。Java 虚拟机的实现会提供一个扩展库目录。该类加载器在此目录里面查找并加载 Java 类。</li>
+<li>系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。</li>
+<li>用户自定义类加载器，通过继承 java.lang.ClassLoader类的方式实现。</li>
+</ol>
+</li>
+</ol>
+]]></content>
     </entry>
     
     <entry>
@@ -185,21 +385,23 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Java并发编程0-Java多线程面试总结]]></title>
-      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%B9%B6%E5%8F%91%E7%BC%96%E7%A8%8B0-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[面试-Java多线程/JVM等]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%A4%9A%E7%BA%BF%E7%A8%8B&amp;&JVM%E7%AD%89.html</url>
       <content type="html"><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
-<li><a href="http://www.importnew.com/12773.html" target="_blank" rel="external">面试问题收集</a></li>
+<li><a href="http://www.importnew.com/12773.html" target="_blank" rel="external">多线程面试问题收集</a></li>
 </ol>
-<h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><ol>
-<li><p>什么是线程</p>
+<h1 id="并发-多线程"><a href="#并发-多线程" class="headerlink" title="并发/多线程"></a>并发/多线程</h1><ol>
+<li><p>什么是进程和线程</p>
 <ul>
-<li>线程是操作系统能够进行运算调度的最小单位，它被包含在进程之中，是进程中的实际运作单位</li>
+<li>进程可以被看做是一个程序或者一个应用，是系统进行资源分配一个独立单位。</li>
+<li>线程包含在进程之中，是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。</li>
 </ul>
 </li>
 <li><p>进程和线程有什么区别</p>
 <ul>
 <li>进程是资源分配的基本单位，一个进程可以包含多个线程，进程间切换开销大；</li>
-<li>引入线程的好处：创建进程开销小，易于调度，提高并发性</li>
+<li>多线程好处：在进程内，创建、终止线程快，线程切换快。</li>
+<li>多进程好处：每个进程相互独立，子进程崩溃没有关系，隔离性好；如果不需要很多通信，数据共享，多进程实现更加简单，高效。</li>
 </ul>
 </li>
 <li><p>Java实现多线程的方法</p>
@@ -293,6 +495,7 @@
 <li>LinkedBlockingQueue</li>
 </ul>
 </li>
+<li>阻塞队列原理：</li>
 </ul>
 </li>
 <li><p>Fork/join框架</p>
@@ -329,6 +532,7 @@
 <li>第三：提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，<br>还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控</li>
 </ul>
 </li>
+<li>原理</li>
 </ul>
 </li>
 <li><p>ConcurrentHashMap</p>
@@ -337,6 +541,142 @@
 <li>put和get操作是原子操作，是线程安全</li>
 </ul>
 </li>
+<li><p>Java线程间通信方式</p>
+<ul>
+<li>同步（即共享内存），synchronized</li>
+<li>wait/notify机制；</li>
+<li>while轮询</li>
+</ul>
+</li>
+</ol>
+<h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><ol>
+<li>参考：<a href="http://www.importnew.com/23792.html" target="_blank" rel="external">JVM知识点总览-高级Java工程师面试必备</a></li>
+<li><p>参考:<a href="http://blog.csdn.net/hsk256/article/details/49104955" target="_blank" rel="external">java常见面试题及答案 11-20（JVM）</a></p>
+</li>
+<li><p>分四大块</p>
+<ul>
+<li>类的加载机制</li>
+<li>jvm内存结构</li>
+<li>GC算法 垃圾回收</li>
+<li>GC分析 命令调优</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存结构"><a href="#Java内存结构" class="headerlink" title="Java内存结构"></a>Java内存结构</h1><ol>
+<li><p>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。</p>
+</li>
+<li><p>虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内存和栈内存中的栈），栈帧结构，每个方法在执行的时候都会创建一个栈帧，用于存储局部变量表、操作数栈、动态链接和方法出口等信息。</p>
+<ul>
+<li>栈帧的结构<ul>
+<li>局部变量表： 存放方法参数和方法内部定义的局部变量。存储的是基本数据类型，对象引用等； 通过索引定位的方式访问。</li>
+<li>操作数栈：作用主要用来存储运算结果以及运算的操作数；通过压栈和出栈访问。</li>
+<li>动态链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>本地方法栈： 虚拟机使用到的native方法</p>
+</li>
+<li><p>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</p>
+</li>
+<li><p>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</p>
+</li>
+</ol>
+<h1 id="GC-垃圾回收算法"><a href="#GC-垃圾回收算法" class="headerlink" title="GC 垃圾回收算法"></a>GC 垃圾回收算法</h1><ol>
+<li><p>常用的垃圾回收算法：</p>
+<ul>
+<li><p>标记-清除算法：这是垃圾收集算法中最基础的，根据名字就可以知道，它的思想就是标记哪些要被回收的对象，然后统一回收。这种方法很简单，但是会有两个主要问题：1.效率不高，标记和清除的效率都很低；2.会产生大量不连续的内存碎片，导致以后程序在分配较大的对象时，由于没有充足的连续内存而提前触发一次GC动作。</p>
+</li>
+<li><p>复制算法：为了解决效率问题，复制算法将可用内存按容量划分为相等的两部分，然后每次只使用其中的一块，当一块内存用完时，就将还存活的对象复制到第二块内存上，然后一次性清楚完第一块内存，再将第二块上的对象复制到第一块。但是这种方式，内存的代价太高，每次基本上都要浪费一般的内存。于是将该算法进行了改进，内存区域不再是按照1：1去划分，而是将内存划分为8:1:1三部分，较大那份内存为Eden区，其余是两块较小的内存区叫Survior区。每次都会优先使用Eden区，若Eden区满，就将对象复制到第二块内存区（Survior）上，然后清除Eden区，如果此时存活的对象太多，以至于Survivor不够时，会将这些对象通过分配担保机制复制到老年代中。(java堆又分为新生代和老年代)</p>
+</li>
+<li><p>标记-整理算法: 标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。（解决了内存碎片的问题）</p>
+</li>
+<li><p>分代回收算法：把Java堆分新生代和老年代，在新生代用复制算法（，由于对象生存期短，每次回收都会有大量对象死去），在老年代（老年代里的对象存活率较高）用标记-清理或标记-整理算法，是现代虚拟机通常采用的算法。</p>
+</li>
+</ul>
+</li>
+<li><p>GC的基本过程：</p>
+<ul>
+<li>堆内存分为新生代和老年代，而新生代又分为Eden区和两个Survivor区。</li>
+<li>先将对象放入Eden区，如果空间不足就向其中的一个survivor区上放，如果仍然放不下就会引发一次发生在新生代的minor GC。将存活的对象放入另一个survivor区中，然后清空Eden和之前的那个survivor区的内存。</li>
+<li>大对象以及长期存活的对象，进入老年代</li>
+<li>空间分配担保，当每次执行minor GC的时候应该对要晋升到老年代的对象进行分析，如果这些马上要到老年区的老年对象的大小超过了老年区的剩余大小，那么执行一次Full GC以尽可能地获得老年区的空间。那么执行一次Full GC以尽可能地获得老年区的空间。</li>
+</ul>
+</li>
+<li><p>判断对象是否存活：</p>
+<ul>
+<li><p>判断对象是否存活有两种方法：引用计数法，可达性算法。</p>
+</li>
+<li><p>引用计数法：给每一个对象设置一个引用计数器，每当有一个地方引用这个对象时，就将计数器加一，引用失效时，计数器就减一。当一个对象的引用计数器为零时，说明此对象没有被引用，也就是“死对象”,将会被垃圾回收. 存在问题：循环引用，A引用对象B，对象B又引用者对象A，那么此时A,B对象的引用计数器都不为零，也就造成无法完成垃圾回收，所以主流的虚拟机都没有采用这种算法。</p>
+</li>
+<li><p>可达性分析算法：从一个被称为GC Roots的对象开始向下搜索，如果一个对象到GC Roots没有任何引用链相连时，则说明此对象不可用。</p>
+<ul>
+<li>在java中可以作为GC Roots的对象有以下几种:<ul>
+<li>虚拟机栈中引用的对象</li>
+<li>方法区类静态属性引用的对象</li>
+<li>方法区常量池引用的对象</li>
+<li>本地方法栈JNI引用的对象(Native方法引用对象)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><ol>
+<li>java内存模型(JMM)是线程间通信的控制机制.JMM定义了主内存和线程之间抽象关系。<strong>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory）</strong>，本地内存中存储了该线程以读/写共享变量的副本。本地内存是JMM的一个抽象概念，并不真实存在。它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化。<br> 首先，线程A把本地内存A中更新过的共享变量刷新到主内存中去。<br> 然后，线程B到主内存中去读取线程A之前已更新过的共享变量<br> <img src="../images/jmm.png" alt=""></li>
+</ol>
+<h1 id="Java类加载机制"><a href="#Java类加载机制" class="headerlink" title="Java类加载机制"></a>Java类加载机制</h1><h2 id="Java类加载过程"><a href="#Java类加载过程" class="headerlink" title="Java类加载过程"></a>Java类加载过程</h2><p>java类加载需要经历一下7个过程：</p>
+<ol>
+<li><p>加载<br>加载时类加载的第一个过程，在这个阶段，将完成一下三件事情：</p>
+<ol>
+<li>通过一个类的全限定名获取该类的二进制流。（类加载器作用）</li>
+<li>将该二进制流中的静态存储结构转化为方法去运行时数据结构。 </li>
+<li>在内存中生成该类的Class对象，作为该类的数据访问入口。</li>
+</ol>
+</li>
+<li><p>验证<br>验证的目的是为了确保Class文件的字节流中的信息不回危害到虚拟机.在该阶段主要完成以下四钟验证:</p>
+<ol>
+<li>文件格式验证：验证字节流是否符合Class文件的规范，如主次版本号是否在当前虚拟机范围内，常量池中的常量是否有不被支持的类型.</li>
+<li>元数据验证:对字节码描述的信息进行语义分析，如这个类是否有父类，是否集成了不被继承的类等。</li>
+<li>字节码验证：是整个验证过程中最复杂的一个阶段，通过验证数据流和控制流的分析，确定程序语义是否正确，主要针对方法体的验证。如：方法中的类型转换是否正确，跳转指令是否正确等。</li>
+<li>符号引用验证：这个动作在后面的解析过程中发生，主要是为了确保解析动作能正确执行。</li>
+</ol>
+</li>
+<li><p>准备<br>准备阶段是为类的静态变量（即 类变量）分配内存并将其初始化为默认值，这些内存都将在方法区中进行分配。准备阶段不分配类中的实例变量的内存，实例变量将会在对象实例化时随着对象一起分配在Java堆中。<br> public static int value=123;//在准备阶段value初始值为0 。在初始化阶段才会变为123 。</p>
+</li>
+<li><p>解析<br>该阶段主要完成符号引用到直接引用的转换动作。解析动作并不一定在初始化动作完成之前，也有可能在初始化之后。</p>
+</li>
+<li><p>初始化<br>初始化时类加载的最后一步，前面的类加载过程，除了在加载阶段用户应用程序可以通过自定义类加载器参与之外，其余动作完全由虚拟机主导和控制。到了初始化阶段，才真正开始执行类中定义的Java程序代码。</p>
+</li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><ol>
+<li><p>双亲委派模型</p>
+<ul>
+<li>当一个类收到了类加载请求时，不会自己先去加载这个类，而是将其委派给父类，由父类去加载，如果此时父类不能加载，反馈给子类，由子类去完成类的加载。</li>
+<li>使用双亲委派模型的好处在于Java类随着它的类加载器一起具备了一种带有优先级的层次关系。比如java.lang.Object，最终都是委派顶端的启动类加载器去加载。</li>
+</ul>
+</li>
+<li><p>什么是类加载器，类加载器有哪些<br> 实现通过类的权限定名获取该类的二进制字节流的代码块叫做类加载器。<br>主要有一下四种类加载器:</p>
+<ol>
+<li>启动类加载器(Bootstrap ClassLoader)用来加载java核心类库，无法被java程序直接引用。</li>
+<li>扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。Java 虚拟机的实现会提供一个扩展库目录。该类加载器在此目录里面查找并加载 Java 类。</li>
+<li>系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。</li>
+<li>用户自定义类加载器，通过继承 java.lang.ClassLoader类的方式实现。</li>
+</ol>
+</li>
+</ol>
+<h1 id="JVM调优"><a href="#JVM调优" class="headerlink" title="JVM调优"></a>JVM调优</h1><ol>
+<li>分代内存默认分配<ul>
+<li>堆大小 = 新生代 + 老年代</li>
+<li>新生代 = Eden + 两个 Survivor</li>
+</ul>
+</li>
+</ol>
+<h2 id="常见垃圾收集器"><a href="#常见垃圾收集器" class="headerlink" title="常见垃圾收集器"></a>常见垃圾收集器</h2><ol>
+<li>Serial（串行）收集器：垃圾回收时，会停掉用户线程，进行垃圾回收。</li>
+<li>ParNew收集器：Serial收集器的多线程版本，并发收集器</li>
+<li>Parallel(并行) Scavenge(清除)： 关注吞吐量</li>
 </ol>
 ]]></content>
     </entry>
@@ -360,28 +700,44 @@
     </entry>
     
     <entry>
-      <title><![CDATA[面试准备]]></title>
+      <title><![CDATA[面试-项目及其他]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html</url>
-      <content type="html"><![CDATA[<h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
+      <content type="html"><![CDATA[<h1 id="重点手写代码（算法）"><a href="#重点手写代码（算法）" class="headerlink" title="重点手写代码（算法）"></a>重点手写代码（算法）</h1><h2 id="单例模式（多线程）"><a href="#单例模式（多线程）" class="headerlink" title="单例模式（多线程）"></a>单例模式（多线程）</h2><ul>
+<li>线程安全，使用静态内部类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">## 二分查找</div><div class="line"></div><div class="line"></div><div class="line">## 快排</div><div class="line"></div><div class="line">```java</div><div class="line">public class QuickSort &#123;</div><div class="line">    public static void quickSort(int[] arr) &#123;</div><div class="line">        partition(arr, 0, arr.length - 1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void partition(int[] arr, int start, int end) &#123;</div><div class="line">        if (start &gt;= end) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        int key = arr[start];//基准</div><div class="line">        int left = start;</div><div class="line">        int right = end;</div><div class="line">        while (left &lt; right) &#123;</div><div class="line">            while (arr[right] &gt;= key &amp;&amp; right &gt; left) &#123;</div><div class="line">                right--;</div><div class="line">            &#125;</div><div class="line">            arr[left] = arr[right];//比基准小的，换到左端</div><div class="line">            arr[right] = key;//基准换到了右边</div><div class="line"></div><div class="line">            while (arr[left] &lt;= key &amp;&amp; left &lt; right) &#123;</div><div class="line">                left++;</div><div class="line">            &#125;</div><div class="line">            arr[right] = arr[left];//比基准大的，换到右端</div><div class="line">            arr[left] = key;//基准换到了左边</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        partition(arr, start, left - 1);</div><div class="line">        partition(arr, right + 1, end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] arr = new int[]&#123;6, 5, 3, 1, 8, 7, 2, 9, 4, -2&#125;;</div><div class="line">        quickSort(arr);</div><div class="line">        for (int i : arr) &#123;</div><div class="line">            System.out.println(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
 <li>不懂得如何拒绝别人，导致影响自己的工作进度。比如，在实验室做的项目，经常是同学碰到一个问题不会，让我帮忙，我就去帮他搞定，导致自己的东西没做完，或者做到很晚。 改进方向是，首先告诉他，自己在什么时候可以给予帮助，而不是立马放下手头的事情去帮忙，让他决定是否继续求助。 其次，在帮助他解决问题的时候，不是一手包办，而是指明一个方向，告诉他查找什么资料可以解决，或者大体是什么思路，让他尽量自己解决。</li>
 <li>喜欢刨根问底的钻一些细节，导致做的一些事情不能按期完成。比如说，使用一些开源框架，就想去看看到底咋回事，导致太发散，没有聚焦点。通过时间管理，改变工作方式。</li>
 </ol>
-<h1 id="项目1：华中科技大学电子工程系官网"><a href="#项目1：华中科技大学电子工程系官网" class="headerlink" title="项目1：华中科技大学电子工程系官网"></a>项目1：华中科技大学电子工程系官网</h1><h2 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h2><ol>
-<li>国际化问题：学院有留学生，院系与外国学校有合作交流，官网的国际化问题是个大问题。前期设计时，没有考虑到国际化。用了一个比较挫的解办法，相当于重新做了一个，部署了两个来切换。  解决办法是，设计阶段考虑国际化问题，目前正在重构。Spring MessageSource.</li>
-<li></li>
-</ol>
-<h1 id="登录、注册、浏览"><a href="#登录、注册、浏览" class="headerlink" title="登录、注册、浏览"></a>登录、注册、浏览</h1><h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><ol>
-<li>用户名合法性检测（长度，敏感词（比如它不能叫管理员之类的），重复）</li>
-<li>密码长度要求</li>
-</ol>
-<h1 id="敏感词检查"><a href="#敏感词检查" class="headerlink" title="敏感词检查"></a>敏感词检查</h1><ul>
-<li>字典树-数据结构</li>
+<h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h2 id="2016华为软件精英挑战赛"><a href="#2016华为软件精英挑战赛" class="headerlink" title="2016华为软件精英挑战赛"></a>2016华为软件精英挑战赛</h2><ul>
+<li>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛，人数大概5000+</li>
+<li>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</li>
+<li>解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）</li>
 </ul>
-<h1 id="redis实现缓存，点赞等"><a href="#redis实现缓存，点赞等" class="headerlink" title="redis实现缓存，点赞等"></a>redis实现缓存，点赞等</h1><h1 id="异步事件Redis实现"><a href="#异步事件Redis实现" class="headerlink" title="异步事件Redis实现"></a>异步事件Redis实现</h1>]]></content>
+<h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目中的重难点"><a href="#项目中的重难点" class="headerlink" title="项目中的重难点"></a>项目中的重难点</h2><ol>
+<li><p>敏感词检测问题： 使用<strong>字典树（前缀树）-数据结构</strong>，实现敏感词检测替换</p>
+<ul>
+<li>字典树的结构：一个树的结构，比如字符串，有公共前缀的部分，路径相同。 通常会在节点设置一个标志位，表示该节点是不是末尾。</li>
+<li>效率： 核心思想是空间换时间，用字符串的公共前缀，来减少无谓的比较。</li>
+<li>用于字符串检索：沿路径比较，O(n)复杂度；</li>
+</ul>
+</li>
+<li><p>异步事件框架，个人实现；使用生产者消费者模式，自己实现一个简单的异步事件框架。</p>
+<ul>
+<li>应用场景：学术论坛中，增加提问；人员管理，excel表导入导出，解析；</li>
+<li>生产者消费者模式,生产者激发事件，将事件存放在阻塞队列中，消费者从阻塞队列中取出事件，然后执行事件；</li>
+<li>涉及到阻塞队列：支持阻塞的插入和移除方法。队列满时，队列会阻塞插入元素的线程；队列为空时，获取元素的线程会等待队列为空。</li>
+</ul>
+</li>
+<li><p>Quartz源码</p>
+</li>
+</ol>
+]]></content>
     </entry>
     
     <entry>
-      <title><![CDATA[Spring-源码研究1-ioc容器实现]]></title>
+      <title><![CDATA[Spring-源码研究1-IOC容器实现]]></title>
       <url>http://liuhang.net.cn/Spring-%E6%BA%90%E7%A0%81%E7%A0%94%E7%A9%B61-ioc%E5%AE%B9%E5%99%A8%E5%AE%9E%E7%8E%B0.html</url>
       <content type="html"></content>
     </entry>
@@ -476,6 +832,10 @@
 <li>DispatcherServlet调用试图解析器解析视图，视图渲染，得到最后的页面</li>
 <li>返回。</li>
 </ol>
+<h1 id="SpringBoot是什么，对SpringBoot的理解"><a href="#SpringBoot是什么，对SpringBoot的理解" class="headerlink" title="SpringBoot是什么，对SpringBoot的理解"></a>SpringBoot是什么，对SpringBoot的理解</h1><ul>
+<li>从命名，boot有启动器的含义，SpirngBott由一系列启动器组成，快速构建基于Spirng的应用，简化开发过程。</li>
+<li>举例：直接从一个Application主类启动，@SpringBootApplication注解</li>
+</ul>
 ]]></content>
     </entry>
     
@@ -527,7 +887,7 @@
 <li><a href="http://www.cnblogs.com/yzlpersonal/p/5231649.html" target="_blank" rel="external">生产者-消费者 用非阻塞队列、Object.wait()、Object.notify()实现</a></li>
 <li><a href="http://www.chongchonggou.com/g_645129056.html" target="_blank" rel="external">高并发:阻塞队列 实现生产者-消费者模式</a></li>
 </ol>
-]]></content>
+<h1 id="阻塞队列实现原理"><a href="#阻塞队列实现原理" class="headerlink" title="阻塞队列实现原理"></a>阻塞队列实现原理</h1>]]></content>
     </entry>
     
     <entry>
@@ -1039,7 +1399,7 @@
 <li>最佳置换算法</li>
 <li>最佳未使用置换算法(NUR)</li>
 <li>先进先出</li>
-<li>最近最少使用置换算法（LRU）</li>
+<li>最近最少使用置换算法（LRU），实现：用链表+hashmap：链表头部是最近使用的，尾部是最久的，缓存满了时，删除尾部；新增数据项时，如果存在（利用hash命中）则，则删除这个节点，放到链表头部，满了，则删除末尾的，直接在头部新增一个节点。</li>
 </ul>
 </li>
 </ol>
@@ -1235,6 +1595,7 @@
       <url>http://liuhang.net.cn/%E5%9F%BA%E7%A1%80%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E5%AD%97%E5%85%B8%E6%A0%91.html</url>
       <content type="html"><![CDATA[<h1 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h1><ol>
 <li><a href="https://zh.wikipedia.org/wiki/Trie" target="_blank" rel="external">trie|字典树</a></li>
+<li>用字典树实现敏感词过滤（深挖）</li>
 </ol>
 <h1 id="典型题目"><a href="#典型题目" class="headerlink" title="典型题目"></a>典型题目</h1><ol>
 <li>给定整数m以及n个数字A1, A2, …, An，将数列A中所有元素两两异或，共能得到n(n-1)/2个结果。请求出这些结果中大于m的有多少个。（来自今日头条笔试题）</li>
@@ -1529,6 +1890,7 @@
 </ol>
 <h2 id="从尾到头打印链表"><a href="#从尾到头打印链表" class="headerlink" title="从尾到头打印链表"></a>从尾到头打印链表</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/d0267f7f55b3412ba93bd35cfa8e8035?tpId=13&amp;tqId=11156&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第3题-从尾到头打印链表</a></li>
+<li>用栈来实现</li>
 </ol>
 <h2 id="链表中倒数第k个结点"><a href="#链表中倒数第k个结点" class="headerlink" title="链表中倒数第k个结点"></a>链表中倒数第k个结点</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/529d3ae5a407492994ad2a246518148a?tpId=13&amp;tqId=11167&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第14题-链表中倒数第k个结点</a></li>
@@ -1777,9 +2139,17 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Java基础-面试总结]]></title>
-      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80-%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
+      <title><![CDATA[Java基础]]></title>
+      <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-Java%E5%9F%BA%E7%A1%80.html</url>
+      <content type="html"><![CDATA[<h1 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h1><h2 id="补码，反码，原码"><a href="#补码，反码，原码" class="headerlink" title="补码，反码，原码"></a>补码，反码，原码</h2><ul>
+<li>原码：第一位为符号位，0表示正，1表示负；</li>
+<li>反码：正数的反码是其本身；负数的反码是在其原码的基础上, <strong>符号位不变</strong>，其余各个位取反.</li>
+<li>补码：正数的补码就是其本身；负数补码是其反码基础上+1；</li>
+<li>特殊： 正0负0的的补码相同（全0），以8位为例，可表示的最小的数为1000 0000（-128），最小的负数规则特殊，补码可表示的范围为<code>[-128,127]</code>,而原码表示的范围为<code>[-127,+127]</code>,因为原码中正0和负0表示不同，补码中把负0拓展为-128，使补码表示范围更大。</li>
+<li>使用补码的原因：在计算机系统中，数值一律用补码来表示和存储。原因在于，使用补码，可以将符号位和数值域统一处理；同时，加法和减法也可以统一处理。此外，补码与原码相互转换，其运算过程是相同的，不需要额外的硬件电路。</li>
+<li>参考：<a href="http://www.cnblogs.com/zhangziqiu/archive/2011/03/30/computercode.html" target="_blank" rel="external">原码反码补码</a></li>
+</ul>
+<h2 id="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"><a href="#什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？" class="headerlink" title="什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？"></a>什么是Java虚拟机？为什么Java被称作是“平台无关的编程语言”？</h2><ul>
 <li>Java虚拟机是一个可以执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。<br>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者是重新编译。“一次编译，到处运行”。在不同平台上安装对应的JVM，jvm与底层硬件交互，由虚拟机负责运行java程序。</li>
 </ul>
 <h2 id="JDK和JRE的区别"><a href="#JDK和JRE的区别" class="headerlink" title="JDK和JRE的区别"></a>JDK和JRE的区别</h2><ul>
@@ -1811,10 +2181,10 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-3-面向对象三大特征"><a href="#1-3-面向对象三大特征" class="headerlink" title="1.3    面向对象三大特征"></a>1.3    面向对象三大特征</h2><ul>
+<h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><ul>
 <li>封装encapsulation：封装是指隐藏对象的属性和实现细节,仅对外提供公共访问方式</li>
 <li>继承inheritance：Java只支持单继承,</li>
-<li>多态polymorphism：</li>
+<li>多态polymorphism：“动态绑定”，是指在“执行期间”（而非编译期间）判断所引用的实际对象类型，根据其实际的类型调用其相应的方法</li>
 </ul>
 <h2 id="1-4-override和overload"><a href="#1-4-override和overload" class="headerlink" title="1.4    override和overload"></a>1.4    override和overload</h2><ul>
 <li>override:方法重写: 子类中出现和父类中方法声明一模一样的方法</li>
@@ -1840,7 +2210,8 @@
 <h2 id="1-7-Java支持多继承么？"><a href="#1-7-Java支持多继承么？" class="headerlink" title="1.7    Java支持多继承么？"></a>1.7    Java支持多继承么？</h2><p>Java中类不支持多继承，只支持单继承（即一个类只有一个父类）。<br>但是java中的接口支持多继承，，即一个子接口可以有多个父接口(接口的作用是用来扩展对象的功能，一个子接口继承多个父接口，说明子接口扩展了多个功能，当类实现接口时，类就扩展了相应的功能)。</p>
 <h2 id="1-8-方法覆盖-Overriding-和方法重载-Overloading-的区别"><a href="#1-8-方法覆盖-Overriding-和方法重载-Overloading-的区别" class="headerlink" title="1.8    方法覆盖(Overriding)和方法重载(Overloading)的区别"></a>1.8    方法覆盖(Overriding)和方法重载(Overloading)的区别</h2><p>Override 重写(覆盖) 子类中出现和父类中方法声明一模一样的方法,返回类型值一致<br>Overload 重载 本类中出现的方法名一样,参数列表不同的方法,与返回类型值无关</p>
 <h2 id="1-9-如何理解多态"><a href="#1-9-如何理解多态" class="headerlink" title="1.9    如何理解多态"></a>1.9    如何理解多态</h2><p>实现多态的技术称为：动态绑定；动态绑定是指在“执行期间”（而非编译期间）判断所引用的实际对象类型，根据其实际的类型调用其相应的方法；<br>Java实现多态有三个必要条件：继承、重写、父类引用指向子类对象。</p>
-<h2 id="1-10-Java四种权限修饰符"><a href="#1-10-Java四种权限修饰符" class="headerlink" title="1.10    Java四种权限修饰符"></a>1.10    Java四种权限修饰符</h2><h2 id="1-11-接口和抽象类"><a href="#1-11-接口和抽象类" class="headerlink" title="1.11    接口和抽象类"></a>1.11    接口和抽象类</h2><ol>
+<h2 id="1-10-Java四种权限修饰符"><a href="#1-10-Java四种权限修饰符" class="headerlink" title="1.10    Java四种权限修饰符"></a>1.10    Java四种权限修饰符</h2><p><img src="media/14899742700152.jpg" alt=""></p>
+<h2 id="1-11-接口和抽象类"><a href="#1-11-接口和抽象类" class="headerlink" title="1.11    接口和抽象类"></a>1.11    接口和抽象类</h2><ol>
 <li>接口中的成员方法，属性默认为public（可省略）且只能为public</li>
 <li>接口中的成员变量，属性默认为public static final(可省略)</li>
 <li>接口，只能声明为 public interface …{}</li>
@@ -1850,7 +2221,6 @@
 <li>抽象类不能被实例化。</li>
 <li>abstract 不能与private、static、final或native并列修饰同一个方法<br><img src="../images/接口和抽象类区别.png" alt=""></li>
 </ol>
-<h2 id="1-12-进程和线程的区别"><a href="#1-12-进程和线程的区别" class="headerlink" title="1.12    进程和线程的区别"></a>1.12    进程和线程的区别</h2><p>进程是一种静态的概念，；进程是表示资源分配的基本单位，一个进程内可以包含多个线程；进程间切换开销大；<br>线程是进程中执行运算的最小单位，可以理解为程序内部的一条执行路径，顺序控制流；每个线程有独立的有独立的线程栈和程序计数器，线程切换开销小。</p>
 <h2 id="线程的几种可用状态"><a href="#线程的几种可用状态" class="headerlink" title="线程的几种可用状态"></a>线程的几种可用状态</h2><ol>
 <li>新建( new )：新创建了一个线程对象。</li>
 <li>可运行( runnable )：线程对象创建后，其他线程(比如 main 线程）调用了该对象 的 start ()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取 cpu 的使用权 。</li>
@@ -1863,8 +2233,8 @@
 <li>实现Runnable接口；</li>
 <li>使用ExecutorService、Callable、Future实现<strong>有返回结果</strong>的多线程(JDK5.0以后)</li>
 </ol>
-<h2 id="1-15-什么是死锁-deadlock-？"><a href="#1-15-什么是死锁-deadlock-？" class="headerlink" title="1.15    什么是死锁(deadlock)？"></a>1.15    什么是死锁(deadlock)？</h2><p>两个线程或两个以上线程都在等待对方执行完毕才能继续往下执行的时候就发生了死锁。结果就是这些线程都陷入了无限的等待中。</p>
-<h2 id="1-16-监视器-Monitor-如何线程同步"><a href="#1-16-监视器-Monitor-如何线程同步" class="headerlink" title="1.16    监视器(Monitor)如何线程同步"></a>1.16    监视器(Monitor)如何线程同步</h2><h2 id="1-17-Java集合框架有哪些接口"><a href="#1-17-Java集合框架有哪些接口" class="headerlink" title="1.17    Java集合框架有哪些接口"></a>1.17    Java集合框架有哪些接口</h2><p><img src="../images/集合体系图.png" alt=""></p>
+<h2 id="什么是死锁-deadlock-？"><a href="#什么是死锁-deadlock-？" class="headerlink" title="什么是死锁(deadlock)？"></a>什么是死锁(deadlock)？</h2><p>两个线程或两个以上线程都在等待对方执行完毕才能继续往下执行的时候就发生了死锁。结果就是这些线程都陷入了无限的等待中。</p>
+<h2 id="Java集合框架有哪些接口"><a href="#Java集合框架有哪些接口" class="headerlink" title="Java集合框架有哪些接口"></a>Java集合框架有哪些接口</h2><p><img src="../images/集合体系图.png" alt=""></p>
 <ul>
 <li>list接口:<ul>
 <li>元素可重复,元素有放入顺序;</li>
@@ -1887,8 +2257,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-18-什么是迭代器-Iterator-？"><a href="#1-18-什么是迭代器-Iterator-？" class="headerlink" title="1.18    什么是迭代器(Iterator)？"></a>1.18    什么是迭代器(Iterator)？</h2><h2 id="1-19-Iterator和ListIterator的区别是什么？"><a href="#1-19-Iterator和ListIterator的区别是什么？" class="headerlink" title="1.19    Iterator和ListIterator的区别是什么？"></a>1.19    Iterator和ListIterator的区别是什么？</h2><h2 id="1-20-Map遍历的几种方法"><a href="#1-20-Map遍历的几种方法" class="headerlink" title="1.20    Map遍历的几种方法"></a>1.20    Map遍历的几种方法</h2><p><a href="http://www.trinea.cn/android/hashmap-loop-performance/" target="_blank" rel="external">http://www.trinea.cn/android/hashmap-loop-performance/</a></p>
-<h2 id="1-21-快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？"><a href="#1-21-快速失败-fail-fast-和安全失败-fail-safe-的区别是什么？" class="headerlink" title="1.21    快速失败(fail-fast)和安全失败(fail-safe)的区别是什么？"></a>1.21    快速失败(fail-fast)和安全失败(fail-safe)的区别是什么？</h2><h2 id="1-22-为什么集合类没有实现Cloneable和Serializable接口？"><a href="#1-22-为什么集合类没有实现Cloneable和Serializable接口？" class="headerlink" title="1.22    为什么集合类没有实现Cloneable和Serializable接口？"></a>1.22    为什么集合类没有实现Cloneable和Serializable接口？</h2><ul>
+<h2 id="1-20-Map遍历的几种方法"><a href="#1-20-Map遍历的几种方法" class="headerlink" title="1.20    Map遍历的几种方法"></a>1.20    Map遍历的几种方法</h2><p><a href="http://www.trinea.cn/android/hashmap-loop-performance/" target="_blank" rel="external">http://www.trinea.cn/android/hashmap-loop-performance/</a></p>
+<h2 id="1-22-为什么集合类没有实现Cloneable和Serializable接口？"><a href="#1-22-为什么集合类没有实现Cloneable和Serializable接口？" class="headerlink" title="1.22    为什么集合类没有实现Cloneable和Serializable接口？"></a>1.22    为什么集合类没有实现Cloneable和Serializable接口？</h2><ul>
 <li>克隆(cloning)或者是序列化(serialization)的语义和含义是跟具体的实现相关的。因此，应该由集合类的具体实现来决定如何被克隆或者是序列化。</li>
 </ul>
 <h2 id="1-23-Java中的HashMap的工作原理是什么？"><a href="#1-23-Java中的HashMap的工作原理是什么？" class="headerlink" title="1.23        Java中的HashMap的工作原理是什么？"></a>1.23        Java中的HashMap的工作原理是什么？</h2><ol>
@@ -1903,12 +2273,12 @@
 <li>ConcurrentHashMap的设计有点特别，表现在多个线程操作上。它不用做外的同步的情况下默认同时允许16个线程读和写这个Map容器; 将hash表分为16个段,只锁住当前用到的段,并发性能提升;</li>
 <li>迭代方法不同</li>
 </ul>
-<h2 id="hashCode-和equals-方法的重要性体现在什么地方？"><a href="#hashCode-和equals-方法的重要性体现在什么地方？" class="headerlink" title="hashCode()和equals()方法的重要性体现在什么地方？"></a>hashCode()和equals()方法的重要性体现在什么地方？</h2><h2 id="数组-Array-和列表-ArrayList-有什么区别？"><a href="#数组-Array-和列表-ArrayList-有什么区别？" class="headerlink" title="数组(Array)和列表(ArrayList)有什么区别？"></a>数组(Array)和列表(ArrayList)有什么区别？</h2><h2 id="ArrayList和LinkedList有什么区别？"><a href="#ArrayList和LinkedList有什么区别？" class="headerlink" title="ArrayList和LinkedList有什么区别？"></a>ArrayList和LinkedList有什么区别？</h2><ul>
+<h2 id="ArrayList和LinkedList有什么区别？"><a href="#ArrayList和LinkedList有什么区别？" class="headerlink" title="ArrayList和LinkedList有什么区别？"></a>ArrayList和LinkedList有什么区别？</h2><ul>
 <li>1.ArrayList是实现了基于动态数组的数据结构，LinkedList基于链表的数据结构.<br>这里的所谓动态数组并不是那个“ 有多少元素就申请多少空间 ”的意思，通过查看源码，可以发现，这个动态数组是这样实现的，如果没指定数组大小，则申请默认大小为10的数组，当元素个数增加，数组无法存储时，系统会另个申请一个长度为当前长度1.5倍的数组，然后，把之前的数据拷贝到新建的数组。</li>
 <li>2.对于随机访问get和set，ArrayList优于LinkedList，因为LinkedList要移动指针。</li>
 <li>3.对于新增和删除操作add和remove，LinedList比较占优势，因为ArrayList要移动数据。</li>
 </ul>
-<h2 id="Comparable和Comparator接口是干什么的？"><a href="#Comparable和Comparator接口是干什么的？" class="headerlink" title="Comparable和Comparator接口是干什么的？"></a>Comparable和Comparator接口是干什么的？</h2><h2 id="什么是Java优先级队列-Priority-Queue-？"><a href="#什么是Java优先级队列-Priority-Queue-？" class="headerlink" title="什么是Java优先级队列(Priority Queue)？"></a>什么是Java优先级队列(Priority Queue)？</h2><h2 id="HashSet和TreeSet有什么区别？"><a href="#HashSet和TreeSet有什么区别？" class="headerlink" title="HashSet和TreeSet有什么区别？"></a>HashSet和TreeSet有什么区别？</h2><ul>
+<h2 id="HashSet和TreeSet有什么区别？"><a href="#HashSet和TreeSet有什么区别？" class="headerlink" title="HashSet和TreeSet有什么区别？"></a>HashSet和TreeSet有什么区别？</h2><ul>
 <li>HashSet是由一个hash表来实现的，因此，它的元素是无序的。add()，remove()，contains()方法的时间复杂度是O(1)。</li>
 <li>另一方面，TreeSet是由一个树形的结构来实现的，它里面的元素是有序的。因此，add()，remove()，contains()方法的时间复杂度是O(logn)。</li>
 </ul>
@@ -1931,6 +2301,12 @@
 <li><strong>“==”运算符的两个操作数都是 包装器类型的引用，则是比较指向的是否是同一个对象，而如果其中有一个操作数是表达式（即包含算术运算）则比较的是数值（即会触发自动拆箱的过程)</strong></li>
 <li>参考:<a href="http://www.cnblogs.com/dolphin0520/p/3780005.html" target="_blank" rel="external">深入剖析Java中的装箱和拆箱</a></li>
 </ol>
+<h2 id="前缀中缀后缀表达式"><a href="#前缀中缀后缀表达式" class="headerlink" title="前缀中缀后缀表达式"></a>前缀中缀后缀表达式</h2><ul>
+<li><a href="http://blog.csdn.net/antineutrino/article/details/6763722" target="_blank" rel="external">参考</a></li>
+</ul>
+<h2 id="布隆过滤器"><a href="#布隆过滤器" class="headerlink" title="布隆过滤器"></a>布隆过滤器</h2><ul>
+<li>判断一个元素是否在一个集合中：hashmap； 数据量很大时，用布隆过滤器。</li>
+</ul>
 <h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.nowcoder.com/ta/review-java" target="_blank" rel="external">https://www.nowcoder.com/ta/review-java</a></p>
 <h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="对Spring的理解"><a href="#对Spring的理解" class="headerlink" title="对Spring的理解"></a>对Spring的理解</h2><ul>
 <li>Spring是一个轻量级的JavaEE开发框架; Spring的核心思想是控制反转和面向切面;</li>
@@ -2168,7 +2544,7 @@
     
     <entry>
       <title><![CDATA[个人计划至四月底]]></title>
-      <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B3%E5%9B%9B%E6%9C%88%E5%BA%95.html</url>
+      <url>http://liuhang.net.cn/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E5%88%92%E8%87%B34%E6%9C%88%E5%BA%95.html</url>
       <content type="html"><![CDATA[<h1 id="每日日程流程"><a href="#每日日程流程" class="headerlink" title="每日日程流程"></a>每日日程流程</h1><ol>
 <li>刷面试题5x3;(3)</li>
 <li>刷剑指offer,4题(2.5小时)</li>
@@ -2493,8 +2869,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[读书笔记-简单的逻辑学]]></title>
-      <url>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6.html</url>
+      <title><![CDATA[读书-简单的逻辑学]]></title>
+      <url>http://liuhang.net.cn/%E8%AF%BB%E4%B9%A6-%E7%AE%80%E5%8D%95%E7%9A%84%E9%80%BB%E8%BE%91%E5%AD%A6.html</url>
       <content type="html"><![CDATA[<h1 id="Chapter-1-学习逻辑学的思想准备"><a href="#Chapter-1-学习逻辑学的思想准备" class="headerlink" title="Chapter 1 学习逻辑学的思想准备"></a>Chapter 1 学习逻辑学的思想准备</h1><ol>
 <li>语言敏感度及运用叫</li>
 <li>对现实的正确认识</li>
@@ -2649,7 +3025,7 @@
 <li><p>性能分析:</p>
 <ul>
 <li>快排通常被任务是同数量级的排序方法中<strong>平均性能最好</strong></li>
-<li>一次划分时间复杂度O(n),多次递归,每次划分得到两个等长序列,理想情况:O(log2n); 最坏情况,每次得到一个子序列O(n); 所以,最好O(nlog2n),最坏O(n^2);</li>
+<li>一次划分时间复杂度O(n),多次递归,每次划分得到两个等长序列,理想情况:O(log2n); 最坏情况,每次得到一个子序列O(n); 所以,最好O(nlog2n),最坏O(n^2)(即基本有序情况下，退化为冒泡排序);</li>
 </ul>
 </li>
 <li><p>稳定性：<strong>不稳定</strong>,例如2,2,1序列;</p>
@@ -2738,10 +3114,28 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Java随手总结（零散知识点记录）]]></title>
-      <url>http://liuhang.net.cn/Java%E9%9A%8F%E6%89%8B%E6%80%BB%E7%BB%93.html</url>
-      <content type="html"><![CDATA[<h1 id="四中权限修饰符"><a href="#四中权限修饰符" class="headerlink" title="四中权限修饰符"></a>四中权限修饰符</h1><p><img src="media/14899742700152.jpg" alt=""></p>
-<h1 id="内部类"><a href="#内部类" class="headerlink" title="内部类"></a>内部类</h1><h2 id="内部类分类"><a href="#内部类分类" class="headerlink" title="内部类分类"></a>内部类分类</h2><h3 id="成员内部类"><a href="#成员内部类" class="headerlink" title="成员内部类"></a>成员内部类</h3><h3 id="静态内部类"><a href="#静态内部类" class="headerlink" title="静态内部类"></a>静态内部类</h3><h1 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h1>]]></content>
+      <title><![CDATA[设计模式3-单例模式]]></title>
+      <url>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F3-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F.html</url>
+      <content type="html"><![CDATA[<h1 id="模式定义"><a href="#模式定义" class="headerlink" title="模式定义"></a>模式定义</h1><ul>
+<li>单例模式(Singleton Pattern)：单例模式确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例，这个类称为单例类，它提供全局访问的方法。</li>
+</ul>
+<h1 id="饿汉式单例模式"><a href="#饿汉式单例模式" class="headerlink" title="饿汉式单例模式"></a>饿汉式单例模式</h1><ul>
+<li>类加载时就创建对象<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 饿汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EagerSingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖默认的构造方法，将默认的构造方法声明为私有的，防止其他类直接创建对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EagerSingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 直接创建一个本类的对象</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> EagerSingleton eagerSingleton = <span class="keyword">new</span> EagerSingleton();</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 提供一个工厂方法来返回本类的唯一对象</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> EagerSingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> eagerSingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="懒汉式单例模式"><a href="#懒汉式单例模式" class="headerlink" title="懒汉式单例模式"></a>懒汉式单例模式</h1><ul>
+<li>懒汉式单例模式的创建对象是在第一次企图获得单例类的对象时。需用synchronize关键字，多线程安全.<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.liuhang.SingletonModle;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Created by liuhang on 2017/3/17.</div><div class="line"> * 懒汉式单例模式</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LazySingleton</span> </span>&#123;</div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 覆盖原有的默认构造方法，声明为私有的，防止其他类直接使用构造方法创建单例类对象，同时也使子类无法继承</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LazySingleton</span><span class="params">()</span> </span>&#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 单例类的唯一实例，但是不是加载时初始化</div><div class="line">     */</div><div class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LazySingleton lazySingleton;</div><div class="line"></div><div class="line">    <span class="comment">/**</span></div><div class="line">     * 线程互斥的获取实例</div><div class="line">     */</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">synchronized</span> LazySingleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">if</span> (lazySingleton == <span class="keyword">null</span>) &#123;</div><div class="line">            lazySingleton = <span class="keyword">new</span> LazySingleton();</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">return</span> lazySingleton;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="单例模式使用场景"><a href="#单例模式使用场景" class="headerlink" title="单例模式使用场景"></a>单例模式使用场景</h1><h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
+<li>系统只需要一个实例对象，如系统要求提供一个唯一的序列号生成器，或者需要考虑资源消耗太大而只允许创建一个对象。</li>
+<li>客户调用类的单个实例只允许使用一个公共访问点，除了该公共访问点，不能通过其他途径访问该实例</li>
+</ul>
+<h2 id="单例模式优点"><a href="#单例模式优点" class="headerlink" title="单例模式优点"></a>单例模式优点</h2><ul>
+<li>提供了对唯一实例的受控访问。因为单例类封装了它的唯一实例，所以它可以严格控制客户怎样以及何时访问它，并为设计及开发团队提<br>供了共享的概念。</li>
+<li>由于在系统内存中只存在一个对象，因此可以节约系统资源，对于一些需要频繁创建和销毁的对象，单例模式无疑可以提高系统的性能。</li>
+</ul>
+]]></content>
     </entry>
     
     <entry>
@@ -2877,8 +3271,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Web项目总结-redis总结]]></title>
-      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-redis%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[项目总结-redis总结]]></title>
+      <url>http://liuhang.net.cn/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-redis%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Redis简介"><a href="#Redis简介" class="headerlink" title="Redis简介"></a>Redis简介</h1><h2 id="NoSql"><a href="#NoSql" class="headerlink" title="NoSql"></a>NoSql</h2><ul>
 <li>NoSQL，泛指非关系型的数据库，NoSQL即Not-Only SQL，它可以作为关系型数据库的良好补充;</li>
 </ul>
@@ -3476,8 +3870,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Web项目总结-Nginx总结]]></title>
-      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Nginx%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[项目总结-Nginx总结]]></title>
+      <url>http://liuhang.net.cn/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Nginx%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><h2 id="What-is-Nginx"><a href="#What-is-Nginx" class="headerlink" title="What is Nginx"></a>What is Nginx</h2><ul>
 <li>Nginx(发音：engine X)是一款由俄罗斯程序设计师Igor Sysocy开发的,基于C语言的轻量级的HTTP服务器（相比于Apache、Lighttpd而言），同时是一个高性能的HTTP和反向代理服务器。</li>
 </ul>
@@ -3521,8 +3915,8 @@
     </entry>
     
     <entry>
-      <title><![CDATA[Web项目总结-Fastdfs总结]]></title>
-      <url>http://liuhang.net.cn/Web%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Fastdfs%E6%80%BB%E7%BB%93.html</url>
+      <title><![CDATA[项目总结-Fastdfs总结]]></title>
+      <url>http://liuhang.net.cn/%E9%A1%B9%E7%9B%AE%E6%80%BB%E7%BB%93-Fastdfs%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="FastDFS介绍"><a href="#FastDFS介绍" class="headerlink" title="FastDFS介绍"></a>FastDFS介绍</h1><h2 id="什么是FastDFS"><a href="#什么是FastDFS" class="headerlink" title="什么是FastDFS"></a>什么是FastDFS</h2><ul>
 <li>FastDFS是一款用c语言编写的开源的、分布式文件系统，由淘宝开发平台部资深架构师余庆开发。FastDFS为互联网量身定制，充分考虑了冗余备份、负载均衡、线性扩容等机制，并注重高可用、高性能等指标，使用FastDFS很容易搭建一套高性能的文件服务器集群提供文件上传、下载等服务。</li>
 </ul>
@@ -3970,6 +4364,8 @@
 <ul>
 <li><code>$0</code> 表示脚本本身文件名，脚本传入的参数为<code>$1,$2...</code></li>
 </ul>
+</li>
+<li><p>shell教程： <a href="http://c.biancheng.net/cpp/shell/" target="_blank" rel="external">shell教程</a></p>
 </li>
 </ol>
 <h1 id="其他补充"><a href="#其他补充" class="headerlink" title="其他补充"></a>其他补充</h1><ol>

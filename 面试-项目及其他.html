@@ -88,13 +88,13 @@
 
 <meta name="description" content="面试项目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试准备">
+<meta property="og:title" content="面试-项目及其他">
 <meta property="og:url" content="http://liuhang.net.cn/面试-项目及其他.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="面试项目">
-<meta property="og:updated_time" content="2017-08-20T06:40:09.000Z">
+<meta property="og:updated_time" content="2017-08-29T12:30:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试准备">
+<meta name="twitter:title" content="面试-项目及其他">
 <meta name="twitter:description" content="面试项目">
 
 
@@ -113,7 +113,7 @@
   };
 </script>
 
-  <title> 面试准备 | 刘航 </title>
+  <title> 面试-项目及其他 | 刘航 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -217,12 +217,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-web">
-          <a href="/categories/web/" rel="section">
+        <li class="menu-item menu-item-project">
+          <a href="/categories/project/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
             
-            Web
+            项目
           </a>
         </li>
       
@@ -232,7 +232,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br />
             
-            数据结构与算法
+            算法
           </a>
         </li>
       
@@ -337,7 +337,7 @@
             
             
               
-                面试准备
+                面试-项目及其他
               
             
           </h1>
@@ -408,22 +408,38 @@
       
 
       
-        <h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
+        <h1 id="重点手写代码（算法）"><a href="#重点手写代码（算法）" class="headerlink" title="重点手写代码（算法）"></a>重点手写代码（算法）</h1><h2 id="单例模式（多线程）"><a href="#单例模式（多线程）" class="headerlink" title="单例模式（多线程）"></a>单例模式（多线程）</h2><ul>
+<li>线程安全，使用静态内部类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">## 二分查找</div><div class="line"></div><div class="line"></div><div class="line">## 快排</div><div class="line"></div><div class="line">```java</div><div class="line">public class QuickSort &#123;</div><div class="line">    public static void quickSort(int[] arr) &#123;</div><div class="line">        partition(arr, 0, arr.length - 1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void partition(int[] arr, int start, int end) &#123;</div><div class="line">        if (start &gt;= end) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        int key = arr[start];//基准</div><div class="line">        int left = start;</div><div class="line">        int right = end;</div><div class="line">        while (left &lt; right) &#123;</div><div class="line">            while (arr[right] &gt;= key &amp;&amp; right &gt; left) &#123;</div><div class="line">                right--;</div><div class="line">            &#125;</div><div class="line">            arr[left] = arr[right];//比基准小的，换到左端</div><div class="line">            arr[right] = key;//基准换到了右边</div><div class="line"></div><div class="line">            while (arr[left] &lt;= key &amp;&amp; left &lt; right) &#123;</div><div class="line">                left++;</div><div class="line">            &#125;</div><div class="line">            arr[right] = arr[left];//比基准大的，换到右端</div><div class="line">            arr[left] = key;//基准换到了左边</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        partition(arr, start, left - 1);</div><div class="line">        partition(arr, right + 1, end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] arr = new int[]&#123;6, 5, 3, 1, 8, 7, 2, 9, 4, -2&#125;;</div><div class="line">        quickSort(arr);</div><div class="line">        for (int i : arr) &#123;</div><div class="line">            System.out.println(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
 <li>不懂得如何拒绝别人，导致影响自己的工作进度。比如，在实验室做的项目，经常是同学碰到一个问题不会，让我帮忙，我就去帮他搞定，导致自己的东西没做完，或者做到很晚。 改进方向是，首先告诉他，自己在什么时候可以给予帮助，而不是立马放下手头的事情去帮忙，让他决定是否继续求助。 其次，在帮助他解决问题的时候，不是一手包办，而是指明一个方向，告诉他查找什么资料可以解决，或者大体是什么思路，让他尽量自己解决。</li>
 <li>喜欢刨根问底的钻一些细节，导致做的一些事情不能按期完成。比如说，使用一些开源框架，就想去看看到底咋回事，导致太发散，没有聚焦点。通过时间管理，改变工作方式。</li>
 </ol>
-<h1 id="项目1：华中科技大学电子工程系官网"><a href="#项目1：华中科技大学电子工程系官网" class="headerlink" title="项目1：华中科技大学电子工程系官网"></a>项目1：华中科技大学电子工程系官网</h1><h2 id="项目中遇到的问题"><a href="#项目中遇到的问题" class="headerlink" title="项目中遇到的问题"></a>项目中遇到的问题</h2><ol>
-<li>国际化问题：学院有留学生，院系与外国学校有合作交流，官网的国际化问题是个大问题。前期设计时，没有考虑到国际化。用了一个比较挫的解办法，相当于重新做了一个，部署了两个来切换。  解决办法是，设计阶段考虑国际化问题，目前正在重构。Spring MessageSource.</li>
-<li></li>
-</ol>
-<h1 id="登录、注册、浏览"><a href="#登录、注册、浏览" class="headerlink" title="登录、注册、浏览"></a>登录、注册、浏览</h1><h2 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h2><ol>
-<li>用户名合法性检测（长度，敏感词（比如它不能叫管理员之类的），重复）</li>
-<li>密码长度要求</li>
-</ol>
-<h1 id="敏感词检查"><a href="#敏感词检查" class="headerlink" title="敏感词检查"></a>敏感词检查</h1><ul>
-<li>字典树-数据结构</li>
+<h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h2 id="2016华为软件精英挑战赛"><a href="#2016华为软件精英挑战赛" class="headerlink" title="2016华为软件精英挑战赛"></a>2016华为软件精英挑战赛</h2><ul>
+<li>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛，人数大概5000+</li>
+<li>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</li>
+<li>解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）</li>
 </ul>
-<h1 id="redis实现缓存，点赞等"><a href="#redis实现缓存，点赞等" class="headerlink" title="redis实现缓存，点赞等"></a>redis实现缓存，点赞等</h1><h1 id="异步事件Redis实现"><a href="#异步事件Redis实现" class="headerlink" title="异步事件Redis实现"></a>异步事件Redis实现</h1>
+<h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目中的重难点"><a href="#项目中的重难点" class="headerlink" title="项目中的重难点"></a>项目中的重难点</h2><ol>
+<li><p>敏感词检测问题： 使用<strong>字典树（前缀树）-数据结构</strong>，实现敏感词检测替换</p>
+<ul>
+<li>字典树的结构：一个树的结构，比如字符串，有公共前缀的部分，路径相同。 通常会在节点设置一个标志位，表示该节点是不是末尾。</li>
+<li>效率： 核心思想是空间换时间，用字符串的公共前缀，来减少无谓的比较。</li>
+<li>用于字符串检索：沿路径比较，O(n)复杂度；</li>
+</ul>
+</li>
+<li><p>异步事件框架，个人实现；使用生产者消费者模式，自己实现一个简单的异步事件框架。</p>
+<ul>
+<li>应用场景：学术论坛中，增加提问；人员管理，excel表导入导出，解析；</li>
+<li>生产者消费者模式,生产者激发事件，将事件存放在阻塞队列中，消费者从阻塞队列中取出事件，然后执行事件；</li>
+<li>涉及到阻塞队列：支持阻塞的插入和移除方法。队列满时，队列会阻塞插入元素的线程；队列为空时，获取元素的线程会等待队列为空。</li>
+</ul>
+</li>
+<li><p>Quartz源码</p>
+</li>
+</ol>
+
       
     </div>
 
@@ -474,8 +490,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Spring-源码研究1-ioc容器实现.html" rel="next" title="Spring-源码研究1-ioc容器实现">
-                <i class="fa fa-chevron-left"></i> Spring-源码研究1-ioc容器实现
+              <a href="/Spring-源码研究1-ioc容器实现.html" rel="next" title="Spring-源码研究1-IOC容器实现">
+                <i class="fa fa-chevron-left"></i> Spring-源码研究1-IOC容器实现
               </a>
             
           </div>
@@ -511,7 +527,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="面试-项目及其他.html"
-           data-title="面试准备" data-url="http://liuhang.net.cn/面试-项目及其他.html">
+           data-title="面试-项目及其他" data-url="http://liuhang.net.cn/面试-项目及其他.html">
       </div>
     
   </div>
@@ -556,7 +572,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -573,7 +589,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -638,7 +654,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">1.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目1：华中科技大学电子工程系官网"><span class="nav-number">2.</span> <span class="nav-text">项目1：华中科技大学电子工程系官网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中遇到的问题"><span class="nav-number">2.1.</span> <span class="nav-text">项目中遇到的问题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#登录、注册、浏览"><span class="nav-number">3.</span> <span class="nav-text">登录、注册、浏览</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#注册"><span class="nav-number">3.1.</span> <span class="nav-text">注册</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#敏感词检查"><span class="nav-number">4.</span> <span class="nav-text">敏感词检查</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis实现缓存，点赞等"><span class="nav-number">5.</span> <span class="nav-text">redis实现缓存，点赞等</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#异步事件Redis实现"><span class="nav-number">6.</span> <span class="nav-text">异步事件Redis实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重点手写代码（算法）"><span class="nav-number">1.</span> <span class="nav-text">重点手写代码（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式（多线程）"><span class="nav-number">1.1.</span> <span class="nav-text">单例模式（多线程）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">2.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比赛"><span class="nav-number">3.</span> <span class="nav-text">比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016华为软件精英挑战赛"><span class="nav-number">3.1.</span> <span class="nav-text">2016华为软件精英挑战赛</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">4.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中的重难点"><span class="nav-number">4.1.</span> <span class="nav-text">项目中的重难点</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

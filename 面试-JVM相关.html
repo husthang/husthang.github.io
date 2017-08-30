@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="刘航, NexT" />
+  <meta name="keywords" content="面试," />
 
 
 
@@ -86,13 +86,66 @@
 
 
 
+<meta name="description" content="概述
+参考：JVM知识点总览-高级Java工程师面试必备
+参考:java常见面试题及答案 11-20（JVM）
+
+分四大块
+
+类的加载机制
+jvm内存结构
+GC算法 垃圾回收
+GC分析 命令调优
+
+
+
+Java内存结构
+程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。
+
+虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试-JVM相关">
 <meta property="og:url" content="http://liuhang.net.cn/面试-JVM相关.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-07-30T13:41:45.000Z">
+<meta property="og:description" content="概述
+参考：JVM知识点总览-高级Java工程师面试必备
+参考:java常见面试题及答案 11-20（JVM）
+
+分四大块
+
+类的加载机制
+jvm内存结构
+GC算法 垃圾回收
+GC分析 命令调优
+
+
+
+Java内存结构
+程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。
+
+虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内">
+<meta property="og:image" content="http://liuhang.net.cn/../images/jmm.png">
+<meta property="og:updated_time" content="2017-08-29T07:39:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试-JVM相关">
+<meta name="twitter:description" content="概述
+参考：JVM知识点总览-高级Java工程师面试必备
+参考:java常见面试题及答案 11-20（JVM）
+
+分四大块
+
+类的加载机制
+jvm内存结构
+GC算法 垃圾回收
+GC分析 命令调优
+
+
+
+Java内存结构
+程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。
+
+虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内">
+<meta name="twitter:image" content="http://liuhang.net.cn/../images/jmm.png">
 
 
 
@@ -214,12 +267,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-web">
-          <a href="/categories/web/" rel="section">
+        <li class="menu-item menu-item-project">
+          <a href="/categories/project/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
             
-            Web
+            项目
           </a>
         </li>
       
@@ -229,7 +282,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br />
             
-            数据结构与算法
+            算法
           </a>
         </li>
       
@@ -386,7 +439,127 @@
       
 
       
-        
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><ol>
+<li>参考：<a href="http://www.importnew.com/23792.html" target="_blank" rel="external">JVM知识点总览-高级Java工程师面试必备</a></li>
+<li><p>参考:<a href="http://blog.csdn.net/hsk256/article/details/49104955" target="_blank" rel="external">java常见面试题及答案 11-20（JVM）</a></p>
+</li>
+<li><p>分四大块</p>
+<ul>
+<li>类的加载机制</li>
+<li>jvm内存结构</li>
+<li>GC算法 垃圾回收</li>
+<li>GC分析 命令调优</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存结构"><a href="#Java内存结构" class="headerlink" title="Java内存结构"></a>Java内存结构</h1><ol>
+<li><p>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。</p>
+</li>
+<li><p>虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内存和栈内存中的栈），栈帧结构，每个方法在执行的时候都会创建一个栈帧，用于存储局部变量表、操作数栈、动态链接和方法出口等信息。</p>
+<ul>
+<li>栈帧的结构<ul>
+<li>局部变量表： 存放方法参数和方法内部定义的局部变量。存储的是基本数据类型，对象引用等； 通过索引定位的方式访问。</li>
+<li>操作数栈：作用主要用来存储运算结果以及运算的操作数；通过压栈和出栈访问。</li>
+<li>动态链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>本地方法栈： 虚拟机使用到的native方法</p>
+</li>
+<li><p>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</p>
+</li>
+<li><p>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</p>
+</li>
+</ol>
+<h1 id="GC-垃圾回收算法"><a href="#GC-垃圾回收算法" class="headerlink" title="GC 垃圾回收算法"></a>GC 垃圾回收算法</h1><ol>
+<li><p>常用的垃圾回收算法：</p>
+<ul>
+<li><p>标记-清除算法：这是垃圾收集算法中最基础的，根据名字就可以知道，它的思想就是标记哪些要被回收的对象，然后统一回收。这种方法很简单，但是会有两个主要问题：1.效率不高，标记和清除的效率都很低；2.会产生大量不连续的内存碎片，导致以后程序在分配较大的对象时，由于没有充足的连续内存而提前触发一次GC动作。</p>
+</li>
+<li><p>复制算法：为了解决效率问题，复制算法将可用内存按容量划分为相等的两部分，然后每次只使用其中的一块，当一块内存用完时，就将还存活的对象复制到第二块内存上，然后一次性清楚完第一块内存，再将第二块上的对象复制到第一块。但是这种方式，内存的代价太高，每次基本上都要浪费一般的内存。于是将该算法进行了改进，内存区域不再是按照1：1去划分，而是将内存划分为8:1:1三部分，较大那份内存为Eden区，其余是两块较小的内存区叫Survior区。每次都会优先使用Eden区，若Eden区满，就将对象复制到第二块内存区（Survior）上，然后清除Eden区，如果此时存活的对象太多，以至于Survivor不够时，会将这些对象通过分配担保机制复制到老年代中。(java堆又分为新生代和老年代)</p>
+</li>
+<li><p>标记-整理算法: 标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。（解决了内存碎片的问题）</p>
+</li>
+<li><p>分代回收算法：把Java堆分新生代和老年代，在新生代用复制算法（，由于对象生存期短，每次回收都会有大量对象死去），在老年代（老年代里的对象存活率较高）用标记-清理或标记-整理算法，是现代虚拟机通常采用的算法。</p>
+</li>
+</ul>
+</li>
+<li><p>GC的基本过程：</p>
+<ul>
+<li>堆内存分为新生代和老年代，而新生代又分为Eden区和两个Survivor区。</li>
+<li>先将对象放入Eden区，如果空间不足就向其中的一个survivor区上放，如果仍然放不下就会引发一次发生在新生代的minor GC。将存活的对象放入另一个survivor区中，然后清空Eden和之前的那个survivor区的内存。</li>
+<li>大对象以及长期存活的对象，进入老年代</li>
+<li>空间分配担保，当每次执行minor GC的时候应该对要晋升到老年代的对象进行分析，如果这些马上要到老年区的老年对象的大小超过了老年区的剩余大小，那么执行一次Full GC以尽可能地获得老年区的空间。那么执行一次Full GC以尽可能地获得老年区的空间。</li>
+</ul>
+</li>
+<li><p>判断对象是否存活：</p>
+<ul>
+<li><p>判断对象是否存活有两种方法：引用计数法，可达性算法。</p>
+</li>
+<li><p>引用计数法：给每一个对象设置一个引用计数器，每当有一个地方引用这个对象时，就将计数器加一，引用失效时，计数器就减一。当一个对象的引用计数器为零时，说明此对象没有被引用，也就是“死对象”,将会被垃圾回收. 存在问题：循环引用，A引用对象B，对象B又引用者对象A，那么此时A,B对象的引用计数器都不为零，也就造成无法完成垃圾回收，所以主流的虚拟机都没有采用这种算法。</p>
+</li>
+<li><p>可达性分析算法：从一个被称为GC Roots的对象开始向下搜索，如果一个对象到GC Roots没有任何引用链相连时，则说明此对象不可用。</p>
+<ul>
+<li>在java中可以作为GC Roots的对象有以下几种:<ul>
+<li>虚拟机栈中引用的对象</li>
+<li>方法区类静态属性引用的对象</li>
+<li>方法区常量池引用的对象</li>
+<li>本地方法栈JNI引用的对象(Native方法引用对象)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><ol>
+<li>java内存模型(JMM)是线程间通信的控制机制.JMM定义了主内存和线程之间抽象关系。<strong>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory）</strong>，本地内存中存储了该线程以读/写共享变量的副本。本地内存是JMM的一个抽象概念，并不真实存在。它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化。<br> 首先，线程A把本地内存A中更新过的共享变量刷新到主内存中去。<br> 然后，线程B到主内存中去读取线程A之前已更新过的共享变量<br> <img src="../images/jmm.png" alt=""></li>
+</ol>
+<ol>
+<li></li>
+</ol>
+<h1 id="Java类加载机制"><a href="#Java类加载机制" class="headerlink" title="Java类加载机制"></a>Java类加载机制</h1><h2 id="Java类加载过程"><a href="#Java类加载过程" class="headerlink" title="Java类加载过程"></a>Java类加载过程</h2><p>java类加载需要经历一下7个过程：</p>
+<ol>
+<li><p>加载<br>加载时类加载的第一个过程，在这个阶段，将完成一下三件事情：</p>
+<ol>
+<li>通过一个类的全限定名获取该类的二进制流。（类加载器作用）</li>
+<li>将该二进制流中的静态存储结构转化为方法去运行时数据结构。 </li>
+<li>在内存中生成该类的Class对象，作为该类的数据访问入口。</li>
+</ol>
+</li>
+<li><p>验证<br>验证的目的是为了确保Class文件的字节流中的信息不回危害到虚拟机.在该阶段主要完成以下四钟验证:</p>
+<ol>
+<li>文件格式验证：验证字节流是否符合Class文件的规范，如主次版本号是否在当前虚拟机范围内，常量池中的常量是否有不被支持的类型.</li>
+<li>元数据验证:对字节码描述的信息进行语义分析，如这个类是否有父类，是否集成了不被继承的类等。</li>
+<li>字节码验证：是整个验证过程中最复杂的一个阶段，通过验证数据流和控制流的分析，确定程序语义是否正确，主要针对方法体的验证。如：方法中的类型转换是否正确，跳转指令是否正确等。</li>
+<li>符号引用验证：这个动作在后面的解析过程中发生，主要是为了确保解析动作能正确执行。</li>
+</ol>
+</li>
+<li><p>准备<br>准备阶段是为类的静态变量（即 类变量）分配内存并将其初始化为默认值，这些内存都将在方法区中进行分配。准备阶段不分配类中的实例变量的内存，实例变量将会在对象实例化时随着对象一起分配在Java堆中。<br> public static int value=123;//在准备阶段value初始值为0 。在初始化阶段才会变为123 。</p>
+</li>
+<li><p>解析<br>该阶段主要完成符号引用到直接引用的转换动作。解析动作并不一定在初始化动作完成之前，也有可能在初始化之后。</p>
+</li>
+<li><p>初始化<br>初始化时类加载的最后一步，前面的类加载过程，除了在加载阶段用户应用程序可以通过自定义类加载器参与之外，其余动作完全由虚拟机主导和控制。到了初始化阶段，才真正开始执行类中定义的Java程序代码。</p>
+</li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><ol>
+<li><p>双亲委派模型</p>
+<ul>
+<li>当一个类收到了类加载请求时，不会自己先去加载这个类，而是将其委派给父类，由父类去加载，如果此时父类不能加载，反馈给子类，由子类去完成类的加载。</li>
+<li>使用双亲委派模型的好处在于Java类随着它的类加载器一起具备了一种带有优先级的层次关系。比如java.lang.Object，最终都是委派顶端的启动类加载器去加载。</li>
+</ul>
+</li>
+<li><p>什么是类加载器，类加载器有哪些<br> 实现通过类的权限定名获取该类的二进制字节流的代码块叫做类加载器。<br>主要有一下四种类加载器:</p>
+<ol>
+<li>启动类加载器(Bootstrap ClassLoader)用来加载java核心类库，无法被java程序直接引用。</li>
+<li>扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。Java 虚拟机的实现会提供一个扩展库目录。该类加载器在此目录里面查找并加载 Java 类。</li>
+<li>系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。</li>
+<li>用户自定义类加载器，通过继承 java.lang.ClassLoader类的方式实现。</li>
+</ol>
+</li>
+</ol>
+
       
     </div>
 
@@ -425,6 +598,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试/" rel="tag">#面试</a>
+          
+        </div>
       
 
       
@@ -513,7 +692,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -530,7 +709,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -595,7 +774,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存结构"><span class="nav-number">2.</span> <span class="nav-text">Java内存结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GC-垃圾回收算法"><span class="nav-number">3.</span> <span class="nav-text">GC 垃圾回收算法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java内存模型"><span class="nav-number">4.</span> <span class="nav-text">Java内存模型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java类加载机制"><span class="nav-number">5.</span> <span class="nav-text">Java类加载机制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java类加载过程"><span class="nav-number">5.1.</span> <span class="nav-text">Java类加载过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类加载器"><span class="nav-number">5.2.</span> <span class="nav-text">类加载器</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

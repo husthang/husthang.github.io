@@ -86,13 +86,28 @@
 
 
 
+<meta name="description" content="单例模式
+懒汉式：
+饿汉式
+线程安全： 懒汉式：使用静态内部类实现
+参考：如何正确地写出单例模式1234567891011// 懒汉式，第一次使用时加载，线程不安全；public class Singleton&amp;#123;    private Singleton()&amp;#123;&amp;#125;    private static Singleton instance;    public stati">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试-设计模式">
 <meta property="og:url" content="http://liuhang.net.cn/面试-设计模式.html">
 <meta property="og:site_name" content="刘航">
-<meta property="og:updated_time" content="2017-08-01T11:02:38.000Z">
+<meta property="og:description" content="单例模式
+懒汉式：
+饿汉式
+线程安全： 懒汉式：使用静态内部类实现
+参考：如何正确地写出单例模式1234567891011// 懒汉式，第一次使用时加载，线程不安全；public class Singleton&amp;#123;    private Singleton()&amp;#123;&amp;#125;    private static Singleton instance;    public stati">
+<meta property="og:updated_time" content="2017-08-22T07:43:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试-设计模式">
+<meta name="twitter:description" content="单例模式
+懒汉式：
+饿汉式
+线程安全： 懒汉式：使用静态内部类实现
+参考：如何正确地写出单例模式1234567891011// 懒汉式，第一次使用时加载，线程不安全；public class Singleton&amp;#123;    private Singleton()&amp;#123;&amp;#125;    private static Singleton instance;    public stati">
 
 
 
@@ -214,12 +229,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-web">
-          <a href="/categories/web/" rel="section">
+        <li class="menu-item menu-item-project">
+          <a href="/categories/project/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-globe"></i> <br />
             
-            Web
+            项目
           </a>
         </li>
       
@@ -229,7 +244,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-bolt"></i> <br />
             
-            数据结构与算法
+            算法
           </a>
         </li>
       
@@ -386,7 +401,14 @@
       
 
       
-        
+        <h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><ol>
+<li>懒汉式：</li>
+<li>饿汉式</li>
+<li>线程安全： 懒汉式：使用静态内部类实现</li>
+<li>参考：<a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">如何正确地写出单例模式</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 懒汉式，第一次使用时加载，线程不安全；</div><div class="line">public class Singleton&#123;</div><div class="line">    private Singleton()&#123;&#125;</div><div class="line">    private static Singleton instance;</div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        if(instance==null)&#123;</div><div class="line">            instance = new Singleton();</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//线程安全,使用静态内部类,懒汉式</div><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
       
     </div>
 
@@ -513,7 +535,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">93</span>
+              <span class="site-state-item-count">97</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -530,7 +552,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">38</span>
+                <span class="site-state-item-count">42</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -595,7 +617,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#单例模式"><span class="nav-number">1.</span> <span class="nav-text">单例模式</span></a></li></ol></div>
             
           </div>
         </section>
