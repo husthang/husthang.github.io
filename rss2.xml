@@ -569,16 +569,35 @@
 <li>举例： 单例模式，延迟加载。</li>
 </ul>
 </li>
-<li><p>线程池，为什么要用线程池</p>
+</ol>
+<h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><ol>
+<li><p>线程池作用</p>
 <ul>
 <li>创建线程要花费昂贵的资源和时间，如果任务来了才创建线程那么响应时间会变长，而且一个进程能创建的线程数有限。为了避免这些问题，在程序启动的时候就创建若干线程来响应处理</li>
 <li>好处：<ul>
 <li>提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行</li>
-<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗</li>
+<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗<ul>
+<li>为什么使用线程池，线程池好处</li>
+</ul>
+</li>
+<li>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。</li>
+<li>第三：提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控</li>
 </ul>
 </li>
 </ul>
 </li>
+<li><p>线程池原理</p>
+<ul>
+<li>如果当前运行的线程少于corePoolSize，则创建新线程来执行任务（注意，执行这一步骤<br>需要获取全局锁）。</li>
+<li>如果运行的线程等于或多于corePoolSize，则将任务加入BlockingQueue。</li>
+<li>如果无法将任务加入BlockingQueue（队列已满），则创建新的线程来处理任务（注意，执<br>行这一步骤需要获取全局锁）。</li>
+<li>如果创建新线程将使当前运行的线程超出maximumPoolSize，任务将被拒绝，并调用<br>RejectedExecutionHandler.rejectedExecution()方法。</li>
+<li>ThreadPoolExecutor完成预热之后<br>（当前运行的线程数大于等于corePoolSize），几乎所有的execute()方法调用都是执行步骤2，而<br>步骤2不需要获取全局锁</li>
+</ul>
+</li>
+</ol>
+<ol>
 <li><p>ThreadLocal变量</p>
 <ul>
 <li>线程局部变量</li>
@@ -594,13 +613,8 @@
 <li>isInterrupted，非静态方法，查询这个线程是否中断</li>
 </ul>
 </li>
-<li><p>读写锁</p>
-<ul>
-<li>读写锁在同一时刻可以允许多个读线程访问，但是在写线程访问时，所有的读线程和其他写线程均被阻塞；</li>
-<li>读写锁维护了一对锁，一个读锁和一个写锁，通过分离读锁和写锁，使得并发性相比一般的排他锁有了很大提升；</li>
-<li>应用场景：读多于写的情况</li>
-</ul>
-</li>
+</ol>
+<ol>
 <li><p>死锁</p>
 <ul>
 <li>产生死锁的四个必要条件<ul>
@@ -637,12 +651,8 @@
 <li>ForkJoinPool：执行任务</li>
 </ul>
 </li>
-<li><p>重入锁，公平锁</p>
-<ul>
-<li>重入锁：同一个线程再次进入同步代码的时候.可以再次获取自己已经获取到的锁。</li>
-<li>公平锁：多个线程再等待同一个锁时，必须按照申请锁的实际顺序来依次获得锁</li>
-</ul>
-</li>
+</ol>
+<ol>
 <li><p>CountDownLatch计数门闩与同步屏障CyclicBarrier</p>
 <ul>
 <li>CountDownLatch允许一个或多个线程等待其他线程完成操作（跟join类似）</li>
@@ -657,12 +667,6 @@
 </li>
 <li><p>线程池原理</p>
 <ul>
-<li>为什么使用线程池，线程池好处<ul>
-<li>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
-<li>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。</li>
-<li>第三：提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，<br>还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控</li>
-</ul>
-</li>
 <li>原理</li>
 </ul>
 </li>
@@ -679,6 +683,34 @@
 <li>while轮询</li>
 </ul>
 </li>
+</ol>
+<h2 id="Java中的锁"><a href="#Java中的锁" class="headerlink" title="Java中的锁"></a>Java中的锁</h2><ol>
+<li><p>读写锁</p>
+<ul>
+<li>读写锁在同一时刻可以允许多个读线程访问，但是在写线程访问时，所有的读线程和其他写线程均被阻塞。</li>
+<li>应用场景：多读少写。</li>
+<li>读写锁维护了一对锁，一个读锁，一个写锁</li>
+</ul>
+</li>
+<li><p>可重入锁</p>
+<ul>
+<li>对资源的重复加锁。同一个线程再次进入同步代码的时候.可以再次获取自己已经获取到的锁。</li>
+</ul>
+</li>
+<li><p>乐观锁与悲观锁</p>
+<ul>
+<li>悲观锁</li>
+<li>乐观锁： 比较并交换。 直接读取使用，在准备赋值时，检查值是否跟原来一样（是否被其他线程修改）。解决aba问题，带参数版本的方法，在比较时，看版本是否一样。</li>
+</ul>
+</li>
+<li><p>公平锁与非公平锁</p>
+<ul>
+<li>多个线程再等待同一个锁时，必须按照申请锁的实际顺序来依次获得锁</li>
+</ul>
+</li>
+<li><p>自旋锁</p>
+</li>
+<li>偏向锁</li>
 </ol>
 <h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><ol>
 <li>参考：<a href="http://www.importnew.com/23792.html" target="_blank" rel="external">JVM知识点总览-高级Java工程师面试必备</a></li>
@@ -922,7 +954,10 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="Spring是什么，简单说下Spring"><a href="#Spring是什么，简单说下Spring" class="headerlink" title="Spring是什么，简单说下Spring"></a>Spring是什么，简单说下Spring</h1><ol>
+      <content:encoded><![CDATA[<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.importnew.com/15851.html" target="_blank" rel="external">Spring面试问答Top 25</a></li>
+</ol>
+<h1 id="Spring是什么，简单说下Spring"><a href="#Spring是什么，简单说下Spring" class="headerlink" title="Spring是什么，简单说下Spring"></a>Spring是什么，简单说下Spring</h1><ol>
 <li>Spring是分层的Java EE/SE一站式开源框架，它以IoC控制反转和AOP（面向切面编程）为核心。</li>
 </ol>
 <h1 id="Spring优点"><a href="#Spring优点" class="headerlink" title="Spring优点"></a>Spring优点</h1><ul>
@@ -954,7 +989,16 @@
 <li>模板方法模式：用来解决代码重复的问题</li>
 <li>策略模式：Resource与ResourceLoader</li>
 </ol>
-<h1 id="描述一下-Spring-Bean的生命周期"><a href="#描述一下-Spring-Bean的生命周期" class="headerlink" title="描述一下 Spring Bean的生命周期"></a>描述一下 Spring Bean的生命周期</h1><p>关键节点</p>
+<h1 id="描述一下-Spring-Bean的生命周期"><a href="#描述一下-Spring-Bean的生命周期" class="headerlink" title="描述一下 Spring Bean的生命周期"></a>描述一下 Spring Bean的生命周期</h1><ul>
+<li>Spring容器 从XML 文件中读取bean的定义，并实例化bean。</li>
+<li>Spring根据bean的定义填充所有的属性。</li>
+<li>如果bean实现了BeanNameAware 接口，Spring 传递bean 的ID 到 setBeanName方法。</li>
+<li>如果Bean 实现了 BeanFactoryAware 接口， Spring传递beanfactory 给setBeanFactory 方法。</li>
+<li>如果有任何与bean相关联的BeanPostProcessors，Spring会在postProcesserBeforeInitialization()方法内调用它们。</li>
+<li>如果bean实现IntializingBean了，调用它的afterPropertySet方法，如果bean声明了初始化方法，调用此初始化方法。</li>
+<li>如果有BeanPostProcessors 和bean 关联，这些bean的postProcessAfterInitialization() 方法将被调用。</li>
+<li>如果bean实现了 DisposableBean，它将调用destroy()方法。<br>关键节点</li>
+</ul>
 <ol>
 <li>实例化，前后InstantiationAwareBeanPostProcessor接口的方法；</li>
 <li>设置属性值， 后 BeanNameAware和BeanFactoryAware，感知BeanName和BeanFactory</li>
