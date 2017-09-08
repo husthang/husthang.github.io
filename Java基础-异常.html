@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://liuhang.net.cn/Java基础-异常.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="java异常总结">
-<meta property="og:updated_time" content="2017-06-28T09:19:58.000Z">
+<meta property="og:updated_time" content="2017-09-07T08:49:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java基础-异常">
 <meta name="twitter:description" content="java异常总结">
@@ -446,6 +446,7 @@
 </ul>
 </li>
 <li>被finally控制的语句体一定会执行(特殊: 执行到finally之前,jvm退出了,比如遇到了<code>System.exit(0);</code>)</li>
+<li>如果finally中没有return ，正常是将return的值先保存，执行finally后返回return的值。但是finally中有return，就会先执行finally中的return。</li>
 <li>finally作用: 用于释放资源,例如IO和数据库操作中<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo3</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            System.out.println(<span class="number">10</span>/<span class="number">0</span>);</div><div class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</div><div class="line">            System.out.println(<span class="string">"除数为零"</span>);</div><div class="line">            <span class="comment">//System.exit(0);</span></div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;<span class="keyword">finally</span> &#123;</div><div class="line">            System.out.println(<span class="string">"是否执行"</span>);<span class="comment">//有return语句也会执行;碰到exit(0),jvm提前退出,则不执行</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -611,7 +612,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">42</span>
+                <span class="site-state-item-count">43</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

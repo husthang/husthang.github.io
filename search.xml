@@ -27,6 +27,7 @@
       <content type="html"><![CDATA[<h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><ol>
 <li>《Java并发编程的艺术》：粗读了一下，此书不错，Java并发编程入门极好！ 不建议用《Java并发编程实战》一书来入门。</li>
 <li>《深入理解Java虚拟机》 推荐</li>
+<li>《大型网站技术架构-核心原理及技术分析》 推荐</li>
 </ol>
 <h1 id="杂书"><a href="#杂书" class="headerlink" title="杂书"></a>杂书</h1><ol>
 <li>《解忧杂货铺》：宝宝推荐，似乎还不错，<strong>待读</strong>。</li>
@@ -242,14 +243,30 @@
     <entry>
       <title><![CDATA[面试-设计模式]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html</url>
-      <content type="html"><![CDATA[<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><ol>
+      <content type="html"><![CDATA[<h1 id="知道哪些设计模式"><a href="#知道哪些设计模式" class="headerlink" title="知道哪些设计模式"></a>知道哪些设计模式</h1><ul>
+<li>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</li>
+<li>创建型设计模式： 工厂模式（工厂方法模式，抽象工厂模式，简单工厂模式），构建模式，单例模式</li>
+<li></li>
+</ul>
+<h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><ol>
 <li>懒汉式：</li>
 <li>饿汉式</li>
 <li>线程安全： 懒汉式：使用静态内部类实现</li>
 <li>参考：<a href="http://wuchong.me/blog/2014/08/28/how-to-correctly-write-singleton-pattern/" target="_blank" rel="external">如何正确地写出单例模式</a><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">// 懒汉式，第一次使用时加载，线程不安全；</div><div class="line">public class Singleton&#123;</div><div class="line">    private Singleton()&#123;&#125;</div><div class="line">    private static Singleton instance;</div><div class="line">    public static Singleton getInstance()&#123;</div><div class="line">        if(instance==null)&#123;</div><div class="line">            instance = new Singleton();</div><div class="line">        &#125;</div><div class="line">        return instance;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//线程安全,使用静态内部类,懒汉式</div><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">//线程安全,使用静态内部类,懒汉式</div><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h1 id="装饰模式与代理模式"><a href="#装饰模式与代理模式" class="headerlink" title="装饰模式与代理模式"></a>装饰模式与代理模式</h1><h2 id="装饰模式："><a href="#装饰模式：" class="headerlink" title="装饰模式："></a>装饰模式：</h2><ul>
+<li>注重为方法添加额外的行为，装饰者一定会调用被装饰对象的方法的，装饰只能新增行为，不能跳过</li>
+</ul>
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><ol>
+<li><p>注重控制，控制对象方法的访问</p>
+</li>
+<li><p>静态代理：程序运行前，class文件已经生成</p>
+</li>
+<li>动态代理：字节码在程序运行时，由Java反射机制，动态生成</li>
+</ol>
+]]></content>
     </entry>
     
     <entry>
@@ -735,17 +752,76 @@
       <title><![CDATA[面试-项目及其他]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-%E9%A1%B9%E7%9B%AE%E5%8F%8A%E5%85%B6%E4%BB%96.html</url>
       <content type="html"><![CDATA[<h1 id="重点手写代码（算法）"><a href="#重点手写代码（算法）" class="headerlink" title="重点手写代码（算法）"></a>重点手写代码（算法）</h1><h2 id="单例模式（多线程）"><a href="#单例模式（多线程）" class="headerlink" title="单例模式（多线程）"></a>单例模式（多线程）</h2><ul>
-<li>线程安全，使用静态内部类<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">## 二分查找</div><div class="line"></div><div class="line"></div><div class="line">## 快排</div><div class="line"></div><div class="line">```java</div><div class="line">public class QuickSort &#123;</div><div class="line">    public static void quickSort(int[] arr) &#123;</div><div class="line">        partition(arr, 0, arr.length - 1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void partition(int[] arr, int start, int end) &#123;</div><div class="line">        if (start &gt;= end) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        int key = arr[start];//基准</div><div class="line">        int left = start;</div><div class="line">        int right = end;</div><div class="line">        while (left &lt; right) &#123;</div><div class="line">            while (arr[right] &gt;= key &amp;&amp; right &gt; left) &#123;</div><div class="line">                right--;</div><div class="line">            &#125;</div><div class="line">            arr[left] = arr[right];//比基准小的，换到左端</div><div class="line">            arr[right] = key;//基准换到了右边</div><div class="line"></div><div class="line">            while (arr[left] &lt;= key &amp;&amp; left &lt; right) &#123;</div><div class="line">                left++;</div><div class="line">            &#125;</div><div class="line">            arr[right] = arr[left];//比基准大的，换到右端</div><div class="line">            arr[left] = key;//基准换到了左边</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        partition(arr, start, left - 1);</div><div class="line">        partition(arr, right + 1, end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] arr = new int[]&#123;6, 5, 3, 1, 8, 7, 2, 9, 4, -2&#125;;</div><div class="line">        quickSort(arr);</div><div class="line">        for (int i : arr) &#123;</div><div class="line">            System.out.println(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<li>线程安全，使用静态内部类：饿汉式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">## 二分查找</div><div class="line"></div><div class="line"></div><div class="line">## 快排</div><div class="line">- 思路：以某个记录为标准，对序列进行划分，比记录小的在支点前，比记录大的，在支点后。一次划分的过程：以第一个为基准，一个头指针，一个尾指针，从后往前遍历，比基准小的，与基准换位，然后从前往后，比基准大的，同基准换位；直到头尾指针相碰。</div><div class="line"></div><div class="line"></div><div class="line">```java</div><div class="line">public class QuickSort &#123;</div><div class="line">    public static void quickSort(int[] arr) &#123;</div><div class="line">        partition(arr, 0, arr.length - 1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void partition(int[] arr, int start, int end) &#123;</div><div class="line">        if (start &gt;= end) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        int key = arr[start];//基准</div><div class="line">        int left = start;</div><div class="line">        int right = end;</div><div class="line">        while (left &lt; right) &#123;</div><div class="line">            while (arr[right] &gt;= key &amp;&amp; right &gt; left) &#123;</div><div class="line">                right--;</div><div class="line">            &#125;</div><div class="line">            arr[left] = arr[right];//比基准小的，换到左端</div><div class="line">            arr[right] = key;//基准换到了右边</div><div class="line"></div><div class="line">            while (arr[left] &lt;= key &amp;&amp; left &lt; right) &#123;</div><div class="line">                left++;</div><div class="line">            &#125;</div><div class="line">            arr[right] = arr[left];//比基准大的，换到右端</div><div class="line">            arr[left] = key;//基准换到了左边</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        partition(arr, start, left - 1);</div><div class="line">        partition(arr, right + 1, end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] arr = new int[]&#123;6, 5, 3, 1, 8, 7, 2, 9, 4, -2&#125;;</div><div class="line">        quickSort(arr);</div><div class="line">        for (int i : arr) &#123;</div><div class="line">            System.out.println(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="LRU算法"><a href="#LRU算法" class="headerlink" title="LRU算法"></a>LRU算法</h2><ul>
+<li>least recently used.最近最少使用算法。</li>
+<li>思路：<ol>
+<li>需要的数据结构：双向链表保存数据；hashMap实现O(1)访问；</li>
+<li>插入新的数据项： 如果该数据项存在，则将该节点移动到链表头部； 如果不存在，则先判断缓存是否已经满了，如果满了，则删除最后一个节点，然后，新建一个节点，放在链表头部；</li>
+</ol>
 </li>
 </ul>
 <h1 id="关于你的缺点"><a href="#关于你的缺点" class="headerlink" title="关于你的缺点"></a>关于你的缺点</h1><ol>
 <li>不懂得如何拒绝别人，导致影响自己的工作进度。比如，在实验室做的项目，经常是同学碰到一个问题不会，让我帮忙，我就去帮他搞定，导致自己的东西没做完，或者做到很晚。 改进方向是，首先告诉他，自己在什么时候可以给予帮助，而不是立马放下手头的事情去帮忙，让他决定是否继续求助。 其次，在帮助他解决问题的时候，不是一手包办，而是指明一个方向，告诉他查找什么资料可以解决，或者大体是什么思路，让他尽量自己解决。</li>
 <li>喜欢刨根问底的钻一些细节，导致做的一些事情不能按期完成。比如说，使用一些开源框架，就想去看看到底咋回事，导致太发散，没有聚焦点。通过时间管理，改变工作方式。</li>
 </ol>
+<h1 id="JDK源码阅读"><a href="#JDK源码阅读" class="headerlink" title="JDK源码阅读"></a>JDK源码阅读</h1><h2 id="HashMap原理及在JDK1-8中的优化"><a href="#HashMap原理及在JDK1-8中的优化" class="headerlink" title="HashMap原理及在JDK1.8中的优化"></a>HashMap原理及在JDK1.8中的优化</h2><ol>
+<li><p>参考</p>
+<ul>
+<li><a href="https://tech.meituan.com/java-hashmap.html" target="_blank" rel="external">Java 8系列之重新认识HashMap</a></li>
+<li><a href="http://www.cnblogs.com/skywang12345/p/3245399.html" target="_blank" rel="external">红黑树(一)之 原理和算法详细介绍</a></li>
+<li><a href="http://blog.csdn.net/fan2012huan/article/details/51097331" target="_blank" rel="external"> HashMap源码注解 之 静态工具方法hash()、tableSizeFor()（四）</a></li>
+</ul>
+</li>
+<li><p>hashmap数据结构</p>
+<ul>
+<li>hashmap是数组+链表+红黑树（JDK1.8增加了红黑树部分）实现的</li>
+<li>hash桶数组，table(默认长度length为16);loadFactor为负载因子(默认0.75)；hashmap能容纳的最大的键值对个数为threshold=length*loadFactor;负载因子因子可以大于1；</li>
+<li>在HashMap中，哈希桶数组table的长度length大小必须为2的n次方； 好处：在取模运算和扩容运算时可以优化。</li>
+<li>hashmap解决hash冲突的办法：链地址法。拉链过长时，会严重影响性能。在JDK1.8版本中，引入了红黑树，链表长度太长（默认超过8）时，链表就转换为红黑树。（红黑树查找、增加、删除的复杂度均为O(lgN)）.</li>
+</ul>
+</li>
+<li><p>具体功能实现</p>
+<ul>
+<li><strong>确定索引位置</strong>: 取key的hashcode值，高位参与运算；取模运算。 <strong>这里取模运算很巧妙</strong>，利用了table长度为2的n次方进行优化，<code>hash&amp;(length-1)</code>等价于hash对length取模运算，提高了取模运算的效率。</li>
+<li><strong>put方法</strong>：键值key计算hash值得到插入的数组索引i，如果table[i]为空，则直接新建插入；否则遍历，进行插入操作。在链表或者红黑树进行插入操作。</li>
+<li><strong>扩容机制</strong>:键值对数量超过threshold就要进行扩容，扩容后HashMap容量是之前容量的两倍。扩容机制非常巧妙，利用table长度为2的n次方进行优化。看hash值，新增的一位为1还是0，如果是0，索引没变，是1，索引变成“原索引+oldCap”。<ul>
+<li><strong>初始化时保证table长度为2的n次方</strong>：tableSizeFor方法，找到大于等于initialCapacity的最小的2的幂。用位操作的方法，极为巧妙。<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MAXIMUM_CAPACITY = <span class="number">1</span> &lt;&lt; <span class="number">30</span>;</div><div class="line"><span class="comment">/**</span></div><div class="line"> * Returns a power of two size for the given target capacity.</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> <span class="title">tableSizeFor</span><span class="params">(<span class="keyword">int</span> cap)</span> </span>&#123;</div><div class="line">    <span class="keyword">int</span> n = cap - <span class="number">1</span>;</div><div class="line">    n |= n &gt;&gt;&gt; <span class="number">1</span>;</div><div class="line">    n |= n &gt;&gt;&gt; <span class="number">2</span>;</div><div class="line">    n |= n &gt;&gt;&gt; <span class="number">4</span>;</div><div class="line">    n |= n &gt;&gt;&gt; <span class="number">8</span>;</div><div class="line">    n |= n &gt;&gt;&gt; <span class="number">16</span>;</div><div class="line">    <span class="keyword">return</span> (n &lt; <span class="number">0</span>) ? <span class="number">1</span> : (n &gt;= MAXIMUM_CAPACITY) ? MAXIMUM_CAPACITY : n + <span class="number">1</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>与hashtable区别</p>
+<ol>
+<li>HashTable 的方法是 Synchronize 的，而 HashMap 不是，在多个线程访问 Hashtable 时，不需要自己为它的方法实现同步，而 HashMap 就必须为之提供外同步。</li>
+<li>HashMap可以接受为null的键值(key)和值(value)，而Hashtable则不行</li>
+</ol>
+</li>
+</ol>
 <h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h2 id="2016华为软件精英挑战赛"><a href="#2016华为软件精英挑战赛" class="headerlink" title="2016华为软件精英挑战赛"></a>2016华为软件精英挑战赛</h2><ul>
-<li>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛，人数大概5000+</li>
-<li>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</li>
-<li>解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）</li>
+<li><p>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛，人数大概5000+</p>
+</li>
+<li><p>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</p>
+</li>
+<li><p>求解问题的几个基本算法：</p>
+<ul>
+<li>Dijkstra算法：求单源最短路径，求出源点到所有点的最短路。<ul>
+<li>基本思想：采用广度优先搜索。维持一个数组dist[n],表示所有顶点到源点的最短距离。初始化dist[ ]=INF,dist[start]=0;循环：找出所有dist[]中最小的点x，更新从这个点连接的所有点y:dist[y] = min( dist[y] ,dist[x] + weight[x][y]); 复杂度O(n^2+e).当图是稀疏图时，效果好。</li>
+<li>优化：采用优先队列进行优化，O(nlgn)复杂度。</li>
+</ul>
+</li>
+<li>Floyd算法:解决任意两点间的最短路径的一种算法<ul>
+<li>基本思想：动态规划的思想，Dij=min(Dij,Dik+Dkj),三层循环，可得到结果。O(n^3)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>最终解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵(即邻接矩阵)，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）。</li>
 </ul>
 <h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目中的重难点"><a href="#项目中的重难点" class="headerlink" title="项目中的重难点"></a>项目中的重难点</h2><ol>
 <li><p>敏感词检测问题： 使用<strong>字典树（前缀树）-数据结构</strong>，实现敏感词检测替换</p>
@@ -762,11 +838,55 @@
 <li>涉及到阻塞队列：支持阻塞的插入和移除方法。队列满时，队列会阻塞插入元素的线程；队列为空时，获取元素的线程会等待队列为空。</li>
 </ul>
 </li>
-<li><p><strong>项目如何做成分布式</strong></p>
+</ol>
+<h2 id="项目改成分布式"><a href="#项目改成分布式" class="headerlink" title="项目改成分布式"></a>项目改成分布式</h2><ol>
+<li><p>把数据库和应用从一台服务器，分到两台服务器。</p>
+</li>
+<li><p>使用集群</p>
 <ul>
-<li></li>
+<li>引入负载均衡，部署多台应该服务器。<ul>
+<li>会用session共享问题，session应该保存在哪个机器上。</li>
 </ul>
 </li>
+</ul>
+</li>
+<li><p>分布式缓存 ”读多写少“的场景</p>
+<ul>
+<li>缓存的数据更新的算法，LRU(最近最久未使用算法)</li>
+<li>缓存命中率</li>
+<li>缓存服务器扩容：尽量平滑，一致hash算法</li>
+</ul>
+</li>
+<li><p><strong>异步操作</strong></p>
+<ul>
+<li>使用消息队列，进行异步处理。生产者消费者模式。通过异步处理，将短时间高并发的事件，存储在消息队列中，从而削平高并发时期的任务。</li>
+</ul>
+</li>
+</ol>
+<h2 id="项目中任务调度多任务依赖"><a href="#项目中任务调度多任务依赖" class="headerlink" title="项目中任务调度多任务依赖"></a>项目中任务调度多任务依赖</h2><ol>
+<li>一个任务节点成功执行完之后，查看是否有子任务，有则并发执行所有子节点任务。</li>
+<li>一个任务被触发执行，先查看自己又哪些父任务，如果几个父任务都成功执行，则此任务触发执行，否则跳过。</li>
+</ol>
+<h2 id="Quartz"><a href="#Quartz" class="headerlink" title="Quartz"></a>Quartz</h2><h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1><h2 id="秒杀系统"><a href="#秒杀系统" class="headerlink" title="秒杀系统"></a>秒杀系统</h2><ol>
+<li><p>应注意的问题：</p>
+<ul>
+<li>如果和网站原有业务部署在一起，会对现有业务造成冲击</li>
+<li>直接下单：如果下单页面是个确定的普通的URL，可以直接下单。下单页面的url在服务的应该加入随机数，url动态化</li>
+</ul>
+</li>
+<li><p>后端如何优化</p>
+<ul>
+<li>web层，控制useId访问频率，比如同一个用户，某个时间内访问返回同一个页面。</li>
+<li>服务层，用消息队列，对秒杀请求(下单)，做异步处理，</li>
+<li>缓存，对秒杀的商品，典型的 读多写少，进行缓存处理</li>
+</ul>
+</li>
+</ol>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="hash索引B-索引"><a href="#hash索引B-索引" class="headerlink" title="hash索引B+索引"></a>hash索引B+索引</h2><h2 id="海量数据处理"><a href="#海量数据处理" class="headerlink" title="海量数据处理"></a>海量数据处理</h2><ol>
+<li>布隆过滤器：数据是否在集合中,</li>
+<li>Bitmap:</li>
+<li>堆:海量数据前n大</li>
+<li></li>
 </ol>
 ]]></content>
     </entry>
@@ -1862,6 +1982,11 @@
       <content type="html"><![CDATA[<h1 id="概览"><a href="#概览" class="headerlink" title="概览"></a>概览</h1><ol>
 <li><a href="https://algorithm.yuanbin.me/zh-hans/index.html" target="_blank" rel="external">参考/数据结构与算法/leetcode/lintcode题解||:总结超详细,推荐!!</a></li>
 <li>提交不通过时思考方向： 是否整型溢出！（int,long）</li>
+<li>线性数据结构和非线性数据结构<ul>
+<li>线性数据结构：线性表，栈，队列，串，数组</li>
+<li>非线性数据结构： 树(二叉树)，图，多维数组</li>
+</ul>
+</li>
 </ol>
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><p>重难点是: <strong>模式匹配(kmp算法)</strong>和<strong>正则表达式匹配</strong>; 在选择题中,可能会出现问next数组的题目</p>
 <h2 id="Java字符串API"><a href="#Java字符串API" class="headerlink" title="Java字符串API"></a>Java字符串API</h2><ul>
@@ -1958,8 +2083,9 @@
 <h2 id="删除链表的重复结点"><a href="#删除链表的重复结点" class="headerlink" title="删除链表的重复结点"></a>删除链表的重复结点</h2><ol>
 <li><a href="https://www.nowcoder.com/practice/fc533c45b73a41b0b44ccba763f866ef?tpId=13&amp;tqId=11209&amp;tPage=1&amp;rp=1&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank" rel="external">牛客网-剑指offer第56题-删除链表的重复结点</a></li>
 </ol>
-<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉树的定义与性质"><a href="#二叉树的定义与性质" class="headerlink" title="二叉树的定义与性质"></a>二叉树的定义与性质</h2><p><img src="../images/二叉树知识点.png" alt=""></p>
-<ol>
+<h1 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h1><ol>
+<li><h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="二叉树的定义与性质"><a href="#二叉树的定义与性质" class="headerlink" title="二叉树的定义与性质"></a>二叉树的定义与性质</h2><p><img src="../images/二叉树知识点.png" alt=""></p>
+</li>
 <li>二叉树的第i层至多有 2^(i−1) 个结点;</li>
 <li>深度为k的二叉树至多有 2^k − 1 个结点;</li>
 <li><strong>对任何一棵二叉树T，如果其终端结点数为 n0, 度为2的结点数为 n2, 则 n0 = n2 + 1。</strong></li>
@@ -2268,19 +2394,6 @@
 <li>抽象类不能被实例化。</li>
 <li>abstract 不能与private、static、final或native并列修饰同一个方法<br><img src="../images/接口和抽象类区别.png" alt=""></li>
 </ol>
-<h2 id="线程的几种可用状态"><a href="#线程的几种可用状态" class="headerlink" title="线程的几种可用状态"></a>线程的几种可用状态</h2><ol>
-<li>新建( new )：新创建了一个线程对象。</li>
-<li>可运行( runnable )：线程对象创建后，其他线程(比如 main 线程）调用了该对象 的 start ()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获 取 cpu 的使用权 。</li>
-<li>运行( running )：可运行状态( runnable )的线程获得了 cpu 时间片（ timeslice ） ，执行程序代码。</li>
-<li>阻塞( block )：阻塞状态是指线程因为某种原因放弃了 cpu 使用权，也即让出了 cpu timeslice ，暂时停止运行。直到线程进入可运行( runnable )状态，才有 机会再次获得 cpu timeslice 转到运行( running )状态。阻塞的情况分三种：<br>(一). 等待阻塞：运行( running )的线程执行 o . wait ()方法， JVM 会把该线程放 入等待队列( waitting queue )中。<br>(二). 同步阻塞：运行( running )的线程在获取对象的同步锁时，若该同步锁 被别的线程占用，则 JVM 会把该线程放入锁池( lock pool )中。<br>(三). 其他阻塞: 运行( running )的线程执行 Thread . sleep ( long ms )或 t . join ()方法，或者发出了 I / O 请求时， JVM 会把该线程置为阻塞状态。            当 sleep ()状态超时、 join ()等待线程终止或者超时、或者 I / O 处理完毕时，线程重新转入可运行( runnable )状态。</li>
-<li>死亡( dead )：线程 run ()、 main () 方法执行结束，或者因异常退出了 run ()方法，则该线程结束生命周期。死亡的线程不可再次复生</li>
-</ol>
-<h2 id="Java创建线程的三种种方式"><a href="#Java创建线程的三种种方式" class="headerlink" title="Java创建线程的三种种方式"></a>Java创建线程的三种种方式</h2><ol>
-<li>继承Thread类；重写其run方法；</li>
-<li>实现Runnable接口；</li>
-<li>使用ExecutorService、Callable、Future实现<strong>有返回结果</strong>的多线程(JDK5.0以后)</li>
-</ol>
-<h2 id="什么是死锁-deadlock-？"><a href="#什么是死锁-deadlock-？" class="headerlink" title="什么是死锁(deadlock)？"></a>什么是死锁(deadlock)？</h2><p>两个线程或两个以上线程都在等待对方执行完毕才能继续往下执行的时候就发生了死锁。结果就是这些线程都陷入了无限的等待中。</p>
 <h2 id="Java集合框架有哪些接口"><a href="#Java集合框架有哪些接口" class="headerlink" title="Java集合框架有哪些接口"></a>Java集合框架有哪些接口</h2><p><img src="../images/集合体系图.png" alt=""></p>
 <ul>
 <li>list接口:<ul>
@@ -2304,11 +2417,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="1-20-Map遍历的几种方法"><a href="#1-20-Map遍历的几种方法" class="headerlink" title="1.20    Map遍历的几种方法"></a>1.20    Map遍历的几种方法</h2><p><a href="http://www.trinea.cn/android/hashmap-loop-performance/" target="_blank" rel="external">http://www.trinea.cn/android/hashmap-loop-performance/</a></p>
-<h2 id="1-22-为什么集合类没有实现Cloneable和Serializable接口？"><a href="#1-22-为什么集合类没有实现Cloneable和Serializable接口？" class="headerlink" title="1.22    为什么集合类没有实现Cloneable和Serializable接口？"></a>1.22    为什么集合类没有实现Cloneable和Serializable接口？</h2><ul>
-<li>克隆(cloning)或者是序列化(serialization)的语义和含义是跟具体的实现相关的。因此，应该由集合类的具体实现来决定如何被克隆或者是序列化。</li>
-</ul>
-<h2 id="1-23-Java中的HashMap的工作原理是什么？"><a href="#1-23-Java中的HashMap的工作原理是什么？" class="headerlink" title="1.23        Java中的HashMap的工作原理是什么？"></a>1.23        Java中的HashMap的工作原理是什么？</h2><ol>
+<h2 id="HashMap原理及JDK1-8新特性"><a href="#HashMap原理及JDK1-8新特性" class="headerlink" title="HashMap原理及JDK1.8新特性"></a>HashMap原理及JDK1.8新特性</h2><ol>
 <li>HashMap底层是一个数组结构,数组的每一个元素是一个链表,而且链表中的每个节点是一个Entry[]键值对的数据结构。</li>
 <li>添加元素的原理:put添加键值对,根据key计算hashCode,根据hashcode得到在数组中的下标(<code>int i = hash(key.hashcode)&amp;(len-1);</code>),新加入的放在链表头,最先加入的在链尾;</li>
 <li>获取元素的原理: 首先计算hashCode值,找到数组对应的位置,然后根据equals方法,找到在对应位置的链表中找到对应的元素;</li>
@@ -2355,13 +2464,7 @@
 <li>判断一个元素是否在一个集合中：hashmap； 数据量很大时，用布隆过滤器。</li>
 <li><a href="https://github.com/cpselvis/zhihu-crawler/wiki/%E5%B8%83%E9%9A%86%E8%BF%87%E6%BB%A4%E5%99%A8%E7%9A%84%E5%8E%9F%E7%90%86%E5%92%8C%E5%AE%9E%E7%8E%B0" target="_blank" rel="external">布隆过滤器</a></li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.nowcoder.com/ta/review-java" target="_blank" rel="external">https://www.nowcoder.com/ta/review-java</a></p>
-<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="对Spring的理解"><a href="#对Spring的理解" class="headerlink" title="对Spring的理解"></a>对Spring的理解</h2><ul>
-<li>Spring是一个轻量级的JavaEE开发框架; Spring的核心思想是控制反转和面向切面;</li>
-<li>控制反转: 借助于“第三方”实现具有依赖关系的对象之间的解耦</li>
-<li>面向切面:在运行时，动态地将代码切入到类的指定方法、指定位置上的编程思想就是面向切面的编程。</li>
-</ul>
-<h1 id="Web开发"><a href="#Web开发" class="headerlink" title="Web开发"></a>Web开发</h1><h2 id="对mvc模式的理解"><a href="#对mvc模式的理解" class="headerlink" title="对mvc模式的理解"></a>对mvc模式的理解</h2><ul>
+<h2 id="对mvc模式的理解"><a href="#对mvc模式的理解" class="headerlink" title="对mvc模式的理解"></a>对mvc模式的理解</h2><ul>
 <li>一般J2EE web开发,是一个分层式的架构,表现层(web层)-业务层(service)层-持久层(dao层),mvc模式是表现层开发的一种设计模式,目的是解除控制逻辑,业务逻辑,视图之间的耦合;mvc模式由模型,视图,控制器三部分组成;控制器是接收客户端所提交的请求,将请求转发给适当的模型进行处理,然后将处理的结构返回给视图;</li>
 </ul>
 <h2 id="Session和cookie的区别"><a href="#Session和cookie的区别" class="headerlink" title="Session和cookie的区别"></a>Session和cookie的区别</h2><ol>
@@ -2436,6 +2539,7 @@
 <li>302  临时移动，服务器从不同位置的网页响应请求，请求者应继续使用原有位置进行以后的请求。</li>
 <li>500  （服务器内部错误），服务器遇到错误，无法完成请求。</li>
 <li>403  （禁止）服务器拒绝请求</li>
+<li>304 未修改（表示客户机缓存的版本是最新的，客户机应该继续使用它。）</li>
 </ul>
 </li>
 <li>http与https区别<ul>
@@ -2672,9 +2776,9 @@
     </entry>
     
     <entry>
-      <title><![CDATA[设计模式6-装饰者模式]]></title>
+      <title><![CDATA[设计模式6-装饰者模式&&代理模式]]></title>
       <url>http://liuhang.net.cn/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F6-%E8%A3%85%E9%A5%B0%E8%80%85%E6%A8%A1%E5%BC%8F.html</url>
-      <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
+      <content type="html"><![CDATA[<h1 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul>
 <li>动态地给一个对象增加一些额外的职责，就增加对象功能来说，装饰模式比生成子类实现更为灵活。装饰模式是一种对象结构型模式。装饰模式是一种用于替代继承的技术,使用对象之间的关联关系取代类之间的继承关系。在装饰模式中引入了装饰类，在装饰类中既可以调用待装饰的原有类的方法，还可以增加新的方法，以扩充原有类的功能。</li>
 <li>适用场景:装饰原有对象、在不改变原有对象的情况下扩展增强新功能/新特征.。当不能采用继承的方式对系统进行扩展或者采用继承不利于系统扩展和维护时可以使用装饰模式。</li>
 </ul>
@@ -2719,7 +2823,7 @@
 <li><a href="http://blog.csdn.net/janice0529/article/details/44160091" target="_blank" rel="external">Decorator参考</a></li>
 <li><a href="http://www.kancloud.cn/digest/xing-designpattern/143730" target="_blank" rel="external">设计模式参考</a></li>
 </ul>
-]]></content>
+<h1 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h1>]]></content>
     </entry>
     
     <entry>
@@ -2898,6 +3002,7 @@
 </ul>
 </li>
 <li>被finally控制的语句体一定会执行(特殊: 执行到finally之前,jvm退出了,比如遇到了<code>System.exit(0);</code>)</li>
+<li>如果finally中没有return ，正常是将return的值先保存，执行finally后返回return的值。但是finally中有return，就会先执行finally中的return。</li>
 <li>finally作用: 用于释放资源,例如IO和数据库操作中<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ExceptionDemo3</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">        <span class="keyword">try</span>&#123;</div><div class="line">            System.out.println(<span class="number">10</span>/<span class="number">0</span>);</div><div class="line">        &#125;<span class="keyword">catch</span> (Exception e)&#123;</div><div class="line">            System.out.println(<span class="string">"除数为零"</span>);</div><div class="line">            <span class="comment">//System.exit(0);</span></div><div class="line">            <span class="keyword">return</span>;</div><div class="line">        &#125;<span class="keyword">finally</span> &#123;</div><div class="line">            System.out.println(<span class="string">"是否执行"</span>);<span class="comment">//有return语句也会执行;碰到exit(0),jvm提前退出,则不执行</span></div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -3006,6 +3111,9 @@
       <content type="html"><![CDATA[<p><img src="../images/排序.png" alt="各种排序比较"></p>
 <ol>
 <li>稳定性: 若相同关键码元素间的位置关系在排序前与排序后保持一致,则为稳定的</li>
+<li><strong>元素的比较次数与初始序列无关是：选择排序</strong></li>
+<li><strong>算法的时间复杂度与初始序列无关： 堆排序，直接选择排序</strong></li>
+<li><strong>稳定的：直接插入排序；冒泡排序</strong></li>
 </ol>
 <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
 <li>插入排序的基本思想：每次将一个待排序的记录，按排序要求，<strong><em>插入</em></strong>到已经排序好的序列中的适当位置；</li>
@@ -4300,80 +4408,6 @@
     </entry>
     
     <entry>
-      <title><![CDATA[2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现]]></title>
-      <url>http://liuhang.net.cn/2016%E5%8D%8E%E4%B8%BA%E8%BD%AF%E4%BB%B6%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B%E6%80%BB%E7%BB%93-%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
-      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
-<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
-<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
-<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
-<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
-<li><img src="../media/graph.png" alt=""></li>
-<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
-</ul>
-<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
-<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
-<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
-<li><img src="/media/增广路径.png" alt=""></li>
-<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
-<li>由增广路径的定义,可以推出三个结论:<ol>
-<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
-<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
-<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
-</ol>
-</li>
-<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
-<li>置M为空;</li>
-<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
-<li>重复步骤2,直到找不出增广路径为止.</li>
-</ol>
-</li>
-<li><strong>匈牙利算法实现(java)</strong><ul>
-<li><img src="../media/14846300394186.jpg" alt=""></li>
-<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
-<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
-</ul>
-</li>
-</ul>
-<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
-<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
-<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
-<li>对任意的G和M,可行标都是存在的</li>
-<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
-</ul>
-<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
-<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
-<li>初始化可行顶标的值</li>
-<li>用匈牙利算法在等价子图中寻找完备匹配</li>
-<li>若未找到完备匹配则修改可行顶标的值</li>
-<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
-</ol>
-</li>
-<li><p>实例解释算法过程:</p>
-<ul>
-<li>带权二分图如下:</li>
-<li><img src="../media/14846361640808.jpg" alt=""></li>
-<li><p><img src="../media/顶标变换.png" alt=""></p>
-</li>
-<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
-</li>
-<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
-<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
-</ol>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
-<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
-<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
-<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
-</ol>
-]]></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[linux总结]]></title>
       <url>http://liuhang.net.cn/%E9%9D%A2%E8%AF%95-linux%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93.html</url>
       <content type="html"><![CDATA[<h1 id="linux文件属性与权限"><a href="#linux文件属性与权限" class="headerlink" title="linux文件属性与权限"></a>linux文件属性与权限</h1><ol>
@@ -4504,6 +4538,80 @@
 <h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><ol>
 <li><a href="https://leetcode.com/problems/valid-phone-numbers/#/description" target="_blank" rel="external">正则表达式|grep|awk</a></li>
 <li><a href="https://leetcode.com/problems/tenth-line/#/description" target="_blank" rel="external">文件第几行</a></li>
+</ol>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[2016华为软件精英挑战赛总结-匈牙利算法和KM算法详解及java实现]]></title>
+      <url>http://liuhang.net.cn/2016%E5%8D%8E%E4%B8%BA%E8%BD%AF%E4%BB%B6%E7%B2%BE%E8%8B%B1%E6%8C%91%E6%88%98%E8%B5%9B%E6%80%BB%E7%BB%93-%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95%E5%92%8CKM%E7%AE%97%E6%B3%95%E8%AF%A6%E8%A7%A3%E5%8F%8Ajava%E5%AE%9E%E7%8E%B0.html</url>
+      <content type="html"><![CDATA[<h2 id="匈牙利算法"><a href="#匈牙利算法" class="headerlink" title="匈牙利算法"></a>匈牙利算法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>二分图</strong>:二分图又称为二部图.简单来说，如果图中点可以被分为两组，并且使得所有边都跨越组的边界，则这就是一个二分图。准确地说：把一个图的顶点划分为两个不相交集 U 和V ，使得每一条边都分别连接U、V中的顶点。如果存在这样的划分，则此图为一个二分图。二分图的一个等价定义是：不含有”含奇数条边的环”的图。<strong>生成子图</strong>:子图包含原图的所有顶点</li>
+<li><strong>匹配</strong>: 通俗的说:匹配（matching）是一个边的集合，其中任意两条边都没有公共顶点.定义:对给定二分图G,在G的子图M中,M的边集{E}中的任意两条边不依赖于同一个顶点,则称M为一个匹配</li>
+<li><strong>最大匹配</strong>: 图的所有匹配中,含有边数最多的匹配称为最大匹配</li>
+<li><strong>完备匹配</strong>: 如果图G的某个匹配M,使G的每个顶点都和匹配M中的某条边相关联,则称M为完全匹配(完备匹配); 完备匹配一定是最大匹配.</li>
+<li><img src="../media/graph.png" alt=""></li>
+<li>如图: Fig.1为一个二分图,将其改为Fig.2的形式更为直观;Fig.3 红线部分,为一个匹配; Fig.4 为一个最大匹配,也是一个完备匹配</li>
+</ul>
+<h3 id="求图最大匹配的匈牙利算法"><a href="#求图最大匹配的匈牙利算法" class="headerlink" title="求图最大匹配的匈牙利算法"></a>求图最大匹配的匈牙利算法</h3><ul>
+<li>求最大匹配最直接暴力的方法是: 找出全部匹配,然后保留边最多的. 这个方法的复杂度为边数目的指数级函数. 匈牙利算法是效率更高的方法.</li>
+<li><strong>增广路径</strong>: 若P是图G一条<strong>连通两个未匹配点的路径,</strong>并且属于匹配M的边和不属于M的边(即已匹配边和未匹配边)在P上交替出现,则称P为相对于M的一条增广路径.</li>
+<li><img src="../media/增广路径.png" alt=""></li>
+<li>如上图,Fig.5红色为匹配,Fig.6为相对于匹配的一条增广路径</li>
+<li>由增广路径的定义,可以推出三个结论:<ol>
+<li>P的路径长度必定为奇数,第一条边和最后一条边都不属于M;</li>
+<li>P经过取反操作,可以得到一个更大的匹配M1;</li>
+<li>M为G的最大匹配当且仅当不存在相对于M的增广路径.</li>
+</ol>
+</li>
+<li>匈牙利算法: 用增广路径求最大匹配(匈牙利科学家Edmonds于1965年提出); 其框架如下:<ol>
+<li>置M为空;</li>
+<li>找出一条增广路径P,通过取反操作,得到更大的匹配M1;</li>
+<li>重复步骤2,直到找不出增广路径为止.</li>
+</ol>
+</li>
+<li><strong>匈牙利算法实现(java)</strong><ul>
+<li><img src="../media/14846300394186.jpg" alt=""></li>
+<li>增广路径有两种寻径方法，一个是深搜(DFS)，一个是宽搜(BFS)。如上图,蓝色线为第一次匹配子图,现在从x1寻找增广路径,如果是<strong>DFS深搜</strong>:首先:x1找到y0,发现y0已经被x0匹配,于是深入到x0,为x0找新的匹配点,发现x0可以匹配y2,让x0与y2匹配,然后让x1与y0匹配,得到第二次匹配子图(红色).现在,从x2出发,搜寻增广路径,x2找到y0匹配，但发现y0已经被x1匹配了，于是就深入到x1，去为x1找新的匹配节点，结果发现x1没有其他的匹配节点，于是匹配失败，x2接着找y1，发现y1可以匹配，于是就找到了新的增广路径,将x2-y1加入匹配中。</li>
+<li>DFS实现代码见<a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码java实现|GitHub</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="KM算法"><a href="#KM算法" class="headerlink" title="KM算法"></a>KM算法</h2><h3 id="KM算法原理"><a href="#KM算法原理" class="headerlink" title="KM算法原理"></a>KM算法原理</h3><ul>
+<li>对于加权完全二分图,找出权和最大的匹配,叫做求最佳匹配; 直接穷举法:效率为n!;用KM算法.</li>
+<li><strong>定理</strong>: 设M是一个带权完全二分图G的一个完备匹配，给每个顶点一个可行顶标(第i个x顶点的可行标用lx[i]表示，第j个y顶点的可行标用ly[j]表示)，如果对所有的边(i,j) in G,都有lx[i]+ly[j]&gt;=w[i,j]成立(w[i,j]表示边的权)，且对所有的边(i,j) in M,都有lx[i]+ly[j]=w[i,j]成立，则M是图G的一个最佳匹配。证明很容易。</li>
+<li>对任意的G和M,可行标都是存在的</li>
+<li>对二分图G和一组可行标,满足可行标边界条件(lx[i]+ly[j]=w[i,j])的所有边构成的生成子图(<strong>需要包含所有顶点</strong>),称为其<strong>等价子图</strong>(相等子图),在这个等价子图上,寻找其完备匹配,如果完备匹配存在,则这个完备匹配M就是图G的最大权匹配,最大权等于所有可行标的和; 如果完备匹配不存在,则修改可行标,用<strong>贪心</strong>的思想,将最优的边加入等价子图. <strong>KM算法就是一种逐次修改可行顶标的方法,使之对应的等价子图逐次增广(增加边),最后出现完备匹配</strong>.</li>
+</ul>
+<h3 id="KM算法流程及实例"><a href="#KM算法流程及实例" class="headerlink" title="KM算法流程及实例"></a>KM算法流程及实例</h3><ul>
+<li>Kuhn－Munkras<strong>算法流程</strong>：<ol>
+<li>初始化可行顶标的值</li>
+<li>用匈牙利算法在等价子图中寻找完备匹配</li>
+<li>若未找到完备匹配则修改可行顶标的值</li>
+<li>重复(2)(3)直到找到相等子图的完备匹配为止</li>
+</ol>
+</li>
+<li><p>实例解释算法过程:</p>
+<ul>
+<li>带权二分图如下:</li>
+<li><img src="../media/14846361640808.jpg" alt=""></li>
+<li><p><img src="../media/顶标变换.png" alt=""></p>
+</li>
+<li><p>从x0找增广路径，找到x0-y4；然后,从x1找不到增广路径,这时,需要修改顶标,加入一条最优的新边到等价子图中:此时搜索过的路径为x1-y4-x0(用匈牙利法DFS),在路径上的X顶点集为S(x0,x1),Y顶点集为T(y4),对所有在S中的点xi及不在T中的点yj，计算d=min{(L(xi)+L(yj)-weight(xiyj))}，S中的点的顶标减去d,T中的点的顶标加上d,保持顶标依然为可行顶标.(这个d计算的意义是<strong>贪心思想</strong>,两种情况:此时让x0与其他点匹配,x1与y4匹配;x0依旧与y4匹配,x1找其他点匹配.d计算的是找到一条新加的边,让x0和x1都搭配后,与x0和x1都同y4搭配的非法搭配这种情况相比,损失的权重值最少).具体来说:此时算出来的最小d=L(X1)+L(Y0)-weight(X1Y0)=2,对顶标进行松弛后,得到的等价子图如上,加了一条边x1-y0,为x1重新找增广路径,找到x1-y0,此时匹配权值和为9+6=15;原来的非法匹配权值和为9+8=17,”损失”的权值最少为2(即加入一条其他的非x1-y0的边如x0-y2,损失的权值为3,比2大,即贪心思想,”损失最小”).</p>
+</li>
+<li>KM算法原本的时间复杂度为O(n^4),n个节点找n次增广路径,在某次找增光路径之中,顶标最多改变n次,修改顶标的松弛量需n^2; 可改进为O(n^3)时间复杂度:在寻找增广路径时顺便将slack值算出.</li>
+</ul>
+</li>
+</ul>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><ol>
+<li><a href="https://github.com/husthang/java-learning/blob/master/java-algorithms/src/main/java/graph/KM.java" target="_blank" rel="external">我的代码|java实现</a></li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://www.renfei.org/blog/bipartite-matching.html" target="_blank" rel="external">图基本概念讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%9B%BE%E8%AE%BA%E6%9C%AF%E8%AF%AD" target="_blank" rel="external">图论术语|wiki</a></li>
+<li><a href="http://blog.csdn.net/jarily/article/details/8617352" target="_blank" rel="external"> 带权的二分图的最优匹配KM算法|csdn-blog</a></li>
+<li><a href="http://blog.csdn.net/x_y_q_/article/details/51927054" target="_blank" rel="external">KM算法实例讲解blog</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E7%AE%97%E6%B3%95" target="_blank" rel="external">匈牙利算法wiki</a></li>
 </ol>
 ]]></content>
     </entry>
