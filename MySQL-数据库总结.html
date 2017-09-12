@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://liuhang.net.cn/MySQL-数据库总结.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="mysql必知必会一书">
-<meta property="og:updated_time" content="2017-08-25T07:21:32.000Z">
+<meta property="og:updated_time" content="2017-09-12T06:48:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL/数据库总结">
 <meta name="twitter:description" content="mysql必知必会一书">
@@ -389,13 +389,50 @@
       
 
       
-        <h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><ul>
-<li>理解笛卡尔乘积</li>
+        <h1 id="MySQL必知必会笔记"><a href="#MySQL必知必会笔记" class="headerlink" title="MySQL必知必会笔记"></a>MySQL必知必会笔记</h1><h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">use database_name;</div><div class="line">show databases;</div><div class="line">show tables;</div><div class="line">show columns from table_name;</div><div class="line">show create database;</div><div class="line">show create table;</div><div class="line">select * from table_name;</div><div class="line">select distince id from table_name;</div><div class="line">select naem from table_name limit 1,1;</div><div class="line">select id from table_name order by id desc;//降序</div></pre></td></tr></table></figure>
+<ul>
+<li>顺序： select, from, where, group by, having,order by, limit;</li>
+</ul>
+<h2 id="通配符"><a href="#通配符" class="headerlink" title="通配符"></a>通配符</h2><ul>
+<li>like操作符<ul>
+<li>%表示任何字符出现任意次数</li>
+<li>_表示任何字符出现一次</li>
+</ul>
+</li>
+</ul>
+<h2 id="聚集函数"><a href="#聚集函数" class="headerlink" title="聚集函数"></a>聚集函数</h2><ul>
+<li>avg();min();max();count();sum();</li>
+<li>count(*) 对表中行的数目进行计数</li>
+</ul>
+<h2 id="分组"><a href="#分组" class="headerlink" title="分组"></a>分组</h2><ul>
+<li>Group by </li>
+<li>Having： where 过滤行； having 过滤分组</li>
+</ul>
+<h2 id="联结"><a href="#联结" class="headerlink" title="联结"></a>联结</h2><ul>
+<li>联结多个表，返回同一个输出</li>
+<li>理解笛卡尔乘积： 表一的每一行同表二的每一行进行匹配，where语句进行过滤</li>
+<li>内联结  inner join on</li>
+<li>外联结  left outer join on; right outer join on;</li>
 </ul>
 <h2 id="组合查询"><a href="#组合查询" class="headerlink" title="组合查询"></a>组合查询</h2><h2 id="全文搜索"><a href="#全文搜索" class="headerlink" title="全文搜索"></a>全文搜索</h2><h2 id="视图"><a href="#视图" class="headerlink" title="视图"></a>视图</h2><ul>
 <li>提供对select语句的一层封装</li>
 </ul>
-<h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><ol>
+<h2 id="事物"><a href="#事物" class="headerlink" title="事物"></a>事物</h2><ul>
+<li>是一个操作序列，这些操作要么都执行，要么都不执行</li>
+<li>事物的四大特性<ul>
+<li>一致性</li>
+<li>原子性</li>
+<li>隔离性</li>
+<li>持久性</li>
+</ul>
+</li>
+</ul>
+<h2 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a>数据库引擎</h2><ul>
+<li>InnoDB 支持数据库事物，不支持全文搜索</li>
+<li>MyISAM  性能高，不支持事物，支持全文本搜索</li>
+<li>MEMORY  数据存储在内存中，同MyISAM</li>
+</ul>
+<h2 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h2><h1 id="经典题目练习"><a href="#经典题目练习" class="headerlink" title="经典题目练习"></a>经典题目练习</h1><h2 id="Easy"><a href="#Easy" class="headerlink" title="Easy"></a>Easy</h2><ol>
 <li><a href="https://leetcode.com/problems/duplicate-emails/#/description" target="_blank" rel="external">找出重复的记录|leetcode|重点</a></li>
 <li><a href="https://leetcode.com/problems/combine-two-tables/#/description" target="_blank" rel="external">两个表联结查询|leetcode</a></li>
 <li><a href="https://leetcode.com/problems/employees-earning-more-than-their-managers/#/description" target="_blank" rel="external">表自联结|leetcode</a></li>
@@ -624,7 +661,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL必知必会笔记"><span class="nav-number">1.</span> <span class="nav-text">MySQL必知必会笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分组"><span class="nav-number">1.1.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联结"><span class="nav-number">1.2.</span> <span class="nav-text">联结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合查询"><span class="nav-number">1.3.</span> <span class="nav-text">组合查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全文搜索"><span class="nav-number">1.4.</span> <span class="nav-text">全文搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">1.5.</span> <span class="nav-text">视图</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典题目练习"><span class="nav-number">2.</span> <span class="nav-text">经典题目练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy"><span class="nav-number">2.1.</span> <span class="nav-text">Easy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Medium"><span class="nav-number">2.2.</span> <span class="nav-text">Medium</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MySQL必知必会笔记"><span class="nav-number">1.</span> <span class="nav-text">MySQL必知必会笔记</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">1.1.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通配符"><span class="nav-number">1.2.</span> <span class="nav-text">通配符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集函数"><span class="nav-number">1.3.</span> <span class="nav-text">聚集函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组"><span class="nav-number">1.4.</span> <span class="nav-text">分组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#联结"><span class="nav-number">1.5.</span> <span class="nav-text">联结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组合查询"><span class="nav-number">1.6.</span> <span class="nav-text">组合查询</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全文搜索"><span class="nav-number">1.7.</span> <span class="nav-text">全文搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视图"><span class="nav-number">1.8.</span> <span class="nav-text">视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事物"><span class="nav-number">1.9.</span> <span class="nav-text">事物</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库引擎"><span class="nav-number">1.10.</span> <span class="nav-text">数据库引擎</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引"><span class="nav-number">1.11.</span> <span class="nav-text">索引</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#经典题目练习"><span class="nav-number">2.</span> <span class="nav-text">经典题目练习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Easy"><span class="nav-number">2.1.</span> <span class="nav-text">Easy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Medium"><span class="nav-number">2.2.</span> <span class="nav-text">Medium</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

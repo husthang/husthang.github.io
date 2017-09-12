@@ -121,7 +121,7 @@
 多线程好处：在进程内，创建、终止线程快，线程切换快。
 多进程好处：每个进">
 <meta property="og:image" content="http://liuhang.net.cn/../images/jmm.png">
-<meta property="og:updated_time" content="2017-08-30T02:53:25.000Z">
+<meta property="og:updated_time" content="2017-09-12T09:05:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试-Java多线程/JVM等">
 <meta name="twitter:description" content="参考
@@ -455,7 +455,7 @@
         <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
 <li><a href="http://www.importnew.com/12773.html" target="_blank" rel="external">多线程面试问题收集</a></li>
 </ol>
-<h1 id="并发-多线程"><a href="#并发-多线程" class="headerlink" title="并发/多线程"></a>并发/多线程</h1><ol>
+<h1 id="并发-多线程"><a href="#并发-多线程" class="headerlink" title="并发/多线程"></a>并发/多线程</h1><ul>
 <li><p>什么是进程和线程</p>
 <ul>
 <li>进程可以被看做是一个程序或者一个应用，是系统进行资源分配一个独立单位。</li>
@@ -476,6 +476,12 @@
 <li>实现Callable接口,Future,线程池框架</li>
 </ul>
 </li>
+<li><p>线程的几种状态</p>
+<ul>
+<li>new</li>
+<li>运行状态runnable<br>-</li>
+</ul>
+</li>
 <li><p>用Runnable还是Thread</p>
 <ul>
 <li>Java不支持多继承，允许实现多个接口，如果要继承其他类，用Runable更好</li>
@@ -492,18 +498,18 @@
 <li><strong>防止指令重排</strong>：保证代码执行顺序，与程序顺序相同;下一个读取操作会在前一个写操作之后发生。volatile写之前的所有操作都不会被重排序到volatile之后;保volatile读之后的所有操作都不会被重排序到volatile之前;第一个操作是volatile写操作时,第二个操作是volatile读操作,不能进行重排序.</li>
 </ul>
 </li>
-<li><p>Java内存模型</p>
-<ul>
-<li>规定Java程序在不同硬件平台下，达到一致的内存访问效果。屏蔽掉硬件和操作系统的差异</li>
-</ul>
-</li>
 <li><p>什么是竞态条件。</p>
 <ul>
 <li>当多个线程竞争同一资源时，程序的结果依赖于线程执行的顺序。由于不恰当的执行顺序，而出现不正确的结果，即出现”竞态条件“</li>
 <li>举例： 单例模式，延迟加载。</li>
 </ul>
 </li>
-</ol>
+<li><p>wait与sleep</p>
+<ul>
+<li>wait会释放锁</li>
+</ul>
+</li>
+</ul>
 <h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><ol>
 <li><p>线程池作用</p>
 <ul>
@@ -523,6 +529,7 @@
 </li>
 <li><p>线程池原理</p>
 <ul>
+<li>有两个核心参数corePoolSize,maximumPool； 用到了阻塞队列。</li>
 <li>如果当前运行的线程少于corePoolSize，则创建新线程来执行任务（注意，执行这一步骤<br>需要获取全局锁）。</li>
 <li>如果运行的线程等于或多于corePoolSize，则将任务加入BlockingQueue。</li>
 <li>如果无法将任务加入BlockingQueue（队列已满），则创建新的线程来处理任务（注意，执<br>行这一步骤需要获取全局锁）。</li>
