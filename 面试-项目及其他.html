@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://liuhang.net.cn/面试-项目及其他.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="面试项目">
-<meta property="og:updated_time" content="2017-09-07T08:17:55.000Z">
+<meta property="og:updated_time" content="2017-09-14T15:19:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试-项目及其他">
 <meta name="twitter:description" content="面试项目">
@@ -408,7 +408,21 @@
       
 
       
-        <h1 id="重点手写代码（算法）"><a href="#重点手写代码（算法）" class="headerlink" title="重点手写代码（算法）"></a>重点手写代码（算法）</h1><h2 id="单例模式（多线程）"><a href="#单例模式（多线程）" class="headerlink" title="单例模式（多线程）"></a>单例模式（多线程）</h2><ul>
+        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
+<li><p>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</p>
+</li>
+<li><p>创建型设计模式： 工厂模式（工厂方法模式，抽象工厂模式，简单工厂模式），构建模式，单例模式。</p>
+</li>
+<li><p>行为设计模式： <strong>观察者模式</strong>（ 微信公众号，更新消息，关注号的人都可以知道。）<strong>模板方法模式</strong>：定义一个算法的框架，将一些步骤延迟到子类中实现，使得子类可以不改变算法的结构即可重定义该算法中的某些特定步骤。 比如，一个复杂的项目的任务，通常由架构师或者高级工程师用接口或者抽象类，来将主要业务逻辑串联起来，然后根据编码难度，将具体实现分给其他人来完成。</p>
+</li>
+<li><p>结构型设计模式： <strong>代理模式</strong>:给目标对象提供一个代理对象，并由代理对象控制对目标对象的访问。代理场景：当一个类需要对不同的调用者提供不同的调用权限时，可以使用代理类来实现； 访问原对象时，进行一些附加操作；</p>
+</li>
+</ul>
+<h1 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h1><ul>
+<li>三次握手：A发送连接，SYN同步为1，序号x，SYN sent; 然后B同意连接，ACK和SYN都变1，序号y，确认号为x+1,B为SYN  received;第三次，A发送确认号y+1,建立连接。</li>
+<li>为何三次：防止已经失效的链接突然又到了.A发送连接，没收到确认。A重发，然后建立了连接，过了会A上次发的又到了B。</li>
+</ul>
+<h1 id="重点手写代码（算法）"><a href="#重点手写代码（算法）" class="headerlink" title="重点手写代码（算法）"></a>重点手写代码（算法）</h1><h2 id="单例模式（多线程）"><a href="#单例模式（多线程）" class="headerlink" title="单例模式（多线程）"></a>单例模式（多线程）</h2><ul>
 <li>线程安全，使用静态内部类：饿汉式<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div></pre></td><td class="code"><pre><div class="line">public class Singleton &#123;</div><div class="line">    private Singleton() &#123;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    private static class SingletonHolder &#123;</div><div class="line">        //内部类的一切对外部类都是可见的，不管是否是私有成员</div><div class="line">        private static final Singleton instance = new Singleton();</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static Singleton getInstance() &#123;</div><div class="line">        return SingletonHolder.instance;</div><div class="line">    &#125;</div><div class="line">&#125;&#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line">``` </div><div class="line"></div><div class="line">## 二分查找</div><div class="line"></div><div class="line"></div><div class="line">## 快排</div><div class="line">- 思路：以某个记录为标准，对序列进行划分，比记录小的在支点前，比记录大的，在支点后。一次划分的过程：以第一个为基准，一个头指针，一个尾指针，从后往前遍历，比基准小的，与基准换位，然后从前往后，比基准大的，同基准换位；直到头尾指针相碰。</div><div class="line"></div><div class="line"></div><div class="line">```java</div><div class="line">public class QuickSort &#123;</div><div class="line">    public static void quickSort(int[] arr) &#123;</div><div class="line">        partition(arr, 0, arr.length - 1);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void partition(int[] arr, int start, int end) &#123;</div><div class="line">        if (start &gt;= end) &#123;</div><div class="line">            return;</div><div class="line">        &#125;</div><div class="line">        int key = arr[start];//基准</div><div class="line">        int left = start;</div><div class="line">        int right = end;</div><div class="line">        while (left &lt; right) &#123;</div><div class="line">            while (arr[right] &gt;= key &amp;&amp; right &gt; left) &#123;</div><div class="line">                right--;</div><div class="line">            &#125;</div><div class="line">            arr[left] = arr[right];//比基准小的，换到左端</div><div class="line">            arr[right] = key;//基准换到了右边</div><div class="line"></div><div class="line">            while (arr[left] &lt;= key &amp;&amp; left &lt; right) &#123;</div><div class="line">                left++;</div><div class="line">            &#125;</div><div class="line">            arr[right] = arr[left];//比基准大的，换到右端</div><div class="line">            arr[left] = key;//基准换到了左边</div><div class="line">        &#125;</div><div class="line"></div><div class="line">        partition(arr, start, left - 1);</div><div class="line">        partition(arr, right + 1, end);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    public static void main(String[] args) &#123;</div><div class="line">        int[] arr = new int[]&#123;6, 5, 3, 1, 8, 7, 2, 9, 4, -2&#125;;</div><div class="line">        quickSort(arr);</div><div class="line">        for (int i : arr) &#123;</div><div class="line">            System.out.println(i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -461,12 +475,12 @@
 <h1 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h1><h2 id="2016华为软件精英挑战赛"><a href="#2016华为软件精英挑战赛" class="headerlink" title="2016华为软件精英挑战赛"></a>2016华为软件精英挑战赛</h2><ul>
 <li><p>比赛规模：    全国八个赛区，赛区32强，赛区4强进决赛，人数大概5000+</p>
 </li>
-<li><p>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，求经过所有必经节点的最短路径。</p>
+<li><p>描述：在有向图中求最短路径的问题，约束是：给定了起点和终点，同时给定了一系列必经节点，必经边，求经过所有必经节点的最短路径。</p>
 </li>
 <li><p>求解问题的几个基本算法：</p>
 <ul>
 <li>Dijkstra算法：求单源最短路径，求出源点到所有点的最短路。<ul>
-<li>基本思想：采用广度优先搜索。维持一个数组dist[n],表示所有顶点到源点的最短距离。初始化dist[ ]=INF,dist[start]=0;循环：找出所有dist[]中最小的点x，更新从这个点连接的所有点y:dist[y] = min( dist[y] ,dist[x] + weight[x][y]); 复杂度O(n^2+e).当图是稀疏图时，效果好。</li>
+<li>基本思想：采用广度优先搜索。维持一个数组dist[n],表示所有顶点到源点的最短距离。初始化dist[ ]=INF,dist[start]=0;循环：找出所有dist[]中最小的点x，更新从这个点连接的所有点y:dist[y] = min( dist[y] ,dist[x] + weight[x][y]); 用到了贪心的思想。复杂度O(n^2+e).当图是稀疏图时，效果好。</li>
 <li>优化：采用优先队列进行优化，O(nlgn)复杂度。</li>
 </ul>
 </li>
@@ -476,11 +490,14 @@
 </li>
 </ul>
 </li>
+<li><p>最终解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵(即邻接矩阵)，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）。</p>
+</li>
 </ul>
-<ul>
-<li>最终解决思路： 指派问题结合分支定界来结局，可以把这个看成一个指派问题，根据有向图信息，得到一个费用矩阵(即邻接矩阵)，求一个最小指派，每个节点都要连接另一个节点，这样会形成一系列的环，然后用分支定界来破开环，最后形成一个环  即可。求指派问题： 用匈牙利算法，km算法（效率更高）。</li>
-</ul>
-<h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目中的重难点"><a href="#项目中的重难点" class="headerlink" title="项目中的重难点"></a>项目中的重难点</h2><ol>
+<h1 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h1><h2 id="项目概述"><a href="#项目概述" class="headerlink" title="项目概述"></a>项目概述</h2><ol>
+<li>统一网元采集器平台；项目描述：后端开发，对分布在各个地方的网元设备的信息进行采集，用于对网元设备的维护。系统分为：网元信息管理、采集模板管理、采集脚本管理、采集任务管理等模块。</li>
+<li>贡献</li>
+</ol>
+<h2 id="项目中的重难点"><a href="#项目中的重难点" class="headerlink" title="项目中的重难点"></a>项目中的重难点</h2><ol>
 <li><p>敏感词检测问题： 使用<strong>字典树（前缀树）-数据结构</strong>，实现敏感词检测替换</p>
 <ul>
 <li>字典树的结构：一个树的结构，比如字符串，有公共前缀的部分，路径相同。 通常会在节点设置一个标志位，表示该节点是不是末尾。</li>
@@ -524,7 +541,17 @@
 <li>一个任务节点成功执行完之后，查看是否有子任务，有则并发执行所有子节点任务。</li>
 <li>一个任务被触发执行，先查看自己又哪些父任务，如果几个父任务都成功执行，则此任务触发执行，否则跳过。</li>
 </ol>
-<h2 id="Quartz"><a href="#Quartz" class="headerlink" title="Quartz"></a>Quartz</h2><h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1><h2 id="秒杀系统"><a href="#秒杀系统" class="headerlink" title="秒杀系统"></a>秒杀系统</h2><ol>
+<h2 id="Quartz"><a href="#Quartz" class="headerlink" title="Quartz"></a>Quartz</h2><ol>
+<li>体系结构<ul>
+<li>Job</li>
+<li>JobDetail 时执行的Job(任务)</li>
+<li>Trigger 是一个类，描述触发Job执行的时间触发规则</li>
+<li>Scheduler： 代表一个Quartz的独立运行容器， Trigger和JobDetail可以注册到Scheduler中</li>
+</ul>
+</li>
+</ol>
+<p>## </p>
+<h1 id="分布式"><a href="#分布式" class="headerlink" title="分布式"></a>分布式</h1><h2 id="秒杀系统"><a href="#秒杀系统" class="headerlink" title="秒杀系统"></a>秒杀系统</h2><ol>
 <li><p>应注意的问题：</p>
 <ul>
 <li>如果和网站原有业务部署在一起，会对现有业务造成冲击</li>
@@ -678,7 +705,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">97</span>
+              <span class="site-state-item-count">98</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -760,7 +787,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#重点手写代码（算法）"><span class="nav-number">1.</span> <span class="nav-text">重点手写代码（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式（多线程）"><span class="nav-number">1.1.</span> <span class="nav-text">单例模式（多线程）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LRU算法"><span class="nav-number">1.2.</span> <span class="nav-text">LRU算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">2.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK源码阅读"><span class="nav-number">3.</span> <span class="nav-text">JDK源码阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap原理及在JDK1-8中的优化"><span class="nav-number">3.1.</span> <span class="nav-text">HashMap原理及在JDK1.8中的优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比赛"><span class="nav-number">4.</span> <span class="nav-text">比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016华为软件精英挑战赛"><span class="nav-number">4.1.</span> <span class="nav-text">2016华为软件精英挑战赛</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">5.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中的重难点"><span class="nav-number">5.1.</span> <span class="nav-text">项目中的重难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目改成分布式"><span class="nav-number">5.2.</span> <span class="nav-text">项目改成分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中任务调度多任务依赖"><span class="nav-number">5.3.</span> <span class="nav-text">项目中任务调度多任务依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quartz"><span class="nav-number">5.4.</span> <span class="nav-text">Quartz</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">6.</span> <span class="nav-text">分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#秒杀系统"><span class="nav-number">6.1.</span> <span class="nav-text">秒杀系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">7.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash索引B-索引"><span class="nav-number">7.1.</span> <span class="nav-text">hash索引B+索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据处理"><span class="nav-number">7.2.</span> <span class="nav-text">海量数据处理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP"><span class="nav-number">2.</span> <span class="nav-text">TCP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重点手写代码（算法）"><span class="nav-number">3.</span> <span class="nav-text">重点手写代码（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式（多线程）"><span class="nav-number">3.1.</span> <span class="nav-text">单例模式（多线程）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LRU算法"><span class="nav-number">3.2.</span> <span class="nav-text">LRU算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">4.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK源码阅读"><span class="nav-number">5.</span> <span class="nav-text">JDK源码阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap原理及在JDK1-8中的优化"><span class="nav-number">5.1.</span> <span class="nav-text">HashMap原理及在JDK1.8中的优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比赛"><span class="nav-number">6.</span> <span class="nav-text">比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016华为软件精英挑战赛"><span class="nav-number">6.1.</span> <span class="nav-text">2016华为软件精英挑战赛</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">7.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目概述"><span class="nav-number">7.1.</span> <span class="nav-text">项目概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中的重难点"><span class="nav-number">7.2.</span> <span class="nav-text">项目中的重难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目改成分布式"><span class="nav-number">7.3.</span> <span class="nav-text">项目改成分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中任务调度多任务依赖"><span class="nav-number">7.4.</span> <span class="nav-text">项目中任务调度多任务依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quartz"><span class="nav-number">7.5.</span> <span class="nav-text">Quartz</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">8.</span> <span class="nav-text">分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#秒杀系统"><span class="nav-number">8.1.</span> <span class="nav-text">秒杀系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">9.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash索引B-索引"><span class="nav-number">9.1.</span> <span class="nav-text">hash索引B+索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据处理"><span class="nav-number">9.2.</span> <span class="nav-text">海量数据处理</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

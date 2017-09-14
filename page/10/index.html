@@ -336,6 +336,477 @@
             
               
                 
+                <a class="post-title-link" href="/面试-Java多线程&&JVM等.html" itemprop="url">
+                  面试-Java多线程/JVM等
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-07-23T16:55:09+08:00" content="2017-07-23">
+              2017-07-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/面试-Java多线程&&JVM等.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="面试-Java多线程&&JVM等.html" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ol>
+<li><a href="http://www.importnew.com/12773.html" target="_blank" rel="external">多线程面试问题收集</a></li>
+</ol>
+<h1 id="并发-多线程"><a href="#并发-多线程" class="headerlink" title="并发/多线程"></a>并发/多线程</h1><ul>
+<li><p>什么是进程和线程</p>
+<ul>
+<li>进程可以被看做是一个程序或者一个应用，是系统进行资源分配一个独立单位。</li>
+<li>线程包含在进程之中，是进程的子集，一个进程可以有很多线程，每条线程并行执行不同的任务。</li>
+</ul>
+</li>
+<li><p>进程和线程有什么区别</p>
+<ul>
+<li>进程是资源分配的基本单位，一个进程可以包含多个线程，进程间切换开销大；</li>
+<li>多线程好处：在进程内，创建、终止线程快，线程切换快。</li>
+<li>多进程好处：每个进程相互独立，子进程崩溃没有关系，隔离性好；如果不需要很多通信，数据共享，多进程实现更加简单，高效。</li>
+</ul>
+</li>
+<li><p>Java实现多线程的方法</p>
+<ul>
+<li>继承Thread类，重写其run方法</li>
+<li>实现Runnable接口（查看源码，发现Thread类也实现了Runnable接口）</li>
+<li>实现Callable接口,Future,线程池框架</li>
+</ul>
+</li>
+<li><p>线程的几种状态</p>
+<ol>
+<li>新建(new)  ：新创建了一个线程对象。</li>
+<li>可运行(runnable)  ：线程对象创建后，其他线程(比如main线程）调用了该对象的start()方法。该状态的线程位于可运行线程池中，等待被线程调度选中，获取cpu 的使用权 。</li>
+<li>运行(running)  ：可运行状态(  runnable) 的线程获得了cpu 时间片（timeslice） ，执行程序代码。</li>
+<li>阻塞(block)  ：阻塞状态是指线程因为某种原因放弃了cpu 使用权，也即让出了cpu timeslice，暂时停止运行。直到线程进入  可运行(runnable) 状态，才有机会再次获得cpu timeslice 转到 运行(running) 状态。阻塞的情况分三种： <ul>
+<li>(一). 等待阻塞： 运行(running) 的线程执行o.wait()方法，JVM会把该线程放入等待队列(waitting queue)中,wait方法会释放锁对象。</li>
+<li>(二). 同步阻塞： 运行(running) 的线程在获取对象的同步锁时，若该同步锁被别的线程占用，则JVM会把该线程放入锁池(lock pool)中。</li>
+<li>(三). 其他阻塞： 运行(running) 的线程执行Thread.sleep(long ms)或t.join()方法，或者发出了I/O请求时，JVM会把该线程置为阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入 可运行(runnable) 状态。</li>
+</ul>
+</li>
+<li>死亡(dead)  ：线程run()、main() 方法执行结束，或者因异常退出了run()方法，则该线程结束生命周期。死亡的线程不可再次复生。</li>
+</ol>
+</li>
+<li><p>Java多线程同步的方法</p>
+<ol>
+<li>synchronized 同步方法，同步代码块</li>
+<li>Volatile关键字</li>
+<li>使用Java并发包中的锁，ReentrantLock同步</li>
+</ol>
+</li>
+<li><p>用Runnable还是Thread</p>
+<ul>
+<li>Java不支持多继承，允许实现多个接口，如果要继承其他类，用Runable更好</li>
+</ul>
+</li>
+<li><p>Java中Runnable和Callable有什么不同？</p>
+<ul>
+<li>主要区别是Callable的 call() 方法可以返回值和抛出异常，而Runnable的run()方法没有这些功能。Callable可以返回装载有计算结果的Future对象</li>
+</ul>
+</li>
+<li><p>Volatile变量</p>
+<ul>
+<li><strong>可见性</strong>：每次使用v之前，从主内存刷新最新的值(read,load,use操作连在一起)； 每次修改V之后，立马同步回主内存(assign,store,write操作连在一起)；</li>
+<li><strong>有序性</strong>：保证代码执行顺序，与程序顺序相同;下一个读取操作会在前一个写操作之后发生。volatile写之前的所有操作都不会被重排序到volatile之后;保volatile读之后的所有操作都不会被重排序到volatile之前;第一个操作是volatile写操作时,第二个操作是volatile读操作,不能进行重排序.</li>
+</ul>
+</li>
+<li><p>Java内存模型，并发过程中的三大特性</p>
+<ul>
+<li>原子性</li>
+<li>可见性：volatile和 synchronized保证可见性，final</li>
+<li>有序性：volatile和synchronized保证有序性</li>
+</ul>
+</li>
+<li><p>什么是竞态条件。</p>
+<ul>
+<li>当多个线程竞争同一资源时，程序的结果依赖于线程执行的顺序。由于不恰当的执行顺序，而出现不正确的结果，即出现”竞态条件“</li>
+<li>举例： 单例模式，延迟加载。</li>
+</ul>
+</li>
+<li><p>wait与sleep</p>
+<ul>
+<li>wait会释放锁</li>
+<li>sleep()保持对象锁，仍然占有该锁</li>
+</ul>
+</li>
+</ul>
+<h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><ol>
+<li><p>线程池作用</p>
+<ul>
+<li>创建线程要花费昂贵的资源和时间，如果任务来了才创建线程那么响应时间会变长，而且一个进程能创建的线程数有限。为了避免这些问题，在程序启动的时候就创建若干线程来响应处理</li>
+<li>好处：<ul>
+<li>提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行</li>
+<li>降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗<ul>
+<li>为什么使用线程池，线程池好处</li>
+</ul>
+</li>
+<li>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</li>
+<li>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能立即执行。</li>
+<li>第三：提高线程的可管理性。线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>线程池原理</p>
+<ul>
+<li>有两个核心参数corePoolSize,maximumPool； 用到了阻塞队列。</li>
+<li>如果当前运行的线程少于corePoolSize，则创建新线程来执行任务（注意，执行这一步骤<br>需要获取全局锁）。</li>
+<li>如果运行的线程等于或多于corePoolSize，则将任务加入BlockingQueue。</li>
+<li>如果无法将任务加入BlockingQueue（队列已满），则创建新的线程来处理任务（注意，执<br>行这一步骤需要获取全局锁）。</li>
+<li>如果创建新线程将使当前运行的线程超出maximumPoolSize，任务将被拒绝，并调用<br>RejectedExecutionHandler.rejectedExecution()方法。</li>
+<li>ThreadPoolExecutor完成预热之后<br>（当前运行的线程数大于等于corePoolSize），几乎所有的execute()方法调用都是执行步骤2，而<br>步骤2不需要获取全局锁</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>ThreadLocal变量</p>
+<ul>
+<li>线程局部变量</li>
+<li>用于线程间的数据隔离，为每一个使用该变量的线程提供一个副本，每个线程都可以独立地改变自己的副本，而不会和其他线程的副本冲突。采用的是空间换时间的策略</li>
+<li>底层原理：ThreadLocal类中维护一个Map，用于存储每一个线程的变量副本，Map中元素的键为线程对象，而值为对应线程的变量副本</li>
+<li>与同步机制的比较：synchronized同步机制，仅提供一份变量，让不同的线程排队访问，后者为每个线程都提供了一份变量，互相不影响的访问。</li>
+<li>应用：Spirng中，有状态的Bean，用ThreadLocal封装，可以申明为Singleton作用域，变成无状态的</li>
+</ul>
+</li>
+<li><p>Java中interrupted 和 isInterruptedd方法的区别</p>
+<ul>
+<li>interrupted方法，静态方法，Thread.interrupted，测试当前线程是否中断；调用之后，中断状态会被清除为false</li>
+<li>isInterrupted，非静态方法，查询这个线程是否中断</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>死锁</p>
+<ul>
+<li>产生死锁的四个必要条件<ul>
+<li>互斥（ Mutual exclusion ）条件：一个资源一次只能被一个进程所使用，即是排它性使用。</li>
+<li>不可抢占（ No preemption ）条件：一个资源仅能被占有它的进程所释放，而不能被别的进程强占。</li>
+<li>请求和保持（ Hold-and-wait ）条件：进程已经保持了至少一个资源，但又提出了新的资源要求，而该资源又已被其它进程占有，此时请求进程阻塞，但又对已经获得的其它资源保持不放。</li>
+<li>环路等待（ Circular wait ）条件：当每类资源只有一个时，在发生死锁时，必然存在一个进程-资源的环形链。如一系统状态的资源分配图所示，P1正在等待一个P2 占用的资源R2，P2正在等待一个P1占用的资源R1。</li>
+</ul>
+</li>
+<li>死锁的预防： 破坏四个条件之一</li>
+<li>死锁的避免：在资源分配之前，计算分配是否安全。 如：银行家算法</li>
+</ul>
+</li>
+<li><p>阻塞队列</p>
+<ul>
+<li>阻塞队列（BlockingQueue），支持阻塞的插入和移除方法<ul>
+<li>支持阻塞的插入方法：意思是当队列满时，队列会阻塞插入元素的线程，直到队列不满</li>
+<li>支持阻塞的移除方法：意思是在队列为空时，获取元素的线程会等待队列变为非空</li>
+</ul>
+</li>
+<li>Java里的阻塞队列(Java里的阻塞队列)<ul>
+<li>ArrayBlockingQueue</li>
+<li>LinkedBlockingQueue</li>
+</ul>
+</li>
+<li>阻塞队列原理：</li>
+</ul>
+</li>
+<li><p>Fork/join框架</p>
+<ul>
+<li>Fork/Join框架是Java 7提供的一个用于并行执行任务的框架，是一个把大任务分割成若干<br>个小任务，最终汇总每个小任务结果后得到大任务结果的框架</li>
+<li>工作窃取（work-stealing）算法是指某个线程从其他队列里窃取任务来执行</li>
+<li>ForkJoinTask：分隔任务；RecursiveTask：用于有返回结果的任务。RecursiveAction：用于没有返回结果的任务。</li>
+<li>ForkJoinPool：执行任务</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>CountDownLatch计数门闩与同步屏障CyclicBarrier</p>
+<ul>
+<li>CountDownLatch允许一个或多个线程等待其他线程完成操作（跟join类似）</li>
+<li>CyclicBarrier让一组线程到达一个屏障（也可以叫同步点）时被阻塞，直到最后一个线程到达屏障时，屏障才会开门，所有被屏障拦截的线程才会继续运行</li>
+<li>区别：CountDownLatch的计数器只能使用一次，而CyclicBarrier的计数器可以使用reset()方法重置</li>
+</ul>
+</li>
+<li><p>控制并发线程数的Semaphore</p>
+<ul>
+<li>Semaphore（信号量）是用来控制同时访问特定资源的线程数量，它通过协调各个线程，以保证合理的使用公共资源。</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>ConcurrentHashMap</p>
+<ul>
+<li>使用了锁分段技术技术来保证线程安全的，锁分段技术：首先将数据分成一段一段的存储，然后给每一段数据配一把锁，当一个线程占用锁访问其中一个段数据的时候，其他段的数据也能被其他线程访问</li>
+<li>put和get操作是原子操作，是线程安全</li>
+</ul>
+</li>
+<li><p>Java线程间通信方式</p>
+<ul>
+<li>同步（即共享内存），synchronized</li>
+<li>wait/notify机制；</li>
+<li>while轮询</li>
+</ul>
+</li>
+</ol>
+<h2 id="Java中的锁"><a href="#Java中的锁" class="headerlink" title="Java中的锁"></a>Java中的锁</h2><ol>
+<li><p>读写锁</p>
+<ul>
+<li>读写锁在同一时刻可以允许多个读线程访问，但是在写线程访问时，所有的读线程和其他写线程均被阻塞。</li>
+<li>应用场景：多读少写。</li>
+<li>读写锁维护了一对锁，一个读锁，一个写锁</li>
+</ul>
+</li>
+<li><p>可重入锁</p>
+<ul>
+<li>对资源的重复加锁。同一个线程再次进入同步代码的时候.可以再次获取自己已经获取到的锁。</li>
+</ul>
+</li>
+<li><p>乐观锁与悲观锁</p>
+<ul>
+<li>悲观锁</li>
+<li>乐观锁： 比较并交换。 直接读取使用，在准备赋值时，检查值是否跟原来一样（是否被其他线程修改）。解决aba问题，带参数版本的方法，在比较时，看版本是否一样。</li>
+</ul>
+</li>
+<li><p>公平锁与非公平锁</p>
+<ul>
+<li>多个线程再等待同一个锁时，必须按照申请锁的实际顺序来依次获得锁</li>
+</ul>
+</li>
+<li><p>自旋锁</p>
+</li>
+<li>偏向锁</li>
+</ol>
+<h1 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h1><ol>
+<li>参考：<a href="http://www.importnew.com/23792.html" target="_blank" rel="external">JVM知识点总览-高级Java工程师面试必备</a></li>
+<li><p>参考:<a href="http://blog.csdn.net/hsk256/article/details/49104955" target="_blank" rel="external">java常见面试题及答案 11-20（JVM）</a></p>
+</li>
+<li><p>分四大块</p>
+<ul>
+<li>类的加载机制</li>
+<li>jvm内存结构</li>
+<li>GC算法 垃圾回收</li>
+<li>GC分析 命令调优</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存结构"><a href="#Java内存结构" class="headerlink" title="Java内存结构"></a>Java内存结构</h1><ol>
+<li><p>程序计数器： 线程私有；看作当前线程所执行的字节码的行号指示器，通过计数器的值选取下一条要执行的字节码指令。</p>
+</li>
+<li><p>虚拟机栈： 线程私有，它的生命周期与线程相同；（即常说的堆内存和栈内存中的栈），栈帧结构，每个方法在执行的时候都会创建一个栈帧，用于存储局部变量表、操作数栈、动态链接和方法出口等信息。</p>
+<ul>
+<li>栈帧的结构<ul>
+<li>局部变量表： 存放方法参数和方法内部定义的局部变量。存储的是基本数据类型，对象引用等； 通过索引定位的方式访问。</li>
+<li>操作数栈：作用主要用来存储运算结果以及运算的操作数；通过压栈和出栈访问。</li>
+<li>动态链接</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>本地方法栈： 虚拟机使用到的native方法</p>
+</li>
+<li><p>Java堆，<strong>线程共享</strong>，所有的对象实例和数组在堆上分配内存。垃圾回收的主要区域。</p>
+</li>
+<li><p>方法区： 各<strong>线程共享</strong>，存储已经被虚拟机加载的类信息、常量、静态变量等。运行时常量池是方法区的一部分。</p>
+</li>
+</ol>
+<h1 id="GC-垃圾回收算法"><a href="#GC-垃圾回收算法" class="headerlink" title="GC 垃圾回收算法"></a>GC 垃圾回收算法</h1><ol>
+<li><p>常用的垃圾回收算法：</p>
+<ul>
+<li><p>标记-清除算法：这是垃圾收集算法中最基础的，根据名字就可以知道，它的思想就是标记哪些要被回收的对象，然后统一回收。这种方法很简单，但是会有两个主要问题：1.效率不高，标记和清除的效率都很低；2.会产生大量不连续的内存碎片，导致以后程序在分配较大的对象时，由于没有充足的连续内存而提前触发一次GC动作。</p>
+</li>
+<li><p>复制算法：为了解决效率问题，复制算法将可用内存按容量划分为相等的两部分，然后每次只使用其中的一块，当一块内存用完时，就将还存活的对象复制到第二块内存上，然后一次性清楚完第一块内存，再将第二块上的对象复制到第一块。但是这种方式，内存的代价太高，每次基本上都要浪费一般的内存。于是将该算法进行了改进，内存区域不再是按照1：1去划分，而是将内存划分为8:1:1三部分，较大那份内存为Eden区，其余是两块较小的内存区叫Survior区。每次都会优先使用Eden区，若Eden区满，就将对象复制到第二块内存区（Survior）上，然后清除Eden区，如果此时存活的对象太多，以至于Survivor不够时，会将这些对象通过分配担保机制复制到老年代中。(java堆又分为新生代和老年代)</p>
+</li>
+<li><p>标记-整理算法: 标记过程仍然与“标记-清除”算法一样，但后续步骤不是直接对可回收对象进行清理，而是让所有存活的对象都向一端移动，然后直接清理掉端边界以外的内存。（解决了内存碎片的问题）</p>
+</li>
+<li><p>分代回收算法：把Java堆分新生代和老年代，在新生代用复制算法（，由于对象生存期短，每次回收都会有大量对象死去），在老年代（老年代里的对象存活率较高）用标记-清理或标记-整理算法，是现代虚拟机通常采用的算法。</p>
+</li>
+</ul>
+</li>
+<li><p>GC的基本过程：</p>
+<ul>
+<li>堆内存分为新生代和老年代，而新生代又分为Eden区和两个Survivor区。</li>
+<li>先将对象放入Eden区，如果空间不足就向其中的一个survivor区上放，如果仍然放不下就会引发一次发生在新生代的minor GC。将存活的对象放入另一个survivor区中，然后清空Eden和之前的那个survivor区的内存。</li>
+<li>大对象以及长期存活的对象，进入老年代</li>
+<li>空间分配担保，当每次执行minor GC的时候应该对要晋升到老年代的对象进行分析，如果这些马上要到老年区的老年对象的大小超过了老年区的剩余大小，那么执行一次Full GC以尽可能地获得老年区的空间。那么执行一次Full GC以尽可能地获得老年区的空间。</li>
+</ul>
+</li>
+<li><p>判断对象是否存活：</p>
+<ul>
+<li><p>判断对象是否存活有两种方法：引用计数法，可达性算法。</p>
+</li>
+<li><p>引用计数法：给每一个对象设置一个引用计数器，每当有一个地方引用这个对象时，就将计数器加一，引用失效时，计数器就减一。当一个对象的引用计数器为零时，说明此对象没有被引用，也就是“死对象”,将会被垃圾回收. 存在问题：循环引用，A引用对象B，对象B又引用者对象A，那么此时A,B对象的引用计数器都不为零，也就造成无法完成垃圾回收，所以主流的虚拟机都没有采用这种算法。</p>
+</li>
+<li><p>可达性分析算法：从一个被称为GC Roots的对象开始向下搜索，如果一个对象到GC Roots没有任何引用链相连时，则说明此对象不可用。</p>
+<ul>
+<li>在java中可以作为GC Roots的对象有以下几种:<ul>
+<li>虚拟机栈中引用的对象</li>
+<li>方法区类静态属性引用的对象</li>
+<li>方法区常量池引用的对象</li>
+<li>本地方法栈JNI引用的对象(Native方法引用对象)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="Java内存模型"><a href="#Java内存模型" class="headerlink" title="Java内存模型"></a>Java内存模型</h1><ol>
+<li>java内存模型(JMM)是线程间通信的控制机制.JMM定义了主内存和线程之间抽象关系。<strong>线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory）</strong>，本地内存中存储了该线程以读/写共享变量的副本。本地内存是JMM的一个抽象概念，并不真实存在。它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化。<br> 首先，线程A把本地内存A中更新过的共享变量刷新到主内存中去。<br> 然后，线程B到主内存中去读取线程A之前已更新过的共享变量<br> <img src="../images/jmm.png" alt=""></li>
+</ol>
+<h1 id="Java类加载机制"><a href="#Java类加载机制" class="headerlink" title="Java类加载机制"></a>Java类加载机制</h1><h2 id="Java类加载过程"><a href="#Java类加载过程" class="headerlink" title="Java类加载过程"></a>Java类加载过程</h2><p>java类加载需要经历一下7个过程：</p>
+<ol>
+<li><p>加载<br>加载时类加载的第一个过程，在这个阶段，将完成一下三件事情：</p>
+<ol>
+<li>通过一个类的全限定名获取该类的二进制流。（类加载器作用）</li>
+<li>将该二进制流中的静态存储结构转化为方法去运行时数据结构。 </li>
+<li>在内存中生成该类的Class对象，作为该类的数据访问入口。</li>
+</ol>
+</li>
+<li><p>验证<br>验证的目的是为了确保Class文件的字节流中的信息不回危害到虚拟机.在该阶段主要完成以下四钟验证:</p>
+<ol>
+<li>文件格式验证：验证字节流是否符合Class文件的规范，如主次版本号是否在当前虚拟机范围内，常量池中的常量是否有不被支持的类型.</li>
+<li>元数据验证:对字节码描述的信息进行语义分析，如这个类是否有父类，是否集成了不被继承的类等。</li>
+<li>字节码验证：是整个验证过程中最复杂的一个阶段，通过验证数据流和控制流的分析，确定程序语义是否正确，主要针对方法体的验证。如：方法中的类型转换是否正确，跳转指令是否正确等。</li>
+<li>符号引用验证：这个动作在后面的解析过程中发生，主要是为了确保解析动作能正确执行。</li>
+</ol>
+</li>
+<li><p>准备<br>准备阶段是为类的静态变量（即 类变量）分配内存并将其初始化为默认值，这些内存都将在方法区中进行分配。准备阶段不分配类中的实例变量的内存，实例变量将会在对象实例化时随着对象一起分配在Java堆中。<br> public static int value=123;//在准备阶段value初始值为0 。在初始化阶段才会变为123 。</p>
+</li>
+<li><p>解析<br>该阶段主要完成符号引用到直接引用的转换动作。解析动作并不一定在初始化动作完成之前，也有可能在初始化之后。</p>
+</li>
+<li><p>初始化<br>初始化时类加载的最后一步，前面的类加载过程，除了在加载阶段用户应用程序可以通过自定义类加载器参与之外，其余动作完全由虚拟机主导和控制。到了初始化阶段，才真正开始执行类中定义的Java程序代码。</p>
+</li>
+</ol>
+<h2 id="类加载器"><a href="#类加载器" class="headerlink" title="类加载器"></a>类加载器</h2><ol>
+<li><p>双亲委派模型</p>
+<ul>
+<li>当一个类收到了类加载请求时，不会自己先去加载这个类，而是将其委派给父类，由父类去加载，如果此时父类不能加载，反馈给子类，由子类去完成类的加载。</li>
+<li>使用双亲委派模型的好处在于Java类随着它的类加载器一起具备了一种带有优先级的层次关系。比如java.lang.Object，最终都是委派顶端的启动类加载器去加载。</li>
+</ul>
+</li>
+<li><p>什么是类加载器，类加载器有哪些<br> 实现通过类的权限定名获取该类的二进制字节流的代码块叫做类加载器。<br>主要有一下四种类加载器:</p>
+<ol>
+<li>启动类加载器(Bootstrap ClassLoader)用来加载java核心类库，无法被java程序直接引用。</li>
+<li>扩展类加载器(extensions class loader):它用来加载 Java 的扩展库。Java 虚拟机的实现会提供一个扩展库目录。该类加载器在此目录里面查找并加载 Java 类。</li>
+<li>系统类加载器（system class loader）：它根据 Java 应用的类路径（CLASSPATH）来加载 Java 类。一般来说，Java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。</li>
+<li>用户自定义类加载器，通过继承 java.lang.ClassLoader类的方式实现。</li>
+</ol>
+</li>
+</ol>
+<h1 id="JVM调优"><a href="#JVM调优" class="headerlink" title="JVM调优"></a>JVM调优</h1><ol>
+<li>分代内存默认分配<ul>
+<li>堆大小 = 新生代 + 老年代</li>
+<li>新生代 = Eden + 两个 Survivor</li>
+</ul>
+</li>
+</ol>
+<h2 id="常见垃圾收集器"><a href="#常见垃圾收集器" class="headerlink" title="常见垃圾收集器"></a>常见垃圾收集器</h2><ol>
+<li>Serial（串行）收集器：垃圾回收时，会停掉用户线程，进行垃圾回收。</li>
+<li>ParNew收集器：Serial收集器的多线程版本，并发收集器</li>
+<li>Parallel(并行) Scavenge(清除)： 关注吞吐量</li>
+<li>Parallel old老年代版本</li>
+<li>CMS老年代</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/Java并发编程10-定时器Timer.html" itemprop="url">
                   Java并发编程10-定时器Timer
                 </a>
@@ -775,128 +1246,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/Spring-源码研究1-ioc容器实现.html" itemprop="url">
-                  Spring-源码研究1-IOC容器实现
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2017-07-17T15:28:05+08:00" content="2017-07-17">
-              2017-07-17
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/frame/" itemprop="url" rel="index">
-                    <span itemprop="name">frame</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/Spring-源码研究1-ioc容器实现.html#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="Spring-源码研究1-ioc容器实现.html" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          研究Spring源码！
-          <div class="post-more-link text-center">
-            <a class="btn" href="/Spring-源码研究1-ioc容器实现.html">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -942,7 +1291,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/">
-              <span class="site-state-item-count">97</span>
+              <span class="site-state-item-count">98</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
