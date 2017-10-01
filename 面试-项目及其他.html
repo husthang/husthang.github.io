@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://liuhang.net.cn/面试-项目及其他.html">
 <meta property="og:site_name" content="刘航">
 <meta property="og:description" content="面试项目">
-<meta property="og:updated_time" content="2017-09-14T15:19:25.000Z">
+<meta property="og:updated_time" content="2017-09-19T13:03:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试-项目及其他">
 <meta name="twitter:description" content="面试项目">
@@ -408,7 +408,56 @@
       
 
       
-        <h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
+        <h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><ul>
+<li>英文： Good morning, my name is liuhang. I am glad to have a chance for this interview.  and i hope i can make a good performance today.  i am 24 years old,born in hubei xiaogao.I majored in Electronic Information Engineering in HuaZhong University of science and technology from 2011 to 2015. I am a postgraduate student now. In my spare time, I like running，especially long distance running。 Running makes me strong, and  understand the importance of sticking to the end.</li>
+</ul>
+<h1 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h1><h2 id="TCP与UDP特点"><a href="#TCP与UDP特点" class="headerlink" title="TCP与UDP特点"></a>TCP与UDP特点</h2><ul>
+<li><p>TCP</p>
+<ul>
+<li>TCP面向连接，先建立连接，传送数据完毕后，释放连接</li>
+<li>TCP是点对点，一对一</li>
+<li>可靠传输，无差错，不丢失，不重复</li>
+<li>全双工</li>
+<li>面向字节流,要传送的数据看成字节流</li>
+</ul>
+</li>
+<li><p>UDP</p>
+<ul>
+<li>无连接的，传送是不需要连接</li>
+<li>支持一对一，一对多，多对一</li>
+<li>不可靠传输</li>
+<li>面向报文的，直接把要传送的数据变成报文，交给ip层<br>-UDP首部开销小</li>
+</ul>
+</li>
+</ul>
+<h2 id="三次握手与四次分手"><a href="#三次握手与四次分手" class="headerlink" title="三次握手与四次分手"></a>三次握手与四次分手</h2><ul>
+<li><p>三次握手</p>
+<ul>
+<li>客户端：SYN发送，消耗序列号x，变SYN-sent状态</li>
+<li>服务的： ACK+SYN确认，消耗序列号y，ack=x+1; 边SYN-RCVD</li>
+<li>客户端：ACK确认，ack=y+1; 下个报文数据的序列号为x+1</li>
+</ul>
+</li>
+<li><p>为何要三次握手</p>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><p>四次分手</p>
+<ul>
+<li>A发送FIN,消耗序列号u  FIN-Wait1状态</li>
+<li><p>B确认ACK,消耗序列号v，ack=u+1,close-wait状态； A收到确认，进入FIn-wait2状态。</p>
+</li>
+<li><p>B发送FIN+ACK ; 消耗序列号， 进入Last-ack最后确认状态</p>
+</li>
+<li>A发送ACK，序列号u+1; 进入time-wait状态； 2msl后关闭</li>
+</ul>
+<ul>
+<li>相当于两个两次握手，第一次，A表明自己不发送数据了； 第二次，B表明自己不发送数据。</li>
+</ul>
+</li>
+</ul>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
 <li><p>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</p>
 </li>
 <li><p>创建型设计模式： 工厂模式（工厂方法模式，抽象工厂模式，简单工厂模式），构建模式，单例模式。</p>
@@ -787,7 +836,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">1.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP"><span class="nav-number">2.</span> <span class="nav-text">TCP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重点手写代码（算法）"><span class="nav-number">3.</span> <span class="nav-text">重点手写代码（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式（多线程）"><span class="nav-number">3.1.</span> <span class="nav-text">单例模式（多线程）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LRU算法"><span class="nav-number">3.2.</span> <span class="nav-text">LRU算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">4.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK源码阅读"><span class="nav-number">5.</span> <span class="nav-text">JDK源码阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap原理及在JDK1-8中的优化"><span class="nav-number">5.1.</span> <span class="nav-text">HashMap原理及在JDK1.8中的优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比赛"><span class="nav-number">6.</span> <span class="nav-text">比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016华为软件精英挑战赛"><span class="nav-number">6.1.</span> <span class="nav-text">2016华为软件精英挑战赛</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">7.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目概述"><span class="nav-number">7.1.</span> <span class="nav-text">项目概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中的重难点"><span class="nav-number">7.2.</span> <span class="nav-text">项目中的重难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目改成分布式"><span class="nav-number">7.3.</span> <span class="nav-text">项目改成分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中任务调度多任务依赖"><span class="nav-number">7.4.</span> <span class="nav-text">项目中任务调度多任务依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quartz"><span class="nav-number">7.5.</span> <span class="nav-text">Quartz</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">8.</span> <span class="nav-text">分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#秒杀系统"><span class="nav-number">8.1.</span> <span class="nav-text">秒杀系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">9.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash索引B-索引"><span class="nav-number">9.1.</span> <span class="nav-text">hash索引B+索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据处理"><span class="nav-number">9.2.</span> <span class="nav-text">海量数据处理</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#自我介绍"><span class="nav-number">1.</span> <span class="nav-text">自我介绍</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP和UDP的区别"><span class="nav-number">2.</span> <span class="nav-text">TCP和UDP的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP与UDP特点"><span class="nav-number">2.1.</span> <span class="nav-text">TCP与UDP特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三次握手与四次分手"><span class="nav-number">2.2.</span> <span class="nav-text">三次握手与四次分手</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式"><span class="nav-number">3.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#TCP"><span class="nav-number">4.</span> <span class="nav-text">TCP</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重点手写代码（算法）"><span class="nav-number">5.</span> <span class="nav-text">重点手写代码（算法）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#单例模式（多线程）"><span class="nav-number">5.1.</span> <span class="nav-text">单例模式（多线程）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LRU算法"><span class="nav-number">5.2.</span> <span class="nav-text">LRU算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于你的缺点"><span class="nav-number">6.</span> <span class="nav-text">关于你的缺点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JDK源码阅读"><span class="nav-number">7.</span> <span class="nav-text">JDK源码阅读</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashMap原理及在JDK1-8中的优化"><span class="nav-number">7.1.</span> <span class="nav-text">HashMap原理及在JDK1.8中的优化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#比赛"><span class="nav-number">8.</span> <span class="nav-text">比赛</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2016华为软件精英挑战赛"><span class="nav-number">8.1.</span> <span class="nav-text">2016华为软件精英挑战赛</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目"><span class="nav-number">9.</span> <span class="nav-text">项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#项目概述"><span class="nav-number">9.1.</span> <span class="nav-text">项目概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中的重难点"><span class="nav-number">9.2.</span> <span class="nav-text">项目中的重难点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目改成分布式"><span class="nav-number">9.3.</span> <span class="nav-text">项目改成分布式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#项目中任务调度多任务依赖"><span class="nav-number">9.4.</span> <span class="nav-text">项目中任务调度多任务依赖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quartz"><span class="nav-number">9.5.</span> <span class="nav-text">Quartz</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式"><span class="nav-number">10.</span> <span class="nav-text">分布式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#秒杀系统"><span class="nav-number">10.1.</span> <span class="nav-text">秒杀系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#其他"><span class="nav-number">11.</span> <span class="nav-text">其他</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hash索引B-索引"><span class="nav-number">11.1.</span> <span class="nav-text">hash索引B+索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#海量数据处理"><span class="nav-number">11.2.</span> <span class="nav-text">海量数据处理</span></a></li></ol></li></ol></div>
             
           </div>
         </section>

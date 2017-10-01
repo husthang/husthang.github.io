@@ -833,7 +833,7 @@
 </li>
 <li><p>GC的基本过程：</p>
 <ul>
-<li>堆内存分为新生代和老年代，而新生代又分为Eden区和两个Survivor区。</li>
+<li>堆内存分为新生代和老年代（-XX:NewRatio， 默认为1比2），而新生代又分为Eden区和两个Survivor区(-XX:SurvivorRatio)。</li>
 <li>先将对象放入Eden区，如果空间不足就向其中的一个survivor区上放，如果仍然放不下就会引发一次发生在新生代的minor GC。将存活的对象放入另一个survivor区中，然后清空Eden和之前的那个survivor区的内存。</li>
 <li>大对象以及长期存活的对象，进入老年代</li>
 <li>空间分配担保，当每次执行minor GC的时候应该对要晋升到老年代的对象进行分析，如果这些马上要到老年区的老年对象的大小超过了老年区的剩余大小，那么执行一次Full GC以尽可能地获得老年区的空间。那么执行一次Full GC以尽可能地获得老年区的空间。</li>
@@ -968,7 +968,56 @@
       
       </description>
       
-      <content:encoded><![CDATA[<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
+      <content:encoded><![CDATA[<h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><ul>
+<li>英文： Good morning, my name is liuhang. I am glad to have a chance for this interview.  and i hope i can make a good performance today.  i am 24 years old,born in hubei xiaogao.I majored in Electronic Information Engineering in HuaZhong University of science and technology from 2011 to 2015. I am a postgraduate student now. In my spare time, I like running，especially long distance running。 Running makes me strong, and  understand the importance of sticking to the end.</li>
+</ul>
+<h1 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h1><h2 id="TCP与UDP特点"><a href="#TCP与UDP特点" class="headerlink" title="TCP与UDP特点"></a>TCP与UDP特点</h2><ul>
+<li><p>TCP</p>
+<ul>
+<li>TCP面向连接，先建立连接，传送数据完毕后，释放连接</li>
+<li>TCP是点对点，一对一</li>
+<li>可靠传输，无差错，不丢失，不重复</li>
+<li>全双工</li>
+<li>面向字节流,要传送的数据看成字节流</li>
+</ul>
+</li>
+<li><p>UDP</p>
+<ul>
+<li>无连接的，传送是不需要连接</li>
+<li>支持一对一，一对多，多对一</li>
+<li>不可靠传输</li>
+<li>面向报文的，直接把要传送的数据变成报文，交给ip层<br>-UDP首部开销小</li>
+</ul>
+</li>
+</ul>
+<h2 id="三次握手与四次分手"><a href="#三次握手与四次分手" class="headerlink" title="三次握手与四次分手"></a>三次握手与四次分手</h2><ul>
+<li><p>三次握手</p>
+<ul>
+<li>客户端：SYN发送，消耗序列号x，变SYN-sent状态</li>
+<li>服务的： ACK+SYN确认，消耗序列号y，ack=x+1; 边SYN-RCVD</li>
+<li>客户端：ACK确认，ack=y+1; 下个报文数据的序列号为x+1</li>
+</ul>
+</li>
+<li><p>为何要三次握手</p>
+<ul>
+<li></li>
+</ul>
+</li>
+<li><p>四次分手</p>
+<ul>
+<li>A发送FIN,消耗序列号u  FIN-Wait1状态</li>
+<li><p>B确认ACK,消耗序列号v，ack=u+1,close-wait状态； A收到确认，进入FIn-wait2状态。</p>
+</li>
+<li><p>B发送FIN+ACK ; 消耗序列号， 进入Last-ack最后确认状态</p>
+</li>
+<li>A发送ACK，序列号u+1; 进入time-wait状态； 2msl后关闭</li>
+</ul>
+<ul>
+<li>相当于两个两次握手，第一次，A表明自己不发送数据了； 第二次，B表明自己不发送数据。</li>
+</ul>
+</li>
+</ul>
+<h1 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h1><ul>
 <li><p>设计模式可以分为三大类，分别是<strong>创建型设计模式</strong>、<strong>行为型设计模式</strong>以及<strong>结构型设计模式</strong>。</p>
 </li>
 <li><p>创建型设计模式： 工厂模式（工厂方法模式，抽象工厂模式，简单工厂模式），构建模式，单例模式。</p>
